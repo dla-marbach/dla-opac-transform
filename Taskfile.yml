@@ -1,0 +1,54 @@
+# https://taskfile.dev
+
+version: '3'
+
+# silent: true
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  default:
+    cmds:
+      - task: main
+    
+  main:
+    desc: Internformat aufbereiten für Online-Katalog
+    dir: main
+    cmds:
+      - ../openrefine/orcli run "main.sh"
+    sources:
+      - main.sh
+      - input/**
+      - config/**
+    generates:
+      - output/**
+    preconditions:
+      - sh: test -f ../openrefine/orcli
+        msg: "orcli not found; try task install"
+      - sh: test -f ../openrefine/refine
+        msg: "OpenRefine not found; try task install"
+      - command -v jq
+      - command -v curl
+      - command -v java
+
+  install:
+    desc: install requirements into subdirectories
+    cmds:
+      - task: install_openrefine
+      - task: install_orcli
+
+  install_openrefine:
+    internal: true
+    cmds:
+      - mkdir -p openrefine
+      - wget --no-verbose -O openrefine.tar.gz https://github.com/OpenRefine/OpenRefine/releases/download/3.7.2/openrefine-linux-3.7.2.tar.gz
+      - tar -xzf openrefine.tar.gz -C openrefine --strip 1 && rm openrefine.tar.gz
+       
+  install_orcli:
+    internal: true
+    cmds:
+      - mkdir -p openrefine
+      - wget --no-verbose -O openrefine/orcli https://github.com/opencultureconsulting/orcli/raw/main/orcli
+      - chmod +x openrefine/orcli
+
