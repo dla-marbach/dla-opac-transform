@@ -2,10 +2,8 @@
 
 version: '3'
 
-# silent: true
-
 vars:
-  GREETING: Hello, World!
+  DIR: '{{default "example" .DIR}}'
 
 tasks:
   default:
@@ -14,23 +12,31 @@ tasks:
     
   main:
     desc: Internformat aufbereiten für Online-Katalog
-    dir: main
     cmds:
-      - ../openrefine/orcli run "main.sh"
+      # Zeitstempel zu Beginn
+      - mkdir -p .task/timer; date -u +%s.%N > ".task/timer/{{.TASK}}"
+      # Output leeren
+      - rm -r "{{.DIR}}/output" 2> /dev/null || true; mkdir -p "{{.DIR}}/output"
+      # orcli das script main.sh ausführen lassen
+      - DIR={{.DIR}} openrefine/orcli run "main.sh"
+      # Laufzeit berechnen
+      - '>&2 echo "{{.TASK}} run time: $(bc <<<"$(date -u +%s.%N)-$(cat ".task/timer/{{.TASK}}")") seconds"'
     sources:
+      - '{{.DIR}}/input/**'
       - main.sh
-      - input/**
-      - config/**
+      - config/*.*
+      - config/main/**
     generates:
-      - output/**
+      - '{{.DIR}}/output/**'
     preconditions:
-      - sh: test -f ../openrefine/orcli
+      - sh: test -f openrefine/orcli
         msg: "orcli not found; try task install"
-      - sh: test -f ../openrefine/refine
+      - sh: test -f openrefine/refine
         msg: "OpenRefine not found; try task install"
       - command -v jq
       - command -v curl
       - command -v java
+      - test -d {{.DIR}}
 
   install:
     desc: install requirements into subdirectories
@@ -51,4 +57,3 @@ tasks:
       - mkdir -p openrefine
       - wget --no-verbose -O openrefine/orcli https://github.com/opencultureconsulting/orcli/raw/main/orcli
       - chmod +x openrefine/orcli
-
