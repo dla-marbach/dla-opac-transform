@@ -32,7 +32,7 @@ Das Verzeichnis `data` ist bereits in `.gitignore` gelistet.
 ## Entwicklung
 
 ```sh
-openrefine/orcli run main.sh --interactive
+openrefine/orcli run scripts/main.sh --interactive
 ```
 
 OpenRefine GUI erreichbar unter http://localhost:3333
