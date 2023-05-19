@@ -13,14 +13,24 @@ tasks:
   main:
     desc: Internformat aufbereiten für Online-Katalog
     cmds:
-      # Zeitstempel zu Beginn
-      - mkdir -p .task/timer; date -u +%s.%N > ".task/timer/{{.TASK}}"
-      # Output leeren
-      - rm -r "{{.DIR}}/output" 2> /dev/null || true; mkdir -p "{{.DIR}}/output"
-      # orcli das script main.sh ausführen lassen
-      - DIR={{.DIR}} openrefine/orcli run "scripts/main.sh"
-      # Laufzeit berechnen
-      - '>&2 echo "{{.TASK}} run time: $(bc <<<"$(date -u +%s.%N)-$(cat ".task/timer/{{.TASK}}")") seconds"'
+      - |
+        # Zeitstempel zu Beginn
+        mkdir -p .task/timer; date -u +%s.%N > ".task/timer/{{.TASK}}"
+      - |
+        # Arbeitsverzeichnis leeren
+        rm -r "{{.DIR}}/tmp" 2> /dev/null || true; mkdir -p "{{.DIR}}/tmp"
+      - |
+        # orcli das script main.sh ausführen lassen
+        DIR={{.DIR}} openrefine/orcli run "scripts/main.sh"
+      - |
+        # Änderungsstatistik mit git diff
+        git diff --stat --no-index {{.DIR}}/output {{.DIR}}/tmp 2> /dev/null || true
+      - |
+        # Vorheriges Ergebnis überschreiben
+        rm -r "{{.DIR}}/output" 2> /dev/null || true; mv "{{.DIR}}/tmp" "{{.DIR}}/output"
+      - |
+        # Laufzeit berechnen
+        >&2 echo "{{.TASK}} run time: $(bc <<<"$(date -u +%s.%N)-$(cat ".task/timer/{{.TASK}}")") seconds"
     sources:
       - '{{.DIR}}/input/**'
       - scripts/main.sh
