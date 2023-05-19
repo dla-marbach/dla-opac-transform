@@ -4,7 +4,7 @@ image: gitpod/workspace-full
 tasks:
   - name: install go-task, OpenRefine and openrefine-client
     init: |
-      sh -c \"$(curl --location https://taskfile.dev/install.sh)\" -- -d -b ~/.local/bin
+      sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b ~/.local/bin
       task install
 
 # Ports to expose on workspace startup
