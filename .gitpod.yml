@@ -5,6 +5,7 @@ tasks:
   - name: install go-task, OpenRefine and openrefine-client
     init: |
       sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b ~/.local/bin
+      sudo apt-get update && sudo apt-get install -y bc
       task install
 
 # Ports to expose on workspace startup
