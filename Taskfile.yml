@@ -58,12 +58,12 @@ tasks:
     internal: true
     cmds:
       - mkdir -p openrefine
-      - wget --no-verbose -O openrefine.tar.gz https://github.com/OpenRefine/OpenRefine/releases/download/3.7.2/openrefine-linux-3.7.2.tar.gz
+      - wget --no-verbose -O openrefine.tar.gz https://github.com/OpenRefine/OpenRefine/releases/download/3.7.6/openrefine-linux-3.7.6.tar.gz
       - tar -xzf openrefine.tar.gz -C openrefine --strip 1 && rm openrefine.tar.gz
        
   install_orcli:
     internal: true
     cmds:
       - mkdir -p openrefine
-      - wget --no-verbose -O openrefine/orcli https://github.com/opencultureconsulting/orcli/raw/main/orcli
+      - wget --no-verbose -O openrefine/orcli https://github.com/opencultureconsulting/orcli/releases/download/v0.2.0/orcli
       - chmod +x openrefine/orcli
