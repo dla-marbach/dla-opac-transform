@@ -24,7 +24,7 @@ tasks:
         DIR={{.DIR}} openrefine/orcli run "scripts/main.sh"
       - |
         # Änderungsstatistik mit git diff
-        git diff --stat --no-index {{.DIR}}/output {{.DIR}}/tmp 2> /dev/null || true
+        git --no-pager diff --stat --no-index {{.DIR}}/output {{.DIR}}/tmp 2> /dev/null || true
       - |
         # Vorheriges Ergebnis überschreiben
         rm -r "{{.DIR}}/output" 2> /dev/null || true; mv "{{.DIR}}/tmp" "{{.DIR}}/output"
