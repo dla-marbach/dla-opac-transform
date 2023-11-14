@@ -19,9 +19,9 @@ task install
 
 ## Nutzung
 
-Das Arbeitsverzeichnis wird über die Variable `DIR` gesetzt. Die CSV-Dateien müssen in einem Unterverzeichnis `input` bereitgestellt werden.
+Das Arbeitsverzeichnis wird über die Variable `DIR` gesetzt. Die JSON-Lines-Dateien müssen in einem Unterverzeichnis `input` bereitgestellt werden.
 
-Beispiel für Arbeitsverzeichnis `data` mit CSV-Dateien in `data/input`:
+Beispiel für Arbeitsverzeichnis `data` mit JSONL-Dateien in `data/input`:
 
 ```sh
 task DIR=data
