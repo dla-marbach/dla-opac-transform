@@ -1,0 +1,10 @@
+# Neue Spalte name
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  # basiert auf Spalte title
+  baseColumnName: title
+  expression: grel:value
+  newColumnName: name
+  columnInsertIndex: 1 # hinter Spalte id
