@@ -1,0 +1,15 @@
+# Neue Spalte name
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: title
+  expression: | # Mehrzeiliger GREL Ausdruck
+    grel:
+    with(
+      value,
+      v,
+      v
+    )
+  newColumnName: name
+  columnInsertIndex: 1 # hinter Spalte id
