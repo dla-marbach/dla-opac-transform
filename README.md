@@ -6,8 +6,9 @@ Scripte und Konfigurationsdateien für den ETL-Workflow des Online-Katalogs des 
 
 * GNU/Linux mit Bash 4+
 * [go-task](https://taskfile.dev)
-* [jq](https://stedolan.github.io/jq)
 * [curl](https://curl.se)
+* [jq](https://stedolan.github.io/jq)
+* [yq](https://github.com/mikefarah/yq)
 
 ## Installation
 
