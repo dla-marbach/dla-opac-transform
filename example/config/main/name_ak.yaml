@@ -3,8 +3,13 @@
   engineConfig:
     facets: []
     mode: row-based
-  # basiert auf Spalte title
   baseColumnName: title
-  expression: grel:value
+  expression: | # Mehrzeiliger GREL Ausdruck
+    grel:
+    with(
+      value,
+      v,
+      v
+    )
   newColumnName: name
   columnInsertIndex: 1 # hinter Spalte id
