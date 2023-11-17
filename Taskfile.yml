@@ -4,6 +4,8 @@ version: '3'
 
 vars:
   DIR: '{{default "example" .DIR}}'
+  MEMORY: '{{default "2G" .MEMORY}}'
+  PORT: '{{default "3333" .PORT}}'
 
 tasks:
   default:
@@ -21,7 +23,7 @@ tasks:
         rm -r "{{.DIR}}/tmp" 2> /dev/null || true; mkdir -p "{{.DIR}}/tmp"
       - |
         # orcli das script main.sh ausführen lassen
-        DIR={{.DIR}} openrefine/orcli run "scripts/main.sh"
+        DIR={{.DIR}} openrefine/orcli run "scripts/main.sh" --memory "{{.MEMORY}}" --port "{{.PORT}}"
       - |
         # Änderungsstatistik mit git diff
         git --no-pager diff --stat --no-index {{.DIR}}/output {{.DIR}}/tmp 2> /dev/null || true
@@ -60,6 +62,7 @@ tasks:
       - mkdir -p openrefine
       - wget --no-verbose -O openrefine.tar.gz https://github.com/OpenRefine/OpenRefine/releases/download/3.7.6/openrefine-linux-3.7.6.tar.gz
       - tar -xzf openrefine.tar.gz -C openrefine --strip 1 && rm openrefine.tar.gz
+      - rm openrefine/refine.ini
        
   install_orcli:
     internal: true
