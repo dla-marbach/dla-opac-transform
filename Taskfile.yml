@@ -22,8 +22,14 @@ tasks:
         # Arbeitsverzeichnis leeren
         rm -r "{{.DIR}}/tmp" 2> /dev/null || true; mkdir -p "{{.DIR}}/tmp"
       - |
+        # Konfigurationsdateien ins Arbeitsverzeichnis kopieren
+        cp -r "config" "{{.DIR}}/tmp/"
+      - |
         # orcli das script main.sh ausführen lassen
         DIR={{.DIR}} openrefine/orcli run "scripts/main.sh" --memory "{{.MEMORY}}" --port "{{.PORT}}"
+      - |
+        # Kopie der Konfigurationsdateien im Arbeitsverzeichnis löschen
+        rm -r "{{.DIR}}/tmp/config"
       - |
         # Änderungsstatistik mit git diff
         git --no-pager diff --stat --no-index {{.DIR}}/output {{.DIR}}/tmp 2> /dev/null || true
@@ -36,8 +42,8 @@ tasks:
     sources:
       - '{{.DIR}}/input/**'
       - scripts/main.sh
-      - '{{.DIR}}/config/*.*'
-      - '{{.DIR}}/config/main/**'
+      - 'config/*.*'
+      - 'config/main/**'
     generates:
       - '{{.DIR}}/output/**'
     preconditions:
