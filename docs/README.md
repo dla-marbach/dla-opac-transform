@@ -2,6 +2,10 @@
 
 Version: 0.4
 
+## Feldliste
+
+Die Tabelle [internformat.csv](internformat.csv) beinhaltet eine Liste aller Felder und deren Bedeutung.
+
 ## Datenbestände
 
 * AK: Bibliotheksmaterialien und Werke
