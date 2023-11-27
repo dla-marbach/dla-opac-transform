@@ -2,5 +2,11 @@
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
   },
-  "postCreateCommand": "sh -c \"$(curl --location https://taskfile.dev/install.sh)\" -- -d -b ~/.local/bin && wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O ~/.local/bin/yq && chmod +x ~/.local/bin/yq && task install"
+  "postCreateCommand": "sh -c \"$(curl --location https://taskfile.dev/install.sh)\" -- -d -b ~/.local/bin && wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O ~/.local/bin/yq && chmod +x ~/.local/bin/yq && task install",
+  "forwardPorts": [3333],
+	"portsAttributes": {
+		"3333": {
+			"label": "OpenRefine"
+		}
+	}
 }
