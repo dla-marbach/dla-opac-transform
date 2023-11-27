@@ -1,0 +1,20 @@
+# Exemplar-IDs in AK-Datensätzen ergänzen
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.cross('au','manifestation_id'),
+        r,
+        r.cells['id'].value
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+  newColumnName: item_id_mv
+  columnInsertIndex: 1 # hinter Spalte id
