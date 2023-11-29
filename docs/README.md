@@ -32,12 +32,21 @@ Die Tabelle [internformat.csv](internformat.csv) beinhaltet eine Liste aller Fel
 
 ## Datenformat
 
-Felder mit Suffix `_mv` können mehrere Werte enthalten. Als Trennzeichen wird `␟` (Symbol For Unit Separator, [U+241F](https://www.unicode.org/charts/PDF/U2400.pdf)) verwendet.
+Felder mit Suffix `_mv` können mehrere Werte enthalten. Im Zielformat JSON- bzw. JSONL werden diese Felder als Array kodiert. Während der Datenverarbeitung wird als temporäres Trennzeichen `␟` (Symbol For Unit Separator, [U+241F](https://www.unicode.org/charts/PDF/U2400.pdf)) verwendet. 
 
 Beziehungen zwischen Feldern mit synchron mehrfachbelegten Werten werden mit einem Unterstrich `_` dargestellt. Sie sind immer gleich oft belegt. Als Platzhalterzeichen wird `␣` (Open Box, [U+2423](https://www.unicode.org/charts/PDF/U2400.pdf)) verwendet. Beispiel:
-* personBy_id: `PE00000001␟PE00000002␟PE00000003`
-* personBy_label: `Person 1␟Person 2␟Person 3`
-* personBy_role: `Funktion Person 1␟␣␟Funktion Person 3`
+* personBy_id:
+  * 0: `PE00000001`
+  * 1: `PE00000002`
+  * 2: `PE00000003`
+* personBy_label:
+  * 0: `Person 1`
+  * 1: `Person 2`
+  * 2: `Person 3`
+* personBy_role:
+  * 0: `Funktion Person 1`
+  * 1: `␣`
+  * 2: `Funktion Person 3`
 
 Für den Katalog werden zahlreiche Zusatzfelder gebildet, um Funktionen wie Facettierung und Suche zu unterstützen. Diese werden mit folgenden Präfixen gruppiert:
 * `display` für Trefferliste und Detailanzeige
