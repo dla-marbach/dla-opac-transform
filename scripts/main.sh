@@ -22,6 +22,10 @@ wait
 ### Export ###
 
 for set in ${sets[@]}; do
-    orcli export jsonl "${set}" --output "${DIR}/tmp/${set}.jsonl" &
+    orcli export tsv "${set}" --output "${DIR}/tmp/${set}.tsv" &
+done
+wait
+for set in ${sets[@]}; do
+    orcli export jsonl "${set}" --separator "␟" --output "${DIR}/tmp/${set}.jsonl" &
 done
 wait
