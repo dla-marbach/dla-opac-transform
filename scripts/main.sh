@@ -4,7 +4,7 @@ sets=(ak au be bf bi hs ks mm pe se sy th)
 ### Import ###
 
 for set in ${sets[@]}; do
-    orcli import jsonl "${DIR}"/input/${set}.jsonl --rename --projectName "${set}" &
+    orcli import tsv "${DIR}"/input/${set}.tsv --projectName "${set}" &
 done
 wait
 

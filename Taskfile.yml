@@ -31,9 +31,6 @@ tasks:
         # Kopie der Konfigurationsdateien im Arbeitsverzeichnis löschen
         rm -r "{{.DIR}}/tmp/config" 2> /dev/null || true
       - |
-        # Änderungsstatistik mit git diff
-        git --no-pager diff --stat --no-index {{.DIR}}/output {{.DIR}}/tmp 2> /dev/null || true
-      - |
         # Vorheriges Ergebnis überschreiben
         rm -r "{{.DIR}}/output" 2> /dev/null || true; mv "{{.DIR}}/tmp" "{{.DIR}}/output"
       - |
