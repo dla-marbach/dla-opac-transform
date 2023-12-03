@@ -32,7 +32,9 @@ Die Tabelle [internformat.csv](internformat.csv) beinhaltet eine Liste aller Fel
 
 ## Datenformat
 
-Felder mit Suffix `_mv` können mehrere Werte enthalten. Im Zielformat JSON- bzw. JSONL werden diese Felder als Array kodiert. Während der Datenverarbeitung wird als temporäres Trennzeichen `␟` (Symbol For Unit Separator, [U+241F](https://www.unicode.org/charts/PDF/U2400.pdf)) verwendet. 
+Felder mit Suffix `_mv` können mehrere Werte enthalten.
+* Im Ausgabeformat JSON- bzw. JSONL werden diese Felder als Array kodiert.
+* Im Ausgabeformat TSV und während der Datenverarbeitung wird als temporäres Trennzeichen `␟` (Symbol For Unit Separator, [U+241F](https://www.unicode.org/charts/PDF/U2400.pdf)) verwendet.
 
 Beziehungen zwischen Feldern mit synchron mehrfachbelegten Werten werden mit einem Unterstrich `_` dargestellt. Sie sind immer gleich oft belegt. Als Platzhalterzeichen wird `␣` (Open Box, [U+2423](https://www.unicode.org/charts/PDF/U2400.pdf)) verwendet. Beispiel:
 * personBy_id:
