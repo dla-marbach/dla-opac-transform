@@ -78,11 +78,23 @@ tasks:
       - command -v java
       - test -d {{.DIR}}
 
+  solr:
+    desc: Indexierung in Solr testen
+    cmds:
+      - solr/bin/solr delete -c dla &> /dev/null || true
+      - solr/bin/solr stop &> /dev/null || true
+      - rm -r "solr/server/solr/dla" 2> /dev/null || true; mkdir -p "solr/server/solr/dla"
+      - cp config/solr/* solr/server/solr/dla/
+      - touch solr/server/solr/dla/core.properties solr/server/solr/dla/stopwords.txt solr/server/solr/dla/synonyms.txt
+      - solr/bin/solr start -a "-XX:+IgnoreUnrecognizedVMOptions" && sleep 1
+      - solr/bin/post -c dla example/output/*.jsonl
+
   install:
     desc: install requirements into subdirectories
     cmds:
       - task: install_openrefine
       - task: install_orcli
+      - task: install_solr
 
   install_openrefine:
     internal: true
@@ -98,3 +110,10 @@ tasks:
       - mkdir -p openrefine
       - wget --no-verbose -O openrefine/orcli https://github.com/opencultureconsulting/orcli/releases/download/v0.2.1/orcli
       - chmod +x openrefine/orcli
+
+  install_solr:
+    desc: install Solr
+    cmds:
+      - mkdir -p solr
+      - wget --no-verbose -O solr.tgz https://archive.apache.org/dist/lucene/solr/7.7.3/solr-7.7.3.tgz
+      - tar -xzf solr.tgz -C solr --strip 1 && rm solr.tgz
