@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema name="default-config" version="1.6">
+  <uniqueKey>id</uniqueKey>
+  <fieldType name="ancestor_path" class="solr.TextField">
+    <analyzer type="index">
+      <tokenizer class="solr.KeywordTokenizerFactory"/>
+    </analyzer>
+    <analyzer type="query">
+      <tokenizer class="solr.PathHierarchyTokenizerFactory" delimiter="/"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="binary" class="solr.BinaryField"/>
+  <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true"/>
+  <fieldType name="booleans" class="solr.BoolField" sortMissingLast="true" multiValued="true"/>
+  <fieldType name="delimited_payloads_float" class="solr.TextField" indexed="true" stored="false">
+    <analyzer>
+      <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+      <filter class="solr.DelimitedPayloadTokenFilterFactory" encoder="float"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="delimited_payloads_int" class="solr.TextField" indexed="true" stored="false">
+    <analyzer>
+      <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+      <filter class="solr.DelimitedPayloadTokenFilterFactory" encoder="integer"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="delimited_payloads_string" class="solr.TextField" indexed="true" stored="false">
+    <analyzer>
+      <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+      <filter class="solr.DelimitedPayloadTokenFilterFactory" encoder="identity"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="descendent_path" class="solr.TextField">
+    <analyzer type="index">
+      <tokenizer class="solr.PathHierarchyTokenizerFactory" delimiter="/"/>
+    </analyzer>
+    <analyzer type="query">
+      <tokenizer class="solr.KeywordTokenizerFactory"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="location" class="solr.LatLonPointSpatialField" docValues="true"/>
+  <fieldType name="location_rpt" class="solr.SpatialRecursivePrefixTreeFieldType" geo="true" maxDistErr="0.001" distErrPct="0.025" distanceUnits="kilometers"/>
+  <fieldType name="lowercase" class="solr.TextField" positionIncrementGap="100">
+    <analyzer>
+      <tokenizer class="solr.KeywordTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="pdate" class="solr.DatePointField" docValues="true"/>
+  <fieldType name="pdates" class="solr.DatePointField" docValues="true" multiValued="true"/>
+  <fieldType name="pdouble" class="solr.DoublePointField" docValues="true"/>
+  <fieldType name="pdoubles" class="solr.DoublePointField" docValues="true" multiValued="true"/>
+  <fieldType name="pfloat" class="solr.FloatPointField" docValues="true"/>
+  <fieldType name="pfloats" class="solr.FloatPointField" docValues="true" multiValued="true"/>
+  <fieldType name="phonetic_en" class="solr.TextField" indexed="true" stored="false">
+    <analyzer>
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.DoubleMetaphoneFilterFactory" inject="false"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="pint" class="solr.IntPointField" docValues="true"/>
+  <fieldType name="pints" class="solr.IntPointField" docValues="true" multiValued="true"/>
+  <fieldType name="plong" class="solr.LongPointField" docValues="true"/>
+  <fieldType name="plongs" class="solr.LongPointField" docValues="true" multiValued="true"/>
+  <fieldType name="point" class="solr.PointType" subFieldSuffix="_d" dimension="2"/>
+  <fieldType name="random" class="solr.RandomSortField" indexed="true"/>
+  <fieldType name="string" class="solr.StrField" sortMissingLast="true" docValues="true"/>
+  <fieldType name="strings" class="solr.StrField" sortMissingLast="true" docValues="true" multiValued="true"/>
+  <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100" multiValued="true">
+    <analyzer type="index">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.StopFilterFactory" words="stopwords.txt" ignoreCase="true"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+    </analyzer>
+    <analyzer type="query">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.StopFilterFactory" words="stopwords.txt" ignoreCase="true"/>
+      <filter class="solr.SynonymGraphFilterFactory" expand="true" ignoreCase="true" synonyms="synonyms.txt"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+    </analyzer>
+  </fieldType>
+  <field name="_root_" type="string" docValues="false" indexed="true" stored="false"/>
+  <field name="_text_" type="text_general" multiValued="true" indexed="true" stored="false"/>
+  <field name="_version_" type="plong" indexed="false" stored="false"/>
+  <field name="accessLevel" type="text_general" multiValued="false"/>
+  <field name="accessionNumber" type="text_general"/>
+  <field name="accession_id" type="text_general"/>
+  <field name="acronym_mv" type="text_general"/>
+  <field name="broadcastDate" type="text_general"/>
+  <field name="broadcastStation" type="text_general"/>
+  <field name="callNumberBibliographic_mv" type="text_general"/>
+  <field name="callNumberCollection_mv" type="text_general"/>
+  <field name="callNumberItem" type="text_general"/>
+  <field name="callNumberItemSuffix" type="text_general"/>
+  <field name="callNumberReadingRoom" type="text_general"/>
+  <field name="category" type="text_general"/>
+  <field name="categoryContent_mv" type="text_general"/>
+  <field name="categoryEntity_mv" type="text_general"/>
+  <field name="categoryIndex_mv" type="text_general"/>
+  <field name="categoryMedia_mv" type="text_general"/>
+  <field name="categoryMedium_mv" type="text_general"/>
+  <field name="categoryPublication_mv" type="text_general"/>
+  <field name="categorySub" type="text_general"/>
+  <field name="categorySubSub" type="text_general"/>
+  <field name="child_id_mv" type="text_general"/>
+  <field name="classificationAuthor_id_mv" type="text_general"/>
+  <field name="classificationChain" type="text_general"/>
+  <field name="classificationForm_id_mv" type="text_general"/>
+  <field name="classificationNewspaper_comment_mv" type="text_general"/>
+  <field name="classificationNewspaper_text_mv" type="text_general"/>
+  <field name="classificationOther_comment_mv" type="text_general"/>
+  <field name="classificationOther_text_mv" type="text_general"/>
+  <field name="classificationSubjectOther_mv" type="text_general"/>
+  <field name="classificationSubject_id_mv" type="text_general"/>
+  <field name="classification_id_mv" type="text_general"/>
+  <field name="confidential" type="booleans"/>
+  <field name="content" type="text_general"/>
+  <field name="corporationAbout_comment_mv" type="text_general"/>
+  <field name="corporationAbout_id_mv" type="text_general"/>
+  <field name="corporationAbout_role_mv" type="text_general"/>
+  <field name="corporationAbout_type_mv" type="text_general"/>
+  <field name="corporationAt_id_mv" type="text_general"/>
+  <field name="corporationByConference_creator_mv" type="text_general"/>
+  <field name="corporationByConference_id_mv" type="text_general"/>
+  <field name="corporationByConference_role_mv" type="text_general"/>
+  <field name="corporationByTerritory_creator_mv" type="text_general"/>
+  <field name="corporationByTerritory_id_mv" type="text_general"/>
+  <field name="corporationByTerritory_role_mv" type="text_general"/>
+  <field name="corporationBy_comment_mv" type="text_general"/>
+  <field name="corporationBy_creator_mv" type="text_general"/>
+  <field name="corporationBy_id_mv" type="text_general"/>
+  <field name="corporationBy_role_mv" type="text_general"/>
+  <field name="corporationBy_type_mv" type="text_general"/>
+  <field name="corporationTo_comment_mv" type="text_general"/>
+  <field name="corporationTo_id_mv" type="text_general"/>
+  <field name="corporationTo_type_mv" type="text_general"/>
+  <field name="corporation_id_mv" type="text_general"/>
+  <field name="country_mv" type="text_general"/>
+  <field name="dateActivityEnd" type="text_general"/>
+  <field name="dateActivityStart" type="text_general"/>
+  <field name="dateCataloged" type="text_general"/>
+  <field name="dateLifespanComment_mv" type="text_general"/>
+  <field name="dateLifespanEnd" type="text_general"/>
+  <field name="dateLifespanStart" type="text_general"/>
+  <field name="dateModified" type="text_general"/>
+  <field name="dateNote_mv" type="text_general"/>
+  <field name="dateOrigin" type="text_general"/>
+  <field name="dateOriginComment_mv" type="text_general"/>
+  <field name="dateOriginEnd" type="text_general"/>
+  <field name="dateOriginStart" type="text_general"/>
+  <field name="dateOtherComment_mv" type="text_general"/>
+  <field name="dateOther_mv" type="text_general"/>
+  <field name="dateRetention" type="text_general"/>
+  <field name="department" type="text_general"/>
+  <field name="description_text_mv" type="text_general"/>
+  <field name="description_type_mv" type="text_general"/>
+  <field name="digitalObject_id_mv" type="text_general"/>
+  <field name="dimension_comment_mv" type="text_general"/>
+  <field name="dimension_depth_mv" type="text_general"/>
+  <field name="dimension_diameter_mv" type="text_general"/>
+  <field name="dimension_height_mv" type="text_general"/>
+  <field name="dimension_width_mv" type="text_general"/>
+  <field name="edition" type="text_general"/>
+  <field name="editionNormalized" type="text_general"/>
+  <field name="enveloped" type="booleans"/>
+  <field name="extent" type="text_general"/>
+  <field name="extentFormat" type="text_general"/>
+  <field name="extentIllustrations_mv" type="text_general"/>
+  <field name="extentSupplements" type="text_general"/>
+  <field name="filePath" type="text_general"/>
+  <field name="gender" type="text_general"/>
+  <field name="genre" type="text_general"/>
+  <field name="genreOther_mv" type="text_general"/>
+  <field name="genreSub" type="text_general"/>
+  <field name="genreSubOther_mv" type="text_general"/>
+  <field name="gndRelation_comment_mv" type="text_general"/>
+  <field name="gndRelation_id_mv" type="text_general"/>
+  <field name="gndRelation_text_mv" type="text_general"/>
+  <field name="gndRelation_type_mv" type="text_general"/>
+  <field name="gnd_id_mv" type="text_general"/>
+  <field name="gnd_type_mv" type="text_general"/>
+  <field name="headword_mv" type="text_general"/>
+  <field name="holding_id_mv" type="text_general"/>
+  <field name="host_id_mv" type="text_general"/>
+  <field name="id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
+  <field name="identifier_id_mv" type="text_general"/>
+  <field name="identifier_type_mv" type="text_general"/>
+  <field name="index" type="text_general"/>
+  <field name="inscription" type="text_general"/>
+  <field name="inventory" type="text_general"/>
+  <field name="inventoryMissing" type="text_general"/>
+  <field name="inventoryNumber" type="text_general"/>
+  <field name="isbn_mv" type="text_general"/>
+  <field name="ismn_mv" type="text_general"/>
+  <field name="issn_mv" type="text_general"/>
+  <field name="itemNumber" type="text_general"/>
+  <field name="item_id_mv" type="text_general"/>
+  <field name="itemization_extent_mv" type="text_general"/>
+  <field name="itemization_status_mv" type="text_general"/>
+  <field name="itemization_unit_mv" type="text_general"/>
+  <field name="journalIssue_id_mv" type="text_general"/>
+  <field name="languageOriginal_mv" type="text_general"/>
+  <field name="language_mv" type="text_general"/>
+  <field name="library_id_mv" type="text_general"/>
+  <field name="locationBoxNumber" type="text_general"/>
+  <field name="locationComment" type="text_general"/>
+  <field name="locationFolderNumber" type="text_general"/>
+  <field name="location_mv" type="text_general"/>
+  <field name="manifestation_id" type="text_general"/>
+  <field name="manuscript_id_mv" type="text_general"/>
+  <field name="material" type="text_general"/>
+  <field name="mediaNumber" type="text_general"/>
+  <field name="microform_mv" type="text_general"/>
+  <field name="name" type="text_general"/>
+  <field name="nameAlternative_comment_mv" type="text_general"/>
+  <field name="nameAlternative_name_mv" type="text_general"/>
+  <field name="nameAlternative_suffix_mv" type="text_general"/>
+  <field name="nameAlternative_type_mv" type="text_general"/>
+  <field name="nameFormerOrLater_id_mv" type="text_general"/>
+  <field name="nameOriginal_mv" type="text_general"/>
+  <field name="nameTemporary_id_mv" type="text_general"/>
+  <field name="notation" type="text_general"/>
+  <field name="note" type="text_general"/>
+  <field name="noteBibliography_mv" type="text_general"/>
+  <field name="noteClassification" type="text_general"/>
+  <field name="noteContent_mv" type="text_general"/>
+  <field name="noteDimension" type="text_general"/>
+  <field name="noteExplanatory_text_mv" type="text_general"/>
+  <field name="noteExplanatory_type_mv" type="text_general"/>
+  <field name="noteFootnote_text_mv" type="text_general"/>
+  <field name="noteFootnote_type_mv" type="text_general"/>
+  <field name="noteObjectType" type="text_general"/>
+  <field name="noteOther_mv" type="text_general"/>
+  <field name="noteProvenance_text_mv" type="text_general"/>
+  <field name="noteProvenance_type_mv" type="text_general"/>
+  <field name="noteRemark_text_mv" type="text_general"/>
+  <field name="noteRemark_type_mv" type="text_general"/>
+  <field name="noteRequirements_mv" type="text_general"/>
+  <field name="object_id" type="text_general"/>
+  <field name="occupation_mv" type="text_general"/>
+  <field name="order_extent_mv" type="text_general"/>
+  <field name="order_status_mv" type="text_general"/>
+  <field name="order_unit_mv" type="text_general"/>
+  <field name="parentIssueDate" type="text_general"/>
+  <field name="parentIssueNumber" type="text_general"/>
+  <field name="parentIssuePage" type="text_general"/>
+  <field name="parentIssueVolume" type="text_general"/>
+  <field name="parentIssueYear" type="text_general"/>
+  <field name="parentIssueYearVolume" type="text_general"/>
+  <field name="parentTitleOriginal_mv" type="text_general"/>
+  <field name="parentVolumeNormalized_mv" type="text_general"/>
+  <field name="parentVolumeTotal" type="text_general"/>
+  <field name="parentVolume_mv" type="text_general"/>
+  <field name="parent_id_mv" type="text_general"/>
+  <field name="parent_type_mv" type="text_general"/>
+  <field name="personAbout_comment_mv" type="text_general"/>
+  <field name="personAbout_id_mv" type="text_general"/>
+  <field name="personAbout_role_mv" type="text_general"/>
+  <field name="personAt_id_mv" type="text_general"/>
+  <field name="personBy_comment_mv" type="text_general"/>
+  <field name="personBy_creator_mv" type="text_general"/>
+  <field name="personBy_id_mv" type="text_general"/>
+  <field name="personBy_role_mv" type="text_general"/>
+  <field name="personTo_comment_mv" type="text_general"/>
+  <field name="personTo_id_mv" type="text_general"/>
+  <field name="personTo_role_mv" type="text_general"/>
+  <field name="person_id_mv" type="text_general"/>
+  <field name="photoNegativeNumber_mv" type="text_general"/>
+  <field name="placeBirth" type="text_general"/>
+  <field name="placeDeath" type="text_general"/>
+  <field name="place_mv" type="text_general"/>
+  <field name="predecessor_id_mv" type="text_general"/>
+  <field name="provenance" type="booleans"/>
+  <field name="publicationHistory" type="text_general"/>
+  <field name="publisherOriginalLocation_mv" type="text_general"/>
+  <field name="publisherOriginal_text_mv" type="text_general"/>
+  <field name="publisherOriginal_type_mv" type="text_general"/>
+  <field name="publisher_id_mv" type="text_general"/>
+  <field name="reference_text_mv" type="text_general"/>
+  <field name="reference_type_mv" type="text_general"/>
+  <field name="relation_id_mv" type="text_general"/>
+  <field name="relation_type_mv" type="text_general"/>
+  <field name="schemaVersion" type="pdoubles"/>
+  <field name="scholarlyPublication_date_mv" type="text_general"/>
+  <field name="scholarlyPublication_location_mv" type="text_general"/>
+  <field name="scholarlyPublication_text_mv" type="text_general"/>
+  <field name="scholarlyPublication_type_mv" type="text_general"/>
+  <field name="seeAlso_id_mv" type="text_general"/>
+  <field name="sequence_mv" type="text_general"/>
+  <field name="sortingKey" type="text_general"/>
+  <field name="sortingKeySub" type="text_general"/>
+  <field name="sortingTitleMain" type="text_general"/>
+  <field name="sortingTitleOther" type="text_general"/>
+  <field name="statusCataloging" type="text_general"/>
+  <field name="statusEditing" type="text_general"/>
+  <field name="statusItem" type="text_general"/>
+  <field name="statusJournalReview" type="text_general"/>
+  <field name="statusLoan" type="text_general"/>
+  <field name="statusPreservation" type="text_general"/>
+  <field name="storageArea" type="text_general"/>
+  <field name="subjectLocation_comment_mv" type="text_general"/>
+  <field name="subjectLocation_id_mv" type="text_general"/>
+  <field name="subjectLocation_type_mv" type="text_general"/>
+  <field name="subjectOther_mv" type="text_general"/>
+  <field name="subject_id_mv" type="text_general"/>
+  <field name="subject_type_mv" type="text_general"/>
+  <field name="subseries" type="text_general"/>
+  <field name="successor_id_mv" type="text_general"/>
+  <field name="title" type="text_general"/>
+  <field name="titleMain_category" type="text_general"/>
+  <field name="titleMain_comment" type="text_general"/>
+  <field name="titleMain_text" type="text_general"/>
+  <field name="titleMain_type" type="text_general"/>
+  <field name="titleOriginal" type="text_general"/>
+  <field name="titleOther_category_mv" type="text_general"/>
+  <field name="titleOther_comment_mv" type="text_general"/>
+  <field name="titleOther_language_mv" type="text_general"/>
+  <field name="titleOther_text_mv" type="text_general"/>
+  <field name="titleOther_type_mv" type="text_general"/>
+  <field name="titlePrefix" type="text_general"/>
+  <field name="titleResponsability" type="text_general"/>
+  <field name="titleResponsabilityFull" type="text_general"/>
+  <field name="titleShort" type="text_general"/>
+  <field name="titleSuffix" type="text_general"/>
+  <field name="titleType" type="text_general"/>
+  <field name="url" type="text_general"/>
+  <field name="usageRestriction" type="text_general"/>
+  <field name="usageRestrictionComment" type="text_general"/>
+  <field name="useTerm_id_mv" type="text_general"/>
+  <field name="usedFor_id_mv" type="text_general"/>
+  <field name="vendor_id_mv" type="text_general"/>
+  <field name="vendor_type_mv" type="text_general"/>
+  <field name="virtualRecording" type="text_general"/>
+  <field name="website_description_mv" type="text_general"/>
+  <field name="website_url_mv" type="text_general"/>
+  <field name="workAbout_id_mv" type="text_general"/>
+  <field name="workCompilation_id_mv" type="text_general"/>
+  <field name="work_id_mv" type="text_general"/>
+</schema>

@@ -12,7 +12,7 @@ Scripte und Konfigurationsdateien für den ETL-Workflow des Online-Katalogs des 
 
 ## Installation
 
-[OpenRefine](https://openrefine.org) und [orcli](https://github.com/opencultureconsulting/orcli):
+[OpenRefine](https://openrefine.org), [orcli](https://github.com/opencultureconsulting/orcli) und [Apache Solr](https://solr.apache.org):
 
 ```sh
 task install
@@ -36,8 +36,14 @@ Das Verzeichnis `data` ist bereits in `.gitignore` gelistet.
 
 ## Entwicklung
 
+orcli im interaktiven Modus starten (vgl. http://localhost:3333):
+
 ```sh
 task dev
 ```
 
-OpenRefine GUI erreichbar unter http://localhost:3333
+Indexierung in Solr testen (vgl. http://localhost:8983):
+
+```sh
+task solr
+```
