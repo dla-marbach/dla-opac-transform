@@ -156,7 +156,7 @@
          before flushing.
          If both ramBufferSizeMB and maxBufferedDocs is set, then
          Lucene will flush based on whichever limit is hit first.  -->
-    <!-- <ramBufferSizeMB>100</ramBufferSizeMB> -->
+    <!-- <ramBufferSizeMB>250</ramBufferSizeMB> -->
     <!-- <maxBufferedDocs>1000</maxBufferedDocs> -->
 
     <!-- Expert: Merge Policy
@@ -165,13 +165,12 @@
          The default since Lucene 2.3 was the LogByteSizeMergePolicy,
          Even older versions of Lucene used LogDocMergePolicy.
       -->
-    <!--
+
         <mergePolicyFactory class="org.apache.solr.index.TieredMergePolicyFactory">
-          <int name="maxMergeAtOnce">10</int>
-          <int name="segmentsPerTier">10</int>
+          <int name="maxMergeAtOnce">30</int>
+          <int name="segmentsPerTier">30</int>
           <double name="noCFSRatio">0.1</double>
         </mergePolicyFactory>
-      -->
 
     <!-- Expert: Merge Scheduler
          The Merge Scheduler in Lucene controls how merges are
@@ -280,11 +279,17 @@
                 indexing, this requires 8 bytes (long) * numVersionBuckets
                 of heap space per Solr core.
     -->
+
+<!--
+    Transaktionslog abgeschaltet/auskommentiert zum Sparen einiger Minuten bei Indexierung / einiger GB Disk-I/O,
+    da nach voller Reindexierung keine Dokumente dazukommen/geaendert werden, die bis zur vollständigen Einspielung in den Index bis dahin fuer den Fall eines Solr oder Systemabstuzes gesichert werden muessten
+
     <updateLog>
       <str name="dir">${solr.ulog.dir:}</str>
       <int name="numVersionBuckets">${solr.ulog.numVersionBuckets:65536}</int>
     </updateLog>
-
+-->
+   
     <!-- AutoCommit
 
          Perform a hard commit automatically under certain conditions.
@@ -689,6 +694,7 @@
          will be overridden by parameters in the request
       -->
     <lst name="defaults">
+      <str name="q.op">AND</str>
       <str name="echoParams">explicit</str>
       <int name="rows">10</int>
       <!-- Default search field
@@ -779,7 +785,7 @@
 
   <initParams path="/update/**,/query,/select,/tvrh,/elevate,/spell,/browse">
     <lst name="defaults">
-      <str name="df">_text_</str>
+      <str name="df">default</str>
     </lst>
   </initParams>
 
