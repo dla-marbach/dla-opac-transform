@@ -140,7 +140,7 @@
   <field name="classificationSubjectOther_mv" type="texts"/>
   <field name="classificationSubject_id_mv" type="texts"/>
   <field name="classification_id_mv" type="texts"/>
-  <field name="confidential" type="booleans"/>
+  <field name="confidential" type="boolean"/>
   <field name="content" type="text"/>
   <field name="corporationAbout_comment_mv" type="texts"/>
   <field name="corporationAbout_id_mv" type="texts"/>
@@ -190,7 +190,7 @@
   <field name="dimension_width_mv" type="texts"/>
   <field name="edition" type="text"/>
   <field name="editionNormalized" type="text"/>
-  <field name="enveloped" type="booleans"/>
+  <field name="enveloped" type="boolean"/>
   <field name="extent" type="text"/>
   <field name="extentFormat" type="text"/>
   <field name="extentIllustrations_mv" type="texts"/>
@@ -298,7 +298,7 @@
   <field name="placeDeath" type="text"/>
   <field name="place_mv" type="texts"/>
   <field name="predecessor_id_mv" type="texts"/>
-  <field name="provenance" type="booleans"/>
+  <field name="provenance" type="boolean"/>
   <field name="publicationHistory" type="text"/>
   <field name="publisherOriginalLocation_mv" type="texts"/>
   <field name="publisherOriginal_text_mv" type="texts"/>
