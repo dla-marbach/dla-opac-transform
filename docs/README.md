@@ -41,7 +41,7 @@ Beziehungen zwischen Feldern mit synchron mehrfachbelegten Werten werden mit ein
   * 0: `PE00000001`
   * 1: `PE00000002`
   * 2: `PE00000003`
-* personBy_label:
+* personBy_display:
   * 0: `Person 1`
   * 1: `Person 2`
   * 2: `Person 3`
