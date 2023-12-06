@@ -40,7 +40,7 @@ tasks:
       - '{{.DIR}}/input/**'
       - scripts/main.sh
       - 'config/*.*'
-      - 'config/main/**'
+      - 'config/main/**/**'
     generates:
       - '{{.DIR}}/output/**'
     preconditions:
