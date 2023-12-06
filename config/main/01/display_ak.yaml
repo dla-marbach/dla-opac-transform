@@ -1,0 +1,94 @@
+# display bei Werktiteln (category = Werktitel):
+# personBy_display. titleMain_text (genreOther_mv : dateOrigin)
+# TODO: Lebensdaten bei Personen (aktuell quasi nur personBy_title)
+- op: core/column-addition
+  engineConfig:
+    facets:
+      - type: list
+        expression: value
+        columnName: category
+        invert: false
+        selection:
+          - v:
+              v: Werktitel
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      forNonBlank(
+        cells['personBy_id_mv'].value.split('␟')[0].cross('pe','id')[0].cells['title'].value,
+        x,
+        x + '.',
+        ''
+      )
+      + forNonBlank(
+        cells['titleMain_text'].value,
+        x,
+        ' ' + x,
+        ''
+      )
+      + forNonBlank(
+        [
+          forNonBlank(
+            cells['genreOther_mv'].value.split('␟')[0],
+            x,
+            x,
+            null
+          ),
+          forNonBlank(
+            cells['dateOrigin'].value,
+            x,
+            x,
+            null
+          )
+        ].join(' : '),
+        x,
+        ' (' + x + ')',
+        ''
+      ),
+      z,
+      z,
+      'ohne Titel'
+    )
+  newColumnName: display
+  columnInsertIndex: 1
+# display bei allen anderen Dokumententypen:
+# title - edition : [categoryPublication_mv]
+- op: core/text-transform
+  engineConfig:
+    facets:
+      - type: list
+        expression: value
+        columnName: category
+        invert: true
+        selection:
+          - v:
+              v: Werktitel
+    mode: row-based
+  columnName: display
+  expression: |
+    grel:
+    forNonBlank(
+      forNonBlank(
+        cells['title'].value,
+        x,
+        x,
+        ''
+      )
+      + forNonBlank(
+        cells['edition'].value,
+        x,
+        ' - ' + x,
+        ''
+      )
+      + forNonBlank(
+        cells['categoryPublication_mv'].value.split('␟')[0],
+        x,
+        ' : [' + x + ']',
+        ''
+      ),
+      z,
+      z,
+      'ohne Titel'
+    )
