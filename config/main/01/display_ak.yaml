@@ -1,6 +1,5 @@
 # display bei Werktiteln (category = Werktitel):
 # personBy_display. titleMain_text (genreOther_mv : dateOrigin)
-# TODO: Lebensdaten bei Personen (aktuell quasi nur personBy_title)
 - op: core/column-addition
   engineConfig:
     facets:
@@ -17,7 +16,28 @@
     grel:
     forNonBlank(
       forNonBlank(
-        cells['personBy_id_mv'].value.split('␟')[0].cross('pe','id')[0].cells['title'].value,
+        with(
+          cells['personBy_id_mv'].value.split('␟')[0].cross('pe','id'),
+          r,
+          r[0].cells['title'].value
+          + forNonBlank(
+            forNonBlank(
+              r[0].cells['dateLifespanStart'].value[0,4],
+              x,
+              x,
+              ''
+            )
+            + forNonBlank(
+              r[0].cells['dateLifespanEnd'].value[0,4],
+              x,
+              '-' + x,
+              ''
+            ),
+            x,
+            ' (' + x + ')',
+            ''
+          )
+        ),
         x,
         x + '.',
         ''
