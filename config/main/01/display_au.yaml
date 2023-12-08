@@ -1,0 +1,17 @@
+# FBTIT oder Ohne Titel
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      cells['note'].value,
+      z,
+      z,
+      'ohne Titel'
+    )
+  newColumnName: display
+  columnInsertIndex: 1
+  
