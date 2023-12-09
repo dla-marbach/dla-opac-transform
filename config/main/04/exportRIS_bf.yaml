@@ -1,0 +1,15 @@
+# Für den Export in Literaturverwaltungsprogramme wird ein RIS-Datensatz generiert.
+# Als Ersatz für Zeilenumbrüche wird SYMBOL FOR NEWLINE (U+2424) verwendet.
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    'TY  - ' + 'GEN' + '␤'
+    + forNonBlank(cells['id'].value, v, 'ID  - ' + v + '␤', '')
+    + forNonBlank(cells['display'].value, v, 'TI  - ' + v + '␤', '')
+    + 'ER  -'
+  newColumnName: exportRIS
+  columnInsertIndex: 2 # hinter id und display
