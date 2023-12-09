@@ -32,6 +32,8 @@ Die Tabelle [internformat.csv](internformat.csv) beinhaltet eine Liste aller Fel
 
 ## Datenformat
 
+Nur die Felder `id` und `display` sind immer belegt.
+
 Felder mit Suffix `_mv` können mehrere Werte enthalten.
 * Im Ausgabeformat JSON- bzw. JSONL werden diese Felder als Array kodiert.
 * Im Ausgabeformat TSV und während der Datenverarbeitung wird als temporäres Trennzeichen `␟` (Symbol For Unit Separator, [U+241F](https://www.unicode.org/charts/PDF/U2400.pdf)) verwendet.
