@@ -1,0 +1,104 @@
+# bei Werktiteln (category = Werktitel):
+# personBy_id_mv[0]->title (dateLifespanStart[0,4]-dateLifeSpanEnd[0,4]). titleMain_text (genreOther_mv : dateOrigin)
+- op: core/column-addition
+  engineConfig:
+    facets:
+      - type: list
+        expression: value
+        columnName: category
+        invert: false
+        selection:
+          - v:
+              v: Werktitel
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      with(
+        cells['personBy_id_mv'].value.split('␟')[0].cross('pe','id'),
+        r,
+        r[0].cells['title'].value
+        + forNonBlank(
+          forNonBlank(
+            r[0].cells['dateLifespanStart'].value[0,4],
+            x,
+            x,
+            ''
+          )
+          + forNonBlank(
+            r[0].cells['dateLifespanEnd'].value[0,4],
+            x,
+            '-' + x,
+            ''
+          ),
+          x,
+          ' (' + x + ')',
+          ''
+        )
+      ),
+      x,
+      x + '. ',
+      ''
+    )
+    + forNonBlank(
+      cells['titleMain_text'].value,
+      x,
+      x,
+      'ohne Titel'
+    )
+    + forNonBlank(
+      [
+        forNonBlank(
+          cells['genreOther_mv'].value.split('␟')[0],
+          x,
+          x,
+          null
+        ),
+        forNonBlank(
+          cells['dateOrigin'].value,
+          x,
+          x,
+          null
+        )
+      ].join(' : '),
+      x,
+      ' (' + x + ')',
+      ''
+    )
+  newColumnName: display
+  columnInsertIndex: 1
+# bei allen anderen Dokumententypen (category != Werktitel):
+# title - edition : [categoryPublication_mv]
+- op: core/text-transform
+  engineConfig:
+    facets:
+      - type: list
+        expression: value
+        columnName: category
+        invert: true
+        selection:
+          - v:
+              v: Werktitel
+    mode: row-based
+  columnName: display
+  expression: |
+    grel:
+    forNonBlank(
+      cells['title'].value,
+      x,
+      x,
+      'ohne Titel'
+    )
+    + forNonBlank(
+      cells['edition'].value,
+      x,
+      ' - ' + x,
+      ''
+    )
+    + forNonBlank(
+      cells['categoryPublication_mv'].value.split('␟')[0],
+      x,
+      ' : [' + x + ']',
+      ''
+    )
