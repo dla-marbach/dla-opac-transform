@@ -183,12 +183,12 @@
   <field name="description_text_mv" type="texts"/>
   <field name="description_type_mv" type="texts"/>
   <field name="digitalObject_id_mv" type="texts"/>
-  <field name="display" type="text" required="true"/>
   <field name="dimension_comment_mv" type="texts"/>
   <field name="dimension_depth_mv" type="texts"/>
   <field name="dimension_diameter_mv" type="texts"/>
   <field name="dimension_height_mv" type="texts"/>
   <field name="dimension_width_mv" type="texts"/>
+  <field name="display" type="text" required="true"/>
   <field name="edition" type="text"/>
   <field name="editionNormalized" type="text"/>
   <field name="enveloped" type="boolean"/>
