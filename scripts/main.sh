@@ -13,9 +13,15 @@ wait
 # Konfigurationsdateien in-place von YAML nach JSON konvertieren
 find "${DIR}/tmp/config" -name '*.yaml' -exec yq -i -o json {} \;
 
-# Schritt 1: Feld label bilden und Exemplar-IDs in AK ergänzen
+# Schritt 1: Exemplar-IDs in AK ergänzen
 for set in ${sets[@]}; do
     find "${DIR}/tmp/config/main/01/" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
+done
+wait
+
+# Schritt 2: Feld display für alle Datensätze bilden
+for set in ${sets[@]}; do
+    find "${DIR}/tmp/config/main/02/" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
 done
 wait
 
