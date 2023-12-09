@@ -31,6 +31,7 @@ AK,digitalObject_id_mv,MM00000001␟MM00000002,
 AK,display,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1],Hauptbezeichnung
 AK,edition,Ausgabebezeichnung Vorlageform,
 AK,editionNormalized,Ausgabebezeichnung normiert,
+AK,exportMODS,,Datensatz im MODS-Format
 AK,exportRIS,,Datensatz im RIS-Format
 AK,extent,Umfang,
 AK,extentFormat,Format,
@@ -181,6 +182,7 @@ BF,dateOther_mv,Zeitraum 1␟Zeitraum 2,
 BF,department,Abteilung,
 BF,digitalObject_id_mv,MM00000001␟MM00000002,
 BF,display,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]",Hauptbezeichnung
+BF,exportMODS,,Datensatz im MODS-Format
 BF,exportRIS,,Datensatz im RIS-Format
 BF,extent,Umfang,
 BF,id,BF00000001,
@@ -236,6 +238,7 @@ BI,dimension_depth_mv,Maßangabe 1 Tiefe (cm)␟Maßangabe 2 Tiefe (cm),
 BI,dimension_diameter_mv,Maßangabe 1 Durchmesser (cm)␟Maßangabe 2 Durchmesser (cm),
 BI,dimension_height_mv,Maßangabe 1 Höhe (cm)␟Maßangabe 2 Höhe (cm),
 BI,dimension_width_mv,Maßangabe 1 Breite (cm)␟Maßangabe 2 Breite (cm),
+BI,exportMODS,,Datensatz im MODS-Format
 BI,exportRIS,,Datensatz im RIS-Format
 BI,extent,Umfang,
 BI,holding_id_mv,BF00000001,
@@ -302,6 +305,7 @@ HS,dateOriginStart,1982-05-22,
 HS,dateOther_mv,Zeitraum 1␟Zeitraum 2,
 HS,digitalObject_id_mv,MM00000001␟MM00000002,
 HS,display,Brief [Hauptgattung],Hauptbezeichnung
+HS,exportMODS,,Datensatz im MODS-Format
 HS,exportRIS,,Datensatz im RIS-Format
 HS,extent,Umfang,
 HS,genre,Hauptgattung,

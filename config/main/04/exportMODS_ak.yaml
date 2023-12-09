@@ -1,0 +1,30 @@
+# Werktitel werden ausgelassen.
+- op: core/column-addition
+  engineConfig:
+    facets:
+      - type: list
+        expression: value
+        columnName: category
+        invert: true
+        selection:
+          - v:
+              v: Werktitel
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    '<mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">' + '\n' +
+    forNonBlank(cells['display'].value, v,
+    '  <titleInfo>' + '\n' +
+    '    <title>' + v.escape('xml') + '</title>' + '\n' +
+    '  </titleInfo>' + '\n'
+    , '') +
+    forNonBlank(cells['id'].value, v,
+    '  <recordInfo>' + '\n' +
+    '    <recordContentSource authority="marcorg">DE-Mar1</recordContentSource>' + '\n' +
+    '    <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">' + v.escape('xml') + '</recordIdentifier>' + '\n' +
+    '  </recordInfo>' + '\n'
+    , '') +
+    '</mods>'
+  newColumnName: exportMODS
+  columnInsertIndex: 2 # hinter id und display
