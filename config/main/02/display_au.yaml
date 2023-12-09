@@ -1,0 +1,16 @@
+# note
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      cells['note'].value,
+      x,
+      x,
+      'ohne Titel'
+    )
+  newColumnName: display
+  columnInsertIndex: 1

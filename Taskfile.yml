@@ -40,7 +40,7 @@ tasks:
       - '{{.DIR}}/input/**'
       - scripts/main.sh
       - 'config/*.*'
-      - 'config/main/**'
+      - 'config/main/**/**'
     generates:
       - '{{.DIR}}/output/**'
     preconditions:
@@ -108,11 +108,11 @@ tasks:
     internal: true
     cmds:
       - mkdir -p openrefine
-      - wget --no-verbose -O openrefine/orcli https://github.com/opencultureconsulting/orcli/releases/download/v0.2.1/orcli
+      - wget --no-verbose -O openrefine/orcli https://github.com/opencultureconsulting/orcli/releases/download/v0.2.2/orcli
       - chmod +x openrefine/orcli
 
   install_solr:
-    desc: install Solr
+    internal: true
     cmds:
       - mkdir -p solr
       - wget --no-verbose -O solr.tgz https://archive.apache.org/dist/lucene/solr/7.7.3/solr-7.7.3.tgz

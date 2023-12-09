@@ -1,0 +1,22 @@
+# title (dateLifespanStart[0,4])
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      cells['title'].value,
+      x,
+      x,
+      'ohne Titel'
+    )
+    + forNonBlank(
+      cells['dateLifespanStart'].value[0,4],
+      x,
+      ' (' + x + ')',
+      ''
+    )
+  newColumnName: display
+  columnInsertIndex: 1
