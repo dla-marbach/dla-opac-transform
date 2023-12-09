@@ -1,0 +1,41 @@
+# title - [category, categorySub, categorySubSub]
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      cells['title'].value,
+      x,
+      x,
+      'ohne Titel'
+    )
+    + forNonBlank(
+      [
+        forNonBlank(
+          cells['category'].value,
+          x,
+          x,
+          null
+        ),
+        forNonBlank(
+          cells['categorySub'].value,
+          x,
+          x,
+          null
+        ),
+        forNonBlank(
+          cells['categorySubSub'].value,
+          x,
+          x,
+          null
+        )
+      ].join(', '),
+      x,
+      ' - [' + x + ']',
+      ''
+    )
+  newColumnName: display
+  columnInsertIndex: 1

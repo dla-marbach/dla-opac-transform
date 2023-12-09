@@ -1,0 +1,33 @@
+# Wenn category = "Briefe von", "Briefe an" oder "Briefe anderer":
+# title [<genre>]
+# Sonst:
+# title
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      cells['title'].value,
+      x,
+      x,
+      'ohne Titel'
+    )
+    + if(
+      or(
+        cells['category'].value == 'Briefe von',
+        cells['category'].value == 'Briefe an',
+        cells['category'].value == 'Briefe anderer'
+      ),
+      forNonBlank(
+        cells['genre'].value,
+        x,
+        ' [' + x + ']',
+        ''
+      ),
+      ''
+    )
+  newColumnName: display
+  columnInsertIndex: 1

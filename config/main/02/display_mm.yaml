@@ -1,4 +1,4 @@
-# note
+# title
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -7,7 +7,7 @@
   expression: |
     grel:
     forNonBlank(
-      cells['note'].value,
+      cells['title'].value,
       x,
       x,
       'ohne Titel'

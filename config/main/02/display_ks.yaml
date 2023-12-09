@@ -1,4 +1,4 @@
-# note
+# title (dateLifespanStart[0,4])
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -7,10 +7,16 @@
   expression: |
     grel:
     forNonBlank(
-      cells['note'].value,
+      cells['title'].value,
       x,
       x,
       'ohne Titel'
+    )
+    + forNonBlank(
+      cells['dateLifespanStart'].value[0,4],
+      x,
+      ' (' + x + ')',
+      ''
     )
   newColumnName: display
   columnInsertIndex: 1
