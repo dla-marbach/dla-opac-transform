@@ -27,6 +27,20 @@ for set in ${sets[@]}; do
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 
+# Schritt 3: Für Felder mit _id auch _display anreichern
+
+#for set in ${sets[@]}; do
+#    find "${DIR}/tmp/config/main/03/" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
+#    pids+=($!)
+#done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+
+# Schritt 4: Felder für Exportformate RIS, DC und MODS bilden
+
+for set in ${sets[@]}; do
+    find "${DIR}/tmp/config/main/04/" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
+    pids+=($!)
+done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+
 ### Export ###
 
 for set in ${sets[@]}; do
