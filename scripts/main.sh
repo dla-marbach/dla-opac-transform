@@ -42,11 +42,19 @@ done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 
 ### Export ###
 
+# Spalten sortieren
+for set in ${sets[@]}; do
+    orcli sort columns "${set}" --first id --first display &
+    pids+=($!)
+done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+
+# TSV
 for set in ${sets[@]}; do
     orcli export tsv "${set}" --output "${DIR}/tmp/${set}.tsv" &
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 
+# JSON-Lines
 for set in ${sets[@]}; do
     orcli export jsonl "${set}" --separator "␟" --output "${DIR}/tmp/${set}.jsonl" &
     pids+=($!)
