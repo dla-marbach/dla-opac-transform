@@ -108,7 +108,7 @@ tasks:
     internal: true
     cmds:
       - mkdir -p openrefine
-      - wget --no-verbose -O openrefine/orcli https://github.com/opencultureconsulting/orcli/releases/download/v0.2.2/orcli
+      - wget --no-verbose -O openrefine/orcli https://github.com/opencultureconsulting/orcli/releases/download/v0.3.0/orcli
       - chmod +x openrefine/orcli
 
   install_solr:
