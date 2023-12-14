@@ -21,7 +21,7 @@
       null
     )
   newColumnName: classification_display_mv
-  columnInsertIndex: 2 # hinter Spalte id und display
+  columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -44,7 +44,7 @@
       null
     )
   newColumnName: corporationAbout_display_mv
-  columnInsertIndex: 2 # hinter Spalte id und display
+  columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -67,7 +67,7 @@
       null
     )
   newColumnName: corporationBy_display_mv
-  columnInsertIndex: 2 # hinter Spalte id und display
+  columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -90,7 +90,7 @@
       null
     )
   newColumnName: corporationByConference_display_mv
-  columnInsertIndex: 2 # hinter Spalte id und display
+  columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -113,7 +113,7 @@
       null
     )
   newColumnName: corporationByTerritory_display_mv
-  columnInsertIndex: 2 # hinter Spalte id und display
+  columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -136,7 +136,7 @@
       null
     )
   newColumnName: digitalObject_display_mv
-  columnInsertIndex: 2 # hinter Spalte id und display
+  columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -159,7 +159,7 @@
       null
     )
   newColumnName: journalIssue_display_mv
-  columnInsertIndex: 2 # hinter Spalte id und display
+  columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -182,7 +182,7 @@
       null
     )
   newColumnName: parent_display_mv
-  columnInsertIndex: 2 # hinter Spalte id und display
+  columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -205,7 +205,7 @@
       null
     )
   newColumnName: personAbout_display_mv
-  columnInsertIndex: 2 # hinter Spalte id und display
+  columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -228,7 +228,7 @@
       null
     )
   newColumnName: personBy_display_mv
-  columnInsertIndex: 2 # hinter Spalte id und display
+  columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -251,7 +251,7 @@
       null
     )
   newColumnName: publisher_display_mv
-  columnInsertIndex: 2 # hinter Spalte id und display
+  columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -274,7 +274,7 @@
       null
     )
   newColumnName: relation_display_mv
-  columnInsertIndex: 2 # hinter Spalte id und display
+  columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -297,7 +297,7 @@
       null
     )
   newColumnName: subject_display_mv
-  columnInsertIndex: 2 # hinter Spalte id und display
+  columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -320,7 +320,7 @@
       null
     )
   newColumnName: work_display_mv
-  columnInsertIndex: 2 # hinter Spalte id und display
+  columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -343,7 +343,7 @@
       null
     )
   newColumnName: workAbout_display_mv
-  columnInsertIndex: 2 # hinter Spalte id und display
+  columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -366,4 +366,4 @@
       null
     )
   newColumnName: workCompilation_display_mv
-  columnInsertIndex: 2 # hinter Spalte id und display
+  columnInsertIndex: 2
