@@ -1,6 +1,5 @@
 DIR="${DIR:-example}"
 sets=(ak au be bf bi hs ks mm pe se sy th)
-set -e # fail on error
 
 ### Import ###
 
@@ -29,10 +28,10 @@ done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 
 # Schritt 3: Für Felder mit _id auch _display anreichern
 
-#for set in ${sets[@]}; do
-#    find "${DIR}/tmp/config/main/03/" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
-#    pids+=($!)
-#done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+for set in ${sets[@]}; do
+    find "${DIR}/tmp/config/main/03/" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
+    pids+=($!)
+done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 
 # Schritt 4: Felder für Exportformate RIS, DC und MODS bilden
 
