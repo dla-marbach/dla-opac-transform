@@ -243,7 +243,7 @@ BF,usageRestriction,Benutzungsbeschränkung,
 BF,usageRestrictionComment,Benutzungsbeschränkung Anmerkung,
 BF,website_description_mv,URL 1 Typ␟URL 2 Typ,
 BF,website_url_mv,URL 1␟URL 2,
-BI,accession_display,,aus BE display
+BI,accession_display,Erwerbung 1,aus BE display
 BI,accession_id,BE00000001,
 BI,category,Satzart,
 BI,categoryMedium_mv,Objektart 1␟Objektart 2,
@@ -251,15 +251,15 @@ BI,categorySub,Objektart Hauptkategorie,
 BI,categorySubSub,Objektart Unterkategorie,
 BI,confidential,false,
 BI,corporationAbout_comment_mv,Link Körperschaft 3 Anmerkung␟Link Körperschaft 4 Anmerkung,
-BI,corporationAbout_display_mv,,aus KS display
+BI,corporationAbout_display_mv,Körperschaft 3␟Körperschaft 4,aus KS display
 BI,corporationAbout_id_mv,KS00000003␟KS00000004,
 BI,corporationAbout_role_mv,Link Körperschaft 3 Typ␟Link Körperschaft 4 Typ,
-BI,corporationAt_display_mv,,aus KS display
+BI,corporationAt_display_mv,Körperschaft 5␟Körperschaft 6,aus KS display
 BI,corporationAt_id_mv,KS00000005␟KS00000006,
 BI,corporationBy_comment_mv,Link Körperschaft 1 Anmerkung␟Link Körperschaft 2 Anmerkung,
-BI,corporationBy_display_mv,,aus KS display
+BI,corporationBy_display_mv,Körperschaft 1 (1982)␟Körperschaft 2,aus KS display
 BI,corporationBy_id_mv,KS00000001␟KS00000002,
-BI,corporationTo_display_mv,,aus KS display
+BI,corporationTo_display_mv,Körperschaft 7␟Körperschaft 8,aus KS display
 BI,corporationTo_id_mv,KS00000007␟KS00000008,
 BI,dateCataloged,2023-06-01,
 BI,dateModified,2023-06-06,
@@ -268,7 +268,7 @@ BI,dateOrigin,Zeitraum 1,
 BI,dateOriginComment_mv,Zeitraum 1 Anmerkung,
 BI,dateOther_mv,Zeitraum 2,
 BI,dateOtherComment_mv,Zeitraum 2 Anmerkung,
-BI,digitalObject_display_mv,,aus MM display
+BI,digitalObject_display_mv,Multimedia 1␟Multimedia 2,aus MM display
 BI,digitalObject_id_mv,MM00000001␟MM00000002,
 BI,display,Bild 1 [Objektart Unterkategorie],Hauptbezeichnung
 BI,dimension_comment_mv,Maßangabe 1 Anmerkung␟Maßangabe 2 Anmerkung,
@@ -279,18 +279,18 @@ BI,dimension_width_mv,Maßangabe 1 Breite (cm)␟Maßangabe 2 Breite (cm),
 BI,exportMODS,,Datensatz im MODS-Format
 BI,exportRIS,,Datensatz im RIS-Format
 BI,extent,Umfang,
-BI,holding_display_mv,,aus BF display
+BI,holding_display_mv,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]",aus BF display
 BI,holding_id_mv,BF00000001,
 BI,id,BI00000001,
 BI,inscription,Beschriftung,
 BI,inventoryNumber,Inventarnummer,
-BI,item_display_mv,,aus AU display
+BI,item_display_mv,Öffentliches Exemplar,aus AU display
 BI,item_id_mv,AU00000001,
-BI,library_display_mv,,aus AK display
+BI,library_display_mv,Gesamttitel 1␟Gesamttitel 2,aus AK display
 BI,library_id_mv,AK00000011␟AK00000012,
 BI,location_mv,Standort normiert,
 BI,locationComment,Standort Anmerkung,
-BI,manuscript_display_mv,,aus HS display
+BI,manuscript_display_mv,Handschrift 1␟Handschrift 2,aus HS display
 BI,manuscript_id_mv,HS00000001␟HS00000002,
 BI,material,Material,
 BI,mediaNumber,Mediennummer,
@@ -299,33 +299,33 @@ BI,noteBibliography_mv,Quellenangabe Anmerkung,
 BI,noteClassification,Sacherschließung,
 BI,noteDimension,Maßangabe Anmerkung,
 BI,noteObjectType,Objektart Zusammensetzung,
-BI,parent_display_mv,,aus BI display
+BI,parent_display_mv,Wertetabelle Workaround: Plakat bleibt Plakat [Plakat],aus BI display
 BI,parent_id_mv,BI00000002,
 BI,personAbout_comment_mv,Link Person 5 Anmerkung␟Link Person 6 Anmerkung,
-BI,personAbout_display_mv,,aus PE display
+BI,personAbout_display_mv,Person 5␟Person 6,aus PE display
 BI,personAbout_id_mv,PE00000005␟PE00000006,
 BI,personAbout_role_mv,Link Person 5 Typ␟Link Person 6 Typ,
-BI,personAt_display_mv,,aus PE display
+BI,personAt_display_mv,Person 7␟Person 8,aus PE display
 BI,personAt_id_mv,PE00000007␟PE00000008,
 BI,personBy_comment_mv,Link Person 1 Typ␟Link Person 2 Typ,
-BI,personBy_display_mv,,aus PE display
+BI,personBy_display_mv,Person 1 (1982-2001)␟Person 2 (1982-2001),aus PE display
 BI,personBy_id_mv,PE00000001␟PE00000002,
 BI,personBy_role_mv,Link Person 1 Typ␟Link Person 2 Typ,
-BI,personTo_display_mv,,aus PE display
+BI,personTo_display_mv,Person 3 (1982-2001)␟Person 4,aus PE display
 BI,personTo_id_mv,PE00000003␟PE00000004,
 BI,photoNegativeNumber_mv,Foto-Negativ 1␟Foto-Negativ 2,
 BI,reference_text_mv,Quellenangabe ,
-BI,relation_display_mv,,aus AK display
+BI,relation_display_mv,Person 1 (1982-2001). Werk 1 (genre : 2000)␟Person 2 (1982-2001). Werk 2 (genre),aus AK display
 BI,relation_id_mv,AK00000021␟AK00000022,
 BI,schemaVersion,0.4,
 BI,statusEditing,Bearbeitungsstatus,
 BI,statusLoan,Ausleihstatus,
 BI,statusPreservation,Erhaltungszustand,
-BI,subject_display_mv,,aus TH display
+BI,subject_display_mv,Schlagwort 1␟Schlagwort 2,aus TH display
 BI,subject_id_mv,TH00000021␟TH00000022,
 BI,subject_type_mv,Link Schlagwort 1 Typ␟Link Schlagwort 2 Typ,
 BI,subjectLocation_comment_mv,Link Ort-Schlagwort 1 Anmerkung␟Link Ort-Schlagwort 2 Anmerkung,
-BI,subjectLocation_display_mv,,aus TH display
+BI,subjectLocation_display_mv,Ort-Schlagwort 1␟Ort-Schlagwort 2,aus TH display
 BI,subjectLocation_id_mv,TH00000031␟TH00000032,
 BI,subjectLocation_type_mv,Link Ort-Schlagwort 1 Typ␟Link Ort-Schlagwort 2 Typ,
 BI,title,Bild 1,
