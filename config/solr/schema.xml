@@ -206,6 +206,7 @@
   <field name="edition" type="text"/>
   <field name="editionNormalized" type="text"/>
   <field name="enveloped" type="boolean"/>
+  <field name="exportDC" type="string" indexed="false"/>
   <field name="exportMODS" type="string" indexed="false"/>
   <field name="exportRIS" type="string" indexed="false"/>
   <field name="extent" type="text"/>
