@@ -90,14 +90,13 @@ tasks:
       - solr/bin/post -c dla example/output/*.jsonl
 
   install:
-    desc: install requirements into subdirectories
+    desc: install all requirements into subdirectories
     cmds:
       - task: install_openrefine
       - task: install_orcli
       - task: install_solr
 
   install_openrefine:
-    internal: true
     cmds:
       - mkdir -p openrefine
       - wget --no-verbose -O openrefine.tar.gz https://github.com/OpenRefine/OpenRefine/releases/download/3.7.6/openrefine-linux-3.7.6.tar.gz
@@ -105,14 +104,12 @@ tasks:
       - rm openrefine/refine.ini
        
   install_orcli:
-    internal: true
     cmds:
       - mkdir -p openrefine
-      - wget --no-verbose -O openrefine/orcli https://github.com/opencultureconsulting/orcli/releases/download/v0.3.0/orcli
+      - wget --no-verbose -O openrefine/orcli https://github.com/opencultureconsulting/orcli/releases/download/v0.4.0/orcli
       - chmod +x openrefine/orcli
 
   install_solr:
-    internal: true
     cmds:
       - mkdir -p solr
       - wget --no-verbose -O solr.tgz https://archive.apache.org/dist/lucene/solr/7.7.3/solr-7.7.3.tgz
