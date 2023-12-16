@@ -64,7 +64,7 @@ done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 for set in ak bf bi hs; do
     orcli export csv "${set}" \
     --select id,dateModified,exportDC \
-    --facets '[ { "type": "text", "columnName": "confidential", "invert":true, "query":"true" } ]' \
+    --facets '[ { "type": "text", "columnName": "confidential", "invert":true, "query":"true" }, { "type": "list", "expression": "grel:isNonBlank(value)", "columnName": "exportDC", "selection": [{"v": {"v": true}}] } ]' \
     --output "${DIR}/tmp/tmp-oai-dc_${set}.csv" &
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
@@ -75,7 +75,7 @@ rm "${DIR}"/tmp/tmp-oai-dc*.csv
 for set in ak bf bi hs; do
     orcli export csv "${set}" \
     --select id,dateModified,exportMODS \
-    --facets '[ { "type": "text", "columnName": "confidential", "invert":true, "query":"true" } ]' \
+    --facets '[ { "type": "text", "columnName": "confidential", "invert":true, "query":"true" }, { "type": "list", "expression": "grel:isNonBlank(value)", "columnName": "exportMODS", "selection": [{"v": {"v": true}}] } ]' \
     --output "${DIR}/tmp/tmp-oai-mods_${set}.csv" &
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
