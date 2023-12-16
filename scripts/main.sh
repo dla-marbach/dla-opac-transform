@@ -59,3 +59,25 @@ for set in ${sets[@]}; do
     orcli export jsonl "${set}" --separator "␟" --output "${DIR}/tmp/${set}.jsonl" &
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+
+# export DC für OAI
+for set in ak bf bi hs; do
+    orcli export csv "${set}" \
+    --select id,dateModified,exportDC \
+    --facets '[ { "type": "text", "columnName": "confidential", "invert":true, "query":"true" } ]' \
+    --output "${DIR}/tmp/tmp-oai-dc_${set}.csv" &
+    pids+=($!)
+done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+head -n 1 "${DIR}"/tmp/tmp-oai-dc_ak.csv > "${DIR}"/tmp/oai-dc.csv && tail -n+2 -q "${DIR}"/tmp/tmp-oai-dc_*.csv >> "${DIR}"/tmp/oai-dc.csv
+rm "${DIR}"/tmp/tmp-oai-dc*.csv
+
+# export MODS für OAI
+for set in ak bf bi hs; do
+    orcli export csv "${set}" \
+    --select id,dateModified,exportMODS \
+    --facets '[ { "type": "text", "columnName": "confidential", "invert":true, "query":"true" } ]' \
+    --output "${DIR}/tmp/tmp-oai-mods_${set}.csv" &
+    pids+=($!)
+done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+head -n 1 "${DIR}"/tmp/tmp-oai-mods_ak.csv > "${DIR}"/tmp/oai-mods.csv && tail -n+2 -q "${DIR}"/tmp/tmp-oai-mods_*.csv >> "${DIR}"/tmp/oai-mods.csv
+rm "${DIR}"/tmp/tmp-oai-mods*.csv
