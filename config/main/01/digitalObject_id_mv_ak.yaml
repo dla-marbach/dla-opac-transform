@@ -1,0 +1,17 @@
+# Links auf nicht vorhandene MM-Datensätze löschen
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: digitalObject_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      filter(
+        value.split('␟'),
+        v,
+        isNonBlank(v.cross('mm','id'))
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
