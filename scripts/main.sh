@@ -33,10 +33,17 @@ for set in ${sets[@]}; do
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 
-# Schritt 4: Felder für Exportformate RIS, DC und MODS bilden
+# Schritt 4: Felder für Filter, Detailansicht etc
 
 for set in ${sets[@]}; do
     find "${DIR}/tmp/config/main/04/" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
+    pids+=($!)
+done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+
+# Schritt 5: Felder für Exportformate RIS, DC und MODS bilden
+
+for set in ${sets[@]}; do
+    find "${DIR}/tmp/config/main/05/" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 

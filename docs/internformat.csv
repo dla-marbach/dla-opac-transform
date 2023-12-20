@@ -44,6 +44,7 @@ AK,extent,Umfang,
 AK,extentFormat,Format,
 AK,extentIllustrations_mv,Illustrationen 1␟Illustrationen 2,
 AK,extentSupplements,Begleitmaterial,
+AK,filterCollection_mv,Z:Öffentlicher Bestand 1␟Z:Öffentlicher Bestand 2,Facette Sammlung
 AK,genreOther_mv,Gattung 1␟Gattung 2,
 AK,gndRelation_comment_mv,GND-Relation 1 Anmerkung␟GND-Relation 2 Anmerkung,
 AK,gndRelation_id_mv,GND-Relation 1 ID␟GND-Relation 2 ID,
@@ -60,6 +61,8 @@ AK,isbn_mv,ISBN 1␟ISBN 2,
 AK,ismn_mv,ISMN 1␟ISMN 2,
 AK,issn_mv,ISSN 1␟ISSN 2,
 AK,item_id_mv,AU00000001,
+AK,item_holding_id_mv,BF00000001␝BF00000002␝BF99999999,Mehrere verknüpfte Bestände getrennt mit ␝ (U+241D)
+AK,item_holding_display_mv,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]␝Z:Öffentlicher Bestand 2␝␣",Mehrere verknüpfte Bestände getrennt mit ␝ (U+241D)
 AK,journalIssue_display_mv,Zeitschriftenheft 1␟Zeitschriftenheft 2,aus AK display
 AK,journalIssue_id_mv,AK00000051␟AK00000052,
 AK,language_mv,Sprache 1␟Sprache 2,
@@ -216,6 +219,7 @@ BF,exportDC,,Datensatz im DC-Format
 BF,exportMODS,,Datensatz im MODS-Format
 BF,exportRIS,,Datensatz im RIS-Format
 BF,extent,Umfang,
+BF,filterCollection_mv,Z:Öffentlicher Bestand 1,Facette Sammlung
 BF,id,BF00000001,
 BF,itemization_extent_mv,Verzeichnungsumfang 1␟Verzeichnungsumfang 2,
 BF,itemization_status_mv,Verzeichnung 1␟Verzeichnung 2,
