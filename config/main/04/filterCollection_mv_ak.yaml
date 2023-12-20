@@ -1,0 +1,33 @@
+# Facette Sammlung
+# Verknüpfte Bestandstitel ermittelt über zugehörige Exemplare
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      with(
+        forEach(
+          value.cross('au','manifestation_id'),
+          r,
+          r.cells['holding_display_mv'].value
+        ).join('␟'),
+        x,
+        forEach(
+          x.split('␟'),
+          v,
+          if(
+            v != '␣',
+            v.split(' - [')[0],
+            null
+          )
+        ).join('␟')
+      ),
+      x,
+      x,
+      null
+    )
+  newColumnName: filterCollection_mv
+  columnInsertIndex: 2

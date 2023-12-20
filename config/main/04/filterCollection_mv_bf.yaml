@@ -1,0 +1,29 @@
+# Facette Sammlung
+- op: core/column-addition
+  engineConfig:
+    facets:
+    - type: list
+      expression: value
+      columnName: category
+      invert: true
+      selection:
+      - v:
+          v: Zeitungsausschnittsammlung der Mediendokumentation
+      - v:
+          v: Dokumentensammlung der Mediendokumentation
+      - v:
+          v: Aufgelöster Bestand der Bibliothek
+      - v:
+          v: Theaterprogramme der Mediendokumentation
+    mode: row-based
+  baseColumnName: title
+  expression: |
+    grel:
+    forNonBlank(
+      value,
+      x,
+      x,
+      null
+    )
+  newColumnName: filterCollection_mv
+  columnInsertIndex: 2

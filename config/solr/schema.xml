@@ -214,6 +214,7 @@
   <field name="extentIllustrations_mv" type="texts"/>
   <field name="extentSupplements" type="text"/>
   <field name="filePath" type="text"/>
+  <field name="filterCollection_mv" type="strings"/>
   <field name="gender" type="text"/>
   <field name="genre" type="text"/>
   <field name="genreOther_mv" type="texts"/>
@@ -244,6 +245,8 @@
   <field name="itemNumber" type="text"/>
   <field name="item_display_mv" type="texts"/>
   <field name="item_id_mv" type="texts"/>
+  <field name="item_holding_id_mv" type="texts"/>
+  <field name="item_holding_display_mv" type="texts"/>
   <field name="itemization_extent_mv" type="texts"/>
   <field name="itemization_status_mv" type="texts"/>
   <field name="itemization_unit_mv" type="texts"/>

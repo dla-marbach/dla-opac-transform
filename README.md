@@ -51,3 +51,9 @@ Indexierung in Solr testen (vgl. http://localhost:8983):
 ```sh
 task solr
 ```
+
+Änderungen im Ausgabeformat JSON-Lines prüfen:
+
+```sh
+git diff -U0 --word-diff-regex='[^,]+' --word-diff=porcelain example/output/*.jsonl
+```
