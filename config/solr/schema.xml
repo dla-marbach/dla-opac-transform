@@ -109,7 +109,7 @@
   <field name="_root_" type="string" docValues="false" indexed="true" stored="false"/>
   <field name="_text_" type="text" multiValued="true" indexed="true" stored="false"/>
   <field name="_version_" type="plong" indexed="false" stored="false"/>
-  <field name="accessLevel" type="text" multiValued="false"/>
+  <field name="accessLevel" type="text">
   <field name="accessionNumber" type="text"/>
   <field name="accession_display" type="text"/>
   <field name="accession_id" type="text"/>
@@ -213,6 +213,7 @@
   <field name="extentFormat" type="text"/>
   <field name="extentIllustrations_mv" type="texts"/>
   <field name="extentSupplements" type="text"/>
+  <field name="fileExtension" type="text"/>
   <field name="filePath" type="text"/>
   <field name="filterCollection_mv" type="strings"/>
   <field name="gender" type="text"/>
@@ -231,6 +232,7 @@
   <field name="holding_id_mv" type="texts"/>
   <field name="host_display_mv" type="texts"/>
   <field name="host_id_mv" type="texts"/>
+  <field name="hyperlink" type="text"/>
   <field name="id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
   <field name="identifier_id_mv" type="texts"/>
   <field name="identifier_type_mv" type="texts"/>
@@ -378,6 +380,7 @@
   <field name="subseries" type="text"/>
   <field name="successor_display_mv" type="texts"/>
   <field name="successor_id_mv" type="texts"/>
+  <field name="thumbnail" type="text"/>
   <field name="title" type="text"/>
   <field name="titleMain_category" type="text"/>
   <field name="titleMain_comment" type="text"/>
