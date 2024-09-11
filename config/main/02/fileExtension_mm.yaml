@@ -1,0 +1,15 @@
+# Dateinamenserweiterung ermitteln aus URL
+- op: core/column-addition
+  engineConfig:
+    facets: []
+  baseColumnName: hyperlink
+  expression: | # String nach dem letzen "." in der URL (ohne URL-Parameter)
+    grel:
+    forNonBlank(
+      value.partition('?')[0].rpartition('/')[2].rpartition('.')[2],
+      x,
+      x,
+      null
+    )
+  newColumnName: fileExtension
+  columnInsertIndex: 2
