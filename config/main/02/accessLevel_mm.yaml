@@ -1,0 +1,38 @@
+# Vorhandene Werte in accessLevel überschreiben
+# Zugriffsstatus ermitteln aus digital.dla-marbach.de URL-Parameter, default "campus"
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: text
+      columnName: hyperlink
+      query: "^https:\\/\\/digital.dla-marbach.de"
+      mode: regex
+    mode: row-based
+  columnName: accessLevel
+  expression: | # media_access Angabe aus den URL-Parametern (? oder &) extrahieren
+    grel:
+    forNonBlank(
+      cells['hyperlink'].value.find(/[?&]media_access=[^?&]+/)[0].split('=')[1],
+      x,
+      x,
+      'campus'
+    )
+# Für andere URLs default "public" setzen
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: list
+      expression: isBlank(value)
+      columnName: hyperlink
+      selection:
+      - v:
+          v: false
+    - type: list
+      expression: isBlank(value)
+      columnName: accessLevel
+      selection:
+      - v:
+          v: true
+    mode: row-based
+  columnName: accessLevel
+  expression: grel:'public'
