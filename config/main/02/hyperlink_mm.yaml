@@ -1,0 +1,21 @@
+# HTTP-Links aus filePath extrahieren
+- op: core/column-addition
+  engineConfig:
+    facets:
+    - type: list
+      name: storageArea
+      expression: isBlank(value)
+      columnName: storageArea
+      selection:
+      - v:
+          v: true
+    - type: text
+      name: filePath
+      columnName: filePath
+      query: "^http"
+      mode: regex
+    mode: row-based
+  baseColumnName: filePath
+  expression: grel:value
+  newColumnName: hyperlink
+  columnInsertIndex: 2
