@@ -3,14 +3,12 @@
   engineConfig:
     facets:
     - type: list
-      name: storageArea
       expression: isBlank(value)
       columnName: storageArea
       selection:
       - v:
           v: true
     - type: text
-      name: filePath
       columnName: filePath
       query: "^http"
       mode: regex
