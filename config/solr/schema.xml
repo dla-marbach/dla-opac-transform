@@ -109,7 +109,7 @@
   <field name="_root_" type="string" docValues="false" indexed="true" stored="false"/>
   <field name="_text_" type="text" multiValued="true" indexed="true" stored="false"/>
   <field name="_version_" type="plong" indexed="false" stored="false"/>
-  <field name="accessLevel" type="text">
+  <field name="accessLevel" type="text"/>
   <field name="accessionNumber" type="text"/>
   <field name="accession_display" type="text"/>
   <field name="accession_id" type="text"/>
@@ -195,8 +195,12 @@
   <field name="department" type="text"/>
   <field name="description_text_mv" type="texts"/>
   <field name="description_type_mv" type="texts"/>
+  <field name="digitalObject_accessLevel_mv" type="texts"/>
   <field name="digitalObject_display_mv" type="texts"/>
+  <field name="digitalObject_fileExtension_mv" type="texts"/>
+  <field name="digitalObject_hyperlink_mv" type="texts"/>
   <field name="digitalObject_id_mv" type="texts"/>
+  <field name="digitalObject_thumbnail_mv" type="texts"/>
   <field name="dimension_comment_mv" type="texts"/>
   <field name="dimension_depth_mv" type="texts"/>
   <field name="dimension_diameter_mv" type="texts"/>
