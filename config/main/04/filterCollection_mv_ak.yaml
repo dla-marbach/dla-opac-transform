@@ -23,7 +23,7 @@
             v.split(' - [')[0],
             null
           )
-        ).join('␟')
+        ).uniques().join('␟')
       ),
       x,
       x,
