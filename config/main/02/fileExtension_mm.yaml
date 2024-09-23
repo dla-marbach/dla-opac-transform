@@ -13,7 +13,7 @@
     forNonBlank(
       value.partition('?')[0].partition('.')[2].rpartition('/')[2].rpartition('.')[2],
       x,
-      x,
+      x.toLowercase(),
       null
     )
   newColumnName: fileExtension
