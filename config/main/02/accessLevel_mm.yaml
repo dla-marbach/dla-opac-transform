@@ -1,4 +1,16 @@
-# Vorhandene Werte in accessLevel überschreiben
+# Vorhandene Werte in accessLevel leeren
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: text
+      columnName: hyperlink
+      query: "^http"
+      mode: regex
+    mode: row-based
+  columnName: accessLevel
+  expression: |
+    grel:
+    null
 # Zugriffsstatus ermitteln aus digital.dla-marbach.de URL-Parameter, default "campus"
 - op: core/text-transform
   engineConfig:
