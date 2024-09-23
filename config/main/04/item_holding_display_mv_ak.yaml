@@ -1,4 +1,4 @@
-# Exemplar-IDs in AK-Datensätzen ergänzen
+# Verknüpfte Bestandstitel ermittelt über zugehörige Exemplare
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -10,7 +10,12 @@
       forEach(
         value.cross('au','manifestation_id'),
         r,
-        r.cells['holding_display_mv'].value.replace('␟','␝')
+        forNonBlank(
+          r.cells['holding_display_mv'].value,
+          x,
+          x.replace('␟','␝'),
+          '␣'
+        )
       ).join('␟'),
       x,
       x,
