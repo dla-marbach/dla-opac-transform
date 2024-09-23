@@ -3,10 +3,15 @@
   engineConfig:
     facets: []
   baseColumnName: hyperlink
-  expression: | # String nach dem letzen "." in der URL (ohne URL-Parameter)
+  # String nach dem ersten ? entfernen (URL-Parameter)
+  # String vor dem ersten . enfernen (erster Teil der Domain und ggf. Protokoll)
+  # String vor dem letzten / entfernen
+  # String vor dem letzten . entfernen
+  # es verbleibt die Dateinamenserweiterung
+  expression: |
     grel:
     forNonBlank(
-      value.partition('?')[0].rpartition('/')[2].rpartition('.')[2],
+      value.partition('?')[0].partition('.')[2].rpartition('/')[2].rpartition('.')[2],
       x,
       x,
       null
