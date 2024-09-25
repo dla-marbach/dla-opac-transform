@@ -13,39 +13,13 @@ done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 # Konfigurationsdateien in-place von YAML nach JSON konvertieren
 find "${DIR}/tmp/config" -name '*.yaml' -exec yq -i -o json {} \;
 
-# Schritt 1: Exemplar-IDs in AK ergänzen
-for set in ${sets[@]}; do
-    find "${DIR}/tmp/config/main/01/" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
-    pids+=($!)
-done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
-
-# Schritt 2: Feld display für alle Datensätze bilden
-
-for set in ${sets[@]}; do
-    find "${DIR}/tmp/config/main/02/" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
-    pids+=($!)
-done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
-
-# Schritt 3: Für Felder mit _id auch _display anreichern
-
-for set in ${sets[@]}; do
-    find "${DIR}/tmp/config/main/03/" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
-    pids+=($!)
-done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
-
-# Schritt 4: Felder für Filter, Detailansicht etc
-
-for set in ${sets[@]}; do
-    find "${DIR}/tmp/config/main/04/" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
-    pids+=($!)
-done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
-
-# Schritt 5: Felder für Exportformate RIS, DC und MODS bilden
-
-for set in ${sets[@]}; do
-    find "${DIR}/tmp/config/main/05/" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
-    pids+=($!)
-done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+# Jedes Verzeichnis nacheinander bearbeiten
+for d in "${DIR}"/tmp/config/main/*/ ; do
+    for set in ${sets[@]}; do
+        find "${d}" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
+        pids+=($!)
+    done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+done
 
 ### Export ###
 
