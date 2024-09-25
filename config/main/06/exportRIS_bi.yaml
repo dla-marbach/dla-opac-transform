@@ -8,7 +8,7 @@
     grel:
     'TY  - ' + 'GEN' + '\n'
     + forNonBlank(cells['id'].value, v, 'ID  - ' + v + '\n', '')
-    + forNonBlank(cells['display'].value, v, 'TI  - ' + v + '\n', '')
+    + forNonBlank(cells['display'].value, v, 'TI  - ' + v.replace('\n','.') + '\n', '')
     + 'ER  -'
   newColumnName: exportRIS
   columnInsertIndex: 2 # hinter id und display
