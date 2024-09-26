@@ -22,7 +22,7 @@ Die Tabelle [internformat.csv](internformat.csv) beinhaltet eine Liste aller Fel
 * KS: Körperschaften
 * MM: Digitale Objekte
   * Digitale Objekte werden nicht als eigenständige Datensätze im Katalog präsentiert.
-  * Relevante Informationen zu digitalen Objekten werden in AK, BF, BI und HS in Feldern mit Präfix `media` ergänzt.
+  * Relevante Informationen zu digitalen Objekten werden in AK, BF, BI und HS in Feldern mit Präfix `digitalObject` ergänzt.
 * PE: Personen
 * SE: Systematikketten
 * SY: Fachsystematik
@@ -55,7 +55,7 @@ Beziehungen zwischen Feldern mit synchron mehrfachbelegten Werten werden mit ein
 Für den Katalog werden zahlreiche Zusatzfelder gebildet, um Funktionen wie Facettierung und Suche zu unterstützen. Diese werden mit folgenden Präfixen gruppiert:
 * `display` für Trefferliste und Detailanzeige
 * `filter` für Facetten und Suchfilter
-* `media` für digitale Objekte
+* `digitalObject` für digitale Objekte
 * `search` für erweiterte Suche und Normdaten
 * `lobid` für angereicherte Daten aus GND und Entity Facts über lobid-gnd
 * `wikidata` für angereicherte Daten aus Wikidata
