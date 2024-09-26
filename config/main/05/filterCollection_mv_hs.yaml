@@ -1,0 +1,17 @@
+# Facette Sammlung
+# Über Verknüpfung (holding_id_mv) den Bestandstitel (BF:title) ermitteln
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |-
+    grel:
+    forNonBlank(
+      cells['holding_id_mv'].value,
+      v,
+      v.cross('bf','id')[0].cells['title'].value,
+      null
+    )
+  newColumnName: filterCollection_mv
+  columnInsertIndex: 2

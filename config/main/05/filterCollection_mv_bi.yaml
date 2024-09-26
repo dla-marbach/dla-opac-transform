@@ -1,0 +1,43 @@
+# Facette Sammlung
+# Höchsten BI-Datensatz ermitteln (Hierarchie über parent_id_mv)
+# Dann über Verknüpfung (holding_id_mv) den Bestandstitel (BF:title) ermitteln
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |-
+    grel:
+    forNonBlank(
+      forNonBlank(
+        coalesce(
+          forNonBlank(
+            cells['parent_id_mv'].value.cross('bi','id')[0].cells['parent_id_mv'].value.cross('bi','id')[0].cells['parent_id_mv'].value,
+            x,
+            x,
+            null
+          ),
+          forNonBlank(
+            cells['parent_id_mv'].value.cross('bi','id')[0].cells['parent_id_mv'].value,
+            x,
+            x,
+            null
+          ),
+          forNonBlank(
+            cells['parent_id_mv'].value,
+            x,
+            x,
+            null
+          ),
+          cells['id'].value
+        ),
+        bi_id,
+        bi_id.cross('bi','id')[0].cells['holding_id_mv'].value,
+        null
+      ),
+      bf_id,
+      bf_id.cross('bf','id')[0].cells['title'].value,
+      null
+    )
+  newColumnName: filterCollection_mv
+  columnInsertIndex: 2
