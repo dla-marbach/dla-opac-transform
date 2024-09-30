@@ -8,6 +8,11 @@ for set in ${sets[@]}; do
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 
+for f in "${DIR}"/tmp/config/mappings/* ; do
+    p=${f##*/}
+    orcli import csv ${f} --projectName "${p%.csv}"
+done
+
 ### Transform ###
 
 # Konfigurationsdateien in-place von YAML nach JSON konvertieren

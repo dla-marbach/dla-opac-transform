@@ -1,0 +1,139 @@
+# Facette FilterMedium
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |-
+    grel:
+    [
+      forNonBlank(
+          cells['categorySubSub'].value,
+          x,
+          if(
+            or(
+              x != 'Druckschrift',
+              x != 'säurefreies Papier',
+              x != '22'
+            ),
+            x,
+            null
+          ),
+          null
+      ),
+      forNonBlank(
+          forEach(
+            cells['categoryMedia_mv'].value.split('␟'),
+            v,
+            if(
+              or(
+                v != 'Bildtonträger',
+                v != 'Druckschrift',
+                v != 'Tonträger',
+                v.length()>2
+              ),
+              v,
+              null
+            )
+          ).join('␟'),
+          x,
+          x,
+          null
+      ),
+      if(
+          cells['categoryPublication_mv'].value.contains('E-Book'),
+          'E-Book',
+          null
+      ),
+      if(
+          cells['categoryPublication_mv'].value.contains('Musikalia'),
+          'Noten',
+          null
+      ),
+      if(
+          cells['categorySub'].value == 'Einzelbestandteil / unselbständiges Werk',
+          'Beitrag',
+          null
+      ),
+      if(
+          cells['categorySub'].value == 'Fortlaufende Ressource / Serie, Reihe',
+          'Reihe',
+          null
+      ),
+      if(
+          cells['categorySub'].value == 'Fortlaufende Ressource / Zeitschrift',
+          'Zeitschrift',
+          null
+      ),
+      if(
+          cells['categorySub'].value == 'Fortlaufende Ressource / Zeitung',
+          'Zeitung',
+          null
+      ),
+      if(
+          cells['category'].value == 'Zeitschriftenband',
+          'Zeitschriftenband',
+          null
+      ),
+      if(
+          cells['category'].value == 'Zeitschriftenheft',
+          'Zeitschriftenheft',
+          null
+      ),
+      if(
+        and(
+          cells['category'].value == 'Bibliotheksdokumente',
+          or(
+            cells['categorySub'].value == 'Einzelne Einheit / Stücktitel, Band',
+            cells['categorySub'].value == 'Einzelne Einheit / nicht Teil eines Gesamtwerks'
+            )
+          ),
+          'Buch',
+          null
+      ),
+      if(
+        and(
+          cells['category'].value == 'Bibliotheksdokumente',
+          or(
+            cells['categorySub'].value == 'Mehrteilige Monografie / Teil eines Gesamtwerks',
+            cells['categorySub'].value == 'Mehrteilige Monografie / nicht Teil eines Gesamtwerks'
+            )
+          ),
+          'Mehrteiliges Werk',
+          null
+      ),
+      forNonBlank(
+        forEach(
+          cells['item_id_mv'].value.split('␟'),
+          v,
+          if(
+            isNonBlank(v.cross('au','id')[0].cells['enveloped'].value),
+            'Buchumschlag',
+            null
+          )
+        ).join('␟'),
+        x,
+        x,
+        null
+      )
+    ].uniques().join('␟')
+  newColumnName: filterMedium
+  columnInsertIndex: 2
+# Suchen/Ersetzen aus Mappings-Datei
+- op: core/text-transform
+  engineConfig:
+    facets: []
+    mode: row-based
+  columnName: filterMedium
+  expression: |
+    grel:
+    forEach(
+        value.split('␟'),
+        v,
+        forNonBlank(
+            v.cross('filterMedium','suchen')[0].cells['ersetzen'].value,
+            x,
+            x,
+            v
+        )
+    ).join('␟')
