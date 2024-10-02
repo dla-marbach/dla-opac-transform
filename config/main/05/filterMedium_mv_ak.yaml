@@ -1,4 +1,4 @@
-# Facette FilterMedium
+# Facette Medientyp
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -117,21 +117,21 @@
         null
       )
     ].uniques().join('␟')
-  newColumnName: filterMedium
+  newColumnName: filterMedium_mv
   columnInsertIndex: 2
 # Suchen/Ersetzen aus Mappings-Datei
 - op: core/text-transform
   engineConfig:
     facets: []
     mode: row-based
-  columnName: filterMedium
+  columnName: filterMedium_mv
   expression: |
     grel:
     forEach(
         value.split('␟'),
         v,
         forNonBlank(
-            v.cross('filterMedium','suchen')[0].cells['ersetzen'].value,
+            v.cross('map_filterMedium','suchen')[0].cells['ersetzen'].value,
             x,
             x,
             v
