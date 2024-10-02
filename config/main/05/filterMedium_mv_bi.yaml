@@ -1,0 +1,45 @@
+# Facette Medientyp
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        if(
+          cells['categorySubSub'].value == 'Datenträger',
+          'Datenträger',
+          null
+        ),
+        if(
+          cells['noteObjectType'].value == 'Datenträger',
+          'Datenträger',
+          null
+        )
+      ].uniques().join('␟'),
+    z,
+    z,
+    null
+    )
+  newColumnName: filterMedium_mv
+  columnInsertIndex: 2
+# Suchen/Ersetzen aus Mappings-Datei
+- op: core/text-transform
+  engineConfig:
+    facets: []
+    mode: row-based
+  columnName: filterMedium_mv
+  expression: |
+    grel:
+    forEach(
+        value.split('␟'),
+        v,
+        forNonBlank(
+            v.cross('map_filterMedium','suchen')[0].cells['ersetzen'].value,
+            x,
+            x,
+            v
+        )
+    ).join('␟')
