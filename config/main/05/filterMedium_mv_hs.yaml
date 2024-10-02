@@ -1,0 +1,59 @@
+# Facette Medientyp
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+            cells['categorySub'].value,
+            x,
+            if(
+              or(
+                x == 'Maschinenlesbare Datenträger',
+                x == 'Mikroform',
+                x == 'Elektronisches Dokument'
+              ),
+              x,
+              null
+            ),
+            null
+        ),
+        if(
+            cells['genreOther_mv'].value.contains('Kompositionen'),
+            'Kompositionen',
+            null
+        ),
+        if(
+            cells['genre'].value == 'Kompositionen',
+            'Kompositionen',
+            null
+        )
+      ].uniques().join('␟'),
+      z,
+      z,
+      null
+    )
+  newColumnName: filterMedium_mv
+  columnInsertIndex: 2
+# Suchen/Ersetzen aus Mappings-Datei
+- op: core/text-transform
+  engineConfig:
+    facets: []
+    mode: row-based
+  columnName: filterMedium_mv
+  expression: |
+    grel:
+    forEach(
+        value.split('␟'),
+        v,
+        forNonBlank(
+            v.cross('map_filterMedium','suchen')[0].cells['ersetzen'].value,
+            x,
+            x,
+            v
+        )
+    ).join('␟')
