@@ -1,0 +1,17 @@
+# Nicht aufgelöste Codes entfernen (weniger als drei Zeichen)
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: categoryMedia_mv
+  expression: |
+    grel:
+    forNonBlank(
+      filter(
+        value.split('␟'),
+        v,
+        v.length() > 2
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
