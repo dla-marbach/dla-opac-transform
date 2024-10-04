@@ -9,7 +9,10 @@
       filter(
         value.split('␟'),
         v,
-        v.length() > 2
+        or(
+          v.length() > 2,
+          isNonBlank(v.find(/\p{Lu}\p{Lu}/).join(''))
+        )
       ).join('␟'),
       x,
       x,
