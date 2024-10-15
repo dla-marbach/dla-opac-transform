@@ -1,10 +1,10 @@
 # Facette Sammlung
-# Über Verknüpfung (holding_id_mv) den Bestandstitel (BF:title) ermitteln
+# Über Verknüpfung (collection_id_mv) den Bestandstitel (BF:title) ermitteln
 - op: core/column-addition
   engineConfig:
     facets: []
     mode: row-based
-  baseColumnName: holding_id_mv
+  baseColumnName: collection_id_mv
   expression: |-
     grel:
     forNonBlank(

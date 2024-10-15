@@ -67,8 +67,8 @@ AK,isbn_mv,ISBN 1␟ISBN 2,
 AK,ismn_mv,ISMN 1␟ISMN 2,
 AK,issn_mv,ISSN 1␟ISSN 2,
 AK,item_id_mv,AU00000001,
-AK,item_holding_id_mv,BF00000001␝BF00000002␝BF99999999,Mehrere verknüpfte Bestände getrennt mit ␝ (U+241D)
-AK,item_holding_display_mv,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]␝Z:Öffentlicher Bestand 2␝␣",Mehrere verknüpfte Bestände getrennt mit ␝ (U+241D)
+AK,item_collection_id_mv,BF00000001␝BF00000002␝BF99999999,Mehrere verknüpfte Bestände getrennt mit ␝ (U+241D)
+AK,item_collection_display_mv,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]␝Z:Öffentlicher Bestand 2␝␣",Mehrere verknüpfte Bestände getrennt mit ␝ (U+241D)
 AK,journalIssue_display_mv,Zeitschriftenheft 1␟Zeitschriftenheft 2,aus AK display
 AK,journalIssue_id_mv,AK00000051␟AK00000052,
 AK,language_mv,Sprache 1␟Sprache 2,
@@ -168,8 +168,8 @@ AU,digitalObject_fileExtension_mv,pdf␟jpg,aus MM fileExtension
 AU,digitalObject_thumbnail_mv,"https://digital.dla-marbach.de/lib/icons/extension-pdf.png␟https://digital.dla-marbach.de/iiif/2/campus/D20041221/D20041221-12.jpg/full/!128,192/0/default.jpg?media_access=campus",aus MM thumbnail
 AU,display,Öffentliches Exemplar,Hauptbezeichnung
 AU,enveloped,true,
-AU,holding_display_mv,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]␟Z:Öffentlicher Bestand 2",aus BF display
-AU,holding_id_mv,BF00000001␟BF00000002,
+AU,collection_display_mv,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]␟Z:Öffentlicher Bestand 2",aus BF display
+AU,collection_id_mv,BF00000001␟BF00000002,
 AU,id,AU00000001,
 AU,location_mv,Standort,
 AU,manifestation_display,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1],aus AK display
@@ -310,8 +310,8 @@ BI,extent,Umfang,
 BI,filterCollection_mv,Z:Öffentlicher Bestand 1,Facette Sammlung
 BI,filterFormContent_mv,,Facette Form und Inhalt
 BI,filterMedium_mv,Datenträger,Facette Sammlung
-BI,holding_display_mv,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]",aus BF display
-BI,holding_id_mv,BF00000001,
+BI,collection_display_mv,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]",aus BF display
+BI,collection_id_mv,BF00000001,
 BI,id,BI00000001,
 BI,inscription,Beschriftung,
 BI,inventoryNumber,Inventarnummer,
@@ -406,8 +406,8 @@ HS,genre,Hauptgattung,
 HS,genreOther_mv,Weitere Hauptgattung 1␟Weitere Hauptgattung 2,
 HS,genreSub,Untergattung,
 HS,genreSubOther_mv,Weitere Untergattung 1␟Weitere Untergattung 2,
-HS,holding_display_mv,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]",aus BF display
-HS,holding_id_mv,BF00000001,
+HS,collection_display_mv,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]",aus BF display
+HS,collection_id_mv,BF00000001,
 HS,id,HS00000001,
 HS,item_display_mv,Öffentliches Exemplar,aus AU display
 HS,item_id_mv,AU00000001,

@@ -234,8 +234,8 @@
   <field name="gnd_id_mv" type="texts"/>
   <field name="gnd_type_mv" type="texts"/>
   <field name="headword_mv" type="texts"/>
-  <field name="holding_display_mv" type="texts"/>
-  <field name="holding_id_mv" type="texts"/>
+  <field name="collection_display_mv" type="texts"/>
+  <field name="collection_id_mv" type="texts"/>
   <field name="host_display_mv" type="texts"/>
   <field name="host_id_mv" type="texts"/>
   <field name="hyperlink" type="text"/>
@@ -253,8 +253,8 @@
   <field name="itemNumber" type="text"/>
   <field name="item_display_mv" type="texts"/>
   <field name="item_id_mv" type="texts"/>
-  <field name="item_holding_id_mv" type="texts"/>
-  <field name="item_holding_display_mv" type="texts"/>
+  <field name="item_collection_id_mv" type="texts"/>
+  <field name="item_collection_display_mv" type="texts"/>
   <field name="itemization_extent_mv" type="texts"/>
   <field name="itemization_status_mv" type="texts"/>
   <field name="itemization_unit_mv" type="texts"/>

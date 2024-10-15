@@ -133,7 +133,7 @@
   engineConfig:
     facets: []
     mode: row-based
-  baseColumnName: holding_id_mv
+  baseColumnName: collection_id_mv
   expression: |
     grel:
     forNonBlank(
@@ -150,7 +150,7 @@
       x,
       null
     )
-  newColumnName: holding_display_mv
+  newColumnName: collection_display_mv
   columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:

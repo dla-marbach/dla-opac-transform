@@ -12,7 +12,7 @@
         forEach(
           value.cross('au','manifestation_id'),
           r,
-          r.cells['holding_display_mv'].value
+          r.cells['collection_display_mv'].value
         ).join('␟'),
         x,
         forEach(
