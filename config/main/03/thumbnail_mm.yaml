@@ -28,7 +28,7 @@
     mode: row-based
   columnName: thumbnail
   # ObjId = rechts neben "/image/" und vor dem nächsten "/"
-  # ObjFile = URL-Parameter media_thumbnail, Default: ObjId + '0' + '_' + '0001.tif'
+  # ObjFile = URL-Parameter media_thumbnail, Default: ObjId + '_0001.tif'
   # Pfad bilden mit "https://digital.dla-marbach.de/viewer/api/v1/records/" + ObjId + "/files/images/" + ObjFile + "/full/!128,192/0/default.jpg"
   expression: |
     grel:
@@ -40,7 +40,7 @@
           cells['hyperlink'].value.find(/[?&]media_thumbnail=[^?&]+/)[0].split('=')[1],
           x,
           x,
-          ObjId + '0' + '_' + '0001.tif'
+          ObjId + '_0001.tif'
         ),
         ObjFile,
         forNonBlank(
@@ -62,7 +62,7 @@
     mode: row-based
   columnName: thumbnail
   # ObjId = rechts neben "/records/" und vor dem nächsten "/"
-  # ObjFile = rechts neben "/images/" und vor dem nächsten "/", Default: ObjId + '0' + '_' + '0001.tif'
+  # ObjFile = rechts neben "/images/" und vor dem nächsten "/", Default: ObjId + '_0001.tif'
   # Pfad bilden mit "https://digital.dla-marbach.de/viewer/api/v1/records/" + ObjId + "/files/images/" + ObjFile + "/full/!128,192/0/default.jpg"
   expression: |
     grel:
@@ -74,7 +74,7 @@
           cells['hyperlink'].value.partition('/images/')[2].split('/')[0],
           x,
           x,
-          ObjId + '0' + '_' + '0001.tif'
+          ObjId + '_0001.tif'
         ),
         ObjFile,
         forNonBlank(
@@ -96,7 +96,7 @@
     mode: row-based
   columnName: thumbnail
   # ObjId = URL-Parameter pi
-  # ObjFile = URL-Parameter media_thumbnail, Default: ObjId + '0' + '_' + '0001.tif'
+  # ObjFile = URL-Parameter media_thumbnail, Default: ObjId + '0001.tif'
   # Pfad bilden mit "https://digital.dla-marbach.de/viewer/api/v1/records/" + ObjId + "/files/images/" + ObjFile + "/full/!128,192/0/default.jpg"
   expression: |
     grel:
@@ -108,7 +108,7 @@
           cells['hyperlink'].value.find(/[?&]media_thumbnail=[^?&]+/)[0].split('=')[1],
           x,
           x,
-          ObjId + '0' + '_' + '0001.tif'
+          ObjId + '_0001.tif'
         ),
         ObjFile,
         forNonBlank(
