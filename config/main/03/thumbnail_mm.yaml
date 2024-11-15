@@ -96,7 +96,7 @@
     mode: row-based
   columnName: thumbnail
   # ObjId = URL-Parameter pi
-  # ObjFile = URL-Parameter media_thumbnail, Default: ObjId + '0001.tif'
+  # ObjFile = URL-Parameter media_thumbnail, Default: ObjId + '_0001.tif'
   # Pfad bilden mit "https://digital.dla-marbach.de/viewer/api/v1/records/" + ObjId + "/files/images/" + ObjFile + "/full/!128,192/0/default.jpg"
   expression: |
     grel:
