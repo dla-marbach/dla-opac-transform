@@ -1,4 +1,5 @@
 # inline-<img>-fähige Thumbnail-URL aus der URL bilden
+# Maximalwert 192 Pixel für Breite und Höhe
 # Cantaloupe /iiif/
 - op: core/column-addition
   engineConfig:
@@ -10,11 +11,10 @@
       mode: regex
     mode: row-based
   baseColumnName: hyperlink
-  # Breite 128 Pixel, Höhe 192 Pixel
   # Kodierte Slashes (%2f oder %2F) werden zunächst aufgelöst
   expression: |
     grel:
-    cells['hyperlink'].value.replace('%2f','/').replace('%2F','/').replace('full/full/','full/!128,192/')
+    cells['hyperlink'].value.replace('%2f','/').replace('%2F','/').replace('full/full/','full/!192,192/')
   newColumnName: thumbnail
   columnInsertIndex: 2
 # Goobi mit Goobi-Interface /viewer/image/
@@ -29,7 +29,7 @@
   columnName: thumbnail
   # ObjId = rechts neben "/image/" und vor dem nächsten "/"
   # ObjFile = URL-Parameter media_thumbnail, Default: ObjId + '_0001.tif'
-  # Pfad bilden mit "https://digital.dla-marbach.de/viewer/api/v1/records/" + ObjId + "/files/images/" + ObjFile + "/full/!128,192/0/default.jpg"
+  # Pfad bilden mit "https://digital.dla-marbach.de/viewer/api/v1/records/" + ObjId + "/files/images/" + ObjFile + "/full/!192,192/0/default.jpg"
   expression: |
     grel:
     with(
@@ -44,7 +44,7 @@
         ),
         ObjFile,
         forNonBlank(
-          "https://digital.dla-marbach.de/viewer/api/v1/records/" + ObjId + "/files/images/" + ObjFile + "/full/!128,192/0/default.jpg",
+          "https://digital.dla-marbach.de/viewer/api/v1/records/" + ObjId + "/files/images/" + ObjFile + "/full/!192,192/0/default.jpg",
           x,
           x,
           null
@@ -63,7 +63,7 @@
   columnName: thumbnail
   # ObjId = rechts neben "/records/" und vor dem nächsten "/"
   # ObjFile = rechts neben "/images/" und vor dem nächsten "/", Default: ObjId + '_0001.tif'
-  # Pfad bilden mit "https://digital.dla-marbach.de/viewer/api/v1/records/" + ObjId + "/files/images/" + ObjFile + "/full/!128,192/0/default.jpg"
+  # Pfad bilden mit "https://digital.dla-marbach.de/viewer/api/v1/records/" + ObjId + "/files/images/" + ObjFile + "/full/!192,192/0/default.jpg"
   expression: |
     grel:
     with(
@@ -78,7 +78,7 @@
         ),
         ObjFile,
         forNonBlank(
-          "https://digital.dla-marbach.de/viewer/api/v1/records/" + ObjId + "/files/images/" + ObjFile + "/full/!128,192/0/default.jpg",
+          "https://digital.dla-marbach.de/viewer/api/v1/records/" + ObjId + "/files/images/" + ObjFile + "/full/!192,192/0/default.jpg",
           x,
           x,
           null
@@ -97,7 +97,7 @@
   columnName: thumbnail
   # ObjId = URL-Parameter pi
   # ObjFile = URL-Parameter media_thumbnail, Default: ObjId + '_0001.tif'
-  # Pfad bilden mit "https://digital.dla-marbach.de/viewer/api/v1/records/" + ObjId + "/files/images/" + ObjFile + "/full/!128,192/0/default.jpg"
+  # Pfad bilden mit "https://digital.dla-marbach.de/viewer/api/v1/records/" + ObjId + "/files/images/" + ObjFile + "/full/!192,192/0/default.jpg"
   expression: |
     grel:
     with(
@@ -112,7 +112,7 @@
         ),
         ObjFile,
         forNonBlank(
-          "https://digital.dla-marbach.de/viewer/api/v1/records/" + ObjId + "/files/images/" + ObjFile + "/full/!128,192/0/default.jpg",
+          "https://digital.dla-marbach.de/viewer/api/v1/records/" + ObjId + "/files/images/" + ObjFile + "/full/!192,192/0/default.jpg",
           x,
           x,
           null
