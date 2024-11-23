@@ -1,0 +1,32 @@
+# Bestandsangaben in Zeitschriftenaufnahmen übertragen und Datensätze löschen
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        filter(
+          value.cross('ak','parent_id_mv'),
+          r,
+          r.cells['parent_type_mv'].value == 'Bestandsangabe'
+        ),
+        v,
+        v.cells['noteFootnote_text_mv'].value.split('␟').slice(1).join('␟')
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+  newColumnName: textualHolding_mv
+  columnInsertIndex: 1 # hinter Spalte id
+- op: core/row-removal
+  engineConfig:
+    facets:
+    - type: text
+      columnName: parent_type_mv
+      query: Bestandsangabe
+      mode: text
+    mode: row-based
