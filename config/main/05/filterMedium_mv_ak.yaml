@@ -13,12 +13,12 @@
             x,
             if(
               or(
-                x != 'Druckschrift',
-                x != 'säurefreies Papier',
-                x != '22'
+                x == 'Druckschrift',
+                x == 'säurefreies Papier',
+                x == '22'
               ),
-              x,
-              null
+              null,
+              x
             ),
             null
         ),
@@ -28,13 +28,13 @@
               v,
               if(
                 or(
-                  v != 'Bildtonträger',
-                  v != 'Druckschrift',
-                  v != 'Tonträger',
+                  v == 'Bildtonträger',
+                  v == 'Druckschrift',
+                  v == 'Tonträger',
                   v.length()>2
                 ),
-                v,
-                null
+                null,
+                v
               )
             ).join('␟'),
             x,

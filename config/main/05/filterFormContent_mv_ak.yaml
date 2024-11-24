@@ -1,0 +1,68 @@
+# Facette Form und Inhalt
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['genreOther_mv'].value,
+          v,
+          v,
+          null
+        ),
+        if(
+          cells['category'].value == 'Radio/TV-Manuskript',
+          'Rundfunkmanuskript',
+          null
+        ),
+        if(
+          cells['categorySub'].value == 'Einzelbestandteil / unselbständiges Werk',
+          'Aufsatz',
+          null
+        ),
+        forNonBlank(
+            forEach(
+              cells['categoryPublication_mv'].value.split('␟'),
+              v,
+              if(
+                or(
+                  v == 'Edition Corvey',
+                  v == 'Bibliothek der deutschen Literatur'
+                ),
+                null,
+                v
+              )
+            ).join('␟'),
+            x,
+            x,
+            null
+        )
+      ].uniques().join('␟'),
+      z,
+      z,
+      null
+    )
+  newColumnName: filterFormContent_mv
+  columnInsertIndex: 2
+# Suchen/Ersetzen aus Mappings-Datei
+- op: core/text-transform
+  engineConfig:
+    facets: []
+    mode: row-based
+  columnName: filterFormContent_mv
+  expression: |
+    grel:
+    forEach(
+        value.split('␟'),
+        v,
+        forNonBlank(
+            v.cross('map_filterFormContent','suchen')[0].cells['ersetzen'].value,
+            x,
+            x,
+            v
+        )
+    ).join('␟')
