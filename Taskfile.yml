@@ -99,9 +99,8 @@ tasks:
   install_openrefine:
     cmds:
       - mkdir -p openrefine
-      - wget --no-verbose -O openrefine.tar.gz https://github.com/OpenRefine/OpenRefine/releases/download/3.7.6/openrefine-linux-3.7.6.tar.gz
+      - wget --no-verbose -O openrefine.tar.gz https://github.com/OpenRefine/OpenRefine/releases/download/3.8.2/openrefine-linux-3.8.2.tar.gz
       - tar -xzf openrefine.tar.gz -C openrefine --strip 1 && rm openrefine.tar.gz
-      - rm openrefine/refine.ini
        
   install_orcli:
     cmds:
