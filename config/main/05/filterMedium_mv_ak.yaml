@@ -30,8 +30,7 @@
                 or(
                   v == 'Bildtonträger',
                   v == 'Druckschrift',
-                  v == 'Tonträger',
-                  v.length()>2
+                  v == 'Tonträger'
                 ),
                 null,
                 v
