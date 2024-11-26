@@ -21,35 +21,16 @@
           null
         ),
         forNonBlank(
-            forEach(
-              cells['categoryMedium_mv'].value.split('␟'),
-              v,
-              if(
-                or(
-                  v == 'Anderes Objekt',
-                  v == 'Anderes Konvolut'
-                ),
-                null,
-                v
-              )
-            ).join('␟'),
-            x,
-            x,
-            null
+          cells['categoryMedium_mv'].value,
+          v,
+          v,
+          null
         ),
         forNonBlank(
-            with(
-              cells['noteObjectType'].value,
-              v,
-              if(
-                v == 'Datenträger',
-                null,
-                v
-              )
-            ),
-            x,
-            x,
-            null
+          cells['noteObjectType'].value,
+          v,
+          v,
+          null
         )
       ].uniques().join('␟'),
       z,
@@ -67,12 +48,16 @@
   expression: |
     grel:
     forEach(
-        value.split('␟'),
+        filter(
+            value.split('␟'),
+            f,
+            f.length()>0
+        ),
         v,
         forNonBlank(
-            v.cross('map_filterFormContent','suchen')[0].cells['ersetzen'].value,
+            v.cross('map_filterFormContent','suchen')[0],
             x,
-            x,
+            x.cells['ersetzen'].value,
             v
         )
-    ).join('␟')
+    ).uniques().join('␟')

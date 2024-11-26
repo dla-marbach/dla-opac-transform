@@ -45,12 +45,16 @@
   expression: |
     grel:
     forEach(
-        value.split('␟'),
+        filter(
+            value.split('␟'),
+            f,
+            f.length()>0
+        ),
         v,
         forNonBlank(
-            v.cross('map_filterFormContent','suchen')[0].cells['ersetzen'].value,
+            v.cross('map_filterFormContent','suchen')[0],
             x,
-            x,
+            x.cells['ersetzen'].value,
             v
         )
-    ).join('␟')
+    ).uniques().join('␟')

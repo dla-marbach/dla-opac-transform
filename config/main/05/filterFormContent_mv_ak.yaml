@@ -25,21 +25,10 @@
           null
         ),
         forNonBlank(
-            forEach(
-              cells['categoryPublication_mv'].value.split('␟'),
-              v,
-              if(
-                or(
-                  v == 'Edition Corvey',
-                  v == 'Bibliothek der deutschen Literatur'
-                ),
-                null,
-                v
-              )
-            ).join('␟'),
-            x,
-            x,
-            null
+          cells['categoryPublication_mv'].value,
+          v,
+          v,
+          null
         )
       ].uniques().join('␟'),
       z,
@@ -57,12 +46,16 @@
   expression: |
     grel:
     forEach(
-        value.split('␟'),
+        filter(
+            value.split('␟'),
+            f,
+            f.length()>0
+        ),
         v,
         forNonBlank(
-            v.cross('map_filterFormContent','suchen')[0].cells['ersetzen'].value,
+            v.cross('map_filterFormContent','suchen')[0],
             x,
-            x,
+            x.cells['ersetzen'].value,
             v
         )
-    ).join('␟')
+    ).uniques().join('␟')
