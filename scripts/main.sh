@@ -4,7 +4,7 @@ sets=(ak au be bf bi hs ks mm pe se sy th)
 ### Import ###
 
 for set in ${sets[@]}; do
-    orcli import tsv "${DIR}"/input/${set}.tsv --projectName "${set}" &
+    orcli import tsv "${DIR}"/input/${set}*.tsv --projectName "${set}" &
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 

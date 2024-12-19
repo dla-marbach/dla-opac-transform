@@ -9,37 +9,16 @@
     forNonBlank(
       [
         forNonBlank(
-            cells['categorySubSub'].value,
-            x,
-            if(
-              or(
-                x != 'Druckschrift',
-                x != 'säurefreies Papier',
-                x != '22'
-              ),
-              x,
-              null
-            ),
-            null
+          cells['categorySubSub'].value,
+          v,
+          v,
+          null
         ),
         forNonBlank(
-            forEach(
-              cells['categoryMedia_mv'].value.split('␟'),
-              v,
-              if(
-                or(
-                  v != 'Bildtonträger',
-                  v != 'Druckschrift',
-                  v != 'Tonträger',
-                  v.length()>2
-                ),
-                v,
-                null
-              )
-            ).join('␟'),
-            x,
-            x,
-            null
+          cells['categoryMedia_mv'].value,
+          v,
+          v,
+          null
         ),
         if(
             cells['categoryPublication_mv'].value.contains('E-Book'),
@@ -133,12 +112,16 @@
   expression: |
     grel:
     forEach(
-        value.split('␟'),
+        filter(
+            value.split('␟'),
+            f,
+            f.length()>0
+        ),
         v,
         forNonBlank(
-            v.cross('map_filterMedium','suchen')[0].cells['ersetzen'].value,
+            v.cross('map_filterMedium','suchen')[0],
             x,
-            x,
+            x.cells['ersetzen'].value,
             v
         )
-    ).join('␟')
+    ).uniques().join('␟')

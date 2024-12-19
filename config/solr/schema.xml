@@ -152,7 +152,6 @@
   <field name="corporationAbout_display_mv" type="texts"/>
   <field name="corporationAbout_id_mv" type="texts"/>
   <field name="corporationAbout_role_mv" type="texts"/>
-  <field name="corporationAbout_type_mv" type="texts"/>
   <field name="corporationAt_display_mv" type="texts"/>
   <field name="corporationAt_id_mv" type="texts"/>
   <field name="corporationByConference_creator_mv" type="texts"/>
@@ -168,11 +167,10 @@
   <field name="corporationBy_display_mv" type="texts"/>
   <field name="corporationBy_id_mv" type="texts"/>
   <field name="corporationBy_role_mv" type="texts"/>
-  <field name="corporationBy_type_mv" type="texts"/>
   <field name="corporationTo_comment_mv" type="texts"/>
   <field name="corporationTo_display_mv" type="texts"/>
   <field name="corporationTo_id_mv" type="texts"/>
-  <field name="corporationTo_type_mv" type="texts"/>
+  <field name="corporationTo_role_mv" type="texts"/>
   <field name="corporation_display_mv" type="texts"/>
   <field name="corporation_id_mv" type="texts"/>
   <field name="country_mv" type="texts"/>
@@ -356,7 +354,7 @@
   <field name="relation_display_mv" type="texts"/>
   <field name="relation_id_mv" type="texts"/>
   <field name="relation_type_mv" type="texts"/>
-  <field name="schemaVersion" type="pdoubles"/>
+  <field name="schemaVersion" type="string"/>
   <field name="scholarlyPublication_date_mv" type="texts"/>
   <field name="scholarlyPublication_location_mv" type="texts"/>
   <field name="scholarlyPublication_text_mv" type="texts"/>

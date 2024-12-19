@@ -49,7 +49,7 @@ AK,extentFormat,Format,
 AK,extentIllustrations_mv,Illustrationen 1␟Illustrationen 2,
 AK,extentSupplements,Begleitmaterial,
 AK,filterCollection_mv,Z:Öffentlicher Bestand 1␟Z:Öffentlicher Bestand 2,Facette Sammlung
-AK,filterFormContent_mv,,Facette Form und Inhalt
+AK,filterFormContent_mv,Epik␟Schwank␟Rundfunkmanuskript␟Aufsatz␟Literarisches Weblog,Facette Form und Inhalt
 AK,filterMedium_mv,Erweiterte physikalische Form␟Medienart 1␟Medienart 2␟Buchumschlag,Facette Sammlung
 AK,genreOther_mv,Gattung 1␟Gattung 2,
 AK,gndRelation_comment_mv,GND-Relation 1 Anmerkung␟GND-Relation 2 Anmerkung,
@@ -236,7 +236,7 @@ BF,exportMODS,,Datensatz im MODS-Format
 BF,exportRIS,,Datensatz im RIS-Format
 BF,extent,Umfang,
 BF,filterCollection_mv,Z:Öffentlicher Bestand 1,Facette Sammlung
-BF,filterFormContent_mv,,Facette Form und Inhalt
+BF,filterFormContent_mv,Bestandsart,Facette Form und Inhalt
 BF,id,BF00000001,
 BF,itemization_extent_mv,Verzeichnungsumfang 1␟Verzeichnungsumfang 2,
 BF,itemization_status_mv,Verzeichnung 1␟Verzeichnung 2,
@@ -309,7 +309,7 @@ BI,exportMODS,,Datensatz im MODS-Format
 BI,exportRIS,,Datensatz im RIS-Format
 BI,extent,Umfang,
 BI,filterCollection_mv,Z:Öffentlicher Bestand 1,Facette Sammlung
-BI,filterFormContent_mv,,Facette Form und Inhalt
+BI,filterFormContent_mv,Objektart Hauptkategorie␟Objektart Unterkategorie␟Objektart 1␟Objektart 2␟Objektart Zusammensetzung,Facette Form und Inhalt
 BI,filterMedium_mv,Datenträger,Facette Sammlung
 BI,collection_display_mv,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]",aus BF display
 BI,collection_id_mv,BF00000001,
@@ -375,15 +375,15 @@ HS,content,Inhalt,
 HS,corporationAbout_comment_mv,Link Körperschaft 3 Anmerkung␟Link Körperschaft 4 Anmerkung,
 HS,corporationAbout_display_mv,Körperschaft 3␟Körperschaft 4,aus KS display
 HS,corporationAbout_id_mv,KS00000003␟KS00000004,
-HS,corporationAbout_type_mv,Link Körperschaft 3 Typ␟Link Körperschaft 4 Typ,
+HS,corporationAbout_role_mv,Link Körperschaft 3 Typ␟Link Körperschaft 4 Typ,
 HS,corporationBy_comment_mv,Link Körperschaft 1 Anmerkung␟Link Körperschaft 2 Anmerkung,
 HS,corporationBy_display_mv,Körperschaft 1 (1982)␟Körperschaft 2,aus KS display
 HS,corporationBy_id_mv,KS00000001␟KS00000002,
-HS,corporationBy_type_mv,Link Körperschaft 1 Typ␟Link Körperschaft 2 Typ,
+HS,corporationBy_role_mv,Link Körperschaft 1 Typ␟Link Körperschaft 2 Typ,
 HS,corporationTo_comment_mv,Link Körperschaft 7 Anmerkung␟Link Körperschaft 8 Anmerkung,
 HS,corporationTo_display_mv,Körperschaft 7␟Körperschaft 8,aus KS display
 HS,corporationTo_id_mv,KS00000007␟KS00000008,
-HS,corporationTo_type_mv,Link Körperschaft 7 Typ␟Link Körperschaft 8 Typ,
+HS,corporationTo_role_mv,Link Körperschaft 7 Typ␟Link Körperschaft 8 Typ,
 HS,dateCataloged,2023-06-01,
 HS,dateModified,2023-06-06,
 HS,dateOriginEnd,2001-01-01,
@@ -401,7 +401,7 @@ HS,exportMODS,,Datensatz im MODS-Format
 HS,exportRIS,,Datensatz im RIS-Format
 HS,extent,Umfang,
 HS,filterCollection_mv,Z:Öffentlicher Bestand 1,Facette Sammlung
-HS,filterFormContent_mv,,Facette Form und Inhalt
+HS,filterFormContent_mv,Hauptgattung␟Weitere Hauptgattung 1␟Weitere Hauptgattung 2␟Untergattung␟Weitere Untergattung 1␟Weitere Untergattung 2,Facette Form und Inhalt
 HS,filterMedium_mv,Sonstiger Datenträger␟Noten,Facette Sammlung
 HS,genre,Hauptgattung,
 HS,genreOther_mv,Weitere Hauptgattung 1␟Weitere Hauptgattung 2,
