@@ -9,7 +9,7 @@
       filter(
         value.split('␟'),
         v,
-        isNonBlank(v.cross('mm','id'))
+        isNonBlank(v.cross('mm','id')[0].cells['id'].value)
       ).join('␟'),
       x,
       x,
