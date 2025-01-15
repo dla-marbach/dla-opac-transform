@@ -1,0 +1,81 @@
+# Facette Personen und Körperschaften
+# direkt personBy und corporationBy
+# personAt und corporationAt ermittelt über zugehörige Exemplare
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['personBy_display_mv'].value,
+          v,
+          v,
+          null
+        ),
+        forNonBlank(
+          cells['corporationBy_display_mv'].value,
+          v,
+          v,
+          null
+        ),
+        forNonBlank(
+          cells['item_id_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            forNonBlank(
+              x.cross('au','id')[0].cells['personAt_id_mv'].value,
+              x,
+              forEach(
+                x.split('␟'),
+                y,
+                forNonBlank(
+                  y.cross('pe','id')[0].cells['display'].value,
+                  z,
+                  z,
+                  '␣'
+                )
+              ).join('␟'),
+              '␣')
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['item_id_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            forNonBlank(
+              x.cross('au','id')[0].cells['corporationAt_id_mv'].value,
+              x,
+              forEach(
+                x.split('␟'),
+                y,
+                forNonBlank(
+                  y.cross('ks','id')[0].cells['display'].value,
+                  z,
+                  z,
+                  '␣'
+                )
+              ).join('␟'),
+              '␣')
+          ).join('␟'),
+          null
+        )
+      ].join('␟'),
+      z,
+      filter(
+        z.split('␟'),
+        f,
+        f[0] != '␣'
+      ).uniques().join('␟'),
+      null
+    )
+  newColumnName: filterAuthority_mv
+  columnInsertIndex: 2

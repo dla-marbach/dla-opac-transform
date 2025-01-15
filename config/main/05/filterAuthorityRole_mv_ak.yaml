@@ -1,0 +1,131 @@
+# Facette Personen und Körperschaften mit Rollen
+# personBy: GFUPE oder "nicht bestimmt"
+# corporationBy: GFUKS oder "nicht bestimmt"
+# item -> personAt: "Bestandsbildner/Vorbesitzer"
+# item -> corporationAt: "Bestandsbildner/Vorbesitzer"
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['personBy_display_mv'].value,
+          v,
+          with(
+            cells['personBy_role_mv'].value.split('␟'),
+            x,
+            forEachIndex(
+              v.split('␟'),
+              i,
+              y,
+              y + if(
+                isNonBlank(x[i]),
+                '␝' + x[i],
+                '␝' + 'nicht bestimmt'
+              )
+            ).join('␟')
+          ),
+          null
+        ),
+        forNonBlank(
+          cells['corporationBy_display_mv'].value,
+          v,
+          with(
+            cells['corporationBy_role_mv'].value.split('␟'),
+            x,
+            forEachIndex(
+              v.split('␟'),
+              i,
+              y,
+              y + if(
+                isNonBlank(x[i]),
+                '␝' + x[i],
+                '␝' + 'nicht bestimmt'
+              )
+            ).join('␟')
+          ),
+          null
+        ),
+        forNonBlank(
+          cells['item_id_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            forNonBlank(
+              x.cross('au','id')[0].cells['personAt_id_mv'].value,
+              x,
+              forEach(
+                x.split('␟'),
+                y,
+                forNonBlank(
+                  y.cross('pe','id')[0].cells['display'].value,
+                  z,
+                  z + '␝' + 'Bestandsbildner/Vorbesitzer',
+                  '␣'
+                )
+              ).join('␟'),
+              '␣')
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['item_id_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            forNonBlank(
+              x.cross('au','id')[0].cells['corporationAt_id_mv'].value,
+              x,
+              forEach(
+                x.split('␟'),
+                y,
+                forNonBlank(
+                  y.cross('ks','id')[0].cells['display'].value,
+                  z,
+                  z + '␝' + 'Bestandsbildner/Vorbesitzer',
+                  '␣'
+                )
+              ).join('␟'),
+              '␣')
+          ).join('␟'),
+          null
+        )
+      ].join('␟'),
+      z,
+      filter(
+        z.split('␟'),
+        f,
+        f[0] != '␣'
+      ).uniques().join('␟'),
+      null
+    )
+  newColumnName: filterAuthorityRole_mv
+  columnInsertIndex: 2
+# Suchen/Ersetzen aus Mappings-Datei
+- op: core/text-transform
+  engineConfig:
+    facets: []
+    mode: row-based
+  columnName: filterAuthorityRole_mv
+  expression: |
+    grel:
+    forEach(
+      value.split('␟'),
+      v,
+      with(
+        v.split('␝'),
+        x,
+        forNonBlank(
+          x[1].cross('map_filterAuthorityRole','suchen')[0],
+          z,
+          x[0] + '␝' + z.cells['ersetzen'].value,
+          x[0] + '␝' + x[1]
+        )
+      )
+    ).uniques().join('␟')

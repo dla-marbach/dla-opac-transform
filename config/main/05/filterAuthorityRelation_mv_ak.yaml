@@ -1,0 +1,125 @@
+# Facette Personen und Körperschaften mit Relationen
+# personBy: "An" wenn GFUPE Widmungsempfänger oder Adressat oder Gefeierter sonst "Von" oder falls GFUPE leer dann "nicht bestimmt"
+# corporationBy: "An" wenn GFUKS Widmungsempfänger oder Adressat oder Gefeierter sonst "Von" oder falls GFUKS leer dann "nicht bestimmt"
+# item -> personAt: "Unter"
+# item -> corporationAt: "Unter"
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['personBy_display_mv'].value,
+          v,
+          with(
+            cells['personBy_role_mv'].value.split('␟'),
+            x,
+            forEachIndex(
+              v.split('␟'),
+              i,
+              y,
+              y + if(
+                isNonBlank(x[i]),
+                if(
+                  or(
+                    x[i] == 'Widmungsempfänger',
+                    x[i] == 'Adressat',
+                    x[i] == 'Gefeierter' 
+                  ),
+                  '␝' + 'An',
+                  '␝' + 'Von' 
+                ),
+                '␝' + 'nicht bestimmt'
+              ) 
+            ).join('␟')
+          ),
+          null
+        ),
+        forNonBlank(
+          cells['corporationBy_display_mv'].value,
+          v,
+          with(
+            cells['corporationBy_role_mv'].value.split('␟'),
+            x,
+            forEachIndex(
+              v.split('␟'),
+              i,
+              y,
+              y + if(
+                isNonBlank(x[i]),
+                if(
+                  or(
+                    x[i] == 'Widmungsempfänger',
+                    x[i] == 'Adressat',
+                    x[i] == 'Gefeierter' 
+                  ),
+                  '␝' + 'An',
+                  '␝' + 'Von' 
+                ),
+                '␝' + 'nicht bestimmt'
+              ) 
+            ).join('␟')
+          ),
+          null
+        ),
+        forNonBlank(
+          cells['item_id_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            forNonBlank(
+              x.cross('au','id')[0].cells['personAt_id_mv'].value,
+              x,
+              forEach(
+                x.split('␟'),
+                y,
+                forNonBlank(
+                  y.cross('pe','id')[0].cells['display'].value,
+                  z,
+                  z + '␝' + 'Unter',
+                  '␣'
+                )
+              ).join('␟'),
+              '␣')
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['item_id_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            forNonBlank(
+              x.cross('au','id')[0].cells['corporationAt_id_mv'].value,
+              x,
+              forEach(
+                x.split('␟'),
+                y,
+                forNonBlank(
+                  y.cross('ks','id')[0].cells['display'].value,
+                  z,
+                  z + '␝' + 'Unter',
+                  '␣'
+                )
+              ).join('␟'),
+              '␣')
+          ).join('␟'),
+          null
+        )
+      ].join('␟'),
+      z,
+      filter(
+        z.split('␟'),
+        f,
+        f[0] != '␣'
+      ).uniques().join('␟'),
+      null
+    )
+  newColumnName: filterAuthorityRelation_mv
+  columnInsertIndex: 2
