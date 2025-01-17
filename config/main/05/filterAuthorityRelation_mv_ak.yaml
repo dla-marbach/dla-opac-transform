@@ -1,6 +1,5 @@
 # Facette Personen und Körperschaften mit Relationen
-# personBy: "An" wenn GFUPE Widmungsempfänger oder Adressat oder Gefeierter sonst "Von" oder falls GFUPE leer dann "nicht bestimmt"
-# corporationBy: "An" wenn GFUKS Widmungsempfänger oder Adressat oder Gefeierter sonst "Von" oder falls GFUKS leer dann "nicht bestimmt"
+# personBy, corporationBy: "An" wenn _role_mv Widmungsempfänger oder Adressat oder Gefeierter sonst "Von"; wenn _role_mv leer dann "nicht bestimmt"
 # item -> personAt: "Unter"
 # item -> corporationAt: "Unter"
 - op: core/column-addition

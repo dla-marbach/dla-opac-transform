@@ -1,0 +1,81 @@
+# Facette Personen und Körperschaften
+# personAbout, corporationAbout: _role_mv oder "Behandelte Person/Körperschaft"
+# personAt, corporationAt: "Bestandsbildner/Vorbesitzer"
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['personAbout_display_mv'].value,
+          v,
+          with(
+            cells['personAbout_role_mv'].value.split('␟'),
+            x,
+            forEachIndex(
+              v.split('␟'),
+              i,
+              y,
+              y + if(
+                isNonBlank(x[i]),
+                '␝' + x[i],
+                '␝' + 'Behandelte Person/Körperschaft'
+              )
+            ).join('␟')
+          ),
+          null
+        ),
+        forNonBlank(
+          cells['corporationAbout_display_mv'].value,
+          v,
+          with(
+            cells['corporationAbout_role_mv'].value.split('␟'),
+            x,
+            forEachIndex(
+              v.split('␟'),
+              i,
+              y,
+              y + if(
+                isNonBlank(x[i]),
+                '␝' + x[i],
+                '␝' + 'Behandelte Person/Körperschaft'
+              )
+            ).join('␟')
+          ),
+          null
+        ),
+        forNonBlank(
+          cells['personAt_display_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            x + '␝' + 'Bestandsbildner/Vorbesitzer'
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['corporationAt_display_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            x + '␝' + 'Bestandsbildner/Vorbesitzer'
+          ).join('␟'),
+          null
+        )
+      ].join('␟'),
+      z,
+      filter(
+        z.split('␟'),
+        f,
+        f[0] != '␣'
+      ).uniques().join('␟'),
+      null
+    )
+  newColumnName: filterAuthorityRole_mv
+  columnInsertIndex: 2

@@ -1,0 +1,47 @@
+# Facette Personen und Körperschaften
+# personAbout, corporationAbout
+# personAt, corporationAt
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['personAbout_display_mv'].value,
+          v,
+          v,
+          null
+        ),
+        forNonBlank(
+          cells['corporationAbout_display_mv'].value,
+          v,
+          v,
+          null
+        ),
+        forNonBlank(
+          cells['personAt_display_mv'].value,
+          v,
+          v,
+          null
+        ),
+        forNonBlank(
+          cells['corporationAt_display_mv'].value,
+          v,
+          v,
+          null
+        )
+      ].join('␟'),
+      z,
+      filter(
+        z.split('␟'),
+        f,
+        f[0] != '␣'
+      ).uniques().join('␟'),
+      null
+    )
+  newColumnName: filterAuthority_mv
+  columnInsertIndex: 2
