@@ -22,7 +22,7 @@
               i,
               y,
               y + if(
-                isNonBlank(x[i]),
+                isNonBlank(x[i].replace('␣','')),
                 '␝' + x[i],
                 '␝' + 'nicht bestimmt'
               )
@@ -41,7 +41,7 @@
               i,
               y,
               y + if(
-                isNonBlank(x[i]),
+                isNonBlank(x[i].replace('␣','')),
                 '␝' + x[i],
                 '␝' + 'nicht bestimmt'
               )

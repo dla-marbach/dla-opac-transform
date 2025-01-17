@@ -24,7 +24,7 @@
               i,
               y,
               y + if(
-                isNonBlank(x[i]),
+                isNonBlank(x[i].replace('␣','')),
                 if(
                   and(
                     x[i] == 'Sonstige/r Urheber/in',
@@ -80,7 +80,7 @@
               i,
               y,
               y + if(
-                isNonBlank(x[i]),
+                isNonBlank(x[i].replace('␣','')),
                 '␝' + x[i],
                 '␝' + 'nicht bestimmt'
               )
@@ -99,7 +99,7 @@
               i,
               y,
               y + if(
-                isNonBlank(x[i]),
+                isNonBlank(x[i].replace('␣','')),
                 '␝' + x[i],
                 '␝' + 'nicht bestimmt'
               )

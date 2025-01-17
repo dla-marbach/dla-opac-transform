@@ -22,7 +22,7 @@
               i,
               y,
               y + if(
-                isNonBlank(x[i]),
+                isNonBlank(x[i].replace('␣','')),
                 if(
                   or(
                     x[i] == 'Widmungsempfänger',
@@ -49,7 +49,7 @@
               i,
               y,
               y + if(
-                isNonBlank(x[i]),
+                isNonBlank(x[i].replace('␣','')),
                 if(
                   or(
                     x[i] == 'Widmungsempfänger',
