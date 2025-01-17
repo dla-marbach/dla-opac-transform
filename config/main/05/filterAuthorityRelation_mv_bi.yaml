@@ -1,0 +1,105 @@
+# Facette Personen und Körperschaften
+# personBy, corporationBy: "Von"
+# personTo, corporationTo: "An"
+# personAbout, corporationAbout:  "Über"
+# personAt, corporationAt: "Unter"
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['personBy_display_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            x + '␝' + 'Von'
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['corporationBy_display_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            x + '␝' + 'Von'
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['personTo_display_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            x + '␝' + 'An'
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['corporationTo_display_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            x + '␝' + 'An'
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['personAbout_display_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            x + '␝' + 'Über'
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['corporationAbout_display_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            x + '␝' + 'Über'
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['personAt_display_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            x + '␝' + 'Unter'
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['corporationAt_display_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            x + '␝' + 'Unter'
+          ).join('␟'),
+          null
+        )
+      ].join('␟'),
+      z,
+      filter(
+        z.split('␟'),
+        f,
+        f[0] != '␣'
+      ).uniques().join('␟'),
+      null
+    )
+  newColumnName: filterAuthorityRelation_mv
+  columnInsertIndex: 2
