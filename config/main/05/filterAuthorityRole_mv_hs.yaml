@@ -31,48 +31,48 @@
           null
         ),
         forNonBlank(
+          cells['corporationBy_display_mv'].value,
+          v,
+          with(
+            cells['corporationBy_role_mv'].value.split('␟'),
+            x,
+            forEachIndex(
+              v.split('␟'),
+              i,
+              y,
+              y + if(
+                isNonBlank(x[i]),
+                '␝' + x[i],
+                '␝' + 'nicht bestimmt'
+              )
+            ).join('␟')
+          ),
+          null
+        ),
+        forNonBlank(
+          cells['personTo_display_mv'].value,
+          v,
+          with(
+            cells['personTo_role_mv'].value.split('␟'),
+            x,
+            forEachIndex(
+              v.split('␟'),
+              i,
+              y,
+              y + if(
+                isNonBlank(x[i]),
+                '␝' + x[i],
+                '␝' + 'nicht bestimmt'
+              )
+            ).join('␟')
+          ),
+          null
+        ),
+        forNonBlank(
           cells['corporationTo_display_mv'].value,
           v,
           with(
             cells['corporationTo_role_mv'].value.split('␟'),
-            x,
-            forEachIndex(
-              v.split('␟'),
-              i,
-              y,
-              y + if(
-                isNonBlank(x[i]),
-                '␝' + x[i],
-                '␝' + 'nicht bestimmt'
-              )
-            ).join('␟')
-          ),
-          null
-        ),
-        forNonBlank(
-          cells['personAbout_display_mv'].value,
-          v,
-          with(
-            cells['personAbout_role_mv'].value.split('␟'),
-            x,
-            forEachIndex(
-              v.split('␟'),
-              i,
-              y,
-              y + if(
-                isNonBlank(x[i]),
-                '␝' + x[i],
-                '␝' + 'nicht bestimmt'
-              )
-            ).join('␟')
-          ),
-          null
-        ),
-        forNonBlank(
-          cells['corporationAbout_display_mv'].value,
-          v,
-          with(
-            cells['corporationAbout_role_mv'].value.split('␟'),
             x,
             forEachIndex(
               v.split('␟'),
