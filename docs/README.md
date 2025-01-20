@@ -1,6 +1,6 @@
 # Dokumentation Internformat für Katalog und Datendienst
 
-Version: 0.5.1
+Version: 0.6.2
 
 ## Feldliste
 
@@ -51,6 +51,20 @@ Beziehungen zwischen Feldern mit synchron mehrfachbelegten Werten werden mit ein
   * 0: `Funktion Person 1`
   * 1: `␣`
   * 2: `Funktion Person 3`
+
+Für die Zuordnung von Exemplarinformationen innerhalb der Titeldatensätze (AK) und für weitere Katalogfunktionen (z.B. hierarchische Facetten) wird als weiteres Trennzeichen `␝` (Symbol for Group Separator, [U+241D](https://www.unicode.org/charts/PDF/U2400.pdf)) verwendet. Beispiel (Exemplar Nr. 1 ist mit zwei Beständen verknüpft):
+* item_id_mv:
+  * 0: `AU00000001`
+  * 1: `AU00000002`
+* item_display_mv:
+  * 0: `Exemplar 1`
+  * 1: `Exemplar 2`
+* item_collection_id_mv:
+  * 0: `BF00000001␝BF00000002`
+  * 1: `BF00000003`
+* item_collection_display_mv:
+  * 0: `Bestand 1␝Bestand 2`
+  * 1: `Bestand 3`
 
 Für den Katalog werden zahlreiche Zusatzfelder gebildet, um Funktionen wie Facettierung und Suche zu unterstützen. Diese werden mit folgenden Präfixen gruppiert:
 * `display` für Trefferliste und Detailanzeige
