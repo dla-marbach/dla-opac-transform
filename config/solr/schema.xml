@@ -217,6 +217,9 @@
   <field name="extentSupplements" type="text"/>
   <field name="fileExtension" type="text"/>
   <field name="filePath" type="text"/>
+  <field name="filterAuthority_mv" type="strings"/>
+  <field name="filterAuthorityRelation_mv" type="strings"/>
+  <field name="filterAuthorityRole_mv" type="strings"/>
   <field name="filterCollection_mv" type="strings"/>
   <field name="filterFormContent_mv" type="strings"/>
   <field name="filterMedium_mv" type="strings"/>
