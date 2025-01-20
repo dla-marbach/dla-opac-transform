@@ -1,6 +1,10 @@
 # Facette Personen und Körperschaften
 # direkt personBy und corporationBy
-# personAt und corporationAt ermittelt über zugehörige Exemplare
+# personAt und corporationAt ermittelt über zugehörige Exemplare (item_id_mv -> AU)
+# weitere Personen und Körperschaften ermittelt über Systematikketten (classification_id_mv -> SE)
+## nur SE:category "Bibliographie-Kette" oder "Kette Bibliothek"
+# weitere Personen und Körperschaften ermittelt über Provenienzketten der zugehörigen Exemplare (item_id_mv -> AU:classification_id_mv -> SE)
+## nur SE:category "Provenienz-Kette"
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -66,6 +70,111 @@
               ).join('␟'),
               '␣')
           ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          forEach(
+            filter(
+              forEach(
+                cells['classification_id_mv'].value.split('␟'),
+                x,
+                x.cross('se','id')[0]
+              ),
+              f,
+              or(
+                f.cells['category'].value == 'Bibliographie-Kette',
+                f.cells['category'].value == 'Kette Bibliothek'
+              )
+            ),
+            r,
+            [
+              forNonBlank(
+                r.cells['person_id_mv'].value,
+                x,
+                forEach(
+                  x.split('␟'),
+                  y,
+                  forNonBlank(
+                    y.cross('pe','id')[0].cells['display'].value,
+                    z,
+                    z,
+                    '␣'
+                  )
+                ).join('␟'),
+                '␣'
+              ),
+              forNonBlank(
+                r.cells['corporation_id_mv'].value,
+                x,
+                forEach(
+                  x.split('␟'),
+                  y,
+                  forNonBlank(
+                    y.cross('ks','id')[0].cells['display'].value,
+                    z,
+                    z,
+                    '␣'
+                  )
+                ).join('␟'),
+                '␣'
+              )
+            ].join('␟')
+          ).join('␟'),
+          v,
+          v,
+          null
+        ),
+        forNonBlank(
+          forEach(
+            filter(
+              forEach(
+                forEach(
+                  cells['item_id_mv'].value.split('␟'),
+                  v,
+                  v.cross('au','id')[0].cells['classification_id_mv'].value
+                ).join('␟').split('␟'),
+                x,
+                x.cross('se','id')[0]
+              ),
+              f,
+              f.cells['category'].value == 'Provenienz-Kette'
+            ),
+            r,
+            [
+              forNonBlank(
+                r.cells['person_id_mv'].value,
+                x,
+                forEach(
+                  x.split('␟'),
+                  y,
+                  forNonBlank(
+                    y.cross('pe','id')[0].cells['display'].value,
+                    z,
+                    z,
+                    '␣'
+                  )
+                ).join('␟'),
+                '␣'
+              ),
+              forNonBlank(
+                r.cells['corporation_id_mv'].value,
+                x,
+                forEach(
+                  x.split('␟'),
+                  y,
+                  forNonBlank(
+                    y.cross('ks','id')[0].cells['display'].value,
+                    z,
+                    z,
+                    '␣'
+                  )
+                ).join('␟'),
+                '␣'
+              )
+            ].join('␟')
+          ).join('␟'),
+          v,
+          v,
           null
         )
       ].join('␟'),

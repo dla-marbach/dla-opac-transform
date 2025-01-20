@@ -2,6 +2,19 @@
 # personBy, corporationBy: _role_mv oder "nicht bestimmt"
 # item -> personAt: "Bestandsbildner/Vorbesitzer"
 # item -> corporationAt: "Bestandsbildner/Vorbesitzer"
+# Systematikketten: classification_id_mv -> SE
+## nur SE:category "Bibliographie-Kette" oder "Kette Bibliothek"
+## Wenn der erste Wert aus SE:classificationAuthor_id_mv einen der folgenden Werte enthält, dann folgende Rolle:
+### 00000051 = "Sprecher";
+### 00189247, 00189248, 00189249, 00189324, 00189325, 00189326 = "Verfasser";
+### 00189250, 00189251, 00189252, 00189253, 00189313, 00189254, 00189328 = "nicht bestimmt"
+### Sonst: "Behandelte Person/Körperschaft"
+# Provenienzketten: item_id_mv -> AU:classification_id_mv -> SE
+## nur SE:category "Provenienz-Kette"
+## Wenn der erste Wert aus SE:subject_id_mv einen der folgenden Werte enthält, dann folgende Rolle:
+### 00038994 = "Widmungsempfänger"
+### 00039011 = "nicht bestimmt"
+### Sonst: "Bestandsbildner/Vorbesitzer"
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -93,6 +106,170 @@
               ).join('␟'),
               '␣')
           ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          forEach(
+            filter(
+              forEach(
+                cells['classification_id_mv'].value.split('␟'),
+                x,
+                x.cross('se','id')[0]
+              ),
+              f,
+              or(
+                f.cells['category'].value == 'Bibliographie-Kette',
+                f.cells['category'].value == 'Kette Bibliothek'
+              )
+            ),
+            r,
+           with(
+              forNonBlank(
+                r.cells['classificationAuthor_id_mv'].value.split('␟')[0],
+                x,
+                if(
+                  x == 'SY00000051',
+                  'Sprecher',
+                  if(
+                    or(
+                      x == 'SY00189247',
+                      x == 'SY00189248',
+                      x == 'SY00189249',
+                      x == 'SY00189324',
+                      x == 'SY00189325',
+                      x == 'SY00189326'
+                    ),
+                    'Verfasser',
+                    if(
+                      or(
+                        x == 'SY00189247',
+                        x == 'SY00189248',
+                        x == 'SY00189249',
+                        x == 'SY00189324',
+                        x == 'SY00189325',
+                        x == 'SY00189326',
+                        x == 'SY00189250',
+                        x == 'SY00189251',
+                        x == 'SY00189252',
+                        x == 'SY00189253',
+                        x == 'SY00189313',
+                        x == 'SY00189254',
+                        x == 'SY00189328'
+                      ),
+                      'nicht bestimmt',
+                      'Behandelte Person/Körperschaft'
+                    )
+                  )
+                ),
+                'Behandelte Person/Körperschaft'
+              ),
+              role,
+              [
+                forNonBlank(
+                  r.cells['person_id_mv'].value,
+                  x,
+                  forEach(
+                    x.split('␟'),
+                    y,
+                    forNonBlank(
+                      y.cross('pe','id')[0].cells['display'].value,
+                      z,
+                      z + '␝' + role,
+                      '␣'
+                    )
+                  ).join('␟'),
+                  '␣'
+                ),
+                forNonBlank(
+                  r.cells['corporation_id_mv'].value,
+                  x,
+                  forEach(
+                    x.split('␟'),
+                    y,
+                    forNonBlank(
+                      y.cross('ks','id')[0].cells['display'].value,
+                      z,
+                      z + '␝' + role,
+                      '␣'
+                    )
+                  ).join('␟'),
+                  '␣'
+                )
+              ].join('␟')
+            )
+          ).join('␟'),
+          v,
+          v,
+          null
+        ),
+        forNonBlank(
+          forEach(
+            filter(
+              forEach(
+                forEach(
+                  cells['item_id_mv'].value.split('␟'),
+                  v,
+                  v.cross('au','id')[0].cells['classification_id_mv'].value
+                ).join('␟').split('␟'),
+                x,
+                x.cross('se','id')[0]
+              ),
+              f,
+              f.cells['category'].value == 'Provenienz-Kette'
+            ),
+            r,
+            with(
+              forNonBlank(
+                r.cells['subject_id_mv'].value.split('␟')[0],
+                x,
+                if(
+                  x == 'TH00038994',
+                  'Widmungsempfänger',
+                  if(
+                    x == 'TH00039011',
+                    'nicht bestimmt',
+                    'Bestandsbildner/Vorbesitzer'
+                  )
+                ),
+                'Bestandsbildner/Vorbesitzer'
+              ),
+              role,
+              [
+                forNonBlank(
+                  r.cells['person_id_mv'].value,
+                  x,
+                  forEach(
+                    x.split('␟'),
+                    y,
+                    forNonBlank(
+                      y.cross('pe','id')[0].cells['display'].value,
+                      z,
+                      z + '␝' + role,
+                      '␣'
+                    )
+                  ).join('␟'),
+                  '␣'
+                ),
+                forNonBlank(
+                  r.cells['corporation_id_mv'].value,
+                  x,
+                  forEach(
+                    x.split('␟'),
+                    y,
+                    forNonBlank(
+                      y.cross('ks','id')[0].cells['display'].value,
+                      z,
+                      z + '␝' + role,
+                      '␣'
+                    )
+                  ).join('␟'),
+                  '␣'
+                )
+              ].join('␟')
+            )
+          ).join('␟'),
+          v,
+          v,
           null
         )
       ].join('␟'),
