@@ -1,0 +1,759 @@
+id,display,callNumberBibliographic_mv,category,categoryContent_mv,categoryMedia_mv,categoryMedium_mv,categoryPublication_mv,categorySub,categorySubSub,classificationSubjectOther_mv,classification_display_mv,classification_id_mv,confidential,corporationAbout_display_mv,corporationAbout_id_mv,corporationByConference_creator_mv,corporationByConference_display_mv,corporationByConference_id_mv,corporationByConference_role_mv,corporationByTerritory_creator_mv,corporationByTerritory_display_mv,corporationByTerritory_id_mv,corporationByTerritory_role_mv,corporationBy_creator_mv,corporationBy_display_mv,corporationBy_id_mv,corporationBy_role_mv,country_mv,dateCataloged,dateModified,dateOrigin,dateOriginComment_mv,description_text_mv,description_type_mv,digitalObject_accessLevel_mv,digitalObject_display_mv,digitalObject_fileExtension_mv,digitalObject_hyperlink_mv,digitalObject_id_mv,digitalObject_thumbnail_mv,edition,editionNormalized,exportDC,exportMODS,exportRIS,extent,extentFormat,extentIllustrations_mv,extentSupplements,filterAuthorityRelation_mv,filterAuthorityRole_mv,filterAuthority_mv,filterCollection_mv,filterFormContent_mv,filterMedium_mv,genreOther_mv,gndRelation_comment_mv,gndRelation_id_mv,gndRelation_text_mv,gndRelation_type_mv,headword_mv,identifier_id_mv,identifier_type_mv,index,inventory,inventoryMissing,isbn_mv,ismn_mv,issn_mv,item_collection_display_mv,item_collection_id_mv,item_id_mv,journalIssue_display_mv,journalIssue_id_mv,languageOriginal_mv,language_mv,note,noteBibliography_mv,noteContent_mv,noteExplanatory_text_mv,noteExplanatory_type_mv,noteFootnote_text_mv,noteFootnote_type_mv,noteOther_mv,noteRemark_text_mv,noteRemark_type_mv,noteRequirements_mv,parentIssueDate,parentIssueNumber,parentIssuePage,parentIssueVolume,parentIssueYear,parentIssueYearVolume,parentTitleOriginal_mv,parentVolumeNormalized_mv,parentVolumeTotal,parentVolume_mv,parent_display_mv,parent_id_mv,parent_type_mv,personAbout_display_mv,personAbout_id_mv,personBy_creator_mv,personBy_display_mv,personBy_id_mv,personBy_role_mv,publicationHistory,publisherOriginalLocation_mv,publisherOriginal_text_mv,publisherOriginal_type_mv,publisher_display_mv,publisher_id_mv,reference_text_mv,reference_type_mv,relation_display_mv,relation_id_mv,relation_type_mv,schemaVersion,scholarlyPublication_date_mv,scholarlyPublication_location_mv,scholarlyPublication_text_mv,scholarlyPublication_type_mv,statusCataloging,statusEditing,statusJournalReview,subjectOther_mv,subject_display_mv,subject_id_mv,subseries,textualHolding_mv,title,titleMain_text,titleOther_language_mv,titleOther_text_mv,titleOther_type_mv,titleResponsability,titleResponsabilityFull,titleShort,titleSuffix,url,vendor_id_mv,vendor_type_mv,website_description_mv,website_url_mv,workAbout_display_mv,workAbout_id_mv,workCompilation_display_mv,workCompilation_id_mv,work_display_mv,work_id_mv
+AK00000001,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1],Lokale Signatur 1␟Lokale Signatur 2,Dokumententyp,Inhaltstyp 1␟Inhaltstyp 2,Medienart 1␟Medienart 2,Datenträger 1␟Datenträger 2,Veröffentlichungsart 1␟Veröffentlichungsart 2,Erscheinungsform,Erweiterte physikalische Form,Systematik unnormiert 1␟Systematik unnormiert 2,Sacherschließungskette 1␟Sacherschließungskette 2␟␣,SE00000001␟SE00000002␟SE99999999,False,Körperschaft 3␟Körperschaft 4␟␣,KS00000003␟KS00000004␟KS99999999,contributor␟contributor␟contributor,Konferenz 1␟Konferenz 2␟␣,KS00000021␟KS00000022␟KS99999999,Link Konferenz 1 Typ␟Link Konferenz 2 Typ␟␣,creator␟contributor␟contributor,Gebietskörperschaft 1␟Gebietskörperschaft 2␟␣,TH00000011␟TH00000012␟TH99999999,Link Gebietskörperschaft 1 Typ␟Link Gebietskörperschaft 2 Typ␟␣,contributor␟contributor␟creator,Körperschaft 1 (1982)␟Körperschaft 2␟␣,KS00000001␟KS00000002␟KS99999999,Link Körperschaft 1 Typ␟Link Körperschaft 2 Typ␟␣,Land 1␟Land 2,2023-06-01,2023-06-06,2023,Jahr/Datum 1␟Jahr/Datum 2,Physikalische Beschreibung 1␟Physikalische Beschreibung 2,Physikalische Beschreibung 1 Typ␟Physikalische Beschreibung 2 Typ,Zugriffsstufe␟␣,Multimedia 1␟Multimedia 2,␣␟␣,␣␟␣,MM00000001␟MM00000002,␣␟␣,Ausgabebezeichnung Vorlageform,Ausgabebezeichnung normiert,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1]</dc:title>
+  <dc:identifier>AK00000001</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1]</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000001</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+CY  - Verlagsort 1; Verlagsort 2
+ID  - AK00000001
+ET  - Ausgabebezeichnung Vorlageform
+IS  - Zeitschrift Heft
+N1  - Umfang: Umfang; Illustrationen 1, Illustrationen 2; Begleitmaterial
+N1  - Fußnote 1
+N1  - Fußnote 2
+N1  - Bemerkungen: Bemerkung extern
+N1  - Erscheinungsverlauf: Erscheinungsverlauf bei Zeitschriften und Reihen
+N2  - Inhalt 1
+N2  - Inhalt 2
+NV  - Bandzählung Quelle gesamt
+OP  - Person 3 (1982-2001). Werk 3 (2000-01)
+PB  - Verlag Vorlageform 1; Verlag Vorlageform 2
+PY  - 2023
+RN  - Kommentar 1 Typ: Kommentar 1
+RN  - Kommentar 2 Typ: Kommentar 2
+SN  - ISBN 1
+SN  - ISBN 2
+SN  - ISSN 1
+SN  - ISSN 2
+SP  - Zeitschrift Seiten
+TI  - Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1]
+T3  - Gesamttitel 1; Gesamttitel 2
+UR  - URL 1
+UR  - URL 2
+UR  - https://www.dla-marbach.de/find/opac/id/AK00000001/
+VL  - Bandangabe 1; Bandangabe 2
+ER  -",Umfang,Format,Illustrationen 1␟Illustrationen 2,Begleitmaterial,Person 1 (1982-2001)␝Von␟Person 2 (1982-2001)␝Von␟Körperschaft 1 (1982)␝Von␟Körperschaft 2␝Von␟Person 1 (1982-2001)␝Unter␟Person 2 (1982-2001)␝Unter␟Körperschaft 1 (1982)␝Unter␟Körperschaft 2␝Unter,Person 1 (1982-2001)␝Link Person 1 Typ␟Person 2 (1982-2001)␝Link Person 2 Typ␟Körperschaft 1 (1982)␝Link Körperschaft 1 Typ␟Körperschaft 2␝Link Körperschaft 2 Typ␟Person 1 (1982-2001)␝Bestandsbildner/Vorbesitzer␟Person 2 (1982-2001)␝Bestandsbildner/Vorbesitzer␟Körperschaft 1 (1982)␝Bestandsbildner/Vorbesitzer␟Körperschaft 2␝Bestandsbildner/Vorbesitzer,Person 1 (1982-2001)␟Person 2 (1982-2001)␟Körperschaft 1 (1982)␟Körperschaft 2,Z:Öffentlicher Bestand 1␟Z:Öffentlicher Bestand 2,Gattung 1␟Gattung 2␟Veröffentlichungsart 1␟Veröffentlichungsart 2,Erweiterte physikalische Form␟Medienart 1␟Medienart 2␟Buchumschlag,Gattung 1␟Gattung 2,,,,,Stichwort 1␟Stichwort 2,Standardnummer 1␟Standardnummer 2,Standardnummer 1 Typ␟Standardnummer 2 Typ,Register,Bestandsangabe,Bestandslücken,ISBN 1␟ISBN 2,ISMN 1␟ISMN 2,ISSN 1␟ISSN 2,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]␝Z:Öffentlicher Bestand 2␝␣",BF00000001␝BF00000002␝BF99999999,AU00000001,Zeitschriftenheft 1␟Zeitschriftenheft 2␟␣,AK00000051␟AK00000052␟AK99999999,Sprache Original 1␟Sprache Original 2,Sprache 1␟Sprache 2,Bemerkung extern,Bibliographie 1␟Bibliographie 2,Inhalt 1␟Inhalt 2,Ergänzende Bemerkung 1␟Ergänzende Bemerkung 2,Ergänzende Bemerkung 1 Typ␟Ergänzende Bemerkung 2 Typ,Fußnote 1␟Fußnote 2,Fußnote 1 Typ␟Fußnote 2 Typ,Sonstiges 1␟Sonstiges 2,Kommentar 1␟Kommentar 2,Kommentar 1 Typ␟Kommentar 2 Typ,Systemvoraussetzung 1␟Systemvoraussetzung 2,2023,Zeitschrift Heft,Zeitschrift Seiten,Zeitschrift Band,Zeitschrift Berichtsjahr,Zeitschrift Jahrgang/Nummer,Titel der größeren Einheit in Vorlageform 1␟Titel der größeren Einheit in Vorlageform 2,Bandangabe Sortierform 1␟Bandangabe Sortierform 2,Bandzählung Quelle gesamt,Bandangabe 1␟Bandangabe 2,Gesamttitel 1␟Gesamttitel 2␟␣,AK00000011␟AK00000012␟AK99999999,Link Gesamttitel 1 Typ␟Link Gesamttitel 2 Typ␟␣,Person 3 (1982-2001)␟Person 4␟␣,PE00000003␟PE00000004␟PE99999999,creator␟contributor␟contributor,Person 1 (1982-2001)␟Person 2 (1982-2001)␟␣,PE00000001␟PE00000002␟PE99999999,Link Person 1 Typ␟Link Person 2 Typ␟␣,Erscheinungsverlauf bei Zeitschriften und Reihen,Verlagsort 1␟Verlagsort 2,Verlag Vorlageform 1␟Verlag Vorlageform 2,Verlag 1 Typ␟Verlag 1 Typ,Verlag 1␟Verlag 2␟␣,KS00000011␟KS00000012␟KS99999999,Quellenangabe 1␟Quellenangabe 2,Quellenangabe 1 Typ␟Quellenangabe 2 Typ,Manifestation 1␟Manifestation 2␟␣,AK00000041␟AK00000042␟AK99999999,Link Manifestation 1 Typ␟Link Manifestation 2 Typ␟␣,0.6.2,1999␟2023,Hochschulschrift 1 Ort␟Hochschulschrift 2 Ort,Hochschulschrift 1 Name␟Hochschulschrift 2 Name,Hochschulschrift 1 Art␟Hochschulschrift 2 Art,Erfassungsstatus,Bearbeitungsstatus,Kennzeichnung auszuwertende Zeitschriften,Schlagwort unnormiert 1 (Achtung: Bei Werktiteln GND-Relation)␟Schlagwort unnormiert 2 (Achtung: Bei Werktiteln GND-Relation),Thesaurus-Begriff 1␟Thesaurus-Begriff 2␟␣,TH00000001␟TH00000002␟TH99999999,Unterreihe oder fortlaufende Beilage zum Gesamtwerk,,Bibliotheksdokument 1,Haupttitel,Titel 1 Sprache␟Titel 2 Sprache,Titel 1␟Titel 2,Titel 1 Typ␟Titel 2 Typ,Verantwortlichkeit,Verantwortlichkeitsangabe der gesamten Vorlage,Zeitschriftenkurztitel,Haupttitel Zusatz,https://www.dla-marbach.de/find/opac/id/AK00000001,Lieferungsnummer 1␟Lieferungsnummer 2,Lieferungsnummer 1 Typ␟Lieferungsnummer 2 Typ,URL 1 Typ␟URL 2 Typ,URL 1␟URL 2,Titel über 1␟Titel über 2␟␣,AK00000031␟AK00000032␟AK99999999,Person 1 (1982-2001). Werk 1 (genre : 2000)␟Person 2 (1982-2001). Werk 2 (genre)␟␣,AK00000021␟AK00000022␟AK99999999,Person 3 (1982-2001). Werk 3 (2000-01),AK00000023
+AK00001001,Zwei verknüpfte Personen mit Indexloch in der Mitte,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Zwei verknüpfte Personen mit Indexloch in der Mitte</dc:title>
+  <dc:identifier>AK00001001</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Zwei verknüpfte Personen mit Indexloch in der Mitte</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00001001</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00001001
+TI  - Zwei verknüpfte Personen mit Indexloch in der Mitte
+UR  - https://www.dla-marbach.de/find/opac/id/AK00001001/
+ER  -",,,,,Person 1 (1982-2001)␝Von␟Person 2 (1982-2001)␝Von,Person 1 (1982-2001)␝Funktion Person 1␟Person 2 (1982-2001)␝Funktion Person 2,Person 1 (1982-2001)␟Person 2 (1982-2001),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Person 1 (1982-2001)␟Person 2 (1982-2001),PE00000001␟PE00000002,Funktion Person 1␟Funktion Person 2,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Zwei verknüpfte Personen mit Indexloch in der Mitte,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00001001,,,,,,,,,,
+AK00001002,Eine verknüpfte Person mit Indexloch am Anfang,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Eine verknüpfte Person mit Indexloch am Anfang</dc:title>
+  <dc:identifier>AK00001002</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Eine verknüpfte Person mit Indexloch am Anfang</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00001002</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00001002
+TI  - Eine verknüpfte Person mit Indexloch am Anfang
+UR  - https://www.dla-marbach.de/find/opac/id/AK00001002/
+ER  -",,,,,Person 1 (1982-2001)␝Von,Person 1 (1982-2001)␝Funktion Person 2,Person 1 (1982-2001),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Person 1 (1982-2001),PE00000001,Funktion Person 2,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Eine verknüpfte Person mit Indexloch am Anfang,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00001002,,,,,,,,,,
+AK00001003,Drei verknüpfte Personen mit nur einer Funktion,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Drei verknüpfte Personen mit nur einer Funktion</dc:title>
+  <dc:identifier>AK00001003</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Drei verknüpfte Personen mit nur einer Funktion</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00001003</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00001003
+TI  - Drei verknüpfte Personen mit nur einer Funktion
+UR  - https://www.dla-marbach.de/find/opac/id/AK00001003/
+ER  -",,,,,Person 1 (1982-2001)␝Von␟Person 2 (1982-2001)␝nicht bestimmt␟Person 3 (1982-2001)␝nicht bestimmt,Person 1 (1982-2001)␝Funktion Person 1␟Person 2 (1982-2001)␝nicht bestimmt␟Person 3 (1982-2001)␝nicht bestimmt,Person 1 (1982-2001)␟Person 2 (1982-2001)␟Person 3 (1982-2001),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Person 1 (1982-2001)␟Person 2 (1982-2001)␟Person 3 (1982-2001),PE00000001␟PE00000002␟PE00000003,Funktion Person 1␟␣␟␣,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Drei verknüpfte Personen mit nur einer Funktion,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00001003,,,,,,,,,,
+AK00001004,Zwei verknüpfte Personen mit vier Funktionen (Funktion 3 und 4 sowie Indexloch überschüssig),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Zwei verknüpfte Personen mit vier Funktionen (Funktion 3 und 4 sowie Indexloch überschüssig)</dc:title>
+  <dc:identifier>AK00001004</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Zwei verknüpfte Personen mit vier Funktionen (Funktion 3 und 4 sowie Indexloch überschüssig)</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00001004</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00001004
+TI  - Zwei verknüpfte Personen mit vier Funktionen (Funktion 3 und 4 sowie Indexloch überschüssig)
+UR  - https://www.dla-marbach.de/find/opac/id/AK00001004/
+ER  -",,,,,Person 1 (1982-2001)␝Von␟Person 2 (1982-2001)␝Von,Person 1 (1982-2001)␝Funktion Person 1␟Person 2 (1982-2001)␝Funktion Person 2,Person 1 (1982-2001)␟Person 2 (1982-2001),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Person 1 (1982-2001)␟Person 2 (1982-2001),PE00000001␟PE00000002,Funktion Person 1␟Funktion Person 2,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Zwei verknüpfte Personen mit vier Funktionen (Funktion 3 und 4 sowie Indexloch überschüssig),,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00001004,,,,,,,,,,
+AK00000011,Gesamttitel 1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Gesamttitel 1</dc:title>
+  <dc:identifier>AK00000011</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Gesamttitel 1</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000011</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00000011
+TI  - Gesamttitel 1
+UR  - https://www.dla-marbach.de/find/opac/id/AK00000011/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Gesamttitel 1,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00000011,,,,,,,,,,
+AK00000012,Gesamttitel 2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Gesamttitel 2</dc:title>
+  <dc:identifier>AK00000012</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Gesamttitel 2</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000012</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00000012
+TI  - Gesamttitel 2
+UR  - https://www.dla-marbach.de/find/opac/id/AK00000012/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Gesamttitel 2,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00000012,,,,,,,,,,
+AK00000002,Vertrauliches Bibliotheksdokument 2,,,,,,,,,,,,True,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Vertrauliches Bibliotheksdokument 2</dc:title>
+  <dc:identifier>AK00000002</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Vertrauliches Bibliotheksdokument 2</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000002</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00000002
+TI  - Vertrauliches Bibliotheksdokument 2
+UR  - https://www.dla-marbach.de/find/opac/id/AK00000002/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Vertrauliches Bibliotheksdokument 2,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00000002,,,,,,,,,,
+AK00002001,Wertetabelle: Code b wird aufgelöst zu Bibliotheksdokumente,,Bibliotheksdokumente,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Wertetabelle: Code b wird aufgelöst zu Bibliotheksdokumente</dc:title>
+  <dc:identifier>AK00002001</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Wertetabelle: Code b wird aufgelöst zu Bibliotheksdokumente</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00002001</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00002001
+TI  - Wertetabelle: Code b wird aufgelöst zu Bibliotheksdokumente
+UR  - https://www.dla-marbach.de/find/opac/id/AK00002001/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Wertetabelle: Code b wird aufgelöst zu Bibliotheksdokumente,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00002001,,,,,,,,,,
+AK00002002,Mappings: AdressatIn wird zu Adressat normalisiert,,,,,,,,,,,,,,,,,,Adressat,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Mappings: AdressatIn wird zu Adressat normalisiert</dc:title>
+  <dc:identifier>AK00002002</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Mappings: AdressatIn wird zu Adressat normalisiert</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00002002</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00002002
+TI  - Mappings: AdressatIn wird zu Adressat normalisiert
+UR  - https://www.dla-marbach.de/find/opac/id/AK00002002/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Mappings: AdressatIn wird zu Adressat normalisiert,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00002002,,,,,,,,,,
+AK00002003,"Dieser Datensatz enhält ein Zusatzfeld BLABLA, das bei der Konvertierung entfällt.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Dieser Datensatz enhält ein Zusatzfeld BLABLA, das bei der Konvertierung entfällt.</dc:title>
+  <dc:identifier>AK00002003</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Dieser Datensatz enhält ein Zusatzfeld BLABLA, das bei der Konvertierung entfällt.</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00002003</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00002003
+TI  - Dieser Datensatz enhält ein Zusatzfeld BLABLA, das bei der Konvertierung entfällt.
+UR  - https://www.dla-marbach.de/find/opac/id/AK00002003/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,"Dieser Datensatz enhält ein Zusatzfeld BLABLA, das bei der Konvertierung entfällt.",,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00002003,,,,,,,,,,
+AK00002004,Von drei Codes in categoryMedia_mv bleibt nur CD erhalten,,,,CD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Von drei Codes in categoryMedia_mv bleibt nur CD erhalten</dc:title>
+  <dc:identifier>AK00002004</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Von drei Codes in categoryMedia_mv bleibt nur CD erhalten</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00002004</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00002004
+TI  - Von drei Codes in categoryMedia_mv bleibt nur CD erhalten
+UR  - https://www.dla-marbach.de/find/opac/id/AK00002004/
+ER  -",,,,,,,,,,Audio-CD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Von drei Codes in categoryMedia_mv bleibt nur CD erhalten,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00002004,,,,,,,,,,
+AK00000021,Person 1 (1982-2001). Werk 1 (genre : 2000),,Werktitel,,,,,,,,,,,,,,,,,,,,,,,,,,,,2000,,,,,,,,,,,,,,,,,,,Person 1 (1982-2001)␝nicht bestimmt,Person 1 (1982-2001)␝nicht bestimmt,Person 1 (1982-2001),,genre,,genre,GND-Relation 1 Anmerkung␟GND-Relation 2 Anmerkung,GND-Relation 1 ID␟GND-Relation 2 ID,GND-Relation 1 Titel (Achtung: Wenn kein Werktitel dann freies Schlagwort)␟GND-Relation 2 Titel (Achtung: Wenn kein Werktitel dann freies Schlagwort),GND-Relation 1 Typ␟GND-Relation 2 Typ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Person 1 (1982-2001),PE00000001,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Werk 1,Werk 1,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00000021,,,,,,,,,,
+AK00000022,Person 2 (1982-2001). Werk 2 (genre),,Werktitel,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Person 2 (1982-2001)␝nicht bestimmt,Person 2 (1982-2001)␝nicht bestimmt,Person 2 (1982-2001),,genre,,genre,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Person 2 (1982-2001),PE00000002,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Werk 2,Werk 2,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00000022,,,,,,,,,,
+AK00000023,Person 3 (1982-2001). Werk 3 (2000-01),,Werktitel,,,,,,,,,,,,,,,,,,,,,,,,,,,,2000-01,,,,,,,,,,,,,,,,,,,Person 3 (1982-2001)␝nicht bestimmt,Person 3 (1982-2001)␝nicht bestimmt,Person 3 (1982-2001),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Person 3 (1982-2001),PE00000003,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Werk 3,Werk 3,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00000023,,,,,,,,,,
+AK00003001,Konvertierung von 19680522 in 1968-05-22,,,,,,,,,,,,,,,,,,,,,,,,,,,,1968-05-22,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Konvertierung von 19680522 in 1968-05-22</dc:title>
+  <dc:identifier>AK00003001</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Konvertierung von 19680522 in 1968-05-22</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00003001</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00003001
+TI  - Konvertierung von 19680522 in 1968-05-22
+UR  - https://www.dla-marbach.de/find/opac/id/AK00003001/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Konvertierung von 19680522 in 1968-05-22,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00003001,,,,,,,,,,
+AK00003002,Konvertierung von 19680500 in 1968-05,,,,,,,,,,,,,,,,,,,,,,,,,,,,1968-05,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Konvertierung von 19680500 in 1968-05</dc:title>
+  <dc:identifier>AK00003002</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Konvertierung von 19680500 in 1968-05</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00003002</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00003002
+TI  - Konvertierung von 19680500 in 1968-05
+UR  - https://www.dla-marbach.de/find/opac/id/AK00003002/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Konvertierung von 19680500 in 1968-05,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00003002,,,,,,,,,,
+AK00003003,Konvertierung von 19680000 in 1968,,,,,,,,,,,,,,,,,,,,,,,,,,,,1968,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Konvertierung von 19680000 in 1968</dc:title>
+  <dc:identifier>AK00003003</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Konvertierung von 19680000 in 1968</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00003003</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00003003
+TI  - Konvertierung von 19680000 in 1968
+UR  - https://www.dla-marbach.de/find/opac/id/AK00003003/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Konvertierung von 19680000 in 1968,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00003003,,,,,,,,,,
+AK00003004,Nichtnormierte Datumsangabe Mai 1968 entfällt,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Nichtnormierte Datumsangabe Mai 1968 entfällt</dc:title>
+  <dc:identifier>AK00003004</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Nichtnormierte Datumsangabe Mai 1968 entfällt</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00003004</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00003004
+TI  - Nichtnormierte Datumsangabe Mai 1968 entfällt
+UR  - https://www.dla-marbach.de/find/opac/id/AK00003004/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Nichtnormierte Datumsangabe Mai 1968 entfällt,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00003004,,,,,,,,,,
+AK00003005,Nichtnormierte Datumsangabe 2021/2022 entfällt,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Nichtnormierte Datumsangabe 2021/2022 entfällt</dc:title>
+  <dc:identifier>AK00003005</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Nichtnormierte Datumsangabe 2021/2022 entfällt</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00003005</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00003005
+TI  - Nichtnormierte Datumsangabe 2021/2022 entfällt
+UR  - https://www.dla-marbach.de/find/opac/id/AK00003005/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Nichtnormierte Datumsangabe 2021/2022 entfällt,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00003005,,,,,,,,,,
+AK00003006,Zwei nichtnormierte Datumsangaben entfallen,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Zwei nichtnormierte Datumsangaben entfallen</dc:title>
+  <dc:identifier>AK00003006</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Zwei nichtnormierte Datumsangaben entfallen</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00003006</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00003006
+TI  - Zwei nichtnormierte Datumsangaben entfallen
+UR  - https://www.dla-marbach.de/find/opac/id/AK00003006/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Zwei nichtnormierte Datumsangaben entfallen,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00003006,,,,,,,,,,
+AK00000031,Titel über 1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Titel über 1</dc:title>
+  <dc:identifier>AK00000031</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Titel über 1</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000031</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00000031
+TI  - Titel über 1
+UR  - https://www.dla-marbach.de/find/opac/id/AK00000031/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Titel über 1,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00000031,,,,,,,,,,
+AK00000032,Titel über 2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Titel über 2</dc:title>
+  <dc:identifier>AK00000032</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Titel über 2</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000032</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00000032
+TI  - Titel über 2
+UR  - https://www.dla-marbach.de/find/opac/id/AK00000032/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Titel über 2,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00000032,,,,,,,,,,
+AK00004001,Inhaltsangabe mit aDis Zeilenumbrüchen <br> und /SP/ die NICHT ersetzt werden,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Inhaltsangabe mit aDis Zeilenumbrüchen &lt;br&gt; und /SP/ die NICHT ersetzt werden</dc:title>
+  <dc:identifier>AK00004001</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Inhaltsangabe mit aDis Zeilenumbrüchen &lt;br&gt; und /SP/ die NICHT ersetzt werden</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00004001</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00004001
+N2  - Kapitel 1: Einleitung<br>Kapitel 2: Hauptteil/SP/Kapitel 3: Schluss
+TI  - Inhaltsangabe mit aDis Zeilenumbrüchen <br> und /SP/ die NICHT ersetzt werden
+UR  - https://www.dla-marbach.de/find/opac/id/AK00004001/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Kapitel 1: Einleitung<br>Kapitel 2: Hauptteil/SP/Kapitel 3: Schluss,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Inhaltsangabe mit aDis Zeilenumbrüchen <br> und /SP/ die NICHT ersetzt werden,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00004001,,,,,,,,,,
+AK00004002,Drei Fußnoten mit aDIS Zeilenumbrüchen <br> und /SP/ die ersetzt werden,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Drei Fußnoten mit aDIS Zeilenumbrüchen &lt;br&gt; und /SP/ die ersetzt werden</dc:title>
+  <dc:identifier>AK00004002</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Drei Fußnoten mit aDIS Zeilenumbrüchen &lt;br&gt; und /SP/ die ersetzt werden</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00004002</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00004002
+split expects three strings, or one string, one regex, followed by an optional boolean
+TI  - Drei Fußnoten mit aDIS Zeilenumbrüchen <br> und /SP/ die ersetzt werden
+UR  - https://www.dla-marbach.de/find/opac/id/AK00004002/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"[1] Fußnote mit aDIS Zeilenumbruch Variante 1
+[2] Fußnote mit aDIS Zeilenumbruch Variante 2
+[3] Fußnote ohne Zeilenumbruch",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Drei Fußnoten mit aDIS Zeilenumbrüchen <br> und /SP/ die ersetzt werden,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00004002,,,,,,,,,,
+AK00004003,Inhaltsangabe mit mehr als 100 Zeichen,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Inhaltsangabe mit mehr als 100 Zeichen</dc:title>
+  <dc:identifier>AK00004003</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Inhaltsangabe mit mehr als 100 Zeichen</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00004003</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00004003
+N2  - Diese Zusammenfassung enthält mehr als 100 Zeichen und hat deshalb einen Zeilenumbruch im Quellformat aDIS Token aber nicht im Zielformat CSV.
+TI  - Inhaltsangabe mit mehr als 100 Zeichen
+UR  - https://www.dla-marbach.de/find/opac/id/AK00004003/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Diese Zusammenfassung enthält mehr als 100 Zeichen und hat deshalb einen Zeilenumbruch im Quellformat aDIS Token aber nicht im Zielformat CSV.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Inhaltsangabe mit mehr als 100 Zeichen,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00004003,,,,,,,,,,
+AK00004004,"Inhaltsangabe mit fünf Tabs, die durch Leerzeichen ersetzt werden.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Inhaltsangabe mit fünf Tabs, die durch Leerzeichen ersetzt werden.</dc:title>
+  <dc:identifier>AK00004004</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Inhaltsangabe mit fünf Tabs, die durch Leerzeichen ersetzt werden.</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00004004</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00004004
+N2  - Tabs und Leerzeichen am Ende entfallen:
+N2  - Tabs mittendrin:           werden ersetzt.
+TI  - Inhaltsangabe mit fünf Tabs, die durch Leerzeichen ersetzt werden.
+UR  - https://www.dla-marbach.de/find/opac/id/AK00004004/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Tabs und Leerzeichen am Ende entfallen:␟Tabs mittendrin:           werden ersetzt.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,"Inhaltsangabe mit fünf Tabs, die durch Leerzeichen ersetzt werden.",,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00004004,,,,,,,,,,
+AK00000041,Manifestation 1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Manifestation 1</dc:title>
+  <dc:identifier>AK00000041</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Manifestation 1</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000041</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00000041
+TI  - Manifestation 1
+UR  - https://www.dla-marbach.de/find/opac/id/AK00000041/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Manifestation 1,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00000041,,,,,,,,,,
+AK00000042,Manifestation 2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Manifestation 2</dc:title>
+  <dc:identifier>AK00000042</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Manifestation 2</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000042</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00000042
+TI  - Manifestation 2
+UR  - https://www.dla-marbach.de/find/opac/id/AK00000042/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Manifestation 2,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00000042,,,,,,,,,,
+AK00005001,Vertraulicher Datensatz,,,,,,,,,,,,True,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Vertraulicher Datensatz</dc:title>
+  <dc:identifier>AK00005001</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Vertraulicher Datensatz</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00005001</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00005001
+TI  - Vertraulicher Datensatz
+UR  - https://www.dla-marbach.de/find/opac/id/AK00005001/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Vertraulicher Datensatz,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00005001,,,,,,,,,,
+AK00005002,Öffentlicher Datensatz,,,,,,,,,,,,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Öffentlicher Datensatz</dc:title>
+  <dc:identifier>AK00005002</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Öffentlicher Datensatz</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00005002</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00005002
+TI  - Öffentlicher Datensatz
+UR  - https://www.dla-marbach.de/find/opac/id/AK00005002/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Öffentlicher Datensatz,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00005002,,,,,,,,,,
+AK00000051,Zeitschriftenheft 1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Zeitschriftenheft 1</dc:title>
+  <dc:identifier>AK00000051</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Zeitschriftenheft 1</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000051</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00000051
+TI  - Zeitschriftenheft 1
+UR  - https://www.dla-marbach.de/find/opac/id/AK00000051/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Zeitschriftenheft 1,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00000051,,,,,,,,,,
+AK00000052,Zeitschriftenheft 2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Zeitschriftenheft 2</dc:title>
+  <dc:identifier>AK00000052</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Zeitschriftenheft 2</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000052</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00000052
+TI  - Zeitschriftenheft 2
+UR  - https://www.dla-marbach.de/find/opac/id/AK00000052/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Zeitschriftenheft 2,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00000052,,,,,,,,,,
+AK00006001,"Fehlende Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: -) und zwei Körperschaften (1: urheber, 2: beteiligt)",,,,,,,,,,,,,,,,,,,,,,,creator␟contributor,Körperschaft 1 (1982)␟Körperschaft 2,KS00000001␟KS00000002,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Fehlende Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: -) und zwei Körperschaften (1: urheber, 2: beteiligt)</dc:title>
+  <dc:identifier>AK00006001</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Fehlende Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: -) und zwei Körperschaften (1: urheber, 2: beteiligt)</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00006001</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00006001
+TI  - Fehlende Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: -) und zwei Körperschaften (1: urheber, 2: beteiligt)
+UR  - https://www.dla-marbach.de/find/opac/id/AK00006001/
+ER  -",,,,,Person 1 (1982-2001)␝nicht bestimmt␟Person 2 (1982-2001)␝nicht bestimmt␟Körperschaft 1 (1982)␝nicht bestimmt␟Körperschaft 2␝nicht bestimmt,Person 1 (1982-2001)␝nicht bestimmt␟Person 2 (1982-2001)␝nicht bestimmt␟Körperschaft 1 (1982)␝nicht bestimmt␟Körperschaft 2␝nicht bestimmt,Person 1 (1982-2001)␟Person 2 (1982-2001)␟Körperschaft 1 (1982)␟Körperschaft 2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,contributor␟␣,Person 1 (1982-2001)␟Person 2 (1982-2001),PE00000001␟PE00000002,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,"Fehlende Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: -) und zwei Körperschaften (1: urheber, 2: beteiligt)",,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00006001,,,,,,,,,,
+AK00006002,"Zusätzliche Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: urheber) und zwei Körperschaften (1: urheber, 2: beteiligt)",,,,,,,,,,,,,,,,,,,,,,,creator␟contributor,Körperschaft 1 (1982)␟Körperschaft 2,KS00000001␟KS00000002,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Zusätzliche Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: urheber) und zwei Körperschaften (1: urheber, 2: beteiligt)</dc:title>
+  <dc:identifier>AK00006002</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Zusätzliche Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: urheber) und zwei Körperschaften (1: urheber, 2: beteiligt)</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00006002</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00006002
+TI  - Zusätzliche Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: urheber) und zwei Körperschaften (1: urheber, 2: beteiligt)
+UR  - https://www.dla-marbach.de/find/opac/id/AK00006002/
+ER  -",,,,,Person 1 (1982-2001)␝nicht bestimmt␟Person 2 (1982-2001)␝nicht bestimmt␟Körperschaft 1 (1982)␝nicht bestimmt␟Körperschaft 2␝nicht bestimmt,Person 1 (1982-2001)␝nicht bestimmt␟Person 2 (1982-2001)␝nicht bestimmt␟Körperschaft 1 (1982)␝nicht bestimmt␟Körperschaft 2␝nicht bestimmt,Person 1 (1982-2001)␟Person 2 (1982-2001)␟Körperschaft 1 (1982)␟Körperschaft 2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,contributor␟creator,Person 1 (1982-2001)␟Person 2 (1982-2001),PE00000001␟PE00000002,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,"Zusätzliche Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: urheber) und zwei Körperschaften (1: urheber, 2: beteiligt)",,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00006002,,,,,,,,,,
+AK00007001,Platzhalter in Korrelationen: A0412 ohne AI412,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Platzhalter in Korrelationen: A0412 ohne AI412</dc:title>
+  <dc:identifier>AK00007001</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Platzhalter in Korrelationen: A0412 ohne AI412</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00007001</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00007001
+PB  - A; B
+TI  - Platzhalter in Korrelationen: A0412 ohne AI412
+UR  - https://www.dla-marbach.de/find/opac/id/AK00007001/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,A␟B,,,,,,,,,0.6.2,,,,,,,,,,,,,Platzhalter in Korrelationen: A0412 ohne AI412,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00007001,,,,,,,,,,
+AK00007002,Platzhalter in Korrelationen: AI412 ohne A0412,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Platzhalter in Korrelationen: AI412 ohne A0412</dc:title>
+  <dc:identifier>AK00007002</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Platzhalter in Korrelationen: AI412 ohne A0412</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00007002</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00007002
+TI  - Platzhalter in Korrelationen: AI412 ohne A0412
+UR  - https://www.dla-marbach.de/find/opac/id/AK00007002/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,A␟␣␟B,,,,,,,,0.6.2,,,,,,,,,,,,,Platzhalter in Korrelationen: AI412 ohne A0412,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00007002,,,,,,,,,,
+AK00007003,Platzhalter in Korrelationen: A0412 mit einem AI412,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Platzhalter in Korrelationen: A0412 mit einem AI412</dc:title>
+  <dc:identifier>AK00007003</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Platzhalter in Korrelationen: A0412 mit einem AI412</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00007003</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00007003
+PB  - A; B; C; D; E
+TI  - Platzhalter in Korrelationen: A0412 mit einem AI412
+UR  - https://www.dla-marbach.de/find/opac/id/AK00007003/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,A␟B␟C␟D␟E,␣␟␣␟␣␟␣␟␣,,,,,,,,0.6.2,,,,,,,,,,,,,Platzhalter in Korrelationen: A0412 mit einem AI412,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00007003,,,,,,,,,,
+AK00007004,Platzhalter in Korrelationen: 2x A0412 und 1x AI412,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Platzhalter in Korrelationen: 2x A0412 und 1x AI412</dc:title>
+  <dc:identifier>AK00007004</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Platzhalter in Korrelationen: 2x A0412 und 1x AI412</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00007004</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00007004
+PB  - A; B
+TI  - Platzhalter in Korrelationen: 2x A0412 und 1x AI412
+UR  - https://www.dla-marbach.de/find/opac/id/AK00007004/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,A␟B,A␟B,,,,,,,,0.6.2,,,,,,,,,,,,,Platzhalter in Korrelationen: 2x A0412 und 1x AI412,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00007004,,,,,,,,,,
+AK00099999,Ersetzung von Null-Character und Windows-Zeilenumbrüchen,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Ersetzung von Null-Character und Windows-Zeilenumbrüchen</dc:title>
+  <dc:identifier>AK00099999</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Ersetzung von Null-Character und Windows-Zeilenumbrüchen</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00099999</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00099999
+N2  - Null: wird gelöscht
+N2  - CRLF über Fortsetzungszeile wird ersetzt:.wenn danach etwas folgt
+N2  - CRLF wird ersetzt:.wenn danach etwas folgt
+N2  - CRLF am Ende wird ersetzt aber entfällt:
+N2  - CR mittendrin: wird gelöscht
+TI  - Ersetzung von Null-Character und Windows-Zeilenumbrüchen
+UR  - https://www.dla-marbach.de/find/opac/id/AK00099999/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Null: wird gelöscht␟CRLF über Fortsetzungszeile wird ersetzt:
+wenn danach etwas folgt␟CRLF wird ersetzt:
+wenn danach etwas folgt␟CRLF am Ende wird ersetzt aber entfällt:␟CR mittendrin: wird gelöscht",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Ersetzung von Null-Character und Windows-Zeilenumbrüchen,,,,,,,,,https://www.dla-marbach.de/find/opac/id/AK00099999,,,,,,,,,,
+AK00000063,Facette Personen und Körperschaften,,,,,,,,,,,,,,,,,,,,,,,,Körperschaft 1 (1982),KS00000001,Widmungsempfänger,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Facette Personen und Körperschaften</dc:title>
+  <dc:identifier>AK00000063</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Facette Personen und Körperschaften</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000063</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00000063
+TI  - Facette Personen und Körperschaften
+UR  - https://www.dla-marbach.de/find/opac/id/AK00000063/
+ER  -",,,,,Person 1 (1982-2001)␝An␟Körperschaft 1 (1982)␝An␟Person 7␝Unter␟Körperschaft 7␝Unter,Person 1 (1982-2001)␝Widmungsempfänger␟Körperschaft 1 (1982)␝Widmungsempfänger␟Person 7␝Bestandsbildner/Vorbesitzer␟Körperschaft 7␝Bestandsbildner/Vorbesitzer,Person 1 (1982-2001)␟Körperschaft 1 (1982)␟Person 7␟Körperschaft 7,,,,,,,,,,,,,,,,,,␣,␣,AU00000011,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Person 1 (1982-2001),PE00000001,Widmungsempfänger,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Facette Personen und Körperschaften,,,,,,,,,,,,,,,,,,,
+AK00000064,Facette Personen und Körperschaften,,,,,,,,,,,,,,,,,,,,,,,,Körperschaft 1 (1982)␟Körperschaft 2,KS00000001␟KS00000002,Verfasser␟␣,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Facette Personen und Körperschaften</dc:title>
+  <dc:identifier>AK00000064</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Facette Personen und Körperschaften</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000064</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00000064
+TI  - Facette Personen und Körperschaften
+UR  - https://www.dla-marbach.de/find/opac/id/AK00000064/
+ER  -",,,,,Person 1 (1982-2001)␝Von␟Person 2 (1982-2001)␝nicht bestimmt␟Körperschaft 1 (1982)␝Von␟Körperschaft 2␝nicht bestimmt,Person 1 (1982-2001)␝Verfasser/Urheber␟Person 2 (1982-2001)␝nicht bestimmt␟Körperschaft 1 (1982)␝Verfasser/Urheber␟Körperschaft 2␝nicht bestimmt,Person 1 (1982-2001)␟Person 2 (1982-2001)␟Körperschaft 1 (1982)␟Körperschaft 2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Person 1 (1982-2001)␟Person 2 (1982-2001),PE00000001␟PE00000002,Verfasser␟␣,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Facette Personen und Körperschaften,,,,,,,,,,,,,,,,,,,
+AK00000065,Facette Personen und Körperschaften Systematikketten,,,,,,,,,,Facette Personen und Körperschaften / Systematikketten / Von / Verfasser␟Facette Personen und Körperschaften / Systematikketten / Über,SE00000011␟SE00000012,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Facette Personen und Körperschaften Systematikketten</dc:title>
+  <dc:identifier>AK00000065</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Facette Personen und Körperschaften Systematikketten</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000065</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00000065
+TI  - Facette Personen und Körperschaften Systematikketten
+UR  - https://www.dla-marbach.de/find/opac/id/AK00000065/
+ER  -",,,,,Person 1 (1982-2001)␝Von␟Person 2 (1982-2001)␝Von␟Körperschaft 1 (1982)␝Von␟Körperschaft 2␝Von␟Person 3 (1982-2001)␝Über␟Person 4␝Über␟Körperschaft 3␝Über␟Körperschaft 4␝Über,Person 1 (1982-2001)␝Verfasser/Urheber␟Person 2 (1982-2001)␝Verfasser/Urheber␟Körperschaft 1 (1982)␝Verfasser/Urheber␟Körperschaft 2␝Verfasser/Urheber␟Person 3 (1982-2001)␝Behandelte Person/Körperschaft␟Person 4␝Behandelte Person/Körperschaft␟Körperschaft 3␝Behandelte Person/Körperschaft␟Körperschaft 4␝Behandelte Person/Körperschaft,Person 1 (1982-2001)␟Person 2 (1982-2001)␟Körperschaft 1 (1982)␟Körperschaft 2␟Person 3 (1982-2001)␟Person 4␟Körperschaft 3␟Körperschaft 4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Facette Personen und Körperschaften Systematikketten,,,,,,,,,,,,,,,,,,,
+AK00000066,Facette Personen und Körperschaften Provenienzketten über Exemplare,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Facette Personen und Körperschaften Provenienzketten über Exemplare</dc:title>
+  <dc:identifier>AK00000066</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Facette Personen und Körperschaften Provenienzketten über Exemplare</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000066</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00000066
+TI  - Facette Personen und Körperschaften Provenienzketten über Exemplare
+UR  - https://www.dla-marbach.de/find/opac/id/AK00000066/
+ER  -",,,,,Person 1 (1982-2001)␝An␟Person 2 (1982-2001)␝An␟Körperschaft 1 (1982)␝An␟Körperschaft 2␝An␟Person 3 (1982-2001)␝Unter␟Person 4␝Unter␟Körperschaft 3␝Unter␟Körperschaft 4␝Unter␟Person 5␝Unter␟Person 6␝Unter␟Körperschaft 5␝Unter␟Körperschaft 6␝Unter,Person 1 (1982-2001)␝Widmungsempfänger␟Person 2 (1982-2001)␝Widmungsempfänger␟Körperschaft 1 (1982)␝Widmungsempfänger␟Körperschaft 2␝Widmungsempfänger␟Person 3 (1982-2001)␝nicht bestimmt␟Person 4␝nicht bestimmt␟Körperschaft 3␝nicht bestimmt␟Körperschaft 4␝nicht bestimmt␟Person 5␝Bestandsbildner/Vorbesitzer␟Person 6␝Bestandsbildner/Vorbesitzer␟Körperschaft 5␝Bestandsbildner/Vorbesitzer␟Körperschaft 6␝Bestandsbildner/Vorbesitzer,Person 1 (1982-2001)␟Person 2 (1982-2001)␟Körperschaft 1 (1982)␟Körperschaft 2␟Person 3 (1982-2001)␟Person 4␟Körperschaft 3␟Körperschaft 4␟Person 5␟Person 6␟Körperschaft 5␟Körperschaft 6,,,,,,,,,,,,,,,,,,␣␟␣,␣␟␣,AU00000012␟AU00000013,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Facette Personen und Körperschaften Provenienzketten über Exemplare,,,,,,,,,,,,,,,,,,,
+AK00000061,Facette Form und Inhalt : [Edition Corvey],,Radio/TV-Manuskript,,,,Edition Corvey␟Weblog,Einzelbestandteil / unselbständiges Werk,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Facette Form und Inhalt : [Edition Corvey]</dc:title>
+  <dc:identifier>AK00000061</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Facette Form und Inhalt : [Edition Corvey]</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000061</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00000061
+N2  - Epik
+N2  - Schwank
+N2  - Rundfunkmanuskript
+N2  - Aufsatz
+N2  - Literarisches Weblog
+TI  - Facette Form und Inhalt : [Edition Corvey]
+UR  - https://www.dla-marbach.de/find/opac/id/AK00000061/
+ER  -",,,,,,,,,Epik␟Schwank␟Rundfunkmanuskript␟Aufsatz␟Literarisches Weblog,Beitrag,Epik␟Schwank,,,,,,,,,,,,,,,,,,,,,,,Epik␟Schwank␟Rundfunkmanuskript␟Aufsatz␟Literarisches Weblog,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Facette Form und Inhalt,,,,,,,,,,,,,,,,,,,
+AK00000062,Facette Medium : [Musikalia],,Bibliotheksdokumente,,Tonträger,,Musikalia,"Einzelne Einheit / Stücktitel, Band",säurefreies Papier,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Facette Medium : [Musikalia]</dc:title>
+  <dc:identifier>AK00000062</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Facette Medium : [Musikalia]</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000062</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+AV  - nur bibliographischer Nachweis, nicht im Bestand des DLA
+ID  - AK00000062
+N2  - Noten
+N2  - Buch
+N2  - Buchumschlag
+TI  - Facette Medium : [Musikalia]
+UR  - https://www.dla-marbach.de/find/opac/id/AK00000062/
+ER  -",,,,,,,,,Musikalia,Noten␟Buch␟Buchumschlag,,,,,,,,,,,,,,,␣,␣,AU00000003,,,,,,,Noten␟Buch␟Buchumschlag,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,,Facette Medium,,,,,,,,,,,,,,,,,,,
+AK00000053,Zeitschrift,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
+  <dc:title>Zeitschrift</dc:title>
+  <dc:identifier>AK00000053</dc:identifier>
+</oai_dc:dc>","<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Zeitschrift</title>
+  </titleInfo>
+  <recordInfo>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000053</recordIdentifier>
+  </recordInfo>
+</mods>","TY  - GEN
+ID  - AK00000053
+TI  - Zeitschrift
+UR  - https://www.dla-marbach.de/find/opac/id/AK00000053/
+ER  -",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.6.2,,,,,,,,,,,,1.1918/19 : X,Zeitschrift,,,,,,,,,,,,,,,,,,,
