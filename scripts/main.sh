@@ -34,9 +34,9 @@ for set in ${sets[@]}; do
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 
-# TSV
+# CSV
 for set in ${sets[@]}; do
-    orcli export tsv "${set}" --output "${DIR}/tmp/${set}.tsv" &
+    orcli export csv "${set}" --output "${DIR}/tmp/${set}.csv" &
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 

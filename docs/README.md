@@ -36,7 +36,7 @@ Nur die Felder `id` und `display` sind immer belegt.
 
 Felder mit Suffix `_mv` können mehrere Werte enthalten.
 * Im Ausgabeformat JSON- bzw. JSONL werden diese Felder als Array kodiert.
-* Im Ausgabeformat TSV und während der Datenverarbeitung wird als temporäres Trennzeichen `␟` (Symbol For Unit Separator, [U+241F](https://www.unicode.org/charts/PDF/U2400.pdf)) verwendet.
+* Im Ausgabeformat CSV und während der Datenverarbeitung wird als temporäres Trennzeichen `␟` (Symbol For Unit Separator, [U+241F](https://www.unicode.org/charts/PDF/U2400.pdf)) verwendet.
 
 Beziehungen zwischen Feldern mit synchron mehrfachbelegten Werten werden mit einem Unterstrich `_` dargestellt. Sie sind immer gleich oft belegt. Als Platzhalterzeichen wird `␣` (Open Box, [U+2423](https://www.unicode.org/charts/PDF/U2400.pdf)) verwendet. Beispiel:
 * personBy_id:
