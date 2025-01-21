@@ -28,7 +28,12 @@
                 if(
                   and(
                     x[i] == 'Sonstige/r Urheber/in',
-                    cells['personBy_comment_mv'].value.split('␟')[i] == 'Widmung'
+                    forNonBlank(
+                      cells['personBy_comment_mv'].value,
+                      c,
+                      c.split('␟')[i] == 'Widmung',
+                      false
+                    )
                   ),
                   '␝' + 'Widmungsschreiber',
                   '␝' + x[i]
