@@ -1,0 +1,27 @@
+# Link zur Abspielumgebung ergänzen für .wacz Dateien
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: text
+      columnName: hyperlink
+      query: "^https:\\/\\/digital.dla-marbach.de\\/files\\/sites\\/public\\/"
+      mode: regex
+    - type: list
+      expression: value
+      columnName: fileExtension
+      invert: false
+      selection:
+        - v:
+            v: wacz
+    - type: list
+      expression: value
+      columnName: accessLevel
+      invert: false
+      selection:
+        - v:
+            v: public
+    mode: row-based
+  columnName: hyperlink
+  expression: |
+    grel:
+    'https://replayweb.page/?source=' + cells['hyperlink'].value
