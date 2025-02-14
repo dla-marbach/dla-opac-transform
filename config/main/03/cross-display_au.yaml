@@ -72,6 +72,29 @@
   engineConfig:
     facets: []
     mode: row-based
+  baseColumnName: digitalObject_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.split('␟'),
+        v,
+        forNonBlank(
+          v.cross('mm','id')[0].cells['display'].value,
+          x,
+          x,
+          '␣')
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+  newColumnName: digitalObject_display_mv
+  columnInsertIndex: 2
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
   baseColumnName: manifestation_id
   expression: |
     grel:
