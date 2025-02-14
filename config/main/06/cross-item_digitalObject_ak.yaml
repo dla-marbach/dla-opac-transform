@@ -1,0 +1,145 @@
+# Verknüpfte Digitale Objekte ermittelt über zugehörige Exemplare
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.cross('au','manifestation_id'),
+        r,
+        forNonBlank(
+          r.cells['digitalObject_accessLevel_mv'].value,
+          x,
+          x.replace('␟','␝'),
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+  newColumnName: item_digitalObject_accessLevel_mv
+  columnInsertIndex: 2
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.cross('au','manifestation_id'),
+        r,
+        forNonBlank(
+          r.cells['digitalObject_display_mv'].value,
+          x,
+          x.replace('␟','␝'),
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+  newColumnName: item_digitalObject_display_mv
+  columnInsertIndex: 2
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.cross('au','manifestation_id'),
+        r,
+        forNonBlank(
+          r.cells['digitalObject_id_mv'].value,
+          x,
+          x.replace('␟','␝'),
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+  newColumnName: item_digitalObject_id_mv
+  columnInsertIndex: 2
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.cross('au','manifestation_id'),
+        r,
+        forNonBlank(
+          r.cells['digitalObject_fileExtension_mv'].value,
+          x,
+          x.replace('␟','␝'),
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+  newColumnName: item_digitalObject_fileExtension_mv
+  columnInsertIndex: 2
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.cross('au','manifestation_id'),
+        r,
+        forNonBlank(
+          r.cells['digitalObject_hyperlink_mv'].value,
+          x,
+          x.replace('␟','␝'),
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+  newColumnName: item_digitalObject_hyperlink_mv
+  columnInsertIndex: 2
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.cross('au','manifestation_id'),
+        r,
+        forNonBlank(
+          r.cells['digitalObject_thumbnail_mv'].value,
+          x,
+          x.replace('␟','␝'),
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+  newColumnName: item_digitalObject_thumbnail_mv
+  columnInsertIndex: 2
