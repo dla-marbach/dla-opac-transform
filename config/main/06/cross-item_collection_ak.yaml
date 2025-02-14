@@ -23,3 +23,27 @@
     )
   newColumnName: item_collection_id_mv
   columnInsertIndex: 2
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.cross('au','manifestation_id'),
+        r,
+        forNonBlank(
+          r.cells['collection_display_mv'].value,
+          x,
+          x.replace('␟','␝'),
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+  newColumnName: item_collection_display_mv
+  columnInsertIndex: 2
