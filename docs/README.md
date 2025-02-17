@@ -1,6 +1,6 @@
 # Dokumentation Internformat für Katalog und Datendienst
 
-Version: 0.6.3
+Version: 0.6.4
 
 ## Feldliste
 
