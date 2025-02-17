@@ -26,6 +26,18 @@ for d in "${DIR}"/tmp/config/main/*/ ; do
     done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 done
 
+# schemaVersion setzen
+grel='[ {
+"op": "core/text-transform",
+"engineConfig": { "facets": [], "mode": "row-based" },
+"columnName": "schemaVersion",
+"expression": "grel:\"0.6.3\""
+} ]'
+for set in ${sets[@]}; do
+    echo "${grel}" | orcli transform "${set}" &
+    pids+=($!)
+done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+
 ### Export ###
 
 # Spalten sortieren

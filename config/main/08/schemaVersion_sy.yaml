@@ -1,9 +1,0 @@
-# Version des Schemas in die Datensätze schreiben
-- op: core/text-transform
-  engineConfig:
-    facets: []
-    mode: row-based
-  columnName: schemaVersion
-  expression: |
-    grel:
-    '0.6.3'
