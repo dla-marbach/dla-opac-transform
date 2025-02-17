@@ -18,7 +18,11 @@
         )
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␝|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: item_collection_id_mv
@@ -42,7 +46,11 @@
         )
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␝|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: item_collection_display_mv

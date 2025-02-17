@@ -18,7 +18,11 @@
         )
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␝|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: item_digitalObject_accessLevel_mv
@@ -42,7 +46,11 @@
         )
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␝|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: item_digitalObject_display_mv
@@ -66,7 +74,11 @@
         )
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␝|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: item_digitalObject_id_mv
@@ -90,7 +102,11 @@
         )
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␝|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: item_digitalObject_fileExtension_mv
@@ -114,7 +130,11 @@
         )
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␝|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: item_digitalObject_hyperlink_mv
@@ -138,7 +158,11 @@
         )
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␝|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: item_digitalObject_thumbnail_mv
