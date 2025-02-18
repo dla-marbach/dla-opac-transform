@@ -20,7 +20,11 @@
   columnName: digitalObject_accessLevel_mv
   expression: |
     grel:
-    cells['item_digitalObject_accessLevel_mv'].value.split('␟')[0].split('␝')[0]
+    filter(
+      cells['item_digitalObject_accessLevel_mv'].value.split('␟'),
+      f,
+      f[0] != '␣'
+    )[0].split('␝')[0]
 - op: core/text-transform
   engineConfig:
     facets:
@@ -42,7 +46,11 @@
   columnName: digitalObject_display_mv
   expression: |
     grel:
-    cells['item_digitalObject_display_mv'].value.split('␟')[0].split('␝')[0]
+    filter(
+      cells['item_digitalObject_display_mv'].value.split('␟'),
+      f,
+      f[0] != '␣'
+    )[0].split('␝')[0]    
 - op: core/text-transform
   engineConfig:
     facets:
@@ -64,7 +72,11 @@
   columnName: digitalObject_fileExtension_mv
   expression: |
     grel:
-    cells['item_digitalObject_fileExtension_mv'].value.split('␟')[0].split('␝')[0]
+    filter(
+      cells['item_digitalObject_fileExtension_mv'].value.split('␟'),
+      f,
+      f[0] != '␣'
+    )[0].split('␝')[0]
 - op: core/text-transform
   engineConfig:
     facets:
@@ -86,7 +98,11 @@
   columnName: digitalObject_hyperlink_mv
   expression: |
     grel:
-    cells['item_digitalObject_hyperlink_mv'].value.split('␟')[0].split('␝')[0]
+    filter(
+      cells['item_digitalObject_hyperlink_mv'].value.split('␟'),
+      f,
+      f[0] != '␣'
+    )[0].split('␝')[0]
 - op: core/text-transform
   engineConfig:
     facets:
@@ -108,7 +124,11 @@
   columnName: digitalObject_thumbnail_mv
   expression: |
     grel:
-    cells['item_digitalObject_thumbnail_mv'].value.split('␟')[0].split('␝')[0]
+    filter(
+      cells['item_digitalObject_thumbnail_mv'].value.split('␟'),
+      f,
+      f[0] != '␣'
+    )[0].split('␝')[0]
 - op: core/text-transform
   engineConfig:
     facets:
@@ -130,4 +150,8 @@
   columnName: digitalObject_id_mv
   expression: |
     grel:
-    cells['item_digitalObject_id_mv'].value.split('␟')[0].split('␝')[0]
+    filter(
+      cells['item_digitalObject_id_mv'].value.split('␟'),
+      f,
+      f[0] != '␣'
+    )[0].split('␝')[0]
