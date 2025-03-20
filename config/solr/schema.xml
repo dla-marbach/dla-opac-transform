@@ -12,7 +12,10 @@
   <fieldType name="binary" class="solr.BinaryField"/>
   <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true"/>
   <fieldType name="booleans" class="solr.BoolField" sortMissingLast="true" multiValued="true"/>
-  <fieldType name="date_range" class="solr.DateRangeField" sortMissingLast="true"/>
+  <fieldType name="date" class="solr.DatePointField" docValues="true"/>
+  <fieldType name="dates" class="solr.DatePointField" docValues="true" multiValued="true"/>
+  <fieldType name="daterange" class="solr.DateRangeField" sortMissingLast="true"/>
+  <fieldType name="dateranges" class="solr.DateRangeField" sortMissingLast="true" multiValued="true"/>
   <fieldType name="delimited_payloads_float" class="solr.TextField" indexed="true" stored="false">
     <analyzer>
       <tokenizer class="solr.WhitespaceTokenizerFactory"/>
@@ -47,8 +50,6 @@
       <filter class="solr.LowerCaseFilterFactory"/>
     </analyzer>
   </fieldType>
-  <fieldType name="pdate" class="solr.DatePointField" docValues="true"/>
-  <fieldType name="pdates" class="solr.DatePointField" docValues="true" multiValued="true"/>
   <fieldType name="pdouble" class="solr.DoublePointField" docValues="true"/>
   <fieldType name="pdoubles" class="solr.DoublePointField" docValues="true" multiValued="true"/>
   <fieldType name="pfloat" class="solr.FloatPointField" docValues="true"/>
@@ -93,19 +94,6 @@
       <filter class="solr.LowerCaseFilterFactory"/>
     </analyzer>
   </fieldType>
-  <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100" multiValued="false">
-    <analyzer type="index">
-      <tokenizer class="solr.StandardTokenizerFactory"/>
-      <filter class="solr.StopFilterFactory" words="stopwords.txt" ignoreCase="true"/>
-      <filter class="solr.LowerCaseFilterFactory"/>
-    </analyzer>
-    <analyzer type="query">
-      <tokenizer class="solr.StandardTokenizerFactory"/>
-      <filter class="solr.StopFilterFactory" words="stopwords.txt" ignoreCase="true"/>
-      <filter class="solr.SynonymGraphFilterFactory" expand="true" ignoreCase="true" synonyms="synonyms.txt"/>
-      <filter class="solr.LowerCaseFilterFactory"/>
-    </analyzer>
-  </fieldType>
   <field name="_root_" type="string" docValues="false" indexed="true" stored="false"/>
   <field name="_text_" type="text" multiValued="true" indexed="true" stored="false"/>
   <field name="_version_" type="plong" indexed="false" stored="false"/>
@@ -114,7 +102,7 @@
   <field name="accession_display" type="text"/>
   <field name="accession_id" type="text"/>
   <field name="acronym_mv" type="texts"/>
-  <field name="broadcastDate" type="text"/>
+  <field name="broadcastDate" type="daterange"/>
   <field name="broadcastStation" type="text"/>
   <field name="callNumberBibliographic_mv" type="texts"/>
   <field name="callNumberCollection_mv" type="texts"/>
@@ -174,18 +162,18 @@
   <field name="corporation_display_mv" type="texts"/>
   <field name="corporation_id_mv" type="texts"/>
   <field name="country_mv" type="texts"/>
-  <field name="dateActivityEnd" type="text"/>
-  <field name="dateActivityStart" type="text"/>
-  <field name="dateCataloged" type="text"/>
+  <field name="dateActivityEnd" type="daterange"/>
+  <field name="dateActivityStart" type="daterange"/>
+  <field name="dateCataloged" type="date"/>
   <field name="dateLifespanComment_mv" type="texts"/>
-  <field name="dateLifespanEnd" type="text"/>
-  <field name="dateLifespanStart" type="text"/>
-  <field name="dateModified" type="text"/>
+  <field name="dateLifespanEnd" type="daterange"/>
+  <field name="dateLifespanStart" type="daterange"/>
+  <field name="dateModified" type="date"/>
   <field name="dateNote_mv" type="texts"/>
   <field name="dateOrigin" type="text"/>
   <field name="dateOriginComment_mv" type="texts"/>
-  <field name="dateOriginEnd" type="text"/>
-  <field name="dateOriginStart" type="text"/>
+  <field name="dateOriginEnd" type="daterange"/>
+  <field name="dateOriginStart" type="daterange"/>
   <field name="dateOtherComment_mv" type="texts"/>
   <field name="dateOther_mv" type="texts"/>
   <field name="dateRetention" type="text"/>
@@ -315,7 +303,7 @@
   <field name="order_extent_mv" type="texts"/>
   <field name="order_status_mv" type="texts"/>
   <field name="order_unit_mv" type="texts"/>
-  <field name="parentIssueDate" type="text"/>
+  <field name="parentIssueDate" type="daterange"/>
   <field name="parentIssueNumber" type="text"/>
   <field name="parentIssuePage" type="text"/>
   <field name="parentIssueVolume" type="text"/>
@@ -364,7 +352,7 @@
   <field name="relation_id_mv" type="texts"/>
   <field name="relation_type_mv" type="texts"/>
   <field name="schemaVersion" type="string"/>
-  <field name="scholarlyPublication_date_mv" type="texts"/>
+  <field name="scholarlyPublication_date_mv" type="dateranges"/>
   <field name="scholarlyPublication_location_mv" type="texts"/>
   <field name="scholarlyPublication_text_mv" type="texts"/>
   <field name="scholarlyPublication_type_mv" type="texts"/>

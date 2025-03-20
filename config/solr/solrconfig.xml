@@ -855,7 +855,7 @@
     -->
   <searchComponent name="spellcheck" class="solr.SpellCheckComponent">
 
-    <str name="queryAnalyzerFieldType">text_general</str>
+    <str name="queryAnalyzerFieldType">text</str>
 
     <!-- Multiple "Spell Checkers" can be declared and used by this
          component
@@ -1164,7 +1164,7 @@
   <updateProcessor class="solr.AddSchemaFieldsUpdateProcessorFactory" name="add-schema-fields">
     <lst name="typeMapping">
       <str name="valueClass">java.lang.String</str>
-      <str name="fieldType">text_general</str>
+      <str name="fieldType">text</str>
       <lst name="copyField">
         <str name="dest">*_str</str>
         <int name="maxChars">256</int>
@@ -1178,7 +1178,7 @@
     </lst>
     <lst name="typeMapping">
       <str name="valueClass">java.util.Date</str>
-      <str name="fieldType">pdates</str>
+      <str name="fieldType">dates</str>
     </lst>
     <lst name="typeMapping">
       <str name="valueClass">java.lang.Long</str>
