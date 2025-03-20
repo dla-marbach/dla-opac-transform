@@ -41,9 +41,9 @@ AK,digitalObject_thumbnail_mv,texts,"https://digital.dla-marbach.de/lib/icons/ex
 AK,display,text,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1],Hauptbezeichnung
 AK,edition,text,Ausgabebezeichnung Vorlageform,
 AK,editionNormalized,text,Ausgabebezeichnung normiert,
-AK,exportDC,text,,Datensatz im DC-Format
-AK,exportMODS,text,,Datensatz im MODS-Format
-AK,exportRIS,text,,Datensatz im RIS-Format
+AK,exportDC,string,,Datensatz im DC-Format
+AK,exportMODS,string,,Datensatz im MODS-Format
+AK,exportRIS,string,,Datensatz im RIS-Format
 AK,extent,text,Umfang,
 AK,extentFormat,text,Format,
 AK,extentIllustrations_mv,texts,Illustrationen 1␟Illustrationen 2,
@@ -317,9 +317,9 @@ BI,dimension_depth_mv,texts,Maßangabe 1 Tiefe (cm)␟Maßangabe 2 Tiefe (cm),
 BI,dimension_diameter_mv,texts,Maßangabe 1 Durchmesser (cm)␟Maßangabe 2 Durchmesser (cm),
 BI,dimension_height_mv,texts,Maßangabe 1 Höhe (cm)␟Maßangabe 2 Höhe (cm),
 BI,dimension_width_mv,texts,Maßangabe 1 Breite (cm)␟Maßangabe 2 Breite (cm),
-BI,exportDC,text,,Datensatz im DC-Format
-BI,exportMODS,text,,Datensatz im MODS-Format
-BI,exportRIS,text,,Datensatz im RIS-Format
+BI,exportDC,string,,Datensatz im DC-Format
+BI,exportMODS,string,,Datensatz im MODS-Format
+BI,exportRIS,string,,Datensatz im RIS-Format
 BI,extent,text,Umfang,
 BI,filterAuthority_mv,strings,Person 1 (1982-2001)␟Person 2 (1982-2001)␟Person 3 (1982-2001)␟Körperschaft 1 (1982),Facette Personen und Körperschaften
 BI,filterAuthorityRelation_mv,strings,Person 1 (1982-2001)␝An␟Person 2 (1982-2001)␝Von␟Person 3 (1982-2001)␝Unter␟Körperschaft 1 (1982)␝Über,Facette Personen und Körperschaften mit Relationen
@@ -412,9 +412,9 @@ HS,digitalObject_id_mv,texts,MM00000001␟MM00000002,
 HS,digitalObject_fileExtension_mv,texts,pdf␟jpg,aus MM fileExtension
 HS,digitalObject_thumbnail_mv,texts,"https://digital.dla-marbach.de/lib/icons/extension-pdf.png␟https://digital.dla-marbach.de/iiif/2/campus/D20041221/D20041221-12.jpg/full/!128,192/0/default.jpg?media_access=campus",aus MM thumbnail
 HS,display,text,Brief [Hauptgattung],Hauptbezeichnung
-HS,exportDC,text,,Datensatz im DC-Format
-HS,exportMODS,text,,Datensatz im MODS-Format
-HS,exportRIS,text,,Datensatz im RIS-Format
+HS,exportDC,string,,Datensatz im DC-Format
+HS,exportMODS,string,,Datensatz im MODS-Format
+HS,exportRIS,string,,Datensatz im RIS-Format
 HS,extent,text,Umfang,
 HS,filterAuthority_mv,strings,Person 1 (1982-2001)␟Person 2 (1982-2001)␟Person 3 (1982-2001)␟Körperschaft 1 (1982),Facette Personen und Körperschaften
 HS,filterAuthorityRelation_mv,strings,Person 1 (1982-2001)␝An␟Person 2 (1982-2001)␝Von␟Person 3 (1982-2001)␝Unter␟Körperschaft 1 (1982)␝Über,Facette Personen und Körperschaften mit Relationen
