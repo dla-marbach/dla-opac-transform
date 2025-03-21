@@ -1126,11 +1126,7 @@
 
   <!-- Custom Update Request Chain (referenziert oben in initparams) -->
   <updateRequestProcessorChain name="dla">
-    <!-- Kein Abbruch des gesammten Imports bei Fehlern bei einzelnen Datensätzen (welche dann fallen gelassen werden) -->
-    <processor class="solr.TolerantUpdateProcessorFactory">
-      <int name="maxErrors">-1</int>
-    </processor>
-      <!-- Solr standard processing -->
+    <!-- Solr standard processing -->
     <processor class="solr.LogUpdateProcessorFactory"/>
     <processor class="solr.DistributedUpdateProcessorFactory"/>
     <processor class="solr.RunUpdateProcessorFactory"/>
