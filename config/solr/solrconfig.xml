@@ -782,9 +782,16 @@
     </lst>
   </requestHandler>
 
-  <initParams path="/update/**,/query,/select,/tvrh,/elevate,/spell,/browse">
+  <initParams path="/query,/select,/tvrh,/elevate,/spell,/browse">
     <lst name="defaults">
       <str name="df">default</str>
+    </lst>
+  </initParams>
+
+  <initParams path="/update/**">
+    <lst name="defaults">
+      <str name="df">default</str>
+      <str name="update.chain">dla</str>
     </lst>
   </initParams>
 
@@ -1116,6 +1123,18 @@
        http://wiki.apache.org/solr/UpdateRequestProcessor
 
     -->
+
+  <!-- Custom Update Request Chain (referenziert oben in initparams) -->
+  <updateRequestProcessorChain name="dla">
+    <!-- Kein Abbruch des gesammten Imports bei Fehlern bei einzelnen Datensätzen (welche dann fallen gelassen werden) -->
+    <processor class="solr.TolerantUpdateProcessorFactory">
+      <int name="maxErrors">-1</int>
+    </processor>
+      <!-- Solr standard processing -->
+    <processor class="solr.LogUpdateProcessorFactory"/>
+    <processor class="solr.DistributedUpdateProcessorFactory"/>
+    <processor class="solr.RunUpdateProcessorFactory"/>
+  </updateRequestProcessorChain>
 
   <!-- Add unknown fields to the schema
 
