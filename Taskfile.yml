@@ -87,7 +87,10 @@ tasks:
       - cp config/solr/* solr/server/solr/dla/
       - touch solr/server/solr/dla/core.properties solr/server/solr/dla/stopwords.txt solr/server/solr/dla/synonyms.txt
       - solr/bin/solr start -a "-XX:+IgnoreUnrecognizedVMOptions" && sleep 1
-      - solr/bin/post -c dla example/output/*.jsonl
+      - |
+        jq -s '.' example/output/*.jsonl | curl 'http://localhost:8983/solr/dla/update?commit=true' -X POST -H 'Content-Type: application/json' --data-binary @-
+      - |
+        curl http://localhost:8983/solr/dla/admin/luke?show=index
 
   install:
     desc: install all requirements into subdirectories
