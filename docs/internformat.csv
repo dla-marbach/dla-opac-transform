@@ -52,6 +52,8 @@ AK,filterAuthority_mv,strings,Person 1 (1982-2001)␟Person 2 (1982-2001)␟Pers
 AK,filterAuthorityRelation_mv,strings,Person 1 (1982-2001)␝An␟Person 2 (1982-2001)␝Von␟Person 3 (1982-2001)␝Unter␟Körperschaft 1 (1982)␝Über,Facette Personen und Körperschaften mit Relationen
 AK,filterAuthorityRole_mv,strings,Person 1 (1982-2001)␝Widmungsempfänger␟Person 2 (1982-2001)␝Verfasser/Urheber␟Person 3 (1982-2001)␝Bestandsbildner/Vorbesitzer␟Körperschaft 1 (1982)␝Behandelte Person/Körperschaft,Facette Personen und Körperschaften mit Funktionsbezeichnungen
 AK,filterCollection_mv,strings,Z:Öffentlicher Bestand 1␟Z:Öffentlicher Bestand 2,Facette Sammlung
+AK,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
+AK,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 AK,filterFormContent_mv,strings,Epik␟Schwank␟Rundfunkmanuskript␟Aufsatz␟Literarisches Weblog,Facette Form und Inhalt
 AK,filterMedium_mv,strings,Erweiterte physikalische Form␟Medienart 1␟Medienart 2␟Buchumschlag,Facette Sammlung
 AK,genreOther_mv,texts,Gattung 1␟Gattung 2,
@@ -248,6 +250,8 @@ BF,extent,text,Umfang,
 BF,filterAuthority_mv,strings,Person 1 (1982-2001)␟Person 2 (1982-2001)␟Person 3 (1982-2001)␟Körperschaft 1 (1982),Facette Personen und Körperschaften
 BF,filterAuthorityRelation_mv,strings,Person 1 (1982-2001)␝An␟Person 2 (1982-2001)␝Von␟Person 3 (1982-2001)␝Unter␟Körperschaft 1 (1982)␝Über,Facette Personen und Körperschaften mit Relationen
 BF,filterAuthorityRole_mv,strings,Person 1 (1982-2001)␝Widmungsempfänger␟Person 2 (1982-2001)␝Verfasser/Urheber␟Person 3 (1982-2001)␝Bestandsbildner/Vorbesitzer␟Körperschaft 1 (1982)␝Behandelte Person/Körperschaft,Facette Personen und Körperschaften mit Funktionsbezeichnungen
+BF,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
+BF,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 BF,filterCollection_mv,strings,Z:Öffentlicher Bestand 1,Facette Sammlung
 BF,filterFormContent_mv,strings,Bestandsart,Facette Form und Inhalt
 BF,id,string,BF00000001,
@@ -325,6 +329,8 @@ BI,filterAuthority_mv,strings,Person 1 (1982-2001)␟Person 2 (1982-2001)␟Pers
 BI,filterAuthorityRelation_mv,strings,Person 1 (1982-2001)␝An␟Person 2 (1982-2001)␝Von␟Person 3 (1982-2001)␝Unter␟Körperschaft 1 (1982)␝Über,Facette Personen und Körperschaften mit Relationen
 BI,filterAuthorityRole_mv,strings,Person 1 (1982-2001)␝Widmungsempfänger␟Person 2 (1982-2001)␝Verfasser/Urheber␟Person 3 (1982-2001)␝Bestandsbildner/Vorbesitzer␟Körperschaft 1 (1982)␝Behandelte Person/Körperschaft,Facette Personen und Körperschaften mit Funktionsbezeichnungen
 BI,filterCollection_mv,strings,Z:Öffentlicher Bestand 1,Facette Sammlung
+BI,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
+BI,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 BI,filterFormContent_mv,strings,Objektart Hauptkategorie␟Objektart Unterkategorie␟Objektart 1␟Objektart 2␟Objektart Zusammensetzung,Facette Form und Inhalt
 BI,filterMedium_mv,strings,Datenträger,Facette Sammlung
 BI,collection_display_mv,texts,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]",aus BF display
@@ -420,6 +426,8 @@ HS,filterAuthority_mv,strings,Person 1 (1982-2001)␟Person 2 (1982-2001)␟Pers
 HS,filterAuthorityRelation_mv,strings,Person 1 (1982-2001)␝An␟Person 2 (1982-2001)␝Von␟Person 3 (1982-2001)␝Unter␟Körperschaft 1 (1982)␝Über,Facette Personen und Körperschaften mit Relationen
 HS,filterAuthorityRole_mv,strings,Person 1 (1982-2001)␝Widmungsempfänger␟Person 2 (1982-2001)␝Verfasser/Urheber␟Person 3 (1982-2001)␝Bestandsbildner/Vorbesitzer␟Körperschaft 1 (1982)␝Behandelte Person/Körperschaft,Facette Personen und Körperschaften mit Funktionsbezeichnungen
 HS,filterCollection_mv,strings,Z:Öffentlicher Bestand 1,Facette Sammlung
+HS,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
+HS,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 HS,filterFormContent_mv,strings,Hauptgattung␟Weitere Hauptgattung 1␟Weitere Hauptgattung 2␟Untergattung␟Weitere Untergattung 1␟Weitere Untergattung 2,Facette Form und Inhalt
 HS,filterMedium_mv,strings,Sonstiger Datenträger␟Noten,Facette Sammlung
 HS,genre,text,Hauptgattung,
@@ -499,6 +507,8 @@ KS,dateLifespanEnd,daterange,2001-01-02,
 KS,dateLifespanStart,daterange,1982-05-22,
 KS,dateModified,daterange,2023-06-06,
 KS,display,text,Körperschaft 1 (1982),Hauptbezeichnung
+KS,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
+KS,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 KS,gnd_id_mv,texts,GND-Nummer 1␟GND-Nummer 2,
 KS,gnd_type_mv,texts,GND-Nummer 1 Typ␟GND-Nummer 2 Typ,
 KS,gndRelation_comment_mv,texts,GND-Relation 1 Anmerkung␟GND-Relation 2 Anmerkung,
@@ -569,6 +579,8 @@ PE,dateLifespanStart,daterange,1982-05-22,
 PE,dateModified,daterange,2023-06-06,
 PE,dateRetention,text,Schutzfrist,
 PE,display,text,Person 1 (1982-2001),Hauptbezeichnung
+PE,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
+PE,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 PE,gender,text,Geschlecht,
 PE,gnd_id_mv,texts,GND-Nummer 1␟GND-Nummer 2,
 PE,gnd_type_mv,texts,GND-Nummer 1 Typ␟GND-Nummer 2 Typ,
@@ -653,6 +665,8 @@ TH,dateModified,daterange,2023-06-06,
 TH,dateOriginEnd,daterange,2001-01-01,
 TH,dateOriginStart,daterange,1982-05-22,
 TH,display,text,Thesaurus-Begriff 1,Hauptbezeichnung
+TH,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
+TH,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 TH,gnd_id_mv,texts,GND-Nummer 1␟GND-Nummer 2,
 TH,gndRelation_comment_mv,texts,GND-Relation 1 Anmerkung␟GND-Relation 2 Anmerkung,
 TH,gndRelation_id_mv,texts,GND-Relation 1 ID␟GND-Relation 2 ID,

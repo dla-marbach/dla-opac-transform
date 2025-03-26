@@ -1,0 +1,37 @@
+# Facette Zeit
+# Zeitspannen aus filterDateRange_mv umwandeln in ISO-8601 Zeitpunkte
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      with(
+        cells['filterDateRange_mv'].value.replace('[','').replace(']','').replace(' ','').replace('TO','␟'),
+        v,
+        forEach(
+          v.split('␟').uniques().sort(),
+          y,
+          if(
+            y.length() == 4,
+            y + '-01-01T00:00:00Z',
+            if(
+              y.length() == 7,
+              y + '-01T00:00:00Z',
+              if(
+                y.length() == 10,
+                y + 'T00:00:00Z',
+                null
+              )
+            )
+          )
+        ).join('␟')
+      ),
+      z,
+      z,
+      null
+    )
+  newColumnName: filterDatePoint_mv
+  columnInsertIndex: 2

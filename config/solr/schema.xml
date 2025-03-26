@@ -12,8 +12,8 @@
   <fieldType name="binary" class="solr.BinaryField"/>
   <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true"/>
   <fieldType name="booleans" class="solr.BoolField" sortMissingLast="true" multiValued="true"/>
-  <fieldType name="date" class="solr.DatePointField" docValues="true"/>
-  <fieldType name="dates" class="solr.DatePointField" docValues="true" multiValued="true"/>
+  <fieldType name="datepoint" class="solr.DatePointField" docValues="true"/>
+  <fieldType name="datepoints" class="solr.DatePointField" docValues="true" multiValued="true"/>
   <fieldType name="daterange" class="solr.DateRangeField" sortMissingLast="true"/>
   <fieldType name="dateranges" class="solr.DateRangeField" sortMissingLast="true" multiValued="true"/>
   <fieldType name="delimited_payloads_float" class="solr.TextField" indexed="true" stored="false">
@@ -209,6 +209,8 @@
   <field name="filterAuthorityRelation_mv" type="strings"/>
   <field name="filterAuthorityRole_mv" type="strings"/>
   <field name="filterCollection_mv" type="strings"/>
+  <field name="filterDateRange_mv" type="dateranges"/>
+  <field name="filterDatePoint_mv" type="datepoints"/>
   <field name="filterFormContent_mv" type="strings"/>
   <field name="filterMedium_mv" type="strings"/>
   <field name="gender" type="text"/>

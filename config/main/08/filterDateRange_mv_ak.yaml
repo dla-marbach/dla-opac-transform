@@ -1,0 +1,140 @@
+# Facette Zeit
+# Datumsangaben aus normiertem Feld dateOrigin
+# Zeitspannen aus Freitext-Feld parentIssueYear
+# 19XX und 20XX aus Sendedatum von Exemplaren (item_id_mv -> AU:broadcastDate)
+# 4-stellige Jahreszahlen aus dem Titel von Provenienzketten (item_id_mv -> AU:classification_id_mv -> SE:subject_id_mv -> TH:title)
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['dateOrigin'].value,
+          v,
+          v,
+          null
+        ),
+        forNonBlank(
+          cells['parentIssueYear'].value.find(/^[(\[]?\d{4}[-\/]?\d{2,4}[)\]]?$|^[(\[]?\d{4}[)\]]?$/)[0],
+          v,
+          with(
+            v.replace('[','').replace(']','').replace('{','').replace('}',''),
+            x,
+            if(
+              x.contains(/\/\d{2}$/),
+              with(
+                x.split('/'),
+                z,
+                '[' + z[0] + ' TO ' + z[0][0,2] + z[1] + ']'
+              ),
+              if(
+                x.contains(/-\d{2}$/),
+                with(
+                  x.split('-'),
+                  z,
+                  '[' + z[0] + ' TO ' + z[0][0,2] + z[1] + ']'
+                ),
+                if(
+                  x.contains(/\/\d{4}$/),
+                  with(
+                    x.split('/'),
+                    z,
+                    '[' + z[0] + ' TO ' + z[1] + ']'
+                  ),
+                  if(
+                    x.contains(/-\d{4}$/),
+                    with(
+                      x.split('-'),
+                      z,
+                      '[' + z[0] + ' TO ' + z[1] + ']'
+                    ),
+                    if(
+                      x.contains(/^\d{4}$/),
+                      x,
+                      null
+                    )
+                  )
+                )
+              )
+            )
+          ),
+          null
+        ),
+        forNonBlank(
+          cells['item_id_mv'].value,
+          v,
+          forNonBlank(
+            forEach(
+              v.split('␟'),
+              x,
+              forNonBlank(
+                x.cross('au','id')[0].cells['broadcastDate'].value,
+                y,
+                if(
+                  y.contains(/^19|^20/),
+                  y,
+                  null
+                ),
+                null
+              )
+            ).join('␟'),
+            z,
+            z,
+            null
+          ),
+          null
+        ),
+        forNonBlank(
+          cells['item_id_mv'].value,
+          v,
+          forNonBlank(
+            forEach(
+              v.split('␟'),
+              a,
+              forNonBlank(
+                a.cross('au','id')[0].cells['classification_id_mv'].value,
+                b,
+                forNonBlank(
+                  forEach(
+                    b.split('␟'),
+                    v,
+                    v.cross('se','id')[0].cells['subject_id_mv'].value
+                  ).join('␟'),
+                  c,
+                  forNonBlank(
+                    forEach(
+                      c.split('␟'),
+                      v,
+                      v.cross('th','id')[0].cells['title'].value
+                    ).join('␟'),
+                    d,
+                    forNonBlank(
+                      d.find(/\d{4}/).uniques().join('␟'),
+                      e,
+                      e,
+                      null
+                    ),
+                    null
+                  ),
+                  null
+                ),
+                null
+              )
+            ).join('␟'),
+            z,
+            z,
+            null
+          ),
+          null
+        )
+      ].uniques().join('␟'),
+      z,
+      z,
+      null
+    )
+  newColumnName: filterDateRange_mv
+  columnInsertIndex: 2
