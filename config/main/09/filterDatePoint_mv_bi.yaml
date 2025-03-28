@@ -1,5 +1,5 @@
 # Facette Zeit
-# Zeitspannen aus filterDateRange_mv umwandeln in ISO-8601 Zeitpunkte
+# Zeitspannen aus filterDateRange_mv umwandeln in ISO-8601 Zeitpunkte und validieren
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -32,9 +32,18 @@
             )
           ).join('␟')
         )
-      ).join('␟').split('␟').uniques().sort().join('␟'),
+      ).join('␟'),
       z,
-      z,
+      forEach(
+        z.split('␟').uniques(),
+        v,
+        forNonBlank(
+          v.toDate("yyyy-MM-dd'T'HH:mm:ssZ"),
+          x,
+          v,
+          null
+        )
+      ).sort().join('␟'),
       null
     )
   newColumnName: filterDatePoint_mv
