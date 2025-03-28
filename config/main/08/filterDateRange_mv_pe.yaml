@@ -1,0 +1,65 @@
+# Facette Zeit
+# Zeitspanne aus normierten Feldern dateLifespanStart und dateLifespanEnd
+# Zeitspanne aus normierten Feldern dateActivityStart und dateActivityEnd
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          [
+            forNonBlank(
+              cells['dateLifespanStart'].value,
+              v,
+              v,
+              null
+            ),
+            forNonBlank(
+              cells['dateLifespanEnd'].value,
+              v,
+              v,
+              null
+            )
+          ].uniques().join(' TO '),
+          x,
+          if(
+            x.contains('TO'),
+            '['+x+']',
+            x
+          ),
+          null
+        ),
+        forNonBlank(
+          [
+            forNonBlank(
+              cells['dateActivityStart'].value,
+              v,
+              v,
+              null
+            ),
+            forNonBlank(
+              cells['dateActivityEnd'].value,
+              v,
+              v,
+              null
+            )
+          ].uniques().join(' TO '),
+          x,
+          if(
+            x.contains('TO'),
+            '['+x+']',
+            x
+          ),
+          null
+        )
+      ].uniques().join('␟'),
+      z,
+      z,
+      null
+    )
+  newColumnName: filterDateRange_mv
+  columnInsertIndex: 2

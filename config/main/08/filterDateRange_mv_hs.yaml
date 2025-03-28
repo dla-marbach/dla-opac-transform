@@ -1,0 +1,34 @@
+# Facette Zeit
+# Zeitspanne aus normierten Feldern dateOriginStart und dateOriginEnd
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['dateOriginStart'].value,
+          v,
+          v,
+          null
+        ),
+        forNonBlank(
+          cells['dateOriginEnd'].value,
+          v,
+          v,
+          null
+        )
+      ].uniques().join(' TO '),
+      x,
+      if(
+        x.contains('TO'),
+        '['+x+']',
+        x
+      ),
+      null
+    )
+  newColumnName: filterDateRange_mv
+  columnInsertIndex: 2

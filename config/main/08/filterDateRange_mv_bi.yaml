@@ -1,0 +1,47 @@
+# Facette Zeit
+# Zeitspanne aus Freitext-Feld dateOrigin mit Trennzeichen "-"
+# Erste Zeitspanne aus mehrfachbelegbarem Freitext-Feld dateOther_mv mit Trennzeichen "-"
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          filter(
+            cells['dateOrigin'].value.split('-'),
+            v,
+            isNumeric(v)
+          ).uniques().join(' TO '),
+          x,
+          if(
+            x.contains('TO'),
+            '['+x+']',
+            x
+          ),
+          null
+        ),
+        forNonBlank(
+          filter(
+            cells['dateOther_mv'].value.split('␟')[0].split('-'),
+            v,
+            isNumeric(v)
+          ).uniques().join(' TO '),
+          x,
+          if(
+            x.contains('TO'),
+            '['+x+']',
+            x
+          ),
+          null
+        )
+      ].uniques().join('␟'),
+      z,
+      z,
+      null
+    )
+  newColumnName: filterDateRange_mv
+  columnInsertIndex: 2
