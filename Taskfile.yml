@@ -88,12 +88,11 @@ tasks:
       - touch solr/server/solr/dla/core.properties solr/server/solr/dla/stopwords.txt solr/server/solr/dla/synonyms.txt
       - solr/bin/solr start -a "-XX:+IgnoreUnrecognizedVMOptions" && sleep 1
       - |
-        statuscode=$(jq -s '.' example/output/*.jsonl | curl --silent --output /dev/stderr --write-out "%{http_code}" 'http://localhost:8983/solr/dla/update?commit=true' -X POST -H 'Content-Type: application/json' --data-binary @-)
-        if test $statuscode -ne 200; then
-            exit 1
-        fi
+        # JSON-Lines umwandeln in JSON und an Solr senden
+        jq -s '.' example/output/*.jsonl | curl 'http://localhost:8983/solr/dla/update?commit=true' -X POST -H 'Content-Type: application/json' --data-binary @-
       - |
-        curl http://localhost:8983/solr/dla/admin/luke?show=index
+        # Prüfen, ob Datensätze nicht indexiert werden konnten
+        diff <(cut -c 10-19 example/output/*.jsonl | sort) <(curl --silent 'http://localhost:8983/solr/dla/query?fl=id&q=*%3A*&rows=10000000&wt=csv&csv.header=false' | sort)
 
   install:
     desc: install all requirements into subdirectories

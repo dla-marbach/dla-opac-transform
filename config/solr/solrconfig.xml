@@ -1126,6 +1126,10 @@
 
   <!-- Custom Update Request Chain (referenziert oben in initparams) -->
   <updateRequestProcessorChain name="dla">
+    <!-- Bei Fehlern (z.B. invalide Datumsangaben) betreffende Datensätze überspringen und Import fortsetzen -->
+    <processor class="solr.TolerantUpdateProcessorFactory">
+      <int name="maxErrors">10</int>
+    </processor>
     <!-- Solr standard processing -->
     <processor class="solr.LogUpdateProcessorFactory"/>
     <processor class="solr.DistributedUpdateProcessorFactory"/>
