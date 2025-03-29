@@ -92,7 +92,7 @@ tasks:
         cat example/output/*.jsonl | curl 'http://localhost:8983/solr/dla/update/json/docs?commit=true&overwrite=true' -X POST -H 'Content-Type: application/json' --data-binary @-
       - |
         # Prüfen, ob Datensätze nicht indexiert werden konnten
-        diff <(cut -c 10-19 example/output/*.jsonl | sort) <(curl --silent 'http://localhost:8983/solr/dla/query?fl=id&q=*%3A*&rows=10000000&wt=csv&csv.header=false' | sort)
+        diff <(perl -lne 'print substr($_,9,10)' example/output/*.jsonl | sort) <(curl --silent 'http://localhost:8983/solr/dla/query?fl=id&q=*%3A*&rows=10000000&wt=csv&csv.header=false' | sort)
 
   install:
     desc: install all requirements into subdirectories
