@@ -89,7 +89,7 @@ tasks:
       - solr/bin/solr start -a "-XX:+IgnoreUnrecognizedVMOptions" && sleep 1
       - |
         # JSON-Lines an Solr senden
-        cat example/output/*.jsonl | curl 'http://localhost:8983/solr/dla/update/json/docs?commit=true&overwrite=true' -X POST -H 'Content-Type: application/json' --data-binary @-
+        curl --upload-file 'example/output/{ak,au,be,bf,bi,hs,ks,mm,pe,se,sy,th}.jsonl' 'http://localhost:8983/solr/dla/update/json/docs?commit=true&overwrite=true' -X POST -H 'Content-Type: application/json'
       - |
         # Prüfen, ob Datensätze nicht indexiert werden konnten
         diff <(perl -lne 'print substr($_,9,10)' example/output/*.jsonl | sort) <(curl --silent 'http://localhost:8983/solr/dla/query?fl=id&q=*%3A*&rows=10000000&wt=csv&csv.header=false' | sort)

@@ -1128,7 +1128,7 @@
   <updateRequestProcessorChain name="dla">
     <!-- Bei Fehlern (z.B. invalide Datumsangaben) betreffende Datensätze überspringen und Import fortsetzen -->
     <processor class="solr.TolerantUpdateProcessorFactory">
-      <int name="maxErrors">10</int>
+      <int name="maxErrors">100</int>
     </processor>
     <!-- Solr standard processing -->
     <processor class="solr.LogUpdateProcessorFactory"/>
