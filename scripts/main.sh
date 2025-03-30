@@ -31,7 +31,7 @@ grel='[ {
 "op": "core/text-transform",
 "engineConfig": { "facets": [], "mode": "row-based" },
 "columnName": "schemaVersion",
-"expression": "grel:\"0.6.4\""
+"expression": "grel:\"0.7.0\""
 } ]'
 for set in ${sets[@]}; do
     echo "${grel}" | orcli transform "${set}" &
