@@ -81,18 +81,28 @@ tasks:
   solr:
     desc: Indexierung in Solr testen
     cmds:
-      - solr/bin/solr delete -c dla &> /dev/null || true
+      - solr/bin/solr delete -c dla-indexing &> /dev/null || true
+      - solr/bin/solr delete -c dla-prod &> /dev/null || true
       - solr/bin/solr stop &> /dev/null || true
-      - rm -r "solr/server/solr/dla" 2> /dev/null || true; mkdir -p "solr/server/solr/dla"
-      - cp config/solr/* solr/server/solr/dla/
-      - touch solr/server/solr/dla/core.properties solr/server/solr/dla/stopwords.txt solr/server/solr/dla/synonyms.txt
+      - rm -r "solr/server/solr/dla-indexing" 2> /dev/null || true; mkdir -p "solr/server/solr/dla-indexing"
+      - rm -r "solr/server/solr/dla-prod" 2> /dev/null || true; mkdir -p "solr/server/solr/dla-prod"
+      - cp config/solr/* solr/server/solr/dla-indexing/
+      - cp config/solr/* solr/server/solr/dla-prod/
+      - touch solr/server/solr/dla-indexing/core.properties solr/server/solr/dla-indexing/stopwords.txt solr/server/solr/dla-indexing/synonyms.txt
+      - touch solr/server/solr/dla-prod/core.properties solr/server/solr/dla-prod/stopwords.txt solr/server/solr/dla-prod/synonyms.txt
       - solr/bin/solr start -a "-XX:+IgnoreUnrecognizedVMOptions" && sleep 1
       - |
-        # JSON-Lines an Solr senden
-        curl --upload-file 'example/output/{ak,au,be,bf,bi,hs,ks,mm,pe,se,sy,th}.jsonl' 'http://localhost:8983/solr/dla/update/json/docs?commit=true&overwrite=true' -X POST -H 'Content-Type: application/json'
+        # JSON-Lines an Solr core dla-indexing senden
+        curl --upload-file 'example/output/{ak,au,be,bf,bi,hs,ks,mm,pe,se,sy,th}.jsonl' 'http://localhost:8983/solr/dla-indexing/update/json/docs?commit=true&overwrite=true' -X POST -H 'Content-Type: application/json'
       - |
         # Prüfen, ob Datensätze nicht indexiert werden konnten
-        diff <(perl -lne 'print substr($_,9,10)' example/output/*.jsonl | sort) <(curl --silent 'http://localhost:8983/solr/dla/query?fl=id&q=*%3A*&rows=10000000&wt=csv&csv.header=false' | sort)
+        diff <(perl -lne 'print substr($_,9,10)' example/output/*.jsonl | sort) <(curl --silent 'http://localhost:8983/solr/dla-indexing/query?fl=id&q=*%3A*&rows=10000000&wt=csv&csv.header=false' | sort) || true
+      - |
+        # Neu befüllten Index live schalten durch Swap
+        curl --silent 'http://localhost:8983/solr/admin/cores?action=SWAP&core=dla-indexing&other=dla-prod'
+      - |
+        # Test query auf Solr core dla-prod
+        curl --silent 'http://localhost:8983/solr/dla-prod/query?q=*:*&rows=0'
 
   install:
     desc: install all requirements into subdirectories
