@@ -86,8 +86,8 @@ tasks:
       - solr/bin/solr stop &> /dev/null || true
       - rm -r "solr/server/solr/dla-indexing" 2> /dev/null || true; mkdir -p "solr/server/solr/dla-indexing"
       - rm -r "solr/server/solr/dla-prod" 2> /dev/null || true; mkdir -p "solr/server/solr/dla-prod"
-      - cp config/solr/* solr/server/solr/dla-indexing/
-      - cp config/solr/* solr/server/solr/dla-prod/
+      - cp config/solr/9.8/* solr/server/solr/dla-indexing/
+      - cp config/solr/9.8/* solr/server/solr/dla-prod/
       - touch solr/server/solr/dla-indexing/core.properties solr/server/solr/dla-indexing/stopwords.txt solr/server/solr/dla-indexing/synonyms.txt
       - touch solr/server/solr/dla-prod/core.properties solr/server/solr/dla-prod/stopwords.txt solr/server/solr/dla-prod/synonyms.txt
       - solr/bin/solr start -a "-XX:+IgnoreUnrecognizedVMOptions" && sleep 1
@@ -126,5 +126,5 @@ tasks:
   install_solr:
     cmds:
       - mkdir -p solr
-      - wget -q --show-progress -O solr.tgz https://archive.apache.org/dist/lucene/solr/7.7.3/solr-7.7.3.tgz
+      - wget -q --show-progress -O solr.tgz https://www.apache.org/dyn/closer.lua/solr/solr/9.8.1/solr-9.8.1-slim.tgz?action=download
       - tar -xzf solr.tgz -C solr --strip 1 && rm solr.tgz
