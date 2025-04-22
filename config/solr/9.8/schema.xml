@@ -9,6 +9,7 @@
   <fieldType name="datepoints" class="solr.DatePointField" multiValued="true"/>
   <fieldType name="daterange" class="solr.DateRangeField" sortMissingLast="true" multiValued="false"/>
   <fieldType name="dateranges" class="solr.DateRangeField" sortMissingLast="true" multiValued="true"/>
+  <fieldType name="plong" class="solr.LongPointField" docValues="true"/>
   <fieldType name="string" class="solr.StrField" sortMissingLast="true" multiValued="false"/>
   <fieldType name="strings" class="solr.StrField" sortMissingLast="true" multiValued="true"/>
   <fieldType name="text" class="solr.SortableTextField" positionIncrementGap="100" multiValued="false">

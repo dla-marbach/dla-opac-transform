@@ -90,7 +90,7 @@ tasks:
       - cp config/solr/9.8/* solr/server/solr/dla-prod/
       - touch solr/server/solr/dla-indexing/core.properties solr/server/solr/dla-indexing/stopwords.txt solr/server/solr/dla-indexing/synonyms.txt
       - touch solr/server/solr/dla-prod/core.properties solr/server/solr/dla-prod/stopwords.txt solr/server/solr/dla-prod/synonyms.txt
-      - solr/bin/solr start -a "-XX:+IgnoreUnrecognizedVMOptions" && sleep 1
+      - solr/bin/solr start --user-managed && sleep 2
       - |
         # JSON-Lines an Solr core dla-indexing senden
         curl --upload-file 'example/output/{ak,au,be,bf,bi,hs,ks,mm,pe,se,sy,th}.jsonl' 'http://localhost:8983/solr/dla-indexing/update/json/docs?commit=true&overwrite=true' -X POST -H 'Content-Type: application/json'
