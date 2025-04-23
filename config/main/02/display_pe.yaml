@@ -1,4 +1,5 @@
-# title (dateLifespanStart[0,4]-dateLifespanEnd[0,4])
+# title (Jahresangabe aus dateLifespanStart-Jahresangabe aus dateLifespanEnd)
+# Jahresangabe wird bei Personen extrahiert mit RegEx positive lookahead, weil auch Angaben v. Chr. (-0123) erlaubt sind
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -14,15 +15,15 @@
     )
     + forNonBlank(
       forNonBlank(
-        cells['dateLifespanStart'].value[0,4],
+        cells['dateLifespanStart'].value,
         x,
-        x,
+        x.split(/(?=-)/)[0],
         ''
       )
       + forNonBlank(
-        cells['dateLifespanEnd'].value[0,4],
+        cells['dateLifespanEnd'].value,
         x,
-        '-' + x,
+        '-' + x.split(/(?=-)/)[0],
         ''
       ),
       x,
