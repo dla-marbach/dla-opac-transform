@@ -80,6 +80,8 @@ tasks:
 
   solr:
     desc: Indexierung in Solr testen
+    env:
+      SOLR_JETTY_HOST: 0.0.0.0
     cmds:
       - solr/bin/solr delete -c dla-indexing &> /dev/null || true
       - solr/bin/solr delete -c dla-prod &> /dev/null || true
