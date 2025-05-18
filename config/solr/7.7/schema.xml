@@ -213,6 +213,7 @@
   <field name="filterDatePoint_mv" type="datepoints"/>
   <field name="filterFormContent_mv" type="strings"/>
   <field name="filterMedium_mv" type="strings"/>
+  <field name="filterSource" type="string"/>
   <field name="gender" type="text"/>
   <field name="genre" type="text"/>
   <field name="genreOther_mv" type="texts"/>
@@ -372,6 +373,7 @@
   <field name="statusLoan" type="text"/>
   <field name="statusPreservation" type="text"/>
   <field name="storageArea" type="text"/>
+  <field name="source" type="string"/>  
   <field name="subjectLocation_comment_mv" type="texts"/>
   <field name="subjectLocation_display_mv" type="texts"/>
   <field name="subjectLocation_id_mv" type="texts"/>

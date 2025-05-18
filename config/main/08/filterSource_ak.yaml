@@ -1,0 +1,16 @@
+# Facette Datenbestand
+# wenn category "Werktitel", dann "Werke", sonst "Bibliotheksmaterialien"
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    if(
+      cells['category'].value == 'Werktitel',
+      'Werke',
+      'Bibliotheksmaterialien'
+    ),
+  newColumnName: filterSource
+  columnInsertIndex: 1 # hinter Spalte id

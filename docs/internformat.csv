@@ -56,6 +56,7 @@ AK,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeitr
 AK,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 AK,filterFormContent_mv,strings,Epik␟Schwank␟Rundfunkmanuskript␟Aufsatz␟Literarisches Weblog,Facette Form und Inhalt
 AK,filterMedium_mv,strings,Erweiterte physikalische Form␟Medienart 1␟Medienart 2␟Buchumschlag,Facette Sammlung
+AK,filterSource,string,Bibliotheksmaterialien,Facette Datenbestand
 AK,genreOther_mv,texts,Gattung 1␟Gattung 2,
 AK,gndRelation_comment_mv,texts,GND-Relation 1 Anmerkung␟GND-Relation 2 Anmerkung,
 AK,gndRelation_id_mv,texts,GND-Relation 1 ID␟GND-Relation 2 ID,
@@ -134,6 +135,7 @@ AK,scholarlyPublication_type_mv,texts,Hochschulschrift 1 Art␟Hochschulschrift 
 AK,statusCataloging,text,Erfassungsstatus,
 AK,statusEditing,text,Bearbeitungsstatus,
 AK,statusJournalReview,text,Kennzeichnung auszuwertende Zeitschriften,
+AK,source,string,AK,
 AK,subject_display_mv,texts,Schlagwort unnormiert 1␟Schlagwort unnormiert 2,aus TH display
 AK,subject_id_mv,texts,TH00000001␟TH00000002,
 AK,subjectOther_mv,texts,Schlagwort unnormiert 1␟Schlagwort unnormiert 2,
@@ -198,6 +200,7 @@ AU,provenance,text,true,
 AU,schemaVersion,text,0.4,
 AU,statusItem,text,Exemplarstatus,
 AU,statusLoan,text,Ausleihstatus,
+AU,source,string,AU,
 AU,url,text,https://www.dla-marbach.de/find/opac/id/AU00000001,
 AU,usageRestriction,text,Benutzungsbeschränkung,
 AU,virtualRecording,text,Virtuelle Aufnahme,
@@ -211,6 +214,7 @@ BE,personAt_display_mv,texts,Person 1 (1982-2001)␟Person 2 (1982-2001),aus PE 
 BE,personAt_id_mv,texts,PE00000001␟PE00000002,
 BE,schemaVersion,text,0.4,
 BE,statusLoan,text,Ausleihstatus,
+BE,source,string,BE,
 BE,title,text,Erwerbung 1,
 BE,url,text,https://www.dla-marbach.de/find/opac/id/BE00000001,
 BE,usageRestriction,text,Benutzungsbeschränkung,
@@ -254,6 +258,7 @@ BF,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeitr
 BF,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 BF,filterCollection_mv,strings,Z:Öffentlicher Bestand 1,Facette Sammlung
 BF,filterFormContent_mv,strings,Bestandsart,Facette Form und Inhalt
+BF,filterSource,string,Nachlässe und Spezialsammlungen,Facette Datenbestand
 BF,id,string,BF00000001,
 BF,itemization_extent_mv,texts,Verzeichnungsumfang 1␟Verzeichnungsumfang 2,
 BF,itemization_status_mv,texts,Verzeichnung 1␟Verzeichnung 2,
@@ -275,6 +280,7 @@ BF,personAt_id_mv,texts,PE00000003␟PE00000004,
 BF,reference_text_mv,texts,Quellenangabe 1,
 BF,schemaVersion,text,0.4,
 BF,statusLoan,text,Ausleihstatus,
+BF,source,string,BF,
 BF,subject_display_mv,texts,Thesaurus-Begriff 1␟Thesaurus-Begriff 2,aus TH display
 BF,subject_id_mv,texts,TH00000001␟TH00000002,
 BF,title,text,Z:Öffentlicher Bestand 1,
@@ -290,6 +296,8 @@ BI,category,text,Satzart,
 BI,categoryMedium_mv,texts,Objektart 1␟Objektart 2,
 BI,categorySub,text,Objektart Hauptkategorie,
 BI,categorySubSub,text,Objektart Unterkategorie,
+BI,collection_display_mv,texts,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]",aus BF display
+BI,collection_id_mv,texts,BF00000001,
 BI,confidential,boolean,false,
 BI,corporationAbout_comment_mv,texts,Link Körperschaft 3 Anmerkung␟Link Körperschaft 4 Anmerkung,
 BI,corporationAbout_display_mv,texts,Körperschaft 3␟Körperschaft 4,aus KS display
@@ -333,8 +341,7 @@ BI,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeitr
 BI,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 BI,filterFormContent_mv,strings,Objektart Hauptkategorie␟Objektart Unterkategorie␟Objektart 1␟Objektart 2␟Objektart Zusammensetzung,Facette Form und Inhalt
 BI,filterMedium_mv,strings,Datenträger,Facette Sammlung
-BI,collection_display_mv,texts,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]",aus BF display
-BI,collection_id_mv,texts,BF00000001,
+BI,filterSource,string,Bilder und Objekte,Facette Datenbestand
 BI,id,string,BI00000001,
 BI,inscription,text,Beschriftung,
 BI,inventoryNumber,text,Inventarnummer,
@@ -375,6 +382,7 @@ BI,schemaVersion,text,0.4,
 BI,statusEditing,text,Bearbeitungsstatus,
 BI,statusLoan,text,Ausleihstatus,
 BI,statusPreservation,text,Erhaltungszustand,
+BI,source,string,BI,
 BI,subject_display_mv,texts,Schlagwort 1␟Schlagwort 2,aus TH display
 BI,subject_id_mv,texts,TH00000021␟TH00000022,
 BI,subject_type_mv,texts,Link Schlagwort 1 Typ␟Link Schlagwort 2 Typ,
@@ -430,6 +438,7 @@ HS,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeitr
 HS,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 HS,filterFormContent_mv,strings,Hauptgattung␟Weitere Hauptgattung 1␟Weitere Hauptgattung 2␟Untergattung␟Weitere Untergattung 1␟Weitere Untergattung 2,Facette Form und Inhalt
 HS,filterMedium_mv,strings,Sonstiger Datenträger␟Noten,Facette Sammlung
+HS,filterSource,string,Handschriften Einzelnachweise,Facette Datenbestand
 HS,genre,text,Hauptgattung,
 HS,genreOther_mv,texts,Weitere Hauptgattung 1␟Weitere Hauptgattung 2,
 HS,genreSub,text,Untergattung,
@@ -475,6 +484,7 @@ HS,sortingKeySub,text,Sortiername Untereintrag,
 HS,sortingTitleMain,text,Haupttitel Sortierform,
 HS,sortingTitleOther,text,Weiterer Titel Sortierform,
 HS,statusLoan,text,Ausleihstatus,
+HS,source,string,HS,
 HS,subject_display_mv,texts,Schlagwort 1␟Schlagwort 2,aus TH display
 HS,subject_id_mv,texts,TH00000021␟TH00000022,
 HS,subjectOther_mv,texts,Suchbegriffe,
@@ -509,6 +519,7 @@ KS,dateModified,daterange,2023-06-06,
 KS,display,text,Körperschaft 1 (1982),Hauptbezeichnung
 KS,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 KS,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
+KS,filterSource,string,Körperschaften,Facette Datenbestand
 KS,gnd_id_mv,texts,GND-Nummer 1␟GND-Nummer 2,
 KS,gnd_type_mv,texts,GND-Nummer 1 Typ␟GND-Nummer 2 Typ,
 KS,gndRelation_comment_mv,texts,GND-Relation 1 Anmerkung␟GND-Relation 2 Anmerkung,
@@ -540,6 +551,7 @@ KS,schemaVersion,text,0.4,
 KS,seeAlso_display_mv,texts,Körperschaft 3␟Körperschaft 4,aus KS display
 KS,seeAlso_id_mv,texts,KS00000003␟KS00000004,
 KS,statusCataloging,text,Ansetzungsstatus,
+KS,source,string,KS,
 KS,successor_display_mv,texts,Körperschaft 45 später␟Körperschaft 46 später,aus KS display
 KS,successor_id_mv,texts,KS00000045␟KS00000046,
 KS,title,text,Körperschaft 1,
@@ -558,6 +570,7 @@ MM,hyperlink,text,https://digital.dla-marbach.de/viewer/image/BF00043389/,Link z
 MM,id,string,MM00000001,
 MM,schemaVersion,text,0.4,
 MM,storageArea,text,Speicherbereich,
+MM,source,string,MM,
 MM,thumbnail,text,"https://digital.dla-marbach.de/viewer/api/v1/records/BF00043389/files/images/BF000433890_0001.tif/full/!128,192/0/default.jpg",Link zum Vorschaubild
 MM,title,text,Multimedia 1,
 MM,url,text,https://www.dla-marbach.de/find/opac/id/MM00000001,
@@ -581,6 +594,7 @@ PE,dateRetention,text,Schutzfrist,
 PE,display,text,Person 1 (1982-2001),Hauptbezeichnung
 PE,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 PE,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
+PE,filterSource,string,Personen,Facette Datenbestand
 PE,gender,text,Geschlecht,
 PE,gnd_id_mv,texts,GND-Nummer 1␟GND-Nummer 2,
 PE,gnd_type_mv,texts,GND-Nummer 1 Typ␟GND-Nummer 2 Typ,
@@ -607,6 +621,7 @@ PE,schemaVersion,text,0.4,
 PE,seeAlso_display_mv,texts,Person 3 (1982-2001)␟Person 4,aus PE display
 PE,seeAlso_id_mv,texts,PE00000003␟PE00000004,
 PE,statusEditing,text,Bearbeitungsstatus,
+PE,source,string,PE,
 PE,title,text,Person 1,
 PE,titlePrefix,text,Akademischer Titel,
 PE,titleSuffix,text,Namenszusatz,
@@ -627,6 +642,7 @@ SE,corporation_id_mv,texts,KS00000001␟KS00000002,
 SE,dateCataloged,daterange,2023-06-01,
 SE,dateModified,daterange,2023-06-06,
 SE,display,text,Sacherschließungskette 1,Hauptbezeichnung
+SE,filterSource,string,Systematikketten,Facette Datenbestand
 SE,id,string,SE00000001,
 SE,person_display_mv,texts,Person 1 (1982-2001)␟Person 2 (1982-2001),aus PE display
 SE,person_id_mv,texts,PE00000001␟PE00000002,
@@ -634,6 +650,7 @@ SE,schemaVersion,text,0.4,
 SE,sequence_mv,texts,Kettenglied 1␟Kettenglied 2,
 SE,subject_display_mv,texts,Thesaurus-Begriff 1␟Thesaurus-Begriff 2,aus TH display
 SE,subject_id_mv,texts,TH00000001␟TH00000002,
+SE,source,string,SE,
 SE,title,text,Sacherschließungskette 1,
 SE,url,text,https://www.dla-marbach.de/find/opac/id/SE00000001,
 SE,work_display_mv,texts,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1]␟Bibliotheksdokument 2,aus AK display
@@ -644,6 +661,7 @@ SY,child_id_mv,texts,SY00000003␟SY00000004,
 SY,dateCataloged,daterange,2023-06-01,
 SY,dateModified,daterange,2023-06-06,
 SY,display,text,Systematiknummer. Basisnotation 1,Hauptbezeichnung
+SY,filterSource,string,Fachsystematik,Facette Datenbestand
 SY,id,string,SY00000001,
 SY,notation,text,Systematiknummer,
 SY,parent_display_mv,texts,Basisnotation 7 übergeordnet,aus SY display
@@ -652,6 +670,7 @@ SY,schemaVersion,text,0.4,
 SY,seeAlso_display_mv,texts,Basisnotation 5 siehe auch␟Basisnotation 6 siehe auch,aus SY display
 SY,seeAlso_id_mv,texts,SY00000005␟SY00000006,
 SY,subjectOther_mv,texts,Registerbegriffe,
+SY,source,string,SY,
 SY,title,text,Basisnotation 1,
 SY,titleShort,text,Systematiktitel,
 SY,url,text,https://www.dla-marbach.de/find/opac/id/SY00000001,
@@ -667,6 +686,7 @@ TH,dateOriginStart,daterange,1982-05-22,
 TH,display,text,Thesaurus-Begriff 1,Hauptbezeichnung
 TH,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 TH,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
+TH,filterSource,string,Orte und Sachbegriffe,Facette Datenbestand
 TH,gnd_id_mv,texts,GND-Nummer 1␟GND-Nummer 2,
 TH,gndRelation_comment_mv,texts,GND-Relation 1 Anmerkung␟GND-Relation 2 Anmerkung,
 TH,gndRelation_id_mv,texts,GND-Relation 1 ID␟GND-Relation 2 ID,
@@ -681,6 +701,7 @@ TH,reference_type_mv,texts,Quellenangabe 1 Typ␟Quellenangabe 2 Typ,
 TH,schemaVersion,text,0.4,
 TH,seeAlso_display_mv,texts,Thesaurus-Begriff 3␟Thesaurus-Begriff 4,aus TH display
 TH,seeAlso_id_mv,texts,TH00000003␟TH00000004,
+TH,source,string,TH,
 TH,title,text,Thesaurus-Begriff 1,
 TH,url,text,https://www.dla-marbach.de/find/opac/id/TH00000001,
 TH,usedFor_display_mv,texts,Thesaurus-Begriff 41 used-for␟Thesaurus-Begriff 42 used-for,aus TH display

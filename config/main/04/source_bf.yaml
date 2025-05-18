@@ -1,0 +1,10 @@
+# Kürzel für Datenbestand
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel: 'BF'
+  newColumnName: source
+  columnInsertIndex: 1 # hinter Spalte id
