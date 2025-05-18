@@ -88,8 +88,8 @@ tasks:
       - solr/bin/solr stop &> /dev/null || true
       - rm -r "solr/server/solr/dla-indexing" 2> /dev/null || true; mkdir -p "solr/server/solr/dla-indexing"
       - rm -r "solr/server/solr/dla-prod" 2> /dev/null || true; mkdir -p "solr/server/solr/dla-prod"
-      - cp config/solr/9.8/* solr/server/solr/dla-indexing/
-      - cp config/solr/9.8/* solr/server/solr/dla-prod/
+      - cp config/solr/* solr/server/solr/dla-indexing/
+      - cp config/solr/* solr/server/solr/dla-prod/
       - touch solr/server/solr/dla-indexing/core.properties solr/server/solr/dla-indexing/stopwords.txt solr/server/solr/dla-indexing/synonyms.txt
       - touch solr/server/solr/dla-prod/core.properties solr/server/solr/dla-prod/stopwords.txt solr/server/solr/dla-prod/synonyms.txt
       - solr/bin/solr start --user-managed
