@@ -23,7 +23,7 @@
       + forNonBlank(
         cells['dateLifespanEnd'].value,
         x,
-        '-' + x.split(/(?=-)/)[0],
+        '–' + x.split(/(?=-)/)[0],
         ''
       ),
       x,
