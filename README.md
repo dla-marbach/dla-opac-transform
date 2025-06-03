@@ -52,8 +52,35 @@ Indexierung in Solr testen (vgl. http://localhost:8983):
 task solr
 ```
 
-Änderungen im Ausgabeformat JSON-Lines prüfen:
+Konvertierung der JSONL-Daten in YAML:
 
 ```sh
-git diff -U0 --word-diff-regex='[^,]+' --word-diff=porcelain example/output/*.jsonl
+task yaml
 ```
+
+## Vorgehen bei Erweiterungen
+
+1. Solr [schema.xml](config/solr/schema.xml) und ggf. [solrconfig.xml](config/solr/solrconfig.xml) erweitern
+2. Beispieldaten ergänzen in [example/input](config/solr/schema.xml)
+3. OpenRefine Transformationsregeln ergänzen in [config/main](config/main).
+    * Dazu ggf. orcli im interaktiven Modus starten:
+        ```sh
+        task dev
+        ```
+    * JSON aus OpenRefine-History in YAML konvertieren z.B. mit https://onlineyamltools.com/convert-json-to-yaml
+4. Dokumentation in [docs/internformat.csv](docs/internformat.csv)
+5. Testlauf mit task
+    ```sh
+    task
+    task solr
+    task yaml
+    ```
+6. Ergebnisse prüfen mit git diff
+    ```sh
+    git diff example/output/*.yaml
+    git diff -U0 --word-diff-regex='[^,]+' --word-diff=porcelain example/output/*.jsonl
+    ```
+7. schemaVersion in [scripts/main.sh](scripts/main.sh) hochzählen
+8. Git Commit und Push
+9. GitHub [Release Notes](https://github.com/dla-marbach/dla-opac-transform/releases)
+10. Konfiguration des Solr auf Produktivsystem aktualisieren

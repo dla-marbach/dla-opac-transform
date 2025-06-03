@@ -107,6 +107,32 @@ tasks:
         # Test query auf Solr core dla-prod
         curl --silent 'http://localhost:8983/solr/dla-prod/query?q=*:*&rows=0'
 
+  yaml:
+    desc: JSONL zusätzlich in YAML konvertieren
+    cmds:
+      - |
+        # Zeitstempel zu Beginn
+        mkdir -p .task/timer; date -u +%s.%N > ".task/timer/{{.TASK}}"
+      - |
+        # TSV konvertieren in YAML ohne null values
+        for f in "{{.DIR}}"/output/*.jsonl; do
+            f="${f##*/}"
+            f="${f%%.*}"
+            yq -p json -o yaml "{{.DIR}}"/output/${f}.jsonl \
+            > "{{.DIR}}"/output/${f}.yaml
+        done
+      - |
+        # Laufzeit berechnen
+        >&2 echo "{{.TASK}} run time: $(bc <<<"$(date -u +%s.%N)-$(cat ".task/timer/{{.TASK}}")") seconds"
+    sources:
+      - '{{.DIR}}/output/*.tsv'
+      - Taskfile.yml
+    generates:
+      - '{{.DIR}}/output/*.yaml'
+    preconditions:
+      - command -v yq
+      - test -d {{.DIR}}/output
+
   install:
     desc: install all requirements into subdirectories
     cmds:
