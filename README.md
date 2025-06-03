@@ -83,5 +83,3 @@ task yaml
 9. Git Commit und Push
 10. GitHub [Release Notes](https://github.com/dla-marbach/dla-opac-transform/releases)
 11. Konfiguration des Solr auf Produktivsystem aktualisieren
-9. GitHub [Release Notes](https://github.com/dla-marbach/dla-opac-transform/releases)
-10. Konfiguration des Solr auf Produktivsystem aktualisieren
