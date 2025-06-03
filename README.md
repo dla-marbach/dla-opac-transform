@@ -64,7 +64,7 @@ task yaml
 2. Beispieldaten ergänzen in [example/input](example/input)
 3. OpenRefine Transformationsregeln ergänzen in [config/main](config/main).
     * Dazu ggf. orcli im interaktiven Modus starten mit `task dev`
-    * JSON aus OpenRefine-History in YAML konvertieren z.B. mit https://onlineyamltools.com/convert-json-to-yaml
+    * JSON aus OpenRefine-History [in YAML konvertieren](https://onlineyamltools.com/convert-json-to-yaml)
 4. Daten generieren
     ```sh
     task main yaml
