@@ -28,9 +28,11 @@ done
 
 # schemaVersion setzen
 grel='[ {
-"op": "core/text-transform",
+"op": "core/column-addition",
 "engineConfig": { "facets": [], "mode": "row-based" },
-"columnName": "schemaVersion",
+"baseColumnName": "id",
+"newColumnName": "schemaVersion",
+"columnInsertIndex": 2,
 "expression": "grel:\"0.7.1\""
 } ]'
 for set in ${sets[@]}; do
