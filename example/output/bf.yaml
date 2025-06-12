@@ -8,7 +8,7 @@ categoryIndex_mv:
   - Segment 2
 categorySub: Bestandsart
 categorySubSub: Unterbestandsart
-confidential: "False"
+confidential: false
 content: Zusammenfassung
 corporationAbout_display_mv:
   - Körperschaft 3
@@ -184,7 +184,7 @@ website_url_mv:
 ---
 id: BF00000002
 display: Z:Öffentlicher Bestand 2
-confidential: "False"
+confidential: false
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Z:Öffentlicher Bestand 2</dc:title>
@@ -214,7 +214,7 @@ url: https://www.dla-marbach.de/find/opac/id/BF00000002
 ---
 id: BF00000003
 display: Z:Vertraulicher Bestand
-confidential: "True"
+confidential: true
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Z:Vertraulicher Bestand</dc:title>

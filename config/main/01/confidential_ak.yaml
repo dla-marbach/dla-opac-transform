@@ -1,0 +1,13 @@
+# Konvertierung in Boolean
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: confidential
+  expression: |
+    grel:
+    forNonBlank(
+      value,
+      v,
+      v == 'True',
+      null
+    )

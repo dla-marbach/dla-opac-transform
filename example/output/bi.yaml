@@ -10,7 +10,7 @@ categorySub: Objektart Hauptkategorie
 categorySubSub: Objektart Unterkategorie
 collection_display_mv: Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]
 collection_id_mv: BF00000001
-confidential: "False"
+confidential: false
 corporationAbout_comment_mv:
   - Link Körperschaft 3 Anmerkung
   - Link Körperschaft 4 Anmerkung
@@ -302,7 +302,7 @@ display: 'Wertetabelle Workaround: Plakat bleibt Plakat [Plakat]'
 categorySub: Plakat
 collection_display_mv: Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]
 collection_id_mv: BF00000001
-confidential: "False"
+confidential: false
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Wertetabelle Workaround: Plakat bleibt Plakat [Plakat]</dc:title>
@@ -336,7 +336,7 @@ url: https://www.dla-marbach.de/find/opac/id/BI00000002
 ---
 id: BI00000003
 display: Vertraulicher Datensatz
-confidential: "True"
+confidential: true
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Vertraulicher Datensatz</dc:title>
@@ -368,7 +368,7 @@ display: Hall. Michaelskirche [Druckgraphik]
 accession_id: BE00000154
 category: Einzelobjekt
 categorySub: Druckgraphik
-confidential: "False"
+confidential: false
 dateCataloged: "2025-02-13"
 dateModified: "2025-02-13"
 dateOrigin: 1848-1852

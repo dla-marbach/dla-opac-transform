@@ -44,7 +44,7 @@ digitalObject_display_mv:
 digitalObject_id_mv:
   - MM00000001
   - MM00000002
-enveloped: "True"
+enveloped: true
 location_mv: Standort
 manifestation_display: 'Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1]'
 manifestation_id: AK00000001
@@ -65,7 +65,7 @@ personAt_id_mv:
   - PE00000001
   - PE00000002
   - PE99999999
-provenance: "True"
+provenance: true
 schemaVersion: 0.7.1
 source: AU
 statusItem: Exemplarstatus
@@ -76,7 +76,7 @@ virtualRecording: Virtuelle Aufnahme
 ---
 id: AU00000002
 display: Vertrauliches Exemplar
-confidential: "True"
+confidential: true
 note: Vertrauliches Exemplar
 schemaVersion: 0.7.1
 source: AU
@@ -193,7 +193,7 @@ source: AU
 ---
 id: AU00000005
 display: Buchumschlag
-enveloped: "True"
+enveloped: true
 manifestation_display: 'Facette Medium : [Musikalia]'
 manifestation_id: AK00000062
 note: Buchumschlag

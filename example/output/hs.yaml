@@ -10,7 +10,7 @@ category: Dokumententyp
 categorySub: Objektart
 collection_display_mv: Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]
 collection_id_mv: BF00000001
-confidential: "False"
+confidential: false
 content: Inhalt
 corporationAbout_comment_mv:
   - Link Körperschaft 3 Anmerkung
@@ -295,7 +295,7 @@ work_id_mv:
 id: HS00000002
 display: Handschrift 2 Noten
 categorySub: Maschinenlesbare Datenträger
-confidential: "False"
+confidential: false
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Handschrift 2 Noten</dc:title>
@@ -331,7 +331,7 @@ url: https://www.dla-marbach.de/find/opac/id/HS00000002
 ---
 id: HS00000003
 display: Vertraulicher Datensatz
-confidential: "True"
+confidential: true
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Vertraulicher Datensatz</dc:title>
@@ -361,7 +361,7 @@ url: https://www.dla-marbach.de/find/opac/id/HS00000003
 id: HS00000004
 display: Brief [Hauptgattung]
 category: Briefe von
-confidential: "True"
+confidential: true
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Brief [Hauptgattung]</dc:title>

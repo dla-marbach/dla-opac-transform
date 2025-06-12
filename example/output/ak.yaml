@@ -29,7 +29,7 @@ classification_id_mv:
   - SE00000001
   - SE00000002
   - SE99999999
-confidential: "False"
+confidential: false
 corporationAbout_display_mv:
   - Körperschaft 3
   - Körperschaft 4
@@ -695,7 +695,7 @@ url: https://www.dla-marbach.de/find/opac/id/AK00000012
 ---
 id: AK00000002
 display: Vertrauliches Bibliotheksdokument 2
-confidential: "True"
+confidential: true
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Vertrauliches Bibliotheksdokument 2</dc:title>
@@ -1379,7 +1379,7 @@ url: https://www.dla-marbach.de/find/opac/id/AK00000042
 ---
 id: AK00005001
 display: Vertraulicher Datensatz
-confidential: "True"
+confidential: true
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Vertraulicher Datensatz</dc:title>
@@ -1409,7 +1409,7 @@ url: https://www.dla-marbach.de/find/opac/id/AK00005001
 ---
 id: AK00005002
 display: Öffentlicher Datensatz
-confidential: "False"
+confidential: false
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Öffentlicher Datensatz</dc:title>
