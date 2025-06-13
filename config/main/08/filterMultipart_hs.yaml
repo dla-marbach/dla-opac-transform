@@ -1,0 +1,12 @@
+# Filter Mehrteilig (Boolean)
+# Einzelwerke: false; Sammlungen oder Mehrbändige Werke: true
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    false
+  newColumnName: filterMultipart
+  columnInsertIndex: 1 # hinter Spalte id

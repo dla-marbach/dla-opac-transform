@@ -1,0 +1,61 @@
+# Facette Medientyp
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      if(
+          or(
+              cells['category'].value == 'Zeitungsausschnittsammlung der Mediendokumentation',
+              cells['category'].value == 'Dokumentensammlung der Mediendokumentation',
+              cells['category'].value == 'Aufgelöster Bestand der Bibliothek',
+              cells['category'].value == 'Geschlossener Bestand der Bibliothek',
+              cells['category'].value == 'Theaterprogramme der Mediendokumentation'
+          ),
+          'Gedrucktes',
+          ''
+      )
+      +
+      if(
+          or(
+              cells['category'].value == 'Bestand',
+              cells['category'].value == 'Bestand des Cotta-Archivs',
+              cells['category'].value == 'Bestand Siegfried Unseld Archiv',
+              cells['category'].value == 'Deposita d. Arbeitsstelle f. literarische Museen, Archive u. Gedenkstätten in Baden-Württemberg',
+              cells['category'].value == 'Depositum im Siegfried Unseld Archiv',
+              cells['category'].value == 'Depositum in der A-Reihe',
+              cells['category'].value == 'Depositum in der B-Reihe',
+              cells['category'].value == 'Einzelautograph',
+              cells['category'].value == 'Kryptobestand',
+              cells['category'].value == 'Pauschalaufnahme',
+              cells['category'].value == 'Provenienzbestand',
+              cells['category'].value == 'Standortkonvolut'
+          ),
+          'Handschriften',
+          ''
+      )
+      +
+      if(
+          cells['category'].value == 'Sammlung Bilder und Objekte',
+          'Bilder und Objekte',
+          ''
+      )
+      +
+      if(
+          cells['category'].value == 'Geschlossener Bestand der Mediendokumentation',
+          if(
+              cells['title'].value.contains('Bild- und Tonträger'),
+              'Video',
+              'Gedrucktes'
+          ),
+          ''
+      ),
+      x,
+      x,
+      'Sonstiges'
+    )
+  newColumnName: filterType
+  columnInsertIndex: 1 # hinter Spalte id

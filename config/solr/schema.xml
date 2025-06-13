@@ -153,8 +153,10 @@
   <field name="filterDateRange_mv" type="dateranges"/>
   <field name="filterDatePoint_mv" type="datepoints"/>
   <field name="filterFormContent_mv" type="strings"/>
+  <field name="filterMultipart" type="boolean"/>
   <field name="filterMedium_mv" type="strings"/>
   <field name="filterSource" type="string"/>
+  <field name="filterType" type="string"/>
   <field name="gender" type="text"/>
   <field name="genre" type="text"/>
   <field name="genreOther_mv" type="texts"/>

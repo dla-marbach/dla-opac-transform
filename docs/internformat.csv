@@ -56,7 +56,9 @@ AK,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeitr
 AK,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 AK,filterFormContent_mv,strings,Epik␟Schwank␟Rundfunkmanuskript␟Aufsatz␟Literarisches Weblog,Facette Form und Inhalt
 AK,filterMedium_mv,strings,Erweiterte physikalische Form␟Medienart 1␟Medienart 2␟Buchumschlag,Facette Sammlung
+AK,filterMultipart,boolean,false,Filter Mehrteilig
 AK,filterSource,string,Bibliotheksmaterialien,Facette Datenbestand
+AK,filterType,string,Gedrucktes,Facette Medientyp
 AK,genreOther_mv,texts,Gattung 1␟Gattung 2,
 AK,gndRelation_comment_mv,texts,GND-Relation 1 Anmerkung␟GND-Relation 2 Anmerkung,
 AK,gndRelation_id_mv,texts,GND-Relation 1 ID␟GND-Relation 2 ID,
@@ -258,7 +260,9 @@ BF,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeitr
 BF,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 BF,filterCollection_mv,strings,Z:Öffentlicher Bestand 1,Facette Sammlung
 BF,filterFormContent_mv,strings,Bestandsart,Facette Form und Inhalt
+BF,filterMultipart,boolean,false,Filter Mehrteilig
 BF,filterSource,string,Nachlässe und Spezialsammlungen,Facette Datenbestand
+BF,filterType,string,Gedrucktes,Facette Medientyp
 BF,id,string,BF00000001,
 BF,itemization_extent_mv,texts,Verzeichnungsumfang 1␟Verzeichnungsumfang 2,
 BF,itemization_status_mv,texts,Verzeichnung 1␟Verzeichnung 2,
@@ -341,7 +345,9 @@ BI,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeitr
 BI,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 BI,filterFormContent_mv,strings,Objektart Hauptkategorie␟Objektart Unterkategorie␟Objektart 1␟Objektart 2␟Objektart Zusammensetzung,Facette Form und Inhalt
 BI,filterMedium_mv,strings,Datenträger,Facette Sammlung
+BI,filterMultipart,boolean,false,Filter Mehrteilig
 BI,filterSource,string,Bilder und Objekte,Facette Datenbestand
+BI,filterType,string,Bilder und Objekte,Facette Medientyp
 BI,id,string,BI00000001,
 BI,inscription,text,Beschriftung,
 BI,inventoryNumber,text,Inventarnummer,
@@ -438,7 +444,9 @@ HS,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeitr
 HS,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 HS,filterFormContent_mv,strings,Hauptgattung␟Weitere Hauptgattung 1␟Weitere Hauptgattung 2␟Untergattung␟Weitere Untergattung 1␟Weitere Untergattung 2,Facette Form und Inhalt
 HS,filterMedium_mv,strings,Sonstiger Datenträger␟Noten,Facette Sammlung
+HS,filterMultipart,boolean,false,Filter Mehrteilig
 HS,filterSource,string,Handschriften Einzelnachweise,Facette Datenbestand
+HS,filterType,string,Handschriften,Facette Medientyp
 HS,genre,text,Hauptgattung,
 HS,genreOther_mv,texts,Weitere Hauptgattung 1␟Weitere Hauptgattung 2,
 HS,genreSub,text,Untergattung,
@@ -519,7 +527,9 @@ KS,dateModified,daterange,2023-06-06,
 KS,display,text,Körperschaft 1 (1982),Hauptbezeichnung
 KS,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 KS,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
+KS,filterMultipart,boolean,false,Filter Mehrteilig
 KS,filterSource,string,Körperschaften,Facette Datenbestand
+KS,filterType,string,Normdaten,Facette Medientyp
 KS,gnd_id_mv,texts,GND-Nummer 1␟GND-Nummer 2,
 KS,gnd_type_mv,texts,GND-Nummer 1 Typ␟GND-Nummer 2 Typ,
 KS,gndRelation_comment_mv,texts,GND-Relation 1 Anmerkung␟GND-Relation 2 Anmerkung,
@@ -594,7 +604,9 @@ PE,dateRetention,text,Schutzfrist,
 PE,display,text,Person 1 (1982-2001),Hauptbezeichnung
 PE,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 PE,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
+PE,filterMultipart,boolean,false,Filter Mehrteilig
 PE,filterSource,string,Personen,Facette Datenbestand
+PE,filterType,string, Normdaten,Facette Medientyp
 PE,gender,text,Geschlecht,
 PE,gnd_id_mv,texts,GND-Nummer 1␟GND-Nummer 2,
 PE,gnd_type_mv,texts,GND-Nummer 1 Typ␟GND-Nummer 2 Typ,
@@ -642,7 +654,9 @@ SE,corporation_id_mv,texts,KS00000001␟KS00000002,
 SE,dateCataloged,daterange,2023-06-01,
 SE,dateModified,daterange,2023-06-06,
 SE,display,text,Sacherschließungskette 1,Hauptbezeichnung
+SE,filterMultipart,boolean,false,Filter Mehrteilig
 SE,filterSource,string,Systematikketten,Facette Datenbestand
+SE,filterType,string, Normdaten,Facette Medientyp
 SE,id,string,SE00000001,
 SE,person_display_mv,texts,Person 1 (1982-2001)␟Person 2 (1982-2001),aus PE display
 SE,person_id_mv,texts,PE00000001␟PE00000002,
@@ -661,7 +675,9 @@ SY,child_id_mv,texts,SY00000003␟SY00000004,
 SY,dateCataloged,daterange,2023-06-01,
 SY,dateModified,daterange,2023-06-06,
 SY,display,text,Systematiknummer. Basisnotation 1,Hauptbezeichnung
+SY,filterMultipart,boolean,false,Filter Mehrteilig
 SY,filterSource,string,Fachsystematik,Facette Datenbestand
+SY,filterType,string, Normdaten,Facette Medientyp
 SY,id,string,SY00000001,
 SY,notation,text,Systematiknummer,
 SY,parent_display_mv,texts,Basisnotation 7 übergeordnet,aus SY display
@@ -686,7 +702,9 @@ TH,dateOriginStart,daterange,1982-05-22,
 TH,display,text,Thesaurus-Begriff 1,Hauptbezeichnung
 TH,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 TH,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
+TH,filterMultipart,boolean,false,Filter Mehrteilig
 TH,filterSource,string,Orte und Sachbegriffe,Facette Datenbestand
+TH,filterType,string, Normdaten,Facette Medientyp
 TH,gnd_id_mv,texts,GND-Nummer 1␟GND-Nummer 2,
 TH,gndRelation_comment_mv,texts,GND-Relation 1 Anmerkung␟GND-Relation 2 Anmerkung,
 TH,gndRelation_id_mv,texts,GND-Relation 1 ID␟GND-Relation 2 ID,

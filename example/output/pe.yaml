@@ -47,7 +47,9 @@ filterDatePoint_mv:
 filterDateRange_mv:
   - '[1982-05-22 TO 2001-01-02]'
   - '[1982-05-23 TO 2001-01-01]'
+filterMultipart: false
 filterSource: Personen
+filterType: Normdaten
 gender: Geschlecht
 gndRelation_comment_mv:
   - GND-Relation 1 Anmerkung
@@ -105,7 +107,7 @@ reference_text_mv:
 reference_type_mv:
   - Quellenangabe 1 Typ
   - Quellenangabe 2 Typ
-schemaVersion: 0.7.2
+schemaVersion: 0.7.3
 seeAlso_display_mv:
   - Person 3 (1982–2001)
   - Person 4
@@ -137,8 +139,10 @@ filterDatePoint_mv:
   - "2001-01-01T00:00:00Z"
 filterDateRange_mv:
   - '[1982-05 TO 2001-01]'
+filterMultipart: false
 filterSource: Personen
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: PE
 title: Person 2
 url: https://www.dla-marbach.de/find/opac/id/PE00000002
@@ -152,8 +156,10 @@ filterDatePoint_mv:
   - "2001-01-01T00:00:00Z"
 filterDateRange_mv:
   - '[1982 TO 2001]'
+filterMultipart: false
 filterSource: Personen
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: PE
 title: Person 3
 url: https://www.dla-marbach.de/find/opac/id/PE00000003
@@ -163,40 +169,50 @@ display: Person 4
 country_mv:
   - Österreich
   - Deutschland
+filterMultipart: false
 filterSource: Personen
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: PE
 title: Person 4
 url: https://www.dla-marbach.de/find/opac/id/PE00000004
 ---
 id: PE00000005
 display: Person 5
+filterMultipart: false
 filterSource: Personen
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: PE
 title: Person 5
 url: https://www.dla-marbach.de/find/opac/id/PE00000005
 ---
 id: PE00000006
 display: Person 6
+filterMultipart: false
 filterSource: Personen
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: PE
 title: Person 6
 url: https://www.dla-marbach.de/find/opac/id/PE00000006
 ---
 id: PE00000007
 display: Person 7
+filterMultipart: false
 filterSource: Personen
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: PE
 title: Person 7
 url: https://www.dla-marbach.de/find/opac/id/PE00000007
 ---
 id: PE00000008
 display: Person 8
+filterMultipart: false
 filterSource: Personen
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: PE
 title: Person 8
 url: https://www.dla-marbach.de/find/opac/id/PE00000008
@@ -210,8 +226,10 @@ dateLifespanStart: "-0518"
 filterDateRange_mv:
   - '[-0518 TO -0446]'
   - '[-0500 TO -0446]'
+filterMultipart: false
 filterSource: Personen
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: PE
 title: Pindar v. Chr.
 url: https://www.dla-marbach.de/find/opac/id/PE00000009

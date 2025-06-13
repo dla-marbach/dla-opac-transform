@@ -36,7 +36,9 @@ corporation_id_mv:
   - KS99999999
 dateCataloged: "2023-06-01"
 dateModified: "2023-06-06"
+filterMultipart: false
 filterSource: Systematikketten
+filterType: Normdaten
 person_display_mv:
   - Person 1 (1982–2001)
   - Person 2 (1982–2001)
@@ -45,7 +47,7 @@ person_id_mv:
   - PE00000001
   - PE00000002
   - PE99999999
-schemaVersion: 0.7.2
+schemaVersion: 0.7.3
 sequence_mv:
   - Kettenglied 1
   - Kettenglied 2
@@ -71,8 +73,10 @@ work_id_mv:
 ---
 id: SE00000002
 display: Sacherschließungskette 2
+filterMultipart: false
 filterSource: Systematikketten
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: SE
 title: Sacherschließungskette 2
 url: https://www.dla-marbach.de/find/opac/id/SE00000002
@@ -90,14 +94,16 @@ corporation_display_mv:
 corporation_id_mv:
   - KS00000001
   - KS00000002
+filterMultipart: false
 filterSource: Systematikketten
+filterType: Normdaten
 person_display_mv:
   - Person 1 (1982–2001)
   - Person 2 (1982–2001)
 person_id_mv:
   - PE00000001
   - PE00000002
-schemaVersion: 0.7.2
+schemaVersion: 0.7.3
 source: SE
 title: Facette Personen und Körperschaften / Systematikketten / Von / Verfasser
 ---
@@ -110,14 +116,16 @@ corporation_display_mv:
 corporation_id_mv:
   - KS00000003
   - KS00000004
+filterMultipart: false
 filterSource: Systematikketten
+filterType: Normdaten
 person_display_mv:
   - Person 3 (1982–2001)
   - Person 4
 person_id_mv:
   - PE00000003
   - PE00000004
-schemaVersion: 0.7.2
+schemaVersion: 0.7.3
 source: SE
 title: Facette Personen und Körperschaften / Systematikketten / Über
 ---
@@ -130,14 +138,16 @@ corporation_display_mv:
 corporation_id_mv:
   - KS00000001
   - KS00000002
+filterMultipart: false
 filterSource: Systematikketten
+filterType: Normdaten
 person_display_mv:
   - Person 1 (1982–2001)
   - Person 2 (1982–2001)
 person_id_mv:
   - PE00000001
   - PE00000002
-schemaVersion: 0.7.2
+schemaVersion: 0.7.3
 source: SE
 subject_display_mv:
   - ␣
@@ -154,14 +164,16 @@ corporation_display_mv:
 corporation_id_mv:
   - KS00000003
   - KS00000004
+filterMultipart: false
 filterSource: Systematikketten
+filterType: Normdaten
 person_display_mv:
   - Person 3 (1982–2001)
   - Person 4
 person_id_mv:
   - PE00000003
   - PE00000004
-schemaVersion: 0.7.2
+schemaVersion: 0.7.3
 source: SE
 subject_display_mv:
   - ␣
@@ -178,14 +190,16 @@ corporation_display_mv:
 corporation_id_mv:
   - KS00000005
   - KS00000006
+filterMultipart: false
 filterSource: Systematikketten
+filterType: Normdaten
 person_display_mv:
   - Person 5
   - Person 6
 person_id_mv:
   - PE00000005
   - PE00000006
-schemaVersion: 0.7.2
+schemaVersion: 0.7.3
 source: SE
 subject_display_mv:
   - Thesaurus-Begriff 1
@@ -195,8 +209,10 @@ title: Facette Personen und Körperschaften / Provenienzketten / Unter / Bestand
 ---
 id: SE00000021
 display: 'Facette Zeit: Provenienzketten'
+filterMultipart: false
 filterSource: Systematikketten
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: SE
 subject_display_mv:
   - 'Facette Zeit: Provenienzketten 1999-05-22'

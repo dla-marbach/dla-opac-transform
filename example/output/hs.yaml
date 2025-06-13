@@ -148,7 +148,9 @@ filterFormContent_mv:
   - Untergattung
   - Weitere Untergattung 1
   - Weitere Untergattung 2
+filterMultipart: false
 filterSource: Handschriften Einzelnachweise
+filterType: Handschriften
 genre: Hauptgattung
 genreOther_mv:
   - Weitere Hauptgattung 1
@@ -241,7 +243,7 @@ relation_id_mv:
   - AK00000021
   - AK00000022
   - AK99999999
-schemaVersion: 0.7.2
+schemaVersion: 0.7.3
 sortingKey: Sortiername Haupteintrag
 sortingKeySub: Sortiername Untereintrag
 sortingTitleMain: Haupttitel Sortierform
@@ -321,10 +323,12 @@ filterFormContent_mv:
 filterMedium_mv:
   - Sonstiger Datenträger
   - Noten
+filterMultipart: false
 filterSource: Handschriften Einzelnachweise
+filterType: Handschriften
 genreOther_mv:
   - Kompositionen
-schemaVersion: 0.7.2
+schemaVersion: 0.7.3
 source: HS
 title: Handschrift 2 Noten
 url: https://www.dla-marbach.de/find/opac/id/HS00000002
@@ -352,8 +356,10 @@ exportRIS: |-
   ID  - HS00000003
   TI  - Vertraulicher Datensatz
   ER  -
+filterMultipart: false
 filterSource: Handschriften Einzelnachweise
-schemaVersion: 0.7.2
+filterType: Handschriften
+schemaVersion: 0.7.3
 source: HS
 title: Vertraulicher Datensatz
 url: https://www.dla-marbach.de/find/opac/id/HS00000003
@@ -384,9 +390,11 @@ exportRIS: |-
   ER  -
 filterFormContent_mv:
   - Hauptgattung
+filterMultipart: false
 filterSource: Handschriften Einzelnachweise
+filterType: Handschriften
 genre: Hauptgattung
-schemaVersion: 0.7.2
+schemaVersion: 0.7.3
 source: HS
 title: Brief
 url: https://www.dla-marbach.de/find/opac/id/HS00000004
@@ -471,7 +479,9 @@ filterAuthority_mv:
   - Körperschaft 3
   - Person 1 (1982–2001)
   - Körperschaft 1 (1982)
+filterMultipart: false
 filterSource: Handschriften Einzelnachweise
+filterType: Handschriften
 personAbout_display_mv:
   - Person 1 (1982–2001)
   - Person 6
@@ -499,6 +509,6 @@ personTo_id_mv:
 personTo_role_mv:
   - '[Adressat/in]'
   - ␣
-schemaVersion: 0.7.2
+schemaVersion: 0.7.3
 source: HS
 title: Facette Personen und Körperschaften

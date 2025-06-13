@@ -1,0 +1,11 @@
+# Facette Medientyp
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    'Handschriften'
+  newColumnName: filterType
+  columnInsertIndex: 1 # hinter Spalte id

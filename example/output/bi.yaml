@@ -167,7 +167,9 @@ filterFormContent_mv:
   - Objektart 1
   - Objektart 2
   - Objektart Zusammensetzung
+filterMultipart: false
 filterSource: Bilder und Objekte
+filterType: Bilder und Objekte
 inscription: Beschriftung
 inventoryNumber: Inventarnummer
 item_display_mv: Öffentliches Exemplar
@@ -259,7 +261,7 @@ relation_id_mv:
   - AK00000021
   - AK00000022
   - AK99999999
-schemaVersion: 0.7.2
+schemaVersion: 0.7.3
 source: BI
 statusEditing: Bearbeitungsstatus
 statusLoan: Ausleihstatus
@@ -327,9 +329,11 @@ filterCollection_mv: Z:Öffentlicher Bestand 1
 filterFormContent_mv:
   - Plakat
 filterMedium_mv: Sonstiger Datenträger
+filterMultipart: false
 filterSource: Bilder und Objekte
+filterType: Bilder und Objekte
 noteObjectType: Datenträger
-schemaVersion: 0.7.2
+schemaVersion: 0.7.3
 source: BI
 title: 'Wertetabelle Workaround: Plakat bleibt Plakat'
 url: https://www.dla-marbach.de/find/opac/id/BI00000002
@@ -357,8 +361,10 @@ exportRIS: |-
   ID  - BI00000003
   TI  - Vertraulicher Datensatz
   ER  -
+filterMultipart: false
 filterSource: Bilder und Objekte
-schemaVersion: 0.7.2
+filterType: Bilder und Objekte
+schemaVersion: 0.7.3
 source: BI
 title: Vertraulicher Datensatz
 url: https://www.dla-marbach.de/find/opac/id/BI00000003
@@ -408,7 +414,9 @@ filterDatePoint_mv:
 filterDateRange_mv: '[1848 TO 1852]'
 filterFormContent_mv:
   - Druckgrafik
+filterMultipart: false
 filterSource: Bilder und Objekte
+filterType: Bilder und Objekte
 inscription: 'Bez. (u.): "Gez. v. Groos" (li.), "Stahlst. v. F. Foltz" (re.) sowie "DIE MICHAELSKIRCHE IN HALL | Verlag der Stettin´schen Buchhandlung in Ulm" (mi.)'
 inventoryNumber: B 1991.K 0185
 location_mv: Graphik Ansichten
@@ -426,7 +434,7 @@ personBy_id_mv:
   - PE00276308
 personBy_role_mv:
   - Urheber/in
-schemaVersion: 0.7.2
+schemaVersion: 0.7.3
 source: BI
 statusLoan: Am Standort
 statusPreservation: Blatt stockfleckig, fleckig u. angeschmutzt.
@@ -523,7 +531,9 @@ filterAuthority_mv:
   - Körperschaft 6
   - Person 2 (1982–2001)
   - Körperschaft 2
+filterMultipart: false
 filterSource: Bilder und Objekte
+filterType: Bilder und Objekte
 personAbout_display_mv:
   - Person 1 (1982–2001)
   - Person 6
@@ -557,6 +567,6 @@ personTo_display_mv:
   - Person 4
 personTo_id_mv:
   - PE00000004
-schemaVersion: 0.7.2
+schemaVersion: 0.7.3
 source: BI
 title: Facette Personen und Körperschaften

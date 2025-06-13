@@ -1,0 +1,78 @@
+# Facette Medientyp
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      if(
+          cells['category'].value == 'Werktitel',
+          'Normdaten',
+          ''
+      )
+      +
+      if(
+          cells['category'].value == 'Ton- und Bildträger',
+          if(
+              cells['categorySubSub'].value == 'Druckschrift',
+              'Gedrucktes',
+              if(
+                  or(
+                      cells['categorySubSub'].value == 'Audiodatei',
+                      cells['categorySubSub'].value == 'CD',
+                      cells['categorySubSub'].value == 'DAT',
+                      cells['categorySubSub'].value == 'Elektronisches Speichermedium',
+                      cells['categorySubSub'].value == 'Micro-Cassette',
+                      cells['categorySubSub'].value == 'MiniDisc',
+                      cells['categorySubSub'].value == 'Schallplatte',
+                      cells['categorySubSub'].value == 'Tonband',
+                      cells['categorySubSub'].value == 'Tonkassette'
+                  ),
+                  'Audio',
+                  if(
+                      or(
+                          cells['categorySubSub'].value == 'CD-ROM',
+                          cells['categorySubSub'].value == 'DVD-Video',
+                          cells['categorySubSub'].value == 'Filmrolle',
+                          cells['categorySubSub'].value == 'Video',
+                          cells['categorySubSub'].value == 'Videodatei'
+                      ),
+                      'Video',
+                      ''
+                  )
+              )
+          ),
+          ''
+      )
+      +
+      if(
+          and(
+              or(
+                  cells['category'].value == 'Bibliotheksdokumente',
+                  cells['category'].value == 'Radio/TV-Manuskript',
+                  cells['category'].value == 'Zeitschriftenband',
+                  cells['category'].value == 'Zeitschriftenheft'
+              ),
+              cells['categorySubSub'].value != 'Online-Ressource',
+              cells['categorySubSub'].value != 'Diskette'
+          ),
+          'Gedrucktes',
+          ''
+      )
+      +
+      if(
+          or(
+              cells['categorySubSub'].value == 'Online-Ressource',
+              cells['categorySubSub'].value == 'Diskette'
+          ),
+          'Daten',
+          ''
+      ),
+      x,
+      x,
+      'Sonstiges'
+    )
+  newColumnName: filterType
+  columnInsertIndex: 1 # hinter Spalte id

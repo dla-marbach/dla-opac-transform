@@ -109,7 +109,9 @@ filterDatePoint_mv:
   - "2001-01-01T00:00:00Z"
 filterDateRange_mv: '[1982-05-22 TO 2001-01-01]'
 filterFormContent_mv: Bestandsart
+filterMultipart: true
 filterSource: Nachlässe und Spezialsammlungen
+filterType: Sonstiges
 itemization_extent_mv:
   - Verzeichnungsumfang 1
   - Verzeichnungsumfang 2
@@ -159,7 +161,7 @@ personAt_id_mv:
   - PE00000004
   - PE99999999
 reference_text_mv: Quellenangabe
-schemaVersion: 0.7.2
+schemaVersion: 0.7.3
 source: BF
 statusLoan: Ausleihstatus
 subject_display_mv:
@@ -206,8 +208,10 @@ exportRIS: |-
   TI  - Z:Öffentlicher Bestand 2
   ER  -
 filterCollection_mv: Z:Öffentlicher Bestand 2
+filterMultipart: true
 filterSource: Nachlässe und Spezialsammlungen
-schemaVersion: 0.7.2
+filterType: Sonstiges
+schemaVersion: 0.7.3
 source: BF
 title: Z:Öffentlicher Bestand 2
 url: https://www.dla-marbach.de/find/opac/id/BF00000002
@@ -236,8 +240,10 @@ exportRIS: |-
   TI  - Z:Vertraulicher Bestand
   ER  -
 filterCollection_mv: Z:Vertraulicher Bestand
+filterMultipart: true
 filterSource: Nachlässe und Spezialsammlungen
-schemaVersion: 0.7.2
+filterType: Sonstiges
+schemaVersion: 0.7.3
 source: BF
 title: Z:Vertraulicher Bestand
 url: https://www.dla-marbach.de/find/opac/id/BF00000003
@@ -290,7 +296,9 @@ filterAuthority_mv:
   - Person 2 (1982–2001)
   - Körperschaft 2
 filterCollection_mv: Facette Personen und Körperschaften
+filterMultipart: true
 filterSource: Nachlässe und Spezialsammlungen
+filterType: Sonstiges
 personAbout_display_mv:
   - Person 1 (1982–2001)
 personAbout_id_mv:
@@ -301,6 +309,6 @@ personAt_display_mv:
   - Person 2 (1982–2001)
 personAt_id_mv:
   - PE00000002
-schemaVersion: 0.7.2
+schemaVersion: 0.7.3
 source: BF
 title: Facette Personen und Körperschaften

@@ -21,7 +21,9 @@ filterDatePoint_mv:
   - "1982-05-22T00:00:00Z"
   - "2001-01-01T00:00:00Z"
 filterDateRange_mv: '[1982-05-22 TO 2001-01-01]'
+filterMultipart: false
 filterSource: Orte und Sachbegriffe
+filterType: Normdaten
 gndRelation_comment_mv:
   - GND-Relation 1 Anmerkung
   - GND-Relation 2 Anmerkung
@@ -54,7 +56,7 @@ reference_text_mv:
 reference_type_mv:
   - Quellenangabe 1 Typ
   - Quellenangabe 2 Typ
-schemaVersion: 0.7.2
+schemaVersion: 0.7.3
 seeAlso_display_mv:
   - Thesaurus-Begriff 3
   - Thesaurus-Begriff 4
@@ -85,143 +87,179 @@ usedFor_id_mv:
 ---
 id: TH00000011
 display: Gebietskörperschaft 1
+filterMultipart: false
 filterSource: Orte und Sachbegriffe
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: TH
 title: Gebietskörperschaft 1
 url: https://www.dla-marbach.de/find/opac/id/TH00000011
 ---
 id: TH00000012
 display: Gebietskörperschaft 2
+filterMultipart: false
 filterSource: Orte und Sachbegriffe
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: TH
 title: Gebietskörperschaft 2
 url: https://www.dla-marbach.de/find/opac/id/TH00000012
 ---
 id: TH00000002
 display: Thesaurus-Begriff 2
+filterMultipart: false
 filterSource: Orte und Sachbegriffe
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: TH
 title: Thesaurus-Begriff 2
 url: https://www.dla-marbach.de/find/opac/id/TH00000002
 ---
 id: TH00000021
 display: Schlagwort 1
+filterMultipart: false
 filterSource: Orte und Sachbegriffe
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: TH
 title: Schlagwort 1
 url: https://www.dla-marbach.de/find/opac/id/TH00000021
 ---
 id: TH00000022
 display: Schlagwort 2
+filterMultipart: false
 filterSource: Orte und Sachbegriffe
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: TH
 title: Schlagwort 2
 url: https://www.dla-marbach.de/find/opac/id/TH00000022
 ---
 id: TH00000003
 display: Thesaurus-Begriff 3
+filterMultipart: false
 filterSource: Orte und Sachbegriffe
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: TH
 title: Thesaurus-Begriff 3
 url: https://www.dla-marbach.de/find/opac/id/TH00000003
 ---
 id: TH00000031
 display: Ort-Schlagwort 1
+filterMultipart: false
 filterSource: Orte und Sachbegriffe
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: TH
 title: Ort-Schlagwort 1
 url: https://www.dla-marbach.de/find/opac/id/TH00000031
 ---
 id: TH00000032
 display: Ort-Schlagwort 2
+filterMultipart: false
 filterSource: Orte und Sachbegriffe
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: TH
 title: Ort-Schlagwort 2
 url: https://www.dla-marbach.de/find/opac/id/TH00000032
 ---
 id: TH00000004
 display: Thesaurus-Begriff 4
+filterMultipart: false
 filterSource: Orte und Sachbegriffe
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: TH
 title: Thesaurus-Begriff 4
 url: https://www.dla-marbach.de/find/opac/id/TH00000004
 ---
 id: TH00000041
 display: Thesaurus-Begriff 41 used-for
+filterMultipart: false
 filterSource: Orte und Sachbegriffe
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: TH
 title: Thesaurus-Begriff 41 used-for
 url: https://www.dla-marbach.de/find/opac/id/TH00000041
 ---
 id: TH00000042
 display: Thesaurus-Begriff 42 used-for
+filterMultipart: false
 filterSource: Orte und Sachbegriffe
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: TH
 title: Thesaurus-Begriff 42 used-for
 url: https://www.dla-marbach.de/find/opac/id/TH00000042
 ---
 id: TH00000043
 display: Thesaurus-Begriff 43 use
+filterMultipart: false
 filterSource: Orte und Sachbegriffe
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: TH
 title: Thesaurus-Begriff 43 use
 url: https://www.dla-marbach.de/find/opac/id/TH00000043
 ---
 id: TH00000044
 display: Thesaurus-Begriff 44 use
+filterMultipart: false
 filterSource: Orte und Sachbegriffe
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: TH
 title: Thesaurus-Begriff 44 use
 url: https://www.dla-marbach.de/find/opac/id/TH00000044
 ---
 id: TH00000045
 display: Thesaurus-Begriff 45 Oberbegriff
+filterMultipart: false
 filterSource: Orte und Sachbegriffe
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: TH
 title: Thesaurus-Begriff 45 Oberbegriff
 url: https://www.dla-marbach.de/find/opac/id/TH00000045
 ---
 id: TH00000046
 display: Thesaurus-Begriff 46 Oberbegriff
+filterMultipart: false
 filterSource: Orte und Sachbegriffe
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: TH
 title: Thesaurus-Begriff 46 Oberbegriff
 url: https://www.dla-marbach.de/find/opac/id/TH00000046
 ---
 id: TH00000047
 display: Thesaurus-Begriff 47 Unterbegriff
+filterMultipart: false
 filterSource: Orte und Sachbegriffe
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: TH
 title: Thesaurus-Begriff 47 Unterbegriff
 url: https://www.dla-marbach.de/find/opac/id/TH00000047
 ---
 id: TH00000048
 display: Thesaurus-Begriff 48 Unterbegriff
+filterMultipart: false
 filterSource: Orte und Sachbegriffe
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: TH
 title: Thesaurus-Begriff 48 Unterbegriff
 url: https://www.dla-marbach.de/find/opac/id/TH00000048
 ---
 id: TH00000051
 display: 'Facette Zeit: Provenienzketten 1999-05-22'
+filterMultipart: false
 filterSource: Orte und Sachbegriffe
-schemaVersion: 0.7.2
+filterType: Normdaten
+schemaVersion: 0.7.3
 source: TH
 title: 'Facette Zeit: Provenienzketten 1999-05-22'
