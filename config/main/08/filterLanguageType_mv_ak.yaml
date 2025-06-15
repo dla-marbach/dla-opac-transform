@@ -1,0 +1,53 @@
+# Facette Sprache mit Typ (Übersetzung oder Original)
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['language_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            if(
+              x.length() > 3,
+              if(
+                isNonBlank(cells['languageOriginal_mv'].value),
+                x + '␝' + 'Übersetzung',
+                x + '␝' + 'Original'
+              ),
+              null
+            )
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['languageOriginal_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            if(
+              x.length() > 3,
+              x + '␝' + 'Original',
+              null
+            )
+          ).join('␟'),
+          null
+        )
+      ].join('␟'),
+      z,
+      filter(
+        z.split('␟'),
+        f,
+        f[0] != '␣'
+      ).uniques().join('␟'),
+      null
+    )
+  newColumnName: filterLanguageType_mv
+  columnInsertIndex: 2

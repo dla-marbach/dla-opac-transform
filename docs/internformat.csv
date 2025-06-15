@@ -55,6 +55,8 @@ AK,filterCollection_mv,strings,Z:Öffentlicher Bestand 1␟Z:Öffentlicher Besta
 AK,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 AK,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 AK,filterFormContent_mv,strings,Epik␟Schwank␟Rundfunkmanuskript␟Aufsatz␟Literarisches Weblog,Facette Form und Inhalt
+AK,filterLanguage_mv,strings,Deutsch␟Englisch,Facette Sprache
+AK,filterLanguageType_mv,strings,Deutsch␝Original␟Englisch␝Übersetzung,Facette Sprache mit Typ
 AK,filterMedium_mv,strings,Erweiterte physikalische Form␟Medienart 1␟Medienart 2␟Buchumschlag,Facette Sammlung
 AK,filterMultipart,boolean,false,Filter Mehrteilig
 AK,filterSource,string,Bibliotheksmaterialien,Facette Datenbestand
@@ -446,6 +448,8 @@ HS,filterCollection_mv,strings,Z:Öffentlicher Bestand 1,Facette Sammlung
 HS,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 HS,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 HS,filterFormContent_mv,strings,Hauptgattung␟Weitere Hauptgattung 1␟Weitere Hauptgattung 2␟Untergattung␟Weitere Untergattung 1␟Weitere Untergattung 2,Facette Form und Inhalt
+HS,filterLanguage_mv,strings,Deutsch␟Englisch,Facette Sprache
+HS,filterLanguageType_mv,strings,Deutsch␝Original␟Englisch␝Übersetzung,Facette Sprache mit Typ
 HS,filterMedium_mv,strings,Sonstiger Datenträger␟Noten,Facette Sammlung
 HS,filterMultipart,boolean,false,Filter Mehrteilig
 HS,filterSource,string,Handschriften Einzelnachweise,Facette Datenbestand
@@ -707,6 +711,8 @@ TH,dateOriginStart,daterange,1982-05-22,
 TH,display,text,Thesaurus-Begriff 1,Hauptbezeichnung
 TH,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 TH,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
+TH,filterLanguage_mv,strings,Deutsch␟Englisch,Facette Sprache
+TH,filterLanguageType_mv,strings,Deutsch␝Original␟Englisch␝Übersetzung,Facette Sprache mit Typ
 TH,filterMultipart,boolean,false,Filter Mehrteilig
 TH,filterSource,string,Orte und Sachbegriffe,Facette Datenbestand
 TH,filterType,string, Normdaten,Facette Medientyp

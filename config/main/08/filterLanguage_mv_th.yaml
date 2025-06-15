@@ -1,0 +1,24 @@
+# Facette Sprache
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      cells['language_mv'].value,
+      v,
+      forEach(
+        v.split('␟'),
+        x,
+        if(
+          x.length() > 3,
+          x,
+          null
+        )
+      ).uniques().join('␟'),
+      null
+    )
+  newColumnName: filterLanguage_mv
+  columnInsertIndex: 2
