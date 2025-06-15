@@ -1,0 +1,75 @@
+# Facette Thema
+# nur category "Bibliographie-Kette" oder "Kette Bibliothek"
+# person_id_mv -> PE:display
+# corporation_id_mv -> KS:title
+# work_id_mv -> AK:title
+- op: core/column-addition
+  engineConfig:
+    facets:
+    - type: list
+      expression: value
+      columnName: category
+      invert: true
+      selection:
+      - v:
+          v: Kette Bibliothek
+      - v:
+          v: Bibliographie-Kette
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['person_id_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            forNonBlank(
+              x.cross('pe','id')[0].cells['display'].value,
+              x,
+              x,
+              null
+            )
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['corporation_id_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            forNonBlank(
+              x.cross('ks','id')[0].cells['title'].value,
+              x,
+              x,
+              null
+            )
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['work_id_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            forNonBlank(
+              x.cross('ak','id')[0].cells['title'].value,
+              x,
+              x,
+              null
+            )
+          ).join('␟'),
+          null
+        )
+      ].join('␟'),
+      z,
+      z.split('␟').uniques().join('␟'),
+      null
+    )
+  newColumnName: filterSubject_mv
+  columnInsertIndex: 2

@@ -1,0 +1,81 @@
+# Facette Thema
+# subject_id_mv - TH:title
+# personAbout_id_mv -> PE:display
+# corporationAbout_id_mv -> KS:title
+# relation_id_mv -> AK:title
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['subject_id_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            forNonBlank(
+              x.cross('th','id')[0].cells['title'].value,
+              x,
+              x,
+              null
+            )
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['personAbout_id_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            forNonBlank(
+              x.cross('pe','id')[0].cells['display'].value,
+              x,
+              x,
+              null
+            )
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['corporationAbout_id_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            forNonBlank(
+              x.cross('ks','id')[0].cells['title'].value,
+              x,
+              x,
+              null
+            )
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['relation_id_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            forNonBlank(
+              x.cross('ak','id')[0].cells['title'].value,
+              x,
+              x,
+              null
+            )
+          ).join('␟'),
+          null
+        )
+      ].join('␟'),
+      z,
+      z.split('␟').uniques().join('␟'),
+      null
+    )
+  newColumnName: filterSubject_mv
+  columnInsertIndex: 2

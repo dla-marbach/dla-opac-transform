@@ -58,6 +58,7 @@ AK,filterFormContent_mv,strings,Epik␟Schwank␟Rundfunkmanuskript␟Aufsatz␟
 AK,filterMedium_mv,strings,Erweiterte physikalische Form␟Medienart 1␟Medienart 2␟Buchumschlag,Facette Sammlung
 AK,filterMultipart,boolean,false,Filter Mehrteilig
 AK,filterSource,string,Bibliotheksmaterialien,Facette Datenbestand
+AK,filterSubject_mv,strings,normiertes Schlagwort 1␟normiertes Schlagwort 2,Facette Thema
 AK,filterType,string,Gedrucktes,Facette Medientyp
 AK,genreOther_mv,texts,Gattung 1␟Gattung 2,
 AK,gndRelation_comment_mv,texts,GND-Relation 1 Anmerkung␟GND-Relation 2 Anmerkung,
@@ -262,6 +263,7 @@ BF,filterCollection_mv,strings,Z:Öffentlicher Bestand 1,Facette Sammlung
 BF,filterFormContent_mv,strings,Bestandsart,Facette Form und Inhalt
 BF,filterMultipart,boolean,false,Filter Mehrteilig
 BF,filterSource,string,Nachlässe und Spezialsammlungen,Facette Datenbestand
+BF,filterSubject_mv,strings,normiertes Schlagwort 1␟normiertes Schlagwort 2,Facette Thema
 BF,filterType,string,Gedrucktes,Facette Medientyp
 BF,id,string,BF00000001,
 BF,itemization_extent_mv,texts,Verzeichnungsumfang 1␟Verzeichnungsumfang 2,
@@ -347,6 +349,7 @@ BI,filterFormContent_mv,strings,Objektart Hauptkategorie␟Objektart Unterkatego
 BI,filterMedium_mv,strings,Datenträger,Facette Sammlung
 BI,filterMultipart,boolean,false,Filter Mehrteilig
 BI,filterSource,string,Bilder und Objekte,Facette Datenbestand
+BI,filterSubject_mv,strings,normiertes Schlagwort 1␟normiertes Schlagwort 2,Facette Thema
 BI,filterType,string,Bilder und Objekte,Facette Medientyp
 BI,id,string,BI00000001,
 BI,inscription,text,Beschriftung,
@@ -446,6 +449,7 @@ HS,filterFormContent_mv,strings,Hauptgattung␟Weitere Hauptgattung 1␟Weitere 
 HS,filterMedium_mv,strings,Sonstiger Datenträger␟Noten,Facette Sammlung
 HS,filterMultipart,boolean,false,Filter Mehrteilig
 HS,filterSource,string,Handschriften Einzelnachweise,Facette Datenbestand
+HS,filterSubject_mv,strings,normiertes Schlagwort 1␟normiertes Schlagwort 2,Facette Thema
 HS,filterType,string,Handschriften,Facette Medientyp
 HS,genre,text,Hauptgattung,
 HS,genreOther_mv,texts,Weitere Hauptgattung 1␟Weitere Hauptgattung 2,
@@ -656,6 +660,7 @@ SE,dateModified,daterange,2023-06-06,
 SE,display,text,Sacherschließungskette 1,Hauptbezeichnung
 SE,filterMultipart,boolean,false,Filter Mehrteilig
 SE,filterSource,string,Systematikketten,Facette Datenbestand
+SE,filterSubject_mv,strings,normiertes Schlagwort 1␟normiertes Schlagwort 2,Facette Thema
 SE,filterType,string, Normdaten,Facette Medientyp
 SE,id,string,SE00000001,
 SE,person_display_mv,texts,Person 1 (1982-2001)␟Person 2 (1982-2001),aus PE display
