@@ -57,6 +57,8 @@ AK,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Fac
 AK,filterFormContent_mv,strings,Epik␟Schwank␟Rundfunkmanuskript␟Aufsatz␟Literarisches Weblog,Facette Form und Inhalt
 AK,filterLanguage_mv,strings,Deutsch␟Englisch,Facette Sprache
 AK,filterLanguageType_mv,strings,Deutsch␝Original␟Englisch␝Übersetzung,Facette Sprache mit Typ
+AK,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
+AK,filterLocationType_mv,strings,Ort 1␝Erscheinungsort␟Ort 2␝Provenienzort,Facette Ort mit Typ
 AK,filterMedium_mv,strings,Erweiterte physikalische Form␟Medienart 1␟Medienart 2␟Buchumschlag,Facette Sammlung
 AK,filterMultipart,boolean,false,Filter Mehrteilig
 AK,filterSource,string,Bibliotheksmaterialien,Facette Datenbestand
@@ -263,6 +265,8 @@ BF,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeitr
 BF,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 BF,filterCollection_mv,strings,Z:Öffentlicher Bestand 1,Facette Sammlung
 BF,filterFormContent_mv,strings,Bestandsart,Facette Form und Inhalt
+BF,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
+BF,filterLocationType_mv,strings,Ort 1␝Schlagwort␟Ort 2 2␝Schlagwort,Facette Ort mit Typ
 BF,filterMultipart,boolean,false,Filter Mehrteilig
 BF,filterSource,string,Nachlässe und Spezialsammlungen,Facette Datenbestand
 BF,filterSubject_mv,strings,normiertes Schlagwort 1␟normiertes Schlagwort 2,Facette Thema
@@ -348,6 +352,8 @@ BI,filterCollection_mv,strings,Z:Öffentlicher Bestand 1,Facette Sammlung
 BI,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 BI,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 BI,filterFormContent_mv,strings,Objektart Hauptkategorie␟Objektart Unterkategorie␟Objektart 1␟Objektart 2␟Objektart Zusammensetzung,Facette Form und Inhalt
+BI,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
+BI,filterLocationType_mv,strings,Ort 1␝Darstellungsort␟Ort 2␝Darstellungsort,Facette Ort mit Typ
 BI,filterMedium_mv,strings,Datenträger,Facette Sammlung
 BI,filterMultipart,boolean,false,Filter Mehrteilig
 BI,filterSource,string,Bilder und Objekte,Facette Datenbestand
@@ -450,6 +456,8 @@ HS,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Fac
 HS,filterFormContent_mv,strings,Hauptgattung␟Weitere Hauptgattung 1␟Weitere Hauptgattung 2␟Untergattung␟Weitere Untergattung 1␟Weitere Untergattung 2,Facette Form und Inhalt
 HS,filterLanguage_mv,strings,Deutsch␟Englisch,Facette Sprache
 HS,filterLanguageType_mv,strings,Deutsch␝Original␟Englisch␝Übersetzung,Facette Sprache mit Typ
+HS,filterLocation_mv,strings,Entstehungsort 1␟Entstehungsort 2,Facette Ort
+HS,filterLocationType_mv,strings,Entstehungsort 1␝Entstehungsort␟Entstehungsort 2␝Entstehungsort,Facette Ort mit Typ
 HS,filterMedium_mv,strings,Sonstiger Datenträger␟Noten,Facette Sammlung
 HS,filterMultipart,boolean,false,Filter Mehrteilig
 HS,filterSource,string,Handschriften Einzelnachweise,Facette Datenbestand
@@ -535,6 +543,8 @@ KS,dateModified,daterange,2023-06-06,
 KS,display,text,Körperschaft 1 (1982),Hauptbezeichnung
 KS,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 KS,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
+KS,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
+KS,filterLocationType_mv,strings,Ort 1␝Veranstaltungsort␟Ort 2␝Sitz,Facette Ort mit Typ
 KS,filterMultipart,boolean,false,Filter Mehrteilig
 KS,filterSource,string,Körperschaften,Facette Datenbestand
 KS,filterType,string,Normdaten,Facette Medientyp
@@ -612,6 +622,8 @@ PE,dateRetention,text,Schutzfrist,
 PE,display,text,Person 1 (1982-2001),Hauptbezeichnung
 PE,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 PE,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
+PE,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
+PE,filterLocationType_mv,strings,Ort 1␝Geburtsort␟Ort 2␝Sterbeort,Facette Ort mit Typ
 PE,filterMultipart,boolean,false,Filter Mehrteilig
 PE,filterSource,string,Personen,Facette Datenbestand
 PE,filterType,string, Normdaten,Facette Medientyp
@@ -713,6 +725,8 @@ TH,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeitr
 TH,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 TH,filterLanguage_mv,strings,Deutsch␟Englisch,Facette Sprache
 TH,filterLanguageType_mv,strings,Deutsch␝Original␟Englisch␝Übersetzung,Facette Sprache mit Typ
+TH,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
+TH,filterLocationType_mv,strings,Ort 1␝Herstellungsort␟Ort 2␝Wirkungsort,Facette Ort mit Typ
 TH,filterMultipart,boolean,false,Filter Mehrteilig
 TH,filterSource,string,Orte und Sachbegriffe,Facette Datenbestand
 TH,filterType,string, Normdaten,Facette Medientyp

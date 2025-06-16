@@ -1,7 +1,7 @@
 id: TH00000001
 display: Thesaurus-Begriff 1
 category: Entitätstyp
-categorySub: Schlagworttyp
+categorySub: geographisches/ethnisches Schlagwort
 child_display_mv:
   - Thesaurus-Begriff 47 Unterbegriff
   - Thesaurus-Begriff 48 Unterbegriff
@@ -269,3 +269,18 @@ filterType: Normdaten
 schemaVersion: 0.7.3
 source: TH
 title: 'Facette Zeit: Provenienzketten 1999-05-22'
+---
+id: TH00000061
+display: 'Facette Ort: Berlin␝Herstellungsort'
+filterLocationType_mv: Berlin␝Herstellungsort
+filterLocation_mv: Berlin
+filterMultipart: false
+filterSource: Orte und Sachbegriffe
+filterType: Normdaten
+gndRelation_text_mv:
+  - Berlin [u.a.]
+gndRelation_type_mv:
+  - 'Herstellungsort: Geografikum'
+schemaVersion: 0.7.3
+source: TH
+title: 'Facette Ort: Berlin␝Herstellungsort'

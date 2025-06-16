@@ -1,0 +1,82 @@
+# Facette Ort mit Typ
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          forEachIndex(
+            cells['gndRelation_type_mv'].value.split('␟'),
+            i,
+            v,
+            if(
+              or(
+                v == 'Geografikum, allgemein',
+                v == 'Herstellungsort: Geografikum',
+                v == 'Sitz, Ort: Geografikum',
+                v == 'Wirkungsort: Geografikum'
+              ),
+              forNonBlank(
+                forEach(
+                    cells['gndRelation_text_mv'].value.split('␟')[i].split(';'),
+                    x,
+                    x.replace('ohne Ort','').replace('[u.a.]','').replace('und andere','').trim()
+                ).join('␟'),
+                z,
+                forEach(
+                  z.split('␟'),
+                  y,
+                  y + if(
+                    v == 'Herstellungsort: Geografikum',
+                    '␝' + 'Herstellungsort',
+                    if(
+                      v == 'Sitz, Ort: Geografikum',
+                      '␝' + 'Sitz',
+                      if(
+                        v == 'Wirkungsort: Geografikum',
+                        '␝' + 'Wirkungsort',
+                        '␝' + 'nicht bestimmt'
+                      )
+                    )
+                  )
+                ).join('␟'),
+                null
+              ),
+              null
+            )
+          ).join('␟'),
+          x,
+          x,
+          null
+        )
+      ].uniques().join('␟'),
+      x,
+      forEach(
+        x.split('␟'),
+        v,
+        with(
+          if(
+            v.startsWith('('),
+            v.replace('(','').replace(')',''),
+            if(
+              v.startsWith('['),
+              v.replace('[','').replace(']',''),
+              v
+            )
+          ),
+          w,
+          if(
+            w.startsWith('␝'),
+            null,
+            w
+          )
+        )
+      ).join('␟'),
+      null
+    )
+  newColumnName: filterLocationType_mv
+  columnInsertIndex: 2

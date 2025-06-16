@@ -1,0 +1,60 @@
+# Facette Ort mit Typ
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          forEach(
+            cells['subjectLocation_id_mv'].value.split('␟'),
+            v,
+            forNonBlank(
+              forEach(
+                v.cross('th','id')[0].cells['title'].value.split(';'),
+                x,
+                x.replace('␣','').replace('ohne Ort','').replace('[u.a.]','').replace('und andere','').trim()
+              ).join('␟'),
+              z,
+              forEach(
+                z.split('␟'),
+                y,
+                y + '␝' + 'Darstellungsort'
+              ).join('␟'),
+              null
+            )
+          ).join('␟'),
+          x,
+          x,
+          null
+        )
+      ].uniques().join('␟'),
+      x,
+      forEach(
+        x.split('␟'),
+        v,
+        with(
+          if(
+            v.startsWith('('),
+            v.replace('(','').replace(')',''),
+            if(
+              v.startsWith('['),
+              v.replace('[','').replace(']',''),
+              v
+            )
+          ),
+          w,
+          if(
+            w.startsWith('␝'),
+            null,
+            w
+          )
+        )
+      ).join('␟'),
+      null
+    )
+  newColumnName: filterLocationType_mv
+  columnInsertIndex: 2

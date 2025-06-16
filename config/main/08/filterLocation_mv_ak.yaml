@@ -1,0 +1,168 @@
+# Facette Ort
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          forEach(
+            cells['publisherOriginalLocation_mv'].value.split('␟'),
+            v,
+            forNonBlank(
+              forEach(
+                v.split(';'),
+                x,
+                x.replace('ohne Ort','').replace('[u.a.]','').replace('und andere','').trim()
+              ).join('␟'),
+              z,
+              z,
+              null
+            )
+          ).join('␟'),
+          x,
+          x,
+          null
+        ),
+        forNonBlank(
+          forEach(
+            cells['scholarlyPublication_location_mv'].value.split('␟'),
+            v,
+            forNonBlank(
+              forEach(
+                v.split(';'),
+                x,
+                x.replace('ohne Ort','').replace('[u.a.]','').replace('und andere','').trim()
+              ).join('␟'),
+              z,
+              z,
+              null
+            )
+          ).join('␟'),
+          x,
+          x,
+          null
+        ),
+        forNonBlank(
+          forEachIndex(
+            cells['gndRelation_type_mv'].value.split('␟'),
+            i,
+            v,
+            if(
+              or(
+                v == 'Geografikum, allgemein',
+                v == 'Geografikum: Aufbewahrungsort',
+                v == 'Geografikum: Fundort',
+                v == 'Geografikum: Herstellungsort' 
+              ),
+              forNonBlank(
+                forEach(
+                    cells['gndRelation_text_mv'].value.split('␟')[i].split(';'),
+                    x,
+                    x.replace('ohne Ort','').replace('[u.a.]','').replace('und andere','').trim()
+                ).join('␟'),
+                z,
+                z,
+                null
+              ),
+              null
+            )
+          ).join('␟'),
+          x,
+          x,
+          null
+        ),
+        forNonBlank(
+          forEach(
+            cells['subject_id_mv'].value.split('␟'),
+            v,
+            forNonBlank(
+              v.cross('th','id')[0].cells['categorySub'].value,
+              categorySub,
+              if(
+                categorySub == 'geographisches/ethnisches Schlagwort',
+                forEach(
+                  v.cross('th','id')[0].cells['title'].value.split(';'),
+                  x,
+                  x.replace('␣','').replace('ohne Ort','').replace('[u.a.]','').replace('und andere','').trim()
+                ).join('␟'),
+                null
+              ),
+              null
+            )
+          ).join('␟'),
+          x,
+          x,
+          null
+        ),
+        forNonBlank(
+          cells['item_id_mv'].value,
+          v,
+          forEach(
+            v.split('␟'),
+            x,
+            forNonBlank(
+              x.cross('au','id')[0].cells['classification_id_mv'].value,
+              x,
+              forEach(
+                x.split('␟'),
+                y,
+                forNonBlank(
+                  y.cross('se','id')[0].cells['subject_id_mv'].value,
+                  y,
+                  forEach(
+                    y.split('␟'),
+                    z,
+                    forNonBlank(
+                      z.cross('th','id')[0].cells['categorySub'].value,
+                      categorySub,
+                      if(
+                        categorySub == 'geographisches/ethnisches Schlagwort',
+                        forEach(
+                          z.cross('th','id')[0].cells['title'].value.split(';'),
+                          x,
+                          x.replace('␣','').replace('ohne Ort','').replace('[u.a.]','').replace('und andere','').trim()
+                        ).join('␟'),
+                        null
+                      ),
+                      null
+                    )
+                  ).join('␟'),
+                  null
+                )
+              ).join('␟'),
+              null
+            )
+          ).join('␟'),
+          null
+        )
+      ].uniques().join('␟'),
+      x,
+      forEach(
+        x.split('␟'),
+        v,
+        with(
+          if(
+            v.startsWith('('),
+            v.replace('(','').replace(')',''),
+            if(
+              v.startsWith('['),
+              v.replace('[','').replace(']',''),
+              v
+            )
+          ),
+          w,
+          if(
+            w.startsWith('␝'),
+            null,
+            w
+          )
+        )
+      ).join('␟'),
+      null
+    )
+  newColumnName: filterLocation_mv
+  columnInsertIndex: 2

@@ -1,0 +1,66 @@
+# Facette Ort
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          forEachIndex(
+            cells['gndRelation_type_mv'].value.split('␟'),
+            i,
+            v,
+            if(
+              or(
+                v == 'Geografikum, allgemein',
+                v == 'Sitz, Ort: Geografikum',
+                v == 'Weiterer Ort: Geografikum',
+                v == 'Veranstaltungsort: Geografikum'
+              ),
+              forNonBlank(
+                forEach(
+                    cells['gndRelation_text_mv'].value.split('␟')[i].split(';'),
+                    x,
+                    x.replace('ohne Ort','').replace('[u.a.]','').replace('und andere','').trim()
+                ).join('␟'),
+                z,
+                z,
+                null
+              ),
+              null
+            )
+          ).join('␟'),
+          x,
+          x,
+          null
+        )
+      ].uniques().join('␟'),
+      x,
+      forEach(
+        x.split('␟'),
+        v,
+        with(
+          if(
+            v.startsWith('('),
+            v.replace('(','').replace(')',''),
+            if(
+              v.startsWith('['),
+              v.replace('[','').replace(']',''),
+              v
+            )
+          ),
+          w,
+          if(
+            w.startsWith('␝'),
+            null,
+            w
+          )
+        )
+      ).join('␟'),
+      null
+    )
+  newColumnName: filterLocation_mv
+  columnInsertIndex: 2
