@@ -1,0 +1,28 @@
+# Filter Digital (Boolean)
+# true wenn ein digitales Objekt vorhanden ist, das nicht "/dbst02/" in der URL beinhaltet
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    if(
+      forNonBlank(
+        cells['digitalObject_hyperlink_mv'].value,
+        v,
+        filter(
+          cells['digitalObject_hyperlink_mv'].value.split('␟'),
+          v,
+          and(
+            not(v.contains('/dbst02/')),
+            v != '␣'
+          )
+        ).length(),
+        0
+      ) > 0,
+      true,
+      null
+    )
+  newColumnName: filterDigital
+  columnInsertIndex: 1 # hinter Spalte id

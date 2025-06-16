@@ -54,6 +54,7 @@ AK,filterAuthorityRole_mv,strings,Person 1 (1982-2001)␝Widmungsempfänger␟Pe
 AK,filterCollection_mv,strings,Z:Öffentlicher Bestand 1␟Z:Öffentlicher Bestand 2,Facette Sammlung
 AK,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 AK,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
+AK,filterDigital,boolean,true,Filter Digital
 AK,filterFormContent_mv,strings,Epik␟Schwank␟Rundfunkmanuskript␟Aufsatz␟Literarisches Weblog,Facette Form und Inhalt
 AK,filterLanguage_mv,strings,Deutsch␟Englisch,Facette Sprache
 AK,filterLanguageType_mv,strings,Deutsch␝Original␟Englisch␝Übersetzung,Facette Sprache mit Typ
@@ -351,6 +352,7 @@ BI,filterAuthorityRole_mv,strings,Person 1 (1982-2001)␝Widmungsempfänger␟Pe
 BI,filterCollection_mv,strings,Z:Öffentlicher Bestand 1,Facette Sammlung
 BI,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 BI,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
+BI,filterDigital,boolean,true,Filter Digital
 BI,filterFormContent_mv,strings,Objektart Hauptkategorie␟Objektart Unterkategorie␟Objektart 1␟Objektart 2␟Objektart Zusammensetzung,Facette Form und Inhalt
 BI,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
 BI,filterLocationType_mv,strings,Ort 1␝Darstellungsort␟Ort 2␝Darstellungsort,Facette Ort mit Typ
@@ -453,6 +455,7 @@ HS,filterAuthorityRole_mv,strings,Person 1 (1982-2001)␝Widmungsempfänger␟Pe
 HS,filterCollection_mv,strings,Z:Öffentlicher Bestand 1,Facette Sammlung
 HS,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 HS,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
+HS,filterDigital,boolean,true,Filter Digital
 HS,filterFormContent_mv,strings,Hauptgattung␟Weitere Hauptgattung 1␟Weitere Hauptgattung 2␟Untergattung␟Weitere Untergattung 1␟Weitere Untergattung 2,Facette Form und Inhalt
 HS,filterLanguage_mv,strings,Deutsch␟Englisch,Facette Sprache
 HS,filterLanguageType_mv,strings,Deutsch␝Original␟Englisch␝Übersetzung,Facette Sprache mit Typ

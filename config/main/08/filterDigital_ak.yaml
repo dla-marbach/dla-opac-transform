@@ -1,0 +1,62 @@
+# Filter Digital (Boolean)
+# true wenn ein digitales Objekt vorhanden ist, das nicht "/dbst02/" in der URL beinhaltet
+# true wenn Linkbeschreibung "Volltext", "Langzeitarchivierung", "nachhören", "Zugang" oder "CD-ROM" enthält.
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    if(
+      or(
+        forNonBlank(
+          cells['website_description_mv'].value,
+          v,
+          if(
+            cells['website_description_mv'].value.contains(/Volltext|Langzeitarchivierung|nachhören|Zugang|CD-ROM/),
+            true,
+            false
+          ),
+          false
+        ),
+        if(
+          forNonBlank(
+            cells['digitalObject_hyperlink_mv'].value,
+            v,
+            filter(
+              cells['digitalObject_hyperlink_mv'].value.split('␟'),
+              v,
+              and(
+                not(v.contains('/dbst02/')),
+                v != '␣'
+              )
+            ).length(),
+            0
+          ) > 0,
+          true,
+          false
+        ),
+        if(
+          forNonBlank(
+            cells['item_digitalObject_hyperlink_mv'].value,
+            v,
+            filter(
+              cells['item_digitalObject_hyperlink_mv'].value.split('␟'),
+              v,
+              and(
+                not(v.contains('/dbst02/')),
+                v != '␣'
+              )
+            ).length(),
+            0
+          ) > 0,
+          true,
+          false
+        )
+      ),
+      true,
+      null
+    )
+  newColumnName: filterDigital
+  columnInsertIndex: 1 # hinter Spalte id
