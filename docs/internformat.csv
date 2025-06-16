@@ -61,7 +61,6 @@ AK,filterLanguageType_mv,strings,Deutsch␝Original␟Englisch␝Übersetzung,Fa
 AK,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
 AK,filterLocationType_mv,strings,Ort 1␝Erscheinungsort␟Ort 2␝Provenienzort,Facette Ort mit Typ
 AK,filterMedium_mv,strings,Erweiterte physikalische Form␟Medienart 1␟Medienart 2␟Buchumschlag,Facette Sammlung
-AK,filterMultipart,boolean,false,Filter Mehrteilig
 AK,filterSource,string,Bibliotheksmaterialien,Facette Datenbestand
 AK,filterSubject_mv,strings,normiertes Schlagwort 1␟normiertes Schlagwort 2,Facette Thema
 AK,filterType,string,Gedrucktes,Facette Medientyp
@@ -268,7 +267,7 @@ BF,filterCollection_mv,strings,Z:Öffentlicher Bestand 1,Facette Sammlung
 BF,filterFormContent_mv,strings,Bestandsart,Facette Form und Inhalt
 BF,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
 BF,filterLocationType_mv,strings,Ort 1␝Schlagwort␟Ort 2 2␝Schlagwort,Facette Ort mit Typ
-BF,filterMultipart,boolean,false,Filter Mehrteilig
+BF,filterMultipart,boolean,true,Filter Mehrteilig
 BF,filterSource,string,Nachlässe und Spezialsammlungen,Facette Datenbestand
 BF,filterSubject_mv,strings,normiertes Schlagwort 1␟normiertes Schlagwort 2,Facette Thema
 BF,filterType,string,Gedrucktes,Facette Medientyp
@@ -357,7 +356,7 @@ BI,filterFormContent_mv,strings,Objektart Hauptkategorie␟Objektart Unterkatego
 BI,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
 BI,filterLocationType_mv,strings,Ort 1␝Darstellungsort␟Ort 2␝Darstellungsort,Facette Ort mit Typ
 BI,filterMedium_mv,strings,Datenträger,Facette Sammlung
-BI,filterMultipart,boolean,false,Filter Mehrteilig
+BI,filterMultipart,boolean,true,Filter Mehrteilig (nur Konvolute)
 BI,filterSource,string,Bilder und Objekte,Facette Datenbestand
 BI,filterSubject_mv,strings,normiertes Schlagwort 1␟normiertes Schlagwort 2,Facette Thema
 BI,filterType,string,Bilder und Objekte,Facette Medientyp
@@ -462,7 +461,6 @@ HS,filterLanguageType_mv,strings,Deutsch␝Original␟Englisch␝Übersetzung,Fa
 HS,filterLocation_mv,strings,Entstehungsort 1␟Entstehungsort 2,Facette Ort
 HS,filterLocationType_mv,strings,Entstehungsort 1␝Entstehungsort␟Entstehungsort 2␝Entstehungsort,Facette Ort mit Typ
 HS,filterMedium_mv,strings,Sonstiger Datenträger␟Noten,Facette Sammlung
-HS,filterMultipart,boolean,false,Filter Mehrteilig
 HS,filterSource,string,Handschriften Einzelnachweise,Facette Datenbestand
 HS,filterSubject_mv,strings,normiertes Schlagwort 1␟normiertes Schlagwort 2,Facette Thema
 HS,filterType,string,Handschriften,Facette Medientyp
@@ -548,7 +546,6 @@ KS,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeitr
 KS,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 KS,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
 KS,filterLocationType_mv,strings,Ort 1␝Veranstaltungsort␟Ort 2␝Sitz,Facette Ort mit Typ
-KS,filterMultipart,boolean,false,Filter Mehrteilig
 KS,filterSource,string,Körperschaften,Facette Datenbestand
 KS,filterType,string,Normdaten,Facette Medientyp
 KS,gnd_id_mv,texts,GND-Nummer 1␟GND-Nummer 2,
@@ -627,7 +624,6 @@ PE,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeitr
 PE,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 PE,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
 PE,filterLocationType_mv,strings,Ort 1␝Geburtsort␟Ort 2␝Sterbeort,Facette Ort mit Typ
-PE,filterMultipart,boolean,false,Filter Mehrteilig
 PE,filterSource,string,Personen,Facette Datenbestand
 PE,filterType,string, Normdaten,Facette Medientyp
 PE,gender,text,Geschlecht,
@@ -677,7 +673,6 @@ SE,corporation_id_mv,texts,KS00000001␟KS00000002,
 SE,dateCataloged,daterange,2023-06-01,
 SE,dateModified,daterange,2023-06-06,
 SE,display,text,Sacherschließungskette 1,Hauptbezeichnung
-SE,filterMultipart,boolean,false,Filter Mehrteilig
 SE,filterSource,string,Systematikketten,Facette Datenbestand
 SE,filterSubject_mv,strings,normiertes Schlagwort 1␟normiertes Schlagwort 2,Facette Thema
 SE,filterType,string, Normdaten,Facette Medientyp
@@ -699,7 +694,6 @@ SY,child_id_mv,texts,SY00000003␟SY00000004,
 SY,dateCataloged,daterange,2023-06-01,
 SY,dateModified,daterange,2023-06-06,
 SY,display,text,Systematiknummer. Basisnotation 1,Hauptbezeichnung
-SY,filterMultipart,boolean,false,Filter Mehrteilig
 SY,filterSource,string,Fachsystematik,Facette Datenbestand
 SY,filterType,string, Normdaten,Facette Medientyp
 SY,id,string,SY00000001,
@@ -730,7 +724,6 @@ TH,filterLanguage_mv,strings,Deutsch␟Englisch,Facette Sprache
 TH,filterLanguageType_mv,strings,Deutsch␝Original␟Englisch␝Übersetzung,Facette Sprache mit Typ
 TH,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
 TH,filterLocationType_mv,strings,Ort 1␝Herstellungsort␟Ort 2␝Wirkungsort,Facette Ort mit Typ
-TH,filterMultipart,boolean,false,Filter Mehrteilig
 TH,filterSource,string,Orte und Sachbegriffe,Facette Datenbestand
 TH,filterType,string, Normdaten,Facette Medientyp
 TH,gnd_id_mv,texts,GND-Nummer 1␟GND-Nummer 2,

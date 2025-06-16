@@ -173,7 +173,6 @@ filterLocationType_mv:
 filterLocation_mv:
   - Ort-Schlagwort 1
   - Ort-Schlagwort 2
-filterMultipart: false
 filterSource: Bilder und Objekte
 filterSubject_mv:
   - Schlagwort 1
@@ -346,7 +345,6 @@ filterCollection_mv: Z:Öffentlicher Bestand 1
 filterFormContent_mv:
   - Plakat
 filterMedium_mv: Sonstiger Datenträger
-filterMultipart: false
 filterSource: Bilder und Objekte
 filterType: Bilder und Objekte
 noteObjectType: Datenträger
@@ -378,7 +376,6 @@ exportRIS: |-
   ID  - BI00000003
   TI  - Vertraulicher Datensatz
   ER  -
-filterMultipart: false
 filterSource: Bilder und Objekte
 filterType: Bilder und Objekte
 schemaVersion: 0.7.3
@@ -431,7 +428,6 @@ filterDatePoint_mv:
 filterDateRange_mv: '[1848 TO 1852]'
 filterFormContent_mv:
   - Druckgrafik
-filterMultipart: false
 filterSource: Bilder und Objekte
 filterType: Bilder und Objekte
 inscription: 'Bez. (u.): "Gez. v. Groos" (li.), "Stahlst. v. F. Foltz" (re.) sowie "DIE MICHAELSKIRCHE IN HALL | Verlag der Stettin´schen Buchhandlung in Ulm" (mi.)'
@@ -506,7 +502,6 @@ exportRIS: |-
   TI  - Verknüpfte Digitale Objekte
   ER  -
 filterDigital: true
-filterMultipart: false
 filterSource: Bilder und Objekte
 filterType: Bilder und Objekte
 schemaVersion: 0.7.3
@@ -593,7 +588,6 @@ filterAuthority_mv:
   - Körperschaft 6
   - Person 2 (1982–2001)
   - Körperschaft 2
-filterMultipart: false
 filterSource: Bilder und Objekte
 filterSubject_mv:
   - Person 1 (1982–2001)
@@ -637,3 +631,33 @@ personTo_id_mv:
 schemaVersion: 0.7.3
 source: BI
 title: Facette Personen und Körperschaften
+---
+id: BI00000011
+display: Konvolut
+category: Konvolut
+exportDC: |-
+  <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Konvolut</dc:title>
+    <dc:identifier>BI00000011</dc:identifier>
+  </oai_dc:dc>
+exportMODS: |-
+  <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
+    <titleInfo>
+      <title>Konvolut</title>
+    </titleInfo>
+    <recordInfo>
+      <recordContentSource authority="marcorg">DE-Mar1</recordContentSource>
+      <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">BI00000011</recordIdentifier>
+    </recordInfo>
+  </mods>
+exportRIS: |-
+  TY  - GEN
+  ID  - BI00000011
+  TI  - Konvolut
+  ER  -
+filterMultipart: true
+filterSource: Bilder und Objekte
+filterType: Bilder und Objekte
+schemaVersion: 0.7.3
+source: BI
+title: Konvolut

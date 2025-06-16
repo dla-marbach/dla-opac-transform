@@ -1,5 +1,5 @@
 # Filter Mehrteilig (Boolean)
-# Einzelwerke: false; Sammlungen oder Mehrbändige Werke: true
+# nur Konvolute
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -10,7 +10,7 @@
     if(
       cells['category'].value == 'Konvolut',
       true,
-      false
+      null
     )
   newColumnName: filterMultipart
   columnInsertIndex: 1 # hinter Spalte id
