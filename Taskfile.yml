@@ -35,7 +35,7 @@ tasks:
         rm -r "{{.DIR}}/output" 2> /dev/null || true; mv "{{.DIR}}/tmp" "{{.DIR}}/output"
       - |
         # Laufzeit berechnen
-        >&2 echo "{{.TASK}} run time: $(bc <<<"$(date -u +%s.%N)-$(cat ".task/timer/{{.TASK}}")") seconds"
+        >&2 echo "{{.TASK}} run time: $(awk -v now=$(date -u +%s.%N) -v timer=$(cat .task/timer/{{.TASK}}) 'BEGIN {print now-timer}') seconds"
     sources:
       - '{{.DIR}}/input/**'
       - scripts/main.sh
