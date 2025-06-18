@@ -61,6 +61,7 @@ AK,filterLanguageType_mv,strings,Deutsch␝Original␟Englisch␝Übersetzung,Fa
 AK,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
 AK,filterLocationType_mv,strings,Ort 1␝Erscheinungsort␟Ort 2␝Provenienzort,Facette Ort mit Typ
 AK,filterMedium_mv,strings,Erweiterte physikalische Form␟Medienart 1␟Medienart 2␟Buchumschlag,Facette Sammlung
+AK,filterRecent,daterange,2023-06-01,Facette Neu im Katalog
 AK,filterSource,string,Bibliotheksmaterialien,Facette Datenbestand
 AK,filterSubject_mv,strings,normiertes Schlagwort 1␟normiertes Schlagwort 2,Facette Thema
 AK,filterType,string,Gedrucktes,Facette Medientyp
@@ -261,6 +262,7 @@ BF,extent,text,Umfang,
 BF,filterAuthority_mv,strings,Person 1 (1982-2001)␟Person 2 (1982-2001)␟Person 3 (1982-2001)␟Körperschaft 1 (1982),Facette Personen und Körperschaften
 BF,filterAuthorityRelation_mv,strings,Person 1 (1982-2001)␝An␟Person 2 (1982-2001)␝Von␟Person 3 (1982-2001)␝Unter␟Körperschaft 1 (1982)␝Über,Facette Personen und Körperschaften mit Relationen
 BF,filterAuthorityRole_mv,strings,Person 1 (1982-2001)␝Widmungsempfänger␟Person 2 (1982-2001)␝Verfasser/Urheber␟Person 3 (1982-2001)␝Bestandsbildner/Vorbesitzer␟Körperschaft 1 (1982)␝Behandelte Person/Körperschaft,Facette Personen und Körperschaften mit Funktionsbezeichnungen
+BF,filterRecent,daterange,2023-06-01,Facette Neu im Katalog
 BF,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 BF,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 BF,filterCollection_mv,strings,Z:Öffentlicher Bestand 1,Facette Sammlung
@@ -357,6 +359,7 @@ BI,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
 BI,filterLocationType_mv,strings,Ort 1␝Darstellungsort␟Ort 2␝Darstellungsort,Facette Ort mit Typ
 BI,filterMedium_mv,strings,Datenträger,Facette Sammlung
 BI,filterMultipart,boolean,true,Filter Mehrteilig (nur Konvolute)
+BI,filterRecent,daterange,2023-06-01,Facette Neu im Katalog
 BI,filterSource,string,Bilder und Objekte,Facette Datenbestand
 BI,filterSubject_mv,strings,normiertes Schlagwort 1␟normiertes Schlagwort 2,Facette Thema
 BI,filterType,string,Bilder und Objekte,Facette Medientyp
@@ -461,6 +464,7 @@ HS,filterLanguageType_mv,strings,Deutsch␝Original␟Englisch␝Übersetzung,Fa
 HS,filterLocation_mv,strings,Entstehungsort 1␟Entstehungsort 2,Facette Ort
 HS,filterLocationType_mv,strings,Entstehungsort 1␝Entstehungsort␟Entstehungsort 2␝Entstehungsort,Facette Ort mit Typ
 HS,filterMedium_mv,strings,Sonstiger Datenträger␟Noten,Facette Sammlung
+HS,filterRecent,daterange,2023-06-01,Facette Neu im Katalog
 HS,filterSource,string,Handschriften Einzelnachweise,Facette Datenbestand
 HS,filterSubject_mv,strings,normiertes Schlagwort 1␟normiertes Schlagwort 2,Facette Thema
 HS,filterType,string,Handschriften,Facette Medientyp

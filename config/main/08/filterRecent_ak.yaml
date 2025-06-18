@@ -1,0 +1,16 @@
+# Facette Neu im Katalog
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      cells['dateCataloged'].value,
+      x,
+      x,
+      null
+    )
+  newColumnName: filterRecent
+  columnInsertIndex: 1 # hinter Spalte id
