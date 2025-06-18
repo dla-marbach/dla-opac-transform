@@ -1,0 +1,25 @@
+# Facette Bibliographie
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      cells['noteBibliography_mv'].value,
+      v,
+      forNonBlank(
+        filter(
+          v.split('␟'),
+          f,
+          f[0] != '␣'
+        ).uniques().join('␟'),
+        x,
+        x,
+        null
+      ),
+      null
+    )
+  newColumnName: filterBibliography_mv
+  columnInsertIndex: 2
