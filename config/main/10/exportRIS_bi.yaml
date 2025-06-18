@@ -7,8 +7,35 @@
   expression: |
     grel:
     'TY  - ' + 'GEN' + '\n'
+    + forNonBlank(forEach(cells['filterAuthorityRole_mv'].value.split('␟'), v, if(v.split('␝')[1] != 'Verfasser/Urheber', 'A2  - ' + v.split('␝')[0].replace(/\s\(.*/,''), null)).uniques().join('\n'), x, x + '\n', '')
+    + forNonBlank(cells['accession_id'].value.cross('be','id')[0].cells['accessionNumber'].value, v, 'AN  - ' + v + '\n', '')
+    + forNonBlank(forEach(cells['filterAuthorityRole_mv'].value.split('␟'), v, if(v.split('␝')[1] == 'Verfasser/Urheber', 'AU  - ' + v.split('␝')[0].replace(/\s\(.*/,''), null)).uniques().join('\n'), x, x + '\n', '')
+    + forNonBlank(forEach(cells['personAbout_comment_mv'].value.split('␟'), v, if(v != '␣', v, null)).join('; '), x, 'CA  - ' + x + '\n', '')
+    + forNonBlank(cells['mediaNumber'].value, v, 'CN  - ' + v + '\n', '')
+    + forNonBlank(with(cells['filterDateRange_mv'].value.replace('[','').replace(']','').replace(' ','').replace('TO','␟'), x, forEach(filter(x.split('␟').uniques().sort(), f, isNumeric(f.replace('-',''))), v, 'DA  - ' + v.replace('-','/')).join('\n')),z,z + '\n','')
+    + forNonBlank(forEach(cells['filterCollection_mv'].value.split('␟'), v, v).join('; '), x, 'DB  - ' + x + '\n', '')
     + forNonBlank(cells['id'].value, v, 'ID  - ' + v + '\n', '')
+    + forNonBlank(forEach(cells['filterSubject_mv'].value.split('␟'), v, 'KW  - ' + v).join('\n'), x, x + '\n', '')
+    + forNonBlank(cells['inscription'].value, v, 'LB  - ' + v + '\n', '')
+    + forNonBlank(cells['inventoryNumber'].value, v, 'M1  - ' + v + '\n', '')
+    + forNonBlank(forEach(cells['filterMedium_mv'].value.split('␟'), v, 'M2  - ' + v).join('\n'), x, x + '\n', '')
+    + forNonBlank(forEach(cells['filterFormContent_mv'].value.split('␟'), v, 'M3  - ' + v).join('\n'), x, x + '\n', '')
+    + forNonBlank(forEachIndex(cells['filterLocationType_mv'].value.split('␟'), i, v, 'N1  - ' + v.split('␝')[1].replace('nicht bestimmt', 'Ort') + ': ' + v.split('␝')[0]).join('\n'), x, x + '\n', '')
+    + forNonBlank(cells['extent'].value, v, 'N1  - ' + 'Umfang: ' + v + '\n', '')
+    + forNonBlank(cells['material'].value, v, 'N1  - ' + 'Technik: ' + v + '\n', '')
+    + forNonBlank(forEachIndex(cells['dimension_height_mv'].value.split('␟'), i, v, if(v != '␣', 'N1  - ' + 'Maße: ' + v + forNonBlank(cells['dimension_width_mv'].value.split('␟')[i].replace('␣', ''), z, ' x ' + z, '') + forNonBlank(cells['dimension_depth_mv'].value.split('␟')[i].replace('␣', ''), z, ' x ' + z, '') + forNonBlank(cells['dimension_diameter_mv'].value.split('␟')[i].replace('␣', ''), z, ' x ' + z, '') + forNonBlank(cells['dimension_comment_mv'].value.split('␟')[i].replace('␣', ''), z, ' (' + z.replace('(','').replace(')','') + ')', ''), null)).join('\n'), x, x + '\n', '')
+    + forNonBlank(cells['statusPreservation'].value, v, 'N1  - ' + 'Erhaltungszustand: ' + v + '\n', '')
+    + forNonBlank(cells['reference_text_mv'].value.split('␟')[0], v, 'N1  - ' + 'Literatur: ' + v + '\n', '')
+    + forNonBlank(cells['material'].value, v, 'N2  - ' + v + '\n', '')
+    + forNonBlank(forEach(cells['relation_display_mv'].value.split('␟'), v, if(v != '␣', 'OP  - ' + v, null)).join('\n'), x, x + '\n', '')
+    + forNonBlank(cells['note'].value, v, 'RN  - ' + v + '\n', '')
+    + forNonBlank(cells['noteClassification'].value, v, 'RN  - ' + v + '\n', '')
+    + forNonBlank(cells['noteDimension'].value, v, 'RN  - ' + v + '\n', '')
+    + forNonBlank(cells['noteBibliography_mv'].value.split('␟')[0], v, 'RN  - ' + v + '\n', '')
     + forNonBlank(cells['display'].value, v, 'TI  - ' + v.replace('\n','.') + '\n', '')
+    + forNonBlank(cells['titleOriginal'].value, v, 'T2  - ' + v + '\n', '')
+    + forNonBlank(forEach(cells['digitalObject_hyperlink_mv'].value.split('␟'), v, 'UR  - ' + v).join('\n'), x, x + '\n', '')
+    + forNonBlank(cells['id'].value, v, 'UR  - ' + 'https://www.dla-marbach.de/find/opac/id/' + v + '/' + '\n', '')
     + 'ER  -'
   newColumnName: exportRIS
   columnInsertIndex: 2 # hinter id und display

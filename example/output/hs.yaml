@@ -93,8 +93,62 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  A2  - Person 1
+  A2  - Person 2
+  A2  - Körperschaft 1
+  A2  - Körperschaft 2
+  A2  - Person 3
+  A2  - Person 4
+  A2  - Körperschaft 7
+  A2  - Körperschaft 8
+  A2  - Person 5
+  A2  - Person 6
+  A2  - Körperschaft 3
+  A2  - Körperschaft 4
+  AN  - Erwerbungsnummer
+  CN  - Mediennummer
+  DA  - 1982/05/22
+  DA  - 2001/01/01
+  DB  - Z:Öffentlicher Bestand 1
   ID  - HS00000001
+  KW  - Schlagwort 1
+  KW  - Schlagwort 2
+  KW  - Person 5
+  KW  - Person 6
+  KW  - Körperschaft 3
+  KW  - Körperschaft 4
+  KW  - Werk 1
+  KW  - Werk 2
+  LA  - Sprache 1
+  LA  - Sprache 2
+  LB  - Sigel 1; Sigel 2
+  M1  - Stücknummer
+  M3  - Hauptgattung
+  M3  - Weitere Hauptgattung 1
+  M3  - Weitere Hauptgattung 2
+  M3  - Untergattung
+  M3  - Weitere Untergattung 1
+  M3  - Weitere Untergattung 2
+  N1  - Entstehungsort: Entstehungsort 1
+  N1  - Entstehungsort: Entstehungsort 2
+  N1  - Umfang: Umfang
+  N1  - Kasten: Kastennummer
+  N1  - Mappe: Mappennummer
+  N1  - Mikrofiche: Mikroform 1
+  N1  - Mikrofiche: Mikroform 2
+  N1  - Repro: Foto-Negativ 1
+  N1  - Repro: Foto-Negativ 2
+  N2  - Inhalt
+  OP  - Person 1 (1982-2001). Werk 1 (genre : 2000)
+  OP  - Person 2 (1982-2001). Werk 2 (genre)
+  OP  - Person 1 (1982-2001). Werk 1 (genre : 2000)
+  OP  - Person 2 (1982-2001). Werk 2 (genre)
+  RN  - Bemerkung extern
+  ST  - Handschrift 1
   TI  - Handschrift 1
+  T2  - Weiterer Titel 1 Kategorie: Weiterer Titel 1 (Weiterer Titel 1 Typ)
+  T3  - Weiterer Titel 2 Kategorie: Weiterer Titel 2 (Weiterer Titel 2 Typ)
+  UR  - https://www.dla-marbach.de/find/opac/id/HS00000001/
   ER  -
 extent: Umfang
 filterAuthorityRelation_mv:
@@ -337,7 +391,12 @@ exportMODS: |-
 exportRIS: |-
   TY  - GEN
   ID  - HS00000002
+  M2  - Sonstiger Datenträger
+  M2  - Noten
+  M3  - Kompositionen
+  ST  - Handschrift 2 Noten
   TI  - Handschrift 2 Noten
+  UR  - https://www.dla-marbach.de/find/opac/id/HS00000002/
   ER  -
 filterFormContent_mv:
   - Kompositionen
@@ -374,7 +433,9 @@ exportMODS: |-
 exportRIS: |-
   TY  - GEN
   ID  - HS00000003
+  ST  - Vertraulicher Datensatz
   TI  - Vertraulicher Datensatz
+  UR  - https://www.dla-marbach.de/find/opac/id/HS00000003/
   ER  -
 filterSource: Handschriften Einzelnachweise
 filterType: Handschriften
@@ -405,7 +466,10 @@ exportMODS: |-
 exportRIS: |-
   TY  - GEN
   ID  - HS00000004
+  M3  - Hauptgattung
+  ST  - Brief
   TI  - Brief [Hauptgattung]
+  UR  - https://www.dla-marbach.de/find/opac/id/HS00000004/
   ER  -
 filterFormContent_mv:
   - Hauptgattung
@@ -452,7 +516,11 @@ exportMODS: |-
 exportRIS: |-
   TY  - GEN
   ID  - HS00000011
+  ST  - Verknüpfte Digitale Objekte
   TI  - Verknüpfte Digitale Objekte
+  UR  - https://digital.dla-marbach.de/viewer/image/BF00043389/0015/?media_thumbnail=BF00043389_0015.tif&media_access=public
+  UR  - https://digital.dla-marbach.de/viewer/image/BF00043389/?media_access=public
+  UR  - https://www.dla-marbach.de/find/opac/id/HS00000011/
   ER  -
 filterDigital: true
 filterSource: Handschriften Einzelnachweise
@@ -507,8 +575,22 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  A2  - Person 6
+  A2  - Körperschaft 6
+  A2  - Person 3
+  A2  - Körperschaft 3
+  A2  - Person 1
+  A2  - Körperschaft 1
+  AU  - Person 2
+  AU  - Körperschaft 2
   ID  - HS00000005
+  KW  - Person 1 (1982–2001)
+  KW  - Person 6
+  KW  - Körperschaft 1
+  KW  - Körperschaft 6
+  ST  - Facette Personen und Körperschaften
   TI  - Facette Personen und Körperschaften
+  UR  - https://www.dla-marbach.de/find/opac/id/HS00000005/
   ER  -
 filterAuthorityRelation_mv:
   - Person 2 (1982–2001)␝Von

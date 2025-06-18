@@ -105,8 +105,62 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  A2  - Person 1
+  A2  - Person 2
+  A2  - Person 3
+  A2  - Person 4
+  A2  - Körperschaft 7
+  A2  - Körperschaft 8
+  A2  - Person 5
+  A2  - Person 6
+  A2  - Körperschaft 3
+  A2  - Körperschaft 4
+  A2  - Person 7
+  A2  - Person 8
+  A2  - Körperschaft 5
+  A2  - Körperschaft 6
+  AN  - Erwerbungsnummer
+  AU  - Körperschaft 1
+  AU  - Körperschaft 2
+  CA  - Link Person 5 Anmerkung; Link Person 6 Anmerkung
+  CN  - Mediennummer
+  DB  - Z:Öffentlicher Bestand 1
   ID  - BI00000001
+  KW  - Schlagwort 1
+  KW  - Schlagwort 2
+  KW  - Ort-Schlagwort 1
+  KW  - Ort-Schlagwort 2
+  KW  - Person 5
+  KW  - Person 6
+  KW  - Körperschaft 3
+  KW  - Körperschaft 4
+  KW  - Werk 1
+  KW  - Werk 2
+  LB  - Beschriftung
+  M1  - Inventarnummer
+  M3  - Objektart Hauptkategorie
+  M3  - Objektart Unterkategorie
+  M3  - Objektart 1
+  M3  - Objektart 2
+  M3  - Objektart Zusammensetzung
+  N1  - Darstellungsort: Ort-Schlagwort 1
+  N1  - Darstellungsort: Ort-Schlagwort 2
+  N1  - Umfang: Umfang
+  N1  - Technik: Material
+  N1  - Maße: Maßangabe 1 Höhe (cm) x Maßangabe 1 Breite (cm) x Maßangabe 1 Tiefe (cm) x Maßangabe 1 Durchmesser (cm) (Maßangabe 1 Anmerkung)
+  N1  - Maße: Maßangabe 2 Höhe (cm) x Maßangabe 2 Breite (cm) x Maßangabe 2 Tiefe (cm) x Maßangabe 2 Durchmesser (cm) (Maßangabe 2 Anmerkung)
+  N1  - Erhaltungszustand: Erhaltungszustand
+  N1  - Literatur: Quellenangabe
+  N2  - Material
+  OP  - Person 1 (1982-2001). Werk 1 (genre : 2000)
+  OP  - Person 2 (1982-2001). Werk 2 (genre)
+  RN  - Entstehung
+  RN  - Sacherschließung
+  RN  - Maßangabe Anmerkung
+  RN  - Quellenangabe Anmerkung
   TI  - Bild 1 [Objektart Unterkategorie]
+  T2  - Titel Original
+  UR  - https://www.dla-marbach.de/find/opac/id/BI00000001/
   ER  -
 extent: Umfang
 filterAuthorityRelation_mv:
@@ -339,8 +393,12 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  DB  - Z:Öffentlicher Bestand 1
   ID  - BI00000002
+  M2  - Sonstiger Datenträger
+  M3  - Plakat
   TI  - Wertetabelle Workaround: Plakat bleibt Plakat [Plakat]
+  UR  - https://www.dla-marbach.de/find/opac/id/BI00000002/
   ER  -
 filterCollection_mv: Z:Öffentlicher Bestand 1
 filterFormContent_mv:
@@ -376,6 +434,7 @@ exportRIS: |-
   TY  - GEN
   ID  - BI00000003
   TI  - Vertraulicher Datensatz
+  UR  - https://www.dla-marbach.de/find/opac/id/BI00000003/
   ER  -
 filterSource: Bilder und Objekte
 filterType: Bilder und Objekte
@@ -420,8 +479,20 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  CN  - BI000333901
+  DA  - 1848
+  DA  - 1852
   ID  - BI00033390
+  LB  - Bez. (u.): "Gez. v. Groos" (li.), "Stahlst. v. F. Foltz" (re.) sowie "DIE MICHAELSKIRCHE IN HALL | Verlag der Stettin´schen Buchhandlung in Ulm" (mi.)
+  M1  - B 1991.K 0185
+  M3  - Druckgrafik
+  N1  - Technik: Stahlstich
+  N1  - Maße:  15.0 x  23.3 (Blatt)
+  N1  - Maße:  12.1 x  14.4 (Darstellung)
+  N1  - Erhaltungszustand: Blatt stockfleckig, fleckig u. angeschmutzt.
+  N2  - Stahlstich
   TI  - Hall. Michaelskirche [Druckgraphik]
+  UR  - https://www.dla-marbach.de/find/opac/id/BI00033390/
   ER  -
 filterDatePoint_mv:
   - "1848-01-01T00:00:00Z"
@@ -502,6 +573,9 @@ exportRIS: |-
   TY  - GEN
   ID  - BI00000011
   TI  - Verknüpfte Digitale Objekte
+  UR  - https://digital.dla-marbach.de/viewer/image/BF00043389/0015/?media_thumbnail=BF00043389_0015.tif&media_access=public
+  UR  - https://digital.dla-marbach.de/viewer/image/BF00043389/?media_access=public
+  UR  - https://www.dla-marbach.de/find/opac/id/BI00000011/
   ER  -
 filterDigital: true
 filterSource: Bilder und Objekte
@@ -550,8 +624,24 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  A2  - Person 3
+  A2  - Person 6
+  A2  - Person 4
+  A2  - Körperschaft 4
+  A2  - Person 1
+  A2  - Körperschaft 1
+  A2  - Körperschaft 6
+  A2  - Person 2
+  A2  - Körperschaft 2
+  AU  - Person 5
+  AU  - Körperschaft 3
   ID  - BI00000004
+  KW  - Person 1 (1982–2001)
+  KW  - Person 6
+  KW  - Körperschaft 1
+  KW  - Körperschaft 6
   TI  - Facette Personen und Körperschaften
+  UR  - https://www.dla-marbach.de/find/opac/id/BI00000004/
   ER  -
 filterAuthorityRelation_mv:
   - Person 3 (1982–2001)␝Von
@@ -656,6 +746,7 @@ exportRIS: |-
   TY  - GEN
   ID  - BI00000021
   TI  - Konvolut
+  UR  - https://www.dla-marbach.de/find/opac/id/BI00000021/
   ER  -
 filterMultipart: true
 filterSource: Bilder und Objekte

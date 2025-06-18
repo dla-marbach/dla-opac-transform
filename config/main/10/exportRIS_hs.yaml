@@ -7,8 +7,35 @@
   expression: |
     grel:
     'TY  - ' + 'GEN' + '\n'
+    + forNonBlank(forEach(cells['filterAuthorityRole_mv'].value.split('␟'), v, if(v.split('␝')[1] != 'Verfasser/Urheber', 'A2  - ' + v.split('␝')[0].replace(/\s\(.*/,''), null)).uniques().join('\n'), x, x + '\n', '')
+    + forNonBlank(cells['accessionNumber'].value, v, 'AN  - ' + v + '\n', '')
+    + forNonBlank(forEach(cells['filterAuthorityRole_mv'].value.split('␟'), v, if(v.split('␝')[1] == 'Verfasser/Urheber', 'AU  - ' + v.split('␝')[0].replace(/\s\(.*/,''), null)).uniques().join('\n'), x, x + '\n', '')
+    + forNonBlank(cells['mediaNumber'].value, v, 'CN  - ' + v + '\n', '')
+    + forNonBlank(with(cells['filterDateRange_mv'].value.replace('[','').replace(']','').replace(' ','').replace('TO','␟'), x, forEach(filter(x.split('␟').uniques().sort(), f, isNumeric(f.replace('-',''))), v, 'DA  - ' + v.replace('-','/')).join('\n')),z,z + '\n','')
+    + forNonBlank(forEach(cells['filterCollection_mv'].value.split('␟'), v, v).join('; '), x, 'DB  - ' + x + '\n', '')
     + forNonBlank(cells['id'].value, v, 'ID  - ' + v + '\n', '')
+    + forNonBlank(forEach(cells['filterSubject_mv'].value.split('␟'), v, 'KW  - ' + v).join('\n'), x, x + '\n', '')
+    + forNonBlank(forEach(cells['filterLanguage_mv'].value.split('␟'), v, 'LA  - ' + v).join('\n'), x, x + '\n', '')
+    + forNonBlank(forEach(cells['acronym_mv'].value.split('␟'), v, if(v != '␣', v, null)).join('; '), x, 'LB  - ' + x + '\n', '')
+    + forNonBlank(cells['itemNumber'].value, v, 'M1  - ' + v + '\n', '')
+    + forNonBlank(forEach(cells['filterMedium_mv'].value.split('␟'), v, 'M2  - ' + v).join('\n'), x, x + '\n', '')
+    + forNonBlank(forEach(cells['filterFormContent_mv'].value.split('␟'), v, 'M3  - ' + v).join('\n'), x, x + '\n', '')
+    + forNonBlank(forEachIndex(cells['filterLocationType_mv'].value.split('␟'), i, v, 'N1  - ' + v.split('␝')[1].replace('nicht bestimmt', 'Ort') + ': ' + v.split('␝')[0]).join('\n'), x, x + '\n', '')
+    + forNonBlank(cells['extent'].value, v, 'N1  - ' + 'Umfang: ' + v + '\n', '')
+    + forNonBlank(cells['locationBoxNumber'].value, v, 'N1  - ' + 'Kasten: ' + v + '\n', '')
+    + forNonBlank(cells['locationFolderNumber'].value, v, 'N1  - ' + 'Mappe: ' + v + '\n', '')
+    + forNonBlank(forEach(cells['microform_mv'].value.split('␟'), v, if(v != '␣', 'N1  - ' + 'Mikrofiche: ' + v, null)).join('\n'), x, x + '\n', '')
+    + forNonBlank(forEach(cells['photoNegativeNumber_mv'].value.split('␟'), v, if(v != '␣', 'N1  - ' + 'Repro: ' + v, null)).join('\n'), x, x + '\n', '')
+    + forNonBlank(cells['content'].value, v, 'N2  - ' + v + '\n', '')
+    + forNonBlank(forEach(cells['relation_display_mv'].value.split('␟'), v, if(v != '␣', 'OP  - ' + v, null)).join('\n'), x, x + '\n', '')
+    + forNonBlank(forEach(cells['work_display_mv'].value.split('␟'), v, if(v != '␣', 'OP  - ' + v, null)).join('\n'), x, x + '\n', '')
+    + forNonBlank(cells['note'].value, v, 'RN  - ' + v + '\n', '')
+    + forNonBlank(cells['title'].value, v, 'ST  - ' + v + '\n', '')
     + forNonBlank(cells['display'].value, v, 'TI  - ' + v.replace('\n','.') + '\n', '')
+    + forNonBlank(cells['titleOther_text_mv'].value.split('␟')[0].replace('␣', ''), v, 'T2  - ' + forNonBlank(cells['titleOther_category_mv'].value.split('␟')[0].replace('␣', ''), x, x + ': ', '') + v + forNonBlank(cells['titleOther_type_mv'].value.split('␟')[0].replace('␣', ''), x, ' (' + x + ')', '') + '\n', '')
+    + forNonBlank(cells['titleOther_text_mv'].value.split('␟')[1].replace('␣', ''), v, 'T3  - ' + forNonBlank(cells['titleOther_category_mv'].value.split('␟')[1].replace('␣', ''), x, x + ': ', '') + v + forNonBlank(cells['titleOther_type_mv'].value.split('␟')[1].replace('␣', ''), x, ' (' + x + ')', '') + '\n', '')
+    + forNonBlank(forEach(cells['digitalObject_hyperlink_mv'].value.split('␟'), v, 'UR  - ' + v).join('\n'), x, x + '\n', '')
+    + forNonBlank(cells['id'].value, v, 'UR  - ' + 'https://www.dla-marbach.de/find/opac/id/' + v + '/' + '\n', '')
     + 'ER  -'
   newColumnName: exportRIS
   columnInsertIndex: 2 # hinter id und display

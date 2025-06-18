@@ -72,8 +72,41 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  A2  - Person 1
+  A2  - Person 2
+  A2  - Körperschaft 3
+  A2  - Körperschaft 4
+  AN  - Erwerbungsnummer
+  AU  - Person 3
+  AU  - Person 4
+  AU  - Körperschaft 5
+  AU  - Körperschaft 6
+  CN  - Mediennummer
+  DA  - 1982/05/22
+  DA  - 2001/01/01
+  DB  - Z:Öffentlicher Bestand 1
   ID  - BF00000001
+  KW  - Thesaurus-Begriff 1
+  KW  - Thesaurus-Begriff 2
+  KW  - Person 1 (1982–2001)
+  KW  - Person 2 (1982–2001)
+  KW  - Körperschaft 3
+  KW  - Körperschaft 4
+  M3  - Bestandsart
+  N1  - Schlagwort: Thesaurus-Begriff 1
+  N1  - Umfang: Umfang
+  N1  - Übersicht: Rotes Buch 1
+  N1  - Verzeichnung 1: Verzeichnungsumfang 1 Verzeichnungseinheit 1
+  N1  - Verzeichnung 2: Verzeichnungsumfang 2 Verzeichnungseinheit 2
+  N1  - Ordnungszustand 1: Ordnungsumfang 1 Ordnungseinheit 1
+  N1  - Ordnungszustand 2: Ordnungsumfang 2 Ordnungseinheit 2
+  N1  - Literatur: Quellenangabe
+  N2  - Zusammenfassung
+  RN  - Bemerkung extern
   TI  - Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]
+  UR  - URL 1
+  UR  - URL 2
+  UR  - https://www.dla-marbach.de/find/opac/id/BF00000001/
   ER  -
 extent: Umfang
 filterAuthorityRelation_mv:
@@ -214,8 +247,10 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  DB  - Z:Öffentlicher Bestand 2
   ID  - BF00000002
   TI  - Z:Öffentlicher Bestand 2
+  UR  - https://www.dla-marbach.de/find/opac/id/BF00000002/
   ER  -
 filterCollection_mv: Z:Öffentlicher Bestand 2
 filterMultipart: true
@@ -246,8 +281,10 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  DB  - Z:Vertraulicher Bestand
   ID  - BF00000003
   TI  - Z:Vertraulicher Bestand
+  UR  - https://www.dla-marbach.de/find/opac/id/BF00000003/
   ER  -
 filterCollection_mv: Z:Vertraulicher Bestand
 filterMultipart: true
@@ -287,8 +324,16 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  A2  - Person 1
+  A2  - Körperschaft 1
+  AU  - Person 2
+  AU  - Körperschaft 2
+  DB  - Facette Personen und Körperschaften
   ID  - BF00000004
+  KW  - Person 1 (1982–2001)
+  KW  - Körperschaft 1
   TI  - Facette Personen und Körperschaften
+  UR  - https://www.dla-marbach.de/find/opac/id/BF00000004/
   ER  -
 filterAuthorityRelation_mv:
   - Person 1 (1982–2001)␝Über
