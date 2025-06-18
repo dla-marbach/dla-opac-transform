@@ -83,8 +83,8 @@ corporationBy_id_mv:
   - KS00000002
   - KS99999999
 corporationBy_role_mv:
-  - Link Körperschaft 1 Typ
-  - Link Körperschaft 2 Typ
+  - Verfasser/Urheber
+  - Behandelte Person/Körperschaft
   - ␣
 country_mv:
   - Land 1
@@ -129,11 +129,49 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  A2  - Person 2
+  A2  - Körperschaft 2
+  A2  - Person 1
+  A2  - Körperschaft 1
+  AU  - Person 1
+  AU  - Körperschaft 1
   CY  - Verlagsort 1; Verlagsort 2
+  DA  - 2023
+  DB  - Z:Öffentlicher Bestand 1; Z:Öffentlicher Bestand 2
   ID  - AK00000001
   ET  - Ausgabebezeichnung Vorlageform
   IS  - Zeitschrift Heft
+  KW  - Thesaurus-Begriff 1
+  KW  - Thesaurus-Begriff 2
+  KW  - Basisnotation 1
+  KW  - Basisnotation 2
+  KW  - Autorenschema 1
+  KW  - Autorenschema 2
+  KW  - Person 1 (1982–2001)
+  KW  - Person 2 (1982–2001)
+  KW  - Körperschaft 1
+  KW  - Körperschaft 2
+  KW  - Bibliotheksdokument 1
+  KW  - Vertrauliches Bibliotheksdokument 2
+  LA  - Sprache 1
+  LA  - Sprache 2
+  LA  - Sprache Original 1
+  LA  - Sprache Original 2
+  M2  - Erweiterte physikalische Form
+  M2  - Medienart 1
+  M2  - Medienart 2
+  M2  - Buchumschlag
+  M3  - Gattung 1
+  M3  - Gattung 2
+  M3  - Veröffentlichungsart 1
+  M3  - Veröffentlichungsart 2
   N1  - Umfang: Umfang; Illustrationen 1, Illustrationen 2; Begleitmaterial
+  N1  - Erscheinungsort: Verlagsort 1
+  N1  - Erscheinungsort: Verlagsort 2
+  N1  - Erscheinungsort: Hochschulschrift 1 Ort
+  N1  - Erscheinungsort: Hochschulschrift 2 Ort
+  N1  - Schlagwort: Thesaurus-Begriff 1
+  N1  - Provenienzort: Thesaurus-Begriff 1
   N1  - Fußnote 1
   N1  - Fußnote 2
   N1  - Bemerkungen: Bemerkung extern
@@ -174,10 +212,10 @@ filterAuthorityRelation_mv:
   - Körperschaft 1 (1982)␝Unter
   - Körperschaft 2␝Unter
 filterAuthorityRole_mv:
-  - Person 1 (1982–2001)␝Link Person 1 Typ
-  - Person 2 (1982–2001)␝Link Person 2 Typ
-  - Körperschaft 1 (1982)␝Link Körperschaft 1 Typ
-  - Körperschaft 2␝Link Körperschaft 2 Typ
+  - Person 1 (1982–2001)␝Verfasser/Urheber
+  - Person 2 (1982–2001)␝Behandelte Person/Körperschaft
+  - Körperschaft 1 (1982)␝Verfasser/Urheber
+  - Körperschaft 2␝Behandelte Person/Körperschaft
   - Person 1 (1982–2001)␝Bestandsbildner/Vorbesitzer
   - Person 2 (1982–2001)␝Bestandsbildner/Vorbesitzer
   - Körperschaft 1 (1982)␝Bestandsbildner/Vorbesitzer
@@ -373,8 +411,8 @@ personBy_id_mv:
   - PE00000002
   - PE99999999
 personBy_role_mv:
-  - Link Person 1 Typ
-  - Link Person 2 Typ
+  - Verfasser/Urheber
+  - Behandelte Person/Körperschaft
   - ␣
 publicationHistory: Erscheinungsverlauf bei Zeitschriften und Reihen
 publisherOriginalLocation_mv:
@@ -507,6 +545,8 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  A2  - Person 1
+  A2  - Person 2
   ID  - AK00001001
   TI  - Zwei verknüpfte Personen mit Indexloch in der Mitte
   UR  - https://www.dla-marbach.de/find/opac/id/AK00001001/
@@ -555,6 +595,7 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  A2  - Person 1
   ID  - AK00001002
   TI  - Eine verknüpfte Person mit Indexloch am Anfang
   UR  - https://www.dla-marbach.de/find/opac/id/AK00001002/
@@ -597,6 +638,9 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  A2  - Person 1
+  A2  - Person 2
+  A2  - Person 3
   ID  - AK00001003
   TI  - Drei verknüpfte Personen mit nur einer Funktion
   UR  - https://www.dla-marbach.de/find/opac/id/AK00001003/
@@ -651,6 +695,8 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  A2  - Person 1
+  A2  - Person 2
   ID  - AK00001004
   TI  - Zwei verknüpfte Personen mit vier Funktionen (Funktion 3 und 4 sowie Indexloch überschüssig)
   UR  - https://www.dla-marbach.de/find/opac/id/AK00001004/
@@ -886,6 +932,7 @@ exportMODS: |-
 exportRIS: |-
   TY  - GEN
   ID  - AK00002004
+  M2  - Audio-CD
   TI  - Von drei Codes in categoryMedia_mv bleibt nur CD erhalten
   UR  - https://www.dla-marbach.de/find/opac/id/AK00002004/
   ER  -
@@ -1011,6 +1058,7 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  DA  - 1968/05/22
   ID  - AK00003001
   PY  - 1968-05-22
   TI  - Konvertierung von 19680522 in 1968-05-22
@@ -1047,6 +1095,7 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  DA  - 1968/05
   ID  - AK00003002
   PY  - 1968-05
   TI  - Konvertierung von 19680500 in 1968-05
@@ -1083,6 +1132,7 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  DA  - 1968
   ID  - AK00003003
   PY  - 1968
   TI  - Konvertierung von 19680000 in 1968
@@ -1596,6 +1646,10 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  A2  - Person 1
+  A2  - Person 2
+  A2  - Körperschaft 1
+  A2  - Körperschaft 2
   ID  - AK00006001
   TI  - Fehlende Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: -) und zwei Körperschaften (1: urheber, 2: beteiligt)
   UR  - https://www.dla-marbach.de/find/opac/id/AK00006001/
@@ -1659,6 +1713,10 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  A2  - Person 1
+  A2  - Person 2
+  A2  - Körperschaft 1
+  A2  - Körperschaft 2
   ID  - AK00006002
   TI  - Zusätzliche Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: urheber) und zwei Körperschaften (1: urheber, 2: beteiligt)
   UR  - https://www.dla-marbach.de/find/opac/id/AK00006002/
@@ -1923,6 +1981,8 @@ exportRIS: |-
   TY  - GEN
   ID  - AK00000071
   TI  - Verknüpfte Digitale Objekte
+  UR  - https://digital.dla-marbach.de/viewer/image/BF00043389/0015/?media_thumbnail=BF00043389_0015.tif&media_access=public
+  UR  - https://digital.dla-marbach.de/viewer/image/BF00043389/?media_access=public
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000071/
   ER  -
 filterDigital: true
@@ -1971,6 +2031,7 @@ exportRIS: |-
   TY  - GEN
   ID  - AK00000072
   TI  - Das erste verknüpfte digitale Objekt auf Exemplarebene wird kopiert
+  UR  - https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf?media_access=public
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000072/
   ER  -
 filterSource: Bibliotheksmaterialien
@@ -2013,6 +2074,10 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  A2  - Person 1
+  A2  - Körperschaft 1
+  A2  - Person 7
+  A2  - Körperschaft 7
   ID  - AK00000063
   TI  - Facette Personen und Körperschaften
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000063/
@@ -2076,6 +2141,10 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  A2  - Person 2
+  A2  - Körperschaft 2
+  AU  - Person 1
+  AU  - Körperschaft 1
   ID  - AK00000064
   TI  - Facette Personen und Körperschaften
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000064/
@@ -2135,7 +2204,23 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  A2  - Person 3
+  A2  - Person 4
+  A2  - Körperschaft 3
+  A2  - Körperschaft 4
+  AU  - Person 1
+  AU  - Person 2
+  AU  - Körperschaft 1
+  AU  - Körperschaft 2
   ID  - AK00000065
+  KW  - Person 1 (1982–2001)
+  KW  - Person 2 (1982–2001)
+  KW  - Person 3 (1982–2001)
+  KW  - Person 4
+  KW  - Körperschaft 1
+  KW  - Körperschaft 2
+  KW  - Körperschaft 3
+  KW  - Körperschaft 4
   TI  - Facette Personen und Körperschaften Systematikketten
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000065/
   ER  -
@@ -2200,7 +2285,20 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  A2  - Person 1
+  A2  - Person 2
+  A2  - Körperschaft 1
+  A2  - Körperschaft 2
+  A2  - Person 3
+  A2  - Person 4
+  A2  - Körperschaft 3
+  A2  - Körperschaft 4
+  A2  - Person 5
+  A2  - Person 6
+  A2  - Körperschaft 5
+  A2  - Körperschaft 6
   ID  - AK00000066
+  N1  - Provenienzort: Thesaurus-Begriff 1
   TI  - Facette Personen und Körperschaften Provenienzketten über Exemplare
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000066/
   ER  -
@@ -2278,6 +2376,7 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  DA  - 1982/05/22
   ID  - AK00000081
   N2  - 1982-05-22
   TI  - Facette Zeit: Sendedatum
@@ -2318,6 +2417,7 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  DA  - 1999
   ID  - AK00000082
   N2  - 1999
   TI  - Facette Zeit: Provenienzketten
@@ -2359,6 +2459,9 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  DA  - 1981
+  DA  - 1982
+  DA  - 2011
   ID  - AK00000083
   N2  - 1981
   N2  - [1982 TO 2011]
@@ -2403,6 +2506,7 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  DA  - 1900/02/29
   ID  - AK00000084
   N2  - 1900 kein Schaltjahr
   PY  - 1900-02-29
@@ -2438,6 +2542,8 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  DA  - 2010
+  DA  - 2011
   ID  - AK00000085
   N2  - Zeitspanne in falscher Reihenfolge
   TI  - Facette Zeit: invalide Zeitspanne
@@ -2482,6 +2588,12 @@ exportMODS: |-
 exportRIS: |-
   TY  - GEN
   ID  - AK00000061
+  M2  - Beitrag
+  M3  - Epik
+  M3  - Schwank
+  M3  - Rundfunkmanuskript
+  M3  - Aufsatz
+  M3  - Literarisches Weblog
   N2  - Epik
   N2  - Schwank
   N2  - Rundfunkmanuskript
@@ -2533,6 +2645,7 @@ exportMODS: |-
 exportRIS: |-
   TY  - GEN
   ID  - AK00000101
+  N1  - Fundort: Berlin
   TI  - Facette Ort: Berlin␝Fundort
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000101/
   ER  -
@@ -2578,6 +2691,10 @@ exportRIS: |-
   TY  - GEN
   AV  - nur bibliographischer Nachweis, nicht im Bestand des DLA
   ID  - AK00000062
+  M2  - Noten
+  M2  - Buch
+  M2  - Buchumschlag
+  M3  - Musikalia
   N2  - Noten
   N2  - Buch
   N2  - Buchumschlag
@@ -2626,6 +2743,7 @@ exportMODS: |-
 exportRIS: |-
   TY  - GEN
   ID  - AK00000091
+  M2  - Online-Ressource
   TI  - Facette Medientyp: Daten
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000091/
   ER  -
@@ -2698,6 +2816,7 @@ exportMODS: |-
 exportRIS: |-
   TY  - GEN
   ID  - AK00000094
+  M2  - Audiodatei
   TI  - Facette Medientyp: Audio
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000094/
   ER  -
@@ -2731,6 +2850,7 @@ exportMODS: |-
 exportRIS: |-
   TY  - GEN
   ID  - AK00000095
+  M2  - Videokassette
   TI  - Facette Medientyp: Video
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000095/
   ER  -
