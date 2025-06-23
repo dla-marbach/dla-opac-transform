@@ -42,11 +42,19 @@
               v
             )
           ),
-          w,
-          if(
-            w.startsWith('␝'),
-            null,
-            w
+          vv,
+          with(
+            if(
+              vv.startsWith('␝'),
+              null,
+              vv
+            ),
+            vvv,
+            if(
+              vvv.find('[').length() != vvv.find(']').length(),
+              vvv.replace('[','').replace(']',''),
+              vvv
+            )
           )
         )
       ).join('␟'),
