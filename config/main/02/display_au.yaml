@@ -9,7 +9,7 @@
     forNonBlank(
       cells['note'].value,
       x,
-      x,
+      x.replace('\n', '. '),
       'ohne Titel'
     )
   newColumnName: display
