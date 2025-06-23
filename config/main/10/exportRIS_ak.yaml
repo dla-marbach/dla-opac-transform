@@ -47,8 +47,8 @@
     + forNonBlank(cells['display'].value, v, 'TI  - ' + v.replace('\n','.') + '\n', '')
     + forNonBlank(forEachIndex(cells['titleOther_text_mv'].value.split('␟'), i, v, forNonBlank(cells['titleOther_type_mv'].value.split('␟')[i], z, if(and(v != '␣', z == '370n'), 'T2  - ' + v.replace('\n','.'), null), null)).join('\n'), x, x + '\n', '')
     + if(cells['category'].value.contains('Zeitschrift'), '', forNonBlank(filter(cells['parent_display_mv'].value.split('␟'), v, v != '␣').join('; '), x, 'T3  - ' + x.replace('\n','.') + '\n', ''))
-    + forNonBlank(forEach(cells['website_url_mv'].value.split('␟'), v, if(v != '␣', 'UR  - ' + v.replace('\n','.'), null)).join('\n'), x, x + '\n', '')
-    + forNonBlank(forEach(cells['digitalObject_hyperlink_mv'].value.split('␟'), v, 'UR  - ' + v).join('\n'), x, x + '\n', '')
+    + forNonBlank(forEach(cells['website_url_mv'].value.split('␟'), v, if(v != '␣', 'UR  - ' + v, null)).join('\n'), x, x + '\n', '')
+    + forNonBlank(forEach(cells['digitalObject_hyperlink_mv'].value.split('␟'), v, if(v != '␣', 'UR  - ' + v, null)).join('\n'), x, x + '\n', '')
     + forNonBlank(cells['id'].value, v, 'UR  - ' + 'https://www.dla-marbach.de/find/opac/id/' + v + '/' + '\n', '')
     + forNonBlank(filter(cells['parentVolume_mv'].value.split('␟'), v, v != '␣').join('; '), x, 'VL  - ' + x + '\n', '')
     + 'ER  -'

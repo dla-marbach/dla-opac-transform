@@ -25,7 +25,7 @@
     + forNonBlank(cells['content'].value, v, 'N2  - ' + v + '\n', '')
     + forNonBlank(cells['note'].value, v, 'RN  - ' + v + '\n', '')
     + forNonBlank(cells['display'].value, v, 'TI  - ' + v.replace('\n','.') + '\n', '')
-    + forNonBlank(forEach(cells['digitalObject_hyperlink_mv'].value.split('␟'), v, 'UR  - ' + v).join('\n'), x, x + '\n', '')
+    + forNonBlank(forEach(cells['digitalObject_hyperlink_mv'].value.split('␟'), v, if(v != '␣', 'UR  - ' + v, null)).join('\n'), x, x + '\n', '')
     + forNonBlank(forEach(cells['website_url_mv'].value.split('␟'), v, if(v != '␣', 'UR  - ' + v, null)).join('\n'), x, x + '\n', '')
     + forNonBlank(cells['id'].value, v, 'UR  - ' + 'https://www.dla-marbach.de/find/opac/id/' + v + '/' + '\n', '')
     + 'ER  -'
