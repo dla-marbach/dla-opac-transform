@@ -60,7 +60,7 @@ task yaml
 
 ## Vorgehen bei Erweiterungen
 
-1. Solr [Schema](config/solr/schema.xml) erweitern und ggf. [Konfiguration](config/solr/solrconfig.xml) anpassen
+1. Solr [Schema](config/solr/schema.xml) erweitern
 2. Beispieldaten ergänzen in [example/input](example/input)
 3. OpenRefine Transformationsregeln ergänzen in [config/main](config/main).
     * Dazu ggf. orcli im interaktiven Modus starten mit `task dev`
@@ -79,7 +79,11 @@ task yaml
     task solr
     ```
 7. Dokumentation in [docs/internformat.csv](docs/internformat.csv)
-8. schemaVersion in [scripts/main.sh](scripts/main.sh) hochzählen
-9. Git Commit und Push
-10. GitHub [Release Notes](https://github.com/dla-marbach/dla-opac-transform/releases)
-11. Konfiguration des Solr auf Produktivsystem aktualisieren
+8. Solr [Konfiguration](config/solr/solrconfig.xml): Standardwert für Feldliste (fl) anpassen
+   ```sh
+   tail -n +2 docs/internformat.csv | cut -d , -f 2 | sort | uniq | grep -v 'export' | grep -v 'confidential' | head -c -1 | tr '\n' , | sed 's/,/, /g'
+   ```
+9. schemaVersion in [scripts/main.sh](scripts/main.sh) hochzählen
+10. Git Commit und Push
+11. GitHub [Release Notes](https://github.com/dla-marbach/dla-opac-transform/releases)
+12. Konfiguration des Solr auf Produktivsystem aktualisieren
