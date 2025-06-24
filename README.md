@@ -78,12 +78,16 @@ task yaml
     ```sh
     task solr
     ```
-7. Dokumentation in [docs/internformat.csv](docs/internformat.csv)
-8. Solr [Konfiguration](config/solr/solrconfig.xml): Standardwert für Feldliste (fl) anpassen
+7. Bei Änderung an exportDC oder exportMODS Daten validieren
+   ```sh
+   task validate
+   ```
+8. Dokumentation in [docs/internformat.csv](docs/internformat.csv)
+9. Solr [Konfiguration](config/solr/solrconfig.xml): Standardwert für Feldliste (fl) anpassen
    ```sh
    tail -n +2 docs/internformat.csv | cut -d , -f 2 | sort | uniq | grep -v 'export' | grep -v 'confidential' | head -c -1 | tr '\n' , | sed 's/,/, /g'
    ```
-9. schemaVersion in [scripts/main.sh](scripts/main.sh) hochzählen
-10. Git Commit und Push
-11. GitHub [Release Notes](https://github.com/dla-marbach/dla-opac-transform/releases)
-12. Konfiguration des Solr auf Produktivsystem aktualisieren
+10. schemaVersion in [scripts/main.sh](scripts/main.sh) hochzählen
+11. Git Commit und Push
+12. GitHub [Release Notes](https://github.com/dla-marbach/dla-opac-transform/releases)
+13. Konfiguration des Solr auf Produktivsystem aktualisieren

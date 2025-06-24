@@ -133,6 +133,21 @@ tasks:
       - command -v yq
       - test -d {{.DIR}}/output
 
+  validate:
+    desc: Validierung der XML-Dateien
+    cmds:
+      - |
+        # Zeitstempel zu Beginn
+        mkdir -p .task/timer; date -u +%s.%N > ".task/timer/{{.TASK}}"
+      - python3 scripts/validate_dc_csv.py "{{.DIR}}"/output/oai-dc.csv
+      - python3 scripts/validate_mods_csv.py "{{.DIR}}"/output/oai-mods.csv
+      - |
+        # Laufzeit berechnen
+        >&2 echo "{{.TASK}} run time: $(awk -v now=$(date -u +%s.%N) -v timer=$(cat .task/timer/{{.TASK}}) 'BEGIN {print now-timer}') seconds"
+    preconditions:
+      - command -v python3
+      - test -d {{.DIR}}/output
+
   install:
     desc: install all requirements into subdirectories
     cmds:
