@@ -25,7 +25,7 @@ def validate_mods_xml(xml_content):
         os.remove(tmp_path)
 
 def main(csv_path):
-    has_error = False
+    error_count = 0
     with open(csv_path, newline='', encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
@@ -37,8 +37,11 @@ def main(csv_path):
             ok, err = validate_mods_xml(mods_xml)
             if err:
                 print(f"{rec_id}: FEHLER\n{err}\n")
-                has_error = True
-    if has_error:
+                error_count += 1
+                if error_count >= 100:
+                    print("Abbruch nach 100 Validierungsfehlern.")
+                    sys.exit(1)
+    if error_count > 0:
         sys.exit(1)
 
 if __name__ == "__main__":
