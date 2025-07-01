@@ -14,17 +14,401 @@
   expression: |
     grel:
     '<mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">' + '\n' +
-    forNonBlank(cells['display'].value, v,
+
     '  <titleInfo>' + '\n' +
-    '    <title>' + v.escape('xml') + '</title>' + '\n' +
-    '  </titleInfo>' + '\n'
+    '    <title>' + forNonBlank(cells['titleMain_text'].value, v, v.replace(' [[Elektronische Ressource]]', '').escape('xml'), cells['display'].value.escape('xml')) + '</title>' + '\n' +
+    forNonBlank(cells['titleSuffix'].value, v,
+      '    <subTitle>' + v.escape('xml') + '</subTitle>' + '\n'
     , '') +
-    forNonBlank(cells['id'].value, v,
+    '  </titleInfo>' + '\n' +
+
+    forNonBlank(cells['titleOther_type_mv'].value, x,
+      forEachIndex(x.split('␟'), i, z,
+        if(z == '370n',
+          '  <titleInfo type="alternative">' + '\n' +
+          forNonBlank(cells['titleOther_text_mv'].value.split('␟')[i], v,
+          '    <title>' + v.escape('xml') + '</title>' + '\n'
+              , '') +
+          '  </titleInfo>' + '\n'
+        , '') +
+        if(z == '340n',
+          '  <titleInfo type="alternative">' + '\n' +
+          forNonBlank(cells['titleOther_text_mv'].value.split('␟')[i], v,
+            '    <title>' + v.escape('xml') + '</title>' + '\n' +
+            forNonBlank(
+              if(cells['titleOther_type_mv'].value.split('␟')[i+1] == '341n',
+                forNonBlank(cells['titleOther_text_mv'].value.split('␟')[i+1], v,
+                  '    <subTitle>' + v.escape('xml') + '</subTitle>' + '\n'
+                , '')
+              , ''),
+            y, y, '')
+          , '') +
+          '  </titleInfo>' + '\n'
+        , '') +
+        if(z == '303n',
+          '  <titleInfo type="uniform">' + '\n' +
+          forNonBlank(cells['titleOther_text_mv'].value.split('␟')[i], v,
+            '    <title>' + forNonBlank(cells['work_display_mv'].value.split('␟')[0].replace('␣', ''), w, w.escape('xml'), v.escape('xml')) + '</title>' + '\n'
+          , '') +
+          '  </titleInfo>' + '\n'
+        , '')
+      ).join('')
+    , '') +
+
+    forNonBlank(cells['personBy_id_mv'].value, x,
+      forEachIndex(x.split('␟'), i, z,
+        forNonBlank(cells['personBy_display_mv'].value.split('␟')[i].replace('␣', ''), v,
+          '  <name type="personal">' + '\n' +
+          '    <displayForm>' + v.escape('xml') + '</displayForm>' + '\n' +
+          forNonBlank(z.cross('pe','id')[0].cells['gnd_id_mv'].value, y,
+            forEach(y.split('␟'), v, if(v != '␣',
+              '    <nameIdentifier type="gnd">' + v.escape('xml') + '</nameIdentifier>' + '\n'
+            , '')).join('')
+          , '') +
+          forNonBlank(z.cross('pe','id')[0].cells['dateLifespanStart'].value, v,
+          '    <namePart type="date">' + v.escape('xml') + forNonBlank(z.cross('pe','id')[0].cells['dateLifespanEnd'].value, v, ' — ' + v.escape('xml'), '') + '</namePart>' + '\n'
+          , '') +
+          forNonBlank(cells['personBy_role_mv'].value.split('␟')[i].replace('␣', ''), v,
+          '    <role>' + '\n' +
+          '      <roleTerm type="text">' + v.escape('xml') + '</roleTerm>' + '\n' +
+          '    </role>' + '\n'
+          , '') +
+          '  </name>' + '\n'
+        , '')
+      ).join('')
+    , '') +
+
+    forNonBlank(cells['corporationBy_id_mv'].value, x,
+      forEachIndex(x.split('␟'), i, z,
+        forNonBlank(cells['corporationBy_display_mv'].value.split('␟')[i].replace('␣', ''), v,
+          '  <name type="corporate">' + '\n' +
+          '    <displayForm>' + v.escape('xml') + '</displayForm>' + '\n' +
+          forNonBlank(z.cross('ks','id')[0].cells['gnd_id_mv'].value, y,
+            forEach(y.split('␟'), v, if(v != '␣',
+              '    <nameIdentifier type="gnd">' + v.escape('xml') + '</nameIdentifier>' + '\n'
+            , '')).join('')
+          , '') +
+          forNonBlank(z.cross('ks','id')[0].cells['dateLifespanStart'].value, v,
+          '    <namePart type="date">' + v.escape('xml') + forNonBlank(z.cross('ks','id')[0].cells['dateLifespanEnd'].value, v, ' — ' + v.escape('xml'), '') + '</namePart>' + '\n'
+          , '') +
+          forNonBlank(cells['corporationBy_role_mv'].value.split('␟')[i].replace('␣', ''), v,
+          '    <role>' + '\n' +
+          '      <roleTerm type="text">' + v.escape('xml') + '</roleTerm>' + '\n' +
+          '    </role>' + '\n'
+          , '') +
+          '  </name>' + '\n'
+        , '')
+      ).join('')
+    , '') +
+
+    forNonBlank(cells['corporationByConference_id_mv'].value, x,
+      forEachIndex(x.split('␟'), i, z,
+        forNonBlank(cells['corporationByConference_display_mv'].value.split('␟')[i].replace('␣', ''), v,
+          '  <name type="corporate">' + '\n' +
+          '    <displayForm>' + v.escape('xml') + '</displayForm>' + '\n' +
+          forNonBlank(z.cross('ks','id')[0].cells['gnd_id_mv'].value, y,
+            forEach(y.split('␟'), v, if(v != '␣',
+              '    <nameIdentifier type="gnd">' + v.escape('xml') + '</nameIdentifier>' + '\n'
+            , '')).join('')
+          , '') +
+          forNonBlank(z.cross('ks','id')[0].cells['dateLifespanStart'].value, v,
+          '    <namePart type="date">' + v.escape('xml') + forNonBlank(z.cross('ks','id')[0].cells['dateLifespanEnd'].value, v, ' — ' + v.escape('xml'), '') + '</namePart>' + '\n'
+          , '') +
+          forNonBlank(cells['corporationByConference_role_mv'].value.split('␟')[i].replace('␣', ''), v,
+          '    <role>' + '\n' +
+          '      <roleTerm type="text">' + v.escape('xml') + '</roleTerm>' + '\n' +
+          '    </role>' + '\n'
+          , '') +
+          '  </name>' + '\n'
+        , '')
+      ).join('')
+    , '') +
+
+    forNonBlank(cells['item_id_mv'].value, items,
+      forEach(items.split('␟'), item,
+          forNonBlank(item.cross('au','id')[0].cells['personAt_id_mv'].value, x,
+            forEachIndex(x.split('␟'), i, z,
+              forNonBlank(z.cross('pe','id')[0].cells['display'].value.replace('␣', ''), v,
+                '  <name type="personal">' + '\n' +
+                '    <displayForm>' + v.escape('xml') + '</displayForm>' + '\n' +
+                forNonBlank(z.cross('pe','id')[0].cells['gnd_id_mv'].value, y,
+                  forEach(y.split('␟'), v, if(v != '␣',
+                    '    <nameIdentifier type="gnd">' + v.escape('xml') + '</nameIdentifier>' + '\n'
+                  , '')).join('')
+                , '') +
+                forNonBlank(z.cross('pe','id')[0].cells['dateLifespanStart'].value, v,
+                '    <namePart type="date">' + v.escape('xml') + forNonBlank(z.cross('pe','id')[0].cells['dateLifespanEnd'].value, v, ' — ' + v.escape('xml'), '') + '</namePart>' + '\n'
+                , '') +
+                '    <role>' + '\n' +
+                '      <roleTerm type="code" authority="marcrelator">' + 'cre' + '</roleTerm>' + '\n' +
+                '    </role>' + '\n' +
+                '  </name>' + '\n'
+              , '')
+            ).join('')
+          , '')
+      ).join('')
+    , '') +
+
+    forNonBlank(cells['item_id_mv'].value, items,
+      forEach(items.split('␟'), item,
+          forNonBlank(item.cross('au','id')[0].cells['corporationAt_id_mv'].value, x,
+            forEachIndex(x.split('␟'), i, z,
+              forNonBlank(z.cross('ks','id')[0].cells['display'].value.replace('␣', ''), v,
+                '  <name type="corporate">' + '\n' +
+                '    <displayForm>' + v.escape('xml') + '</displayForm>' + '\n' +
+                forNonBlank(z.cross('ks','id')[0].cells['gnd_id_mv'].value, y,
+                  forEach(y.split('␟'), v, if(v != '␣',
+                    '    <nameIdentifier type="gnd">' + v.escape('xml') + '</nameIdentifier>' + '\n'
+                  , '')).join('')
+                , '') +
+                forNonBlank(z.cross('ks','id')[0].cells['dateLifespanStart'].value, v,
+                '    <namePart type="date">' + v.escape('xml') + forNonBlank(z.cross('ks','id')[0].cells['dateLifespanEnd'].value, v, ' — ' + v.escape('xml'), '') + '</namePart>' + '\n'
+                , '') +
+                '    <role>' + '\n' +
+                '      <roleTerm type="code" authority="marcrelator">' + 'cre' + '</roleTerm>' + '\n' +
+                '    </role>' + '\n' +
+                '  </name>' + '\n'
+              , '')
+            ).join('')
+          , '')
+      ).join('')
+    , '') +
+
+    forNonBlank(cells['filterMedium_mv'].value, x,
+      forEach(x.split('␟'), v,
+        '  <typeOfResource>' + v.escape('xml') + '</typeOfResource>' + '\n'
+      ).join('')
+    , '') +
+
+    forNonBlank(cells['filterFormContent_mv'].value, x,
+      forEach(x.split('␟'), v,
+        '  <genre>' + v.escape('xml') + '</genre>' + '\n'
+      ).join('')
+    , '') +
+
+    forNonBlank(cells['filterFormContent_mv'].value, x,
+      forEach(x.split('␟'), v,
+        '  <genre>' + v.escape('xml') + '</genre>' + '\n'
+      ).join('')
+    , '') +
+
+    forNonBlank(
+      forNonBlank(cells['filterLocationType_mv'].value, x,
+        forEach(x.split('␟'), z,
+          if(z.split('␝')[1] == 'Erscheinungsort',
+            '    <place>' + '\n' +
+            '      <placeTerm type="text">' + z.split('␝')[0].escape('xml') + '</placeTerm>' + '\n' +
+            '    </place>' + '\n'
+          , '')
+        ).join('')
+      , '') +
+      forNonBlank(cells['publisherOriginal_text_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '    <publisher>' + v.escape('xml') + '</publisher>' + '\n'
+        , '')).join('')
+      , '') +
+      forNonBlank(cells['dateOrigin'].value, v,
+          '    <dateIssued encoding="iso8601" keyDate="yes">' + v.escape('xml') + '</dateIssued>' + '\n'
+      , '') +
+      forNonBlank(cells['dateOriginComment_mv'].value.split('␟')[0], v,
+          '    <displayDate>' + v.escape('xml') + '</displayDate>' + '\n'
+      , '') +
+      forNonBlank(cells['scholarlyPublication_date_mv'].value.split('␟')[0], v,
+          '    <dateOther type="issuance">' + v.escape('xml') + '</dateOther>' + '\n'
+      , '') +
+      forNonBlank(cells['edition'].value, v,
+          '    <edition>' + v.escape('xml') + '</edition>' + '\n'
+      , '')
+      , originInfo,
+      '  <originInfo eventType="publication">' + '\n' + originInfo + '  </originInfo>' + '\n'
+    , '') +
+
+    forNonBlank(cells['filterLanguageType_mv'].value, x,
+      forEach(x.split('␟'), z,
+        if(z.split('␝')[1] == 'Original',
+          '  <language>' + '\n' +
+          '    <languageTerm type="code">' + z.split('␝')[0].escape('xml') + '</languageTerm>' + '\n' +
+          '  </language>' + '\n'
+        , '')
+      ).join('')
+    , '') +
+
+    forNonBlank(
+      forNonBlank(cells['extentFormat'].value, v,
+          '    <form type="format">' + v.escape('xml') + '</form>' + '\n'
+      , '') +
+      forNonBlank(cells['categoryMedium_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '    <form type="media">' + v.escape('xml') + '</form>' + '\n'
+        , '')).join('')
+      , '') +
+      forNonBlank(cells['extent'].value, v,
+          '    <extent>' + v.escape('xml') + '</extent>' + '\n'
+      , '') +
+      forNonBlank(cells['description_text_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '    <note type="physical description">' + v.escape('xml') + '</note>' + '\n'
+        , '')).join('')
+      , '')
+      , physicalDescription,
+      '  <physicalDescription>' + '\n' + physicalDescription + '  </physicalDescription>' + '\n'
+    , '') +
+
+    forNonBlank(cells['noteFootnote_text_mv'].value, x,
+      forEach(x.split('␟'), v, if(v != '␣',
+        '  <note type="footnotes">' + v.escape('xml') + '</note>' + '\n'
+      , '')).join('')
+    , '') +
+
+    forNonBlank(cells['noteContent_mv'].value, x,
+      forEach(x.split('␟'), v, if(v != '␣',
+        '  <note type="summary">' + v.escape('xml') + '</note>' + '\n'
+      , '')).join('')
+    , '') +
+
+    forNonBlank(cells['filterSubject_mv'].value, x,
+      forEach(x.split('␟'), v,
+        '  <subject>' + '\n' +
+        '    <topic>' + v.escape('xml') + '</topic>' + '\n' +
+        '  </subject>' + '\n'
+      ).join('')
+    , '') +
+
+    forNonBlank(cells['filterLocationType_mv'].value, x,
+      forEach(x.split('␟'), z,
+        if(z.split('␝')[1] == 'Schlagwort',
+          '  <subject>' + '\n' +
+          '    <geographic>' + z.split('␝')[0].escape('xml') + '</geographic>' + '\n' +
+          '  </subject>' + '\n'
+        , '')
+      ).join('')
+    , '') +
+
+    forNonBlank(cells['corporationAbout_display_mv'].value, x,
+      forEach(x.split('␟'), v, if(v != '␣',
+          '  <subject>' + '\n' +
+          '    <name type="corporate">' + '\n' +
+          '      <displayForm>' + v.escape('xml') + '</displayForm>' + '\n' +
+          '    </name>' + '\n' +
+          '  </subject>' + '\n'
+      , '')).join('')
+    , '') +
+
+    forNonBlank(cells['classification_display_mv'].value, x,
+      forEach(x.split('␟'), v, if(v != '␣',
+        '  <classification authority="DE-Mar1">' + v.escape('xml') + '</classification>' + '\n'
+      , '')).join('')
+    , '') +
+
+    if(cells['categorySub'].value == 'Einzelbestandteil / unselbständiges Werk',
+      forNonBlank(cells['parentTitleOriginal_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <relatedItem type="host">' + '\n' +
+          '    <titleInfo>' + '\n' +
+          '      <title>' + v.escape('xml') + '</title>' + '\n' +
+          '    </titleInfo>' + '\n' +
+          '  </relatedItem>' + '\n'
+        , '')).join('')
+      , '')
+    , '') +
+
+    forNonBlank(cells['parent_id_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <relatedItem type="host">' + '\n' +
+          '    <recordInfo>' + '\n' +
+          '      <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">' + v.escape('xml') + '</recordIdentifier>' + '\n' +
+          '    </recordInfo>' + '\n' +
+          '  </relatedItem>' + '\n'
+        , '')).join('')
+    , '') +
+
+    forNonBlank(cells['item_id_mv'].value, items,
+      forEach(items.split('␟'), item,
+        forNonBlank(item.cross('au','id')[0].cells['collection_id_mv'].value, x,
+          forEach(x.split('␟'), v, if(v != '␣',
+            '  <relatedItem type="host">' + '\n' +
+            '    <recordInfo>' + '\n' +
+            '      <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">' + v.escape('xml') + '</recordIdentifier>' + '\n' +
+            '    </recordInfo>' + '\n' +
+            '  </relatedItem>' + '\n'
+          , '')).join('')
+        , '')
+      ).join('')
+    , '') +
+
+    forNonBlank(cells['identifier_type_mv'].value, x,
+      forEachIndex(x.split('␟'), i, z,
+        if(z == '552b',
+          forNonBlank(cells['identifier_id_mv'].value.split('␟')[i], v,
+            '  <identifier type="urn">' + v.escape('xml') + '</identifier>' + '\n'
+          , '')
+        , '') +
+        if(z == '572z',
+          forNonBlank(cells['identifier_id_mv'].value.split('␟')[i], v,
+            '  <identifier type="zdb">' + v.escape('xml') + '</identifier>' + '\n'
+          , '')
+        , '')
+      ).join('')
+    , '') +
+
+    forNonBlank(cells['isbn_mv'].value, x,
+      forEach(x.split('␟'), v, if(v != '␣',
+        '  <identifier type="isbn">' + v.escape('xml') + '</identifier>' + '\n'
+      , '')).join('')
+    , '') +
+
+    forNonBlank(cells['ismn_mv'].value, x,
+      forEach(x.split('␟'), v, if(v != '␣',
+        '  <identifier type="ismn">' + v.escape('xml') + '</identifier>' + '\n'
+      , '')).join('')
+    , '') +
+
+    forNonBlank(cells['issn_mv'].value, x,
+      forEach(x.split('␟'), v, if(v != '␣',
+        '  <identifier type="issn">' + v.escape('xml') + '</identifier>' + '\n'
+      , '')).join('')
+    , '') +
+
+    forNonBlank(cells['vendor_type_mv'].value, x,
+      forEachIndex(x.split('␟'), i, z,
+        if(z == 'K10Plus-PPN',
+          forNonBlank(cells['vendor_id_mv'].value.split('␟')[i], v,
+            '  <identifier type="kxp">' + v.escape('xml') + '</identifier>' + '\n'
+          , '')
+        , '')
+      ).join('')
+    , '') +
+
+    '  <location>' + '\n' +
+    '    <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>' + '\n' +
+    forNonBlank(cells['callNumberBibliographic_mv'].value, x,
+      forEach(x.split('␟'), v, if(v != '␣',
+        '    <shelfLocator>' + v.escape('xml') + '</shelfLocator>' + '\n'
+      , '')).join('')
+    , '') +
+    forNonBlank(cells['item_id_mv'].value, items,
+      forEach(items.split('␟'), item,
+        forNonBlank(item.cross('au','id')[0].cells['callNumberItem'].value, v,
+          '    <shelfLocator>' + v.escape('xml') + forNonBlank(item.cross('au','id')[0].cells['callNumberItemSuffix'].value, v, ' (' + v.escape('xml') + ')', '') + '</shelfLocator>' + '\n'
+        , '')
+      ).join('')
+    , '') +
+    forNonBlank(cells['website_url_mv'].value, x,
+      forEach(x.split('␟'), v, if(v != '␣',
+        '    <url access="object in context">' + v.escape('xml') + '</url>' + '\n'
+      , '')).join('')
+    , '') +
+    forNonBlank(cells['digitalObject_hyperlink_mv'].value, x,
+      forEach(x.split('␟'), v, if(v != '␣',
+        '    <url access="object in context">' + v.escape('xml') + '</url>' + '\n'
+      , '')).join('')
+    , '') +
+    '  </location>' + '\n' +
+    
     '  <recordInfo>' + '\n' +
     '    <recordContentSource authority="marcorg">DE-Mar1</recordContentSource>' + '\n' +
-    '    <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">' + v.escape('xml') + '</recordIdentifier>' + '\n' +
-    '  </recordInfo>' + '\n'
-    , '') +
+    '    <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">' + cells['id'].value.escape('xml') + '</recordIdentifier>' + '\n' +
+    '  </recordInfo>' + '\n' +
     '</mods>'
   newColumnName: exportMODS
   columnInsertIndex: 2 # hinter id und display
