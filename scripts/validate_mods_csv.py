@@ -5,18 +5,18 @@ import os
 import sys
 
 # Verwende lokale XSD-Datei (z.B. mods-3-8.xsd im selben Verzeichnis wie das Script)
-MODS_XSD_LOCAL = os.path.join(os.path.dirname(__file__), "mods-3-8.xsd")
+MODS_XSD_LOCAL = "mods-3-8.xsd"  # Nur Dateiname, kein Pfad
 
 def validate_mods_xml(xml_content):
-    with tempfile.NamedTemporaryFile("w+", suffix=".xml", delete=False) as tmp:
+    script_dir = os.path.dirname(__file__)
+    with tempfile.NamedTemporaryFile("w+", suffix=".xml", delete=False, dir=script_dir) as tmp:
         tmp.write(xml_content)
         tmp.flush()
-        tmp_path = tmp.name
+        tmp_path = os.path.basename(tmp.name)  # Nur Dateiname
     try:
-        # Python 3.4: Kein capture_output, kein text
         result = subprocess.Popen(
             ["xmllint", "--noout", "--schema", MODS_XSD_LOCAL, tmp_path],
-            stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=os.path.dirname(__file__)
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=script_dir
         )
         out, err = result.communicate()
         if result.returncode == 0:
@@ -24,7 +24,7 @@ def validate_mods_xml(xml_content):
         else:
             return False, err.decode("utf-8").strip()
     finally:
-        os.remove(tmp_path)
+        os.remove(os.path.join(script_dir, tmp_path))
 
 def main(csv_path):
     error_count = 0
