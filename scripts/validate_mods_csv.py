@@ -13,30 +13,32 @@ def validate_mods_xml(xml_content):
         tmp.flush()
         tmp_path = tmp.name
     try:
-        result = subprocess.run(
+        # Python 3.4: Kein capture_output, kein text
+        result = subprocess.Popen(
             ["xmllint", "--noout", "--schema", MODS_XSD_LOCAL, tmp_path],
-            capture_output=True, text=True, cwd=os.path.dirname(__file__)
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=os.path.dirname(__file__)
         )
+        out, err = result.communicate()
         if result.returncode == 0:
             return True, ""
         else:
-            return False, result.stderr.strip()
+            return False, err.decode("utf-8").strip()
     finally:
         os.remove(tmp_path)
 
 def main(csv_path):
     error_count = 0
-    with open(csv_path, newline='', encoding="utf-8") as f:
+    with open(csv_path, newline='', mode='r') as f:
         reader = csv.DictReader(f)
         for row in reader:
             rec_id = row.get("id")
             mods_xml = row.get("exportMODS", "")
             if not mods_xml.strip():
-                print(f"{rec_id}: Kein MODS-XML vorhanden.")
+                print("{}: Kein MODS-XML vorhanden.".format(rec_id))
                 continue
             ok, err = validate_mods_xml(mods_xml)
             if err:
-                print(f"{rec_id}: FEHLER\n{err}\n")
+                print("{}: FEHLER\n{}\n".format(rec_id, err))
                 error_count += 1
                 if error_count >= 100:
                     print("Abbruch nach 100 Validierungsfehlern.")
