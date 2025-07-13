@@ -86,10 +86,6 @@ AK00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
   <genre>Gattung 2</genre>
   <genre>Veröffentlichungsart 1</genre>
   <genre>Veröffentlichungsart 2</genre>
-  <genre>Gattung 1</genre>
-  <genre>Gattung 2</genre>
-  <genre>Veröffentlichungsart 1</genre>
-  <genre>Veröffentlichungsart 2</genre>
   <originInfo eventType=""publication"">
     <place>
       <placeTerm type=""text"">Verlagsort 1</placeTerm>
@@ -1009,11 +1005,6 @@ AK00000061,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http
   <genre>Rundfunkmanuskript</genre>
   <genre>Aufsatz</genre>
   <genre>Literarisches Weblog</genre>
-  <genre>Epik</genre>
-  <genre>Schwank</genre>
-  <genre>Rundfunkmanuskript</genre>
-  <genre>Aufsatz</genre>
-  <genre>Literarisches Weblog</genre>
   <note type=""summary"">Epik</note>
   <note type=""summary"">Schwank</note>
   <note type=""summary"">Rundfunkmanuskript</note>
@@ -1046,7 +1037,6 @@ AK00000062,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http
   <typeOfResource>Noten</typeOfResource>
   <typeOfResource>Buch</typeOfResource>
   <typeOfResource>Buchumschlag</typeOfResource>
-  <genre>Musikalia</genre>
   <genre>Musikalia</genre>
   <note type=""summary"">Noten</note>
   <note type=""summary"">Buch</note>
@@ -1126,8 +1116,93 @@ BF00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
   <titleInfo>
     <title>Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]</title>
   </titleInfo>
+  <name type=""personal"">
+    <displayForm>Person 3 (1982–2001)</displayForm>
+    <namePart type=""date"">1982 — 2001</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
+    <displayForm>Person 4</displayForm>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <displayForm>Körperschaft 5</displayForm>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <displayForm>Körperschaft 6</displayForm>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
+    </role>
+  </name>
+  <typeOfResource collection=""yes"">Bestand</typeOfResource>
+  <genre>Bestandsart</genre>
+  <originInfo eventType=""collection"">
+    <dateCreated point=""start"">1982-05-22</dateCreated>
+    <dateCreated point=""end"">2001-01-01</dateCreated>
+  </originInfo>
+  <physicalDescription>
+    <extent>Umfang</extent>
+  </physicalDescription>
+  <tableOfContents>Rotes Buch 1. Rotes Buch 2  </tableOfContents>
+  <subject>
+    <topic>Thesaurus-Begriff 1</topic>
+  </subject>
+  <subject>
+    <topic>Thesaurus-Begriff 2</topic>
+  </subject>
+  <subject>
+    <topic>Person 1 (1982–2001)</topic>
+  </subject>
+  <subject>
+    <topic>Person 2 (1982–2001)</topic>
+  </subject>
+  <subject>
+    <topic>Körperschaft 3</topic>
+  </subject>
+  <subject>
+    <topic>Körperschaft 4</topic>
+  </subject>
+  <subject>
+    <geographic>Thesaurus-Begriff 1</geographic>
+  </subject>
+  <subject>
+    <name type=""personal"">
+      <displayForm>Person 1 (1982–2001)</displayForm>
+    </name>
+  </subject>
+  <subject>
+    <name type=""personal"">
+      <displayForm>Person 2 (1982–2001)</displayForm>
+    </name>
+  </subject>
+  <subject>
+    <name type=""corporate"">
+      <displayForm>Körperschaft 3</displayForm>
+    </name>
+  </subject>
+  <subject>
+    <name type=""corporate"">
+      <displayForm>Körperschaft 4</displayForm>
+    </name>
+  </subject>
+  <relatedItem type=""host"">
+    <recordInfo>
+      <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">BF00000002</recordIdentifier>
+    </recordInfo>
+  </relatedItem>
+  <location>
+    <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+    <shelfLocator>Z:Öffentlicher Bestand 1</shelfLocator>
+  </location>
   <recordInfo>
-    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordContentSource authority=""marcorg"">DE-2498</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">BF00000001</recordIdentifier>
   </recordInfo>
 </mods>"
@@ -1135,8 +1210,13 @@ BF00000002,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http
   <titleInfo>
     <title>Z:Öffentlicher Bestand 2</title>
   </titleInfo>
+  <typeOfResource collection=""yes"">Bestand</typeOfResource>
+  <location>
+    <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+    <shelfLocator>Z:Öffentlicher Bestand 2</shelfLocator>
+  </location>
   <recordInfo>
-    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordContentSource authority=""marcorg"">DE-2498</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">BF00000002</recordIdentifier>
   </recordInfo>
 </mods>"
@@ -1144,8 +1224,42 @@ BF00000004,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http
   <titleInfo>
     <title>Facette Personen und Körperschaften</title>
   </titleInfo>
+  <name type=""personal"">
+    <displayForm>Person 2 (1982–2001)</displayForm>
+    <namePart type=""date"">1982-05 — 2001-01</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <displayForm>Körperschaft 2</displayForm>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
+    </role>
+  </name>
+  <typeOfResource collection=""yes"">Bestand</typeOfResource>
+  <subject>
+    <topic>Person 1 (1982–2001)</topic>
+  </subject>
+  <subject>
+    <topic>Körperschaft 1</topic>
+  </subject>
+  <subject>
+    <name type=""personal"">
+      <displayForm>Person 1 (1982–2001)</displayForm>
+    </name>
+  </subject>
+  <subject>
+    <name type=""corporate"">
+      <displayForm>Körperschaft 1 (1982)</displayForm>
+    </name>
+  </subject>
+  <location>
+    <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+    <shelfLocator>Facette Personen und Körperschaften</shelfLocator>
+  </location>
   <recordInfo>
-    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordContentSource authority=""marcorg"">DE-2498</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">BF00000004</recordIdentifier>
   </recordInfo>
 </mods>"
