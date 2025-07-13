@@ -186,12 +186,6 @@
       ).join('')
     , '') +
 
-    forNonBlank(cells['filterFormContent_mv'].value, x,
-      forEach(x.split('␟'), v,
-        '  <genre>' + v.escape('xml') + '</genre>' + '\n'
-      ).join('')
-    , '') +
-
     forNonBlank(
       forNonBlank(cells['filterLocationType_mv'].value, x,
         forEach(x.split('␟'), z,
