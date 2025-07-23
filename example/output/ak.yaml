@@ -335,8 +335,7 @@ exportMODS: |-
       <shelfLocator>Lokale Signatur 1</shelfLocator>
       <shelfLocator>Lokale Signatur 2</shelfLocator>
       <shelfLocator>Exemplarsignatur (Exemplarsignaturzusatz)</shelfLocator>
-      <url access="object in context">URL 1</url>
-      <url access="object in context">URL 2</url>
+      <url access="object in context">https://www.example.com</url>
     </location>
     <recordInfo>
       <recordContentSource authority="marcorg">DE-Mar1</recordContentSource>
@@ -407,8 +406,7 @@ exportRIS: |-
   SP  - Zeitschrift Seiten
   TI  - Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1]
   T3  - Gesamttitel 1; Gesamttitel 2
-  UR  - URL 1
-  UR  - URL 2
+  UR  - https://www.example.com
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000001/
   VL  - Bandangabe 1; Bandangabe 2
   ER  -
@@ -721,8 +719,8 @@ website_description_mv:
   - URL 1 Typ
   - URL 2 Typ
 website_url_mv:
-  - URL 1
-  - URL 2
+  - https://www.example.com
+  - ␣
 workAbout_display_mv:
   - Titel über 1
   - Titel über 2

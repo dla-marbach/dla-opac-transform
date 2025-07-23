@@ -1,0 +1,21 @@
+# Invalide URLs löschen
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: website_url_mv
+  expression: |
+    grel:
+    forNonBlank(
+      value,
+      x,
+      forEach(
+        x.split('␟'),
+        v,
+        if(
+          isError(parseUri(v)),
+          '␣',
+          v
+        )
+      ).join('␟'),
+      null
+    )
