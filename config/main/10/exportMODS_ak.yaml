@@ -338,6 +338,26 @@
       ).join('')
     , '') +
 
+    forNonBlank(cells['relation_id_mv'].value, x,
+      forEachIndex(x.split('␟'), i, z,
+        if(z != '␣',
+          forNonBlank(cells['relation_type_mv'].value.split('␟')[i].replace('␣',''), v,
+            '  <relatedItem displayLabel="' + v.escape('xml') + '">' + '\n',
+            '  <relatedItem>' + '\n'
+          ) +
+          forNonBlank(cells['relation_display_mv'].value.split('␟')[i].replace('␣',''), v,
+            '    <titleInfo>' + '\n' +
+            '      <title>' + v.escape('xml') + '</title>' + '\n' +
+            '    </titleInfo>' + '\n'
+          , '') +
+          '    <recordInfo>' + '\n' +
+          '      <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">' + z.escape('xml') + '</recordIdentifier>' + '\n' +
+          '    </recordInfo>' + '\n' +
+          '  </relatedItem>' + '\n'
+        , '')
+      ).join('')
+    , '') +
+
     forNonBlank(cells['identifier_type_mv'].value, x,
       forEachIndex(x.split('␟'), i, z,
         if(z == '552b',
