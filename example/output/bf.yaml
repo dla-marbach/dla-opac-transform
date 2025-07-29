@@ -66,26 +66,26 @@ exportMODS: |-
       <title>Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]</title>
     </titleInfo>
     <name type="personal">
-      <displayForm>Person 3 (1982–2001)</displayForm>
+      <namePart>Person 3 (1982–2001)</namePart>
       <namePart type="date">1982 — 2001</namePart>
       <role>
         <roleTerm type="code" authority="marcrelator">cre</roleTerm>
       </role>
     </name>
     <name type="personal">
-      <displayForm>Person 4</displayForm>
+      <namePart>Person 4</namePart>
       <role>
         <roleTerm type="code" authority="marcrelator">cre</roleTerm>
       </role>
     </name>
     <name type="corporate">
-      <displayForm>Körperschaft 5</displayForm>
+      <namePart>Körperschaft 5</namePart>
       <role>
         <roleTerm type="code" authority="marcrelator">cre</roleTerm>
       </role>
     </name>
     <name type="corporate">
-      <displayForm>Körperschaft 6</displayForm>
+      <namePart>Körperschaft 6</namePart>
       <role>
         <roleTerm type="code" authority="marcrelator">cre</roleTerm>
       </role>
@@ -123,22 +123,22 @@ exportMODS: |-
     </subject>
     <subject>
       <name type="personal">
-        <displayForm>Person 1 (1982–2001)</displayForm>
+        <namePart>Person 1 (1982–2001)</namePart>
       </name>
     </subject>
     <subject>
       <name type="personal">
-        <displayForm>Person 2 (1982–2001)</displayForm>
+        <namePart>Person 2 (1982–2001)</namePart>
       </name>
     </subject>
     <subject>
       <name type="corporate">
-        <displayForm>Körperschaft 3</displayForm>
+        <namePart>Körperschaft 3</namePart>
       </name>
     </subject>
     <subject>
       <name type="corporate">
-        <displayForm>Körperschaft 4</displayForm>
+        <namePart>Körperschaft 4</namePart>
       </name>
     </subject>
     <relatedItem type="host">
@@ -151,7 +151,10 @@ exportMODS: |-
       <shelfLocator>Z:Öffentlicher Bestand 1</shelfLocator>
     </location>
     <recordInfo>
+      <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
       <recordContentSource authority="marcorg">DE-2498</recordContentSource>
+      <recordCreationDate encoding="iso8601">2023-06-01</recordCreationDate>
+      <recordChangeDate encoding="iso8601">2023-06-06</recordChangeDate>
       <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">BF00000001</recordIdentifier>
     </recordInfo>
   </mods>
@@ -331,6 +334,7 @@ exportMODS: |-
       <shelfLocator>Z:Öffentlicher Bestand 2</shelfLocator>
     </location>
     <recordInfo>
+      <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
       <recordContentSource authority="marcorg">DE-2498</recordContentSource>
       <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">BF00000002</recordIdentifier>
     </recordInfo>
@@ -370,6 +374,7 @@ exportMODS: |-
       <shelfLocator>Z:Vertraulicher Bestand</shelfLocator>
     </location>
     <recordInfo>
+      <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
       <recordContentSource authority="marcorg">DE-2498</recordContentSource>
       <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">BF00000003</recordIdentifier>
     </recordInfo>
@@ -413,14 +418,14 @@ exportMODS: |-
       <title>Facette Personen und Körperschaften</title>
     </titleInfo>
     <name type="personal">
-      <displayForm>Person 2 (1982–2001)</displayForm>
+      <namePart>Person 2 (1982–2001)</namePart>
       <namePart type="date">1982-05 — 2001-01</namePart>
       <role>
         <roleTerm type="code" authority="marcrelator">cre</roleTerm>
       </role>
     </name>
     <name type="corporate">
-      <displayForm>Körperschaft 2</displayForm>
+      <namePart>Körperschaft 2</namePart>
       <role>
         <roleTerm type="code" authority="marcrelator">cre</roleTerm>
       </role>
@@ -434,12 +439,12 @@ exportMODS: |-
     </subject>
     <subject>
       <name type="personal">
-        <displayForm>Person 1 (1982–2001)</displayForm>
+        <namePart>Person 1 (1982–2001)</namePart>
       </name>
     </subject>
     <subject>
       <name type="corporate">
-        <displayForm>Körperschaft 1 (1982)</displayForm>
+        <namePart>Körperschaft 1 (1982)</namePart>
       </name>
     </subject>
     <location>
@@ -447,6 +452,7 @@ exportMODS: |-
       <shelfLocator>Facette Personen und Körperschaften</shelfLocator>
     </location>
     <recordInfo>
+      <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
       <recordContentSource authority="marcorg">DE-2498</recordContentSource>
       <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">BF00000004</recordIdentifier>
     </recordInfo>

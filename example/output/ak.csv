@@ -8,7 +8,7 @@ AK00000001,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentl
     <subTitle>Haupttitel Zusatz</subTitle>
   </titleInfo>
   <name type=""personal"">
-    <displayForm>Person 1 (1982–2001)</displayForm>
+    <namePart>Person 1 (1982–2001)</namePart>
     <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
     <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
     <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
@@ -17,14 +17,14 @@ AK00000001,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentl
     </role>
   </name>
   <name type=""personal"">
-    <displayForm>Person 2 (1982–2001)</displayForm>
+    <namePart>Person 2 (1982–2001)</namePart>
     <namePart type=""date"">1982-05 — 2001-01</namePart>
     <role>
       <roleTerm type=""text"">Behandelte Person/Körperschaft</roleTerm>
     </role>
   </name>
   <name type=""corporate"">
-    <displayForm>Körperschaft 1 (1982)</displayForm>
+    <namePart>Körperschaft 1 (1982)</namePart>
     <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
     <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
     <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
@@ -33,25 +33,25 @@ AK00000001,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentl
     </role>
   </name>
   <name type=""corporate"">
-    <displayForm>Körperschaft 2</displayForm>
+    <namePart>Körperschaft 2</namePart>
     <role>
       <roleTerm type=""text"">Behandelte Person/Körperschaft</roleTerm>
     </role>
   </name>
   <name type=""corporate"">
-    <displayForm>Konferenz 1</displayForm>
+    <namePart>Konferenz 1</namePart>
     <role>
       <roleTerm type=""text"">Link Konferenz 1 Typ</roleTerm>
     </role>
   </name>
   <name type=""corporate"">
-    <displayForm>Konferenz 2</displayForm>
+    <namePart>Konferenz 2</namePart>
     <role>
       <roleTerm type=""text"">Link Konferenz 2 Typ</roleTerm>
     </role>
   </name>
   <name type=""personal"">
-    <displayForm>Person 1 (1982–2001)</displayForm>
+    <namePart>Person 1 (1982–2001)</namePart>
     <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
     <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
     <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
@@ -60,14 +60,14 @@ AK00000001,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentl
     </role>
   </name>
   <name type=""personal"">
-    <displayForm>Person 2 (1982–2001)</displayForm>
+    <namePart>Person 2 (1982–2001)</namePart>
     <namePart type=""date"">1982-05 — 2001-01</namePart>
     <role>
       <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
     </role>
   </name>
   <name type=""corporate"">
-    <displayForm>Körperschaft 1 (1982)</displayForm>
+    <namePart>Körperschaft 1 (1982)</namePart>
     <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
     <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
     <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
@@ -76,7 +76,7 @@ AK00000001,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentl
     </role>
   </name>
   <name type=""corporate"">
-    <displayForm>Körperschaft 2</displayForm>
+    <namePart>Körperschaft 2</namePart>
     <role>
       <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
     </role>
@@ -110,10 +110,10 @@ AK00000001,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentl
     <edition>Ausgabebezeichnung Vorlageform</edition>
   </originInfo>
   <language>
-    <languageTerm type=""code"">Sprache Original 1</languageTerm>
+    <languageTerm type=""text"">Sprache Original 1</languageTerm>
   </language>
   <language>
-    <languageTerm type=""code"">Sprache Original 2</languageTerm>
+    <languageTerm type=""text"">Sprache Original 2</languageTerm>
   </language>
   <physicalDescription>
     <form type=""format"">Format</form>
@@ -123,6 +123,8 @@ AK00000001,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentl
     <note type=""physical description"">Physikalische Beschreibung 1</note>
     <note type=""physical description"">Physikalische Beschreibung 2</note>
   </physicalDescription>
+  <note type=""statement of responsibility"">Verantwortlichkeit</note>
+  <note type=""footnotes"">Erscheinungsverlauf bei Zeitschriften und Reihen</note>
   <note type=""footnotes"">Fußnote 1</note>
   <note type=""footnotes"">Fußnote 2</note>
   <note type=""summary"">Inhalt 1</note>
@@ -168,12 +170,12 @@ AK00000001,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentl
   </subject>
   <subject>
     <name type=""corporate"">
-      <displayForm>Körperschaft 3</displayForm>
+      <namePart>Körperschaft 3</namePart>
     </name>
   </subject>
   <subject>
     <name type=""corporate"">
-      <displayForm>Körperschaft 4</displayForm>
+      <namePart>Körperschaft 4</namePart>
     </name>
   </subject>
   <classification authority=""DE-Mar1"">Sacherschließungskette 1</classification>
@@ -222,7 +224,10 @@ AK00000001,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentl
     <url access=""object in context"">https://www.example.com</url>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordCreationDate encoding=""iso8601"">2023-06-01</recordCreationDate>
+    <recordChangeDate encoding=""iso8601"">2023-06-06</recordChangeDate>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000001</recordIdentifier>
   </recordInfo>
 </mods>","TY  - GEN
@@ -300,7 +305,7 @@ AK00001001,Zwei verknüpfte Personen mit Indexloch in der Mitte,,,,,,,,,,,,,,,,,
     <title>Zwei verknüpfte Personen mit Indexloch in der Mitte</title>
   </titleInfo>
   <name type=""personal"">
-    <displayForm>Person 1 (1982–2001)</displayForm>
+    <namePart>Person 1 (1982–2001)</namePart>
     <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
     <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
     <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
@@ -309,7 +314,7 @@ AK00001001,Zwei verknüpfte Personen mit Indexloch in der Mitte,,,,,,,,,,,,,,,,,
     </role>
   </name>
   <name type=""personal"">
-    <displayForm>Person 2 (1982–2001)</displayForm>
+    <namePart>Person 2 (1982–2001)</namePart>
     <namePart type=""date"">1982-05 — 2001-01</namePart>
     <role>
       <roleTerm type=""text"">Funktion Person 2</roleTerm>
@@ -319,6 +324,7 @@ AK00001001,Zwei verknüpfte Personen mit Indexloch in der Mitte,,,,,,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00001001</recordIdentifier>
   </recordInfo>
@@ -337,7 +343,7 @@ AK00001002,Eine verknüpfte Person mit Indexloch am Anfang,,,,,,,,,,,,,,,,,,,,,,
     <title>Eine verknüpfte Person mit Indexloch am Anfang</title>
   </titleInfo>
   <name type=""personal"">
-    <displayForm>Person 1 (1982–2001)</displayForm>
+    <namePart>Person 1 (1982–2001)</namePart>
     <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
     <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
     <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
@@ -349,6 +355,7 @@ AK00001002,Eine verknüpfte Person mit Indexloch am Anfang,,,,,,,,,,,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00001002</recordIdentifier>
   </recordInfo>
@@ -366,7 +373,7 @@ AK00001003,Drei verknüpfte Personen mit nur einer Funktion,,,,,,,,,,,,,,,,,,,,,
     <title>Drei verknüpfte Personen mit nur einer Funktion</title>
   </titleInfo>
   <name type=""personal"">
-    <displayForm>Person 1 (1982–2001)</displayForm>
+    <namePart>Person 1 (1982–2001)</namePart>
     <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
     <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
     <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
@@ -375,17 +382,18 @@ AK00001003,Drei verknüpfte Personen mit nur einer Funktion,,,,,,,,,,,,,,,,,,,,,
     </role>
   </name>
   <name type=""personal"">
-    <displayForm>Person 2 (1982–2001)</displayForm>
+    <namePart>Person 2 (1982–2001)</namePart>
     <namePart type=""date"">1982-05 — 2001-01</namePart>
   </name>
   <name type=""personal"">
-    <displayForm>Person 3 (1982–2001)</displayForm>
+    <namePart>Person 3 (1982–2001)</namePart>
     <namePart type=""date"">1982 — 2001</namePart>
   </name>
   <location>
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00001003</recordIdentifier>
   </recordInfo>
@@ -405,7 +413,7 @@ AK00001004,Zwei verknüpfte Personen mit vier Funktionen (Funktion 3 und 4 sowie
     <title>Zwei verknüpfte Personen mit vier Funktionen (Funktion 3 und 4 sowie Indexloch überschüssig)</title>
   </titleInfo>
   <name type=""personal"">
-    <displayForm>Person 1 (1982–2001)</displayForm>
+    <namePart>Person 1 (1982–2001)</namePart>
     <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
     <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
     <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
@@ -414,7 +422,7 @@ AK00001004,Zwei verknüpfte Personen mit vier Funktionen (Funktion 3 und 4 sowie
     </role>
   </name>
   <name type=""personal"">
-    <displayForm>Person 2 (1982–2001)</displayForm>
+    <namePart>Person 2 (1982–2001)</namePart>
     <namePart type=""date"">1982-05 — 2001-01</namePart>
     <role>
       <roleTerm type=""text"">Funktion Person 2</roleTerm>
@@ -424,6 +432,7 @@ AK00001004,Zwei verknüpfte Personen mit vier Funktionen (Funktion 3 und 4 sowie
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00001004</recordIdentifier>
   </recordInfo>
@@ -445,6 +454,7 @@ AK00000011,Gesamttitel 1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xm
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000011</recordIdentifier>
   </recordInfo>
@@ -464,6 +474,7 @@ AK00000012,Gesamttitel 2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xm
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000012</recordIdentifier>
   </recordInfo>
@@ -483,6 +494,7 @@ AK00000002,Vertrauliches Bibliotheksdokument 2,,,,,,,,,,,,true,,,,,,,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000002</recordIdentifier>
   </recordInfo>
@@ -502,6 +514,7 @@ AK00002001,Wertetabelle: Code b wird aufgelöst zu Bibliotheksdokumente,,Bibliot
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00002001</recordIdentifier>
   </recordInfo>
@@ -521,6 +534,7 @@ AK00002002,Mappings: AdressatIn wird zu Adressat normalisiert,,,,,,,,,,,,,,,,,,A
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00002002</recordIdentifier>
   </recordInfo>
@@ -540,6 +554,7 @@ AK00002003,"Dieser Datensatz enhält ein Zusatzfeld BLABLA, das bei der Konverti
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00002003</recordIdentifier>
   </recordInfo>
@@ -560,6 +575,7 @@ AK00002004,Von drei Codes in categoryMedia_mv bleibt nur CD erhalten,,,,CD,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00002004</recordIdentifier>
   </recordInfo>
@@ -586,6 +602,7 @@ AK00003001,Konvertierung von 19680522 in 1968-05-22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00003001</recordIdentifier>
   </recordInfo>
@@ -610,6 +627,7 @@ AK00003002,Konvertierung von 19680500 in 1968-05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,19
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00003002</recordIdentifier>
   </recordInfo>
@@ -634,6 +652,7 @@ AK00003003,Konvertierung von 19680000 in 1968,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1968,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00003003</recordIdentifier>
   </recordInfo>
@@ -655,6 +674,7 @@ AK00003004,Nichtnormierte Datumsangabe Mai 1968 entfällt,,,,,,,,,,,,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00003004</recordIdentifier>
   </recordInfo>
@@ -674,6 +694,7 @@ AK00003005,Nichtnormierte Datumsangabe 2021/2022 entfällt,,,,,,,,,,,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00003005</recordIdentifier>
   </recordInfo>
@@ -693,6 +714,7 @@ AK00003006,Zwei nichtnormierte Datumsangaben entfallen,,,,,,,,,,,,,,,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00003006</recordIdentifier>
   </recordInfo>
@@ -712,6 +734,7 @@ AK00000031,Titel über 1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xm
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000031</recordIdentifier>
   </recordInfo>
@@ -731,6 +754,7 @@ AK00000032,Titel über 2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xm
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000032</recordIdentifier>
   </recordInfo>
@@ -751,6 +775,7 @@ AK00004001,Inhaltsangabe mit aDis Zeilenumbrüchen <br> und /SP/ die NICHT erset
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00004001</recordIdentifier>
   </recordInfo>
@@ -774,6 +799,7 @@ AK00004002,Drei Fußnoten mit aDIS Zeilenumbrüchen <br> und /SP/ die ersetzt we
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00004002</recordIdentifier>
   </recordInfo>
@@ -797,6 +823,7 @@ AK00004003,Inhaltsangabe mit mehr als 100 Zeichen,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00004003</recordIdentifier>
   </recordInfo>
@@ -819,6 +846,7 @@ AK00004004,"Inhaltsangabe mit fünf Tabs, die durch Leerzeichen ersetzt werden."
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00004004</recordIdentifier>
   </recordInfo>
@@ -840,6 +868,7 @@ AK00000041,Manifestation 1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc 
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000041</recordIdentifier>
   </recordInfo>
@@ -859,6 +888,7 @@ AK00000042,Manifestation 2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc 
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000042</recordIdentifier>
   </recordInfo>
@@ -878,6 +908,7 @@ AK00005001,Vertraulicher Datensatz,,,,,,,,,,,,true,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00005001</recordIdentifier>
   </recordInfo>
@@ -897,6 +928,7 @@ AK00005002,Öffentlicher Datensatz,,,,,,,,,,,,false,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00005002</recordIdentifier>
   </recordInfo>
@@ -916,6 +948,7 @@ AK00000051,Zeitschriftenheft 1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000051</recordIdentifier>
   </recordInfo>
@@ -935,6 +968,7 @@ AK00000052,Zeitschriftenheft 2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000052</recordIdentifier>
   </recordInfo>
@@ -951,28 +985,29 @@ AK00006001,"Fehlende Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: -)
     <title>Fehlende Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: -) und zwei Körperschaften (1: urheber, 2: beteiligt)</title>
   </titleInfo>
   <name type=""personal"">
-    <displayForm>Person 1 (1982–2001)</displayForm>
+    <namePart>Person 1 (1982–2001)</namePart>
     <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
     <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
     <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
   </name>
   <name type=""personal"">
-    <displayForm>Person 2 (1982–2001)</displayForm>
+    <namePart>Person 2 (1982–2001)</namePart>
     <namePart type=""date"">1982-05 — 2001-01</namePart>
   </name>
   <name type=""corporate"">
-    <displayForm>Körperschaft 1 (1982)</displayForm>
+    <namePart>Körperschaft 1 (1982)</namePart>
     <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
     <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
     <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
   </name>
   <name type=""corporate"">
-    <displayForm>Körperschaft 2</displayForm>
+    <namePart>Körperschaft 2</namePart>
   </name>
   <location>
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00006001</recordIdentifier>
   </recordInfo>
@@ -993,28 +1028,29 @@ AK00006002,"Zusätzliche Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2
     <title>Zusätzliche Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: urheber) und zwei Körperschaften (1: urheber, 2: beteiligt)</title>
   </titleInfo>
   <name type=""personal"">
-    <displayForm>Person 1 (1982–2001)</displayForm>
+    <namePart>Person 1 (1982–2001)</namePart>
     <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
     <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
     <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
   </name>
   <name type=""personal"">
-    <displayForm>Person 2 (1982–2001)</displayForm>
+    <namePart>Person 2 (1982–2001)</namePart>
     <namePart type=""date"">1982-05 — 2001-01</namePart>
   </name>
   <name type=""corporate"">
-    <displayForm>Körperschaft 1 (1982)</displayForm>
+    <namePart>Körperschaft 1 (1982)</namePart>
     <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
     <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
     <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
   </name>
   <name type=""corporate"">
-    <displayForm>Körperschaft 2</displayForm>
+    <namePart>Körperschaft 2</namePart>
   </name>
   <location>
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00006002</recordIdentifier>
   </recordInfo>
@@ -1042,6 +1078,7 @@ AK00007001,Platzhalter in Korrelationen: A0412 ohne AI412,,,,,,,,,,,,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00007001</recordIdentifier>
   </recordInfo>
@@ -1062,6 +1099,7 @@ AK00007002,Platzhalter in Korrelationen: AI412 ohne A0412,,,,,,,,,,,,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00007002</recordIdentifier>
   </recordInfo>
@@ -1088,6 +1126,7 @@ AK00007003,Platzhalter in Korrelationen: A0412 mit einem AI412,,,,,,,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00007003</recordIdentifier>
   </recordInfo>
@@ -1112,6 +1151,7 @@ AK00007004,Platzhalter in Korrelationen: 2x A0412 und 1x AI412,,,,,,,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00007004</recordIdentifier>
   </recordInfo>
@@ -1139,6 +1179,7 @@ wenn danach etwas folgt</note>
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00099999</recordIdentifier>
   </recordInfo>
@@ -1167,6 +1208,7 @@ AK00000071,Verknüpfte Digitale Objekte,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,public�
     <url access=""object in context"">https://digital.dla-marbach.de/viewer/image/BF00043389/?media_access=public</url>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000071</recordIdentifier>
   </recordInfo>
@@ -1189,6 +1231,7 @@ AK00000072,Das erste verknüpfte digitale Objekt auf Exemplarebene wird kopiert,
     <url access=""object in context"">https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf?media_access=public</url>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000072</recordIdentifier>
   </recordInfo>
@@ -1206,7 +1249,7 @@ AK00000063,Facette Personen und Körperschaften,,,,,,,,,,,,,,,,,,,,,,,,Körpersc
     <title>Facette Personen und Körperschaften</title>
   </titleInfo>
   <name type=""personal"">
-    <displayForm>Person 1 (1982–2001)</displayForm>
+    <namePart>Person 1 (1982–2001)</namePart>
     <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
     <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
     <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
@@ -1215,7 +1258,7 @@ AK00000063,Facette Personen und Körperschaften,,,,,,,,,,,,,,,,,,,,,,,,Körpersc
     </role>
   </name>
   <name type=""corporate"">
-    <displayForm>Körperschaft 1 (1982)</displayForm>
+    <namePart>Körperschaft 1 (1982)</namePart>
     <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
     <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
     <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
@@ -1224,13 +1267,13 @@ AK00000063,Facette Personen und Körperschaften,,,,,,,,,,,,,,,,,,,,,,,,Körpersc
     </role>
   </name>
   <name type=""personal"">
-    <displayForm>Person 7</displayForm>
+    <namePart>Person 7</namePart>
     <role>
       <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
     </role>
   </name>
   <name type=""corporate"">
-    <displayForm>Körperschaft 7</displayForm>
+    <namePart>Körperschaft 7</namePart>
     <role>
       <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
     </role>
@@ -1239,6 +1282,7 @@ AK00000063,Facette Personen und Körperschaften,,,,,,,,,,,,,,,,,,,,,,,,Körpersc
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000063</recordIdentifier>
   </recordInfo>
@@ -1259,7 +1303,7 @@ AK00000064,Facette Personen und Körperschaften,,,,,,,,,,,,,,,,,,,,,,,,Körpersc
     <title>Facette Personen und Körperschaften</title>
   </titleInfo>
   <name type=""personal"">
-    <displayForm>Person 1 (1982–2001)</displayForm>
+    <namePart>Person 1 (1982–2001)</namePart>
     <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
     <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
     <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
@@ -1268,11 +1312,11 @@ AK00000064,Facette Personen und Körperschaften,,,,,,,,,,,,,,,,,,,,,,,,Körpersc
     </role>
   </name>
   <name type=""personal"">
-    <displayForm>Person 2 (1982–2001)</displayForm>
+    <namePart>Person 2 (1982–2001)</namePart>
     <namePart type=""date"">1982-05 — 2001-01</namePart>
   </name>
   <name type=""corporate"">
-    <displayForm>Körperschaft 1 (1982)</displayForm>
+    <namePart>Körperschaft 1 (1982)</namePart>
     <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
     <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
     <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
@@ -1281,12 +1325,13 @@ AK00000064,Facette Personen und Körperschaften,,,,,,,,,,,,,,,,,,,,,,,,Körpersc
     </role>
   </name>
   <name type=""corporate"">
-    <displayForm>Körperschaft 2</displayForm>
+    <namePart>Körperschaft 2</namePart>
   </name>
   <location>
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000064</recordIdentifier>
   </recordInfo>
@@ -1336,6 +1381,7 @@ AK00000065,Facette Personen und Körperschaften Systematikketten,,,,,,,,,,Facett
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000065</recordIdentifier>
   </recordInfo>
@@ -1371,6 +1417,7 @@ AK00000066,Facette Personen und Körperschaften Provenienzketten über Exemplare
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000066</recordIdentifier>
   </recordInfo>
@@ -1404,6 +1451,7 @@ AK00000081,Facette Zeit: Sendedatum,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<o
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000081</recordIdentifier>
   </recordInfo>
@@ -1426,6 +1474,7 @@ AK00000082,Facette Zeit: Provenienzketten,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000082</recordIdentifier>
   </recordInfo>
@@ -1452,6 +1501,7 @@ AK00000083,Facette Zeit: dateOrigin und parentIssueYear,,,,,,,,,,,,,,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000083</recordIdentifier>
   </recordInfo>
@@ -1481,6 +1531,7 @@ AK00000084,Facette Zeit: invalide Datumsangabe,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1900
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000084</recordIdentifier>
   </recordInfo>
@@ -1504,6 +1555,7 @@ AK00000085,Facette Zeit: invalide Zeitspanne,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000085</recordIdentifier>
   </recordInfo>
@@ -1537,6 +1589,7 @@ AK00000061,Facette Form und Inhalt : [Edition Corvey],,Radio/TV-Manuskript,,,,Ed
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000061</recordIdentifier>
   </recordInfo>
@@ -1567,6 +1620,7 @@ AK00000101,Facette Ort: Berlin␝Fundort,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000101</recordIdentifier>
   </recordInfo>
@@ -1594,6 +1648,7 @@ AK00000062,Facette Medium : [Musikalia],,Bibliotheksdokumente,,Tonträger,,Musik
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000062</recordIdentifier>
   </recordInfo>
@@ -1622,6 +1677,7 @@ AK00000091,Facette Medientyp: Daten,,Bibliotheksdokumente,,,,,,Online-Ressource,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000091</recordIdentifier>
   </recordInfo>
@@ -1642,6 +1698,7 @@ AK00000092,Facette Medientyp: Gedrucktes,,Bibliotheksdokumente,,,,,,,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000092</recordIdentifier>
   </recordInfo>
@@ -1663,6 +1720,7 @@ AK00000094,Facette Medientyp: Audio,,Ton- und Bildträger,,,,,,Audiodatei,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000094</recordIdentifier>
   </recordInfo>
@@ -1684,6 +1742,7 @@ AK00000095,Facette Medientyp: Video,,Ton- und Bildträger,,,,,,Video,,,,,,,,,,,,
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000095</recordIdentifier>
   </recordInfo>
@@ -1704,6 +1763,7 @@ AK00000053,Zeitschrift,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc:dc xmln
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
   <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
     <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000053</recordIdentifier>
   </recordInfo>

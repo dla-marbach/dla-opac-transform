@@ -59,7 +59,7 @@
       forEachIndex(x.split('␟'), i, z,
         forNonBlank(cells['personBy_display_mv'].value.split('␟')[i].replace('␣', ''), v,
           '  <name type="personal">' + '\n' +
-          '    <displayForm>' + v.escape('xml') + '</displayForm>' + '\n' +
+          '    <namePart>' + v.escape('xml') + '</namePart>' + '\n' +
           forNonBlank(z.cross('pe','id')[0].cells['gnd_id_mv'].value, y,
             forEach(y.split('␟'), v, if(v != '␣',
               '    <nameIdentifier type="gnd">' + v.escape('xml') + '</nameIdentifier>' + '\n'
@@ -82,7 +82,7 @@
       forEachIndex(x.split('␟'), i, z,
         forNonBlank(cells['corporationBy_display_mv'].value.split('␟')[i].replace('␣', ''), v,
           '  <name type="corporate">' + '\n' +
-          '    <displayForm>' + v.escape('xml') + '</displayForm>' + '\n' +
+          '    <namePart>' + v.escape('xml') + '</namePart>' + '\n' +
           forNonBlank(z.cross('ks','id')[0].cells['gnd_id_mv'].value, y,
             forEach(y.split('␟'), v, if(v != '␣',
               '    <nameIdentifier type="gnd">' + v.escape('xml') + '</nameIdentifier>' + '\n'
@@ -105,7 +105,7 @@
       forEachIndex(x.split('␟'), i, z,
         forNonBlank(cells['corporationByConference_display_mv'].value.split('␟')[i].replace('␣', ''), v,
           '  <name type="corporate">' + '\n' +
-          '    <displayForm>' + v.escape('xml') + '</displayForm>' + '\n' +
+          '    <namePart>' + v.escape('xml') + '</namePart>' + '\n' +
           forNonBlank(z.cross('ks','id')[0].cells['gnd_id_mv'].value, y,
             forEach(y.split('␟'), v, if(v != '␣',
               '    <nameIdentifier type="gnd">' + v.escape('xml') + '</nameIdentifier>' + '\n'
@@ -130,7 +130,7 @@
             forEachIndex(x.split('␟'), i, z,
               forNonBlank(z.cross('pe','id')[0].cells['display'].value.replace('␣', ''), v,
                 '  <name type="personal">' + '\n' +
-                '    <displayForm>' + v.escape('xml') + '</displayForm>' + '\n' +
+                '    <namePart>' + v.escape('xml') + '</namePart>' + '\n' +
                 forNonBlank(z.cross('pe','id')[0].cells['gnd_id_mv'].value, y,
                   forEach(y.split('␟'), v, if(v != '␣',
                     '    <nameIdentifier type="gnd">' + v.escape('xml') + '</nameIdentifier>' + '\n'
@@ -155,7 +155,7 @@
             forEachIndex(x.split('␟'), i, z,
               forNonBlank(z.cross('ks','id')[0].cells['display'].value.replace('␣', ''), v,
                 '  <name type="corporate">' + '\n' +
-                '    <displayForm>' + v.escape('xml') + '</displayForm>' + '\n' +
+                '    <namePart>' + v.escape('xml') + '</namePart>' + '\n' +
                 forNonBlank(z.cross('ks','id')[0].cells['gnd_id_mv'].value, y,
                   forEach(y.split('␟'), v, if(v != '␣',
                     '    <nameIdentifier type="gnd">' + v.escape('xml') + '</nameIdentifier>' + '\n'
@@ -221,7 +221,7 @@
       forEach(x.split('␟'), z,
         if(z.split('␝')[1] == 'Original',
           '  <language>' + '\n' +
-          '    <languageTerm type="code">' + z.split('␝')[0].escape('xml') + '</languageTerm>' + '\n' +
+          '    <languageTerm type="text">' + z.split('␝')[0].escape('xml') + '</languageTerm>' + '\n' +
           '  </language>' + '\n'
         , '')
       ).join('')
@@ -246,6 +246,14 @@
       , '')
       , physicalDescription,
       '  <physicalDescription>' + '\n' + physicalDescription + '  </physicalDescription>' + '\n'
+    , '') +
+
+    forNonBlank(cells['titleResponsability'].value, v,
+      '  <note type="statement of responsibility">' + v.escape('xml') + '</note>' + '\n'
+    , '') +
+
+    forNonBlank(cells['publicationHistory'].value, v,
+      '  <note type="footnotes">' + v.escape('xml') + '</note>' + '\n'
     , '') +
 
     forNonBlank(cells['noteFootnote_text_mv'].value, x,
@@ -282,7 +290,7 @@
       forEach(x.split('␟'), v, if(v != '␣',
           '  <subject>' + '\n' +
           '    <name type="corporate">' + '\n' +
-          '      <displayForm>' + v.escape('xml') + '</displayForm>' + '\n' +
+          '      <namePart>' + v.escape('xml') + '</namePart>' + '\n' +
           '    </name>' + '\n' +
           '  </subject>' + '\n'
       , '')).join('')
@@ -400,7 +408,14 @@
     '  </location>' + '\n' +
     
     '  <recordInfo>' + '\n' +
+    '    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>' + '\n' +
     '    <recordContentSource authority="marcorg">DE-Mar1</recordContentSource>' + '\n' +
+    forNonBlank(cells['dateCataloged'].value, v,
+      '    <recordCreationDate encoding="iso8601">' + v.escape('xml') + '</recordCreationDate>' + '\n'
+    , '') +
+    forNonBlank(cells['dateModified'].value, v,
+      '    <recordChangeDate encoding="iso8601">' + v.escape('xml') + '</recordChangeDate>' + '\n'
+    , '') +
     '    <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">' + cells['id'].value.escape('xml') + '</recordIdentifier>' + '\n' +
     '  </recordInfo>' + '\n' +
     '</mods>'
