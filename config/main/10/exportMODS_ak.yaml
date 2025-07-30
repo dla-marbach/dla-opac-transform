@@ -286,6 +286,16 @@
       ).join('')
     , '') +
 
+    forNonBlank(cells['personAbout_display_mv'].value, x,
+      forEach(x.split('␟'), v, if(v != '␣',
+          '  <subject>' + '\n' +
+          '    <name type="personal">' + '\n' +
+          '      <namePart>' + v.escape('xml') + '</namePart>' + '\n' +
+          '    </name>' + '\n' +
+          '  </subject>' + '\n'
+      , '')).join('')
+    , '') +
+
     forNonBlank(cells['corporationAbout_display_mv'].value, x,
       forEach(x.split('␟'), v, if(v != '␣',
           '  <subject>' + '\n' +
