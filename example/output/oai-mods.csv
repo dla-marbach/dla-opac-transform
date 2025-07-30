@@ -1360,8 +1360,203 @@ BI00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
   <titleInfo>
     <title>Bild 1 [Objektart Unterkategorie]</title>
   </titleInfo>
+  <titleInfo type=""alternative"">
+    <title>Titel Original</title>
+  </titleInfo>
+  <titleInfo type=""uniform"">
+    <title>Person 1 (1982-2001). Werk 1 (genre : 2000)</title>
+  </titleInfo>
+  <name type=""personal"">
+    <namePart>Person 1 (1982–2001)</namePart>
+    <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
+    <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
+    <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
+    <role>
+      <roleTerm type=""text"">Link Person 1 Typ</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
+    <namePart>Person 2 (1982–2001)</namePart>
+    <namePart type=""date"">1982-05 — 2001-01</namePart>
+    <role>
+      <roleTerm type=""text"">Link Person 2 Typ</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
+    <namePart>Person 3 (1982–2001)</namePart>
+    <namePart type=""date"">1982 — 2001</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">dte</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
+    <namePart>Person 4</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">dte</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
+    <namePart>Person 7</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">fmo</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
+    <namePart>Person 8</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">fmo</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>Körperschaft 1 (1982)</namePart>
+    <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
+    <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
+    <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>Körperschaft 2</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>Körperschaft 7</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">dte</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>Körperschaft 8</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">dte</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>Körperschaft 5</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">fmo</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>Körperschaft 6</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">fmo</roleTerm>
+    </role>
+  </name>
+  <genre>Objektart Hauptkategorie</genre>
+  <genre>Objektart Unterkategorie</genre>
+  <genre>Objektart 1</genre>
+  <genre>Objektart 2</genre>
+  <genre>Objektart Zusammensetzung</genre>
+  <originInfo eventType=""production"">
+    <dateCreated>Zeitraum 1</dateCreated>
+    <dateCreated>Zeitraum 2</dateCreated>
+  </originInfo>
+  <physicalDescription>
+    <form type=""format"">Maßangabe 1 Höhe (cm) x Maßangabe 1 Breite (cm)</form>
+    <form type=""material"">Material</form>
+    <extent>Umfang</extent>
+    <note type=""physical description"">Erhaltungszustand</note>
+  </physicalDescription>
+  <tableOfContents>Objektart 1.  Objektart 2</tableOfContents>
+  <note type=""description"">Beschriftung</note>
+  <subject>
+    <topic>Schlagwort 1</topic>
+  </subject>
+  <subject>
+    <topic>Schlagwort 2</topic>
+  </subject>
+  <subject>
+    <topic>Ort-Schlagwort 1</topic>
+  </subject>
+  <subject>
+    <topic>Ort-Schlagwort 2</topic>
+  </subject>
+  <subject>
+    <topic>Person 5</topic>
+  </subject>
+  <subject>
+    <topic>Person 6</topic>
+  </subject>
+  <subject>
+    <topic>Körperschaft 3</topic>
+  </subject>
+  <subject>
+    <topic>Körperschaft 4</topic>
+  </subject>
+  <subject>
+    <topic>Werk 1</topic>
+  </subject>
+  <subject>
+    <topic>Werk 2</topic>
+  </subject>
+  <subject>
+    <geographic>Ort-Schlagwort 1</geographic>
+  </subject>
+  <subject>
+    <geographic>Ort-Schlagwort 2</geographic>
+  </subject>
+  <subject>
+    <name type=""personal"">
+      <namePart>Person 5</namePart>
+    </name>
+  </subject>
+  <subject>
+    <name type=""personal"">
+      <namePart>Person 6</namePart>
+    </name>
+  </subject>
+  <subject>
+    <name type=""corporate"">
+      <namePart>Körperschaft 3</namePart>
+    </name>
+  </subject>
+  <subject>
+    <name type=""corporate"">
+      <namePart>Körperschaft 4</namePart>
+    </name>
+  </subject>
+  <relatedItem type=""host"">
+    <recordInfo>
+      <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">BI00000002</recordIdentifier>
+    </recordInfo>
+  </relatedItem>
+  <relatedItem type=""host"">
+    <recordInfo>
+      <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">BF00000001</recordIdentifier>
+    </recordInfo>
+  </relatedItem>
+  <relatedItem type=""host"">
+    <recordInfo>
+      <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">HS00000001</recordIdentifier>
+    </recordInfo>
+  </relatedItem>
+  <relatedItem type=""host"">
+    <recordInfo>
+      <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">HS00000002</recordIdentifier>
+    </recordInfo>
+  </relatedItem>
+  <relatedItem type=""host"">
+    <recordInfo>
+      <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">HS99999999</recordIdentifier>
+    </recordInfo>
+  </relatedItem>
+  <relatedItem type=""host"">
+    <recordInfo>
+      <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000001</recordIdentifier>
+    </recordInfo>
+  </relatedItem>
+  <location>
+    <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+  </location>
   <recordInfo>
-    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+    <recordContentSource authority=""marcorg"">DE-2498</recordContentSource>
+    <recordCreationDate encoding=""iso8601"">2023-06-01</recordCreationDate>
+    <recordChangeDate encoding=""iso8601"">2023-06-06</recordChangeDate>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">BI00000001</recordIdentifier>
   </recordInfo>
 </mods>"
@@ -1369,8 +1564,19 @@ BI00000002,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http
   <titleInfo>
     <title>Wertetabelle Workaround: Plakat bleibt Plakat [Plakat]</title>
   </titleInfo>
+  <typeOfResource>Sonstiger Datenträger</typeOfResource>
+  <genre>Plakat</genre>
+  <relatedItem type=""host"">
+    <recordInfo>
+      <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">BF00000001</recordIdentifier>
+    </recordInfo>
+  </relatedItem>
+  <location>
+    <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+  </location>
   <recordInfo>
-    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+    <recordContentSource authority=""marcorg"">DE-2498</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">BI00000002</recordIdentifier>
   </recordInfo>
 </mods>"
@@ -1378,8 +1584,29 @@ BI00033390,2025-02-13,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
   <titleInfo>
     <title>Hall. Michaelskirche [Druckgraphik]</title>
   </titleInfo>
+  <genre>Druckgrafik</genre>
+  <originInfo eventType=""production"">
+    <dateCreated>1848-1852</dateCreated>
+  </originInfo>
+  <physicalDescription>
+    <form type=""format""> 15.0 x  23.3</form>
+    <form type=""material"">Stahlstich</form>
+    <note type=""physical description"">Blatt stockfleckig, fleckig u. angeschmutzt.</note>
+  </physicalDescription>
+  <note type=""description"">Bez. (u.): &quot;Gez. v. Groos&quot; (li.), &quot;Stahlst. v. F. Foltz&quot; (re.) sowie &quot;DIE MICHAELSKIRCHE IN HALL | Verlag der Stettin´schen Buchhandlung in Ulm&quot; (mi.)</note>
+  <relatedItem type=""host"">
+    <recordInfo>
+      <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">BI00028179</recordIdentifier>
+    </recordInfo>
+  </relatedItem>
+  <location>
+    <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+  </location>
   <recordInfo>
-    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+    <recordContentSource authority=""marcorg"">DE-2498</recordContentSource>
+    <recordCreationDate encoding=""iso8601"">2025-02-13</recordCreationDate>
+    <recordChangeDate encoding=""iso8601"">2025-02-13</recordChangeDate>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">BI00033390</recordIdentifier>
   </recordInfo>
 </mods>"
@@ -1387,8 +1614,14 @@ BI00000011,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http
   <titleInfo>
     <title>Verknüpfte Digitale Objekte</title>
   </titleInfo>
+  <location>
+    <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+    <url access=""object in context"">https://digital.dla-marbach.de/viewer/image/BF00043389/0015/?media_thumbnail=BF00043389_0015.tif&amp;media_access=public</url>
+    <url access=""object in context"">https://digital.dla-marbach.de/viewer/image/BF00043389/?media_access=public</url>
+  </location>
   <recordInfo>
-    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+    <recordContentSource authority=""marcorg"">DE-2498</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">BI00000011</recordIdentifier>
   </recordInfo>
 </mods>"
@@ -1396,8 +1629,94 @@ BI00000004,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http
   <titleInfo>
     <title>Facette Personen und Körperschaften</title>
   </titleInfo>
+  <name type=""personal"">
+    <namePart>Person 3 (1982–2001)</namePart>
+    <namePart type=""date"">1982 — 2001</namePart>
+    <role>
+      <roleTerm type=""text"">Sonstige/r Urheber/in</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
+    <namePart>Person 5</namePart>
+    <role>
+      <roleTerm type=""text"">Sonstige/r Urheber/in</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
+    <namePart>Person 6</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
+    <namePart>Person 4</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">dte</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
+    <namePart>Person 2 (1982–2001)</namePart>
+    <namePart type=""date"">1982-05 — 2001-01</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">fmo</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>Körperschaft 3</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>Körperschaft 4</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">dte</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>Körperschaft 2</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">fmo</roleTerm>
+    </role>
+  </name>
+  <subject>
+    <topic>Person 1 (1982–2001)</topic>
+  </subject>
+  <subject>
+    <topic>Person 6</topic>
+  </subject>
+  <subject>
+    <topic>Körperschaft 1</topic>
+  </subject>
+  <subject>
+    <topic>Körperschaft 6</topic>
+  </subject>
+  <subject>
+    <name type=""personal"">
+      <namePart>Person 1 (1982–2001)</namePart>
+    </name>
+  </subject>
+  <subject>
+    <name type=""personal"">
+      <namePart>Person 6</namePart>
+    </name>
+  </subject>
+  <subject>
+    <name type=""corporate"">
+      <namePart>Körperschaft 1 (1982)</namePart>
+    </name>
+  </subject>
+  <subject>
+    <name type=""corporate"">
+      <namePart>Körperschaft 6</namePart>
+    </name>
+  </subject>
+  <location>
+    <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+  </location>
   <recordInfo>
-    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+    <recordContentSource authority=""marcorg"">DE-2498</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">BI00000004</recordIdentifier>
   </recordInfo>
 </mods>"
@@ -1405,8 +1724,12 @@ BI00000021,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http
   <titleInfo>
     <title>Konvolut</title>
   </titleInfo>
+  <location>
+    <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+  </location>
   <recordInfo>
-    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+    <recordContentSource authority=""marcorg"">DE-2498</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">BI00000021</recordIdentifier>
   </recordInfo>
 </mods>"
