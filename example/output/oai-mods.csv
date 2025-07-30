@@ -1414,8 +1414,157 @@ HS00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
   <titleInfo>
     <title>Handschrift 1</title>
   </titleInfo>
+  <titleInfo type=""abbreviated"">
+    <title>Haupttitel</title>
+  </titleInfo>
+  <titleInfo type=""alternative"">
+    <title>Weiterer Titel 1</title>
+  </titleInfo>
+  <titleInfo type=""alternative"">
+    <title>Weiterer Titel 2</title>
+  </titleInfo>
+  <titleInfo type=""uniform"">
+    <title>Person 1 (1982-2001). Werk 1 (genre : 2000)</title>
+  </titleInfo>
+  <name type=""personal"">
+    <namePart>Person 1 (1982–2001)</namePart>
+    <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
+    <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
+    <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
+    <role>
+      <roleTerm type=""text"">Link Person 1 Typ</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
+    <namePart>Person 2 (1982–2001)</namePart>
+    <namePart type=""date"">1982-05 — 2001-01</namePart>
+    <role>
+      <roleTerm type=""text"">Link Person 2 Typ</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
+    <namePart>Person 3 (1982–2001)</namePart>
+    <namePart type=""date"">1982 — 2001</namePart>
+    <role>
+      <roleTerm type=""text"">Link Person 3 Typ</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
+    <namePart>Person 4</namePart>
+    <role>
+      <roleTerm type=""text"">Link Person 4 Typ</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>Körperschaft 1 (1982)</namePart>
+    <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
+    <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
+    <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
+    <role>
+      <roleTerm type=""text"">Link Körperschaft 1 Typ</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>Körperschaft 2</namePart>
+    <role>
+      <roleTerm type=""text"">Link Körperschaft 2 Typ</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>Körperschaft 7</namePart>
+    <role>
+      <roleTerm type=""text"">Link Körperschaft 7 Typ</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>Körperschaft 8</namePart>
+    <role>
+      <roleTerm type=""text"">Link Körperschaft 8 Typ</roleTerm>
+    </role>
+  </name>
+  <genre>Hauptgattung</genre>
+  <genre>Weitere Hauptgattung 1</genre>
+  <genre>Weitere Hauptgattung 2</genre>
+  <genre>Untergattung</genre>
+  <genre>Weitere Untergattung 1</genre>
+  <genre>Weitere Untergattung 2</genre>
+  <originInfo eventType=""manufacture"">
+    <dateCreated point=""start"" encoding=""iso8601"">1982-05-22</dateCreated>
+    <dateCreated point=""end"" encoding=""iso8601"">2001-01-01</dateCreated>
+  </originInfo>
+  <language>
+    <languageTerm type=""text"">Sprache 1</languageTerm>
+  </language>
+  <language>
+    <languageTerm type=""text"">Sprache 2</languageTerm>
+  </language>
+  <physicalDescription>
+    <extent>Umfang</extent>
+  </physicalDescription>
+  <tableOfContents>Inhalt</tableOfContents>
+  <subject>
+    <topic>Schlagwort 1</topic>
+  </subject>
+  <subject>
+    <topic>Schlagwort 2</topic>
+  </subject>
+  <subject>
+    <topic>Person 5</topic>
+  </subject>
+  <subject>
+    <topic>Person 6</topic>
+  </subject>
+  <subject>
+    <topic>Körperschaft 3</topic>
+  </subject>
+  <subject>
+    <topic>Körperschaft 4</topic>
+  </subject>
+  <subject>
+    <topic>Werk 1</topic>
+  </subject>
+  <subject>
+    <topic>Werk 2</topic>
+  </subject>
+  <subject>
+    <name type=""personal"">
+      <namePart>Person 5</namePart>
+    </name>
+  </subject>
+  <subject>
+    <name type=""personal"">
+      <namePart>Person 6</namePart>
+    </name>
+  </subject>
+  <subject>
+    <name type=""corporate"">
+      <namePart>Körperschaft 3</namePart>
+    </name>
+  </subject>
+  <subject>
+    <name type=""corporate"">
+      <namePart>Körperschaft 4</namePart>
+    </name>
+  </subject>
+  <relatedItem type=""host"">
+    <recordInfo>
+      <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">HS00000002</recordIdentifier>
+    </recordInfo>
+  </relatedItem>
+  <relatedItem type=""host"">
+    <recordInfo>
+      <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">BF00000001</recordIdentifier>
+    </recordInfo>
+  </relatedItem>
+  <location>
+    <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+    <shelfLocator>Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]</shelfLocator>
+  </location>
   <recordInfo>
-    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+    <recordContentSource authority=""marcorg"">DE-2498</recordContentSource>
+    <recordCreationDate encoding=""iso8601"">2023-06-01</recordCreationDate>
+    <recordChangeDate encoding=""iso8601"">2023-06-06</recordChangeDate>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">HS00000001</recordIdentifier>
   </recordInfo>
 </mods>"
@@ -1423,8 +1572,15 @@ HS00000002,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http
   <titleInfo>
     <title>Handschrift 2 Noten</title>
   </titleInfo>
+  <typeOfResource manuscript=""yes"">Sonstiger Datenträger</typeOfResource>
+  <typeOfResource manuscript=""yes"">Noten</typeOfResource>
+  <genre>Kompositionen</genre>
+  <location>
+    <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+  </location>
   <recordInfo>
-    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+    <recordContentSource authority=""marcorg"">DE-2498</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">HS00000002</recordIdentifier>
   </recordInfo>
 </mods>"
@@ -1432,8 +1588,14 @@ HS00000011,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http
   <titleInfo>
     <title>Verknüpfte Digitale Objekte</title>
   </titleInfo>
+  <location>
+    <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+    <url access=""object in context"">https://digital.dla-marbach.de/viewer/image/BF00043389/0015/?media_thumbnail=BF00043389_0015.tif&amp;media_access=public</url>
+    <url access=""object in context"">https://digital.dla-marbach.de/viewer/image/BF00043389/?media_access=public</url>
+  </location>
   <recordInfo>
-    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+    <recordContentSource authority=""marcorg"">DE-2498</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">HS00000011</recordIdentifier>
   </recordInfo>
 </mods>"
@@ -1441,8 +1603,82 @@ HS00000005,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http
   <titleInfo>
     <title>Facette Personen und Körperschaften</title>
   </titleInfo>
+  <name type=""personal"">
+    <namePart>Person 2 (1982–2001)</namePart>
+    <namePart type=""date"">1982-05 — 2001-01</namePart>
+    <role>
+      <roleTerm type=""text"">[Verfasser/in]</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
+    <namePart>Person 6</namePart>
+  </name>
+  <name type=""personal"">
+    <namePart>Person 3 (1982–2001)</namePart>
+    <namePart type=""date"">1982 — 2001</namePart>
+    <role>
+      <roleTerm type=""text"">[Adressat/in]</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
+    <namePart>Person 6</namePart>
+  </name>
+  <name type=""corporate"">
+    <namePart>Körperschaft 2</namePart>
+    <role>
+      <roleTerm type=""text"">[Verfasser]</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>Körperschaft 6</namePart>
+  </name>
+  <name type=""corporate"">
+    <namePart>Körperschaft 3</namePart>
+    <role>
+      <roleTerm type=""text"">[Adressat]</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>Körperschaft 6</namePart>
+  </name>
+  <subject>
+    <topic>Person 1 (1982–2001)</topic>
+  </subject>
+  <subject>
+    <topic>Person 6</topic>
+  </subject>
+  <subject>
+    <topic>Körperschaft 1</topic>
+  </subject>
+  <subject>
+    <topic>Körperschaft 6</topic>
+  </subject>
+  <subject>
+    <name type=""personal"">
+      <namePart>Person 1 (1982–2001)</namePart>
+    </name>
+  </subject>
+  <subject>
+    <name type=""personal"">
+      <namePart>Person 6</namePart>
+    </name>
+  </subject>
+  <subject>
+    <name type=""corporate"">
+      <namePart>Körperschaft 1 (1982)</namePart>
+    </name>
+  </subject>
+  <subject>
+    <name type=""corporate"">
+      <namePart>Körperschaft 6</namePart>
+    </name>
+  </subject>
+  <location>
+    <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+  </location>
   <recordInfo>
-    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+    <recordContentSource authority=""marcorg"">DE-2498</recordContentSource>
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">HS00000005</recordIdentifier>
   </recordInfo>
 </mods>"
