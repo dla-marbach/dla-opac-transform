@@ -115,7 +115,85 @@ editionNormalized: Ausgabebezeichnung normiert
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1]</dc:title>
-    <dc:identifier>AK00000001</dc:identifier>
+    <dc:title>Titel der größeren Einheit in Vorlageform 1</dc:title>
+    <dc:title>Titel der größeren Einheit in Vorlageform 2</dc:title>
+    <dc:creator>Person 1 (1982–2001)</dc:creator>
+    <dc:creator>Person 2 (1982–2001)</dc:creator>
+    <dc:creator>Körperschaft 1 (1982)</dc:creator>
+    <dc:creator>Körperschaft 2</dc:creator>
+    <dc:creator>Konferenz 1</dc:creator>
+    <dc:creator>Konferenz 2</dc:creator>
+    <dc:creator>Person 1 (1982–2001)</dc:creator>
+    <dc:creator>Person 2 (1982–2001)</dc:creator>
+    <dc:creator>Körperschaft 1 (1982)</dc:creator>
+    <dc:creator>Körperschaft 2</dc:creator>
+    <dc:type>Erweiterte physikalische Form</dc:type>
+    <dc:type>Medienart 1</dc:type>
+    <dc:type>Medienart 2</dc:type>
+    <dc:type>Buchumschlag</dc:type>
+    <dc:type>Gattung 1</dc:type>
+    <dc:type>Gattung 2</dc:type>
+    <dc:type>Veröffentlichungsart 1</dc:type>
+    <dc:type>Veröffentlichungsart 2</dc:type>
+    <dc:type>Datenträger 1</dc:type>
+    <dc:type>Datenträger 2</dc:type>
+    <dc:publisher>Verlag Vorlageform 1</dc:publisher>
+    <dc:publisher>Verlag Vorlageform 2</dc:publisher>
+    <dc:date>2023</dc:date>
+    <dc:date>Jahr/Datum 1</dc:date>
+    <dc:date>Jahr/Datum 2</dc:date>
+    <dc:date>1999</dc:date>
+    <dc:date>2023</dc:date>
+    <dc:language>Sprache Original 1</dc:language>
+    <dc:language>Sprache Original 2</dc:language>
+    <dc:format>Format</dc:format>
+    <dc:format>Umfang</dc:format>
+    <dc:format>Physikalische Beschreibung 1</dc:format>
+    <dc:format>Physikalische Beschreibung 2</dc:format>
+    <dc:description>Fußnote 1</dc:description>
+    <dc:description>Fußnote 2</dc:description>
+    <dc:description>Inhalt 1</dc:description>
+    <dc:description>Inhalt 2</dc:description>
+    <dc:description>Erscheinungsverlauf bei Zeitschriften und Reihen</dc:description>
+    <dc:subject>Thesaurus-Begriff 1</dc:subject>
+    <dc:subject>Thesaurus-Begriff 2</dc:subject>
+    <dc:subject>Basisnotation 1</dc:subject>
+    <dc:subject>Basisnotation 2</dc:subject>
+    <dc:subject>Autorenschema 1</dc:subject>
+    <dc:subject>Autorenschema 2</dc:subject>
+    <dc:subject>Person 1 (1982–2001)</dc:subject>
+    <dc:subject>Person 2 (1982–2001)</dc:subject>
+    <dc:subject>Körperschaft 1</dc:subject>
+    <dc:subject>Körperschaft 2</dc:subject>
+    <dc:subject>Bibliotheksdokument 1</dc:subject>
+    <dc:subject>Vertrauliches Bibliotheksdokument 2</dc:subject>
+    <dc:subject>Person 3 (1982–2001)</dc:subject>
+    <dc:subject>Person 4</dc:subject>
+    <dc:subject>Körperschaft 3</dc:subject>
+    <dc:subject>Körperschaft 4</dc:subject>
+    <dc:subject>Sacherschließungskette 1</dc:subject>
+    <dc:subject>Sacherschließungskette 2</dc:subject>
+    <dc:coverage>Thesaurus-Begriff 1</dc:coverage>
+    <dc:source>https://www.dla-marbach.de/find/opac/id/AK00000011</dc:source>
+    <dc:source>https://www.dla-marbach.de/find/opac/id/AK00000012</dc:source>
+    <dc:source>https://www.dla-marbach.de/find/opac/id/AK99999999</dc:source>
+    <dc:source>https://www.dla-marbach.de/find/opac/id/BF00000001</dc:source>
+    <dc:source>https://www.dla-marbach.de/find/opac/id/BF00000002</dc:source>
+    <dc:source>https://www.dla-marbach.de/find/opac/id/BF99999999</dc:source>
+    <dc:relation>https://www.dla-marbach.de/find/opac/id/AK00000041</dc:relation>
+    <dc:relation>https://www.dla-marbach.de/find/opac/id/AK00000042</dc:relation>
+    <dc:relation>https://www.dla-marbach.de/find/opac/id/AK99999999</dc:relation>
+    <dc:identifier>ISBN 1</dc:identifier>
+    <dc:identifier>ISBN 2</dc:identifier>
+    <dc:identifier>ISMN 1</dc:identifier>
+    <dc:identifier>ISMN 2</dc:identifier>
+    <dc:identifier>ISSN 1</dc:identifier>
+    <dc:identifier>ISSN 2</dc:identifier>
+    <dc:identifier>Lokale Signatur 1</dc:identifier>
+    <dc:identifier>Lokale Signatur 2</dc:identifier>
+    <dc:identifier>Exemplarsignatur (Exemplarsignaturzusatz)</dc:identifier>
+    <dc:identifier>https://www.example.com</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000001</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -781,7 +859,9 @@ display: Zwei verknüpfte Personen mit Indexloch in der Mitte
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Zwei verknüpfte Personen mit Indexloch in der Mitte</dc:title>
-    <dc:identifier>AK00001001</dc:identifier>
+    <dc:creator>Person 1 (1982–2001)</dc:creator>
+    <dc:creator>Person 2 (1982–2001)</dc:creator>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00001001</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -851,7 +931,8 @@ display: Eine verknüpfte Person mit Indexloch am Anfang
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Eine verknüpfte Person mit Indexloch am Anfang</dc:title>
-    <dc:identifier>AK00001002</dc:identifier>
+    <dc:creator>Person 1 (1982–2001)</dc:creator>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00001002</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -907,7 +988,10 @@ display: Drei verknüpfte Personen mit nur einer Funktion
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Drei verknüpfte Personen mit nur einer Funktion</dc:title>
-    <dc:identifier>AK00001003</dc:identifier>
+    <dc:creator>Person 1 (1982–2001)</dc:creator>
+    <dc:creator>Person 2 (1982–2001)</dc:creator>
+    <dc:creator>Person 3 (1982–2001)</dc:creator>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00001003</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -985,7 +1069,9 @@ display: Zwei verknüpfte Personen mit vier Funktionen (Funktion 3 und 4 sowie I
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Zwei verknüpfte Personen mit vier Funktionen (Funktion 3 und 4 sowie Indexloch überschüssig)</dc:title>
-    <dc:identifier>AK00001004</dc:identifier>
+    <dc:creator>Person 1 (1982–2001)</dc:creator>
+    <dc:creator>Person 2 (1982–2001)</dc:creator>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00001004</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1055,7 +1141,7 @@ display: Gesamttitel 1
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Gesamttitel 1</dc:title>
-    <dc:identifier>AK00000011</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000011</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1089,7 +1175,7 @@ display: Gesamttitel 2
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Gesamttitel 2</dc:title>
-    <dc:identifier>AK00000012</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000012</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1124,7 +1210,7 @@ confidential: true
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Vertrauliches Bibliotheksdokument 2</dc:title>
-    <dc:identifier>AK00000002</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000002</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1159,7 +1245,7 @@ category: Bibliotheksdokumente
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Wertetabelle: Code b wird aufgelöst zu Bibliotheksdokumente</dc:title>
-    <dc:identifier>AK00002001</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00002001</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1195,7 +1281,7 @@ corporationByConference_role_mv:
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Mappings: AdressatIn wird zu Adressat normalisiert</dc:title>
-    <dc:identifier>AK00002002</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00002002</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1229,7 +1315,7 @@ display: Dieser Datensatz enhält ein Zusatzfeld BLABLA, das bei der Konvertieru
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Dieser Datensatz enhält ein Zusatzfeld BLABLA, das bei der Konvertierung entfällt.</dc:title>
-    <dc:identifier>AK00002003</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00002003</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1265,7 +1351,8 @@ categoryMedia_mv:
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Von drei Codes in categoryMedia_mv bleibt nur CD erhalten</dc:title>
-    <dc:identifier>AK00002004</dc:identifier>
+    <dc:type>Audio-CD</dc:type>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00002004</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1397,7 +1484,8 @@ dateOrigin: "1968-05-22"
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Konvertierung von 19680522 in 1968-05-22</dc:title>
-    <dc:identifier>AK00003001</dc:identifier>
+    <dc:date>1968-05-22</dc:date>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00003001</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1441,7 +1529,8 @@ dateOrigin: 1968-05
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Konvertierung von 19680500 in 1968-05</dc:title>
-    <dc:identifier>AK00003002</dc:identifier>
+    <dc:date>1968-05</dc:date>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00003002</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1485,7 +1574,8 @@ dateOrigin: "1968"
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Konvertierung von 19680000 in 1968</dc:title>
-    <dc:identifier>AK00003003</dc:identifier>
+    <dc:date>1968</dc:date>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00003003</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1528,7 +1618,7 @@ display: Nichtnormierte Datumsangabe Mai 1968 entfällt
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Nichtnormierte Datumsangabe Mai 1968 entfällt</dc:title>
-    <dc:identifier>AK00003004</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00003004</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1562,7 +1652,7 @@ display: Nichtnormierte Datumsangabe 2021/2022 entfällt
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Nichtnormierte Datumsangabe 2021/2022 entfällt</dc:title>
-    <dc:identifier>AK00003005</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00003005</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1596,7 +1686,7 @@ display: Zwei nichtnormierte Datumsangaben entfallen
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Zwei nichtnormierte Datumsangaben entfallen</dc:title>
-    <dc:identifier>AK00003006</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00003006</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1630,7 +1720,7 @@ display: Titel über 1
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Titel über 1</dc:title>
-    <dc:identifier>AK00000031</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000031</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1664,7 +1754,7 @@ display: Titel über 2
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Titel über 2</dc:title>
-    <dc:identifier>AK00000032</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000032</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1698,7 +1788,8 @@ display: Inhaltsangabe mit aDis Zeilenumbrüchen <br> und /SP/ die NICHT ersetzt
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Inhaltsangabe mit aDis Zeilenumbrüchen &lt;br&gt; und /SP/ die NICHT ersetzt werden</dc:title>
-    <dc:identifier>AK00004001</dc:identifier>
+    <dc:description>Kapitel 1: Einleitung&lt;br&gt;Kapitel 2: Hauptteil/SP/Kapitel 3: Schluss</dc:description>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00004001</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1736,7 +1827,10 @@ display: Drei Fußnoten mit aDIS Zeilenumbrüchen <br> und /SP/ die ersetzt werd
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Drei Fußnoten mit aDIS Zeilenumbrüchen &lt;br&gt; und /SP/ die ersetzt werden</dc:title>
-    <dc:identifier>AK00004002</dc:identifier>
+    <dc:description>[1] Fußnote mit aDIS Zeilenumbruch Variante 1
+  [2] Fußnote mit aDIS Zeilenumbruch Variante 2
+  [3] Fußnote ohne Zeilenumbruch</dc:description>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00004002</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1779,7 +1873,8 @@ display: Inhaltsangabe mit mehr als 100 Zeichen
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Inhaltsangabe mit mehr als 100 Zeichen</dc:title>
-    <dc:identifier>AK00004003</dc:identifier>
+    <dc:description>Diese Zusammenfassung enthält mehr als 100 Zeichen und hat deshalb einen Zeilenumbruch im Quellformat aDIS Token aber nicht im Zielformat CSV.</dc:description>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00004003</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1817,7 +1912,9 @@ display: Inhaltsangabe mit fünf Tabs, die durch Leerzeichen ersetzt werden.
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Inhaltsangabe mit fünf Tabs, die durch Leerzeichen ersetzt werden.</dc:title>
-    <dc:identifier>AK00004004</dc:identifier>
+    <dc:description>Tabs und Leerzeichen am Ende entfallen:</dc:description>
+    <dc:description>Tabs mittendrin:           werden ersetzt.</dc:description>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00004004</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1858,7 +1955,7 @@ display: Manifestation 1
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Manifestation 1</dc:title>
-    <dc:identifier>AK00000041</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000041</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1892,7 +1989,7 @@ display: Manifestation 2
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Manifestation 2</dc:title>
-    <dc:identifier>AK00000042</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000042</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1927,7 +2024,7 @@ confidential: true
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Vertraulicher Datensatz</dc:title>
-    <dc:identifier>AK00005001</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00005001</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1962,7 +2059,7 @@ confidential: false
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Öffentlicher Datensatz</dc:title>
-    <dc:identifier>AK00005002</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00005002</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1996,7 +2093,7 @@ display: Zeitschriftenheft 1
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Zeitschriftenheft 1</dc:title>
-    <dc:identifier>AK00000051</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000051</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -2030,7 +2127,7 @@ display: Zeitschriftenheft 2
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Zeitschriftenheft 2</dc:title>
-    <dc:identifier>AK00000052</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000052</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -2073,7 +2170,11 @@ corporationBy_id_mv:
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Fehlende Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: -) und zwei Körperschaften (1: urheber, 2: beteiligt)</dc:title>
-    <dc:identifier>AK00006001</dc:identifier>
+    <dc:creator>Person 1 (1982–2001)</dc:creator>
+    <dc:creator>Person 2 (1982–2001)</dc:creator>
+    <dc:creator>Körperschaft 1 (1982)</dc:creator>
+    <dc:creator>Körperschaft 2</dc:creator>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00006001</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -2163,7 +2264,11 @@ corporationBy_id_mv:
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Zusätzliche Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: urheber) und zwei Körperschaften (1: urheber, 2: beteiligt)</dc:title>
-    <dc:identifier>AK00006002</dc:identifier>
+    <dc:creator>Person 1 (1982–2001)</dc:creator>
+    <dc:creator>Person 2 (1982–2001)</dc:creator>
+    <dc:creator>Körperschaft 1 (1982)</dc:creator>
+    <dc:creator>Körperschaft 2</dc:creator>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00006002</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -2244,7 +2349,9 @@ display: 'Platzhalter in Korrelationen: A0412 ohne AI412'
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Platzhalter in Korrelationen: A0412 ohne AI412</dc:title>
-    <dc:identifier>AK00007001</dc:identifier>
+    <dc:publisher>A</dc:publisher>
+    <dc:publisher>B</dc:publisher>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00007001</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -2286,7 +2393,7 @@ display: 'Platzhalter in Korrelationen: AI412 ohne A0412'
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Platzhalter in Korrelationen: AI412 ohne A0412</dc:title>
-    <dc:identifier>AK00007002</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00007002</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -2324,7 +2431,12 @@ display: 'Platzhalter in Korrelationen: A0412 mit einem AI412'
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Platzhalter in Korrelationen: A0412 mit einem AI412</dc:title>
-    <dc:identifier>AK00007003</dc:identifier>
+    <dc:publisher>A</dc:publisher>
+    <dc:publisher>B</dc:publisher>
+    <dc:publisher>C</dc:publisher>
+    <dc:publisher>D</dc:publisher>
+    <dc:publisher>E</dc:publisher>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00007003</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -2378,7 +2490,9 @@ display: 'Platzhalter in Korrelationen: 2x A0412 und 1x AI412'
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Platzhalter in Korrelationen: 2x A0412 und 1x AI412</dc:title>
-    <dc:identifier>AK00007004</dc:identifier>
+    <dc:publisher>A</dc:publisher>
+    <dc:publisher>B</dc:publisher>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00007004</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -2423,7 +2537,14 @@ display: Ersetzung von Null-Character und Windows-Zeilenumbrüchen
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Ersetzung von Null-Character und Windows-Zeilenumbrüchen</dc:title>
-    <dc:identifier>AK00099999</dc:identifier>
+    <dc:description>Null: wird gelöscht</dc:description>
+    <dc:description>CRLF über Fortsetzungszeile wird ersetzt:
+  wenn danach etwas folgt</dc:description>
+    <dc:description>CRLF wird ersetzt:
+  wenn danach etwas folgt</dc:description>
+    <dc:description>CRLF am Ende wird ersetzt aber entfällt:</dc:description>
+    <dc:description>CR mittendrin: wird gelöscht</dc:description>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00099999</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -2494,7 +2615,9 @@ digitalObject_thumbnail_mv:
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Verknüpfte Digitale Objekte</dc:title>
-    <dc:identifier>AK00000071</dc:identifier>
+    <dc:identifier>https://digital.dla-marbach.de/viewer/image/BF00043389/0015/?media_thumbnail=BF00043389_0015.tif&amp;media_access=public</dc:identifier>
+    <dc:identifier>https://digital.dla-marbach.de/viewer/image/BF00043389/?media_access=public</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000071</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -2550,7 +2673,8 @@ digitalObject_id_mv:
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Das erste verknüpfte digitale Objekt auf Exemplarebene wird kopiert</dc:title>
-    <dc:identifier>AK00000072</dc:identifier>
+    <dc:identifier>https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf?media_access=public</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000072</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -2600,7 +2724,11 @@ corporationBy_role_mv:
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Personen und Körperschaften</dc:title>
-    <dc:identifier>AK00000063</dc:identifier>
+    <dc:creator>Person 1 (1982–2001)</dc:creator>
+    <dc:creator>Körperschaft 1 (1982)</dc:creator>
+    <dc:creator>Person 7</dc:creator>
+    <dc:creator>Körperschaft 7</dc:creator>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000063</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -2701,7 +2829,11 @@ corporationBy_role_mv:
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Personen und Körperschaften</dc:title>
-    <dc:identifier>AK00000064</dc:identifier>
+    <dc:creator>Person 1 (1982–2001)</dc:creator>
+    <dc:creator>Person 2 (1982–2001)</dc:creator>
+    <dc:creator>Körperschaft 1 (1982)</dc:creator>
+    <dc:creator>Körperschaft 2</dc:creator>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000064</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -2793,7 +2925,17 @@ classification_id_mv:
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Personen und Körperschaften Systematikketten</dc:title>
-    <dc:identifier>AK00000065</dc:identifier>
+    <dc:subject>Person 1 (1982–2001)</dc:subject>
+    <dc:subject>Person 2 (1982–2001)</dc:subject>
+    <dc:subject>Person 3 (1982–2001)</dc:subject>
+    <dc:subject>Person 4</dc:subject>
+    <dc:subject>Körperschaft 1</dc:subject>
+    <dc:subject>Körperschaft 2</dc:subject>
+    <dc:subject>Körperschaft 3</dc:subject>
+    <dc:subject>Körperschaft 4</dc:subject>
+    <dc:subject>Facette Personen und Körperschaften / Systematikketten / Von / Verfasser</dc:subject>
+    <dc:subject>Facette Personen und Körperschaften / Systematikketten / Über</dc:subject>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000065</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -2904,7 +3046,7 @@ display: Facette Personen und Körperschaften Provenienzketten über Exemplare
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Personen und Körperschaften Provenienzketten über Exemplare</dc:title>
-    <dc:identifier>AK00000066</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000066</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -2999,7 +3141,8 @@ display: 'Facette Zeit: Sendedatum'
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Zeit: Sendedatum</dc:title>
-    <dc:identifier>AK00000081</dc:identifier>
+    <dc:description>1982-05-22</dc:description>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000081</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -3045,7 +3188,8 @@ display: 'Facette Zeit: Provenienzketten'
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Zeit: Provenienzketten</dc:title>
-    <dc:identifier>AK00000082</dc:identifier>
+    <dc:description>1999</dc:description>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000082</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -3092,7 +3236,10 @@ dateOrigin: "1981"
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Zeit: dateOrigin und parentIssueYear</dc:title>
-    <dc:identifier>AK00000083</dc:identifier>
+    <dc:date>1981</dc:date>
+    <dc:description>1981</dc:description>
+    <dc:description>[1982 TO 2011]</dc:description>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000083</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -3148,7 +3295,9 @@ dateOrigin: 1900-02-29
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Zeit: invalide Datumsangabe</dc:title>
-    <dc:identifier>AK00000084</dc:identifier>
+    <dc:date>1900-02-29</dc:date>
+    <dc:description>1900 kein Schaltjahr</dc:description>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000084</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -3192,7 +3341,8 @@ display: 'Facette Zeit: invalide Zeitspanne'
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Zeit: invalide Zeitspanne</dc:title>
-    <dc:identifier>AK00000085</dc:identifier>
+    <dc:description>Zeitspanne in falscher Reihenfolge</dc:description>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000085</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -3242,7 +3392,18 @@ categorySub: Einzelbestandteil / unselbständiges Werk
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Form und Inhalt : [Edition Corvey]</dc:title>
-    <dc:identifier>AK00000061</dc:identifier>
+    <dc:type>Beitrag</dc:type>
+    <dc:type>Epik</dc:type>
+    <dc:type>Schwank</dc:type>
+    <dc:type>Rundfunkmanuskript</dc:type>
+    <dc:type>Aufsatz</dc:type>
+    <dc:type>Literarisches Weblog</dc:type>
+    <dc:description>Epik</dc:description>
+    <dc:description>Schwank</dc:description>
+    <dc:description>Rundfunkmanuskript</dc:description>
+    <dc:description>Aufsatz</dc:description>
+    <dc:description>Literarisches Weblog</dc:description>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000061</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -3314,7 +3475,7 @@ display: 'Facette Ort: Berlin␝Fundort'
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Ort: Berlin␝Fundort</dc:title>
-    <dc:identifier>AK00000101</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000101</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -3363,7 +3524,14 @@ categorySubSub: säurefreies Papier
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Medium : [Musikalia]</dc:title>
-    <dc:identifier>AK00000062</dc:identifier>
+    <dc:type>Noten</dc:type>
+    <dc:type>Buch</dc:type>
+    <dc:type>Buchumschlag</dc:type>
+    <dc:type>Musikalia</dc:type>
+    <dc:description>Noten</dc:description>
+    <dc:description>Buch</dc:description>
+    <dc:description>Buchumschlag</dc:description>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000062</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -3427,7 +3595,8 @@ categorySubSub: Online-Ressource
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Medientyp: Daten</dc:title>
-    <dc:identifier>AK00000091</dc:identifier>
+    <dc:type>Online-Ressource</dc:type>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000091</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -3465,7 +3634,7 @@ category: Bibliotheksdokumente
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Medientyp: Gedrucktes</dc:title>
-    <dc:identifier>AK00000092</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000092</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -3509,7 +3678,8 @@ categorySubSub: Audiodatei
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Medientyp: Audio</dc:title>
-    <dc:identifier>AK00000094</dc:identifier>
+    <dc:type>Audiodatei</dc:type>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000094</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -3548,7 +3718,8 @@ categorySubSub: Video
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Medientyp: Video</dc:title>
-    <dc:identifier>AK00000095</dc:identifier>
+    <dc:type>Videokassette</dc:type>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000095</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -3585,7 +3756,7 @@ display: Zeitschrift
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Zeitschrift</dc:title>
-    <dc:identifier>AK00000053</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000053</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
