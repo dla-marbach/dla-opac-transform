@@ -90,6 +90,10 @@
       '  <physicalDescription>' + '\n' + physicalDescription + '  </physicalDescription>' + '\n'
     , '') +
 
+    forNonBlank(cells['content'].value, v,
+        '  <abstract>' + v.escape('xml') + '</abstract>' + '\n'
+    , '') +
+
     forNonBlank(
       forNonBlank(cells['noteOther_mv'].value, x,
         forEach(x.split('␟'), v, if(v != '␣', v.escape('xml')
