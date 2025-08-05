@@ -304,8 +304,8 @@
       ).join('')
     , '') +
 
-    forNonBlank(cells['inventory'].value, v,
-      '  <identifier type="inventoryNumber">' + v.escape('xml') + '</identifier>' + '\n'
+    forNonBlank(cells['inventoryNumber'].value, v,
+      '  <identifier type="inventory">' + v.escape('xml') + '</identifier>' + '\n'
     , '') +
 
     '  <location>' + '\n' +
