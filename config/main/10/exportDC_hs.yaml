@@ -6,12 +6,130 @@
   expression: |
     grel:
     '<oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">' + '\n' +
-    forNonBlank(cells['display'].value, v,
-    '  <dc:title>' + v.escape('xml') + '</dc:title>' + '\n'
-    , '') +
-    forNonBlank(cells['id'].value, v,
-    '  <dc:identifier>' + v.escape('xml') + '</dc:identifier>' + '\n'
-    , '') +
+
+    forEach(
+      [
+        forNonBlank(cells['title'].value, v, v, ''),
+        forNonBlank(cells['titleMain_text'].value, v, v, ''),
+        forNonBlank(cells['titleOther_text_mv'].value, v, v, ''),
+        forNonBlank(cells['relation_display_mv'].value, v, v, '')
+      ].join('␟').replace('␣','').split('␟').uniques(),
+      v,
+      '  <dc:title>' + v.escape('xml') + '</dc:title>' + '\n'
+    ).join('') +
+
+    forEach(
+      [
+        forNonBlank(cells['personBy_display_mv'].value, v, v, ''),
+        forNonBlank(cells['personTo_display_mv'].value, v, v, ''),
+        forNonBlank(cells['corporationBy_display_mv'].value, v, v, ''),
+        forNonBlank(cells['corporationTo_display_mv'].value, v, v, '')
+      ].join('␟').replace('␣','').split('␟').uniques(),
+      v,
+      '  <dc:creator>' + v.escape('xml') + '</dc:creator>' + '\n'
+    ).join('') +
+
+    forEach(
+      [
+        forNonBlank(cells['filterFormContent_mv'].value, v, v, ''),
+        forNonBlank(cells['filterMedium_mv'].value, v, v, ''),
+        'Handschrift'
+      ].join('␟').replace('␣','').split('␟').uniques(),
+      v,
+      '  <dc:type>' + v.escape('xml') + '</dc:type>' + '\n'
+    ).join('') +
+
+    forEach(
+      [
+        forNonBlank(cells['dateOriginStart'].value, v, v, ''),
+        forNonBlank(cells['dateOriginEnd'].value, v, v, '')
+      ].join('␟').replace('␣','').split('␟').uniques(),
+      v,
+      '  <dc:date>' + v.escape('xml') + '</dc:date>' + '\n'
+    ).join('') +
+
+    forEach(
+      [
+        forNonBlank(cells['filterLanguageType_mv'].value, x,
+          forEach(x.split('␟'), v, if(
+              v.split('␝')[1] == 'Original',
+              v.split('␝')[0]
+            , '')
+          ).join('␟')
+        , '')
+      ].join('␟').replace('␣','').split('␟').uniques(),
+      v,
+      '  <dc:language>' + v.escape('xml') + '</dc:language>' + '\n'
+    ).join('') +
+
+    forEach(
+      [
+        forNonBlank(cells['extent'].value, v, v, '')
+      ].join('␟').replace('␣','').split('␟').uniques(),
+      v,
+      '  <dc:format>' + v.escape('xml') + '</dc:format>' + '\n'
+    ).join('') +
+
+    forEach(
+      [
+        forNonBlank(cells['content'].value, v, v, '')
+      ].join('␟').replace('␣','').split('␟').uniques(),
+      v,
+      '  <dc:description>' + v.escape('xml') + '</dc:description>' + '\n'
+    ).join('') +
+
+    forEach(
+      [
+        forNonBlank(cells['filterSubject_mv'].value, v, v, ''),
+        forNonBlank(cells['personAbout_display_mv'].value, v, v, ''),
+        forNonBlank(cells['corporationAbout_display_mv'].value, v, v, '')
+      ].join('␟').replace('␣','').split('␟').uniques(),
+      v,
+      '  <dc:subject>' + v.escape('xml') + '</dc:subject>' + '\n'
+    ).join('') +
+
+    forEach(
+      [
+        forNonBlank(cells['filterLocationType_mv'].value, x,
+          forEach(x.split('␟'), v,
+            if(
+              v.split('␝')[1] == 'Schlagwort',
+              v.split('␝')[0]
+            , '')
+          ).join('␟')
+        , '')
+      ].join('␟').replace('␣','').split('␟').uniques(),
+      v,
+      '  <dc:coverage>' + v.escape('xml') + '</dc:coverage>' + '\n'
+    ).join('') +
+
+    forEach(
+      [
+        forNonBlank(cells['parent_id_mv'].value, x,
+            forEach(x.split('␟'), v, if(v != '␣',
+              'https://www.dla-marbach.de/find/opac/id/' + v
+            , '')).join('␟')
+        , ''),
+        forNonBlank(cells['collection_id_mv'].value, x,
+            forEach(x.split('␟'), v, if(v != '␣',
+              'https://www.dla-marbach.de/find/opac/id/' + v
+            , '')).join('␟')
+        , '')
+      ].join('␟').replace('␣','').split('␟').uniques(),
+      v,
+      '  <dc:source>' + v.escape('xml') + '</dc:source>' + '\n'
+    ).join('') +
+
+    forEach(
+      [
+        forNonBlank(cells['collection_display_mv'].value, v, v, ''),
+        forNonBlank(cells['digitalObject_hyperlink_mv'].value, v, v, ''),
+        forNonBlank(cells['id'].value, v, 'https://www.dla-marbach.de/find/opac/id/' +  v, '')
+      ].join('␟').replace('␣','').split('␟').uniques(),
+      v,
+      '  <dc:identifier>' + v.escape('xml') + '</dc:identifier>' + '\n'
+    ).join('') +
+
     '</oai_dc:dc>'
   newColumnName: exportDC
   columnInsertIndex: 2
