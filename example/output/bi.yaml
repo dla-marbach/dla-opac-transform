@@ -91,7 +91,55 @@ dimension_width_mv:
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Bild 1 [Objektart Unterkategorie]</dc:title>
-    <dc:identifier>BI00000001</dc:identifier>
+    <dc:title>Titel Original</dc:title>
+    <dc:title>Person 1 (1982-2001). Werk 1 (genre : 2000)</dc:title>
+    <dc:title>Person 2 (1982-2001). Werk 2 (genre)</dc:title>
+    <dc:creator>Person 1 (1982–2001)</dc:creator>
+    <dc:creator>Person 2 (1982–2001)</dc:creator>
+    <dc:creator>Person 7</dc:creator>
+    <dc:creator>Person 8</dc:creator>
+    <dc:creator>Körperschaft 1 (1982)</dc:creator>
+    <dc:creator>Körperschaft 2</dc:creator>
+    <dc:creator>Körperschaft 5</dc:creator>
+    <dc:creator>Körperschaft 6</dc:creator>
+    <dc:contributor>Person 3 (1982–2001)</dc:contributor>
+    <dc:contributor>Person 4</dc:contributor>
+    <dc:contributor>Körperschaft 7</dc:contributor>
+    <dc:contributor>Körperschaft 8</dc:contributor>
+    <dc:type>Objektart Hauptkategorie</dc:type>
+    <dc:type>Objektart Unterkategorie</dc:type>
+    <dc:type>Objektart 1</dc:type>
+    <dc:type>Objektart 2</dc:type>
+    <dc:type>Objektart Zusammensetzung</dc:type>
+    <dc:date>Zeitraum 1</dc:date>
+    <dc:date>Zeitraum 2</dc:date>
+    <dc:format>Maßangabe 1 Höhe (cm) x Maßangabe 1 Breite (cm)</dc:format>
+    <dc:format>Material</dc:format>
+    <dc:format>Umfang</dc:format>
+    <dc:format>Erhaltungszustand</dc:format>
+    <dc:description>Objektart 1</dc:description>
+    <dc:description>Objektart 2</dc:description>
+    <dc:description>Beschriftung</dc:description>
+    <dc:subject>Schlagwort 1</dc:subject>
+    <dc:subject>Schlagwort 2</dc:subject>
+    <dc:subject>Ort-Schlagwort 1</dc:subject>
+    <dc:subject>Ort-Schlagwort 2</dc:subject>
+    <dc:subject>Person 5</dc:subject>
+    <dc:subject>Person 6</dc:subject>
+    <dc:subject>Körperschaft 3</dc:subject>
+    <dc:subject>Körperschaft 4</dc:subject>
+    <dc:subject>Werk 1</dc:subject>
+    <dc:subject>Werk 2</dc:subject>
+    <dc:coverage>Ort-Schlagwort 1</dc:coverage>
+    <dc:coverage>Ort-Schlagwort 2</dc:coverage>
+    <dc:source>https://www.dla-marbach.de/find/opac/id/BI00000002</dc:source>
+    <dc:source>https://www.dla-marbach.de/find/opac/id/BF00000001</dc:source>
+    <dc:source>https://www.dla-marbach.de/find/opac/id/HS00000001</dc:source>
+    <dc:source>https://www.dla-marbach.de/find/opac/id/HS00000002</dc:source>
+    <dc:source>https://www.dla-marbach.de/find/opac/id/HS99999999</dc:source>
+    <dc:source>https://www.dla-marbach.de/find/opac/id/AK00000001</dc:source>
+    <dc:identifier>Inventarnummer</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/BI00000001</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -573,7 +621,10 @@ confidential: false
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Wertetabelle Workaround: Plakat bleibt Plakat [Plakat]</dc:title>
-    <dc:identifier>BI00000002</dc:identifier>
+    <dc:type>Sonstiger Datenträger</dc:type>
+    <dc:type>Plakat</dc:type>
+    <dc:source>https://www.dla-marbach.de/find/opac/id/BF00000001</dc:source>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/BI00000002</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -623,7 +674,7 @@ confidential: true
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Vertraulicher Datensatz</dc:title>
-    <dc:identifier>BI00000003</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/BI00000003</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -674,7 +725,15 @@ dimension_width_mv:
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Hall. Michaelskirche [Druckgraphik]</dc:title>
-    <dc:identifier>BI00033390</dc:identifier>
+    <dc:type>Druckgrafik</dc:type>
+    <dc:date>1848-1852</dc:date>
+    <dc:format> 15.0 x  23.3</dc:format>
+    <dc:format>Stahlstich</dc:format>
+    <dc:format>Blatt stockfleckig, fleckig u. angeschmutzt.</dc:format>
+    <dc:description>Bez. (u.): &quot;Gez. v. Groos&quot; (li.), &quot;Stahlst. v. F. Foltz&quot; (re.) sowie &quot;DIE MICHAELSKIRCHE IN HALL | Verlag der Stettin´schen Buchhandlung in Ulm&quot; (mi.)</dc:description>
+    <dc:source>https://www.dla-marbach.de/find/opac/id/BI00028179</dc:source>
+    <dc:identifier>B 1991.K 0185</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/BI00033390</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -786,7 +845,9 @@ digitalObject_thumbnail_mv:
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Verknüpfte Digitale Objekte</dc:title>
-    <dc:identifier>BI00000011</dc:identifier>
+    <dc:identifier>https://digital.dla-marbach.de/viewer/image/BF00043389/0015/?media_thumbnail=BF00043389_0015.tif&amp;media_access=public</dc:identifier>
+    <dc:identifier>https://digital.dla-marbach.de/viewer/image/BF00043389/?media_access=public</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/BI00000011</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -845,7 +906,20 @@ corporationTo_id_mv:
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Personen und Körperschaften</dc:title>
-    <dc:identifier>BI00000004</dc:identifier>
+    <dc:creator>Person 3 (1982–2001)</dc:creator>
+    <dc:creator>Person 5</dc:creator>
+    <dc:creator>Person 6</dc:creator>
+    <dc:creator>Person 2 (1982–2001)</dc:creator>
+    <dc:creator>Körperschaft 3</dc:creator>
+    <dc:creator>Körperschaft 2</dc:creator>
+    <dc:contributor>Person 4</dc:contributor>
+    <dc:contributor>Körperschaft 4</dc:contributor>
+    <dc:subject>Person 1 (1982–2001)</dc:subject>
+    <dc:subject>Person 6</dc:subject>
+    <dc:subject>Körperschaft 1</dc:subject>
+    <dc:subject>Körperschaft 6</dc:subject>
+    <dc:subject>Körperschaft 1 (1982)</dc:subject>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/BI00000004</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
@@ -1051,7 +1125,7 @@ category: Konvolut
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Konvolut</dc:title>
-    <dc:identifier>BI00000021</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/BI00000021</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
