@@ -15,241 +15,268 @@
     grel:
     '<oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">' + '\n' +
 
-    forNonBlank(cells['display'].value, v,
-    '  <dc:title>' + v.escape('xml') + '</dc:title>' + '\n'
-    , '') +
-    forNonBlank(cells['titleOther_type_mv'].value, x,
-      forEachIndex(x.split('␟'), i, z,
-        if(or(z == '340n', z == '370n'),
-          forNonBlank(cells['titleOther_text_mv'].value.split('␟')[i], v,
-            '  <dc:title>' + v.escape('xml') + '</dc:title>' + '\n'
+    forEach([
+      forNonBlank(cells['display'].value, v,
+      '  <dc:title>' + v.escape('xml') + '</dc:title>' + '\n'
+      , ''),
+      forNonBlank(cells['titleOther_type_mv'].value, x,
+        forEachIndex(x.split('␟'), i, z,
+          if(or(z == '340n', z == '370n'),
+            forNonBlank(cells['titleOther_text_mv'].value.split('␟')[i], v,
+              '  <dc:title>' + v.escape('xml') + '</dc:title>' + '\n'
+            , '')
+          , '') +
+          if(z == '303n',
+            forNonBlank(cells['titleOther_text_mv'].value.split('␟')[i], v,
+              '  <dc:title>' + forNonBlank(cells['work_display_mv'].value.split('␟')[0].replace('␣', ''), w, w.escape('xml'), v.escape('xml')) + '</dc:title>' + '\n'
+            , '')
           , '')
-        , '') +
-        if(z == '303n',
-          forNonBlank(cells['titleOther_text_mv'].value.split('␟')[i], v,
-            '  <dc:title>' + forNonBlank(cells['work_display_mv'].value.split('␟')[0].replace('␣', ''), w, w.escape('xml'), v.escape('xml')) + '</dc:title>' + '\n'
-          , '')
-        , '')
-      ).join('')
-    , '') +
-    forNonBlank(cells['parentTitleOriginal_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:title>' + v.escape('xml') + '</dc:title>' + '\n'
-      , '')).join('')
-    , '') +
-
-    forNonBlank(cells['personBy_display_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:creator>' + v.escape('xml') + '</dc:creator>' + '\n'
-      , '')).join('')
-    , '') +
-    forNonBlank(cells['corporationBy_display_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:creator>' + v.escape('xml') + '</dc:creator>' + '\n'
-      , '')).join('')
-    , '') +
-    forNonBlank(cells['corporationByConference_display_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:creator>' + v.escape('xml') + '</dc:creator>' + '\n'
-      , '')).join('')
-    , '') +
-    forNonBlank(cells['item_id_mv'].value, items,
-      forEach(items.split('␟'), item,
-          forNonBlank(item.cross('au','id')[0].cells['personAt_display_mv'].value, x,
-            forEach(x.split('␟'), v, if(v != '␣',
-              '  <dc:creator>' + v.escape('xml') + '</dc:creator>' + '\n'
-            , '')).join('')
-          , '')
-      ).join('')
-    , '') +
-    forNonBlank(cells['item_id_mv'].value, items,
-      forEach(items.split('␟'), item,
-          forNonBlank(item.cross('au','id')[0].cells['corporationAt_display_mv'].value, x,
-            forEach(x.split('␟'), v, if(v != '␣',
-              '  <dc:creator>' + v.escape('xml') + '</dc:creator>' + '\n'
-            , '')).join('')
-          , '')
-      ).join('')
-    , '') +
-
-    forNonBlank(cells['filterMedium_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:type>' + v.escape('xml') + '</dc:type>' + '\n'
-      , '')).join('')
-    , '') +
-    forNonBlank(cells['filterFormContent_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:type>' + v.escape('xml') + '</dc:type>' + '\n'
-      , '')).join('')
-    , '') +
-    forNonBlank(cells['categoryMedium_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:type>' + v.escape('xml') + '</dc:type>' + '\n'
-      , '')).join('')
-    , '') +
-
-    forNonBlank(cells['publisherOriginal_text_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:publisher>' + v.escape('xml') + '</dc:publisher>' + '\n'
-      , '')).join('')
-    , '') +
-
-    forNonBlank(cells['dateOrigin'].value, v,
-      '  <dc:date>' + v.escape('xml') + '</dc:date>' + '\n'
-    , '') +
-    forNonBlank(cells['dateOriginComment_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:date>' + v.escape('xml') + '</dc:date>' + '\n'
-      , '')).join('')
-    , '') +
-    forNonBlank(cells['scholarlyPublication_date_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:date>' + v.escape('xml') + '</dc:date>' + '\n'
-      , '')).join('')
-    , '') +
-
-    forNonBlank(cells['filterLanguageType_mv'].value, x,
-      forEach(x.split('␟'), v, if(v.split('␝')[1] == 'Original',
-          '  <dc:language>' + v.split('␝')[0].escape('xml') + '</dc:language>' + '\n'    
-        , '')
-      ).join('')
-    , '') +
-
-    forNonBlank(cells['extentFormat'].value, v,
-      '  <dc:format>' + v.escape('xml') + '</dc:format>' + '\n'
-    , '') +
-    forNonBlank(cells['extent'].value, v,
-      '  <dc:format>' + v.escape('xml') + '</dc:format>' + '\n'
-    , '') +
-    forNonBlank(cells['description_text_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:format>' + v.escape('xml') + '</dc:format>' + '\n'
-      , '')).join('')
-    , '') +
-
-    forNonBlank(cells['noteFootnote_text_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:description>' + v.escape('xml') + '</dc:description>' + '\n'
-      , '')).join('')
-    , '') +
-    forNonBlank(cells['noteContent_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:description>' + v.escape('xml') + '</dc:description>' + '\n'
-      , '')).join('')
-    , '') +
-    forNonBlank(cells['publicationHistory'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:description>' + v.escape('xml') + '</dc:description>' + '\n'
-      , '')).join('')
-    , '') +
-
-    forNonBlank(cells['filterSubject_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:subject>' + v.escape('xml') + '</dc:subject>' + '\n'
-      , '')).join('')
-    , '') +
-    forNonBlank(cells['personAbout_display_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:subject>' + v.escape('xml') + '</dc:subject>' + '\n'
-      , '')).join('')
-    , '') +
-    forNonBlank(cells['corporationAbout_display_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:subject>' + v.escape('xml') + '</dc:subject>' + '\n'
-      , '')).join('')
-    , '') +
-    forNonBlank(cells['classification_display_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:subject>' + v.escape('xml') + '</dc:subject>' + '\n'
-      , '')).join('')
-    , '') +
-
-    forNonBlank(cells['filterLocationType_mv'].value, x,
-      forEach(x.split('␟'), v, if(v.split('␝')[1] == 'Schlagwort',
-          '  <dc:coverage>' + v.split('␝')[0].escape('xml') + '</dc:coverage>' + '\n'    
-        , '')
-      ).join('')
-    , '') +
-
-    forNonBlank(cells['parent_id_mv'].value, x,
+        ).join('')
+      , ''),
+      forNonBlank(cells['parentTitleOriginal_mv'].value, x,
         forEach(x.split('␟'), v, if(v != '␣',
-          '  <dc:source>' + 'https://www.dla-marbach.de/find/opac/id/' + v.escape('xml') + '</dc:source>' + '\n'
+          '  <dc:title>' + v.escape('xml') + '</dc:title>' + '\n'
         , '')).join('')
-    , '') +
-    forNonBlank(cells['item_id_mv'].value, items,
-      forEach(items.split('␟'), item,
-        forNonBlank(item.cross('au','id')[0].cells['collection_id_mv'].value, x,
+      , '')
+    ].uniques(), x, x).join('') +
+
+    forEach([
+      forNonBlank(cells['personBy_display_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:creator>' + v.escape('xml') + '</dc:creator>' + '\n'
+        , '')).join('')
+      , ''),
+      forNonBlank(cells['corporationBy_display_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:creator>' + v.escape('xml') + '</dc:creator>' + '\n'
+        , '')).join('')
+      , ''),
+      forNonBlank(cells['corporationByConference_display_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:creator>' + v.escape('xml') + '</dc:creator>' + '\n'
+        , '')).join('')
+      , ''),
+      forNonBlank(cells['item_id_mv'].value, items,
+        forEach(items.split('␟'), item,
+            forNonBlank(item.cross('au','id')[0].cells['personAt_display_mv'].value, x,
+              forEach(x.split('␟'), v, if(v != '␣',
+                '  <dc:creator>' + v.escape('xml') + '</dc:creator>' + '\n'
+              , '')).join('')
+            , '')
+        ).join('')
+      , ''),
+      forNonBlank(cells['item_id_mv'].value, items,
+        forEach(items.split('␟'), item,
+            forNonBlank(item.cross('au','id')[0].cells['corporationAt_display_mv'].value, x,
+              forEach(x.split('␟'), v, if(v != '␣',
+                '  <dc:creator>' + v.escape('xml') + '</dc:creator>' + '\n'
+              , '')).join('')
+            , '')
+        ).join('')
+      , '')
+    ].uniques(), x, x).join('') +
+
+    forEach([
+      forNonBlank(cells['filterMedium_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:type>' + v.escape('xml') + '</dc:type>' + '\n'
+        , '')).join('')
+      , ''),
+      forNonBlank(cells['filterFormContent_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:type>' + v.escape('xml') + '</dc:type>' + '\n'
+        , '')).join('')
+      , ''),
+      forNonBlank(cells['categoryMedium_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:type>' + v.escape('xml') + '</dc:type>' + '\n'
+        , '')).join('')
+      , '')
+    ].uniques(), x, x).join('') +
+
+    forEach([
+      forNonBlank(cells['publisherOriginal_text_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:publisher>' + v.escape('xml') + '</dc:publisher>' + '\n'
+        , '')).join('')
+      , '')
+    ].uniques(), x, x).join('') +
+
+    forEach([
+      forNonBlank(cells['dateOrigin'].value, v,
+        '  <dc:date>' + v.escape('xml') + '</dc:date>' + '\n'
+      , ''),
+      forNonBlank(cells['dateOriginComment_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:date>' + v.escape('xml') + '</dc:date>' + '\n'
+        , '')).join('')
+      , ''),
+      forNonBlank(cells['scholarlyPublication_date_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:date>' + v.escape('xml') + '</dc:date>' + '\n'
+        , '')).join('')
+      , '')
+    ].uniques(), x, x).join('') +
+
+    forEach([
+      forNonBlank(cells['filterLanguageType_mv'].value, x,
+        forEach(x.split('␟'), v, if(v.split('␝')[1] == 'Original',
+            '  <dc:language>' + v.split('␝')[0].escape('xml') + '</dc:language>' + '\n'    
+          , '')
+        ).join('')
+      , '')
+    ].uniques(), x, x).join('') +
+
+    forEach([
+      forNonBlank(cells['extentFormat'].value, v,
+        '  <dc:format>' + v.escape('xml') + '</dc:format>' + '\n'
+      , ''),
+      forNonBlank(cells['extent'].value, v,
+        '  <dc:format>' + v.escape('xml') + '</dc:format>' + '\n'
+      , ''),
+      forNonBlank(cells['description_text_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:format>' + v.escape('xml') + '</dc:format>' + '\n'
+        , '')).join('')
+      , '')
+    ].uniques(), x, x).join('') +
+
+    forEach([
+      forNonBlank(cells['noteFootnote_text_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:description>' + v.escape('xml') + '</dc:description>' + '\n'
+        , '')).join('')
+      , ''),
+      forNonBlank(cells['noteContent_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:description>' + v.escape('xml') + '</dc:description>' + '\n'
+        , '')).join('')
+      , ''),
+      forNonBlank(cells['publicationHistory'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:description>' + v.escape('xml') + '</dc:description>' + '\n'
+        , '')).join('')
+      , '')
+    ].uniques(), x, x).join('') +
+
+    forEach([
+      forNonBlank(cells['filterSubject_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:subject>' + v.escape('xml') + '</dc:subject>' + '\n'
+        , '')).join('')
+      , ''),
+      forNonBlank(cells['personAbout_display_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:subject>' + v.escape('xml') + '</dc:subject>' + '\n'
+        , '')).join('')
+      , ''),
+      forNonBlank(cells['corporationAbout_display_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:subject>' + v.escape('xml') + '</dc:subject>' + '\n'
+        , '')).join('')
+      , ''),
+      forNonBlank(cells['classification_display_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:subject>' + v.escape('xml') + '</dc:subject>' + '\n'
+        , '')).join('')
+      , '')
+    ].uniques(), x, x).join('') +
+
+    forEach([
+      forNonBlank(cells['filterLocationType_mv'].value, x,
+        forEach(x.split('␟'), v, if(v.split('␝')[1] == 'Schlagwort',
+            '  <dc:coverage>' + v.split('␝')[0].escape('xml') + '</dc:coverage>' + '\n'    
+          , '')
+        ).join('')
+      , '')      
+    ].uniques(), x, x).join('') +
+
+    forEach([
+      forNonBlank(cells['parent_id_mv'].value, x,
           forEach(x.split('␟'), v, if(v != '␣',
             '  <dc:source>' + 'https://www.dla-marbach.de/find/opac/id/' + v.escape('xml') + '</dc:source>' + '\n'
           , '')).join('')
-        , '')
-      ).join('')
-    , '') +
+      , ''),
+      forNonBlank(cells['item_id_mv'].value, items,
+        forEach(items.split('␟'), item,
+          forNonBlank(item.cross('au','id')[0].cells['collection_id_mv'].value, x,
+            forEach(x.split('␟'), v, if(v != '␣',
+              '  <dc:source>' + 'https://www.dla-marbach.de/find/opac/id/' + v.escape('xml') + '</dc:source>' + '\n'
+            , '')).join('')
+          , '')
+        ).join('')
+      , '')
+    ].uniques(), x, x).join('') +
 
-    forNonBlank(cells['relation_id_mv'].value, x,
+    forEach([
+      forNonBlank(cells['relation_id_mv'].value, x,
+          forEach(x.split('␟'), v, if(v != '␣',
+            '  <dc:relation>' + 'https://www.dla-marbach.de/find/opac/id/' + v.escape('xml') + '</dc:relation>' + '\n'
+          , '')).join('')
+      , '')      
+    ].uniques(), x, x).join('') +
+
+    forEach([
+      forNonBlank(cells['identifier_type_mv'].value, x,
+        forEachIndex(x.split('␟'), i, z,
+          if(or(z == '552b', z == '572z'),
+            forNonBlank(cells['identifier_id_mv'].value.split('␟')[i], v,
+              '  <dc:identifier>' + v.escape('xml') + '</dc:identifier>' + '\n'
+            , '')
+          , '')
+        ).join('')
+      , ''),
+      forNonBlank(cells['isbn_mv'].value, x,
         forEach(x.split('␟'), v, if(v != '␣',
-          '  <dc:relation>' + 'https://www.dla-marbach.de/find/opac/id/' + v.escape('xml') + '</dc:relation>' + '\n'
+          '  <dc:identifier>' + v.escape('xml') + '</dc:identifier>' + '\n'
         , '')).join('')
-    , '') +
+      , ''),
+      forNonBlank(cells['ismn_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:identifier>' + v.escape('xml') + '</dc:identifier>' + '\n'
+        , '')).join('')
+      , ''),
+      forNonBlank(cells['issn_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:identifier>' + v.escape('xml') + '</dc:identifier>' + '\n'
+        , '')).join('')
+      , ''),
+      forNonBlank(cells['vendor_type_mv'].value, x,
+        forEachIndex(x.split('␟'), i, z,
+          if(z == 'K10Plus-PPN',
+            forNonBlank(cells['vendor_id_mv'].value.split('␟')[i], v,
+              '  <dc:identifier>' + v.escape('xml') + '</dc:identifier>' + '\n'
+            , '')
+          , '')
+        ).join('')
+      , ''),
+      forNonBlank(cells['callNumberBibliographic_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:identifier>' + v.escape('xml') + '</dc:identifier>' + '\n'
+        , '')).join('')
+      , ''),
+      forNonBlank(cells['item_id_mv'].value, items,
+        forEach(items.split('␟'), item,
+          forNonBlank(item.cross('au','id')[0].cells['callNumberItem'].value, v,
+            '  <dc:identifier>' + v.escape('xml') + forNonBlank(item.cross('au','id')[0].cells['callNumberItemSuffix'].value, v, ' (' + v.escape('xml') + ')', '') + '</dc:identifier>' + '\n'
+          , '')
+        ).join('')
+      , ''),
+      forNonBlank(cells['website_url_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:identifier>' + v.escape('xml') + '</dc:identifier>' + '\n'
+        , '')).join('')
+      , ''),
+      forNonBlank(cells['digitalObject_hyperlink_mv'].value, x,
+        forEach(x.split('␟'), v, if(v != '␣',
+          '  <dc:identifier>' + v.escape('xml') + '</dc:identifier>' + '\n'
+        , '')).join('')
+      , ''),
+      forNonBlank(cells['id'].value, v,
+      '  <dc:identifier>' + 'https://www.dla-marbach.de/find/opac/id/' +  v.escape('xml') + '</dc:identifier>' + '\n'
+      , '')      
+    ].uniques(), x, x).join('') +
 
-    forNonBlank(cells['identifier_type_mv'].value, x,
-      forEachIndex(x.split('␟'), i, z,
-        if(or(z == '552b', z == '572z'),
-          forNonBlank(cells['identifier_id_mv'].value.split('␟')[i], v,
-            '  <dc:identifier>' + v.escape('xml') + '</dc:identifier>' + '\n'
-          , '')
-        , '')
-      ).join('')
-    , '') +
-    forNonBlank(cells['isbn_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:identifier>' + v.escape('xml') + '</dc:identifier>' + '\n'
-      , '')).join('')
-    , '') +
-    forNonBlank(cells['ismn_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:identifier>' + v.escape('xml') + '</dc:identifier>' + '\n'
-      , '')).join('')
-    , '') +
-    forNonBlank(cells['issn_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:identifier>' + v.escape('xml') + '</dc:identifier>' + '\n'
-      , '')).join('')
-    , '') +
-    forNonBlank(cells['vendor_type_mv'].value, x,
-      forEachIndex(x.split('␟'), i, z,
-        if(z == 'K10Plus-PPN',
-          forNonBlank(cells['vendor_id_mv'].value.split('␟')[i], v,
-            '  <dc:identifier>' + v.escape('xml') + '</dc:identifier>' + '\n'
-          , '')
-        , '')
-      ).join('')
-    , '') +
-    forNonBlank(cells['callNumberBibliographic_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:identifier>' + v.escape('xml') + '</dc:identifier>' + '\n'
-      , '')).join('')
-    , '') +
-    forNonBlank(cells['item_id_mv'].value, items,
-      forEach(items.split('␟'), item,
-        forNonBlank(item.cross('au','id')[0].cells['callNumberItem'].value, v,
-          '  <dc:identifier>' + v.escape('xml') + forNonBlank(item.cross('au','id')[0].cells['callNumberItemSuffix'].value, v, ' (' + v.escape('xml') + ')', '') + '</dc:identifier>' + '\n'
-        , '')
-      ).join('')
-    , '') +
-    forNonBlank(cells['website_url_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:identifier>' + v.escape('xml') + '</dc:identifier>' + '\n'
-      , '')).join('')
-    , '') +
-    forNonBlank(cells['digitalObject_hyperlink_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
-        '  <dc:identifier>' + v.escape('xml') + '</dc:identifier>' + '\n'
-      , '')).join('')
-    , '') +
-    forNonBlank(cells['id'].value, v,
-    '  <dc:identifier>' + 'https://www.dla-marbach.de/find/opac/id/' +  v.escape('xml') + '</dc:identifier>' + '\n'
-    , '') +
     '</oai_dc:dc>'
   newColumnName: exportDC
   columnInsertIndex: 2
