@@ -21,12 +21,19 @@
     forEach(
       [
         forNonBlank(cells['personBy_display_mv'].value, v, v, ''),
-        forNonBlank(cells['personTo_display_mv'].value, v, v, ''),
-        forNonBlank(cells['corporationBy_display_mv'].value, v, v, ''),
-        forNonBlank(cells['corporationTo_display_mv'].value, v, v, '')
+        forNonBlank(cells['corporationBy_display_mv'].value, v, v, '')
       ].join('␟').replace('␣','').split('␟').uniques(),
       v,
       '  <dc:creator>' + v.escape('xml') + '</dc:creator>' + '\n'
+    ).join('') +
+
+    forEach(
+      [
+        forNonBlank(cells['personTo_display_mv'].value, v, v, ''),
+        forNonBlank(cells['corporationTo_display_mv'].value, v, v, '')
+      ].join('␟').replace('␣','').split('␟').uniques(),
+      v,
+      '  <dc:contributor>' + v.escape('xml') + '</dc:contributor>' + '\n'
     ).join('') +
 
     forEach(
