@@ -44,9 +44,73 @@
 
     forEach(
       [
-        forNonBlank(cells['personBy_display_mv'].value, v, v, ''),
-        forNonBlank(cells['corporationBy_display_mv'].value, v, v, ''),
-        forNonBlank(cells['corporationByConference_display_mv'].value, v, v, ''),
+        forNonBlank(cells['personBy_display_mv'].value, x,
+          forEachIndex(x.split('␟'), i, v,
+            forNonBlank(
+              cells['personBy_creator_mv'].value.split('␟')[i],
+              z,
+              if(z != 'contributor', v, ''),
+              v
+            )
+          ).join('␟')
+        , ''),
+        forNonBlank(cells['corporationBy_display_mv'].value, x,
+          forEachIndex(x.split('␟'), i, v,
+            forNonBlank(
+              cells['corporationBy_creator_mv'].value.split('␟')[i],
+              z,
+              if(z != 'contributor', v, ''),
+              v
+            )
+          ).join('␟')
+        , ''),
+        forNonBlank(cells['corporationByConference_display_mv'].value, x,
+          forEachIndex(x.split('␟'), i, v,
+            forNonBlank(
+              cells['corporationByConference_creator_mv'].value.split('␟')[i],
+              z,
+              if(z != 'contributor', v, ''),
+              v
+            )
+          ).join('␟')
+        , '')
+      ].join('␟').replace('␣','').split('␟').uniques(),
+      v,
+      '  <dc:creator>' + v.escape('xml') + '</dc:creator>' + '\n'
+    ).join('') +
+
+    forEach(
+      [
+        forNonBlank(cells['personBy_display_mv'].value, x,
+          forEachIndex(x.split('␟'), i, v,
+            forNonBlank(
+              cells['personBy_creator_mv'].value.split('␟')[i],
+              z,
+              if(z == 'contributor', v, ''),
+              ''
+            )
+          ).join('␟')
+        , ''),
+        forNonBlank(cells['corporationBy_display_mv'].value, x,
+          forEachIndex(x.split('␟'), i, v,
+            forNonBlank(
+              cells['corporationBy_creator_mv'].value.split('␟')[i],
+              z,
+              if(z == 'contributor', v, ''),
+              ''
+            )
+          ).join('␟')
+        , ''),
+        forNonBlank(cells['corporationByConference_display_mv'].value, x,
+          forEachIndex(x.split('␟'), i, v,
+            forNonBlank(
+              cells['corporationByConference_creator_mv'].value.split('␟')[i],
+              z,
+              if(z == 'contributor', v, ''),
+              ''
+            )
+          ).join('␟')
+        , ''),
         forNonBlank(cells['item_id_mv'].value, items,
           forEach(items.split('␟'), item,
               forNonBlank(item.cross('au','id')[0].cells['personAt_display_mv'].value, v, v, '')
@@ -59,7 +123,7 @@
         , '')
       ].join('␟').replace('␣','').split('␟').uniques(),
       v,
-      '  <dc:creator>' + v.escape('xml') + '</dc:creator>' + '\n'
+      '  <dc:contributor>' + v.escape('xml') + '</dc:contributor>' + '\n'
     ).join('') +
 
     forEach(

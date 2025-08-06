@@ -4,11 +4,12 @@ AK00000001,2023-06-06,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI
   <dc:title>Titel der größeren Einheit in Vorlageform 1</dc:title>
   <dc:title>Titel der größeren Einheit in Vorlageform 2</dc:title>
   <dc:creator>Person 1 (1982–2001)</dc:creator>
-  <dc:creator>Person 2 (1982–2001)</dc:creator>
-  <dc:creator>Körperschaft 1 (1982)</dc:creator>
-  <dc:creator>Körperschaft 2</dc:creator>
-  <dc:creator>Konferenz 1</dc:creator>
-  <dc:creator>Konferenz 2</dc:creator>
+  <dc:contributor>Person 2 (1982–2001)</dc:contributor>
+  <dc:contributor>Körperschaft 1 (1982)</dc:contributor>
+  <dc:contributor>Körperschaft 2</dc:contributor>
+  <dc:contributor>Konferenz 1</dc:contributor>
+  <dc:contributor>Konferenz 2</dc:contributor>
+  <dc:contributor>Person 1 (1982–2001)</dc:contributor>
   <dc:type>Erweiterte physikalische Form</dc:type>
   <dc:type>Medienart 1</dc:type>
   <dc:type>Medienart 2</dc:type>
@@ -233,19 +234,19 @@ AK00000052,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_d
 </oai_dc:dc>"
 AK00006001,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
   <dc:title>Fehlende Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: -) und zwei Körperschaften (1: urheber, 2: beteiligt)</dc:title>
-  <dc:creator>Person 1 (1982–2001)</dc:creator>
   <dc:creator>Person 2 (1982–2001)</dc:creator>
   <dc:creator>Körperschaft 1 (1982)</dc:creator>
-  <dc:creator>Körperschaft 2</dc:creator>
+  <dc:contributor>Person 1 (1982–2001)</dc:contributor>
+  <dc:contributor>Körperschaft 2</dc:contributor>
   <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00006001</dc:identifier>
   <dc:identifier>AK00006001</dc:identifier>
 </oai_dc:dc>"
 AK00006002,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">
   <dc:title>Zusätzliche Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: urheber) und zwei Körperschaften (1: urheber, 2: beteiligt)</dc:title>
-  <dc:creator>Person 1 (1982–2001)</dc:creator>
   <dc:creator>Person 2 (1982–2001)</dc:creator>
   <dc:creator>Körperschaft 1 (1982)</dc:creator>
-  <dc:creator>Körperschaft 2</dc:creator>
+  <dc:contributor>Person 1 (1982–2001)</dc:contributor>
+  <dc:contributor>Körperschaft 2</dc:contributor>
   <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00006002</dc:identifier>
   <dc:identifier>AK00006002</dc:identifier>
 </oai_dc:dc>"
@@ -307,8 +308,8 @@ AK00000063,,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_d
   <dc:title>Facette Personen und Körperschaften</dc:title>
   <dc:creator>Person 1 (1982–2001)</dc:creator>
   <dc:creator>Körperschaft 1 (1982)</dc:creator>
-  <dc:creator>Person 7</dc:creator>
-  <dc:creator>Körperschaft 7</dc:creator>
+  <dc:contributor>Person 7</dc:contributor>
+  <dc:contributor>Körperschaft 7</dc:contributor>
   <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000063</dc:identifier>
   <dc:identifier>AK00000063</dc:identifier>
 </oai_dc:dc>"
