@@ -1,0 +1,106 @@
+# Bei mehrbändigen Werken Körperschaften VON von der Hauptaufnahme in alle Teile kopieren
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: text
+      columnName: parent_type_mv
+      query: Teil mit abhängigem Titel
+      mode: text
+  columnName: corporationBy_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEachIndex(
+        cells['parent_type_mv'].value.split('␟'),
+        i,
+        v,
+        if(
+          v == 'Teil mit abhängigem Titel',
+          forNonBlank(
+            cells['parent_id_mv'].value.split('␟')[i].cross('ak', 'id')[0].cells['corporationBy_id_mv'].value,
+            x,
+            x,
+            null
+          ),
+          null
+        )
+      ).join('␟'),
+      x,
+      forNonBlank(
+        value,
+        v,
+        v + '␟' + x,
+        x
+      ),
+      null
+    )
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: text
+      columnName: parent_type_mv
+      query: Teil mit abhängigem Titel
+      mode: text
+  columnName: corporationBy_role_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEachIndex(
+        cells['parent_type_mv'].value.split('␟'),
+        i,
+        v,
+        if(
+          v == 'Teil mit abhängigem Titel',
+          forNonBlank(
+            cells['parent_id_mv'].value.split('␟')[i].cross('ak', 'id')[0].cells['corporationBy_role_mv'].value,
+            x,
+            x,
+            null
+          ),
+          null
+        )
+      ).join('␟'),
+      x,
+      forNonBlank(
+        value,
+        v,
+        v + '␟' + x,
+        x
+      ),
+      null
+    )
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: text
+      columnName: parent_type_mv
+      query: Teil mit abhängigem Titel
+      mode: text
+  columnName: corporationBy_creator_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEachIndex(
+        cells['parent_type_mv'].value.split('␟'),
+        i,
+        v,
+        if(
+          v == 'Teil mit abhängigem Titel',
+          forNonBlank(
+            cells['parent_id_mv'].value.split('␟')[i].cross('ak', 'id')[0].cells['corporationBy_creator_mv'].value,
+            x,
+            x,
+            null
+          ),
+          null
+        )
+      ).join('␟'),
+      x,
+      forNonBlank(
+        value,
+        v,
+        v + '␟' + x,
+        x
+      ),
+      null
+    )

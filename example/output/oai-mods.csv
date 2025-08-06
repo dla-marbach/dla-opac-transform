@@ -1187,6 +1187,67 @@ AK00000095,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http
     <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000095</recordIdentifier>
   </recordInfo>
 </mods>"
+AK00000111,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
+  <titleInfo>
+    <title>Teil eines mehrbändigen Werks</title>
+  </titleInfo>
+  <name type=""personal"">
+    <namePart>Person 1 (1982–2001)</namePart>
+    <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
+    <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
+    <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
+    <role>
+      <roleTerm type=""text"">Verfasser/Urheber</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
+    <namePart>Person 2 (1982–2001)</namePart>
+    <namePart type=""date"">1982-05 — 2001-01</namePart>
+    <role>
+      <roleTerm type=""text"">Behandelte Person/Körperschaft</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>Körperschaft 1 (1982)</namePart>
+    <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
+    <nameIdentifier type=""gnd"">GND-Nummer 2</nameIdentifier>
+    <namePart type=""date"">1982-05-22 — 2001-01-02</namePart>
+    <role>
+      <roleTerm type=""text"">Verfasser/Urheber</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>Körperschaft 2</namePart>
+    <role>
+      <roleTerm type=""text"">Behandelte Person/Körperschaft</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>Konferenz 1</namePart>
+    <role>
+      <roleTerm type=""text"">Link Konferenz 1 Typ</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>Konferenz 2</namePart>
+    <role>
+      <roleTerm type=""text"">Link Konferenz 2 Typ</roleTerm>
+    </role>
+  </name>
+  <relatedItem type=""host"">
+    <recordInfo>
+      <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000001</recordIdentifier>
+    </recordInfo>
+  </relatedItem>
+  <location>
+    <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+  </location>
+  <recordInfo>
+    <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+    <recordContentSource authority=""marcorg"">DE-Mar1</recordContentSource>
+    <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000111</recordIdentifier>
+  </recordInfo>
+</mods>"
 AK00000053,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
   <titleInfo>
     <title>Zeitschrift</title>
