@@ -100,7 +100,8 @@
       [
         forNonBlank(cells['title'].value, v, v, ''),
         forNonBlank(cells['digitalObject_hyperlink_mv'].value, v, v, ''),
-        forNonBlank(cells['id'].value, v, 'https://www.dla-marbach.de/find/opac/id/' +  v, '')
+        forNonBlank(cells['id'].value, v, 'https://www.dla-marbach.de/find/opac/id/' +  v, ''),
+        forNonBlank(cells['id'].value, v, v, '')
       ].join('␟').replace('␣','').split('␟').uniques(),
       v,
       '  <dc:identifier>' + v.escape('xml') + '</dc:identifier>' + '\n'
