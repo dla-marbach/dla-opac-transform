@@ -292,14 +292,12 @@
 
     forNonBlank(cells['item_id_mv'].value, items,
       forEach(items.split('␟'), item,
-        forNonBlank(item.cross('au','id')[0].cells['manifestation_id'].value, x,
-          forEach(x.split('␟'), v, if(v != '␣',
+        forNonBlank(item.cross('au','id')[0].cells['manifestation_id'].value, v,
             '  <relatedItem type="host">' + '\n' +
             '    <recordInfo>' + '\n' +
             '      <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">' + v.escape('xml') + '</recordIdentifier>' + '\n' +
             '    </recordInfo>' + '\n' +
             '  </relatedItem>' + '\n'
-          , '')).join('')
         , '')
       ).join('')
     , '') +
