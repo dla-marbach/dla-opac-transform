@@ -125,6 +125,7 @@
       ).join('')
     , '') +
 
+    '  <typeOfResource manuscript="yes">Handschrift</typeOfResource>' + '\n' +
     forNonBlank(cells['filterMedium_mv'].value, x,
       forEach(x.split('␟'), v,
         '  <typeOfResource manuscript="yes">' + v.escape('xml') + '</typeOfResource>' + '\n'
@@ -140,7 +141,7 @@
     forNonBlank(
       forNonBlank(cells['filterLocationType_mv'].value, x,
         forEach(x.split('␟'), z,
-          if(z.split('␝')[1] == 'Herstellungsort',
+          if(z.split('␝')[1] == 'Entstehungsort',
             '    <place>' + '\n' +
             '      <placeTerm type="text">' + z.split('␝')[0].escape('xml') + '</placeTerm>' + '\n' +
             '    </place>' + '\n'
@@ -239,10 +240,12 @@
 
     '  <location>' + '\n' +
     '    <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>' + '\n' +
-    forNonBlank(cells['collection_display_mv'].value, x,
-      forEach(x.split('␟'), v, if(v != '␣',
+    forNonBlank(cells['collection_id_mv'].value, collections,
+      forEach(collections.split('␟'), collection,
+        forNonBlank(collection.cross('bf','id')[0].cells['title'].value, v,
         '    <shelfLocator>' + v.escape('xml') + '</shelfLocator>' + '\n'
-      , '')).join('')
+        , '')
+      ).join('')
     , '') +
     forNonBlank(cells['digitalObject_hyperlink_mv'].value, x,
       forEach(x.split('␟'), v, if(v != '␣',

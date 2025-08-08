@@ -112,6 +112,7 @@ HS00000001,Handschrift 1,Erwerbungsnummer,Erwerbung 1,BE00000001,Sigel 1␟Sigel
       <roleTerm type=""text"">Link Körperschaft 8 Typ</roleTerm>
     </role>
   </name>
+  <typeOfResource manuscript=""yes"">Handschrift</typeOfResource>
   <genre>Hauptgattung</genre>
   <genre>Weitere Hauptgattung 1</genre>
   <genre>Weitere Hauptgattung 2</genre>
@@ -119,6 +120,12 @@ HS00000001,Handschrift 1,Erwerbungsnummer,Erwerbung 1,BE00000001,Sigel 1␟Sigel
   <genre>Weitere Untergattung 1</genre>
   <genre>Weitere Untergattung 2</genre>
   <originInfo eventType=""manufacture"">
+    <place>
+      <placeTerm type=""text"">Entstehungsort 1</placeTerm>
+    </place>
+    <place>
+      <placeTerm type=""text"">Entstehungsort 2</placeTerm>
+    </place>
     <dateCreated point=""start"" encoding=""iso8601"">1982-05-22</dateCreated>
     <dateCreated point=""end"" encoding=""iso8601"">2001-01-01</dateCreated>
   </originInfo>
@@ -188,7 +195,7 @@ HS00000001,Handschrift 1,Erwerbungsnummer,Erwerbung 1,BE00000001,Sigel 1␟Sigel
   </relatedItem>
   <location>
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
-    <shelfLocator>Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]</shelfLocator>
+    <shelfLocator>Z:Öffentlicher Bestand 1</shelfLocator>
   </location>
   <recordInfo>
     <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
@@ -267,6 +274,7 @@ HS00000002,Handschrift 2 Noten,,,,,,Maschinenlesbare Datenträger,,,false,,,,,,,
   <titleInfo>
     <title>Handschrift 2 Noten</title>
   </titleInfo>
+  <typeOfResource manuscript=""yes"">Handschrift</typeOfResource>
   <typeOfResource manuscript=""yes"">Sonstiger Datenträger</typeOfResource>
   <typeOfResource manuscript=""yes"">Noten</typeOfResource>
   <genre>Kompositionen</genre>
@@ -296,6 +304,7 @@ HS00000003,Vertraulicher Datensatz,,,,,,,,,true,,,,,,,,,,,,,,,,,,,,,,,,,"<oai_dc
   <titleInfo>
     <title>Vertraulicher Datensatz</title>
   </titleInfo>
+  <typeOfResource manuscript=""yes"">Handschrift</typeOfResource>
   <location>
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
@@ -320,6 +329,7 @@ HS00000004,Brief [Hauptgattung],,,,,Briefe von,,,,true,,,,,,,,,,,,,,,,,,,,,,,,,"
   <titleInfo>
     <title>Brief</title>
   </titleInfo>
+  <typeOfResource manuscript=""yes"">Handschrift</typeOfResource>
   <genre>Hauptgattung</genre>
   <location>
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
@@ -347,6 +357,7 @@ HS00000011,Verknüpfte Digitale Objekte,,,,,,,,,,,,,,,,,,,,,,,,,,,,public␟publ
   <titleInfo>
     <title>Verknüpfte Digitale Objekte</title>
   </titleInfo>
+  <typeOfResource manuscript=""yes"">Handschrift</typeOfResource>
   <location>
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
     <url access=""object in context"">https://digital.dla-marbach.de/viewer/image/BF00043389/0015/?media_thumbnail=BF00043389_0015.tif&amp;media_access=public</url>
@@ -425,6 +436,7 @@ HS00000005,Facette Personen und Körperschaften,,,,,,,,,,,,Körperschaft 1 (1982
   <name type=""corporate"">
     <namePart>Körperschaft 6</namePart>
   </name>
+  <typeOfResource manuscript=""yes"">Handschrift</typeOfResource>
   <subject>
     <topic>Person 1 (1982–2001)</topic>
   </subject>

@@ -192,6 +192,7 @@ exportMODS: |-
         <roleTerm type="text">Link Körperschaft 8 Typ</roleTerm>
       </role>
     </name>
+    <typeOfResource manuscript="yes">Handschrift</typeOfResource>
     <genre>Hauptgattung</genre>
     <genre>Weitere Hauptgattung 1</genre>
     <genre>Weitere Hauptgattung 2</genre>
@@ -199,6 +200,12 @@ exportMODS: |-
     <genre>Weitere Untergattung 1</genre>
     <genre>Weitere Untergattung 2</genre>
     <originInfo eventType="manufacture">
+      <place>
+        <placeTerm type="text">Entstehungsort 1</placeTerm>
+      </place>
+      <place>
+        <placeTerm type="text">Entstehungsort 2</placeTerm>
+      </place>
       <dateCreated point="start" encoding="iso8601">1982-05-22</dateCreated>
       <dateCreated point="end" encoding="iso8601">2001-01-01</dateCreated>
     </originInfo>
@@ -268,7 +275,7 @@ exportMODS: |-
     </relatedItem>
     <location>
       <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
-      <shelfLocator>Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]</shelfLocator>
+      <shelfLocator>Z:Öffentlicher Bestand 1</shelfLocator>
     </location>
     <recordInfo>
       <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
@@ -575,6 +582,7 @@ exportMODS: |-
     <titleInfo>
       <title>Handschrift 2 Noten</title>
     </titleInfo>
+    <typeOfResource manuscript="yes">Handschrift</typeOfResource>
     <typeOfResource manuscript="yes">Sonstiger Datenträger</typeOfResource>
     <typeOfResource manuscript="yes">Noten</typeOfResource>
     <genre>Kompositionen</genre>
@@ -626,6 +634,7 @@ exportMODS: |-
     <titleInfo>
       <title>Vertraulicher Datensatz</title>
     </titleInfo>
+    <typeOfResource manuscript="yes">Handschrift</typeOfResource>
     <location>
       <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
     </location>
@@ -666,6 +675,7 @@ exportMODS: |-
     <titleInfo>
       <title>Brief</title>
     </titleInfo>
+    <typeOfResource manuscript="yes">Handschrift</typeOfResource>
     <genre>Hauptgattung</genre>
     <location>
       <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
@@ -725,6 +735,7 @@ exportMODS: |-
     <titleInfo>
       <title>Verknüpfte Digitale Objekte</title>
     </titleInfo>
+    <typeOfResource manuscript="yes">Handschrift</typeOfResource>
     <location>
       <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
       <url access="object in context">https://digital.dla-marbach.de/viewer/image/BF00043389/0015/?media_thumbnail=BF00043389_0015.tif&amp;media_access=public</url>
@@ -844,6 +855,7 @@ exportMODS: |-
     <name type="corporate">
       <namePart>Körperschaft 6</namePart>
     </name>
+    <typeOfResource manuscript="yes">Handschrift</typeOfResource>
     <subject>
       <topic>Person 1 (1982–2001)</topic>
     </subject>
