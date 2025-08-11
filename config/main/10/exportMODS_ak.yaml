@@ -253,7 +253,7 @@
     , '') +
 
     forNonBlank(cells['publicationHistory'].value, v,
-      '  <note type="footnotes">' + v.escape('xml') + '</note>' + '\n'
+      '  <note type="publication history">' + v.escape('xml') + '</note>' + '\n'
     , '') +
 
     forNonBlank(cells['noteFootnote_text_mv'].value, x,
