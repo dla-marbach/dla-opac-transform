@@ -129,7 +129,11 @@
 
     forEach(
       [
-        forNonBlank(cells['collection_display_mv'].value, v, v, ''),
+        forNonBlank(cells['collection_id_mv'].value, collections,
+          forEach(collections.split('␟'), collection,
+            forNonBlank(collection.cross('bf','id')[0].cells['title'].value, v, v, '')
+          ).join('␟')
+        , ''),
         forNonBlank(cells['digitalObject_hyperlink_mv'].value, v, v, ''),
         forNonBlank(cells['id'].value, v, 'https://www.dla-marbach.de/find/opac/id/' +  v, ''),
         forNonBlank(cells['id'].value, v, v, '')
