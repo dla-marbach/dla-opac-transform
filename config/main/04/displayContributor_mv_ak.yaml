@@ -1,0 +1,83 @@
+# Bündelung aller Urheber in einem Feld
+# aus personBy, corporationBy, corporationByConference und corporationByTerritory
+# wenn das zugehörige _creator Feld "creator" beinhaltet
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['personBy_creator_mv'].value,
+          x,
+          forEachIndex(
+            x.split('␟'),
+            i,
+            v,
+            if(
+              v == 'creator',
+              cells['personBy_display_mv'].value.split('␟')[i],
+              null
+            )
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['corporationBy_creator_mv'].value,
+          x,
+          forEachIndex(
+            x.split('␟'),
+            i,
+            v,
+            if(
+              v == 'creator',
+              cells['corporationBy_display_mv'].value.split('␟')[i],
+              null
+            )
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['corporationByConference_creator_mv'].value,
+          x,
+          forEachIndex(
+            x.split('␟'),
+            i,
+            v,
+            if(
+              v == 'creator',
+              cells['corporationByConference_display_mv'].value.split('␟')[i],
+              null
+            )
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['corporationByTerritory_creator_mv'].value,
+          x,
+          forEachIndex(
+            x.split('␟'),
+            i,
+            v,
+            if(
+              v == 'creator',
+              cells['corporationByTerritory_display_mv'].value.split('␟')[i],
+              null
+            )
+          ).join('␟'),
+          null
+        )
+      ].join('␟'),
+      z,
+      filter(
+        z.split('␟'),
+        f,
+        f[0] != '␣'
+      ).uniques().join('␟'),
+      null
+    )
+  newColumnName: displayContributor_mv
+  columnInsertIndex: 2
