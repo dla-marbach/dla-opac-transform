@@ -1,6 +1,6 @@
-# Bündelung aller (weiteren) Beteiligten in einem Feld
+# Bündelung aller Urheber in einem Feld
 # aus personBy, corporationBy, corporationByConference und corporationByTerritory
-# wenn das zugehörige _creator Feld "contributor" beinhaltet
+# wenn das zugehörige _creator Feld "creator" beinhaltet
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -18,7 +18,7 @@
             i,
             v,
             if(
-              v == 'contributor',
+              v == 'creator',
               cells['personBy_display_mv'].value.split('␟')[i],
               null
             )
@@ -33,7 +33,7 @@
             i,
             v,
             if(
-              v == 'contributor',
+              v == 'creator',
               cells['corporationBy_display_mv'].value.split('␟')[i],
               null
             )
@@ -48,7 +48,7 @@
             i,
             v,
             if(
-              v == 'contributor',
+              v == 'creator',
               cells['corporationByConference_display_mv'].value.split('␟')[i],
               null
             )
@@ -63,7 +63,7 @@
             i,
             v,
             if(
-              v == 'contributor',
+              v == 'creator',
               cells['corporationByTerritory_display_mv'].value.split('␟')[i],
               null
             )

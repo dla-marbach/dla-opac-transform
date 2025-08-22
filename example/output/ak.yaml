@@ -111,15 +111,15 @@ digitalObject_id_mv:
   - MM00000001
   - MM00000002
 displayContributor_mv:
-  - Person 1 (1982–2001)
-  - Gebietskörperschaft 1
-displayCreator_mv:
   - Person 2 (1982–2001)
   - Körperschaft 1 (1982)
   - Körperschaft 2
   - Konferenz 1
   - Konferenz 2
   - Gebietskörperschaft 2
+displayCreator_mv:
+  - Person 1 (1982–2001)
+  - Gebietskörperschaft 1
 edition: Ausgabebezeichnung Vorlageform
 editionNormalized: Ausgabebezeichnung normiert
 exportDC: |-
@@ -2204,10 +2204,10 @@ corporationBy_id_mv:
   - KS00000001
   - KS00000002
 displayContributor_mv:
-  - Körperschaft 1 (1982)
-displayCreator_mv:
   - Person 1 (1982–2001)
   - Körperschaft 2
+displayCreator_mv:
+  - Körperschaft 1 (1982)
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Fehlende Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: -) und zwei Körperschaften (1: urheber, 2: beteiligt)</dc:title>
@@ -2304,11 +2304,11 @@ corporationBy_id_mv:
   - KS00000001
   - KS00000002
 displayContributor_mv:
-  - Person 2 (1982–2001)
-  - Körperschaft 1 (1982)
-displayCreator_mv:
   - Person 1 (1982–2001)
   - Körperschaft 2
+displayCreator_mv:
+  - Person 2 (1982–2001)
+  - Körperschaft 1 (1982)
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Zusätzliche Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: urheber) und zwei Körperschaften (1: urheber, 2: beteiligt)</dc:title>
@@ -3874,15 +3874,15 @@ corporationBy_role_mv:
   - Behandelte Person/Körperschaft
   - ␣
 displayContributor_mv:
-  - Person 1 (1982–2001)
-  - Gebietskörperschaft 1
-displayCreator_mv:
   - Person 2 (1982–2001)
   - Körperschaft 1 (1982)
   - Körperschaft 2
   - Konferenz 1
   - Konferenz 2
   - Gebietskörperschaft 2
+displayCreator_mv:
+  - Person 1 (1982–2001)
+  - Gebietskörperschaft 1
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Teil eines mehrbändigen Werks</dc:title>
