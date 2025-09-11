@@ -265,14 +265,15 @@ BF,extent,text,Umfang,
 BF,filterAuthority_mv,strings,Person 1 (1982-2001)␟Person 2 (1982-2001)␟Person 3 (1982-2001)␟Körperschaft 1 (1982),Facette Personen und Körperschaften
 BF,filterAuthorityRelation_mv,strings,Person 1 (1982-2001)␝An␟Person 2 (1982-2001)␝Von␟Person 3 (1982-2001)␝Unter␟Körperschaft 1 (1982)␝Über,Facette Personen und Körperschaften mit Relationen
 BF,filterAuthorityRole_mv,strings,Person 1 (1982-2001)␝Widmungsempfänger␟Person 2 (1982-2001)␝Verfasser/Urheber␟Person 3 (1982-2001)␝Bestandsbildner/Vorbesitzer␟Körperschaft 1 (1982)␝Behandelte Person/Körperschaft,Facette Personen und Körperschaften mit Funktionsbezeichnungen
-BF,filterRecent,daterange,2023-06-01,Facette Neu im Katalog
+BF,filterCollection_mv,strings,Z:Öffentlicher Bestand 1,Facette Sammlung
 BF,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 BF,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
-BF,filterCollection_mv,strings,Z:Öffentlicher Bestand 1,Facette Sammlung
+BF,filterDigital,boolean,true,Filter Digital
 BF,filterFormContent_mv,strings,Bestandsart,Facette Form und Inhalt
 BF,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
 BF,filterLocationType_mv,strings,Ort 1␝Schlagwort␟Ort 2 2␝Schlagwort,Facette Ort mit Typ
 BF,filterMultipart,boolean,true,Filter Mehrteilig
+BF,filterRecent,daterange,2023-06-01,Facette Neu im Katalog
 BF,filterSource,string,Nachlässe und Spezialsammlungen,Facette Datenbestand
 BF,filterSubject_mv,strings,normiertes Schlagwort 1␟normiertes Schlagwort 2,Facette Thema
 BF,filterType,string,Gedrucktes,Facette Medientyp
