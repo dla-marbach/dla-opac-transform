@@ -30,6 +30,13 @@ classification_id_mv:
   - SE00000002
   - SE99999999
 confidential: false
+contributor_display_mv:
+  - Person 2 (1982–2001)
+  - Körperschaft 1 (1982)
+  - Körperschaft 2
+  - Konferenz 1
+  - Konferenz 2
+  - Gebietskörperschaft 2
 corporationAbout_display_mv:
   - Körperschaft 3
   - Körperschaft 4
@@ -89,6 +96,9 @@ corporationBy_role_mv:
 country_mv:
   - Land 1
   - Land 2
+creator_display_mv:
+  - Person 1 (1982–2001)
+  - Gebietskörperschaft 1
 dateCataloged: "2023-06-01"
 dateModified: "2023-06-06"
 dateOrigin: "2023"
@@ -110,16 +120,6 @@ digitalObject_display_mv:
 digitalObject_id_mv:
   - MM00000001
   - MM00000002
-displayContributor_mv:
-  - Person 2 (1982–2001)
-  - Körperschaft 1 (1982)
-  - Körperschaft 2
-  - Konferenz 1
-  - Konferenz 2
-  - Gebietskörperschaft 2
-displayCreator_mv:
-  - Person 1 (1982–2001)
-  - Gebietskörperschaft 1
 edition: Ausgabebezeichnung Vorlageform
 editionNormalized: Ausgabebezeichnung normiert
 exportDC: |-
@@ -2194,6 +2194,9 @@ url: https://www.dla-marbach.de/find/opac/id/AK00000052
 ---
 id: AK00006001
 display: 'Fehlende Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: -) und zwei Körperschaften (1: urheber, 2: beteiligt)'
+contributor_display_mv:
+  - Person 1 (1982–2001)
+  - Körperschaft 2
 corporationBy_creator_mv:
   - creator
   - contributor
@@ -2203,10 +2206,7 @@ corporationBy_display_mv:
 corporationBy_id_mv:
   - KS00000001
   - KS00000002
-displayContributor_mv:
-  - Person 1 (1982–2001)
-  - Körperschaft 2
-displayCreator_mv:
+creator_display_mv:
   - Körperschaft 1 (1982)
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
@@ -2294,6 +2294,9 @@ url: https://www.dla-marbach.de/find/opac/id/AK00006001
 ---
 id: AK00006002
 display: 'Zusätzliche Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: urheber) und zwei Körperschaften (1: urheber, 2: beteiligt)'
+contributor_display_mv:
+  - Person 1 (1982–2001)
+  - Körperschaft 2
 corporationBy_creator_mv:
   - creator
   - contributor
@@ -2303,10 +2306,7 @@ corporationBy_display_mv:
 corporationBy_id_mv:
   - KS00000001
   - KS00000002
-displayContributor_mv:
-  - Person 1 (1982–2001)
-  - Körperschaft 2
-displayCreator_mv:
+creator_display_mv:
   - Person 2 (1982–2001)
   - Körperschaft 1 (1982)
 exportDC: |-
@@ -3825,6 +3825,13 @@ title: 'Facette Medientyp: Video'
 ---
 id: AK00000111
 display: Teil eines mehrbändigen Werks
+contributor_display_mv:
+  - Person 2 (1982–2001)
+  - Körperschaft 1 (1982)
+  - Körperschaft 2
+  - Konferenz 1
+  - Konferenz 2
+  - Gebietskörperschaft 2
 corporationByConference_creator_mv:
   - contributor
   - contributor
@@ -3873,14 +3880,7 @@ corporationBy_role_mv:
   - Verfasser/Urheber
   - Behandelte Person/Körperschaft
   - ␣
-displayContributor_mv:
-  - Person 2 (1982–2001)
-  - Körperschaft 1 (1982)
-  - Körperschaft 2
-  - Konferenz 1
-  - Konferenz 2
-  - Gebietskörperschaft 2
-displayCreator_mv:
+creator_display_mv:
   - Person 1 (1982–2001)
   - Gebietskörperschaft 1
 exportDC: |-
