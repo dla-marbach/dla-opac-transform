@@ -17,7 +17,6 @@
     + forNonBlank(forEach(cells['filterSubject_mv'].value.split('␟'), v, 'KW  - ' + v).join('\n'), x, x + '\n', '')
     + forNonBlank(forEach(cells['filterLanguage_mv'].value.split('␟'), v, 'LA  - ' + v).join('\n'), x, x + '\n', '')
     + forNonBlank(forEach(cells['acronym_mv'].value.split('␟'), v, if(v != '␣', v, null)).join('; '), x, 'LB  - ' + x + '\n', '')
-    + forNonBlank(cells['itemNumber'].value, v, 'M1  - ' + v + '\n', '')
     + forNonBlank(forEach(cells['filterMedium_mv'].value.split('␟'), v, 'M2  - ' + v).join('\n'), x, x + '\n', '')
     + forNonBlank(forEach(cells['filterFormContent_mv'].value.split('␟'), v, 'M3  - ' + v).join('\n'), x, x + '\n', '')
     + forNonBlank(forEachIndex(cells['filterLocationType_mv'].value.split('␟'), i, v, 'N1  - ' + v.split('␝')[1].replace('nicht bestimmt', 'Ort') + ': ' + v.split('␝')[0]).join('\n'), x, x + '\n', '')
