@@ -77,6 +77,8 @@
   <field name="classification_id_mv" type="texts"/>
   <field name="confidential" type="boolean"/>
   <field name="content" type="text"/>
+  <field name="contributor_display_mv" type="texts"/>
+  <field name="contributor_id_mv" type="texts"/>
   <field name="corporationAbout_comment_mv" type="texts"/>
   <field name="corporationAbout_display_mv" type="texts"/>
   <field name="corporationAbout_id_mv" type="texts"/>
@@ -103,6 +105,8 @@
   <field name="corporation_display_mv" type="texts"/>
   <field name="corporation_id_mv" type="texts"/>
   <field name="country_mv" type="texts"/>
+  <field name="creator_display_mv" type="texts"/>
+  <field name="creator_id_mv" type="texts"/>
   <field name="dateActivityEnd" type="daterange"/>
   <field name="dateActivityStart" type="daterange"/>
   <field name="dateCataloged" type="daterange"/>
@@ -134,8 +138,6 @@
   <field name="dimension_height_mv" type="texts"/>
   <field name="dimension_width_mv" type="texts"/>
   <field name="display" type="text" required="true"/>
-  <field name="contributor_display_mv" type="texts"/>
-  <field name="creator_display_mv" type="texts"/>
   <field name="edition" type="text"/>
   <field name="editionNormalized" type="text"/>
   <field name="enveloped" type="boolean"/>

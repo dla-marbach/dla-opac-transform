@@ -1,0 +1,83 @@
+# Bündelung aller (weiteren) Beteiligten in einem Feld
+# aus personBy, corporationBy, corporationByConference und corporationByTerritory
+# wenn das zugehörige _creator Feld "contributor" beinhaltet
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['personBy_creator_mv'].value,
+          x,
+          forEachIndex(
+            x.split('␟'),
+            i,
+            v,
+            if(
+              v == 'contributor',
+              cells['personBy_id_mv'].value.split('␟')[i],
+              null
+            )
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['corporationBy_creator_mv'].value,
+          x,
+          forEachIndex(
+            x.split('␟'),
+            i,
+            v,
+            if(
+              v == 'contributor',
+              cells['corporationBy_id_mv'].value.split('␟')[i],
+              null
+            )
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['corporationByConference_creator_mv'].value,
+          x,
+          forEachIndex(
+            x.split('␟'),
+            i,
+            v,
+            if(
+              v == 'contributor',
+              cells['corporationByConference_id_mv'].value.split('␟')[i],
+              null
+            )
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['corporationByTerritory_creator_mv'].value,
+          x,
+          forEachIndex(
+            x.split('␟'),
+            i,
+            v,
+            if(
+              v == 'contributor',
+              cells['corporationByTerritory_id_mv'].value.split('␟')[i],
+              null
+            )
+          ).join('␟'),
+          null
+        )
+      ].join('␟'),
+      z,
+      filter(
+        z.split('␟'),
+        f,
+        f[0] != '␣'
+      ).uniques().join('␟'),
+      null
+    )
+  newColumnName: contributor_id_mv
+  columnInsertIndex: 2

@@ -39,8 +39,10 @@ AK,digitalObject_id_mv,texts,MM00000001␟MM00000002,
 AK,digitalObject_fileExtension_mv,texts,pdf␟jpg,aus MM fileExtension
 AK,digitalObject_thumbnail_mv,texts,"https://digital.dla-marbach.de/lib/icons/extension-pdf.png␟https://digital.dla-marbach.de/iiif/2/campus/D20041221/D20041221-12.jpg/full/!128,192/0/default.jpg?media_access=campus",aus MM thumbnail
 AK,display,text,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1],Hauptbezeichnung
-AK,creator_display_mv,texts,Person 1 (1982–2001)␟Körperschaft 1 (1982)␟Körperschaft 2 (1982)␟Konferenz 1␟Gebietskörperschaft 1,Bündelung aller Urheber für die Anzeige
+AK,creator_display_mv,texts,PE00000001␟KS00000001␟KS00000002␟KS00000021␟TH00000011,Bündelung aller Urheber für die Anzeige
+AK,creator_id_mv,texts,Person 1 (1982–2001)␟Körperschaft 1 (1982)␟Körperschaft 2 (1982)␟Konferenz 1␟Gebietskörperschaft 1,Bündelung aller Urheber für die Anzeige
 AK,contributor_display_mv,texts,Person 2 (1982–2001)␟Person 3 (1982–2001)␟Körperschaft 2 (1982)␟Konferenz 2␟Gebietskörperschaft 2,Bündelung aller Beteiligten für die Anzeige
+AK,contributor_id_mv,texts,PE00000002␟PE00000003␟KS00000002␟KS00000022␟TH00000012,Bündelung aller Beteiligten für die Anzeige
 AK,edition,text,Ausgabebezeichnung Vorlageform,
 AK,editionNormalized,text,Ausgabebezeichnung normiert,
 AK,exportDC,string,,Datensatz im DC-Format
