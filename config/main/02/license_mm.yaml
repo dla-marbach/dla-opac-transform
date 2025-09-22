@@ -1,0 +1,25 @@
+# Lizenzangabe ermitteln aus digital.dla-marbach.de URL-Parameter
+- op: core/column-addition
+  engineConfig:
+    facets:
+    - type: text
+      columnName: hyperlink
+      query: "^https:\\/\\/digital.dla-marbach.de"
+      mode: regex
+  baseColumnName: hyperlink
+  # media_license Angabe aus den URL-Parametern (? oder &) extrahieren
+  # Wenn an Pos. 3 des Wertes ein "-" steht, ersetze es durch ein Blank, um die Kürzel Goobi-kompatibel zu machen
+  expression: |
+    grel:
+    forNonBlank(
+      cells['hyperlink'].value.find(/[?&]media_license=[^?&]+/)[0].split('=')[1],
+      x,
+      if(
+        x[2] == '-',
+        x[0,1] + ' ' + x[3,999],
+        x
+      ),
+      null
+    )
+  newColumnName: license
+  columnInsertIndex: 2

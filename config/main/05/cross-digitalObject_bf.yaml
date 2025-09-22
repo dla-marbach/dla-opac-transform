@@ -92,6 +92,60 @@
         value.split('␟'),
         v,
         forNonBlank(
+          v.cross('mm','id')[0].cells['license'].value,
+          x,
+          x,
+          '␣')
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
+      null
+    )
+  newColumnName: digitalObject_license_mv
+  columnInsertIndex: 2
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: digitalObject_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.split('␟'),
+        v,
+        forNonBlank(
+          v.cross('mm','id')[0].cells['rightsHolder'].value,
+          x,
+          x,
+          '␣')
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
+      null
+    )
+  newColumnName: digitalObject_rightsHolder_mv
+  columnInsertIndex: 2
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: digitalObject_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.split('␟'),
+        v,
+        forNonBlank(
           v.cross('mm','id')[0].cells['thumbnail'].value,
           x,
           x,

@@ -131,6 +131,8 @@
   <field name="digitalObject_fileExtension_mv" type="texts"/>
   <field name="digitalObject_hyperlink_mv" type="texts"/>
   <field name="digitalObject_id_mv" type="texts"/>
+  <field name="digitalObject_license_mv" type="texts"/>
+  <field name="digitalObject_rightsHolder_mv" type="texts"/>
   <field name="digitalObject_thumbnail_mv" type="texts"/>
   <field name="dimension_comment_mv" type="texts"/>
   <field name="dimension_depth_mv" type="texts"/>
@@ -206,6 +208,8 @@
   <field name="item_digitalObject_fileExtension_mv" type="texts"/>
   <field name="item_digitalObject_hyperlink_mv" type="texts"/>
   <field name="item_digitalObject_id_mv" type="texts"/>
+  <field name="item_digitalObject_license_mv" type="texts"/>
+  <field name="item_digitalObject_rightsHolder_mv" type="texts"/>
   <field name="item_digitalObject_thumbnail_mv" type="texts"/>
   <field name="itemization_extent_mv" type="texts"/>
   <field name="itemization_status_mv" type="texts"/>
@@ -216,6 +220,7 @@
   <field name="language_mv" type="texts"/>
   <field name="library_display_mv" type="texts"/>
   <field name="library_id_mv" type="texts"/>
+  <field name="license" type="text"/>
   <field name="locationBoxNumber" type="text"/>
   <field name="locationComment" type="text"/>
   <field name="locationFolderNumber" type="text"/>
@@ -308,6 +313,7 @@
   <field name="relation_display_mv" type="texts"/>
   <field name="relation_id_mv" type="texts"/>
   <field name="relation_type_mv" type="texts"/>
+  <field name="rightsHolder" type="text"/>
   <field name="schemaVersion" type="string"/>
   <field name="scholarlyPublication_date_mv" type="texts"/>
   <field name="scholarlyPublication_location_mv" type="texts"/>

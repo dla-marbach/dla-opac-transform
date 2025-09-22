@@ -121,6 +121,58 @@
         - v:
             v: false
     mode: row-based
+  columnName: digitalObject_license_mv
+  expression: |
+    grel:
+    filter(
+      cells['item_digitalObject_license_mv'].value.split('␟'),
+      f,
+      f[0] != '␣'
+    )[0].split('␝')[0]
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: list
+      expression: isBlank(value)
+      columnName: digitalObject_id_mv
+      invert: false
+      selection:
+        - v:
+            v: true
+    - type: list
+      expression: isBlank(value)
+      columnName: item_digitalObject_id_mv
+      invert: false
+      selection:
+        - v:
+            v: false
+    mode: row-based
+  columnName: digitalObject_rightsHolder_mv
+  expression: |
+    grel:
+    filter(
+      cells['item_digitalObject_rightsHolder_mv'].value.split('␟'),
+      f,
+      f[0] != '␣'
+    )[0].split('␝')[0]
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: list
+      expression: isBlank(value)
+      columnName: digitalObject_id_mv
+      invert: false
+      selection:
+        - v:
+            v: true
+    - type: list
+      expression: isBlank(value)
+      columnName: item_digitalObject_id_mv
+      invert: false
+      selection:
+        - v:
+            v: false
+    mode: row-based
   columnName: digitalObject_thumbnail_mv
   expression: |
     grel:

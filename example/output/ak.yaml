@@ -134,6 +134,9 @@ digitalObject_display_mv:
 digitalObject_id_mv:
   - MM00000001
   - MM00000002
+digitalObject_rightsHolder_mv:
+  - 'Creative Commons 10th Birthday Celebration San Francisco / Timothy Vollmer / CC BY 4.0. Quelle: http://www.flickr.com/photos/sixteenmilesofstring/8256206923/in/set-72157632200936657'
+  - ␣
 edition: Ausgabebezeichnung Vorlageform
 editionNormalized: Ausgabebezeichnung normiert
 exportDC: |-
@@ -662,6 +665,7 @@ item_collection_id_mv: BF00000001␝BF00000002␝BF99999999
 item_digitalObject_accessLevel_mv: Zugriffsstufe␝␣
 item_digitalObject_display_mv: Multimedia 1␝Multimedia 2
 item_digitalObject_id_mv: MM00000001␝MM00000002
+item_digitalObject_rightsHolder_mv: 'Creative Commons 10th Birthday Celebration San Francisco / Timothy Vollmer / CC BY 4.0. Quelle: http://www.flickr.com/photos/sixteenmilesofstring/8256206923/in/set-72157632200936657␝␣'
 item_display_mv:
   - Öffentliches Exemplar
 item_id_mv:
@@ -2727,10 +2731,11 @@ filterDigital: true
 filterSource: Bibliotheksmaterialien
 filterType: Sonstiges
 item_digitalObject_accessLevel_mv: public␝public
-item_digitalObject_display_mv: Multimedia 5 pdf public␝Multimedia 15 wacz public
+item_digitalObject_display_mv: Multimedia 5 pdf public license CC BY-NC-ND␝Multimedia 15 wacz public
 item_digitalObject_fileExtension_mv: pdf␝wacz
-item_digitalObject_hyperlink_mv: https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf?media_access=public␝https://replayweb.page/?source=https://digital.dla-marbach.de/files/sites/public/Feinanteil/Feinanteil_20240715/Feinanteil_20240715.wacz?media_access=public
+item_digitalObject_hyperlink_mv: https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf?media_access=public&media_license=CC-BY-NC-ND␝https://replayweb.page/?source=https://digital.dla-marbach.de/files/sites/public/Feinanteil/Feinanteil_20240715/Feinanteil_20240715.wacz?media_access=public
 item_digitalObject_id_mv: MM00000005␝MM00000015
+item_digitalObject_license_mv: C BY-NC-ND␝␣
 item_display_mv:
   - Verknüpfte Digitale Objekte
 item_id_mv:
@@ -2744,16 +2749,17 @@ display: Das erste verknüpfte digitale Objekt auf Exemplarebene wird kopiert
 digitalObject_accessLevel_mv:
   - public
 digitalObject_display_mv:
-  - Multimedia 5 pdf public
+  - Multimedia 5 pdf public license CC BY-NC-ND
 digitalObject_fileExtension_mv: pdf
 digitalObject_hyperlink_mv:
-  - https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf?media_access=public
+  - https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf?media_access=public&media_license=CC-BY-NC-ND
 digitalObject_id_mv:
   - MM00000005
+digitalObject_license_mv: C BY-NC-ND
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Das erste verknüpfte digitale Objekt auf Exemplarebene wird kopiert</dc:title>
-    <dc:identifier>https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf?media_access=public</dc:identifier>
+    <dc:identifier>https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf?media_access=public&amp;media_license=CC-BY-NC-ND</dc:identifier>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000072</dc:identifier>
     <dc:identifier>AK00000072</dc:identifier>
   </oai_dc:dc>
@@ -2764,7 +2770,7 @@ exportMODS: |-
     </titleInfo>
     <location>
       <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
-      <url access="object in context">https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf?media_access=public</url>
+      <url access="object in context">https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf?media_access=public&amp;media_license=CC-BY-NC-ND</url>
     </location>
     <recordInfo>
       <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
@@ -2776,16 +2782,17 @@ exportRIS: |-
   TY  - GEN
   ID  - AK00000072
   TI  - Das erste verknüpfte digitale Objekt auf Exemplarebene wird kopiert
-  UR  - https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf?media_access=public
+  UR  - https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf?media_access=public&media_license=CC-BY-NC-ND
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000072/
   ER  -
 filterSource: Bibliotheksmaterialien
 filterType: Sonstiges
 item_digitalObject_accessLevel_mv: public␝public
-item_digitalObject_display_mv: Multimedia 5 pdf public␝Multimedia 15 wacz public
+item_digitalObject_display_mv: Multimedia 5 pdf public license CC BY-NC-ND␝Multimedia 15 wacz public
 item_digitalObject_fileExtension_mv: pdf␝wacz
-item_digitalObject_hyperlink_mv: https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf?media_access=public␝https://replayweb.page/?source=https://digital.dla-marbach.de/files/sites/public/Feinanteil/Feinanteil_20240715/Feinanteil_20240715.wacz?media_access=public
+item_digitalObject_hyperlink_mv: https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf?media_access=public&media_license=CC-BY-NC-ND␝https://replayweb.page/?source=https://digital.dla-marbach.de/files/sites/public/Feinanteil/Feinanteil_20240715/Feinanteil_20240715.wacz?media_access=public
 item_digitalObject_id_mv: MM00000005␝MM00000015
+item_digitalObject_license_mv: C BY-NC-ND␝␣
 item_display_mv:
   - Verknüpfte Digitale Objekte
 item_id_mv:
