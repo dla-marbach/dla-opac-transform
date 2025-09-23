@@ -1,0 +1,24 @@
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: workAbout_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.split('␟'),
+        v,
+        forNonBlank(
+          v.cross('ak','id')[0].cells['titleOther_text_mv'].value,
+          x,
+          x.replace('␟','\n'),
+          '␣')
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+  newColumnName: workAbout_titleOther_text_mv
+  columnInsertIndex: 2
+  

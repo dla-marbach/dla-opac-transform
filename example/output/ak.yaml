@@ -873,6 +873,12 @@ workAbout_id_mv:
   - AK00000031
   - AK00000032
   - AK99999999
+workAbout_titleOther_text_mv:
+  - |-
+    Alternativtitel 1
+    Alternativtitel 2
+  - Alternativtitel
+  - ␣
 workCompilation_display_mv:
   - 'Person 1 (1982-2001). Werk 1 (genre : 2000)'
   - Person 2 (1982-2001). Werk 2 (genre)
@@ -1795,6 +1801,9 @@ filterType: Sonstiges
 schemaVersion: 0.8.1
 source: AK
 title: Titel über 1
+titleOther_text_mv:
+  - Alternativtitel 1
+  - Alternativtitel 2
 url: https://www.dla-marbach.de/find/opac/id/AK00000031
 ---
 id: AK00000032
@@ -1830,6 +1839,8 @@ filterType: Sonstiges
 schemaVersion: 0.8.1
 source: AK
 title: Titel über 2
+titleOther_text_mv:
+  - Alternativtitel
 url: https://www.dla-marbach.de/find/opac/id/AK00000032
 ---
 id: AK00004001
