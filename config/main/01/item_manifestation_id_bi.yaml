@@ -1,0 +1,24 @@
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: item_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.split('␟'),
+        v,
+        forNonBlank(
+          v.cross('au','id')[0].cells['manifestation_id'].value,
+          x,
+          x.replace('␟','\n'),
+          '␣')
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+  newColumnName: item_manifestation_id_mv
+  columnInsertIndex: 2
+  

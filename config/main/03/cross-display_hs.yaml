@@ -156,6 +156,29 @@
   engineConfig:
     facets: []
     mode: row-based
+  baseColumnName: item_manifestation_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.split('␟'),
+        v,
+        forNonBlank(
+          v.cross('ak','id')[0].cells['display'].value,
+          x,
+          x,
+          '␣')
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+  newColumnName: item_manifestation_display_mv
+  columnInsertIndex: 2
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
   baseColumnName: object_id
   expression: |
     grel:
