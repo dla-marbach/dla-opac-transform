@@ -1,0 +1,25 @@
+# Extraktion der GND-Nummern aus vendor_id_mv wenn vendor_type_mv = "GND (Werktitel)"
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: vendor_type_mv
+  expression: |
+    grel:
+    forNonBlank(
+      value,
+      x,
+      forEachIndex(
+        x.split('␟'),
+        i,
+        v,
+        if(
+          v == 'GND (Werktitel)',
+          cells['vendor_id_mv'].value.split('␟')[i],
+          null
+        )
+      ).join('␟'),
+      null
+    )
+  newColumnName: gnd_id_mv
+  columnInsertIndex: 2

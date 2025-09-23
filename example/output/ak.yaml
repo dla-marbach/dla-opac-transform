@@ -1468,6 +1468,7 @@ gndRelation_text_mv:
 gndRelation_type_mv:
   - GND-Relation 1 Typ
   - GND-Relation 2 Typ
+gnd_id_mv: GND-Nummer
 personBy_display_mv:
   - Person 1 (1982–2001)
 personBy_id_mv:
@@ -1477,6 +1478,10 @@ source: AK
 title: Werk 1
 titleMain_text: Werk 1
 url: https://www.dla-marbach.de/find/opac/id/AK00000021
+vendor_id_mv:
+  - GND-Nummer
+vendor_type_mv:
+  - GND (Werktitel)
 ---
 id: AK00000022
 display: Person 2 (1982-2001). Werk 2 (genre)
