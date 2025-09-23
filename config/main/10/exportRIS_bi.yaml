@@ -8,7 +8,7 @@
     grel:
     'TY  - ' + 'GEN' + '\n'
     + forNonBlank(forEach(cells['filterAuthorityRole_mv'].value.split('␟'), v, if(v.split('␝')[1] != 'Verfasser/Urheber', 'A2  - ' + v.split('␝')[0].replace(/\s\(.*/,''), null)).uniques().join('\n'), x, x + '\n', '')
-    + forNonBlank(cells['accession_id'].value.cross('be','id')[0].cells['accessionNumber'].value, v, 'AN  - ' + v + '\n', '')
+    + forNonBlank(cells['accessionNumber'].value, v, 'AN  - ' + v + '\n', '')
     + forNonBlank(forEach(cells['filterAuthorityRole_mv'].value.split('␟'), v, if(v.split('␝')[1] == 'Verfasser/Urheber', 'AU  - ' + v.split('␝')[0].replace(/\s\(.*/,''), null)).uniques().join('\n'), x, x + '\n', '')
     + forNonBlank(forEach(cells['personAbout_comment_mv'].value.split('␟'), v, if(v != '␣', v, null)).join('; '), x, 'CA  - ' + x + '\n', '')
     + forNonBlank(cells['mediaNumber'].value, v, 'CN  - ' + v + '\n', '')
