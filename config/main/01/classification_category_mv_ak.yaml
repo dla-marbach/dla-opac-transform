@@ -1,0 +1,24 @@
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: classification_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.split('␟'),
+        v,
+        forNonBlank(
+          v.cross('se','id')[0].cells['category'].value,
+          x,
+          x,
+          '␣')
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+  newColumnName: classification_category_mv
+  columnInsertIndex: 2
+  
