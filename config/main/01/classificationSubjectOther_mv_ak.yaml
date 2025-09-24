@@ -27,7 +27,7 @@
           ).join('␟'),
           null
         )
-      ).join('␟'),
+      ).uniques().join('␟'),
       x,
       forNonBlank(value, v, v, '') + '␟' + x,
       forNonBlank(value, v, v, null)
