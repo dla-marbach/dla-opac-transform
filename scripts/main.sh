@@ -3,14 +3,23 @@ sets=(ak au be bf bi hs ks mm pe se sy th)
 
 ### Import ###
 
+# Kallías im Internformat
 for set in ${sets[@]}; do
     orcli import tsv "${DIR}"/input/${set}*.tsv --projectName "${set}" &
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 
+# Mappings
 for f in "${DIR}"/tmp/config/mappings/* ; do
     p=${f##*/}
     orcli import csv ${f} --projectName "${p%.csv}"
+done
+
+# Enrichment Cache
+files=(ks-gnd-wikidata.tsv pe-gnd-wikidata.tsv)
+url="https://github.com/opencultureconsulting/dla-opac-gnd-enrichment/raw/refs/heads/main/output/"
+for f in "${files[@]}"; do
+    orcli import tsv "${url}${f}" --projectName "${f%.tsv}" --columnNames "key,value"
 done
 
 ### Transform ###
