@@ -1,0 +1,34 @@
+# Anreicherung der Wikidata-ID aus lobid-gnd
+# über separat generierten Enrichment Cache (vgl. https://github.com/opencultureconsulting/dla-opac-gnd-enrichment)
+# Import dieser TSV-Dateien direkt aus GitHub Repo (vgl. scripts/main.sh)
+# Hier: ks-gnd-wikidata.tsv als OpenRefine-Projekt "ak-gnd-wikidata"
+# Spalte "key": GND-ID
+# Spalte "value": Wikidata-ID
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: gnd_id_mv
+  expression: | # Es werden für alle GND-IDs alle Wikidata-IDs ermittelt, aber zur Vereinfachung nur eine einzelne Wikidata-ID übernommen
+    grel:
+    forNonBlank(
+      forEach(
+        value.split('␟'),
+        v,
+        forNonBlank(
+          forEach(
+            v.cross('ak-gnd-wikidata','key'),
+            r,
+            r.cells['value'].value
+          ).join('␟'),
+          x,
+          x,
+          null
+        )
+      ).join('␟'),
+      x,
+      x.split('␟')[0],
+      null
+    )
+  newColumnName: wikidata
+  columnInsertIndex: 2
