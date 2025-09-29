@@ -16,8 +16,10 @@ for f in "${DIR}"/tmp/config/mappings/* ; do
 done
 
 # Enrichment Cache
-files=(lobid-wikidata-ak.tsv lobid-wikidata-ks.tsv lobid-wikidata-pe.tsv)
 url="https://github.com/opencultureconsulting/dla-opac-gnd-enrichment/raw/refs/heads/main/output/"
+files=(
+    lobid-wikidata.tsv
+)
 for f in "${files[@]}"; do
     orcli import tsv "${url}${f}" --projectName "${f%.tsv}" --columnNames "key,value"
 done
