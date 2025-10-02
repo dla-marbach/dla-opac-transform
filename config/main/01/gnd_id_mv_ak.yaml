@@ -15,7 +15,12 @@
         v,
         if(
           v == 'GND (Werktitel)',
-          cells['vendor_id_mv'].value.split('␟')[i],
+          forNonBlank(
+            cells['vendor_id_mv'].value.split('␟')[i],
+            gnd,
+            gnd,
+            null
+          ),
           null
         )
       ).join('␟'),
