@@ -12,6 +12,8 @@ AK,classification_display_mv,texts,Sacherschließungskette 1␟Sacherschließung
 AK,classification_id_mv,texts,SE00000001␟SE00000002,
 AK,classificationSubjectOther_mv,texts,Systematik unnormiert 1␟Systematik unnormiert 2,
 AK,confidential,boolean,true,
+AK,contributor_display_mv,texts,Person 2 (1982–2001)␟Person 3 (1982–2001)␟Körperschaft 2 (1982)␟Konferenz 2␟Gebietskörperschaft 2,Bündelung aller Beteiligten für die Anzeige
+AK,contributor_id_mv,texts,PE00000002␟PE00000003␟KS00000002␟KS00000022␟TH00000012,Bündelung aller Beteiligten für die Anzeige
 AK,corporationAbout_display_mv,texts,Körperschaft 3␟Körperschaft 4,aus KS display
 AK,corporationAbout_id_mv,texts,KS00000003␟KS00000004,
 AK,corporationBy_creator_mv,texts,contributor␟creator,
@@ -27,6 +29,8 @@ AK,corporationByTerritory_display_mv,texts,Gebietskörperschaft 1␟Gebietskörp
 AK,corporationByTerritory_id_mv,texts,TH00000011␟TH00000012,
 AK,corporationByTerritory_role_mv,texts,Link Gebietskörperschaft 1 Typ␟Link Gebietskörperschaft 2 Typ,
 AK,country_mv,texts,Land 1␟Land 2,
+AK,creator_display_mv,texts,PE00000001␟KS00000001␟KS00000002␟KS00000021␟TH00000011,Bündelung aller Urheber für die Anzeige
+AK,creator_id_mv,texts,Person 1 (1982–2001)␟Körperschaft 1 (1982)␟Körperschaft 2 (1982)␟Konferenz 1␟Gebietskörperschaft 1,Bündelung aller Urheber für die Anzeige
 AK,dateCataloged,daterange,2023-06-01,
 AK,dateModified,daterange,2023-06-06,
 AK,dateOrigin,text,2023,
@@ -35,17 +39,13 @@ AK,description_text_mv,texts,Physikalische Beschreibung 1␟Physikalische Beschr
 AK,description_type_mv,texts,Physikalische Beschreibung 1 Typ␟Physikalische Beschreibung 2 Typ,
 AK,digitalObject_accessLevel_mv,texts,public␟campus,aus MM accessLevel
 AK,digitalObject_display_mv,texts,Multimedia 1␟Multimedia 2,aus MM display
+AK,digitalObject_fileExtension_mv,texts,pdf␟jpg,aus MM fileExtension
 AK,digitalObject_hyperlink_mv,texts,https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf␟https://digital.dla-marbach.de/iiif/2/campus/D20041221/D20041221-12.jpg/full/full/0/default.jpg,aus MM hyperlink
 AK,digitalObject_id_mv,texts,MM00000001␟MM00000002,
-AK,digitalObject_fileExtension_mv,texts,pdf␟jpg,aus MM fileExtension
 AK,digitalObject_license_mv,texts,CC BY-NC-ND␟␣,aus MM license
 AK,digitalObject_rightsHolder_mv,texts,Creative Commons 10th Birthday Celebration San Francisco / Timothy Vollmer / CC BY 4.0. Quelle: http://www.flickr.com/photos/sixteenmilesofstring/8256206923/in/set-72157632200936657␟␣,aus MM license
 AK,digitalObject_thumbnail_mv,texts,"https://digital.dla-marbach.de/lib/icons/extension-pdf.png␟https://digital.dla-marbach.de/iiif/2/campus/D20041221/D20041221-12.jpg/full/!128,192/0/default.jpg?media_access=campus",aus MM thumbnail
 AK,display,text,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1],Hauptbezeichnung
-AK,creator_display_mv,texts,PE00000001␟KS00000001␟KS00000002␟KS00000021␟TH00000011,Bündelung aller Urheber für die Anzeige
-AK,creator_id_mv,texts,Person 1 (1982–2001)␟Körperschaft 1 (1982)␟Körperschaft 2 (1982)␟Konferenz 1␟Gebietskörperschaft 1,Bündelung aller Urheber für die Anzeige
-AK,contributor_display_mv,texts,Person 2 (1982–2001)␟Person 3 (1982–2001)␟Körperschaft 2 (1982)␟Konferenz 2␟Gebietskörperschaft 2,Bündelung aller Beteiligten für die Anzeige
-AK,contributor_id_mv,texts,PE00000002␟PE00000003␟KS00000002␟KS00000022␟TH00000012,Bündelung aller Beteiligten für die Anzeige
 AK,edition,text,Ausgabebezeichnung Vorlageform,
 AK,editionNormalized,text,Ausgabebezeichnung normiert,
 AK,exportDC,string,,Datensatz im DC-Format
@@ -60,8 +60,8 @@ AK,filterAuthorityRelation_mv,strings,Person 1 (1982-2001)␝An␟Person 2 (1982
 AK,filterAuthorityRole_mv,strings,Person 1 (1982-2001)␝Widmungsempfänger␟Person 2 (1982-2001)␝Verfasser/Urheber␟Person 3 (1982-2001)␝Bestandsbildner/Vorbesitzer␟Körperschaft 1 (1982)␝Behandelte Person/Körperschaft,Facette Personen und Körperschaften mit Funktionsbezeichnungen
 AK,filterBibliography_mv,strings,Bibliographie 1␟Bibliographie 2,Facette Bibliographie
 AK,filterCollection_mv,strings,Z:Öffentlicher Bestand 1␟Z:Öffentlicher Bestand 2,Facette Sammlung
-AK,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 AK,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
+AK,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 AK,filterDigital,boolean,true,Filter Digital
 AK,filterFormContent_mv,strings,Epik␟Schwank␟Rundfunkmanuskript␟Aufsatz␟Literarisches Weblog,Facette Form und Inhalt
 AK,filterLanguage_mv,strings,Deutsch␟Englisch,Facette Sprache
@@ -89,18 +89,18 @@ AK,inventoryMissing,text,Bestandslücken,
 AK,isbn_mv,texts,ISBN 1␟ISBN 2,
 AK,ismn_mv,texts,ISMN 1␟ISMN 2,
 AK,issn_mv,texts,ISSN 1␟ISSN 2,
-AK,item_id_mv,texts,AU00000001,
-AK,item_collection_id_mv,texts,BF00000001␝BF00000002␝BF99999999,Mehrere verknüpfte Bestände getrennt mit ␝ (U+241D)
 AK,item_collection_display_mv,texts,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]␝Z:Öffentlicher Bestand 2␝␣",Mehrere verknüpfte Bestände getrennt mit ␝ (U+241D)
+AK,item_collection_id_mv,texts,BF00000001␝BF00000002␝BF99999999,Mehrere verknüpfte Bestände getrennt mit ␝ (U+241D)
 AK,item_digitalObject_accessLevel_mv,texts,public␝campus,Mehrere verknüpfte Digitale Objekte getrennt mit ␝ (U+241D)
 AK,item_digitalObject_display_mv,texts,Multimedia 1␝Multimedia 2,Mehrere verknüpfte Digitale Objekte getrennt mit ␝ (U+241D)
+AK,item_digitalObject_fileExtension_mv,texts,pdf␝jpg,Mehrere verknüpfte Digitale Objekte getrennt mit ␝ (U+241D)
 AK,item_digitalObject_hyperlink_mv,texts,https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf␝https://digital.dla-marbach.de/iiif/2/campus/D20041221/D20041221-12.jpg/full/full/0/default.jpg,Mehrere verknüpfte Digitale Objekte getrennt mit ␝ (U+241D)
 AK,item_digitalObject_id_mv,texts,MM00000001␝MM00000002,Mehrere verknüpfte Digitale Objekte getrennt mit ␝ (U+241D)
-AK,item_digitalObject_fileExtension_mv,texts,pdf␝jpg,Mehrere verknüpfte Digitale Objekte getrennt mit ␝ (U+241D)
 AK,item_digitalObject_license_mv,texts,CC BY-NC-ND␟␣,Mehrere verknüpfte Digitale Objekte getrennt mit ␝ (U+241D)
 AK,item_digitalObject_rightsHolder_mv,texts,Creative Commons 10th Birthday Celebration San Francisco / Timothy Vollmer / CC BY 4.0. Quelle: http://www.flickr.com/photos/sixteenmilesofstring/8256206923/in/set-72157632200936657␟␣,Mehrere verknüpfte Digitale Objekte getrennt mit ␝ (U+241D)
 AK,item_digitalObject_thumbnail_mv,texts,"https://digital.dla-marbach.de/lib/icons/extension-pdf.png␝https://digital.dla-marbach.de/iiif/2/campus/D20041221/D20041221-12.jpg/full/!128,192/0/default.jpg?media_access=campus",Mehrere verknüpfte Digitale Objekte getrennt mit ␝ (U+241D)
 AK,item_display_mv,texts,Öffentliches Exemplar,aus AU display
+AK,item_id_mv,texts,AU00000001,
 AK,journalIssue_display_mv,texts,Zeitschriftenheft 1␟Zeitschriftenheft 2,aus AK display
 AK,journalIssue_id_mv,texts,AK00000051␟AK00000052,
 AK,language_mv,texts,Sprache 1␟Sprache 2,
@@ -152,10 +152,10 @@ AK,scholarlyPublication_date_mv,texts,1999␟2023,
 AK,scholarlyPublication_location_mv,texts,Hochschulschrift 1 Ort␟Hochschulschrift 2 Ort,
 AK,scholarlyPublication_text_mv,texts,Hochschulschrift 1 Name␟Hochschulschrift 2 Name,
 AK,scholarlyPublication_type_mv,texts,Hochschulschrift 1 Art␟Hochschulschrift 2 Art,
+AK,source,string,AK,
 AK,statusCataloging,text,Erfassungsstatus,
 AK,statusEditing,text,Bearbeitungsstatus,
 AK,statusJournalReview,text,Kennzeichnung auszuwertende Zeitschriften,
-AK,source,string,AK,
 AK,subject_display_mv,texts,Schlagwort unnormiert 1␟Schlagwort unnormiert 2,aus TH display
 AK,subject_id_mv,texts,TH00000001␟TH00000002,
 AK,subjectOther_mv,texts,Schlagwort unnormiert 1␟Schlagwort unnormiert 2,
@@ -192,6 +192,8 @@ AU,callNumberItemSuffix,text,Exemplarsignaturzusatz,
 AU,callNumberReadingRoom,text,Lesesaalsignatur,
 AU,classification_display_mv,texts,Sacherschließungskette 1␟Sacherschließungskette 2,aus SE display
 AU,classification_id_mv,texts,SE00000001␟SE00000002,
+AU,collection_display_mv,texts,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]␟Z:Öffentlicher Bestand 2",aus BF display
+AU,collection_id_mv,texts,BF00000001␟BF00000002,
 AU,confidential,boolean,true,
 AU,corporationAt_display_mv,texts,Körperschaft 1 (1982)␟Körperschaft 2,aus KS display
 AU,corporationAt_id_mv,texts,KS00000001␟KS00000002,
@@ -199,16 +201,14 @@ AU,dateCataloged,daterange,2023-06-01,
 AU,dateModified,daterange,2023-06-06,
 AU,digitalObject_accessLevel_mv,texts,public␟campus,aus MM accessLevel
 AU,digitalObject_display_mv,texts,Multimedia 1␟Multimedia 2,aus MM display
+AU,digitalObject_fileExtension_mv,texts,pdf␟jpg,aus MM fileExtension
 AU,digitalObject_hyperlink_mv,texts,https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf␟https://digital.dla-marbach.de/iiif/2/campus/D20041221/D20041221-12.jpg/full/full/0/default.jpg,aus MM hyperlink
 AU,digitalObject_id_mv,texts,MM00000001␟MM00000002,
-AU,digitalObject_fileExtension_mv,texts,pdf␟jpg,aus MM fileExtension
 AU,digitalObject_license_mv,texts,CC BY-NC-ND␟␣,aus MM license
 AU,digitalObject_rightsHolder_mv,texts,Creative Commons 10th Birthday Celebration San Francisco / Timothy Vollmer / CC BY 4.0. Quelle: http://www.flickr.com/photos/sixteenmilesofstring/8256206923/in/set-72157632200936657␟␣,aus MM license
 AU,digitalObject_thumbnail_mv,texts,"https://digital.dla-marbach.de/lib/icons/extension-pdf.png␟https://digital.dla-marbach.de/iiif/2/campus/D20041221/D20041221-12.jpg/full/!128,192/0/default.jpg?media_access=campus",aus MM thumbnail
 AU,display,text,Öffentliches Exemplar,Hauptbezeichnung
 AU,enveloped,boolean,true,
-AU,collection_display_mv,texts,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]␟Z:Öffentlicher Bestand 2",aus BF display
-AU,collection_id_mv,texts,BF00000001␟BF00000002,
 AU,id,string,AU00000001,
 AU,location_mv,texts,Standort,
 AU,manifestation_display,text,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1],aus AK display
@@ -222,9 +222,9 @@ AU,personAt_display_mv,texts,Person 1 (1982-2001)␟Person 2 (1982-2001),aus PE 
 AU,personAt_id_mv,texts,PE00000001␟PE00000002,
 AU,provenance,boolean,true,
 AU,schemaVersion,text,0.4,
+AU,source,string,AU,
 AU,statusItem,text,Exemplarstatus,
 AU,statusLoan,text,Ausleihstatus,
-AU,source,string,AU,
 AU,url,text,https://www.dla-marbach.de/find/opac/id/AU00000001,
 AU,usageRestriction,text,Benutzungsbeschränkung,
 AU,virtualRecording,text,Virtuelle Aufnahme,
@@ -237,15 +237,14 @@ BE,id,string,BE00000001,
 BE,personAt_display_mv,texts,Person 1 (1982-2001)␟Person 2 (1982-2001),aus PE display
 BE,personAt_id_mv,texts,PE00000001␟PE00000002,
 BE,schemaVersion,text,0.4,
-BE,statusLoan,text,Ausleihstatus,
 BE,source,string,BE,
+BE,statusLoan,text,Ausleihstatus,
 BE,title,text,Erwerbung 1,
 BE,url,text,https://www.dla-marbach.de/find/opac/id/BE00000001,
 BE,usageRestriction,text,Benutzungsbeschränkung,
 BE,usageRestrictionComment,text,Benutzungsbeschränkung Anmerkung,
 BF,accession_display,text,␟,aus BE display
 BF,accession_id,text,BE00000001,
-BI,accessionNumber,text,Erwerbungsnummer,aus BE accessionNumber
 BF,category,text,Bestandstyp,
 BF,categoryIndex_mv,texts,Segment 1␟Segment 2,
 BF,categorySub,text,Bestandsart,
@@ -267,9 +266,9 @@ BF,dateOther_mv,texts,Zeitraum 1␟Zeitraum 2,
 BF,department,text,Abteilung,
 BF,digitalObject_accessLevel_mv,texts,public␟campus,aus MM accessLevel
 BF,digitalObject_display_mv,texts,Multimedia 1␟Multimedia 2,aus MM display
+BF,digitalObject_fileExtension_mv,texts,pdf␟jpg,aus MM fileExtension
 BF,digitalObject_hyperlink_mv,texts,https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf␟https://digital.dla-marbach.de/iiif/2/campus/D20041221/D20041221-12.jpg/full/full/0/default.jpg,aus MM hyperlink
 BF,digitalObject_id_mv,texts,MM00000001␟MM00000002,
-BF,digitalObject_fileExtension_mv,texts,pdf␟jpg,aus MM fileExtension
 BF,digitalObject_license_mv,texts,CC BY-NC-ND␟␣,aus MM license
 BF,digitalObject_rightsHolder_mv,texts,Creative Commons 10th Birthday Celebration San Francisco / Timothy Vollmer / CC BY 4.0. Quelle: http://www.flickr.com/photos/sixteenmilesofstring/8256206923/in/set-72157632200936657␟␣,aus MM license
 BF,digitalObject_thumbnail_mv,texts,"https://digital.dla-marbach.de/lib/icons/extension-pdf.png␟https://digital.dla-marbach.de/iiif/2/campus/D20041221/D20041221-12.jpg/full/!128,192/0/default.jpg?media_access=campus",aus MM thumbnail
@@ -282,8 +281,8 @@ BF,filterAuthority_mv,strings,Person 1 (1982-2001)␟Person 2 (1982-2001)␟Pers
 BF,filterAuthorityRelation_mv,strings,Person 1 (1982-2001)␝An␟Person 2 (1982-2001)␝Von␟Person 3 (1982-2001)␝Unter␟Körperschaft 1 (1982)␝Über,Facette Personen und Körperschaften mit Relationen
 BF,filterAuthorityRole_mv,strings,Person 1 (1982-2001)␝Widmungsempfänger␟Person 2 (1982-2001)␝Verfasser/Urheber␟Person 3 (1982-2001)␝Bestandsbildner/Vorbesitzer␟Körperschaft 1 (1982)␝Behandelte Person/Körperschaft,Facette Personen und Körperschaften mit Funktionsbezeichnungen
 BF,filterCollection_mv,strings,Z:Öffentlicher Bestand 1,Facette Sammlung
-BF,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 BF,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
+BF,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 BF,filterDigital,boolean,true,Filter Digital
 BF,filterFormContent_mv,strings,Bestandsart,Facette Form und Inhalt
 BF,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
@@ -313,8 +312,8 @@ BF,personAt_display_mv,texts,Person 3 (1982-2001)␟Person 4,aus PE display
 BF,personAt_id_mv,texts,PE00000003␟PE00000004,
 BF,reference_text_mv,texts,Quellenangabe 1,
 BF,schemaVersion,text,0.4,
-BF,statusLoan,text,Ausleihstatus,
 BF,source,string,BF,
+BF,statusLoan,text,Ausleihstatus,
 BF,subject_display_mv,texts,Thesaurus-Begriff 1␟Thesaurus-Begriff 2,aus TH display
 BF,subject_id_mv,texts,TH00000001␟TH00000002,
 BF,title,text,Z:Öffentlicher Bestand 1,
@@ -326,6 +325,7 @@ BF,website_description_mv,texts,URL 1 Typ␟URL 2 Typ,
 BF,website_url_mv,texts,URL 1␟URL 2,
 BI,accession_display,text,Erwerbung 1,aus BE display
 BI,accession_id,text,BE00000001,
+BI,accessionNumber,text,Erwerbungsnummer,aus BE accessionNumber
 BI,accessionNumber,text,Erwerbungsnummer,aus BE accessionNumber
 BI,category,text,Satzart,
 BI,categoryMedium_mv,texts,Objektart 1␟Objektart 2,
@@ -354,18 +354,18 @@ BI,dateOther_mv,texts,Zeitraum 2,
 BI,dateOtherComment_mv,texts,Zeitraum 2 Anmerkung,
 BI,digitalObject_accessLevel_mv,texts,public␟campus,aus MM accessLevel
 BI,digitalObject_display_mv,texts,Multimedia 1␟Multimedia 2,aus MM display
+BI,digitalObject_fileExtension_mv,texts,pdf␟jpg,aus MM fileExtension
 BI,digitalObject_hyperlink_mv,texts,https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf␟https://digital.dla-marbach.de/iiif/2/campus/D20041221/D20041221-12.jpg/full/full/0/default.jpg,aus MM hyperlink
 BI,digitalObject_id_mv,texts,MM00000001␟MM00000002,
-BI,digitalObject_fileExtension_mv,texts,pdf␟jpg,aus MM fileExtension
 BI,digitalObject_license_mv,texts,CC BY-NC-ND␟␣,aus MM license
 BI,digitalObject_rightsHolder_mv,texts,Creative Commons 10th Birthday Celebration San Francisco / Timothy Vollmer / CC BY 4.0. Quelle: http://www.flickr.com/photos/sixteenmilesofstring/8256206923/in/set-72157632200936657␟␣,aus MM license
 BI,digitalObject_thumbnail_mv,texts,"https://digital.dla-marbach.de/lib/icons/extension-pdf.png␟https://digital.dla-marbach.de/iiif/2/campus/D20041221/D20041221-12.jpg/full/!128,192/0/default.jpg?media_access=campus",aus MM thumbnail
-BI,display,text,Bild 1 [Objektart Unterkategorie],Hauptbezeichnung
 BI,dimension_comment_mv,texts,Maßangabe 1 Anmerkung␟Maßangabe 2 Anmerkung,
 BI,dimension_depth_mv,texts,Maßangabe 1 Tiefe (cm)␟Maßangabe 2 Tiefe (cm),
 BI,dimension_diameter_mv,texts,Maßangabe 1 Durchmesser (cm)␟Maßangabe 2 Durchmesser (cm),
 BI,dimension_height_mv,texts,Maßangabe 1 Höhe (cm)␟Maßangabe 2 Höhe (cm),
 BI,dimension_width_mv,texts,Maßangabe 1 Breite (cm)␟Maßangabe 2 Breite (cm),
+BI,display,text,Bild 1 [Objektart Unterkategorie],Hauptbezeichnung
 BI,exportDC,string,,Datensatz im DC-Format
 BI,exportMODS,string,,Datensatz im MODS-Format
 BI,exportRIS,string,,Datensatz im RIS-Format
@@ -374,8 +374,8 @@ BI,filterAuthority_mv,strings,Person 1 (1982-2001)␟Person 2 (1982-2001)␟Pers
 BI,filterAuthorityRelation_mv,strings,Person 1 (1982-2001)␝An␟Person 2 (1982-2001)␝Von␟Person 3 (1982-2001)␝Unter␟Körperschaft 1 (1982)␝Über,Facette Personen und Körperschaften mit Relationen
 BI,filterAuthorityRole_mv,strings,Person 1 (1982-2001)␝Widmungsempfänger␟Person 2 (1982-2001)␝Verfasser/Urheber␟Person 3 (1982-2001)␝Bestandsbildner/Vorbesitzer␟Körperschaft 1 (1982)␝Behandelte Person/Körperschaft,Facette Personen und Körperschaften mit Funktionsbezeichnungen
 BI,filterCollection_mv,strings,Z:Öffentlicher Bestand 1,Facette Sammlung
-BI,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 BI,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
+BI,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 BI,filterDigital,boolean,true,Filter Digital
 BI,filterFormContent_mv,strings,Objektart Hauptkategorie␟Objektart Unterkategorie␟Objektart 1␟Objektart 2␟Objektart Zusammensetzung,Facette Form und Inhalt
 BI,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
@@ -391,8 +391,8 @@ BI,inscription,text,Beschriftung,
 BI,inventoryNumber,text,Inventarnummer,
 BI,item_display_mv,texts,Öffentliches Exemplar,aus AU display
 BI,item_id_mv,texts,AU00000001,
-BI,item_manifestation_id_mv,texts,AK00000001,
 BI,item_manifestation_display_mv,texts,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1],aus AK display
+BI,item_manifestation_id_mv,texts,AK00000001,
 BI,library_display_mv,texts,Gesamttitel 1␟Gesamttitel 2,aus AK display
 BI,library_id_mv,texts,AK00000011␟AK00000012,
 BI,location_mv,texts,Standort normiert,
@@ -425,10 +425,10 @@ BI,reference_text_mv,texts,Quellenangabe ,
 BI,relation_display_mv,texts,Person 1 (1982-2001). Werk 1 (genre : 2000)␟Person 2 (1982-2001). Werk 2 (genre),aus AK display
 BI,relation_id_mv,texts,AK00000021␟AK00000022,
 BI,schemaVersion,text,0.4,
+BI,source,string,BI,
 BI,statusEditing,text,Bearbeitungsstatus,
 BI,statusLoan,text,Ausleihstatus,
 BI,statusPreservation,text,Erhaltungszustand,
-BI,source,string,BI,
 BI,subject_display_mv,texts,Schlagwort 1␟Schlagwort 2,aus TH display
 BI,subject_id_mv,texts,TH00000021␟TH00000022,
 BI,subject_type_mv,texts,Link Schlagwort 1 Typ␟Link Schlagwort 2 Typ,
@@ -446,6 +446,8 @@ HS,accessionNumber,text,Erwerbungsnummer,
 HS,acronym_mv,texts,Sigel 1␟Sigel 2,
 HS,category,text,Dokumententyp,
 HS,categorySub,text,Objektart,
+HS,collection_display_mv,texts,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]",aus BF display
+HS,collection_id_mv,texts,BF00000001,
 HS,confidential,boolean,false,
 HS,content,text,Inhalt,
 HS,corporationAbout_comment_mv,texts,Link Körperschaft 3 Anmerkung␟Link Körperschaft 4 Anmerkung,
@@ -467,9 +469,9 @@ HS,dateOriginStart,daterange,1982-05-22,
 HS,dateOther_mv,texts,Zeitraum 1␟Zeitraum 2,
 HS,digitalObject_accessLevel_mv,texts,public␟campus,aus MM accessLevel
 HS,digitalObject_display_mv,texts,Multimedia 1␟Multimedia 2,aus MM display
+HS,digitalObject_fileExtension_mv,texts,pdf␟jpg,aus MM fileExtension
 HS,digitalObject_hyperlink_mv,texts,https://digital.dla-marbach.de/files/dbst02/public/2024/20240118/20240118-0001.pdf␟https://digital.dla-marbach.de/iiif/2/campus/D20041221/D20041221-12.jpg/full/full/0/default.jpg,aus MM hyperlink
 HS,digitalObject_id_mv,texts,MM00000001␟MM00000002,
-HS,digitalObject_fileExtension_mv,texts,pdf␟jpg,aus MM fileExtension
 HS,digitalObject_license_mv,texts,CC BY-NC-ND␟␣,aus MM license
 HS,digitalObject_rightsHolder_mv,texts,Creative Commons 10th Birthday Celebration San Francisco / Timothy Vollmer / CC BY 4.0. Quelle: http://www.flickr.com/photos/sixteenmilesofstring/8256206923/in/set-72157632200936657␟␣,aus MM license
 HS,digitalObject_thumbnail_mv,texts,"https://digital.dla-marbach.de/lib/icons/extension-pdf.png␟https://digital.dla-marbach.de/iiif/2/campus/D20041221/D20041221-12.jpg/full/!128,192/0/default.jpg?media_access=campus",aus MM thumbnail
@@ -482,8 +484,8 @@ HS,filterAuthority_mv,strings,Person 1 (1982-2001)␟Person 2 (1982-2001)␟Pers
 HS,filterAuthorityRelation_mv,strings,Person 1 (1982-2001)␝An␟Person 2 (1982-2001)␝Von␟Person 3 (1982-2001)␝Unter␟Körperschaft 1 (1982)␝Über,Facette Personen und Körperschaften mit Relationen
 HS,filterAuthorityRole_mv,strings,Person 1 (1982-2001)␝Widmungsempfänger␟Person 2 (1982-2001)␝Verfasser/Urheber␟Person 3 (1982-2001)␝Bestandsbildner/Vorbesitzer␟Körperschaft 1 (1982)␝Behandelte Person/Körperschaft,Facette Personen und Körperschaften mit Funktionsbezeichnungen
 HS,filterCollection_mv,strings,Z:Öffentlicher Bestand 1,Facette Sammlung
-HS,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 HS,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
+HS,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 HS,filterDigital,boolean,true,Filter Digital
 HS,filterFormContent_mv,strings,Hauptgattung␟Weitere Hauptgattung 1␟Weitere Hauptgattung 2␟Untergattung␟Weitere Untergattung 1␟Weitere Untergattung 2,Facette Form und Inhalt
 HS,filterLanguage_mv,strings,Deutsch␟Englisch,Facette Sprache
@@ -499,13 +501,11 @@ HS,genre,text,Hauptgattung,
 HS,genreOther_mv,texts,Weitere Hauptgattung 1␟Weitere Hauptgattung 2,
 HS,genreSub,text,Untergattung,
 HS,genreSubOther_mv,texts,Weitere Untergattung 1␟Weitere Untergattung 2,
-HS,collection_display_mv,texts,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]",aus BF display
-HS,collection_id_mv,texts,BF00000001,
 HS,id,string,HS00000001,
 HS,item_display_mv,texts,Öffentliches Exemplar,aus AU display
 HS,item_id_mv,texts,AU00000001,
-HS,item_manifestation_id_mv,texts,AK00000001,
 HS,item_manifestation_display_mv,texts,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1],aus AK display
+HS,item_manifestation_id_mv,texts,AK00000001,
 HS,language_mv,texts,Sprache 1␟Sprache 2,
 HS,location_mv,texts,Standort Magazin 1␟Standort Magazin 2,
 HS,locationBoxNumber,text,Kastennummer,
@@ -540,8 +540,8 @@ HS,sortingKey,text,Sortiername Haupteintrag,
 HS,sortingKeySub,text,Sortiername Untereintrag,
 HS,sortingTitleMain,text,Haupttitel Sortierform,
 HS,sortingTitleOther,text,Weiterer Titel Sortierform,
-HS,statusLoan,text,Ausleihstatus,
 HS,source,string,HS,
+HS,statusLoan,text,Ausleihstatus,
 HS,subject_display_mv,texts,Schlagwort 1␟Schlagwort 2,aus TH display
 HS,subject_id_mv,texts,TH00000021␟TH00000022,
 HS,subjectOther_mv,texts,Suchbegriffe,
@@ -574,8 +574,8 @@ KS,dateLifespanEnd,daterange,2001-01-02,
 KS,dateLifespanStart,daterange,1982-05-22,
 KS,dateModified,daterange,2023-06-06,
 KS,display,text,Körperschaft 1 (1982),Hauptbezeichnung
-KS,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 KS,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
+KS,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 KS,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
 KS,filterLocationType_mv,strings,Ort 1␝Veranstaltungsort␟Ort 2␝Sitz,Facette Ort mit Typ
 KS,filterSource,string,Körperschaften,Facette Datenbestand
@@ -610,8 +610,8 @@ KS,reference_type_mv,texts,Quellenangabe 1 Typ␟Quellenangabe 2 Typ,
 KS,schemaVersion,text,0.4,
 KS,seeAlso_display_mv,texts,Körperschaft 3␟Körperschaft 4,aus KS display
 KS,seeAlso_id_mv,texts,KS00000003␟KS00000004,
-KS,statusCataloging,text,Ansetzungsstatus,
 KS,source,string,KS,
+KS,statusCataloging,text,Ansetzungsstatus,
 KS,successor_display_mv,texts,Körperschaft 45 später␟Körperschaft 46 später,aus KS display
 KS,successor_id_mv,texts,KS00000045␟KS00000046,
 KS,title,text,Körperschaft 1,
@@ -632,8 +632,8 @@ MM,id,string,MM00000001,
 MM,license,text,CC BY-NC-ND,
 MM,rightsHolder,text,Creative Commons 10th Birthday Celebration San Francisco / Timothy Vollmer / CC BY 4.0. Quelle: http://www.flickr.com/photos/sixteenmilesofstring/8256206923/in/set-72157632200936657,
 MM,schemaVersion,text,0.4,
-MM,storageArea,text,Speicherbereich,
 MM,source,string,MM,
+MM,storageArea,text,Speicherbereich,
 MM,thumbnail,text,"https://digital.dla-marbach.de/viewer/api/v1/records/BF00043389/files/images/BF000433890_0001.tif/full/!128,192/0/default.jpg",Link zum Vorschaubild
 MM,title,text,Multimedia 1,
 MM,url,text,https://www.dla-marbach.de/find/opac/id/MM00000001,
@@ -655,8 +655,8 @@ PE,dateLifespanStart,daterange,1982-05-22,
 PE,dateModified,daterange,2023-06-06,
 PE,dateRetention,text,Schutzfrist,
 PE,display,text,Person 1 (1982-2001),Hauptbezeichnung
-PE,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 PE,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
+PE,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 PE,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
 PE,filterLocationType_mv,strings,Ort 1␝Geburtsort␟Ort 2␝Sterbeort,Facette Ort mit Typ
 PE,filterSource,string,Personen,Facette Datenbestand
@@ -686,8 +686,8 @@ PE,reference_type_mv,texts,Quellenangabe 1 Typ␟Quellenangabe 2 Typ,
 PE,schemaVersion,text,0.4,
 PE,seeAlso_display_mv,texts,Person 3 (1982-2001)␟Person 4,aus PE display
 PE,seeAlso_id_mv,texts,PE00000003␟PE00000004,
-PE,statusEditing,text,Bearbeitungsstatus,
 PE,source,string,PE,
+PE,statusEditing,text,Bearbeitungsstatus,
 PE,title,text,Person 1,
 PE,titlePrefix,text,Akademischer Titel,
 PE,titleSuffix,text,Namenszusatz,
@@ -717,9 +717,9 @@ SE,person_display_mv,texts,Person 1 (1982-2001)␟Person 2 (1982-2001),aus PE di
 SE,person_id_mv,texts,PE00000001␟PE00000002,
 SE,schemaVersion,text,0.4,
 SE,sequence_mv,texts,Kettenglied 1␟Kettenglied 2,
+SE,source,string,SE,
 SE,subject_display_mv,texts,Thesaurus-Begriff 1␟Thesaurus-Begriff 2,aus TH display
 SE,subject_id_mv,texts,TH00000001␟TH00000002,
-SE,source,string,SE,
 SE,title,text,Sacherschließungskette 1,
 SE,url,text,https://www.dla-marbach.de/find/opac/id/SE00000001,
 SE,work_display_mv,texts,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1]␟Bibliotheksdokument 2,aus AK display
@@ -739,8 +739,8 @@ SY,parent_id_mv,texts,SY00000007,
 SY,schemaVersion,text,0.4,
 SY,seeAlso_display_mv,texts,Basisnotation 5 siehe auch␟Basisnotation 6 siehe auch,aus SY display
 SY,seeAlso_id_mv,texts,SY00000005␟SY00000006,
-SY,subjectOther_mv,texts,Registerbegriffe,
 SY,source,string,SY,
+SY,subjectOther_mv,texts,Registerbegriffe,
 SY,title,text,Basisnotation 1,
 SY,titleShort,text,Systematiktitel,
 SY,url,text,https://www.dla-marbach.de/find/opac/id/SY00000001,
@@ -754,8 +754,8 @@ TH,dateModified,daterange,2023-06-06,
 TH,dateOriginEnd,daterange,2001-01-01,
 TH,dateOriginStart,daterange,1982-05-22,
 TH,display,text,Thesaurus-Begriff 1,Hauptbezeichnung
-TH,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 TH,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
+TH,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 TH,filterLanguage_mv,strings,Deutsch␟Englisch,Facette Sprache
 TH,filterLanguageType_mv,strings,Deutsch␝Original␟Englisch␝Übersetzung,Facette Sprache mit Typ
 TH,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
