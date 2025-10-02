@@ -69,14 +69,14 @@ Für den Katalog werden zahlreiche Zusatzfelder gebildet, um Funktionen wie Face
 * `filter` für Facetten und Suchfilter
 * `digitalObject` für digitale Objekte
 * `search` für erweiterte Suche und Normdaten
-* `lobid` für angereicherte Daten aus GND und Entity Facts über lobid-gnd
-* `wikidata` für angereicherte Daten aus Wikidata
+* `link` für angereicherte Daten aus externen Quellen
 
 ## Datenquellen
 
 Fast alle Daten entstammen der hauseigenen Katalogisierung mit Kallías. Nur wenige Daten werden aus externen Quellen angereichert:
 * Datenbestand `EZB`: Datenabruf aus der Elektronischen Zeitschriftenbibliothek (EZB), jährliche Aktualisierung
 * Datenbestand `DBIS`: Datenlieferung des Datenbank-Informationssystems (DBIS), jährliche Aktualisierung
-* Felder mit Präfix `wikidata`: Anreicherung über Wikidata API, wöchentliche Aktualisierung
-* Felder mit Präfix `lobid`: Anreicherung mit Daten aus GND und Entity Facts über lobid-gnd API, wöchentliche Aktualisierung
-  * [lobid-gnd](https://lobid.org/gnd) ist ein LOD-Dienst des hbz — Hochschulbibliothekszentrum des Landes NRW
+* Felder mit Präfix `link`: Anreicherung über wöchentlich aktualisierten [Enrichment Cache](https://www.github.com/opencultureconsulting/dla-opac-gnd-enrichment). Datenquellen:
+  * Daten aus GND und Entity Facts über [lobid-gnd](https://lobid.org/gnd). lobid-gnd ist ein LOD-Dienst des hbz — Hochschulbibliothekszentrum des Landes NRW.
+  * Wikidata über SPARQL
+  * Mediawiki API von Wikimedia Commons für Generierung von Rechteangaben

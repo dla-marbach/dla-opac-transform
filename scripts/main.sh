@@ -18,7 +18,16 @@ done
 # Enrichment Cache
 url="https://github.com/opencultureconsulting/dla-opac-gnd-enrichment/raw/refs/heads/main/output/"
 files=(
+    commons-rechte.tsv
+    lobid-depiction.tsv
+    lobid-deutsche-biographie.tsv
+    lobid-dewiki.tsv
+    lobid-filmportal.tsv
     lobid-wikidata.tsv
+    wikidata-P109.tsv
+    wikidata-P18.tsv
+    wikidata-P2639.tsv
+    wikidata-P856.tsv
 )
 for f in "${files[@]}"; do
     orcli import tsv "${url}${f}" --projectName "${f%.tsv}" --columnNames "key,value"

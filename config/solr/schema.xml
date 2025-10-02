@@ -224,6 +224,7 @@
   <field name="library_display_mv" type="texts"/>
   <field name="library_id_mv" type="texts"/>
   <field name="license" type="text"/>
+  <field name="linkWikidata" type="string"/>
   <field name="location_mv" type="texts"/>
   <field name="locationBoxNumber" type="text"/>
   <field name="locationComment" type="text"/>
@@ -380,7 +381,6 @@
   <field name="virtualRecording" type="text"/>
   <field name="website_description_mv" type="texts"/>
   <field name="website_url_mv" type="texts"/>
-  <field name="wikidata" type="string"/>
   <field name="work_display_mv" type="texts"/>
   <field name="work_id_mv" type="texts"/>
   <field name="workAbout_display_mv" type="texts"/>
