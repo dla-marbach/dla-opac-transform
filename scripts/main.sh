@@ -60,6 +60,17 @@ for set in ${sets[@]}; do
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 
+# Zeilen nach id sortieren
+grel='[ {
+"op": "core/row-reorder",
+"mode": "row-based",
+"sorting": { "criteria": [ { "valueType": "string", "column": "id" } ] }
+} ]'
+for set in ${sets[@]}; do
+    echo "${grel}" | orcli transform "${set}" &
+    pids+=($!)
+done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+
 ### Export ###
 
 # Spalten sortieren
