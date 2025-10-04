@@ -16,7 +16,7 @@ for f in "${DIR}"/tmp/config/mappings/* ; do
 done
 
 # Enrichment Cache
-url="https://github.com/opencultureconsulting/dla-opac-gnd-enrichment/raw/refs/heads/main/output/"
+url="https://github.com/dla-marbach/dla-opac-gnd-enrichment/raw/refs/heads/main/output/"
 files=(
     commons-rechte.tsv
     lobid-depiction.tsv
