@@ -582,7 +582,7 @@ relation_id_mv:
   - AK00000021
   - AK00000022
   - AK99999999
-schemaVersion: 0.8.1
+schemaVersion: 0.9.0
 source: BI
 statusEditing: Bearbeitungsstatus
 statusLoan: Ausleihstatus
@@ -672,7 +672,7 @@ filterMedium_mv: Sonstiger Datenträger
 filterSource: Bilder und Objekte
 filterType: Bilder und Objekte
 noteObjectType: Datenträger
-schemaVersion: 0.8.1
+schemaVersion: 0.9.0
 source: BI
 title: 'Wertetabelle Workaround: Plakat bleibt Plakat'
 url: https://www.dla-marbach.de/find/opac/id/BI00000002
@@ -708,7 +708,7 @@ exportRIS: |-
   ER  -
 filterSource: Bilder und Objekte
 filterType: Bilder und Objekte
-schemaVersion: 0.8.1
+schemaVersion: 0.9.0
 source: BI
 title: Vertraulicher Datensatz
 url: https://www.dla-marbach.de/find/opac/id/BI00000003
@@ -949,7 +949,7 @@ personTo_display_mv:
   - Person 4
 personTo_id_mv:
   - PE00000004
-schemaVersion: 0.8.1
+schemaVersion: 0.9.0
 source: BI
 title: Facette Personen und Körperschaften
 ---
@@ -1005,7 +1005,7 @@ exportRIS: |-
 filterDigital: true
 filterSource: Bilder und Objekte
 filterType: Bilder und Objekte
-schemaVersion: 0.8.1
+schemaVersion: 0.9.0
 source: BI
 title: Verknüpfte Digitale Objekte
 ---
@@ -1041,7 +1041,7 @@ exportRIS: |-
 filterMultipart: true
 filterSource: Bilder und Objekte
 filterType: Bilder und Objekte
-schemaVersion: 0.8.1
+schemaVersion: 0.9.0
 source: BI
 title: Konvolut
 ---
@@ -1152,7 +1152,7 @@ personBy_id_mv:
   - PE00276308
 personBy_role_mv:
   - Urheber/in
-schemaVersion: 0.8.1
+schemaVersion: 0.9.0
 source: BI
 statusLoan: Am Standort
 statusPreservation: Blatt stockfleckig, fleckig u. angeschmutzt.
