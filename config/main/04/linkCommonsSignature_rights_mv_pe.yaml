@@ -1,0 +1,30 @@
+# Anreicherung der Rechteangabe aus Wikimedia Commons
+# über separat generierten Enrichment Cache (vgl. https://github.com/opencultureconsulting/dla-opac-gnd-enrichment)
+# Import dieser TSV-Dateien direkt aus GitHub Repo (vgl. scripts/main.sh)
+# Hier: commons-rechte.tsv als OpenRefine-Projekt "commons-rechte"
+# Spalte "key": Commons Dateiname (ohne URL-Kodierung)
+# Spalte "value": generierte Rechteangabe
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: linkCommonsSignature_file_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.split('␟'),
+        v,
+        forNonBlank(
+          v.unescape('url').cross('commons-rechte','key')[0].cells['value'].value,
+          x,
+          x,
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+  newColumnName: linkCommonsSignature_rights_mv
+  columnInsertIndex: 2

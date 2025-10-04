@@ -224,7 +224,15 @@
   <field name="library_display_mv" type="texts"/>
   <field name="library_id_mv" type="texts"/>
   <field name="license" type="text"/>
+  <field name="linkCommonsImage_file_mv" type="strings"/>
+  <field name="linkCommonsImage_rights_mv" type="strings"/>
+  <field name="linkCommonsSignature_file_mv" type="strings"/>
+  <field name="linkCommonsSignature_rights_mv" type="strings"/>
+  <field name="linkDeutscheBiographie_mv" type="strings"/>
+  <field name="linkFilmportal_mv" type="strings"/>
   <field name="linkWikidata" type="string"/>
+  <field name="linkWikidataWebsite_mv" type="strings"/>
+  <field name="linkWikipedia" type="string"/>
   <field name="location_mv" type="texts"/>
   <field name="locationBoxNumber" type="text"/>
   <field name="locationComment" type="text"/>

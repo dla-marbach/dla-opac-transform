@@ -105,6 +105,12 @@ AK,journalIssue_display_mv,texts,Zeitschriftenheft 1␟Zeitschriftenheft 2,aus A
 AK,journalIssue_id_mv,texts,AK00000051␟AK00000052,
 AK,language_mv,texts,Sprache 1␟Sprache 2,
 AK,languageOriginal_mv,texts,Sprache Original 1␟Sprache Original 2,
+AK,linkCommonsImage_file_mv,strings,Kafka%20Der%20Prozess%201925.jpg,aus lobid-gnd depiction und Wikidata P18
+AK,linkCommonsImage_rights_mv,strings,© Foto H.-P.Haack | Wikimedia Commons | Public domain,generiert aus Wikimedia Commons Artist/License
+AK,linkFilmportal_mv,strings,a4a93cce49f1495286c19073e0b27c67,aus lobid-gnd sameAs:filmportal und Wikidata P2639
+AK,linkWikidata,string,Q1205813,aus lobid-gnd
+AK,linkWikidataWebsite_mv,strings,https://www.hbo.com/game-of-thrones,aus Wikidata P856
+AK,linkWikipedia,string,Szenen_aus_Goethes_Faust,aus lobid-gnd sameAs:dewiki
 AK,note,text,Bemerkung extern,
 AK,noteBibliography_mv,texts,Bibliographie 1␟Bibliographie 2,
 AK,noteContent_mv,texts,Inhalt 1␟Inhalt 2,
@@ -175,7 +181,6 @@ AK,vendor_id_mv,texts,Lieferungsnummer 1␟Lieferungsnummer 2,
 AK,vendor_type_mv,texts,Lieferungsnummer 1 Typ␟Lieferungsnummer 2 Typ,
 AK,website_description_mv,texts,URL 1 Typ␟URL 2 Typ,
 AK,website_url_mv,texts,URL 1␟URL 2,
-AK,linkWikidata,string,Q23572,aus lobid-gnd
 AK,work_display_mv,texts,Person 3 (1982-2001). Werk 3 (2000-01),aus AK display
 AK,work_id_mv,texts,AK00000023,
 AK,workAbout_display_mv,texts,Titel über 1␟Titel über 2,aus AK display
@@ -589,6 +594,12 @@ KS,gndRelation_type_mv,texts,GND-Relation 1 Typ␟GND-Relation 2 Typ,
 KS,host_display_mv,texts,Konferenz 1␟Konferenz 2,aus KS display
 KS,host_id_mv,texts,KS00000021␟KS00000022,
 KS,id,string,KS00000001,
+KS,linkCommonsImage_file_mv,strings,Deutsches%20Literaturarchiv%20Marbach%20Logo.svg␟MarbachDeutschesLiteraturarchiv.jpg,aus lobid-gnd depiction und Wikidata P18
+KS,linkCommonsImage_rights_mv,strings,Deutsches Literaturarchiv Marbach | Wikimedia Commons | Public domain␟Mussklprozz | Wikimedia Commons | CC BY-SA 3.0,generiert aus Wikimedia Commons Artist/License
+KS,linkFilmportal_mv,strings,7b904207ddff458ab404d41e907a9d06,aus lobid-gnd sameAs:filmportal und Wikidata P2639
+KS,linkWikidata,string,Q1205813,aus lobid-gnd
+KS,linkWikidataWebsite_mv,strings,https://www.dla-marbach.de/␟https://www.dla-marbach.de/en/,aus Wikidata P856
+KS,linkWikipedia,string,Deutsches_Literaturarchiv_Marbach,aus lobid sameAs:dewiki
 KS,nameAlternative_comment_mv,texts,Verweisungsform 1 Anmerkung␟Verweisungsform 2 Anmerkung,
 KS,nameAlternative_name_mv,texts,Verweisungsform 1␟Verweisungsform 2,
 KS,nameAlternative_suffix_mv,texts,Verweisungsform 1 Zusatz␟Verweisungsform 2 Zusatz,
@@ -619,7 +630,6 @@ KS,titleSuffix,text,Namenszusatz,
 KS,url,text,https://www.dla-marbach.de/find/opac/id/KS00000001,
 KS,website_description_mv,texts,URL 1 Typ␟URL 2 Typ,
 KS,website_url_mv,texts,URL 1␟URL 2,
-KS,linkWikidata,string,Q130756332,aus lobid-gnd
 MM,accessLevel,text,Zugriffsstufe,
 MM,category,text,Dateityp,
 MM,dateCataloged,daterange,2023-06-01,
@@ -669,6 +679,15 @@ PE,gndRelation_id_mv,texts,GND-Relation 1 ID␟GND-Relation 2 ID,
 PE,gndRelation_text_mv,texts,GND-Relation 1␟GND-Relation 2,
 PE,gndRelation_type_mv,texts,GND-Relation 1 Typ␟GND-Relation 2 Typ,
 PE,id,string,PE00000001,
+PE,linkCommonsImage_file_mv,strings,Friedrich%20Schiller%20by%20Ludovike%20Simanowiz.jpg,aus lobid-gnd depiction und Wikidata P18
+PE,linkCommonsImage_rights_mv,strings,Ludovike Simanowiz | Wikimedia Commons | Public domain,aus Wikimedia Commons Artist/License
+PE,linkCommonsSignature_file_mv,strings,Astrid%20Lindgren%20signature.svg,aus Wikidata P109
+PE,linkCommonsSignature_rights_mv,strings,Polonoid | Wikimedia Commons | CC BY-SA 4.0,generiert aus Wikimedia Commons Artist/License
+PE,linkDeutscheBiographie_mv,strings,pnd118607626.html#adbcontent␟pnd118607626.html#ndbcontent,aus lobid-gnd
+PE,linkFilmportal_mv,strings,76dc042c1c20404eb780b3ba8a3b1ba7,aus lobid-gnd sameAs:filmportal und Wikidata P2639
+PE,linkWikidata,string,Q22670,aus lobid-gnd
+PE,linkWikidataWebsite_mv,strings,https://www.astridlindgren.com,aus Wikidata P856
+PE,linkWikipedia,string,Friedrich_Schiller,aus lobid sameAs:dewiki
 PE,nameAlternative_comment_mv,texts,Verweisungsform 1 Anmerkung␟Verweisungsform 2 Anmerkung,
 PE,nameAlternative_name_mv,texts,Verweisungsform 1␟Verweisungsform 2,
 PE,nameAlternative_suffix_mv,texts,Verweisungsform 1 Zusatz␟Verweisungsform 2 Zusatz,
@@ -695,7 +714,6 @@ PE,titleType,text,Namenstyp,
 PE,url,text,https://www.dla-marbach.de/find/opac/id/PE00000001,
 PE,website_description_mv,texts,URL 1 Typ␟URL 2 Typ,
 PE,website_url_mv,texts,URL 1␟URL 2,
-PE,linkWikidata,string,Q19370742,aus lobid-gnd
 SE,category,text,Kettentyp,
 SE,classificationAuthor_display_mv,texts,Autorenschema 1␟Autorenschema 2,aus SY display
 SE,classificationAuthor_id_mv,texts,SY00000021␟SY00000022,

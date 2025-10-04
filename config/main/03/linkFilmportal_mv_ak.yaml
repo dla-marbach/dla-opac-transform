@@ -1,0 +1,61 @@
+# Anreicherung der Links zum Filmportal aus lobid-gnd sameAs:filmportal und Wikidata P2639
+# über separat generierten Enrichment Cache (vgl. https://github.com/opencultureconsulting/dla-opac-gnd-enrichment)
+# Import dieser TSV-Dateien direkt aus GitHub Repo (vgl. scripts/main.sh)
+# Hier: lobid-filmportal.tsv als OpenRefine-Projekt "lobid-filmportal"
+# Hier: wikidata-P2639.tsv als OpenRefine-Projekt "wikidata-P2639"
+# Spalte "key": GND-ID bzw. Wikidata-ID
+# Spalte "value": Filmportal-ID
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          forEach(
+            cells['gnd_id_mv'].value.split('␟'),
+            v,
+            forNonBlank(
+              forEach(
+                v.cross('lobid-filmportal','key'),
+                r,
+                r.cells['value'].value.toLowercase()
+              ).join('␟'),
+              x,
+              x,
+              null
+            )
+          ).join('␟'),
+          x,
+          x,
+          null
+        ),
+        forNonBlank(
+          forEach(
+            cells['linkWikidata'].value.split('␟'),
+            v,
+            forNonBlank(
+              forEach(
+                v.cross('wikidata-P2639','key'),
+                r,
+                r.cells['value'].value
+              ).join('␟'),
+              x,
+              x,
+              null
+            )
+          ).join('␟'),
+          x,
+          x,
+          null
+        )
+      ].uniques().join('␟'),
+      z,
+      z,
+      null
+    )
+  newColumnName: linkFilmportal_mv
+  columnInsertIndex: 2
