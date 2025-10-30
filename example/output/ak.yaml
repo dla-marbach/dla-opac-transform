@@ -1959,6 +1959,9 @@ digitalObject_hyperlink_mv:
 digitalObject_id_mv:
   - MM00000010
   - MM00000011
+digitalObject_licenseNote_mv:
+  - Lizenz bzw. Rechteangabe im Freitext
+  - Lizenz bzw. Rechteangabe im Freitext
 digitalObject_thumbnail_mv:
   - https://digital.dla-marbach.de/viewer/api/v1/records/BF00043389/files/images/BF00043389_0015.tif/full/!480,480/0/default.jpg
   - https://digital.dla-marbach.de/viewer/api/v1/records/BF00043389/files/images/BF00043389_0001.tif/full/!480,480/0/default.jpg
@@ -1977,8 +1980,8 @@ exportMODS: |-
     </titleInfo>
     <location>
       <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
-      <url access="object in context">https://digital.dla-marbach.de/viewer/image/BF00043389/0015/?media_thumbnail=BF00043389_0015.tif&amp;media_access=public</url>
-      <url access="object in context">https://digital.dla-marbach.de/viewer/image/BF00043389/?media_access=public</url>
+      <url access="object in context" note="Lizenz bzw. Rechteangabe im Freitext">https://digital.dla-marbach.de/viewer/image/BF00043389/0015/?media_thumbnail=BF00043389_0015.tif&amp;media_access=public</url>
+      <url access="object in context" note="Lizenz bzw. Rechteangabe im Freitext">https://digital.dla-marbach.de/viewer/image/BF00043389/?media_access=public</url>
     </location>
     <recordInfo>
       <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>

@@ -158,7 +158,7 @@
     , '') +
     forNonBlank(cells['digitalObject_hyperlink_mv'].value, x,
       forEach(x.split('␟'), v, if(v != '␣',
-        '    <url access="object in context">' + v.escape('xml') + '</url>' + '\n'
+        '    <url access="object in context"' + forNonBlank(cells['digitalObject_licenseNote_mv'].value.split('␟')[0], licenseNote, ' note="' + licenseNote + '"', '') + '>' + v.escape('xml') + '</url>' + '\n'
       , '')).join('')
     , '') +
     '  </location>' + '\n' +
