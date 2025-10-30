@@ -135,7 +135,7 @@
   <field name="digitalObject_hyperlink_mv" type="texts"/>
   <field name="digitalObject_id_mv" type="texts"/>
   <field name="digitalObject_license_mv" type="texts"/>
-  <field name="digitalObject_rightsHolder_mv" type="texts"/>
+  <field name="digitalObject_licenseNote_mv" type="texts"/>
   <field name="digitalObject_thumbnail_mv" type="texts"/>
   <field name="dimension_comment_mv" type="texts"/>
   <field name="dimension_depth_mv" type="texts"/>
@@ -208,7 +208,7 @@
   <field name="item_digitalObject_hyperlink_mv" type="texts"/>
   <field name="item_digitalObject_id_mv" type="texts"/>
   <field name="item_digitalObject_license_mv" type="texts"/>
-  <field name="item_digitalObject_rightsHolder_mv" type="texts"/>
+  <field name="item_digitalObject_licenseNote_mv" type="texts"/>
   <field name="item_digitalObject_thumbnail_mv" type="texts"/>
   <field name="item_display_mv" type="texts"/>
   <field name="item_id_mv" type="texts"/>
@@ -326,7 +326,7 @@
   <field name="relation_display_mv" type="texts"/>
   <field name="relation_id_mv" type="texts"/>
   <field name="relation_type_mv" type="texts"/>
-  <field name="rightsHolder" type="text"/>
+  <field name="licenseNote" type="text"/>
   <field name="schemaVersion" type="string"/>
   <field name="scholarlyPublication_date_mv" type="texts"/>
   <field name="scholarlyPublication_location_mv" type="texts"/>

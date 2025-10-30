@@ -147,11 +147,11 @@
         - v:
             v: false
     mode: row-based
-  columnName: digitalObject_rightsHolder_mv
+  columnName: digitalObject_licenseNote_mv
   expression: |
     grel:
     filter(
-      cells['item_digitalObject_rightsHolder_mv'].value.split('␟'),
+      cells['item_digitalObject_licenseNote_mv'].value.split('␟'),
       f,
       f[0] != '␣'
     )[0].split('␝')[0]

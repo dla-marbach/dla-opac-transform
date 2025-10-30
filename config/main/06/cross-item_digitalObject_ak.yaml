@@ -179,7 +179,7 @@
         value.cross('au','manifestation_id'),
         r,
         forNonBlank(
-          r.cells['digitalObject_rightsHolder_mv'].value,
+          r.cells['digitalObject_licenseNote_mv'].value,
           x,
           x.replace('␟','␝'),
           '␣'
@@ -193,7 +193,7 @@
       ),
       null
     )
-  newColumnName: item_digitalObject_rightsHolder_mv
+  newColumnName: item_digitalObject_licenseNote_mv
   columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:

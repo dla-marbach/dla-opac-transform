@@ -119,7 +119,7 @@
         value.split('␟'),
         v,
         forNonBlank(
-          v.cross('mm','id')[0].cells['rightsHolder'].value,
+          v.cross('mm','id')[0].cells['licenseNote'].value,
           x,
           x,
           '␣')
@@ -132,7 +132,7 @@
       ),
       null
     )
-  newColumnName: digitalObject_rightsHolder_mv
+  newColumnName: digitalObject_licenseNote_mv
   columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:
