@@ -96,16 +96,19 @@ tasks:
       - solr/docker/scripts/wait-for-solr.sh
       - |
         # JSON-Lines an Solr core dla-indexing senden
-        curl --upload-file 'example/output/{ak,au,be,bf,bi,hs,ks,mm,pe,se,sy,th}.jsonl' 'http://localhost:8983/solr/dla-indexing/update/json/docs?commit=true&overwrite=true' -X POST -H 'Content-Type: application/json'
+        for f in "{{.DIR}}/output/"*.jsonl; do
+          [ $(curl --silent --upload-file "$f" 'http://localhost:8983/solr/dla-indexing/update/json/docs?overwrite=true' -X POST -H 'Content-Type: application/json' -o /dev/stderr -w "%{http_code}") -eq 200 ]
+        done
+        [ $(curl --silent 'http://localhost:8983/solr/dla-indexing/update?commit=true&optimize=true' -o /dev/stderr -w "%{http_code}") -eq 200 ]
       - |
         # Prüfen, ob Datensätze nicht indexiert werden konnten
         diff <(perl -lne 'print substr($_,9,10)' example/output/*.jsonl | sort) <(curl --silent 'http://localhost:8983/solr/dla-indexing/query?fl=id&q=*%3A*&rows=10000000&wt=csv&csv.header=false' | sort) || true
       - |
         # Neu befüllten Index live schalten durch Swap
-        curl --silent 'http://localhost:8983/solr/admin/cores?action=SWAP&core=dla-indexing&other=dla-prod'
+        [ $(curl --silent 'http://localhost:8983/solr/admin/cores?action=SWAP&core=dla-indexing&other=dla-prod' -o /dev/stderr -w "%{http_code}") -eq 200 ]
       - |
         # Test query auf Solr core dla-prod
-        curl --silent 'http://localhost:8983/solr/dla-prod/query?q=*:*&rows=0'
+        [ $(curl --silent 'http://localhost:8983/solr/dla-prod/query?q=*:*&rows=0' -o /dev/stderr -w "%{http_code}") -eq 200 ]
 
   yaml:
     desc: JSONL zusätzlich in YAML konvertieren
