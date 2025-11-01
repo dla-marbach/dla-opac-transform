@@ -1,0 +1,47 @@
+# Zusatzinfo in Trefferliste
+# bei Bibliographie: A0711
+- op: core/column-addition
+  engineConfig:
+    facets:
+    - type: text
+      columnName: noteBibliography_mv
+      query: Biblio
+      mode: text
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      filter(
+        cells['noteBibliography_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      )[0],
+      v,
+      v,
+      ''
+    )
+  newColumnName: displayAddition2
+  columnInsertIndex: 1
+# bei vorhandenem Volltext: Quelle Volltext
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: text
+      columnName: vendor_type_mv
+      query: online
+      mode: text
+    mode: row-based
+  columnName: displayAddition2
+  expression: |
+    grel:
+    forNonBlank(
+      filter(
+        cells['website_description_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      )[0],
+      v,
+      v,
+      '' 
+    )

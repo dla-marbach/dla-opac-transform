@@ -142,6 +142,9 @@ digitalObject_id_mv:
 digitalObject_licenseNote_mv:
   - 'Creative Commons 10th Birthday Celebration San Francisco / Timothy Vollmer / CC BY 4.0. Quelle: http://www.flickr.com/photos/sixteenmilesofstring/8256206923/in/set-72157632200936657'
   - ␣
+displayAddition1: 'Verlagsort 1 : Verlag Vorlageform 1, Jahr/Datum 1 - Umfang'
+displayAddition2: Bibliographie 1
+displayName: Person 1 (1982–2001); Person 2 (1982–2001); Körperschaft 1 (1982); Körperschaft 2
 edition: Ausgabebezeichnung Vorlageform
 editionNormalized: Ausgabebezeichnung normiert
 exportDC: |-
@@ -1004,6 +1007,7 @@ id: AK00000021
 display: 'Person 1 (1982-2001). Werk 1 (genre : 2000)'
 category: Werktitel
 dateOrigin: "2000"
+displayName: Person 1 (1982–2001)
 filterAuthorityRelation_mv:
   - Person 1 (1982–2001)␝nicht bestimmt
 filterAuthorityRole_mv:
@@ -1051,6 +1055,7 @@ vendor_type_mv:
 id: AK00000022
 display: Person 2 (1982-2001). Werk 2 (genre)
 category: Werktitel
+displayName: Person 2 (1982–2001)
 filterAuthorityRelation_mv:
   - Person 2 (1982–2001)␝nicht bestimmt
 filterAuthorityRole_mv:
@@ -1077,6 +1082,7 @@ id: AK00000023
 display: Person 3 (1982-2001). Werk 3 (2000-01)
 category: Werktitel
 dateOrigin: 2000-01
+displayName: Person 3 (1982–2001)
 filterAuthorityRelation_mv:
   - Person 3 (1982–2001)␝nicht bestimmt
 filterAuthorityRole_mv:
@@ -1523,6 +1529,7 @@ corporationBy_id_mv:
   - KS00000001
 corporationBy_role_mv:
   - Widmungsempfänger
+displayName: Person 1 (1982–2001); Körperschaft 1 (1982)
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Personen und Körperschaften</dc:title>
@@ -1629,6 +1636,7 @@ corporationBy_id_mv:
 corporationBy_role_mv:
   - Verfasser
   - ␣
+displayName: Person 1 (1982–2001); Person 2 (1982–2001); Körperschaft 1 (1982); Körperschaft 2
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Personen und Körperschaften</dc:title>
@@ -2606,6 +2614,7 @@ creator_id_mv:
   - PE00000001
   - KS99999999
   - TH00000011
+displayName: Person 1 (1982–2001); Person 2 (1982–2001); Körperschaft 1 (1982); Körperschaft 2; Person 1 (1982–2001); Person 2 (1982–2001); Körperschaft 1 (1982); Körperschaft 2
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Teil eines mehrbändigen Werks</dc:title>
@@ -2869,6 +2878,7 @@ vendor_type_mv:
 ---
 id: AK00001001
 display: Zwei verknüpfte Personen mit Indexloch in der Mitte
+displayName: Person 1 (1982–2001); Person 2 (1982–2001)
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Zwei verknüpfte Personen mit Indexloch in der Mitte</dc:title>
@@ -2942,6 +2952,7 @@ url: https://www.dla-marbach.de/find/opac/id/AK00001001
 ---
 id: AK00001002
 display: Eine verknüpfte Person mit Indexloch am Anfang
+displayName: Person 1 (1982–2001)
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Eine verknüpfte Person mit Indexloch am Anfang</dc:title>
@@ -3000,6 +3011,7 @@ url: https://www.dla-marbach.de/find/opac/id/AK00001002
 ---
 id: AK00001003
 display: Drei verknüpfte Personen mit nur einer Funktion
+displayName: Person 1 (1982–2001); Person 2 (1982–2001); Person 3 (1982–2001)
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Drei verknüpfte Personen mit nur einer Funktion</dc:title>
@@ -3082,6 +3094,7 @@ url: https://www.dla-marbach.de/find/opac/id/AK00001003
 ---
 id: AK00001004
 display: Zwei verknüpfte Personen mit vier Funktionen (Funktion 3 und 4 sowie Indexloch überschüssig)
+displayName: Person 1 (1982–2001); Person 2 (1982–2001)
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Zwei verknüpfte Personen mit vier Funktionen (Funktion 3 und 4 sowie Indexloch überschüssig)</dc:title>
@@ -3810,6 +3823,7 @@ creator_display_mv:
   - Körperschaft 1 (1982)
 creator_id_mv:
   - KS00000001
+displayName: Person 1 (1982–2001); Person 2 (1982–2001); Körperschaft 1 (1982); Körperschaft 2
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Fehlende Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: -) und zwei Körperschaften (1: urheber, 2: beteiligt)</dc:title>
@@ -3917,6 +3931,7 @@ creator_display_mv:
 creator_id_mv:
   - PE00000002
   - KS00000001
+displayName: Person 1 (1982–2001); Person 2 (1982–2001); Körperschaft 1 (1982); Körperschaft 2
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Zusätzliche Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: urheber) und zwei Körperschaften (1: urheber, 2: beteiligt)</dc:title>
@@ -4003,6 +4018,7 @@ url: https://www.dla-marbach.de/find/opac/id/AK00006002
 ---
 id: AK00007001
 display: 'Platzhalter in Korrelationen: A0412 ohne AI412'
+displayAddition1: A
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Platzhalter in Korrelationen: A0412 ohne AI412</dc:title>
@@ -4087,6 +4103,7 @@ url: https://www.dla-marbach.de/find/opac/id/AK00007002
 ---
 id: AK00007003
 display: 'Platzhalter in Korrelationen: A0412 mit einem AI412'
+displayAddition1: A
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Platzhalter in Korrelationen: A0412 mit einem AI412</dc:title>
@@ -4147,6 +4164,7 @@ url: https://www.dla-marbach.de/find/opac/id/AK00007003
 ---
 id: AK00007004
 display: 'Platzhalter in Korrelationen: 2x A0412 und 1x AI412'
+displayAddition1: A
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Platzhalter in Korrelationen: 2x A0412 und 1x AI412</dc:title>

@@ -143,6 +143,9 @@
   <field name="dimension_height_mv" type="texts"/>
   <field name="dimension_width_mv" type="texts"/>
   <field name="display" type="text" required="true"/>
+  <field name="displayAddition1" type="text"/>
+  <field name="displayAddition2" type="text"/>
+  <field name="displayName" type="text"/>
   <field name="edition" type="text"/>
   <field name="editionNormalized" type="text"/>
   <field name="enveloped" type="boolean"/>

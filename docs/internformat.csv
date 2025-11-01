@@ -46,6 +46,9 @@ AK,digitalObject_license_mv,texts,CC BY-NC-ND␟␣,aus MM license
 AK,digitalObject_licenseNote_mv,texts,Creative Commons 10th Birthday Celebration San Francisco / Timothy Vollmer / CC BY 4.0. Quelle: http://www.flickr.com/photos/sixteenmilesofstring/8256206923/in/set-72157632200936657␟␣,aus MM license
 AK,digitalObject_thumbnail_mv,texts,"https://digital.dla-marbach.de/lib/icons/extension-pdf.png␟https://digital.dla-marbach.de/iiif/2/campus/D20041221/D20041221-12.jpg/full/!128,192/0/default.jpg?media_access=campus",aus MM thumbnail
 AK,display,text,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1],Hauptbezeichnung
+AK,displayAddition1,text,,Dritte Zeile der Trefferliste
+AK,displayAddition2,text,,Vierte Zeile der Trefferliste
+AK,displayName,text,,Erste Zeile der Trefferliste gebildet aus Personen und Körperschaften
 AK,edition,text,Ausgabebezeichnung Vorlageform,
 AK,editionNormalized,text,Ausgabebezeichnung normiert,
 AK,exportDC,string,,Datensatz im DC-Format
@@ -278,6 +281,9 @@ BF,digitalObject_license_mv,texts,CC BY-NC-ND␟␣,aus MM license
 BF,digitalObject_licenseNote_mv,texts,Creative Commons 10th Birthday Celebration San Francisco / Timothy Vollmer / CC BY 4.0. Quelle: http://www.flickr.com/photos/sixteenmilesofstring/8256206923/in/set-72157632200936657␟␣,aus MM license
 BF,digitalObject_thumbnail_mv,texts,"https://digital.dla-marbach.de/lib/icons/extension-pdf.png␟https://digital.dla-marbach.de/iiif/2/campus/D20041221/D20041221-12.jpg/full/!128,192/0/default.jpg?media_access=campus",aus MM thumbnail
 BF,display,text,"Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]",Hauptbezeichnung
+BF,displayAddition1,text,,Dritte Zeile der Trefferliste
+BF,displayAddition2,text,,Vierte Zeile der Trefferliste
+BF,displayName,text,,Erste Zeile der Trefferliste gebildet aus Personen und Körperschaften
 BF,exportDC,string,,Datensatz im DC-Format
 BF,exportMODS,string,,Datensatz im MODS-Format
 BF,exportRIS,string,,Datensatz im RIS-Format
@@ -371,6 +377,9 @@ BI,dimension_diameter_mv,texts,Maßangabe 1 Durchmesser (cm)␟Maßangabe 2 Durc
 BI,dimension_height_mv,texts,Maßangabe 1 Höhe (cm)␟Maßangabe 2 Höhe (cm),
 BI,dimension_width_mv,texts,Maßangabe 1 Breite (cm)␟Maßangabe 2 Breite (cm),
 BI,display,text,Bild 1 [Objektart Unterkategorie],Hauptbezeichnung
+BI,displayAddition1,text,,Dritte Zeile der Trefferliste
+BI,displayAddition2,text,,Vierte Zeile der Trefferliste
+BI,displayName,text,,Erste Zeile der Trefferliste gebildet aus Personen und Körperschaften
 BI,exportDC,string,,Datensatz im DC-Format
 BI,exportMODS,string,,Datensatz im MODS-Format
 BI,exportRIS,string,,Datensatz im RIS-Format
@@ -481,6 +490,9 @@ HS,digitalObject_license_mv,texts,CC BY-NC-ND␟␣,aus MM license
 HS,digitalObject_licenseNote_mv,texts,Creative Commons 10th Birthday Celebration San Francisco / Timothy Vollmer / CC BY 4.0. Quelle: http://www.flickr.com/photos/sixteenmilesofstring/8256206923/in/set-72157632200936657␟␣,aus MM license
 HS,digitalObject_thumbnail_mv,texts,"https://digital.dla-marbach.de/lib/icons/extension-pdf.png␟https://digital.dla-marbach.de/iiif/2/campus/D20041221/D20041221-12.jpg/full/!128,192/0/default.jpg?media_access=campus",aus MM thumbnail
 HS,display,text,Brief [Hauptgattung],Hauptbezeichnung
+HS,displayAddition1,text,,Dritte Zeile der Trefferliste
+HS,displayAddition2,text,,Vierte Zeile der Trefferliste
+HS,displayName,text,,Erste Zeile der Trefferliste gebildet aus Personen und Körperschaften
 HS,exportDC,string,,Datensatz im DC-Format
 HS,exportMODS,string,,Datensatz im MODS-Format
 HS,exportRIS,string,,Datensatz im RIS-Format
@@ -579,6 +591,8 @@ KS,dateLifespanEnd,daterange,2001-01-02,
 KS,dateLifespanStart,daterange,1982-05-22,
 KS,dateModified,daterange,2023-06-06,
 KS,display,text,Körperschaft 1 (1982),Hauptbezeichnung
+KS,displayAddition1,text,,Dritte Zeile der Trefferliste
+KS,displayAddition2,text,,Vierte Zeile der Trefferliste
 KS,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 KS,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 KS,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
@@ -665,6 +679,8 @@ PE,dateLifespanStart,daterange,1982-05-22,
 PE,dateModified,daterange,2023-06-06,
 PE,dateRetention,text,Schutzfrist,
 PE,display,text,Person 1 (1982-2001),Hauptbezeichnung
+PE,displayAddition1,text,,Dritte Zeile der Trefferliste
+PE,displayAddition2,text,,Vierte Zeile der Trefferliste
 PE,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 PE,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 PE,filterLocation_mv,strings,Ort 1␟Ort 2,Facette Ort
@@ -727,6 +743,8 @@ SE,corporation_id_mv,texts,KS00000001␟KS00000002,
 SE,dateCataloged,daterange,2023-06-01,
 SE,dateModified,daterange,2023-06-06,
 SE,display,text,Sacherschließungskette 1,Hauptbezeichnung
+SE,displayAddition1,text,,Dritte Zeile der Trefferliste
+SE,displayAddition2,text,,Vierte Zeile der Trefferliste
 SE,filterSource,string,Systematikketten,Facette Datenbestand
 SE,filterSubject_mv,strings,normiertes Schlagwort 1␟normiertes Schlagwort 2,Facette Thema
 SE,filterType,string, Normdaten,Facette Medientyp
@@ -748,6 +766,8 @@ SY,child_id_mv,texts,SY00000003␟SY00000004,
 SY,dateCataloged,daterange,2023-06-01,
 SY,dateModified,daterange,2023-06-06,
 SY,display,text,Systematiknummer. Basisnotation 1,Hauptbezeichnung
+SY,displayAddition1,text,,Dritte Zeile der Trefferliste
+SY,displayAddition2,text,,Vierte Zeile der Trefferliste
 SY,filterSource,string,Fachsystematik,Facette Datenbestand
 SY,filterType,string, Normdaten,Facette Medientyp
 SY,id,string,SY00000001,
@@ -772,6 +792,8 @@ TH,dateModified,daterange,2023-06-06,
 TH,dateOriginEnd,daterange,2001-01-01,
 TH,dateOriginStart,daterange,1982-05-22,
 TH,display,text,Thesaurus-Begriff 1,Hauptbezeichnung
+TH,displayAddition1,text,,Dritte Zeile der Trefferliste
+TH,displayAddition2,text,,Vierte Zeile der Trefferliste
 TH,filterDatePoint_mv,datepoints,1982-05-22T00:00:00Z␟1981-01-01T00:00:00Z,Facette Zeit (Zeitpunkte)
 TH,filterDateRange_mv,dateranges,[1982-05-22 TO 2011]␟1981,Facette Zeit (Zeiträume)
 TH,filterLanguage_mv,strings,Deutsch␟Englisch,Facette Sprache

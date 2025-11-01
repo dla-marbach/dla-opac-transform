@@ -1,0 +1,317 @@
+# Impressum abhängig vom Typ
+# bei Zeitschriften oder Reihen:
+# publisherOriginalLocation_mv : publisherOriginal_text_mv, publicationHistory. - extent
+- op: core/column-addition
+  engineConfig:
+    facets:
+    - type: text
+      columnName: categorySub
+      query: Fortlaufende Ressource
+      mode: text
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      filter(
+        cells['publisherOriginalLocation_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      )[0],
+      v,
+      v,
+      '' 
+    )
+    + if(
+      and(
+        isNonBlank(cells['publisherOriginalLocation_mv'].value),
+        isNonBlank(cells['publisherOriginal_text_mv'].value)
+      ),
+      ' : ',
+      '' 
+    )
+    + forNonBlank(
+      filter(
+        cells['publisherOriginal_text_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      )[0],
+      v,
+      v,
+      '' 
+    )
+    + if(
+      and(
+        or(
+          isNonBlank(cells['publisherOriginalLocation_mv'].value),
+          isNonBlank(cells['publisherOriginal_text_mv'].value)
+        ),
+        isNonBlank(cells['publicationHistory'].value)
+      ),
+      ', ',
+      ''
+    )
+    + forNonBlank(
+      cells['publicationHistory'].value,
+      v,
+      v+'.',
+      '' 
+    )
+    + if(
+      and(
+        or(
+          isNonBlank(cells['publisherOriginalLocation_mv'].value),
+          isNonBlank(cells['publisherOriginal_text_mv'].value),
+          isNonBlank(cells['publicationHistory'].value)
+        ),
+        isNonBlank(cells['extent'].value)
+      ),
+      ' - ',
+      '' 
+    )
+    + forNonBlank(
+      cells['extent'].value,
+      v,
+      v,
+      '' 
+    )
+  newColumnName: displayAddition1
+  columnInsertIndex: 1
+# bei Beiträgen / bei Beiträgen, Retro:
+# Erschienen in: parentTitleOriginal_mv/parent_display_mv. - parentVolumeTotal/parentIssueYearVolume, parentIssueVolume, (dateOrigin), parentIssueNumber, parentIssuePage
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: text
+      columnName: categorySub
+      query: Einzelbestandteil / unselbständiges Werk
+      mode: text
+    mode: row-based
+  columnName: displayAddition1
+  expression: |
+    grel:
+    forNonBlank(
+      filter(
+        cells['parent_display_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      )[0],
+      v,
+      'Erschienen in: ' + v + '.',
+      forNonBlank(
+        filter(
+          cells['parentTitleOriginal_mv'].value.split('␟'),
+          v,
+          not(v=='␣')
+        )[0],
+        v,
+        'Erschienen in: ' + v + '.',
+        '' 
+      )
+    )
+    + forNonBlank(
+      cells['parentVolumeTotal'].value,
+      v,
+      ' - '+v,
+      forNonBlank(
+        cells['parentIssueYearVolume'].value,
+        v,
+        ' - '+v,
+        '' 
+      )
+      + forNonBlank(
+        cells['parentIssueVolume'].value,
+        v,
+        ', '+v,
+        '' 
+      )
+      + forNonBlank(
+        cells['dateOrigin'].value,
+        v,
+        ', ('+v+')',
+        '' 
+      )
+      + forNonBlank(
+        cells['parentIssueNumber'].value,
+        v,
+        ', '+v,
+        '' 
+      )
+      + forNonBlank(
+        cells['parentIssuePage'].value,
+        v,
+        ', '+v,
+        '' 
+      )
+    )
+# bei allen anderen:
+# publisherOriginalLocation_mv : publisherOriginal_text_mv, dateOriginComment_mv. - extent
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: list
+      expression: isBlank(value)
+      columnName: displayAddition1
+      invert: false
+      selection:
+        - v:
+            v: true
+    mode: row-based
+  columnName: displayAddition1
+  expression: |
+    grel:
+    forNonBlank(
+      filter(
+        cells['publisherOriginalLocation_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      )[0],
+      v,
+      v,
+      '' 
+    )
+    + if(
+      and(
+        isNonBlank(cells['publisherOriginalLocation_mv'].value),
+        isNonBlank(cells['publisherOriginal_text_mv'].value)
+      ),
+      ' : ',
+      ''
+    )
+    + forNonBlank(
+      filter(
+        cells['publisherOriginal_text_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      )[0],
+      v,
+      v,
+      '' 
+    )
+    + if(
+      and(
+        or(
+          isNonBlank(cells['publisherOriginalLocation_mv'].value),
+          isNonBlank(cells['publisherOriginal_text_mv'].value)
+        ),
+        isNonBlank(cells['dateOriginComment_mv'].value)
+      ),
+      ', ',
+      ''
+    )
+    + forNonBlank(
+      filter(
+        cells['dateOriginComment_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      )[0],
+      v,
+      v,
+      '' 
+    )
+    + if(
+      and(
+        or(
+          isNonBlank(cells['publisherOriginalLocation_mv'].value),
+          isNonBlank(cells['publisherOriginal_text_mv'].value),
+          isNonBlank(cells['dateOriginComment_mv'].value)
+        ),
+        isNonBlank(cells['extent'].value)
+      ),
+      ' - ',
+      ''
+    )
+    + forNonBlank(
+      cells['extent'].value,
+      v,
+      v,
+      ''
+    )
+# Mehrbändige Werke: Angabe aus der verknüpften Hauptaufnahme in Bandsätzen ergänzen
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: text
+      columnName: parent_type_mv
+      query: Teil mit abhängigem Titel
+      mode: text
+    mode: row-based
+  columnName: displayAddition1
+  expression: |
+    grel:
+    forNonBlank(
+      filter(
+        cells['parent_id_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      )[0].cross('ak','id')[0].cells['displayAddition1'].value,
+      v,
+      forNonBlank(
+        value,
+        x,
+        v + ', ' + x,
+        x
+      ),
+      value
+    )
+# Teil einer monografischen Zusammenstellung:
+# Erschienen in: parent_display_mv \ parent_titleResponsability_mv. - <Angabe aus der verknüpften Hauptaufnahme> ; parentIssuePage
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: text
+      columnName: parent_type_mv
+      query: Teil einer monografischen Zusammenstellung, unselbständiges Stück
+      mode: text
+    - type: list
+      expression: isBlank(value)
+      columnName: parent_id_mv
+      invert: false
+      selection:
+        - v:
+            v: false
+    mode: row-based
+  columnName: displayAddition1
+  expression: |
+    grel:
+    forNonBlank(
+      filter(
+        cells['parent_display_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      )[0],
+      v,
+      'Erschienen in: ' + v + '.',
+      ''
+    )
+    + forNonBlank(
+      filter(
+        cells['parentTitleOriginal_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      )[0],
+      v,
+      ' \\ ' + v
+      ''
+    )
+    + forNonBlank(
+      filter(
+        cells['parent_id_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      )[0],
+      v,
+      forNonBlank(
+        v.cross('ak','id')[0].cells['displayAddition1'].value,
+        x,
+        '. - ' + x,
+        ''
+      ),
+      ''
+    )
+    + forNonBlank(
+      cells['parentIssuePage'].value,
+      v,
+      '; ' + v,
+      ''
+    )

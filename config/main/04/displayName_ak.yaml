@@ -1,0 +1,65 @@
+# Personen VON und Körperschaften VON mit Trennzeichen ;
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      filter(
+        cells['personBy_display_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      ).join('; '),
+      v,
+      v,
+      ''
+    )
+    + if(
+      and(
+        isNonBlank(cells['personBy_display_mv'].value),
+        isNonBlank(cells['corporationBy_display_mv'].value)
+      ),
+      '; ',
+      ''
+    )
+    + forNonBlank(
+      filter(
+        cells['corporationBy_display_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      ).join('; '),
+      v,
+      v,
+      ''
+    )
+  newColumnName: displayName
+  columnInsertIndex: 1
+# Mehrbändige Werke: Angabe aus der verknüpften Hauptaufnahme in Bandsätzen ergänzen
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: text
+      columnName: parent_type_mv
+      query: Teil mit abhängigem Titel
+      mode: text
+    mode: row-based
+  columnName: displayName
+  expression: |
+    grel:
+    forNonBlank(
+      filter(
+        cells['parent_id_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      )[0].cross('ak','id')[0].cells['displayName'].value,
+      v,
+      forNonBlank(
+        value,
+        x,
+        v + '; ' + x,
+        x
+      ),
+      value
+    )
