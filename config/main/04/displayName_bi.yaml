@@ -1,0 +1,38 @@
+# Personen VON und Körperschaften VON mit Trennzeichen ;
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      filter(
+        cells['personBy_display_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      ).join('; '),
+      v,
+      v,
+      ''
+    )
+    + if(
+      and(
+        isNonBlank(cells['personBy_display_mv'].value),
+        isNonBlank(cells['corporationBy_display_mv'].value)
+      ),
+      '; ',
+      ''
+    )
+    + forNonBlank(
+      filter(
+        cells['corporationBy_display_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      ).join('; '),
+      v,
+      v,
+      ''
+    )
+  newColumnName: displayName
+  columnInsertIndex: 1

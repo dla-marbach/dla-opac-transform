@@ -1,0 +1,38 @@
+# Personen UNTER und Körperschaften UNTER mit Trennzeichen ;
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      filter(
+        cells['personAt_display_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      ).join('; '),
+      v,
+      v,
+      ''
+    )
+    + if(
+      and(
+        isNonBlank(cells['personAt_display_mv'].value),
+        isNonBlank(cells['corporationAt_display_mv'].value)
+      ),
+      '; ',
+      ''
+    )
+    + forNonBlank(
+      filter(
+        cells['corporationAt_display_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      ).join('; '),
+      v,
+      v,
+      ''
+    )
+  newColumnName: displayName
+  columnInsertIndex: 1
