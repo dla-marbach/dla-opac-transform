@@ -1,0 +1,16 @@
+# Trefferliste dritte Zeile
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      cells['extent'].value,
+      v,
+      v,
+      null
+    )
+  newColumnName: displayAddition1
+  columnInsertIndex: 1

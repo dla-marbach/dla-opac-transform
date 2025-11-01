@@ -1,4 +1,4 @@
-# Impressum abhängig vom Typ
+# Trefferliste dritte Zeile
 # bei Zeitschriften oder Reihen:
 # publisherOriginalLocation_mv : publisherOriginal_text_mv, publicationHistory. - extent
 - op: core/column-addition
@@ -20,7 +20,7 @@
       )[0],
       v,
       v,
-      '' 
+      ''
     )
     + if(
       and(
@@ -28,7 +28,7 @@
         isNonBlank(cells['publisherOriginal_text_mv'].value)
       ),
       ' : ',
-      '' 
+      ''
     )
     + forNonBlank(
       filter(
@@ -38,7 +38,7 @@
       )[0],
       v,
       v,
-      '' 
+      ''
     )
     + if(
       and(
@@ -55,7 +55,7 @@
       cells['publicationHistory'].value,
       v,
       v+'.',
-      '' 
+      ''
     )
     + if(
       and(
@@ -67,13 +67,13 @@
         isNonBlank(cells['extent'].value)
       ),
       ' - ',
-      '' 
+      ''
     )
     + forNonBlank(
       cells['extent'].value,
       v,
       v,
-      '' 
+      ''
     )
   newColumnName: displayAddition1
   columnInsertIndex: 1
@@ -106,7 +106,7 @@
         )[0],
         v,
         'Erschienen in: ' + v + '.',
-        '' 
+        ''
       )
     )
     + forNonBlank(
@@ -117,31 +117,31 @@
         cells['parentIssueYearVolume'].value,
         v,
         ' - '+v,
-        '' 
+        ''
       )
       + forNonBlank(
         cells['parentIssueVolume'].value,
         v,
         ', '+v,
-        '' 
+        ''
       )
       + forNonBlank(
         cells['dateOrigin'].value,
         v,
         ', ('+v+')',
-        '' 
+        ''
       )
       + forNonBlank(
         cells['parentIssueNumber'].value,
         v,
         ', '+v,
-        '' 
+        ''
       )
       + forNonBlank(
         cells['parentIssuePage'].value,
         v,
         ', '+v,
-        '' 
+        ''
       )
     )
 # bei allen anderen:
@@ -168,7 +168,7 @@
       )[0],
       v,
       v,
-      '' 
+      ''
     )
     + if(
       and(
@@ -186,7 +186,7 @@
       )[0],
       v,
       v,
-      '' 
+      ''
     )
     + if(
       and(
@@ -207,7 +207,7 @@
       )[0],
       v,
       v,
-      '' 
+      ''
     )
     + if(
       and(

@@ -1,0 +1,21 @@
+# Trefferliste vierte Zeile
+# Bestandssignatur
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      filter(
+        cells['noteBibliography_mv'].value.split('␟'),
+        v,
+        not(v=='␣')
+      ).join(', '),
+      v,
+      v,
+      null
+    )
+  newColumnName: displayAddition2
+  columnInsertIndex: 1

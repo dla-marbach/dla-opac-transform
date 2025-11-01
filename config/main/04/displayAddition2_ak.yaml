@@ -1,4 +1,4 @@
-# Zusatzinfo in Trefferliste
+# Trefferliste vierte Zeile
 # bei Bibliographie: A0711
 - op: core/column-addition
   engineConfig:
@@ -19,7 +19,7 @@
       ).join(', '),
       v,
       v,
-      ''
+      null
     )
   newColumnName: displayAddition2
   columnInsertIndex: 1
@@ -43,5 +43,5 @@
       ).join('; '),
       v,
       v,
-      '' 
+      value
     )

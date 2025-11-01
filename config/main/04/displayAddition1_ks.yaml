@@ -1,0 +1,47 @@
+# Trefferliste dritte Zeile
+# GND-Relation nur mit Indikator orta_Tg
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['gndRelation_text_mv'].value,
+          v,
+          forEachIndex(
+            v.split('␟'),
+            i,
+            x,
+            if(
+              cells['gndRelation_type_mv'].value.split('␟')[i].contains('Sitz, Ort'),
+              if(
+                not(x == '␣'),
+                x,
+                null
+              ),
+              null
+            )
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          filter(
+            cells['place_mv'].value.split('␟'),
+            v,
+            not(v == '␣')
+          ).join('␟'),
+          x,
+          x,
+          null
+        )
+      ].join('␟'),
+      z,
+      z.split('␟').uniques().join(', '),
+      null
+    )
+  newColumnName: displayAddition1
+  columnInsertIndex: 1

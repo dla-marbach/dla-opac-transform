@@ -1,0 +1,29 @@
+# Trefferliste vierte Zeile
+# Wirkungsdaten nur Jahr, also z.B. 2016 statt 20161014
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      forNonBlank(
+        cells['dateActivityStart'].value,
+        v,
+        slice(v,0,4),
+        ''
+      )
+      +
+      forNonBlank(
+        cells['dateActivityEnd'].value,
+        v,
+        ' – ' + slice(v,0,4),
+        ''
+      ),
+      x,
+      'Wirkungsdaten: ' + x,
+      null
+    )
+  newColumnName: displayAddition2
+  columnInsertIndex: 1

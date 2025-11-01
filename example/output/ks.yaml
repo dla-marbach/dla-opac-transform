@@ -28,6 +28,8 @@ dateCataloged: "2023-06-01"
 dateLifespanEnd: "2001-01-02"
 dateLifespanStart: "1982-05-22"
 dateModified: "2023-06-06"
+displayAddition1: Ort
+displayAddition2: Körperschaftstyp 1, Körperschaftstyp 2
 filterDatePoint_mv:
   - "1982-05-22T00:00:00Z"
   - "1982-05-23T00:00:00Z"
@@ -268,6 +270,7 @@ display: Vertraulicher Lieferant
 categoryIndex_mv:
   - Lieferant
 confidential: true
+displayAddition2: Lieferant
 filterSource: Körperschaften
 filterType: Normdaten
 schemaVersion: 0.9.0
@@ -280,6 +283,7 @@ display: Vertraulicher Lieferant Bibliothek
 categoryIndex_mv:
   - Bibliothek
 confidential: true
+displayAddition2: Bibliothek
 filterSource: Körperschaften
 filterType: Normdaten
 schemaVersion: 0.9.0

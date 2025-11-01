@@ -1,0 +1,16 @@
+# Trefferliste vierte Zeile
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      cells['inventoryNumber'].value,
+      v,
+      'Inventarnummer: ' + v,
+      null
+    )
+  newColumnName: displayAddition2
+  columnInsertIndex: 1

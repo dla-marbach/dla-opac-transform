@@ -1,0 +1,40 @@
+# Trefferliste dritte Zeile
+# Entstehungszeit
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      cells['dateOriginStart'].value,
+      v,
+      if(
+        v.length()==10,
+        v.toDate('yyyy-MM-dd').toString('dd.MM.yyyy'),
+        if(
+          v.length()==7,
+          v.toDate('yyyy-MM').toString('MM.yyyy'),
+          v
+        )
+      ),
+      ''
+    )
+    +
+    forNonBlank(
+      cells['dateOriginEnd'].value,
+      v,
+      ' – ' + if(
+        v.length()==10,
+        v.toDate('yyyy-MM-dd').toString('dd.MM.yyyy'),
+        if(
+          v.length()==7,
+          v.toDate('yyyy-MM').toString('MM.yyyy'),
+          v
+        )
+      ),
+      ''
+    )
+  newColumnName: displayAddition1
+  columnInsertIndex: 1
