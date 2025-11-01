@@ -16,7 +16,7 @@
         cells['noteBibliography_mv'].value.split('␟'),
         v,
         not(v=='␣')
-      )[0],
+      ).join(', '),
       v,
       v,
       ''
@@ -40,7 +40,7 @@
         cells['website_description_mv'].value.split('␟'),
         v,
         not(v=='␣')
-      )[0],
+      ).join('; '),
       v,
       v,
       '' 
