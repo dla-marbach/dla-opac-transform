@@ -9,7 +9,7 @@
     grel:
     forNonBlank(
       filter(
-        cells['noteBibliography_mv'].value.split('␟'),
+        cells['collection_display_mv'].value.split('␟'),
         v,
         not(v=='␣')
       ).join(', '),
