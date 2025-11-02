@@ -8,43 +8,40 @@
   expression: |
     grel:
     forNonBlank(
-      [
-        forNonBlank(
-          cells['gndRelation_text_mv'].value,
-          v,
-          forEachIndex(
-            v.split('␟'),
-            i,
-            x,
+      forNonBlank(
+        cells['gndRelation_text_mv'].value,
+        v,
+        forEachIndex(
+          v.split('␟'),
+          i,
+          x,
+          if(
+            or(
+              cells['gndRelation_type_mv'].value.split('␟')[i].contains('Beruf/Funktion'),
+              cells['gndRelation_type_mv'].value.split('␟')[i].contains('Charakt. Beruf')
+            ),
             if(
-              or(
-                cells['gndRelation_type_mv'].value.split('␟')[i].contains('Beruf/Funktion'),
-                cells['gndRelation_type_mv'].value.split('␟')[i].contains('Charakt. Beruf')
-              ),
-              if(
-                not(x == '␣'),
-                x,
-                null
-              ),
+              not(x == '␣'),
+              x,
               null
-            )
-          ).join('␟'),
-          null
-        ),
-        forNonBlank(
-          filter(
-            cells['occupation_mv'].value.split('␟'),
-            v,
-            not(v == '␣')
-          ).join('␟'),
-          x,
-          x,
-          null
-        )
-      ].join('␟'),
-      z,
-      z.split('␟').uniques().join(', '),
-      null
+            ),
+            null
+          )
+        ).join('␟'),
+        null
+      ),
+      normiert,
+      normiert,
+      forNonBlank(
+        filter(
+          cells['occupation_mv'].value.split('␟'),
+          v,
+          not(v == '␣')
+        ).join('␟'),
+        unnormiert,
+        unnormiert,
+        null
+      )
     )
   newColumnName: displayAddition1
   columnInsertIndex: 1
