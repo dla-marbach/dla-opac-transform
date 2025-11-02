@@ -15,10 +15,19 @@
         ''
       )
       +
+      if(
+        or(
+          isNonBlank(cells['dateActivityStart'].value),
+          isNonBlank(cells['dateActivityEnd'].value)
+        ),
+        ' – '
+        ''
+      )
+      +
       forNonBlank(
         cells['dateActivityEnd'].value,
         v,
-        ' – ' + slice(v,0,4),
+        slice(v,0,4),
         ''
       ),
       x,
