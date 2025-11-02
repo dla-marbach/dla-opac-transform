@@ -255,7 +255,7 @@
       value
     )
 # Teil einer monografischen Zusammenstellung:
-# Erschienen in: parent_display_mv \ parent_titleResponsability_mv. - <Angabe aus der verknüpften Hauptaufnahme> ; parentIssuePage
+# Erschienen in: parent_display_mv \\ parent_titleResponsability_mv. - <Angabe aus der verknüpften Hauptaufnahme> ; parentIssuePage
 - op: core/text-transform
   engineConfig:
     facets:
@@ -286,12 +286,12 @@
     )
     + forNonBlank(
       filter(
-        cells['parentTitleOriginal_mv'].value.split('␟'),
+        cells['parent_titleResponsability_mv'].value.split('␟'),
         v,
         not(v=='␣')
       )[0],
       v,
-      ' \\ ' + v
+      ' \\ ' + v,
       ''
     )
     + forNonBlank(
