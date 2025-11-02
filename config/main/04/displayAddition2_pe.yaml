@@ -20,7 +20,7 @@
           isNonBlank(cells['dateActivityStart'].value),
           isNonBlank(cells['dateActivityEnd'].value)
         ),
-        ' – '
+        ' – ',
         ''
       )
       +

@@ -27,7 +27,7 @@
             ),
             null
           )
-        ).join('␟'),
+        ).join(', '),
         null
       ),
       normiert,
@@ -37,7 +37,7 @@
           cells['occupation_mv'].value.split('␟'),
           v,
           not(v == '␣')
-        ).join('␟'),
+        ).join(', '),
         unnormiert,
         unnormiert,
         null
