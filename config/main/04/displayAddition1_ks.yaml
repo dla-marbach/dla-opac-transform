@@ -24,7 +24,7 @@
             ),
             null
           )
-        ).join('␟'),
+        ).join(', '),
         null
       ),
       normiert,
@@ -34,7 +34,7 @@
           cells['place_mv'].value.split('␟'),
           v,
           not(v == '␣')
-        ).join('␟'),
+        ).join(', '),
         unnormiert,
         unnormiert,
         null
