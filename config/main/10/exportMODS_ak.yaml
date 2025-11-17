@@ -325,13 +325,20 @@
     , '') +
 
     forNonBlank(cells['parent_id_mv'].value, x,
-        forEach(x.split('␟'), v, if(v != '␣',
+      forEachIndex(x.split('␟'), i, z,
+        if(z != '␣',
           '  <relatedItem type="host">' + '\n' +
+          forNonBlank(cells['parent_display_mv'].value.split('␟')[i].replace('␣',''), v,
+            '    <titleInfo>' + '\n' +
+            '      <title>' + v.escape('xml') + '</title>' + '\n' +
+            '    </titleInfo>' + '\n'
+          , '') +
           '    <recordInfo>' + '\n' +
-          '      <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">' + v.escape('xml') + '</recordIdentifier>' + '\n' +
+          '      <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">' + z.escape('xml') + '</recordIdentifier>' + '\n' +
           '    </recordInfo>' + '\n' +
           '  </relatedItem>' + '\n'
-        , '')).join('')
+        , '')
+      ).join('')
     , '') +
 
     forNonBlank(cells['item_id_mv'].value, items,

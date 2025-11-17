@@ -266,11 +266,17 @@ AK00000001,Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentl
   <classification authority=""DE-Mar1"">Sacherschließungskette 1</classification>
   <classification authority=""DE-Mar1"">Sacherschließungskette 2</classification>
   <relatedItem type=""host"">
+    <titleInfo>
+      <title>Gesamttitel 1</title>
+    </titleInfo>
     <recordInfo>
       <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000011</recordIdentifier>
     </recordInfo>
   </relatedItem>
   <relatedItem type=""host"">
+    <titleInfo>
+      <title>Gesamttitel 2</title>
+    </titleInfo>
     <recordInfo>
       <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000012</recordIdentifier>
     </recordInfo>
@@ -1301,6 +1307,9 @@ AK00000111,Teil eines mehrbändigen Werks,,,,,,,,,,,,,,Person 2 (1982–2001)␟
     </role>
   </name>
   <relatedItem type=""host"">
+    <titleInfo>
+      <title>Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1]</title>
+    </titleInfo>
     <recordInfo>
       <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK00000001</recordIdentifier>
     </recordInfo>
