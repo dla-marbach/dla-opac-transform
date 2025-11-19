@@ -185,7 +185,7 @@
   <field name="gnd_id_mv" type="strings"/>
   <field name="gnd_type_mv" type="texts"/>
   <field name="gndRelation_comment_mv" type="texts"/>
-  <field name="gndRelation_id_mv" type="texts"/>
+  <field name="gndRelation_id_mv" type="strings"/>
   <field name="gndRelation_text_mv" type="texts"/>
   <field name="gndRelation_type_mv" type="texts"/>
   <field name="headword_mv" type="texts"/>
@@ -241,7 +241,7 @@
   <field name="locationComment" type="text"/>
   <field name="locationFolderNumber" type="text"/>
   <field name="manifestation_display" type="text"/>
-  <field name="manifestation_id" type="strings"/>
+  <field name="manifestation_id" type="string"/>
   <field name="manuscript_display_mv" type="texts"/>
   <field name="manuscript_id_mv" type="strings"/>
   <field name="material" type="text"/>
@@ -275,7 +275,7 @@
   <field name="noteRemark_type_mv" type="texts"/>
   <field name="noteRequirements_mv" type="texts"/>
   <field name="object_display" type="text"/>
-  <field name="object_id" type="strings"/>
+  <field name="object_id" type="string"/>
   <field name="occupation_mv" type="texts"/>
   <field name="order_extent_mv" type="texts"/>
   <field name="order_status_mv" type="texts"/>
