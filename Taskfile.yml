@@ -151,6 +151,20 @@ tasks:
       - command -v python3
       - test -d {{.DIR}}/output
 
+  stats:
+    desc: Aktualisierung der Statistiken in docs/internformat.csv
+    cmds:
+      - |
+        # Zeitstempel zu Beginn
+        mkdir -p .task/timer; date -u +%s.%N > ".task/timer/{{.TASK}}"
+      - python3 scripts/stats.py "{{.DIR}}"/output
+      - |
+        # Laufzeit berechnen
+        >&2 echo "{{.TASK}} run time: $(awk -v now=$(date -u +%s.%N) -v timer=$(cat .task/timer/{{.TASK}}) 'BEGIN {print now-timer}') seconds"
+    preconditions:
+      - command -v python3
+      - test -d {{.DIR}}/output
+
   install:
     desc: install all requirements into subdirectories
     cmds:
