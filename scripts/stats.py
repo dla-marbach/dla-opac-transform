@@ -40,7 +40,7 @@ def process_file(filename):
     stats = {}
     for key in field_count:
         count = field_count[key]
-        percent = f"{int(round((count / total) * 100))} %" if total > 0 else "0 %"
+        percent = "{} %".format(int(round((count / total) * 100))) if total > 0 else "0 %"
         unique_items = len(field_distinct[key])
         top_value = field_top[key].most_common(1)[0][0]
         top_str = str(top_value)
