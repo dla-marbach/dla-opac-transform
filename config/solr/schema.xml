@@ -39,7 +39,7 @@
     </analyzer>
   </fieldType>
   <field name="accession_display" type="text"/>
-  <field name="accession_id" type="text"/>
+  <field name="accession_id" type="string"/>
   <field name="accessionNumber" type="text"/>
   <field name="accessLevel" type="text"/>
   <field name="acronym_mv" type="texts"/>
@@ -60,56 +60,56 @@
   <field name="categorySub" type="text"/>
   <field name="categorySubSub" type="text"/>
   <field name="child_display_mv" type="texts"/>
-  <field name="child_id_mv" type="texts"/>
+  <field name="child_id_mv" type="strings"/>
   <field name="classification_category_mv" type="texts"/>
   <field name="classification_display_mv" type="texts"/>
-  <field name="classification_id_mv" type="texts"/>
+  <field name="classification_id_mv" type="strings"/>
   <field name="classificationAuthor_display_mv" type="texts"/>
-  <field name="classificationAuthor_id_mv" type="texts"/>
+  <field name="classificationAuthor_id_mv" type="strings"/>
   <field name="classificationChain" type="text"/>
   <field name="classificationForm_display_mv" type="texts"/>
-  <field name="classificationForm_id_mv" type="texts"/>
+  <field name="classificationForm_id_mv" type="strings"/>
   <field name="classificationNewspaper_comment_mv" type="texts"/>
   <field name="classificationNewspaper_text_mv" type="texts"/>
   <field name="classificationOther_comment_mv" type="texts"/>
   <field name="classificationOther_text_mv" type="texts"/>
   <field name="classificationSubject_display_mv" type="texts"/>
-  <field name="classificationSubject_id_mv" type="texts"/>
+  <field name="classificationSubject_id_mv" type="strings"/>
   <field name="classificationSubjectOther_mv" type="texts"/>
   <field name="collection_display_mv" type="texts"/>
-  <field name="collection_id_mv" type="texts"/>
+  <field name="collection_id_mv" type="strings"/>
   <field name="confidential" type="boolean"/>
   <field name="content" type="text"/>
   <field name="contributor_display_mv" type="texts"/>
-  <field name="contributor_id_mv" type="texts"/>
+  <field name="contributor_id_mv" type="strings"/>
   <field name="corporation_display_mv" type="texts"/>
-  <field name="corporation_id_mv" type="texts"/>
+  <field name="corporation_id_mv" type="strings"/>
   <field name="corporationAbout_comment_mv" type="texts"/>
   <field name="corporationAbout_display_mv" type="texts"/>
-  <field name="corporationAbout_id_mv" type="texts"/>
+  <field name="corporationAbout_id_mv" type="strings"/>
   <field name="corporationAbout_role_mv" type="texts"/>
   <field name="corporationAt_display_mv" type="texts"/>
-  <field name="corporationAt_id_mv" type="texts"/>
+  <field name="corporationAt_id_mv" type="strings"/>
   <field name="corporationBy_comment_mv" type="texts"/>
   <field name="corporationBy_creator_mv" type="texts"/>
   <field name="corporationBy_display_mv" type="texts"/>
-  <field name="corporationBy_id_mv" type="texts"/>
+  <field name="corporationBy_id_mv" type="strings"/>
   <field name="corporationBy_role_mv" type="texts"/>
   <field name="corporationByConference_creator_mv" type="texts"/>
   <field name="corporationByConference_display_mv" type="texts"/>
-  <field name="corporationByConference_id_mv" type="texts"/>
+  <field name="corporationByConference_id_mv" type="strings"/>
   <field name="corporationByConference_role_mv" type="texts"/>
   <field name="corporationByTerritory_creator_mv" type="texts"/>
   <field name="corporationByTerritory_display_mv" type="texts"/>
-  <field name="corporationByTerritory_id_mv" type="texts"/>
+  <field name="corporationByTerritory_id_mv" type="strings"/>
   <field name="corporationByTerritory_role_mv" type="texts"/>
   <field name="corporationTo_comment_mv" type="texts"/>
   <field name="corporationTo_display_mv" type="texts"/>
-  <field name="corporationTo_id_mv" type="texts"/>
+  <field name="corporationTo_id_mv" type="strings"/>
   <field name="corporationTo_role_mv" type="texts"/>
   <field name="country_mv" type="texts"/>
   <field name="creator_display_mv" type="texts"/>
-  <field name="creator_id_mv" type="texts"/>
+  <field name="creator_id_mv" type="strings"/>
   <field name="dateActivityEnd" type="daterange"/>
   <field name="dateActivityStart" type="daterange"/>
   <field name="dateCataloged" type="daterange"/>
@@ -133,7 +133,7 @@
   <field name="digitalObject_display_mv" type="texts"/>
   <field name="digitalObject_fileExtension_mv" type="texts"/>
   <field name="digitalObject_hyperlink_mv" type="texts"/>
-  <field name="digitalObject_id_mv" type="texts"/>
+  <field name="digitalObject_id_mv" type="strings"/>
   <field name="digitalObject_license_mv" type="texts"/>
   <field name="digitalObject_licenseNote_mv" type="texts"/>
   <field name="digitalObject_thumbnail_mv" type="texts"/>
@@ -182,7 +182,7 @@
   <field name="genreOther_mv" type="texts"/>
   <field name="genreSub" type="text"/>
   <field name="genreSubOther_mv" type="texts"/>
-  <field name="gnd_id_mv" type="texts"/>
+  <field name="gnd_id_mv" type="strings"/>
   <field name="gnd_type_mv" type="texts"/>
   <field name="gndRelation_comment_mv" type="texts"/>
   <field name="gndRelation_id_mv" type="texts"/>
@@ -190,10 +190,10 @@
   <field name="gndRelation_type_mv" type="texts"/>
   <field name="headword_mv" type="texts"/>
   <field name="host_display_mv" type="texts"/>
-  <field name="host_id_mv" type="texts"/>
+  <field name="host_id_mv" type="strings"/>
   <field name="hyperlink" type="text"/>
   <field name="id" type="string" indexed="true" stored="true" required="true" multiValued="false"/>
-  <field name="identifier_id_mv" type="texts"/>
+  <field name="identifier_id_mv" type="strings"/>
   <field name="identifier_type_mv" type="texts"/>
   <field name="index" type="text"/>
   <field name="inscription" type="text"/>
@@ -204,28 +204,28 @@
   <field name="ismn_mv" type="texts"/>
   <field name="issn_mv" type="texts"/>
   <field name="item_collection_display_mv" type="texts"/>
-  <field name="item_collection_id_mv" type="texts"/>
+  <field name="item_collection_id_mv" type="strings"/>
   <field name="item_digitalObject_accessLevel_mv" type="texts"/>
   <field name="item_digitalObject_display_mv" type="texts"/>
   <field name="item_digitalObject_fileExtension_mv" type="texts"/>
   <field name="item_digitalObject_hyperlink_mv" type="texts"/>
-  <field name="item_digitalObject_id_mv" type="texts"/>
+  <field name="item_digitalObject_id_mv" type="strings"/>
   <field name="item_digitalObject_license_mv" type="texts"/>
   <field name="item_digitalObject_licenseNote_mv" type="texts"/>
   <field name="item_digitalObject_thumbnail_mv" type="texts"/>
   <field name="item_display_mv" type="texts"/>
-  <field name="item_id_mv" type="texts"/>
+  <field name="item_id_mv" type="strings"/>
   <field name="item_manifestation_display_mv" type="texts"/>
-  <field name="item_manifestation_id_mv" type="texts"/>
+  <field name="item_manifestation_id_mv" type="strings"/>
   <field name="itemization_extent_mv" type="texts"/>
   <field name="itemization_status_mv" type="texts"/>
   <field name="itemization_unit_mv" type="texts"/>
   <field name="journalIssue_display_mv" type="texts"/>
-  <field name="journalIssue_id_mv" type="texts"/>
+  <field name="journalIssue_id_mv" type="strings"/>
   <field name="language_mv" type="texts"/>
   <field name="languageOriginal_mv" type="texts"/>
   <field name="library_display_mv" type="texts"/>
-  <field name="library_id_mv" type="texts"/>
+  <field name="library_id_mv" type="strings"/>
   <field name="license" type="text"/>
   <field name="linkCommonsImage_file_mv" type="strings"/>
   <field name="linkCommonsImage_rights_mv" type="strings"/>
@@ -241,9 +241,9 @@
   <field name="locationComment" type="text"/>
   <field name="locationFolderNumber" type="text"/>
   <field name="manifestation_display" type="text"/>
-  <field name="manifestation_id" type="text"/>
+  <field name="manifestation_id" type="strings"/>
   <field name="manuscript_display_mv" type="texts"/>
-  <field name="manuscript_id_mv" type="texts"/>
+  <field name="manuscript_id_mv" type="strings"/>
   <field name="material" type="text"/>
   <field name="mediaNumber" type="text"/>
   <field name="microform_mv" type="texts"/>
@@ -253,10 +253,10 @@
   <field name="nameAlternative_suffix_mv" type="texts"/>
   <field name="nameAlternative_type_mv" type="texts"/>
   <field name="nameFormerOrLater_display_mv" type="texts"/>
-  <field name="nameFormerOrLater_id_mv" type="texts"/>
+  <field name="nameFormerOrLater_id_mv" type="strings"/>
   <field name="nameOriginal_mv" type="texts"/>
   <field name="nameTemporary_display_mv" type="texts"/>
-  <field name="nameTemporary_id_mv" type="texts"/>
+  <field name="nameTemporary_id_mv" type="strings"/>
   <field name="notation" type="text"/>
   <field name="note" type="text"/>
   <field name="noteBibliography_mv" type="texts"/>
@@ -275,13 +275,13 @@
   <field name="noteRemark_type_mv" type="texts"/>
   <field name="noteRequirements_mv" type="texts"/>
   <field name="object_display" type="text"/>
-  <field name="object_id" type="text"/>
+  <field name="object_id" type="strings"/>
   <field name="occupation_mv" type="texts"/>
   <field name="order_extent_mv" type="texts"/>
   <field name="order_status_mv" type="texts"/>
   <field name="order_unit_mv" type="texts"/>
   <field name="parent_display_mv" type="texts"/>
-  <field name="parent_id_mv" type="texts"/>
+  <field name="parent_id_mv" type="strings"/>
   <field name="parent_titleResponsability_mv" type="texts"/>
   <field name="parent_type_mv" type="texts"/>
   <field name="parentIssueDate" type="daterange"/>
@@ -295,39 +295,39 @@
   <field name="parentVolumeNormalized_mv" type="texts"/>
   <field name="parentVolumeTotal" type="text"/>
   <field name="person_display_mv" type="texts"/>
-  <field name="person_id_mv" type="texts"/>
+  <field name="person_id_mv" type="strings"/>
   <field name="personAbout_comment_mv" type="texts"/>
   <field name="personAbout_display_mv" type="texts"/>
-  <field name="personAbout_id_mv" type="texts"/>
+  <field name="personAbout_id_mv" type="strings"/>
   <field name="personAbout_role_mv" type="texts"/>
   <field name="personAt_display_mv" type="texts"/>
-  <field name="personAt_id_mv" type="texts"/>
+  <field name="personAt_id_mv" type="strings"/>
   <field name="personBy_comment_mv" type="texts"/>
   <field name="personBy_creator_mv" type="texts"/>
   <field name="personBy_display_mv" type="texts"/>
-  <field name="personBy_id_mv" type="texts"/>
+  <field name="personBy_id_mv" type="strings"/>
   <field name="personBy_role_mv" type="texts"/>
   <field name="personTo_comment_mv" type="texts"/>
   <field name="personTo_display_mv" type="texts"/>
-  <field name="personTo_id_mv" type="texts"/>
+  <field name="personTo_id_mv" type="strings"/>
   <field name="personTo_role_mv" type="texts"/>
   <field name="photoNegativeNumber_mv" type="texts"/>
   <field name="place_mv" type="texts"/>
   <field name="placeBirth" type="text"/>
   <field name="placeDeath" type="text"/>
   <field name="predecessor_display_mv" type="texts"/>
-  <field name="predecessor_id_mv" type="texts"/>
+  <field name="predecessor_id_mv" type="strings"/>
   <field name="provenance" type="boolean"/>
   <field name="publicationHistory" type="text"/>
   <field name="publisher_display_mv" type="texts"/>
-  <field name="publisher_id_mv" type="texts"/>
+  <field name="publisher_id_mv" type="strings"/>
   <field name="publisherOriginal_text_mv" type="texts"/>
   <field name="publisherOriginal_type_mv" type="texts"/>
   <field name="publisherOriginalLocation_mv" type="texts"/>
   <field name="reference_text_mv" type="texts"/>
   <field name="reference_type_mv" type="texts"/>
   <field name="relation_display_mv" type="texts"/>
-  <field name="relation_id_mv" type="texts"/>
+  <field name="relation_id_mv" type="strings"/>
   <field name="relation_type_mv" type="texts"/>
   <field name="licenseNote" type="text"/>
   <field name="schemaVersion" type="string"/>
@@ -336,7 +336,7 @@
   <field name="scholarlyPublication_text_mv" type="texts"/>
   <field name="scholarlyPublication_type_mv" type="texts"/>
   <field name="seeAlso_display_mv" type="texts"/>
-  <field name="seeAlso_id_mv" type="texts"/>
+  <field name="seeAlso_id_mv" type="strings"/>
   <field name="sequence_mv" type="texts"/>
   <field name="sortingKey" type="text"/>
   <field name="sortingKeySub" type="text"/>
@@ -351,16 +351,16 @@
   <field name="statusPreservation" type="text"/>
   <field name="storageArea" type="text"/>
   <field name="subject_display_mv" type="texts"/>
-  <field name="subject_id_mv" type="texts"/>
+  <field name="subject_id_mv" type="strings"/>
   <field name="subject_type_mv" type="texts"/>
   <field name="subjectLocation_comment_mv" type="texts"/>
   <field name="subjectLocation_display_mv" type="texts"/>
-  <field name="subjectLocation_id_mv" type="texts"/>
+  <field name="subjectLocation_id_mv" type="strings"/>
   <field name="subjectLocation_type_mv" type="texts"/>
   <field name="subjectOther_mv" type="texts"/>
   <field name="subseries" type="text"/>
   <field name="successor_display_mv" type="texts"/>
-  <field name="successor_id_mv" type="texts"/>
+  <field name="successor_id_mv" type="strings"/>
   <field name="textualHolding_mv" type="texts"/>
   <field name="thumbnail" type="text"/>
   <field name="title" type="text"/>
@@ -384,19 +384,19 @@
   <field name="usageRestriction" type="text"/>
   <field name="usageRestrictionComment" type="text"/>
   <field name="usedFor_display_mv" type="texts"/>
-  <field name="usedFor_id_mv" type="texts"/>
+  <field name="usedFor_id_mv" type="strings"/>
   <field name="useTerm_display_mv" type="texts"/>
-  <field name="useTerm_id_mv" type="texts"/>
-  <field name="vendor_id_mv" type="texts"/>
+  <field name="useTerm_id_mv" type="strings"/>
+  <field name="vendor_id_mv" type="strings"/>
   <field name="vendor_type_mv" type="texts"/>
   <field name="virtualRecording" type="text"/>
   <field name="website_description_mv" type="texts"/>
   <field name="website_url_mv" type="texts"/>
   <field name="work_display_mv" type="texts"/>
-  <field name="work_id_mv" type="texts"/>
+  <field name="work_id_mv" type="strings"/>
   <field name="workAbout_display_mv" type="texts"/>
-  <field name="workAbout_id_mv" type="texts"/>
+  <field name="workAbout_id_mv" type="strings"/>
   <field name="workAbout_titleOther_text_mv" type="texts"/>
   <field name="workCompilation_display_mv" type="texts"/>
-  <field name="workCompilation_id_mv" type="texts"/>
+  <field name="workCompilation_id_mv" type="strings"/>
 </schema>
