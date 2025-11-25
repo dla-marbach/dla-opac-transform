@@ -187,5 +187,5 @@ tasks:
   install_solr:
     cmds:
       - mkdir -p solr
-      - wget -q --show-progress -O solr.tgz https://www.apache.org/dyn/closer.lua/solr/solr/9.8.1/solr-9.8.1-slim.tgz?action=download
+      - wget -q --show-progress -O solr.tgz https://github.com/apache/solr/archive/refs/tags/releases/solr/9.8.1.tar.gz
       - tar -xzf solr.tgz -C solr --strip 1 && rm solr.tgz
