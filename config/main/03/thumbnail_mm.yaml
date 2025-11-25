@@ -51,6 +51,40 @@
         )
       )
     )
+# Goobi mit Goobi-Interface /viewer/fullscreen/
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: text
+      columnName: hyperlink
+      query: "^https:\\/\\/digital.dla-marbach.de\\/viewer\\/fullscreen\\/"
+      mode: regex
+    mode: row-based
+  columnName: thumbnail
+  # ObjId = rechts neben "/fullscreen/" und vor dem nächsten "/"
+  # ObjFile = URL-Parameter media_thumbnail, Default: ObjId + '_0001.tif'
+  # Pfad bilden mit "https://digital.dla-marbach.de/viewer/api/v1/records/" + ObjId + "/files/images/" + ObjFile + "/full/!480,480/0/default.jpg"
+  expression: |
+    grel:
+    with(
+      cells['hyperlink'].value.partition('/fullscreen/')[2].split('/')[0],
+      ObjId,
+      with(
+        forNonBlank(
+          cells['hyperlink'].value.find(/[?&]media_thumbnail=[^?&]+/)[0].split('=')[1],
+          x,
+          x,
+          ObjId + '_0001.tif'
+        ),
+        ObjFile,
+        forNonBlank(
+          "https://digital.dla-marbach.de/viewer/api/v1/records/" + ObjId + "/files/images/" + ObjFile + "/full/!480,480/0/default.jpg",
+          x,
+          x,
+          null
+        )
+      )
+    )
 # Goobi IIIF für Inline-Anzeige /viewer/api/
 - op: core/text-transform
   engineConfig:
