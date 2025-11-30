@@ -19,7 +19,12 @@
             v,
             if(
               v == 'creator',
-              cells['personBy_display_mv'].value.split('␟')[i],
+              forNonBlank(
+                cells['personBy_display_mv'].value.split('␟')[i],
+                y,
+                y,
+                null
+              ),
               null
             )
           ).join('␟'),
@@ -34,7 +39,12 @@
             v,
             if(
               v == 'creator',
-              cells['corporationBy_display_mv'].value.split('␟')[i],
+              forNonBlank(
+                cells['corporationBy_display_mv'].value.split('␟')[i],
+                y,
+                y,
+                null
+              ),
               null
             )
           ).join('␟'),
@@ -49,7 +59,12 @@
             v,
             if(
               v == 'creator',
-              cells['corporationByConference_display_mv'].value.split('␟')[i],
+              forNonBlank(
+                cells['corporationByConference_display_mv'].value.split('␟')[i],
+                y,
+                y,
+                null
+              ),
               null
             )
           ).join('␟'),
@@ -64,7 +79,12 @@
             v,
             if(
               v == 'creator',
-              cells['corporationByTerritory_display_mv'].value.split('␟')[i],
+              forNonBlank(
+                cells['corporationByTerritory_display_mv'].value.split('␟')[i],
+                y,
+                y,
+                null
+              ),
               null
             )
           ).join('␟'),
