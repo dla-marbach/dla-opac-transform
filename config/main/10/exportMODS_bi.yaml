@@ -199,7 +199,7 @@
 
     forNonBlank(
       forNonBlank(cells['dimension_height_mv'].value.split('␟')[0], v,
-        '    <form type="format">' + v.escape('xml') + forNonBlank(cells['dimension_width_mv'].value.split('␟')[0], v, ' x ' + v, '') + '</form>' + '\n'
+        '    <form type="format">' + v.escape('xml') + forNonBlank(cells['dimension_width_mv'].value.split('␟')[0].replace('␣',''), v, ' x ' + v, '') + '</form>' + '\n'
       , '') +
       forNonBlank(cells['material'].value, v,
         '    <form type="material">' + v.escape('xml') + '</form>' + '\n'
