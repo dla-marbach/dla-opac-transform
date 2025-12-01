@@ -83,6 +83,21 @@ for (source, field), stat in all_stats.items():
     row["unique_items"] = stat["unique_items"]
     row["most_frequent_value"] = stat["most_frequent_value"]
 
+# Leere Statistik-Spalten für Felder ohne Statistik
+for row in rows:
+    key = (row.get("source"), row.get("field"))
+    if key not in all_stats:
+        for stat_col in ["count", "percent", "unique_items", "most_frequent_value"]:
+            row[stat_col] = "???"
+
+# Sortiere die Ausgabe nach source und field, wobei _ vor A-Z kommt
+def sort_key(row):
+    # Ersetze _ durch Leerzeichen für die Sortierung
+    field = row.get("field", "").replace("_", " ")
+    return (row.get("source", ""), field)
+
+rows.sort(key=sort_key)
+
 with open(internformat_path, "w", encoding="utf-8", newline="") as f:
     writer = csv.DictWriter(f, fieldnames=fieldnames)
     writer.writeheader()
