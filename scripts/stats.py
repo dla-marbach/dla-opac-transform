@@ -1,4 +1,3 @@
-
 import json
 import sys
 import os
@@ -20,8 +19,11 @@ def process_file(filename):
     total = 0
     with open(filename, "r", encoding="utf-8") as f:
         for line in f:
-            total += 1
             obj = json.loads(line)
+            # Datensätze mit confidential: true überspringen
+            if obj.get("confidential") is True:
+                continue
+            total += 1
             for key, value in obj.items():
                 field_count[key] += 1
                 # Einzelwerte aus Arrays für distinct zählen, aber top zählt Arrays als Ganzes
