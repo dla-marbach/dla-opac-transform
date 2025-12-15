@@ -65,29 +65,30 @@ task yaml
 3. OpenRefine Transformationsregeln ergänzen in [config/main](config/main).
     * Dazu ggf. orcli im interaktiven Modus starten mit `task dev`
     * JSON aus OpenRefine-History [in YAML konvertieren](https://onlineyamltools.com/convert-json-to-yaml)
-4. Daten generieren
+4. Daten generieren und Indexierung testen
     ```sh
-    task main yaml
+    task main yaml solr
     ```
 5. Ergebnisse prüfen mit git diff
     ```sh
     git diff example/output/*.yaml
     git diff -U0 --word-diff-regex='[^,]+' --word-diff=porcelain example/output/*.jsonl
     ```
-6. Indexierung in Solr testen
-    ```sh
-    task solr
-    ```
-7. Bei Änderung an exportDC oder exportMODS Daten validieren
+6. Bei Änderung an exportDC oder exportMODS Daten validieren
    ```sh
    task validate
    ```
-8. Dokumentation in [docs/internformat.csv](docs/internformat.csv)
-9. Solr [Konfiguration](config/solr/solrconfig.xml): Standardwert für Feldliste (fl) anpassen
+7. Dokumentation in [docs/internformat.csv](docs/internformat.csv)
+8. Solr [Konfiguration](config/solr/solrconfig.xml): Standardwert für Feldliste (fl) anpassen
    ```sh
    tail -n +2 docs/internformat.csv | cut -d , -f 2 | sort | uniq | grep -v 'export' | grep -v 'confidential' | head -c -1 | tr '\n' , | sed 's/,/, /g'
    ```
+9. Git commit und push
 10. schemaVersion in [scripts/main.sh](scripts/main.sh) hochzählen
-11. Git Commit und Push
-12. GitHub [Release Notes](https://github.com/dla-marbach/dla-opac-transform/releases)
-13. Konfiguration des Solr auf Produktivsystem aktualisieren
+11. Erneut Daten generieren
+    ```sh
+    task main yaml
+    ```
+12. Erneut Git commit und push
+13. GitHub [Release Notes](https://github.com/dla-marbach/dla-opac-transform/releases)
+14. Konfiguration des Solr auf Produktivsystem aktualisieren
