@@ -203,8 +203,19 @@
   <field name="isbn_mv" type="strings"/>
   <field name="ismn_mv" type="strings"/>
   <field name="issn_mv" type="strings"/>
+  <field name="item_accessionNumber_mv" type="strings"/>
+  <field name="item_broadcastDate_mv" type="dateranges"/>
+  <field name="item_broadcastStation_mv" type="texts"/>
+  <field name="item_callNumberCollection_mv" type="texts"/>
+  <field name="item_callNumberItem_mv" type="strings"/>
+  <field name="item_callNumberItemSuffix_mv" type="strings"/>
+  <field name="item_callNumberReadingRoom_mv" type="strings"/>
+  <field name="item_classification_display_mv" type="texts"/>
+  <field name="item_classification_id_mv" type="strings"/>
   <field name="item_collection_display_mv" type="texts"/>
   <field name="item_collection_id_mv" type="strings"/>
+  <field name="item_corporationAt_display_mv" type="texts"/>
+  <field name="item_corporationAt_id_mv" type="strings"/>
   <field name="item_digitalObject_accessLevel_mv" type="strings"/>
   <field name="item_digitalObject_display_mv" type="texts"/>
   <field name="item_digitalObject_fileExtension_mv" type="strings"/>
@@ -214,9 +225,19 @@
   <field name="item_digitalObject_licenseNote_mv" type="texts"/>
   <field name="item_digitalObject_thumbnail_mv" type="strings"/>
   <field name="item_display_mv" type="texts"/>
+  <field name="item_enveloped_mv" type="booleans"/>
+  <field name="item_gndRelation_text_mv" type="texts"/>
+  <field name="item_gndRelation_type_mv" type="strings"/>
   <field name="item_id_mv" type="strings"/>
+  <field name="item_location_mv" type="texts"/>
   <field name="item_manifestation_display_mv" type="texts"/>
   <field name="item_manifestation_id_mv" type="strings"/>
+  <field name="item_noteOther_mv" type="texts"/>
+  <field name="item_personAt_display_mv" type="texts"/>
+  <field name="item_personAt_id_mv" type="strings"/>
+  <field name="item_provenance_mv" type="booleans"/>
+  <field name="item_usageRestriction_mv" type="texts"/>
+  <field name="item_virtualRecording_mv" type="texts"/>
   <field name="itemization_extent_mv" type="strings"/>
   <field name="itemization_status_mv" type="strings"/>
   <field name="itemization_unit_mv" type="strings"/>

@@ -92,18 +92,39 @@ AK,inventoryMissing,text,,22,0 %,22,"2.1921,12-14"
 AK,isbn_mv,strings,,275289,15 %,288533,"['3-598-50924-3', '3-598-50017-3', '3-598-50050-5', '3-598-50055-6']"
 AK,ismn_mv,strings,,176,0 %,185,['979-0-3522-1381-4']
 AK,issn_mv,strings,,7311,0 %,7359,['0931-7961']
-AK,item_collection_display_mv,texts,Mehrere verknüpfte Bestände getrennt mit ␝ (U+241D),125537,7 %,413,"['G:Wolfskehl, Karl (Virtuelle Bibliothek Kiechlinsbergen 1937) - [Geschlossener Bestand der Bibliothek, Nachlass]␝G:Wolfskehl, Karl (Virtuelle Rekonstruktion des Buchbesitzes) - [Geschlossener Bestand der Bibliothek, Nachlass]']"
-AK,item_collection_id_mv,strings,Mehrere verknüpfte Bestände getrennt mit ␝ (U+241D),125537,7 %,413,['BF00042676␝BF00042464']
-AK,item_digitalObject_accessLevel_mv,strings,Mehrere verknüpfte Digitale Objekte getrennt mit ␝ (U+241D),50,0 %,4,['public']
-AK,item_digitalObject_display_mv,texts,Mehrere verknüpfte Digitale Objekte getrennt mit ␝ (U+241D),50,0 %,5,['Digitalisat: Zugang']
-AK,item_digitalObject_fileExtension_mv,strings,Mehrere verknüpfte Digitale Objekte getrennt mit ␝ (U+241D),2,0 %,2,"['pdf', '␣', '␣', '␣', '␣']"
-AK,item_digitalObject_hyperlink_mv,strings,Mehrere verknüpfte Digitale Objekte getrennt mit ␝ (U+241D),50,0 %,50,"['https://digital.dla-marbach.de/viewer/image/AU00380415/?media_access=public', '␣']"
-AK,item_digitalObject_id_mv,strings,Mehrere verknüpfte Digitale Objekte getrennt mit ␝ (U+241D),50,0 %,50,"['MM01562698', '␣']"
-AK,item_digitalObject_license_mv,strings,Mehrere verknüpfte Digitale Objekte getrennt mit ␝ (U+241D),21,0 %,2,['CC0']
-AK,item_digitalObject_licenseNote_mv,texts,Mehrere verknüpfte Digitale Objekte getrennt mit ␝ (U+241D),???,???,???,???
-AK,item_digitalObject_thumbnail_mv,strings,Mehrere verknüpfte Digitale Objekte getrennt mit ␝ (U+241D),47,0 %,47,"['https://digital.dla-marbach.de/viewer/api/v1/records/AU00380415/files/images/AU00380415_0001.tif/full/!480,480/0/default.jpg', '␣']"
+AK,item_accessionNumber_mv,strings,aus AU accessionNumber,,,,
+AK,item_broadcastDate_mv,dateranges,aus AU broadcastDate,,,,
+AK,item_broadcastStation_mv,texts,aus AU broadcastStation,,,,
+AK,item_callNumberCollection_mv,texts,aus AU callNumberCollection_mv getrennt mit ␝ (U+241D),,,,
+AK,item_callNumberItem_mv,strings,aus AU callNumberItem,,,,
+AK,item_callNumberItemSuffix_mv,strings,aus AU callNumberItemSuffix,,,,
+AK,item_callNumberReadingRoom_mv,strings,aus AU callNumberReadingRoom,,,,
+AK,item_classification_display_mv,texts,aus AU classification_display_mv getrennt mit ␝ (U+241D),,,,
+AK,item_classification_id_mv,strings,aus AU classification_id_mv getrennt mit ␝ (U+241D),,,,
+AK,item_collection_display_mv,texts,aus AU collection_display_mv getrennt mit ␝ (U+241D),125537,7 %,413,"['G:Wolfskehl, Karl (Virtuelle Bibliothek Kiechlinsbergen 1937) - [Geschlossener Bestand der Bibliothek, Nachlass]␝G:Wolfskehl, Karl (Virtuelle Rekonstruktion des Buchbesitzes) - [Geschlossener Bestand der Bibliothek, Nachlass]']"
+AK,item_collection_id_mv,strings,aus AU collection_id_mv getrennt mit ␝ (U+241D),125537,7 %,413,['BF00042676␝BF00042464']
+AK,item_corporationAt_display_mv,texts,aus AU corporationAt_display_mv getrennt mit ␝ (U+241D),,,,
+AK,item_corporationAt_id_mv,strings,aus AU corporationAt_id_mv getrennt mit ␝ (U+241D),,,,
+AK,item_digitalObject_accessLevel_mv,strings,aus AU digitalObject_accessLevel_mv getrennt mit ␝ (U+241D),50,0 %,4,['public']
+AK,item_digitalObject_display_mv,texts,aus AU digitalObject_display_mv getrennt mit ␝ (U+241D),50,0 %,5,['Digitalisat: Zugang']
+AK,item_digitalObject_fileExtension_mv,strings,aus AU digitalObject_fileExtension_mv getrennt mit ␝ (U+241D),2,0 %,2,"['pdf', '␣', '␣', '␣', '␣']"
+AK,item_digitalObject_hyperlink_mv,strings,aus AU digitalObject_hyperlink_mv getrennt mit ␝ (U+241D),50,0 %,50,"['https://digital.dla-marbach.de/viewer/image/AU00380415/?media_access=public', '␣']"
+AK,item_digitalObject_id_mv,strings,aus AU digitalObject_id_mv getrennt mit ␝ (U+241D),50,0 %,50,"['MM01562698', '␣']"
+AK,item_digitalObject_license_mv,strings,aus AU digitalObject_license_mv getrennt mit ␝ (U+241D),21,0 %,2,['CC0']
+AK,item_digitalObject_licenseNote_mv,texts,aus AU digitalObject_licenseNote_mv getrennt mit ␝ (U+241D),???,???,???,???
+AK,item_digitalObject_thumbnail_mv,strings,aus AU digitalObject_thumbnail_mv getrennt mit ␝ (U+241D),47,0 %,47,"['https://digital.dla-marbach.de/viewer/api/v1/records/AU00380415/files/images/AU00380415_0001.tif/full/!480,480/0/default.jpg', '␣']"
 AK,item_display_mv,texts,aus AU display,867733,49 %,60740,['ohne Titel']
+AK,item_enveloped_mv,booleans,aus AU enveloped,,,,
+AK,item_gndRelation_text_mv,texts,aus AU gndRelation_text_mv getrennt mit ␝ (U+241D),,,,
+AK,item_gndRelation_type_mv,strings,aus AU gndRelation_type_mv getrennt mit ␝ (U+241D),,,,
 AK,item_id_mv,strings,,867733,49 %,942818,"['AU00174658', 'AU00484412']"
+AK,item_location_mv,texts,aus AU location_mv getrennt mit ␝ (U+241D),,,,
+AK,item_noteOther_mv,texts,aus AU noteOther_mv getrennt mit ␝ (U+241D),,,,
+AK,item_personAt_display_mv,texts,aus AU personAt_display_mv getrennt mit ␝ (U+241D),,,,
+AK,item_personAt_id_mv,strings,aus AU personAt_id_mv getrennt mit ␝ (U+241D),,,,
+AK,item_provenance_mv,booleans,aus AU provenance_mv,,,,
+AK,item_usageRestriction_mv,texts,aus AU usageRestriction_mv,,,,
+AK,item_virtualRecording_mv,texts,aus AU virtualRecording_mv getrennt mit ␝ (U+241D),,,,
 AK,journalIssue_display_mv,texts,aus AK display,3235,0 %,684,"Hesperus : encyclopädische Zeitschrift für gebildete Leser. - (1816), H.1-5 = Nr.1-30 [Jg.unvollst.]"
 AK,journalIssue_id_mv,strings,,3235,0 %,684,AK00124565
 AK,language_mv,texts,,886203,50 %,178,['Deutsch']

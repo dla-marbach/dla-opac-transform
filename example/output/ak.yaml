@@ -674,16 +674,35 @@ ismn_mv:
 issn_mv:
   - ISSN 1
   - ISSN 2
+item_broadcastDate_mv: "2023"
+item_broadcastStation_mv: Sendeanstalt
+item_callNumberCollection_mv: Bestandssignatur 1␝Bestandssignatur 2
+item_callNumberItemSuffix_mv: Exemplarsignaturzusatz
+item_callNumberItem_mv: Exemplarsignatur
+item_callNumberReadingRoom_mv: Lesesaalsignatur
+item_classification_display_mv:
+  - Sacherschließungskette 1␝Sacherschließungskette 2␝␣
+item_classification_id_mv:
+  - SE00000001␝SE00000002␝SE99999999
 item_collection_display_mv: Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]␝Z:Öffentlicher Bestand 2␝␣
 item_collection_id_mv: BF00000001␝BF00000002␝BF99999999
+item_corporationAt_display_mv: Körperschaft 1 (1982)␝Körperschaft 2␝␣
+item_corporationAt_id_mv: KS00000001␝KS00000002␝KS99999999
 item_digitalObject_accessLevel_mv: Zugriffsstufe␝␣
 item_digitalObject_display_mv: Multimedia 1␝Multimedia 2
 item_digitalObject_id_mv: MM00000001␝MM00000002
 item_digitalObject_licenseNote_mv: 'Creative Commons 10th Birthday Celebration San Francisco / Timothy Vollmer / CC BY 4.0. Quelle: http://www.flickr.com/photos/sixteenmilesofstring/8256206923/in/set-72157632200936657␝␣'
 item_display_mv:
   - Öffentliches Exemplar
+item_enveloped_mv: "true"
 item_id_mv:
   - AU00000001
+item_location_mv: Standort
+item_noteOther_mv: Bemerkung
+item_personAt_display_mv: Person 1 (1982–2001)␝Person 2 (1982–2001)␝␣
+item_personAt_id_mv: PE00000001␝PE00000002␝PE99999999
+item_provenance_mv: "true"
+item_usageRestriction_mv: Benutzungsbeschränkung
 journalIssue_display_mv:
   - Zeitschriftenheft 1
   - Zeitschriftenheft 2
@@ -1533,6 +1552,7 @@ filterSource: Bibliotheksmaterialien
 filterType: Gedrucktes
 item_display_mv:
   - Buchumschlag
+item_enveloped_mv: "true"
 item_id_mv:
   - AU00000005
 noteContent_mv:
@@ -1633,10 +1653,14 @@ filterAuthority_mv:
   - Körperschaft 7
 filterSource: Bibliotheksmaterialien
 filterType: Sonstiges
+item_corporationAt_display_mv: Körperschaft 7
+item_corporationAt_id_mv: KS00000007
 item_display_mv:
   - Facette Personen und Körperschaften
 item_id_mv:
   - AU00000011
+item_personAt_display_mv: Person 7
+item_personAt_id_mv: PE00000007
 personBy_display_mv:
   - Person 1 (1982–2001)
 personBy_id_mv:
@@ -1965,6 +1989,12 @@ filterLocation_mv:
   - Thesaurus-Begriff 1
 filterSource: Bibliotheksmaterialien
 filterType: Sonstiges
+item_classification_display_mv:
+  - Facette Personen und Körperschaften / Provenienzketten / An
+  - Facette Personen und Körperschaften / Provenienzketten / Unter / nicht bestimmt␝Facette Personen und Körperschaften / Provenienzketten / Unter / Bestandsbildner/Vorbesitzer
+item_classification_id_mv:
+  - SE00000013
+  - SE00000014␝SE00000015
 item_display_mv:
   - Facette Personen und Körperschaften / Provenienzketten / An
   - Facette Personen und Körperschaften / Provenienzketten / Unter
@@ -2139,6 +2169,7 @@ filterDateRange_mv:
   - "1982-05-22"
 filterSource: Bibliotheksmaterialien
 filterType: Sonstiges
+item_broadcastDate_mv: "1982-05-22"
 item_display_mv:
   - 'Facette Zeit: Sendedatum'
 item_id_mv:
@@ -2187,6 +2218,10 @@ filterDateRange_mv:
   - "1999"
 filterSource: Bibliotheksmaterialien
 filterType: Sonstiges
+item_classification_display_mv:
+  - 'Facette Zeit: Provenienzketten'
+item_classification_id_mv:
+  - SE00000021
 item_display_mv:
   - 'Facette Zeit: Provenienzketten'
 item_id_mv:

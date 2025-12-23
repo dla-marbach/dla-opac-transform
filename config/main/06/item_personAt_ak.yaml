@@ -1,0 +1,58 @@
+# Verknüpfte Personen UNTER ermittelt über zugehörige Exemplare
+# synchron zu item_id_mv, mehrere verknüpfte Informationen getrennt mit ␝ (U+241D)
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.cross('au','manifestation_id'),
+        r,
+        forNonBlank(
+          r.cells['personAt_id_mv'].value,
+          x,
+          x.replace('␟','␝'),
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(x.replace(/␟|␝|␣/,'')),
+        x,
+        null
+      ),
+      null
+    )
+  newColumnName: item_personAt_id_mv
+  columnInsertIndex: 2
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.cross('au','manifestation_id'),
+        r,
+        forNonBlank(
+          r.cells['personAt_display_mv'].value,
+          x,
+          x.replace('␟','␝'),
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(x.replace(/␟|␝|␣/,'')),
+        x,
+        null
+      ),
+      null
+    )
+  newColumnName: item_personAt_display_mv
+  columnInsertIndex: 2
