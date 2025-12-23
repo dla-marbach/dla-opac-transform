@@ -1,3 +1,60 @@
+# Verknüpfte Bestandsdatensätze ermittelt über zugehörige Exemplare
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.cross('au','manifestation_id'),
+        r,
+        forNonBlank(
+          r.cells['collection_id_mv'].value,
+          x,
+          x.replace('␟','␝'),
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(x.replace(/␟|␝|␣/,'')),
+        x,
+        null
+      ),
+      null
+    )
+  newColumnName: item_collection_id_mv
+  columnInsertIndex: 2
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.cross('au','manifestation_id'),
+        r,
+        forNonBlank(
+          r.cells['collection_display_mv'].value,
+          x,
+          x.replace('␟','␝'),
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(x.replace(/␟|␝|␣/,'')),
+        x,
+        null
+      ),
+      null
+    )
+  newColumnName: item_collection_display_mv
+  columnInsertIndex: 2
 # Verknüpfte Digitale Objekte ermittelt über zugehörige Exemplare
 - op: core/column-addition
   engineConfig:
