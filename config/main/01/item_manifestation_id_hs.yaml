@@ -12,7 +12,7 @@
         forNonBlank(
           v.cross('au','id')[0].cells['manifestation_id'].value,
           x,
-          x.replace('␟','\n'),
+          x,
           '␣')
       ).join('␟'),
       x,
