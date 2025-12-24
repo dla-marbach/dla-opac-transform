@@ -12,7 +12,7 @@
         value.cross('au','manifestation_id'),
         r,
         forNonBlank(
-          r.cells['virtualRecording_mv'].value,
+          r.cells['virtualRecording'].value,
           x,
           x.replace('␟','␝'),
           '␣'

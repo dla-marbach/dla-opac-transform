@@ -11,7 +11,7 @@
         value.cross('au','manifestation_id'),
         r,
         forNonBlank(
-          r.cells['gndRelation_text_mv'].value,
+          r.cells['noteProvenance_text_mv'].value,
           x,
           x.replace('␟','␝'),
           '␣'
@@ -25,7 +25,7 @@
       ),
       null
     )
-  newColumnName: item_gndRelation_text_mv
+  newColumnName: item_noteProvenance_text_mv
   columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:
@@ -39,7 +39,7 @@
         value.cross('au','manifestation_id'),
         r,
         forNonBlank(
-          r.cells['gndRelation_type_mv'].value,
+          r.cells['noteProvenance_type_mv'].value,
           x,
           x.replace('␟','␝'),
           '␣'
@@ -53,5 +53,5 @@
       ),
       null
     )
-  newColumnName: item_gndRelation_type_mv
+  newColumnName: item_noteProvenance_type_mv
   columnInsertIndex: 2
