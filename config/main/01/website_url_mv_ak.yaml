@@ -6,10 +6,8 @@
   expression: |
     grel:
     forNonBlank(
-      value,
-      x,
       forEach(
-        x.split('␟'),
+        value.split('␟'),
         v,
         if(
           isError(parseUri(v)),
@@ -17,5 +15,11 @@
           v
         )
       ).join('␟'),
+      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
