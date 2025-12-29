@@ -17,7 +17,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: classification_display_mv
@@ -40,7 +44,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: corporationAbout_display_mv
@@ -63,7 +71,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: corporationBy_display_mv
@@ -86,7 +98,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: corporationByConference_display_mv
@@ -109,7 +125,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: corporationByTerritory_display_mv
@@ -132,7 +152,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: digitalObject_display_mv
@@ -155,7 +179,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: item_display_mv
@@ -178,7 +206,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: journalIssue_display_mv
@@ -201,7 +233,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: parent_display_mv
@@ -224,7 +260,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: personAbout_display_mv
@@ -247,7 +287,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: personBy_display_mv
@@ -270,7 +314,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: publisher_display_mv
@@ -293,7 +341,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: relation_display_mv
@@ -316,7 +368,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: subject_display_mv
@@ -339,7 +395,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: work_display_mv
@@ -362,7 +422,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: workAbout_display_mv
@@ -385,7 +449,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: workCompilation_display_mv

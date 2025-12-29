@@ -16,7 +16,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: item_manifestation_id_mv

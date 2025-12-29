@@ -17,7 +17,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: child_display_mv
@@ -40,7 +44,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: parent_display_mv
@@ -63,7 +71,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: seeAlso_display_mv

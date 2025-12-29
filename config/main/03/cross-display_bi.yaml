@@ -9,7 +9,11 @@
     forNonBlank(
       value.cross('be','id')[0].cells['display'].value,
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: accession_display
@@ -32,7 +36,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: corporationAbout_display_mv
@@ -55,7 +63,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: corporationAt_display_mv
@@ -78,7 +90,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: corporationBy_display_mv
@@ -101,7 +117,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: corporationTo_display_mv
@@ -124,7 +144,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: digitalObject_display_mv
@@ -147,7 +171,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: collection_display_mv
@@ -170,7 +198,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: item_display_mv
@@ -193,7 +225,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: item_manifestation_display_mv
@@ -216,7 +252,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: library_display_mv
@@ -239,7 +279,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: manuscript_display_mv
@@ -262,7 +306,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: parent_display_mv
@@ -285,7 +333,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: personAbout_display_mv
@@ -308,7 +360,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: personAt_display_mv
@@ -331,7 +387,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: personBy_display_mv
@@ -354,7 +414,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: personTo_display_mv
@@ -377,7 +441,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: relation_display_mv
@@ -400,7 +468,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: subject_display_mv
@@ -423,7 +495,11 @@
           '␣')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: subjectLocation_display_mv

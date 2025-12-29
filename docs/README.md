@@ -36,7 +36,7 @@ Felder mit Suffix `_mv` können mehrere Werte enthalten.
 * Im Ausgabeformat JSON- bzw. JSONL werden diese Felder als Array kodiert.
 * Im Ausgabeformat CSV und während der Datenverarbeitung wird als temporäres Trennzeichen `␟` (Symbol For Unit Separator, [U+241F](https://www.unicode.org/charts/PDF/U2400.pdf)) verwendet.
 
-Beziehungen zwischen Feldern mit synchron mehrfachbelegten Werten werden mit einem Unterstrich `_` dargestellt. Als Platzhalterzeichen wird `␣` (Open Box, [U+2423](https://www.unicode.org/charts/PDF/U2400.pdf)) verwendet. Beispiel:
+Beziehungen zwischen Feldern mit synchron mehrfachbelegten Werten werden mit einem Unterstrich `_` dargestellt. Als Platzhalterzeichen wird `␣` (Open Box, [U+2423](https://www.unicode.org/charts/PDF/U2400.pdf)) verwendet wenn mindestens ein valider Wert vorhanden ist. Beispiel:
 * personBy_id:
   * 0: `PE00000001`
   * 1: `PE00000002`

@@ -17,7 +17,11 @@
         v.cells['noteFootnote_text_mv'].value.split('␟').slice(1).join('␟')
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
   newColumnName: textualHolding_mv
