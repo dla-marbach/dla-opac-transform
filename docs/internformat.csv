@@ -78,10 +78,10 @@ AK,filterSubject_mv,strings,Facette Thema,736672,41 %,103408,['Kunst / Einzelne 
 AK,filterType,string,Facette Medientyp,1788385,100 %,6,Gedrucktes
 AK,genreOther_mv,texts,,397967,22 %,376,['Erzählende Prosa']
 AK,gnd_id_mv,strings,GND-Nummer für Werktitel extrahiert aus vendor_id_mv / vendor_type_mv,46410,3 %,46393,['1160211973']
-AK,gndRelation_comment_mv,texts,,16554,1 %,126,['Bezug: Enthalten in']
-AK,gndRelation_id_mv,strings,,18831,1 %,11360,['1131883292']
-AK,gndRelation_text_mv,texts,,18736,1 %,11692,"['Kirsch, Sarah <1935-2013>. Schwanenliebe (Zusammenstellung : 2001)']"
-AK,gndRelation_type_mv,strings,,18861,1 %,41,['Werk: Werk']
+AK,relation_comment_mv,texts,,16554,1 %,126,['Bezug: Enthalten in']
+AK,relation_id_mv,strings,,18831,1 %,11360,['1131883292']
+AK,relation_text_mv,texts,,18736,1 %,11692,"['Kirsch, Sarah <1935-2013>. Schwanenliebe (Zusammenstellung : 2001)']"
+AK,relation_type_mv,strings,,18861,1 %,41,['Werk: Werk']
 AK,headword_mv,texts,,38639,2 %,27176,['sämtliche']
 AK,id,string,,1788385,100 %,1788385,AK00371511
 AK,identifier_id_mv,strings,,1025748,57 %,1631042,"['00,L01']"
@@ -175,9 +175,9 @@ AK,publisherOriginal_type_mv,strings,,703282,39 %,10,['v']
 AK,publisherOriginalLocation_mv,texts,,627860,35 %,23532,['Berlin']
 AK,reference_text_mv,texts,,25000,1 %,6684,['DNB']
 AK,reference_type_mv,strings,,25029,1 %,7,['positiv']
-AK,relation_display_mv,texts,aus AK display,29655,2 %,23853,['Neue deutsche Literatur : ndl ; Zeitschrift für deutschsprachige Literatur und Kritik']
-AK,relation_id_mv,strings,,29655,2 %,24148,['AK00003223']
-AK,relation_type_mv,strings,,29653,2 %,47,['Bezug: Rezension von']
+AK,relationManifestation_display_mv,texts,aus AK display,29655,2 %,23853,['Neue deutsche Literatur : ndl ; Zeitschrift für deutschsprachige Literatur und Kritik']
+AK,relationManifestation_id_mv,strings,,29655,2 %,24148,['AK00003223']
+AK,relationManifestation_type_mv,strings,,29653,2 %,47,['Bezug: Rezension von']
 AK,schemaVersion,string,,1788385,100 %,1,0.9.1
 AK,scholarlyPublication_date_mv,texts,,3200,0 %,143,['2017']
 AK,scholarlyPublication_location_mv,texts,,21755,1 %,822,['München']
@@ -461,8 +461,6 @@ BI,personTo_display_mv,texts,aus PE display,1062,3 %,487,['Unbekannt']
 BI,personTo_id_mv,strings,,1062,3 %,487,['PE00250583']
 BI,photoNegativeNumber_mv,strings,,22217,73 %,29643,['M3109-0']
 BI,reference_text_mv,texts,,3304,11 %,2655,"Nicolin, Günther: Kunst zu Kafka. Bonn: bücherstube am theater 1974. S. 29."
-BI,relation_display_mv,texts,aus AK display,958,3 %,831,"['Lessing, Gotthold Ephraim (1729-1781). Nathan der Weise (Drama : 1779)']"
-BI,relation_id_mv,strings,,958,3 %,831,['AK00000425']
 BI,schemaVersion,string,,30396,100 %,1,0.9.1
 BI,source,string,,30396,100 %,1,BI
 BI,statusEditing,string,,9510,31 %,3,Retrokonversion
@@ -481,6 +479,8 @@ BI,title,text,,30396,100 %,17141,Porträt Hermann Hesse
 BI,titleOriginal,text,,373,1 %,366,"""Weimars Goldene Tage"""
 BI,url,string,,30396,100 %,30396,https://www.dla-marbach.de/find/opac/id/BI00007336
 BI,usageRestriction,text,,30396,100 %,4,eingeschränkt benutzbar
+BI,work_display_mv,texts,aus AK display,958,3 %,831,"['Lessing, Gotthold Ephraim (1729-1781). Nathan der Weise (Drama : 1779)']"
+BI,work_id_mv,strings,,958,3 %,831,['AK00000425']
 HS,accession_display,text,aus BE display,650693,57 %,3023,Verlagsarchiv Suhrkamp
 HS,accession_id,string,,650693,57 %,3038,BE00005721
 HS,accessionNumber,string,,991224,87 %,405605,SU.2010.0002
@@ -577,8 +577,6 @@ HS,personTo_id_mv,strings,,823313,72 %,178986,['PE00001233']
 HS,personTo_role_mv,strings,,713926,62 %,6,['[Adressat/in]']
 HS,photoNegativeNumber_mv,strings,,1023,0 %,1303,['Mikroform benutzen']
 HS,place_mv,texts,,761250,67 %,28839,['Stuttgart']
-HS,relation_display_mv,texts,aus AK display,33026,3 %,14290,"['Piper, Reinhard (1879-1953). Vormittag (Autobiografie)']"
-HS,relation_id_mv,strings,,33026,3 %,14301,['AK00166189']
 HS,schemaVersion,string,,1142812,100 %,1,0.9.1
 HS,sortingKey,string,,1142808,100 %,245885,"SUHRKAMPVERLAG FRANKFURT, MAIN"
 HS,sortingKeySub,string,,914357,80 %,179382,"JUENGER, ERNST"
@@ -632,10 +630,10 @@ KS,filterSource,string,Facette Datenbestand,129997,100 %,1,Körperschaften
 KS,filterType,string,Facette Medientyp,129997,100 %,1,Normdaten
 KS,gnd_id_mv,strings,,58477,45 %,58311,['2099677-9']
 KS,gnd_type_mv,strings,,22455,17 %,6,['GND-Nr.']
-KS,gndRelation_comment_mv,texts,,932,1 %,905,"['␣', 'Gründer']"
-KS,gndRelation_id_mv,strings,,34426,26 %,16646,['4005728-8']
-KS,gndRelation_text_mv,texts,,34496,27 %,17174,['Berlin']
-KS,gndRelation_type_mv,strings,,34741,27 %,76,"['Sitz, Ort: Geografikum']"
+KS,relation_comment_mv,texts,,932,1 %,905,"['␣', 'Gründer']"
+KS,relation_id_mv,strings,,34426,26 %,16646,['4005728-8']
+KS,relation_text_mv,texts,,34496,27 %,17174,['Berlin']
+KS,relation_type_mv,strings,,34741,27 %,76,"['Sitz, Ort: Geografikum']"
 KS,host_display_mv,texts,aus KS display,113,0 %,119,"['Hessisches Staatstheater <Wiesbaden>', 'Staatstheater Mainz']"
 KS,host_id_mv,strings,,113,0 %,119,"['KS00011776', 'KS00113908']"
 KS,id,string,,129997,100 %,129997,KS00128296
@@ -721,10 +719,10 @@ PE,filterType,string,Facette Medientyp,578284,100 %,1,Normdaten
 PE,gender,string,,183206,32 %,3,männlich
 PE,gnd_id_mv,strings,,192388,33 %,193194,['118818260']
 PE,gnd_type_mv,strings,,192413,33 %,4,['GND-Nr.']
-PE,gndRelation_comment_mv,texts,,28460,5 %,13587,['Ehemann']
-PE,gndRelation_id_mv,strings,,136609,24 %,61668,['4053309-8']
-PE,gndRelation_text_mv,texts,,179668,31 %,88829,['Schriftsteller']
-PE,gndRelation_type_mv,strings,,179774,31 %,63,['Charakt. Beruf: Schlagwort']
+PE,relation_comment_mv,texts,,28460,5 %,13587,['Ehemann']
+PE,relation_id_mv,strings,,136609,24 %,61668,['4053309-8']
+PE,relation_text_mv,texts,,179668,31 %,88829,['Schriftsteller']
+PE,relation_type_mv,strings,,179774,31 %,63,['Charakt. Beruf: Schlagwort']
 PE,id,string,,578284,100 %,578284,PE00107819
 PE,linkCommonsImage_file_mv,strings,aus lobid-gnd depiction und Wikidata P18,41288,7 %,42804,['Sch%C3%B6nemannWolfram5.jpg']
 PE,linkCommonsImage_rights_mv,strings,aus Wikimedia Commons Artist/License,41288,7 %,19884,['Wikimedia Commons | Public domain']
@@ -831,10 +829,10 @@ TH,filterLocationType_mv,strings,Facette Ort mit Typ,1260,2 %,781,['Deutschland�
 TH,filterSource,string,Facette Datenbestand,71680,100 %,1,Orte und Sachbegriffe
 TH,filterType,string,Facette Medientyp,71680,100 %,1,Normdaten
 TH,gnd_id_mv,strings,,33614,47 %,33607,4212705-1
-TH,gndRelation_comment_mv,texts,,232,0 %,66,"['␣', '␣', '␣', 'Ort der Verleihung']"
-TH,gndRelation_id_mv,strings,,16944,24 %,16285,['4131972-2']
-TH,gndRelation_text_mv,texts,,17001,24 %,16193,['Fluss']
-TH,gndRelation_type_mv,strings,,17000,24 %,77,['Oberbegriff allgemein: Schlagwort']
+TH,relation_comment_mv,texts,,232,0 %,66,"['␣', '␣', '␣', 'Ort der Verleihung']"
+TH,relation_id_mv,strings,,16944,24 %,16285,['4131972-2']
+TH,relation_text_mv,texts,,17001,24 %,16193,['Fluss']
+TH,relation_type_mv,strings,,17000,24 %,77,['Oberbegriff allgemein: Schlagwort']
 TH,id,string,,71680,100 %,71680,TH00141155
 TH,language_mv,texts,,272,0 %,84,Deutsch
 TH,parent_display_mv,texts,aus TH display,7723,11 %,2524,['Literaturpreis']

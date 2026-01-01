@@ -40,18 +40,6 @@ filterDateRange_mv:
   - '[1982-05-23 TO 2001-01-01]'
 filterSource: Körperschaften
 filterType: Normdaten
-gndRelation_comment_mv:
-  - GND-Relation 1 Anmerkung
-  - GND-Relation 2 Anmerkung
-gndRelation_id_mv:
-  - GND-Relation 1 ID
-  - GND-Relation 2 ID
-gndRelation_text_mv:
-  - GND-Relation 1
-  - GND-Relation 2
-gndRelation_type_mv:
-  - GND-Relation 1 Typ
-  - GND-Relation 2 Typ
 gnd_id_mv:
   - GND-Nummer 1
   - GND-Nummer 2
@@ -126,6 +114,18 @@ reference_text_mv:
 reference_type_mv:
   - Quellenangabe 1 Typ
   - Quellenangabe 2 Typ
+relation_comment_mv:
+  - GND-Relation 1 Anmerkung
+  - GND-Relation 2 Anmerkung
+relation_id_mv:
+  - GND-Relation 1 ID
+  - GND-Relation 2 ID
+relation_text_mv:
+  - GND-Relation 1
+  - GND-Relation 2
+relation_type_mv:
+  - GND-Relation 1 Typ
+  - GND-Relation 2 Typ
 schemaVersion: 0.9.1
 seeAlso_display_mv:
   - Körperschaft 3
@@ -377,9 +377,9 @@ filterLocationType_mv: Berlin␝Veranstaltungsort
 filterLocation_mv: Berlin
 filterSource: Körperschaften
 filterType: Normdaten
-gndRelation_text_mv:
+relation_text_mv:
   - Berlin [u.a.]
-gndRelation_type_mv:
+relation_type_mv:
   - 'Veranstaltungsort: Geografikum'
 schemaVersion: 0.9.1
 source: KS

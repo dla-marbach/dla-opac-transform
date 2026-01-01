@@ -11,7 +11,7 @@
       [
         forNonBlank(cells['display'].value, v, v, ''),
         forNonBlank(cells['titleOriginal'].value, v, v, ''),
-        forNonBlank(cells['relation_display_mv'].value, v, v, '')
+        forNonBlank(cells['work_display_mv'].value, v, v, '')
       ].join('␟').replace('␣','').split('␟').uniques(),
       v,
       '  <dc:title>' + v.escape('xml') + '</dc:title>' + '\n'

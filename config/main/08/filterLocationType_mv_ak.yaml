@@ -56,7 +56,7 @@
         ),
         forNonBlank(
           forEachIndex(
-            cells['gndRelation_type_mv'].value.split('␟'),
+            cells['relation_type_mv'].value.split('␟'),
             i,
             v,
             if(
@@ -68,7 +68,7 @@
               ),
               forNonBlank(
                 forEach(
-                    cells['gndRelation_text_mv'].value.split('␟')[i].split(';'),
+                    cells['relation_text_mv'].value.split('␟')[i].split(';'),
                     x,
                     x.replace('ohne Ort','').replace('[u.a.]','').replace('und andere','').trim()
                 ).join('␟'),

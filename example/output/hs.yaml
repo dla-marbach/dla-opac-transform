@@ -339,8 +339,6 @@ exportRIS: |-
   N2  - Inhalt
   OP  - Person 1 (1982-2001). Werk 1 (genre : 2000)
   OP  - Person 2 (1982-2001). Werk 2 (genre)
-  OP  - Person 1 (1982-2001). Werk 1 (genre : 2000)
-  OP  - Person 2 (1982-2001). Werk 2 (genre)
   RN  - Bemerkung extern
   ST  - Handschrift 1
   TI  - Handschrift 1
@@ -509,14 +507,6 @@ photoNegativeNumber_mv:
 place_mv:
   - Entstehungsort 1
   - Entstehungsort 2
-relation_display_mv:
-  - 'Person 1 (1982-2001). Werk 1 (genre : 2000)'
-  - Person 2 (1982-2001). Werk 2 (genre)
-  - ␣
-relation_id_mv:
-  - AK00000021
-  - AK00000022
-  - AK99999999
 schemaVersion: 0.9.1
 sortingKey: Sortiername Haupteintrag
 sortingKeySub: Sortiername Untereintrag
@@ -561,12 +551,12 @@ website_url_mv:
   - URL 2
 work_display_mv:
   - 'Person 1 (1982-2001). Werk 1 (genre : 2000)'
-  - Person 2 (1982-2001). Werk 2 (genre)
   - ␣
+  - Person 2 (1982-2001). Werk 2 (genre)
 work_id_mv:
   - AK00000021
-  - AK00000022
   - AK99999999
+  - AK00000022
 ---
 id: HS00000002
 display: Handschrift 2 Noten

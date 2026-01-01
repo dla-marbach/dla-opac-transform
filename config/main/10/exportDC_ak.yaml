@@ -237,7 +237,7 @@
 
     forEach(
       [
-        forNonBlank(cells['relation_id_mv'].value, x,
+        forNonBlank(cells['relationManifestation_id_mv'].value, x,
             forEach(x.split('␟'), v, if(v != '␣',
               'https://www.dla-marbach.de/find/opac/id/' + v
             , '')).join('␟')

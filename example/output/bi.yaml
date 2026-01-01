@@ -577,14 +577,6 @@ photoNegativeNumber_mv:
   - Foto-Negativ 1
   - Foto-Negativ 2
 reference_text_mv: Quellenangabe
-relation_display_mv:
-  - 'Person 1 (1982-2001). Werk 1 (genre : 2000)'
-  - Person 2 (1982-2001). Werk 2 (genre)
-  - ␣
-relation_id_mv:
-  - AK00000021
-  - AK00000022
-  - AK99999999
 schemaVersion: 0.9.1
 source: BI
 statusEditing: Bearbeitungsstatus
@@ -622,6 +614,14 @@ title: Bild 1
 titleOriginal: Titel Original
 url: https://www.dla-marbach.de/find/opac/id/BI00000001
 usageRestriction: Benutzungsbeschränkung
+work_display_mv:
+  - 'Person 1 (1982-2001). Werk 1 (genre : 2000)'
+  - Person 2 (1982-2001). Werk 2 (genre)
+  - ␣
+work_id_mv:
+  - AK00000021
+  - AK00000022
+  - AK99999999
 ---
 id: BI00000002
 display: 'Wertetabelle Workaround: Plakat bleibt Plakat [Plakat]'

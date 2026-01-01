@@ -9,7 +9,7 @@
     grel:
     forNonBlank(
       forNonBlank(
-        cells['gndRelation_text_mv'].value,
+        cells['relation_text_mv'].value,
         v,
         forEachIndex(
           v.split('␟'),
@@ -17,8 +17,8 @@
           x,
           if(
             or(
-              cells['gndRelation_type_mv'].value.split('␟')[i].contains('Beruf/Funktion'),
-              cells['gndRelation_type_mv'].value.split('␟')[i].contains('Charakt. Beruf')
+              cells['relation_type_mv'].value.split('␟')[i].contains('Beruf/Funktion'),
+              cells['relation_type_mv'].value.split('␟')[i].contains('Charakt. Beruf')
             ),
             if(
               not(x == '␣'),

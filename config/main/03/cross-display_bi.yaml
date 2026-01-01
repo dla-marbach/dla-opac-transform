@@ -427,7 +427,7 @@
   engineConfig:
     facets: []
     mode: row-based
-  baseColumnName: relation_id_mv
+  baseColumnName: work_id_mv
   expression: |
     grel:
     forNonBlank(
@@ -448,7 +448,7 @@
       ),
       null
     )
-  newColumnName: relation_display_mv
+  newColumnName: work_display_mv
   columnInsertIndex: 2
 - op: core/column-addition
   engineConfig:

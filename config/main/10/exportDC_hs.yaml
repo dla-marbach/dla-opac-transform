@@ -12,7 +12,7 @@
         forNonBlank(cells['title'].value, v, v, ''),
         forNonBlank(cells['titleMain_text'].value, v, v, ''),
         forNonBlank(cells['titleOther_text_mv'].value, v, v, ''),
-        forNonBlank(cells['relation_display_mv'].value, v, v, '')
+        forNonBlank(cells['work_display_mv'].value, v, v, '')
       ].join('␟').replace('␣','').split('␟').uniques(),
       v,
       '  <dc:title>' + v.escape('xml') + '</dc:title>' + '\n'

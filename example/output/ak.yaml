@@ -828,15 +828,15 @@ reference_text_mv:
 reference_type_mv:
   - Quellenangabe 1 Typ
   - Quellenangabe 2 Typ
-relation_display_mv:
+relationManifestation_display_mv:
   - Manifestation 1
   - Manifestation 2
   - ␣
-relation_id_mv:
+relationManifestation_id_mv:
   - AK00000041
   - AK00000042
   - AK99999999
-relation_type_mv:
+relationManifestation_type_mv:
   - Link Manifestation 1 Typ
   - Link Manifestation 2 Typ
   - ␣
@@ -1061,24 +1061,24 @@ filterSource: Werke
 filterType: Normdaten
 genreOther_mv:
   - genre
-gndRelation_comment_mv:
-  - GND-Relation 1 Anmerkung
-  - GND-Relation 2 Anmerkung
-gndRelation_id_mv:
-  - GND-Relation 1 ID
-  - GND-Relation 2 ID
-gndRelation_text_mv:
-  - 'GND-Relation 1 Titel (Achtung: Wenn kein Werktitel dann freies Schlagwort)'
-  - 'GND-Relation 2 Titel (Achtung: Wenn kein Werktitel dann freies Schlagwort)'
-gndRelation_type_mv:
-  - GND-Relation 1 Typ
-  - GND-Relation 2 Typ
 gnd_id_mv:
   - GND-Nummer
 personBy_display_mv:
   - Person 1 (1982–2001)
 personBy_id_mv:
   - PE00000001
+relation_comment_mv:
+  - GND-Relation 1 Anmerkung
+  - GND-Relation 2 Anmerkung
+relation_id_mv:
+  - GND-Relation 1 ID
+  - GND-Relation 2 ID
+relation_text_mv:
+  - 'GND-Relation 1 Titel (Achtung: Wenn kein Werktitel dann freies Schlagwort)'
+  - 'GND-Relation 2 Titel (Achtung: Wenn kein Werktitel dann freies Schlagwort)'
+relation_type_mv:
+  - GND-Relation 1 Typ
+  - GND-Relation 2 Typ
 schemaVersion: 0.9.1
 source: AK
 title: Werk 1
@@ -2585,9 +2585,9 @@ filterLocation_mv:
   - Berlin
 filterSource: Bibliotheksmaterialien
 filterType: Sonstiges
-gndRelation_text_mv:
+relation_text_mv:
   - Berlin [u.a.]
-gndRelation_type_mv:
+relation_type_mv:
   - 'Geografikum: Fundort'
 schemaVersion: 0.9.1
 source: AK

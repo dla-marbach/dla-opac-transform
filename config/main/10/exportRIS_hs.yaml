@@ -26,7 +26,6 @@
     + forNonBlank(forEach(cells['microform_mv'].value.split('␟'), v, if(v != '␣', 'N1  - ' + 'Mikrofiche: ' + v, null)).join('\n'), x, x + '\n', '')
     + forNonBlank(forEach(cells['photoNegativeNumber_mv'].value.split('␟'), v, if(v != '␣', 'N1  - ' + 'Repro: ' + v, null)).join('\n'), x, x + '\n', '')
     + forNonBlank(cells['content'].value, v, 'N2  - ' + v.replace('\n','. ') + '\n', '')
-    + forNonBlank(forEach(cells['relation_display_mv'].value.split('␟'), v, if(v != '␣', 'OP  - ' + v, null)).join('\n'), x, x + '\n', '')
     + forNonBlank(forEach(cells['work_display_mv'].value.split('␟'), v, if(v != '␣', 'OP  - ' + v, null)).join('\n'), x, x + '\n', '')
     + forNonBlank(cells['note'].value, v, 'RN  - ' + v.replace('\n','. ') + '\n', '')
     + forNonBlank(cells['title'].value, v, 'ST  - ' + v + '\n', '')

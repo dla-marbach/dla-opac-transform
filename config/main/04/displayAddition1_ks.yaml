@@ -9,14 +9,14 @@
     grel:
     forNonBlank(
       forNonBlank(
-        cells['gndRelation_text_mv'].value,
+        cells['relation_text_mv'].value,
         v,
         forEachIndex(
           v.split('␟'),
           i,
           x,
           if(
-            cells['gndRelation_type_mv'].value.split('␟')[i].contains('Sitz, Ort'),
+            cells['relation_type_mv'].value.split('␟')[i].contains('Sitz, Ort'),
             if(
               not(x == '␣'),
               x,

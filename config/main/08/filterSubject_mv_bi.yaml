@@ -3,7 +3,7 @@
 # subjectLocation_id_mv -> TH:title
 # personAbout_id_mv -> PE:display
 # corporationAbout_id_mv -> KS:title
-# relation_id_mv -> AK:title
+# work_id_mv -> AK:title
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -74,7 +74,7 @@
           null
         ),
         forNonBlank(
-          cells['relation_id_mv'].value,
+          cells['work_id_mv'].value,
           v,
           forEach(
             v.split('␟'),

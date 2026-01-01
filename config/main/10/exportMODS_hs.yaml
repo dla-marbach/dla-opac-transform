@@ -25,7 +25,7 @@
       , '')).join('')
     , '') +
 
-    forNonBlank(cells['relation_display_mv'].value, x,
+    forNonBlank(cells['work_display_mv'].value, x,
       forEach(x.split('␟'), v, if(v != '␣',
         '  <titleInfo type="uniform">' + '\n' +
         '    <title>' + v.escape('xml') + '</title>' + '\n' +

@@ -26,7 +26,7 @@
     + forNonBlank(forEachIndex(cells['dimension_height_mv'].value.split('␟'), i, v, if(v != '␣', 'N1  - ' + 'Maße: ' + v + forNonBlank(cells['dimension_width_mv'].value.split('␟')[i].replace('␣', ''), z, ' x ' + z, '') + forNonBlank(cells['dimension_depth_mv'].value.split('␟')[i].replace('␣', ''), z, ' x ' + z, '') + forNonBlank(cells['dimension_diameter_mv'].value.split('␟')[i].replace('␣', ''), z, ' x ' + z, '') + forNonBlank(cells['dimension_comment_mv'].value.split('␟')[i].replace('␣', ''), z, ' (' + z.replace('(','').replace(')','') + ')', ''), null)).join('\n'), x, x + '\n', '')
     + forNonBlank(cells['statusPreservation'].value, v, 'N1  - ' + 'Erhaltungszustand: ' + v.replace('\n','. ') + '\n', '')
     + forNonBlank(cells['reference_text_mv'].value.split('␟')[0], v, 'N1  - ' + 'Literatur: ' + v.replace('\n','. ') + '\n', '')
-    + forNonBlank(forEach(cells['relation_display_mv'].value.split('␟'), v, if(v != '␣', 'OP  - ' + v, null)).join('\n'), x, x + '\n', '')
+    + forNonBlank(forEach(cells['work_display_mv'].value.split('␟'), v, if(v != '␣', 'OP  - ' + v, null)).join('\n'), x, x + '\n', '')
     + forNonBlank(cells['note'].value, v, 'RN  - ' + v.replace('\n','. ') + '\n', '')
     + forNonBlank(cells['noteClassification'].value, v, 'RN  - ' + v.replace('\n','. ') + '\n', '')
     + forNonBlank(cells['noteDimension'].value, v, 'RN  - ' + v.replace('\n','. ') + '\n', '')

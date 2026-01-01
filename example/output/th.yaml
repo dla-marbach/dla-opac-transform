@@ -30,18 +30,6 @@ filterLanguage_mv:
   - Sprache 2
 filterSource: Orte und Sachbegriffe
 filterType: Normdaten
-gndRelation_comment_mv:
-  - GND-Relation 1 Anmerkung
-  - GND-Relation 2 Anmerkung
-gndRelation_id_mv:
-  - GND-Relation 1 ID
-  - GND-Relation 2 ID
-gndRelation_text_mv:
-  - GND-Relation 1
-  - GND-Relation 2
-gndRelation_type_mv:
-  - GND-Relation 1 Typ
-  - GND-Relation 2 Typ
 gnd_id_mv:
   - GND-Nummer 1
   - GND-Nummer 2
@@ -62,6 +50,18 @@ reference_text_mv:
 reference_type_mv:
   - Quellenangabe 1 Typ
   - Quellenangabe 2 Typ
+relation_comment_mv:
+  - GND-Relation 1 Anmerkung
+  - GND-Relation 2 Anmerkung
+relation_id_mv:
+  - GND-Relation 1 ID
+  - GND-Relation 2 ID
+relation_text_mv:
+  - GND-Relation 1
+  - GND-Relation 2
+relation_type_mv:
+  - GND-Relation 1 Typ
+  - GND-Relation 2 Typ
 schemaVersion: 0.9.1
 seeAlso_display_mv:
   - Thesaurus-Begriff 3
@@ -258,9 +258,9 @@ filterLocationType_mv: Berlin␝Herstellungsort
 filterLocation_mv: Berlin
 filterSource: Orte und Sachbegriffe
 filterType: Normdaten
-gndRelation_text_mv:
+relation_text_mv:
   - Berlin [u.a.]
-gndRelation_type_mv:
+relation_type_mv:
   - 'Herstellungsort: Geografikum'
 schemaVersion: 0.9.1
 source: TH
