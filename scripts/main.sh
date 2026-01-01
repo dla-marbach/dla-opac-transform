@@ -38,8 +38,16 @@ done
 # Konfigurationsdateien in-place von YAML nach JSON konvertieren
 find "${DIR}/tmp/config" -name '*.yaml' -exec yq -i -o json {} \;
 
-# Jedes Verzeichnis nacheinander bearbeiten
-for d in "${DIR}"/tmp/config/main/*/ ; do
+# Teil a Verzeichnisse nacheinander bearbeiten
+for d in "${DIR}"/tmp/config/main/a/*/ ; do
+    for set in ${sets[@]}; do
+        find "${d}" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
+        pids+=($!)
+    done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+done
+
+# Teil b Verzeichnisse nacheinander bearbeiten
+for d in "${DIR}"/tmp/config/main/b/*/ ; do
     for set in ${sets[@]}; do
         find "${d}" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
         pids+=($!)
