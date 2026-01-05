@@ -1,0 +1,113 @@
+# Beziehungen nach Typ und Titel sortieren
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: relation_id_mv
+  expression: |
+    grel:
+    with(
+      forEachIndex(
+        cells['relation_type_mv'].value.split('␟'),
+        i,
+        v,
+        v
+          + forNonBlank(cells['relation_text_mv'].value.split('␟')[i], x, x, '')
+          + '␝'
+          + i
+      ).sort(),
+      sort_key,
+      forEach(
+        sort_key,
+        sort_number,
+        sort_number.split('␝')[1]
+      ).join('␟')
+    )
+  newColumnName: sort
+  columnInsertIndex: 2
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        cells['sort'].value.split('␟'),
+        i,
+        forNonBlank(
+          value.split('␟')[i.toNumber()],
+          v,
+          v,
+          null
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_type_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        cells['sort'].value.split('␟'),
+        i,
+        forNonBlank(
+          value.split('␟')[i.toNumber()],
+          v,
+          v,
+          null
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_comment_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        cells['sort'].value.split('␟'),
+        i,
+        forNonBlank(
+          value.split('␟')[i.toNumber()],
+          v,
+          v,
+          null
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_text_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        cells['sort'].value.split('␟'),
+        i,
+        forNonBlank(
+          value.split('␟')[i.toNumber()],
+          v,
+          v,
+          null
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+- op: core/column-removal
+  columnName: sort
