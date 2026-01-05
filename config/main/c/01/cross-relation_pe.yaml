@@ -1,52 +1,9 @@
 # Reziproke Beziehungen ergänzen
 # Das dafür genutzte Projekt "lookup_relation" enthält paarweise id und relation_id (vgl. scripts/main.sh)
+# es werden nur Beziehungen ergänzt, die noch nicht mit gleichem type vorkommen, um Dopplungen zu vermeiden
 # type wird ersetzt durch map_relation-antonyme.csv (wenn kein Gegenwert definiert dann "Relation")
 # comment wird ebenfalls ersetzt durch map_relation-antonyme.csv (wenn kein Gegenwert definiert dann "␣")
-- op: core/text-transform
-  engineConfig:
-    facets: []
-  columnName: relation_id_mv
-  expression: |
-    grel:
-    forNonBlank(
-      forEach(
-        cells['id'].value.cross('lookup_relation','relation_id'),
-        r,
-        r.cells['id'].value
-      ).join('␟'),
-      x,
-      if(
-        isNonBlank(value),
-        value + '␟' + x,
-        x
-      ),
-      value
-    )
-- op: core/text-transform
-  engineConfig:
-    facets: []
-  columnName: relation_type_mv
-  expression: |
-    grel:
-    forNonBlank(
-      forEach(
-        cells['id'].value.cross('lookup_relation','relation_id'),
-        r,
-        forNonBlank(
-          r.cells['relation_type'].value.cross('map_relation-antonyme','suchen')[0].cells['ersetzen'].value,
-          v,
-          v,
-          'Relation'
-        )
-      ).join('␟'),
-      x,
-      if(
-        isNonBlank(value),
-        value + '␟' + x,
-        x
-      ),
-      value
-    )
+# Reihenfolge der folgenden Transformationen (id zuletzt) wichtig wegen integriertem Filter
 - op: core/text-transform
   engineConfig:
     facets: []
@@ -57,11 +14,39 @@
       forEach(
         cells['id'].value.cross('lookup_relation','relation_id'),
         r,
-        forNonBlank(
-          r.cells['relation_comment'].value.cross('map_relation-antonyme','suchen')[0].cells['ersetzen'].value,
-          v,
-          v,
-          '␣'
+        with(
+          forNonBlank(
+            forEachIndex(
+              cells['relation_id_mv'].value.split('␟'),
+              i,
+              v,
+              v + cells['relation_type_mv'].value.split('␟')[i]
+            ).join('␟'),
+            x,
+            x,
+            ''
+          ),
+          filter,
+          if(
+            not(
+              filter.contains(
+                r.cells['id'].value
+                  + forNonBlank(
+                  r.cells['relation_type'].value.cross('map_relation-antonyme','suchen')[0].cells['ersetzen'].value,
+                  x,
+                  x,
+                  'Relation'
+                )
+              )
+            ),
+            forNonBlank(
+              r.cells['relation_comment'].value.cross('map_relation-antonyme','suchen')[0].cells['ersetzen'].value,
+              x,
+              x,
+              '␣'
+            ),
+            null
+          )
         )
       ).join('␟'),
       x,
@@ -83,7 +68,136 @@
       forEach(
         cells['id'].value.cross('lookup_relation','relation_id'),
         r,
-        '␣'
+        with(
+          forNonBlank(
+            forEachIndex(
+              cells['relation_id_mv'].value.split('␟'),
+              i,
+              v,
+              v + cells['relation_type_mv'].value.split('␟')[i]
+            ).join('␟'),
+            x,
+            x,
+            ''
+          ),
+          filter,
+          if(
+            not(
+              filter.contains(
+                r.cells['id'].value
+                  + forNonBlank(
+                  r.cells['relation_type'].value.cross('map_relation-antonyme','suchen')[0].cells['ersetzen'].value,
+                  x,
+                  x,
+                  'Relation'
+                )
+              )
+            ),
+            '␣',
+            null
+          )
+        )
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(value),
+        value + '␟' + x,
+        x
+      ),
+      value
+    )
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_type_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        cells['id'].value.cross('lookup_relation','relation_id'),
+        r,
+        with(
+          forNonBlank(
+            forEachIndex(
+              cells['relation_id_mv'].value.split('␟'),
+              i,
+              v,
+              v + cells['relation_type_mv'].value.split('␟')[i]
+            ).join('␟'),
+            x,
+            x,
+            ''
+          ),
+          filter,
+          if(
+            not(
+              filter.contains(
+                r.cells['id'].value
+                  + forNonBlank(
+                  r.cells['relation_type'].value.cross('map_relation-antonyme','suchen')[0].cells['ersetzen'].value,
+                  x,
+                  x,
+                  'Relation'
+                )
+              )
+            ),
+            forNonBlank(
+              r.cells['relation_type'].value.cross('map_relation-antonyme','suchen')[0].cells['ersetzen'].value,
+              x,
+              x,
+              'Relation'
+            ),
+            null
+          )
+        )
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(value),
+        value + '␟' + x,
+        x
+      ),
+      value
+    )
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        cells['id'].value.cross('lookup_relation','relation_id'),
+        r,
+        with(
+          forNonBlank(
+            forEachIndex(
+              cells['relation_id_mv'].value.split('␟'),
+              i,
+              v,
+              v + cells['relation_type_mv'].value.split('␟')[i]
+            ).join('␟'),
+            x,
+            x,
+            ''
+          ),
+          filter,
+          if(
+            not(
+              filter.contains(
+                r.cells['id'].value
+                  + forNonBlank(
+                  r.cells['relation_type'].value.cross('map_relation-antonyme','suchen')[0].cells['ersetzen'].value,
+                  x,
+                  x,
+                  'Relation'
+                )
+              )
+            ),
+            r.cells['id'].value,
+            null
+          )
+        )
       ).join('␟'),
       x,
       if(
