@@ -40,8 +40,8 @@ tasks:
     sources:
       - '{{.DIR}}/input/**'
       - scripts/main.sh
-      - 'config/*.*'
       - 'config/main/**/**'
+      - 'config/mappings/**'
     generates:
       - '{{.DIR}}/output/**'
     preconditions:

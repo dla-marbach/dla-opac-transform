@@ -3085,7 +3085,6 @@ display: 'Statt etwas oder Der letzte Rank : Roman - 1. Auflage'
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Statt etwas oder Der letzte Rank : Roman - 1. Auflage</dc:title>
-    <dc:relation>https://www.dla-marbach.de/find/opac/id/AK00000142</dc:relation>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000141</dc:identifier>
     <dc:identifier>AK00000141</dc:identifier>
   </oai_dc:dc>
@@ -3094,14 +3093,6 @@ exportMODS: |-
     <titleInfo>
       <title>Statt etwas oder Der letzte Rank : Roman - 1. Auflage</title>
     </titleInfo>
-    <relatedItem displayLabel="Rezensiert in">
-      <titleInfo>
-        <title>Martin Walser: Statt etwas oder Der letzte Rank / Anton Philipp Knittel</title>
-      </titleInfo>
-      <recordInfo>
-        <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">AK00000142</recordIdentifier>
-      </recordInfo>
-    </relatedItem>
     <location>
       <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
     </location>
@@ -3119,14 +3110,6 @@ exportRIS: |-
   ER  -
 filterSource: Bibliotheksmaterialien
 filterType: Sonstiges
-relation_comment_mv:
-  - ␣
-relation_id_mv:
-  - AK00000142
-relation_text_mv:
-  - 'Martin Walser: Statt etwas oder Der letzte Rank / Anton Philipp Knittel'
-relation_type_mv:
-  - Rezensiert in
 schemaVersion: 0.9.1
 source: AK
 title: 'Statt etwas oder Der letzte Rank : Roman - 1. Auflage'

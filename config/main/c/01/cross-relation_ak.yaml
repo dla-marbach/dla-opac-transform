@@ -29,13 +29,16 @@
           filter,
           if(
             not(
-              filter.contains(
-                r.cells['id'].value
-                  + forNonBlank(
-                  r.cells['relation_type'].value.cross('map_relation-antonyme','suchen')[0].cells['ersetzen'].value,
-                  x,
-                  x,
-                  'Relation'
+              or(
+                r.cells['relation_type'].value == 'Rezension von',
+                filter.contains(
+                  r.cells['id'].value
+                    + forNonBlank(
+                    r.cells['relation_type'].value.cross('map_relation-antonyme','suchen')[0].cells['ersetzen'].value,
+                    x,
+                    x,
+                    'Relation'
+                  )
                 )
               )
             ),
@@ -83,13 +86,16 @@
           filter,
           if(
             not(
-              filter.contains(
-                r.cells['id'].value
-                  + forNonBlank(
-                  r.cells['relation_type'].value.cross('map_relation-antonyme','suchen')[0].cells['ersetzen'].value,
-                  x,
-                  x,
-                  'Relation'
+              or(
+                r.cells['relation_type'].value == 'Rezension von',
+                filter.contains(
+                  r.cells['id'].value
+                    + forNonBlank(
+                    r.cells['relation_type'].value.cross('map_relation-antonyme','suchen')[0].cells['ersetzen'].value,
+                    x,
+                    x,
+                    'Relation'
+                  )
                 )
               )
             ),
@@ -131,13 +137,16 @@
           filter,
           if(
             not(
-              filter.contains(
-                r.cells['id'].value
-                  + forNonBlank(
-                  r.cells['relation_type'].value.cross('map_relation-antonyme','suchen')[0].cells['ersetzen'].value,
-                  x,
-                  x,
-                  'Relation'
+              or(
+                r.cells['relation_type'].value == 'Rezension von',
+                filter.contains(
+                  r.cells['id'].value
+                    + forNonBlank(
+                    r.cells['relation_type'].value.cross('map_relation-antonyme','suchen')[0].cells['ersetzen'].value,
+                    x,
+                    x,
+                    'Relation'
+                  )
                 )
               )
             ),
@@ -184,13 +193,16 @@
           filter,
           if(
             not(
-              filter.contains(
-                r.cells['id'].value
-                  + forNonBlank(
-                  r.cells['relation_type'].value.cross('map_relation-antonyme','suchen')[0].cells['ersetzen'].value,
-                  x,
-                  x,
-                  'Relation'
+              or(
+                r.cells['relation_type'].value == 'Rezension von',
+                filter.contains(
+                  r.cells['id'].value
+                    + forNonBlank(
+                    r.cells['relation_type'].value.cross('map_relation-antonyme','suchen')[0].cells['ersetzen'].value,
+                    x,
+                    x,
+                    'Relation'
+                  )
                 )
               )
             ),
