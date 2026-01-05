@@ -327,33 +327,6 @@
   engineConfig:
     facets: []
     mode: row-based
-  baseColumnName: relationManifestation_id_mv
-  expression: |
-    grel:
-    forNonBlank(
-      forEach(
-        value.split('␟'),
-        v,
-        forNonBlank(
-          v.cross('ak','id')[0].cells['display'].value,
-          x,
-          x,
-          '␣')
-      ).join('␟'),
-      x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
-      null
-    )
-  newColumnName: relationManifestation_display_mv
-  columnInsertIndex: 2
-- op: core/column-addition
-  engineConfig:
-    facets: []
-    mode: row-based
   baseColumnName: subject_id_mv
   expression: |
     grel:

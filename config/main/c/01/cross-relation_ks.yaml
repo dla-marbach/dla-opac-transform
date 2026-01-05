@@ -1,0 +1,95 @@
+# Reziproke Beziehungen ergänzen
+# Das dafür genutzte Projekt "lookup_relation" enthält paarweise id und relation_id (vgl. scripts/main.sh)
+# type wird ersetzt durch map_relation-antonyme.csv (wenn kein Gegenwert definiert dann "Relation")
+# comment wird ebenfalls ersetzt durch map_relation-antonyme.csv (wenn kein Gegenwert definiert dann "␣")
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        cells['id'].value.cross('lookup_relation','relation_id'),
+        r,
+        r.cells['id'].value
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(value),
+        value + '␟' + x,
+        x
+      ),
+      value
+    )
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_type_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        cells['id'].value.cross('lookup_relation','relation_id'),
+        r,
+        forNonBlank(
+          r.cells['relation_type'].value.cross('map_relation-antonyme','suchen')[0].cells['ersetzen'].value,
+          v,
+          v,
+          'Relation'
+        )
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(value),
+        value + '␟' + x,
+        x
+      ),
+      value
+    )
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_comment_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        cells['id'].value.cross('lookup_relation','relation_id'),
+        r,
+        forNonBlank(
+          r.cells['relation_comment'].value.cross('map_relation-antonyme','suchen')[0].cells['ersetzen'].value,
+          v,
+          v,
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(value),
+        value + '␟' + x,
+        x
+      ),
+      value
+    )
+# relation_text_mv nur Platzhalter, wird später befüllt
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_text_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        cells['id'].value.cross('lookup_relation','relation_id'),
+        r,
+        '␣'
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(value),
+        value + '␟' + x,
+        x
+      ),
+      value
+    )

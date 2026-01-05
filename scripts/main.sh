@@ -46,8 +46,34 @@ for d in "${DIR}"/tmp/config/main/a/*/ ; do
     done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 done
 
+# Lookup-Tabelle mit Kallías-ID und GND-ID erstellen für Relationen
+echo 'id,gnd' > "${DIR}"/tmp/tmp-lookup_gnd.csv
+for set in ak ks pe th; do
+    orcli export template "${set}" \
+    <<< '{{ forNonBlank(cells["gnd_id_mv"].value, x, forEach(x.split("␟"), v, cells["id"].value + "," + v + "\n"), "") }}' \
+    >> "${DIR}"/tmp/tmp-lookup_gnd.csv
+done
+orcli import csv "${DIR}"/tmp/tmp-lookup_gnd.csv --projectName "lookup_gnd"
+
 # Teil b Verzeichnisse nacheinander bearbeiten
 for d in "${DIR}"/tmp/config/main/b/*/ ; do
+    for set in ${sets[@]}; do
+        find "${d}" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
+        pids+=($!)
+    done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+done
+
+# Mappingtabelle erstellen für reziproke Beziehungen in relation
+echo 'id,relation_type,relation_id,relation_comment,relation_text' > "${DIR}"/tmp/tmp-lookup_relation.csv
+for set in ak ks pe th; do
+    orcli export template "${set}" \
+    <<< '{{ forNonBlank(cells["relation_type_mv"].value, x, forEachIndex(x.split("␟"), i, type, cells["id"].value + "," + type.escape("csv") + "," + forNonBlank(cells["relation_id_mv"].value.split("␟")[i], z, z.escape("csv"), "") + "," + forNonBlank(cells["relation_comment_mv"].value.split("␟")[i], z, z.escape("csv"), "") + "," + forNonBlank(cells["relation_text_mv"].value.split("␟")[i], z, z.escape("csv"), "") + "\n"), "") }}' \
+    >> "${DIR}"/tmp/tmp-lookup_relation.csv
+done
+orcli import csv "${DIR}"/tmp/tmp-lookup_relation.csv --projectName "lookup_relation"
+
+# Teil c Verzeichnisse nacheinander bearbeiten
+for d in "${DIR}"/tmp/config/main/c/*/ ; do
     for set in ${sets[@]}; do
         find "${d}" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
         pids+=($!)
@@ -108,7 +134,6 @@ for set in ak bf bi hs; do
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 head -n 1 "${DIR}"/tmp/tmp-oai-dc_ak.csv > "${DIR}"/tmp/oai-dc.csv && tail -n+2 -q "${DIR}"/tmp/tmp-oai-dc_*.csv >> "${DIR}"/tmp/oai-dc.csv
-rm "${DIR}"/tmp/tmp-oai-dc*.csv
 
 # export MODS für OAI
 for set in ak bf bi hs; do
@@ -119,4 +144,3 @@ for set in ak bf bi hs; do
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 head -n 1 "${DIR}"/tmp/tmp-oai-mods_ak.csv > "${DIR}"/tmp/oai-mods.csv && tail -n+2 -q "${DIR}"/tmp/tmp-oai-mods_*.csv >> "${DIR}"/tmp/oai-mods.csv
-rm "${DIR}"/tmp/tmp-oai-mods*.csv

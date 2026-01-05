@@ -1,0 +1,22 @@
+# Ersetzungen durch map_relation.csv zur Vereinheitlichung von relation_type_mv
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_type_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.split('␟'),
+        v,
+        forNonBlank(
+          v.cross('map_relation','suchen')[0].cells['ersetzen'].value,
+          x,
+          x,
+          v
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )

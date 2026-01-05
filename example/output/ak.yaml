@@ -828,15 +828,15 @@ reference_text_mv:
 reference_type_mv:
   - Quellenangabe 1 Typ
   - Quellenangabe 2 Typ
-relationManifestation_display_mv:
-  - Manifestation 1
-  - Manifestation 2
-  - ␣
-relationManifestation_id_mv:
+relation_id_mv:
   - AK00000041
   - AK00000042
   - AK99999999
-relationManifestation_type_mv:
+relation_text_mv:
+  - Manifestation 1
+  - Manifestation 2
+  - ␣
+relation_type_mv:
   - Link Manifestation 1 Typ
   - Link Manifestation 2 Typ
   - ␣
@@ -1222,6 +1222,7 @@ display: Manifestation 1
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Manifestation 1</dc:title>
+    <dc:relation>https://www.dla-marbach.de/find/opac/id/AK00000001</dc:relation>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000041</dc:identifier>
     <dc:identifier>AK00000041</dc:identifier>
   </oai_dc:dc>
@@ -1230,6 +1231,14 @@ exportMODS: |-
     <titleInfo>
       <title>Manifestation 1</title>
     </titleInfo>
+    <relatedItem displayLabel="Relation">
+      <titleInfo>
+        <title>Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1]</title>
+      </titleInfo>
+      <recordInfo>
+        <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">AK00000001</recordIdentifier>
+      </recordInfo>
+    </relatedItem>
     <location>
       <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
     </location>
@@ -1247,6 +1256,14 @@ exportRIS: |-
   ER  -
 filterSource: Bibliotheksmaterialien
 filterType: Sonstiges
+relation_comment_mv:
+  - ␣
+relation_id_mv:
+  - AK00000001
+relation_text_mv:
+  - 'Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1]'
+relation_type_mv:
+  - Relation
 schemaVersion: 0.9.1
 source: AK
 title: Manifestation 1
@@ -1257,6 +1274,7 @@ display: Manifestation 2
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Manifestation 2</dc:title>
+    <dc:relation>https://www.dla-marbach.de/find/opac/id/AK00000001</dc:relation>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000042</dc:identifier>
     <dc:identifier>AK00000042</dc:identifier>
   </oai_dc:dc>
@@ -1265,6 +1283,14 @@ exportMODS: |-
     <titleInfo>
       <title>Manifestation 2</title>
     </titleInfo>
+    <relatedItem displayLabel="Relation">
+      <titleInfo>
+        <title>Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1]</title>
+      </titleInfo>
+      <recordInfo>
+        <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">AK00000001</recordIdentifier>
+      </recordInfo>
+    </relatedItem>
     <location>
       <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
     </location>
@@ -1282,6 +1308,14 @@ exportRIS: |-
   ER  -
 filterSource: Bibliotheksmaterialien
 filterType: Sonstiges
+relation_comment_mv:
+  - ␣
+relation_id_mv:
+  - AK00000001
+relation_text_mv:
+  - 'Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1]'
+relation_type_mv:
+  - Relation
 schemaVersion: 0.9.1
 source: AK
 title: Manifestation 2
@@ -2585,8 +2619,6 @@ filterLocation_mv:
   - Berlin
 filterSource: Bibliotheksmaterialien
 filterType: Sonstiges
-relation_text_mv:
-  - Berlin [u.a.]
 relation_type_mv:
   - 'Geografikum: Fundort'
 schemaVersion: 0.9.1
@@ -2931,6 +2963,222 @@ vendor_id_mv:
   - 4099250-0
 vendor_type_mv:
   - GND (Werktitel)
+---
+id: AK00000131
+display: 'Kästner, Erich <1899-1974>. Das doppelte Lottchen (Kinderbuch : 1949)'
+exportDC: |-
+  <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Kästner, Erich &lt;1899-1974&gt;. Das doppelte Lottchen (Kinderbuch : 1949)</dc:title>
+    <dc:relation>https://www.dla-marbach.de/find/opac/id/AK00000132</dc:relation>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000131</dc:identifier>
+    <dc:identifier>AK00000131</dc:identifier>
+  </oai_dc:dc>
+exportMODS: |-
+  <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
+    <titleInfo>
+      <title>Kästner, Erich &lt;1899-1974&gt;. Das doppelte Lottchen (Kinderbuch : 1949)</title>
+    </titleInfo>
+    <relatedItem displayLabel="Relation">
+      <titleInfo>
+        <title>Windeck, Corinna. Das doppelte Lottchen (Hörspiel : 2017)</title>
+      </titleInfo>
+      <recordInfo>
+        <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">AK00000132</recordIdentifier>
+      </recordInfo>
+    </relatedItem>
+    <location>
+      <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+    </location>
+    <recordInfo>
+      <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+      <recordContentSource authority="marcorg">DE-Mar1</recordContentSource>
+      <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">AK00000131</recordIdentifier>
+    </recordInfo>
+  </mods>
+exportRIS: |-
+  TY  - GEN
+  ID  - AK00000131
+  TI  - Kästner, Erich <1899-1974>. Das doppelte Lottchen (Kinderbuch : 1949)
+  UR  - https://www.dla-marbach.de/find/opac/id/AK00000131/
+  ER  -
+filterSource: Bibliotheksmaterialien
+filterType: Sonstiges
+gnd_id_mv:
+  - "123456789"
+  - 4707446-2
+linkWikidata: Q135458776
+relation_comment_mv:
+  - Bearbeitet als Hörspiel
+relation_id_mv:
+  - AK00000132
+relation_text_mv:
+  - 'Windeck, Corinna. Das doppelte Lottchen (Hörspiel : 2017)'
+relation_type_mv:
+  - Relation
+schemaVersion: 0.9.1
+source: AK
+title: 'Kästner, Erich <1899-1974>. Das doppelte Lottchen (Kinderbuch : 1949)'
+vendor_id_mv:
+  - "123456789"
+  - 4707446-2
+vendor_type_mv:
+  - GND (Werktitel)
+  - GND (Werktitel)
+---
+id: AK00000132
+display: 'Windeck, Corinna. Das doppelte Lottchen (Hörspiel : 2017)'
+exportDC: |-
+  <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Windeck, Corinna. Das doppelte Lottchen (Hörspiel : 2017)</dc:title>
+    <dc:relation>https://www.dla-marbach.de/find/opac/id/AK00000131</dc:relation>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000132</dc:identifier>
+    <dc:identifier>AK00000132</dc:identifier>
+  </oai_dc:dc>
+exportMODS: |-
+  <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
+    <titleInfo>
+      <title>Windeck, Corinna. Das doppelte Lottchen (Hörspiel : 2017)</title>
+    </titleInfo>
+    <relatedItem displayLabel="In Beziehung stehendes Werk">
+      <titleInfo>
+        <title>Kästner, Erich &lt;1899-1974&gt;. Das doppelte Lottchen (Kinderbuch : 1949)</title>
+      </titleInfo>
+      <recordInfo>
+        <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">AK00000131</recordIdentifier>
+      </recordInfo>
+    </relatedItem>
+    <location>
+      <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+    </location>
+    <recordInfo>
+      <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+      <recordContentSource authority="marcorg">DE-Mar1</recordContentSource>
+      <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">AK00000132</recordIdentifier>
+    </recordInfo>
+  </mods>
+exportRIS: |-
+  TY  - GEN
+  ID  - AK00000132
+  TI  - Windeck, Corinna. Das doppelte Lottchen (Hörspiel : 2017)
+  UR  - https://www.dla-marbach.de/find/opac/id/AK00000132/
+  ER  -
+filterSource: Bibliotheksmaterialien
+filterType: Sonstiges
+relation_comment_mv:
+  - 'Bezug: Hörspielbearbeitung von'
+  - 'Bezug: Hörspielbearbeitung von'
+relation_id_mv:
+  - 114370410X
+  - AK00000131
+relation_text_mv:
+  - 'Das doppelte Lottchen (Film : 2017)'
+  - 'Kästner, Erich <1899-1974>. Das doppelte Lottchen (Kinderbuch : 1949)'
+relation_type_mv:
+  - In Beziehung stehendes Werk
+  - In Beziehung stehendes Werk
+schemaVersion: 0.9.1
+source: AK
+title: 'Windeck, Corinna. Das doppelte Lottchen (Hörspiel : 2017)'
+---
+id: AK00000141
+display: 'Statt etwas oder Der letzte Rank : Roman - 1. Auflage'
+exportDC: |-
+  <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Statt etwas oder Der letzte Rank : Roman - 1. Auflage</dc:title>
+    <dc:relation>https://www.dla-marbach.de/find/opac/id/AK00000142</dc:relation>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000141</dc:identifier>
+    <dc:identifier>AK00000141</dc:identifier>
+  </oai_dc:dc>
+exportMODS: |-
+  <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
+    <titleInfo>
+      <title>Statt etwas oder Der letzte Rank : Roman - 1. Auflage</title>
+    </titleInfo>
+    <relatedItem displayLabel="Rezensiert in">
+      <titleInfo>
+        <title>Martin Walser: Statt etwas oder Der letzte Rank / Anton Philipp Knittel</title>
+      </titleInfo>
+      <recordInfo>
+        <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">AK00000142</recordIdentifier>
+      </recordInfo>
+    </relatedItem>
+    <location>
+      <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+    </location>
+    <recordInfo>
+      <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+      <recordContentSource authority="marcorg">DE-Mar1</recordContentSource>
+      <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">AK00000141</recordIdentifier>
+    </recordInfo>
+  </mods>
+exportRIS: |-
+  TY  - GEN
+  ID  - AK00000141
+  TI  - Statt etwas oder Der letzte Rank : Roman - 1. Auflage
+  UR  - https://www.dla-marbach.de/find/opac/id/AK00000141/
+  ER  -
+filterSource: Bibliotheksmaterialien
+filterType: Sonstiges
+relation_comment_mv:
+  - ␣
+relation_id_mv:
+  - AK00000142
+relation_text_mv:
+  - 'Martin Walser: Statt etwas oder Der letzte Rank / Anton Philipp Knittel'
+relation_type_mv:
+  - Rezensiert in
+schemaVersion: 0.9.1
+source: AK
+title: 'Statt etwas oder Der letzte Rank : Roman - 1. Auflage'
+---
+id: AK00000142
+display: 'Martin Walser: Statt etwas oder Der letzte Rank / Anton Philipp Knittel'
+exportDC: |-
+  <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Martin Walser: Statt etwas oder Der letzte Rank / Anton Philipp Knittel</dc:title>
+    <dc:relation>https://www.dla-marbach.de/find/opac/id/AK00000141</dc:relation>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000142</dc:identifier>
+    <dc:identifier>AK00000142</dc:identifier>
+  </oai_dc:dc>
+exportMODS: |-
+  <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
+    <titleInfo>
+      <title>Martin Walser: Statt etwas oder Der letzte Rank / Anton Philipp Knittel</title>
+    </titleInfo>
+    <relatedItem displayLabel="Rezension von">
+      <titleInfo>
+        <title>Statt etwas oder Der letzte Rank : Roman - 1. Auflage</title>
+      </titleInfo>
+      <recordInfo>
+        <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">AK00000141</recordIdentifier>
+      </recordInfo>
+    </relatedItem>
+    <location>
+      <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+    </location>
+    <recordInfo>
+      <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+      <recordContentSource authority="marcorg">DE-Mar1</recordContentSource>
+      <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">AK00000142</recordIdentifier>
+    </recordInfo>
+  </mods>
+exportRIS: |-
+  TY  - GEN
+  ID  - AK00000142
+  TI  - Martin Walser: Statt etwas oder Der letzte Rank / Anton Philipp Knittel
+  UR  - https://www.dla-marbach.de/find/opac/id/AK00000142/
+  ER  -
+filterSource: Bibliotheksmaterialien
+filterType: Sonstiges
+relation_id_mv:
+  - AK00000141
+relation_text_mv:
+  - 'Statt etwas oder Der letzte Rank : Roman - 1. Auflage'
+relation_type_mv:
+  - Rezension von
+schemaVersion: 0.9.1
+source: AK
+title: 'Martin Walser: Statt etwas oder Der letzte Rank / Anton Philipp Knittel'
 ---
 id: AK00001001
 display: Zwei verknüpfte Personen mit Indexloch in der Mitte

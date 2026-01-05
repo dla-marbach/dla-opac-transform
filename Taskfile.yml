@@ -28,8 +28,9 @@ tasks:
         # orcli das script main.sh ausführen lassen
         DIR={{.DIR}} openrefine/orcli run "scripts/main.sh" --memory "{{.MEMORY}}" --port "{{.PORT}}"
       - |
-        # Kopie der Konfigurationsdateien im Arbeitsverzeichnis löschen
-        rm -r "{{.DIR}}/tmp/config" 2> /dev/null || true
+        # Kopie der Konfigurationsdateien und temporäre Dateien im Arbeitsverzeichnis löschen
+        rm -r "{{.DIR}}"/tmp/config 2> /dev/null || true
+        rm "{{.DIR}}"/tmp/tmp* 2> /dev/null || true
       - |
         # Vorheriges Ergebnis überschreiben
         rm -r "{{.DIR}}/output" 2> /dev/null || true; mv "{{.DIR}}/tmp" "{{.DIR}}/output"

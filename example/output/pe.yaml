@@ -237,7 +237,7 @@ filterType: Normdaten
 relation_text_mv:
   - Berlin [u.a.]
 relation_type_mv:
-  - 'Sterbeort: Geografikum'
+  - Sterbeort
 schemaVersion: 0.9.1
 source: PE
 title: 'Facette Ort: Berlin␝Sterbeort'
@@ -294,3 +294,104 @@ linkWikipedia: Astrid_Lindgren
 schemaVersion: 0.9.1
 source: PE
 title: Lindgren, Astrid
+---
+id: PE00000021
+display: Huch, Ricarda (1864–1947)
+dateLifespanEnd: "1947"
+dateLifespanStart: "1864"
+filterDatePoint_mv:
+  - "1864-01-01T00:00:00Z"
+  - "1947-01-01T00:00:00Z"
+filterDateRange_mv:
+  - '[1864 TO 1947]'
+filterLocationType_mv: Braunschweig␝Geburtsort
+filterLocation_mv: Braunschweig
+filterSource: Personen
+filterType: Normdaten
+gnd_id_mv:
+  - "118554190"
+linkCommonsImage_file_mv: Zentralbibliothek%20Z%C3%BCrich%20-%20Ricarda%20Huch%20-%20500000166.jpg
+linkCommonsImage_rights_mv: Paul Peterich | Wikimedia Commons | Public domain
+linkDeutscheBiographie_mv:
+  - pnd118554190.html#ndbcontent
+linkFilmportal_mv: 9d15e3ca901146b6afa113e4b17cc5be
+linkWikidata: Q60785
+relation_comment_mv:
+  - ␣
+  - ␣
+  - Ehemann
+  - ␣
+  - Ehepaar
+relation_id_mv:
+  - 4008065-1
+  - ␣
+  - PE00000023
+  - PE00000022
+  - PE00000023
+relation_text_mv:
+  - Braunschweig
+  - Dr. phil. h.c.
+  - Huch, Richard (1850–1914)
+  - Huch, Ilona
+  - Huch, Richard (1850–1914)
+relation_type_mv:
+  - Geburtsort
+  - Akad. Grad
+  - Beziehung familiär
+  - Beziehung familiär
+  - Beziehung familiär
+schemaVersion: 0.9.1
+source: PE
+title: Huch, Ricarda
+---
+id: PE00000022
+display: Huch, Ilona
+filterSource: Personen
+filterType: Normdaten
+gnd_id_mv:
+  - "1121311261"
+relation_comment_mv:
+  - Vater, 1916-1939
+  - Großtante
+relation_id_mv:
+  - ␣
+  - PE00000021
+relation_text_mv:
+  - Huch, Friedrich
+  - Huch, Ricarda (1864–1947)
+relation_type_mv:
+  - Beziehung familiär
+  - Beziehung familiär
+schemaVersion: 0.9.1
+source: PE
+title: Huch, Ilona
+---
+id: PE00000023
+display: Huch, Richard (1850–1914)
+dateLifespanEnd: "1914"
+dateLifespanStart: "1850"
+filterDatePoint_mv:
+  - "1850-01-01T00:00:00Z"
+  - "1914-01-01T00:00:00Z"
+filterDateRange_mv:
+  - '[1850 TO 1914]'
+filterSource: Personen
+filterType: Normdaten
+gnd_id_mv:
+  - "117035505"
+linkWikidata: Q61103285
+relation_comment_mv:
+  - Ehefrau
+  - Ehepaar
+relation_id_mv:
+  - PE00000021
+  - PE00000021
+relation_text_mv:
+  - Huch, Ricarda (1864–1947)
+  - Huch, Ricarda (1864–1947)
+relation_type_mv:
+  - Beziehung familiär
+  - Beziehung familiär
+schemaVersion: 0.9.1
+source: PE
+title: Huch, Richard

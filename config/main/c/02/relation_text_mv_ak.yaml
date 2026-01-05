@@ -1,0 +1,39 @@
+# Anzeigetitel füllen/vereinheitlichen auf display wenn relation_id_mv vorhanden
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_text_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEachIndex(
+        cells['relation_id_mv'].value.split('␟'),
+        i,
+        id,
+        forNonBlank(
+          if(
+            id.startsWith('AK'),
+            id.cross('ak','id')[0].cells['display'].value,
+            if(
+              id.startsWith('KS'),
+              id.cross('ks','id')[0].cells['display'].value,
+              if(
+                id.startsWith('PE'),
+                id.cross('pe','id')[0].cells['display'].value,
+                if(
+                  id.startsWith('TH'),
+                  id.cross('th','id')[0].cells['display'].value,
+                  cells['relation_text_mv'].value.split('␟')[i]
+                )
+              )
+            )
+          ),
+          x,
+          x,
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
