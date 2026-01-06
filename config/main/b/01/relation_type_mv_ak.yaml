@@ -1,3 +1,60 @@
+# Bei type "Werk: Werk" die Angabe aus comment übernehmen und comment leeren
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_type_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEachIndex(
+        cells['relation_type_mv'].value.split('␟'),
+        i,
+        type,
+        if(
+          type == 'Werk: Werk',
+          forNonBlank(
+            cells['relation_comment_mv'].value.split('␟')[i],
+            comment,
+            comment,
+            type
+          ),
+          type
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_comment_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEachIndex(
+        cells['relation_type_mv'].value.split('␟'),
+        i,
+        type,
+        if(
+          type == 'Werk: Werk',
+          '␣',
+          forNonBlank(
+            cells['relation_comment_mv'].value.split('␟')[i],
+            comment,
+            comment,
+            '␣'
+          )
+        )
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
+      null
+    )
 # Ersetzungen durch map_relation.csv zur Vereinheitlichung
 - op: core/text-transform
   engineConfig:
