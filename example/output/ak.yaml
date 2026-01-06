@@ -1233,7 +1233,7 @@ exportMODS: |-
     </titleInfo>
     <relatedItem displayLabel="Relation">
       <titleInfo>
-        <title>Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1]</title>
+        <title>Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1] / Verantwortlichkeit</title>
       </titleInfo>
       <recordInfo>
         <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">AK00000001</recordIdentifier>
@@ -1261,7 +1261,7 @@ relation_comment_mv:
 relation_id_mv:
   - AK00000001
 relation_text_mv:
-  - 'Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1]'
+  - 'Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1] / Verantwortlichkeit'
 relation_type_mv:
   - Relation
 schemaVersion: 0.9.1
@@ -1285,7 +1285,7 @@ exportMODS: |-
     </titleInfo>
     <relatedItem displayLabel="Relation">
       <titleInfo>
-        <title>Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1]</title>
+        <title>Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1] / Verantwortlichkeit</title>
       </titleInfo>
       <recordInfo>
         <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">AK00000001</recordIdentifier>
@@ -1313,7 +1313,7 @@ relation_comment_mv:
 relation_id_mv:
   - AK00000001
 relation_text_mv:
-  - 'Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1]'
+  - 'Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1] / Verantwortlichkeit'
 relation_type_mv:
   - Relation
 schemaVersion: 0.9.1
@@ -3093,6 +3093,7 @@ exportMODS: |-
     <titleInfo>
       <title>Statt etwas oder Der letzte Rank : Roman - 1. Auflage</title>
     </titleInfo>
+    <note type="statement of responsibility">Martin Walser</note>
     <location>
       <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
     </location>
@@ -3113,6 +3114,7 @@ filterType: Sonstiges
 schemaVersion: 0.9.1
 source: AK
 title: 'Statt etwas oder Der letzte Rank : Roman - 1. Auflage'
+titleResponsability: Martin Walser
 ---
 id: AK00000142
 display: 'Martin Walser: Statt etwas oder Der letzte Rank / Anton Philipp Knittel'
@@ -3130,7 +3132,7 @@ exportMODS: |-
     </titleInfo>
     <relatedItem displayLabel="Rezension von">
       <titleInfo>
-        <title>Statt etwas oder Der letzte Rank : Roman - 1. Auflage</title>
+        <title>Statt etwas oder Der letzte Rank : Roman - 1. Auflage / Martin Walser</title>
       </titleInfo>
       <recordInfo>
         <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">AK00000141</recordIdentifier>
@@ -3156,7 +3158,7 @@ filterType: Sonstiges
 relation_id_mv:
   - AK00000141
 relation_text_mv:
-  - 'Statt etwas oder Der letzte Rank : Roman - 1. Auflage'
+  - 'Statt etwas oder Der letzte Rank : Roman - 1. Auflage / Martin Walser'
 relation_type_mv:
   - Rezension von
 schemaVersion: 0.9.1

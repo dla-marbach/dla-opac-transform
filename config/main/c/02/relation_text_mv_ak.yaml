@@ -13,7 +13,7 @@
         forNonBlank(
           if(
             id.startsWith('AK'),
-            id.cross('ak','id')[0].cells['display'].value,
+            id.cross('ak','id')[0].cells['display'].value + forNonBlank(id.cross('ak','id')[0].cells['titleResponsability'].value, x, ' / ' + x, ''),
             if(
               id.startsWith('KS'),
               id.cross('ks','id')[0].cells['display'].value,
