@@ -3,7 +3,7 @@
   engineConfig:
     facets: []
     mode: row-based
-  baseColumnName: relation_id_mv
+  baseColumnName: id
   expression: |
     grel:
     with(
@@ -43,7 +43,11 @@
         )
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
 - op: core/text-transform
@@ -64,7 +68,11 @@
         )
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
 - op: core/text-transform
@@ -85,7 +93,11 @@
         )
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
 - op: core/text-transform
@@ -106,7 +118,11 @@
         )
       ).join('␟'),
       x,
-      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
       null
     )
 - op: core/column-removal
