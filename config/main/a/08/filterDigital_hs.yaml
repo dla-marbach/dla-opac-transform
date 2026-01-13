@@ -1,5 +1,6 @@
 # Filter Digital (Boolean)
 # true wenn ein digitales Objekt vorhanden ist, das nicht "/dbst02/" in der URL beinhaltet
+# true wenn categorySub = "Elektronisches Dokument"
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -8,19 +9,27 @@
   expression: |
     grel:
     if(
-      forNonBlank(
-        cells['digitalObject_hyperlink_mv'].value,
-        v,
-        filter(
-          cells['digitalObject_hyperlink_mv'].value.split('␟'),
+      or(
+        forNonBlank(
+          cells['digitalObject_hyperlink_mv'].value,
           v,
-          and(
-            not(v.contains('/dbst02/')),
-            v != '␣'
-          )
-        ).length(),
-        0
-      ) > 0,
+          filter(
+            cells['digitalObject_hyperlink_mv'].value.split('␟'),
+            v,
+            and(
+              not(v.contains('/dbst02/')),
+              v != '␣'
+            )
+          ).length(),
+          0
+        ) > 0,
+        forNonBlank(
+          cells['categorySub'].value,
+          v,
+          v == 'Elektronisches Dokument',
+          false
+        )
+      ),
       true,
       null
     )
