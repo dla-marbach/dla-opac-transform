@@ -1,0 +1,51 @@
+# Suche "Vom selben Bestandsbildner" auf Detailseite
+# Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF)
+# BF:searchCollectionCreator_id_mv und BF:searchCollectionCreator_display_mv wurden im vorherigen Schritt bereits gebildet (vgl. searchCollectionCreator_bf.yaml)
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      cells['collection_id_mv'].value,
+      collections,
+      forEach(
+        collections.split('␟'),
+        collection,
+        forNonBlank(
+          collection.cross('bf','id')[0].cells['searchCollectionCreator_id_mv'].value,
+          v,
+          v,
+          null
+        )
+      ).join('␟'),
+      null
+    )
+  newColumnName: searchCollectionCreator_id_mv
+  columnInsertIndex: 1
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      cells['collection_id_mv'].value,
+      collections,
+      forEach(
+        collections.split('␟'),
+        collection,
+        forNonBlank(
+          collection.cross('bf','id')[0].cells['searchCollectionCreator_display_mv'].value,
+          v,
+          v,
+          null
+        )
+      ).join('␟'),
+      null
+    )
+  newColumnName: searchCollectionCreator_display_mv
+  columnInsertIndex: 1

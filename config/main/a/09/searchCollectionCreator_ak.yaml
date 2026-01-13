@@ -1,0 +1,64 @@
+# Suche "Vom selben Bestandsbildner" auf Detailseite
+# Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF)
+# BF:searchCollectionCreator_id_mv wurde im vorherigen Schritt bereits gebildet (vgl. searchCollectionCreator_bf.yaml)
+# Mehrere Bestandsverknüpfungen pro Exemplar werden in item_collection_id_mv mit ␝ (U+241D) getrennt
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      cells['item_collection_id_mv'].value,
+      items,
+      forEach(
+        items.split('␟'),
+        collections,
+        forEach(
+          collections.split('␝'),
+          collection,
+          forNonBlank(
+            collection.cross('bf','id')[0].cells['searchCollectionCreator_id_mv'].value,
+            v,
+            v,
+            null
+          )
+        ).join('␟')
+      ).join('␟').split('␟').uniques().join('␟'),
+      null
+    ) 
+  newColumnName: searchCollectionCreator_id_mv
+  columnInsertIndex: 1
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        cells['searchCollectionCreator_id_mv'].value.split('␟'),
+        id,
+        forNonBlank(
+          if(
+            id.startsWith('KS'),
+            id.cross('ks','id')[0].cells['display'].value,
+            if(
+              id.startsWith('PE'),
+              id.cross('pe','id')[0].cells['display'].value,
+              id
+            )
+          ),
+          x,
+          x,
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+  newColumnName: searchCollectionCreator_display_mv
+  columnInsertIndex: 1

@@ -1,0 +1,58 @@
+# Suche "Vom selben Bestandsbildner" auf Detailseite
+# Personen/Körperschaften mit Relation „Über“
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['personAt_id_mv'].value,
+          v,
+          v,
+          null
+        ),
+        forNonBlank(
+          cells['corporationAt_id_mv'].value,
+          v,
+          v,
+          null
+        )
+      ].join('␟'),
+      x,
+      x,
+      null
+    )
+  newColumnName: searchCollectionCreator_id_mv
+  columnInsertIndex: 1
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['personAt_display_mv'].value,
+          v,
+          v,
+          null
+        ),
+        forNonBlank(
+          cells['corporationAt_display_mv'].value,
+          v,
+          v,
+          null
+        )
+      ].join('␟'),
+      x,
+      x,
+      null
+    )
+  newColumnName: searchCollectionCreator_display_mv
+  columnInsertIndex: 1

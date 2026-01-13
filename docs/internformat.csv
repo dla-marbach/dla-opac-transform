@@ -180,6 +180,8 @@ AK,scholarlyPublication_date_mv,texts,,3206,0 %,143,['2017']
 AK,scholarlyPublication_location_mv,texts,,21758,1 %,822,['München']
 AK,scholarlyPublication_text_mv,texts,,3354,0 %,726,['Freie Universität Berlin']
 AK,scholarlyPublication_type_mv,strings,,3397,0 %,47,['Dissertation']
+AK,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),,,,
+AK,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),,,,
 AK,source,string,,1788863,100 %,1,AK
 AK,statusCataloging,string,,833964,47 %,10,"f-fertig, i-fertig"
 AK,statusEditing,string,,1613027,90 %,13,Retrokonversion
@@ -344,6 +346,8 @@ BF,personAt_display_mv,texts,aus PE display,41397,85 %,26140,"['Grimm, Hans (187
 BF,personAt_id_mv,strings,,41397,85 %,26142,['PE00017920']
 BF,reference_text_mv,texts,,950,2 %,719,Jb. XXXIII 465
 BF,schemaVersion,string,,48569,100 %,1,0.10.0
+BF,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“,,,,
+BF,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“,,,,
 BF,source,string,,48569,100 %,1,BF
 BF,statusLoan,string,,48569,100 %,8,Am Standort
 BF,subject_display_mv,texts,aus TH display,1714,4 %,1302,['Deutschland <DDR>']
@@ -459,6 +463,8 @@ BI,personTo_id_mv,strings,,1064,3 %,489,['PE00250583']
 BI,photoNegativeNumber_mv,strings,,22252,73 %,29678,['M3109-0']
 BI,reference_text_mv,texts,,3309,11 %,2660,"Nicolin, Günther: Kunst zu Kafka. Bonn: bücherstube am theater 1974. S. 29."
 BI,schemaVersion,string,,30432,100 %,1,0.10.0
+BI,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),,,,
+BI,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),,,,
 BI,source,string,,30432,100 %,1,BI
 BI,statusEditing,string,,9546,31 %,3,Retrokonversion
 BI,statusLoan,string,,30432,100 %,5,Am Standort
@@ -575,6 +581,8 @@ HS,personTo_role_mv,strings,,714086,62 %,6,['[Adressat/in]']
 HS,photoNegativeNumber_mv,strings,,1026,0 %,1306,['Mikroform benutzen']
 HS,place_mv,texts,,761808,67 %,28859,['Stuttgart']
 HS,schemaVersion,string,,1143399,100 %,1,0.10.0
+HS,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),,,,
+HS,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),,,,
 HS,sortingKey,string,,1143395,100 %,246018,"SUHRKAMPVERLAG FRANKFURT, MAIN"
 HS,sortingKeySub,string,,914913,80 %,179462,"JUENGER, ERNST"
 HS,sortingTitleMain,string,,234601,21 %,180089,GEDICHTE
