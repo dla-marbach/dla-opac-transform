@@ -1,4 +1,4 @@
-# Bei type "Werk: Werk" die Angabe aus comment übernehmen und comment leeren
+# Bei type "Werk: Werk" die Angabe aus comment übernehmen
 - op: core/text-transform
   engineConfig:
     facets: []
@@ -25,6 +25,7 @@
       x,
       null
     )
+# comment leeren wenn es jetzt type entspricht
 - op: core/text-transform
   engineConfig:
     facets: []
@@ -36,15 +37,15 @@
         cells['relation_type_mv'].value.split('␟'),
         i,
         type,
-        if(
-          type == 'Werk: Werk',
-          '␣',
-          forNonBlank(
-            cells['relation_comment_mv'].value.split('␟')[i],
-            comment,
-            comment,
-            '␣'
-          )
+        forNonBlank(
+          cells['relation_comment_mv'].value.split('␟')[i],
+          comment,
+          if(
+            type == comment,
+            '␣',
+            comment
+          ),
+          '␣'
         )
       ).join('␟'),
       x,
