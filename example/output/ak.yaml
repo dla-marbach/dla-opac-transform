@@ -1080,6 +1080,8 @@ personBy_display_mv:
   - Person 1 (1982–2001)
 personBy_id_mv:
   - PE00000001
+personBy_role_mv:
+  - ␣
 relation_comment_mv:
   - GND-Relation 1 Anmerkung
   - GND-Relation 2 Anmerkung
@@ -1122,6 +1124,8 @@ personBy_display_mv:
   - Person 2 (1982–2001)
 personBy_id_mv:
   - PE00000002
+personBy_role_mv:
+  - ␣
 schemaVersion: 0.10.0
 source: AK
 title: Werk 2
@@ -1149,6 +1153,8 @@ personBy_display_mv:
   - Person 3 (1982–2001)
 personBy_id_mv:
   - PE00000003
+personBy_role_mv:
+  - ␣
 schemaVersion: 0.10.0
 source: AK
 title: Werk 3
@@ -1188,9 +1194,15 @@ filterType: Sonstiges
 schemaVersion: 0.10.0
 source: AK
 title: Titel über 1
+titleOther_language_mv:
+  - ␣
+  - ␣
 titleOther_text_mv:
   - Alternativtitel 1
   - Alternativtitel 2
+titleOther_type_mv:
+  - ␣
+  - ␣
 url: https://www.dla-marbach.de/find/opac/id/AK00000031
 ---
 id: AK00000032
@@ -1226,8 +1238,12 @@ filterType: Sonstiges
 schemaVersion: 0.10.0
 source: AK
 title: Titel über 2
+titleOther_language_mv:
+  - ␣
 titleOther_text_mv:
   - Alternativtitel
+titleOther_type_mv:
+  - ␣
 url: https://www.dla-marbach.de/find/opac/id/AK00000032
 ---
 id: AK00000041
@@ -3499,6 +3515,8 @@ url: https://www.dla-marbach.de/find/opac/id/AK00002001
 ---
 id: AK00002002
 display: 'Mappings: AdressatIn wird zu Adressat normalisiert'
+corporationByConference_id_mv:
+  - ␣
 corporationByConference_role_mv:
   - Adressat
 exportDC: |-
@@ -3925,7 +3943,7 @@ exportMODS: |-
 exportRIS: |-
   TY  - GEN
   ID  - AK00004002
-  split expects three strings, or one string, one regex, followed by an optional boolean
+  N1  - [1] Fußnote mit aDIS Zeilenumbruch Variante 1. [2] Fußnote mit aDIS Zeilenumbruch Variante 2. [3] Fußnote ohne Zeilenumbruch
   TI  - Drei Fußnoten mit aDIS Zeilenumbrüchen <br> und /SP/ die ersetzt werden
   UR  - https://www.dla-marbach.de/find/opac/id/AK00004002/
   ER  -
@@ -3936,6 +3954,8 @@ noteFootnote_text_mv:
     [1] Fußnote mit aDIS Zeilenumbruch Variante 1
     [2] Fußnote mit aDIS Zeilenumbruch Variante 2
     [3] Fußnote ohne Zeilenumbruch
+noteFootnote_type_mv:
+  - ␣
 schemaVersion: 0.10.0
 source: AK
 title: Drei Fußnoten mit aDIS Zeilenumbrüchen <br> und /SP/ die ersetzt werden
@@ -4154,6 +4174,9 @@ corporationBy_display_mv:
 corporationBy_id_mv:
   - KS00000001
   - KS00000002
+corporationBy_role_mv:
+  - ␣
+  - ␣
 creator_display_mv:
   - Körperschaft 1 (1982)
 creator_id_mv:
@@ -4238,6 +4261,9 @@ personBy_display_mv:
 personBy_id_mv:
   - PE00000001
   - PE00000002
+personBy_role_mv:
+  - ␣
+  - ␣
 schemaVersion: 0.10.0
 source: AK
 title: 'Fehlende Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: -) und zwei Körperschaften (1: urheber, 2: beteiligt)'
@@ -4260,6 +4286,9 @@ corporationBy_display_mv:
 corporationBy_id_mv:
   - KS00000001
   - KS00000002
+corporationBy_role_mv:
+  - ␣
+  - ␣
 creator_display_mv:
   - Person 2 (1982–2001)
   - Körperschaft 1 (1982)
@@ -4346,17 +4375,20 @@ personBy_display_mv:
 personBy_id_mv:
   - PE00000001
   - PE00000002
+personBy_role_mv:
+  - ␣
+  - ␣
 schemaVersion: 0.10.0
 source: AK
 title: 'Zusätzliche Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: urheber) und zwei Körperschaften (1: urheber, 2: beteiligt)'
 url: https://www.dla-marbach.de/find/opac/id/AK00006002
 ---
 id: AK00007001
-display: 'Platzhalter in Korrelationen: A0412 ohne AI412'
+display: 'Platzhalter in Korrelationen: 2x A0412 (A,B) ohne AI412'
 displayAddition1: A
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
-    <dc:title>Platzhalter in Korrelationen: A0412 ohne AI412</dc:title>
+    <dc:title>Platzhalter in Korrelationen: 2x A0412 (A,B) ohne AI412</dc:title>
     <dc:publisher>A</dc:publisher>
     <dc:publisher>B</dc:publisher>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00007001</dc:identifier>
@@ -4365,7 +4397,7 @@ exportDC: |-
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
     <titleInfo>
-      <title>Platzhalter in Korrelationen: A0412 ohne AI412</title>
+      <title>Platzhalter in Korrelationen: 2x A0412 (A,B) ohne AI412</title>
     </titleInfo>
     <originInfo eventType="publication">
       <publisher>A</publisher>
@@ -4384,7 +4416,7 @@ exportRIS: |-
   TY  - GEN
   ID  - AK00007001
   PB  - A; B
-  TI  - Platzhalter in Korrelationen: A0412 ohne AI412
+  TI  - Platzhalter in Korrelationen: 2x A0412 (A,B) ohne AI412
   UR  - https://www.dla-marbach.de/find/opac/id/AK00007001/
   ER  -
 filterSource: Bibliotheksmaterialien
@@ -4392,23 +4424,26 @@ filterType: Sonstiges
 publisherOriginal_text_mv:
   - A
   - B
+publisherOriginal_type_mv:
+  - ␣
+  - ␣
 schemaVersion: 0.10.0
 source: AK
-title: 'Platzhalter in Korrelationen: A0412 ohne AI412'
+title: 'Platzhalter in Korrelationen: 2x A0412 (A,B) ohne AI412'
 url: https://www.dla-marbach.de/find/opac/id/AK00007001
 ---
 id: AK00007002
-display: 'Platzhalter in Korrelationen: AI412 ohne A0412'
+display: 'Platzhalter in Korrelationen: 2x AI412 (A,B) ohne A0412'
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
-    <dc:title>Platzhalter in Korrelationen: AI412 ohne A0412</dc:title>
+    <dc:title>Platzhalter in Korrelationen: 2x AI412 (A,B) ohne A0412</dc:title>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00007002</dc:identifier>
     <dc:identifier>AK00007002</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
     <titleInfo>
-      <title>Platzhalter in Korrelationen: AI412 ohne A0412</title>
+      <title>Platzhalter in Korrelationen: 2x AI412 (A,B) ohne A0412</title>
     </titleInfo>
     <location>
       <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
@@ -4422,26 +4457,28 @@ exportMODS: |-
 exportRIS: |-
   TY  - GEN
   ID  - AK00007002
-  TI  - Platzhalter in Korrelationen: AI412 ohne A0412
+  TI  - Platzhalter in Korrelationen: 2x AI412 (A,B) ohne A0412
   UR  - https://www.dla-marbach.de/find/opac/id/AK00007002/
   ER  -
 filterSource: Bibliotheksmaterialien
 filterType: Sonstiges
+publisherOriginal_text_mv:
+  - ␣
+  - ␣
 publisherOriginal_type_mv:
   - A
-  - ␣
   - B
 schemaVersion: 0.10.0
 source: AK
-title: 'Platzhalter in Korrelationen: AI412 ohne A0412'
+title: 'Platzhalter in Korrelationen: 2x AI412 (A,B) ohne A0412'
 url: https://www.dla-marbach.de/find/opac/id/AK00007002
 ---
 id: AK00007003
-display: 'Platzhalter in Korrelationen: A0412 mit einem AI412'
+display: 'Platzhalter in Korrelationen: 5x A0412 (A,B,C,D,E) und 2x AI412 (B,D)'
 displayAddition1: A
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
-    <dc:title>Platzhalter in Korrelationen: A0412 mit einem AI412</dc:title>
+    <dc:title>Platzhalter in Korrelationen: 5x A0412 (A,B,C,D,E) und 2x AI412 (B,D)</dc:title>
     <dc:publisher>A</dc:publisher>
     <dc:publisher>B</dc:publisher>
     <dc:publisher>C</dc:publisher>
@@ -4453,7 +4490,7 @@ exportDC: |-
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
     <titleInfo>
-      <title>Platzhalter in Korrelationen: A0412 mit einem AI412</title>
+      <title>Platzhalter in Korrelationen: 5x A0412 (A,B,C,D,E) und 2x AI412 (B,D)</title>
     </titleInfo>
     <originInfo eventType="publication">
       <publisher>A</publisher>
@@ -4475,7 +4512,7 @@ exportRIS: |-
   TY  - GEN
   ID  - AK00007003
   PB  - A; B; C; D; E
-  TI  - Platzhalter in Korrelationen: A0412 mit einem AI412
+  TI  - Platzhalter in Korrelationen: 5x A0412 (A,B,C,D,E) und 2x AI412 (B,D)
   UR  - https://www.dla-marbach.de/find/opac/id/AK00007003/
   ER  -
 filterSource: Bibliotheksmaterialien
@@ -4488,34 +4525,34 @@ publisherOriginal_text_mv:
   - E
 publisherOriginal_type_mv:
   - ␣
+  - B
   - ␣
-  - ␣
-  - ␣
+  - D
   - ␣
 schemaVersion: 0.10.0
 source: AK
-title: 'Platzhalter in Korrelationen: A0412 mit einem AI412'
+title: 'Platzhalter in Korrelationen: 5x A0412 (A,B,C,D,E) und 2x AI412 (B,D)'
 url: https://www.dla-marbach.de/find/opac/id/AK00007003
 ---
 id: AK00007004
-display: 'Platzhalter in Korrelationen: 2x A0412 und 1x AI412'
-displayAddition1: A
+display: 'Platzhalter in Korrelationen: 5x AI412 (A,B,C,D,E) und 2x AO412 (B,D)'
+displayAddition1: B
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
-    <dc:title>Platzhalter in Korrelationen: 2x A0412 und 1x AI412</dc:title>
-    <dc:publisher>A</dc:publisher>
+    <dc:title>Platzhalter in Korrelationen: 5x AI412 (A,B,C,D,E) und 2x AO412 (B,D)</dc:title>
     <dc:publisher>B</dc:publisher>
+    <dc:publisher>D</dc:publisher>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00007004</dc:identifier>
     <dc:identifier>AK00007004</dc:identifier>
   </oai_dc:dc>
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
     <titleInfo>
-      <title>Platzhalter in Korrelationen: 2x A0412 und 1x AI412</title>
+      <title>Platzhalter in Korrelationen: 5x AI412 (A,B,C,D,E) und 2x AO412 (B,D)</title>
     </titleInfo>
     <originInfo eventType="publication">
-      <publisher>A</publisher>
       <publisher>B</publisher>
+      <publisher>D</publisher>
     </originInfo>
     <location>
       <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
@@ -4529,21 +4566,25 @@ exportMODS: |-
 exportRIS: |-
   TY  - GEN
   ID  - AK00007004
-  PB  - A; B
-  TI  - Platzhalter in Korrelationen: 2x A0412 und 1x AI412
+  PB  - B; D
+  TI  - Platzhalter in Korrelationen: 5x AI412 (A,B,C,D,E) und 2x AO412 (B,D)
   UR  - https://www.dla-marbach.de/find/opac/id/AK00007004/
   ER  -
 filterSource: Bibliotheksmaterialien
 filterType: Sonstiges
 publisherOriginal_text_mv:
-  - A
+  - ␣
   - B
+  - ␣
+  - D
 publisherOriginal_type_mv:
   - A
   - B
+  - C
+  - D
 schemaVersion: 0.10.0
 source: AK
-title: 'Platzhalter in Korrelationen: 2x A0412 und 1x AI412'
+title: 'Platzhalter in Korrelationen: 5x AI412 (A,B,C,D,E) und 2x AO412 (B,D)'
 url: https://www.dla-marbach.de/find/opac/id/AK00007004
 ---
 id: AK00099999
