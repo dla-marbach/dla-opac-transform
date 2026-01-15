@@ -49,11 +49,7 @@
         )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
 # Ersetzungen durch map_relation.csv zur Vereinheitlichung

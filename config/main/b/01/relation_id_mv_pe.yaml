@@ -14,7 +14,16 @@
           v.cross('lookup_gnd','gnd')[0].cells['id'].value,
           x,
           x,
-          v
+          if(
+            or(
+              v.startsWith('AK'),
+              v.startsWith('KS'),
+              v.startsWith('PE'),
+              v.startsWith('TH')
+            ),
+            v,
+            '␣'
+          )
         )
       ).join('␟'),
       x,

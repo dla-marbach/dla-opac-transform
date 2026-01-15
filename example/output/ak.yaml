@@ -1084,11 +1084,11 @@ relation_comment_mv:
   - GND-Relation 1 Anmerkung
   - GND-Relation 2 Anmerkung
 relation_id_mv:
-  - GND-Relation 1 ID
-  - GND-Relation 2 ID
+  - PE00000001
+  - KS00000001
 relation_text_mv:
-  - 'GND-Relation 1 Titel (Achtung: Wenn kein Werktitel dann freies Schlagwort)'
-  - 'GND-Relation 2 Titel (Achtung: Wenn kein Werktitel dann freies Schlagwort)'
+  - Person 1 (1982–2001)
+  - Körperschaft 1 (1982)
 relation_type_mv:
   - GND-Relation 1 Typ
   - GND-Relation 2 Typ
@@ -2628,6 +2628,8 @@ filterLocation_mv:
   - Berlin
 filterSource: Bibliotheksmaterialien
 filterType: Sonstiges
+relation_text_mv:
+  - Berlin [u.a.]
 relation_type_mv:
   - 'Geografikum: Fundort'
 schemaVersion: 0.10.0
@@ -3072,7 +3074,7 @@ exportRIS: |-
 filterSource: Bibliotheksmaterialien
 filterType: Sonstiges
 relation_id_mv:
-  - 114370410X
+  - ␣
   - AK00000131
 relation_text_mv:
   - 'Das doppelte Lottchen (Film : 2017)'
