@@ -31,7 +31,7 @@
     + forNonBlank(forEach(cells['filterFormContent_mv'].value.split('␟'), v, 'M3  - ' + v).join('\n'), x, x + '\n', '')
     + forNonBlank([ forNonBlank(cells['extent'].value, z, z, null), forNonBlank(filter(cells['extentIllustrations_mv'].value.split('␟'), v, v != '␣').join(', '), z, z, null), forNonBlank(cells['extentSupplements'].value, z, z, null) ].join('; '), x, 'N1  - ' + 'Umfang: ' + x.replace('\n','. ') + '\n', '')
     + forNonBlank(forEachIndex(cells['filterLocationType_mv'].value.split('␟'), i, v, 'N1  - ' + v.split('␝')[1].replace('nicht bestimmt', 'Ort') + ': ' + v.split('␝')[0]).join('\n'), x, x + '\n', '')
-    + forNonBlank(forEachIndex(cells['noteFootnote_text_mv'].value.split('␟'), i, v, if(v != '␣', 'N1  - ' + if(cells['noteFootnote_type_mv'].value.split('␟')[i] == '526n', 'Rezension von: ', if(cells['noteFootnote_type_mv'].value.split('␟')[i] == '519', 'Hochschulschrift: ', '')) + v.replace('\n','. '), null)).join('\n'), x, x + '\n', '')
+    + forNonBlank(forEachIndex(cells['noteFootnote_text_mv'].value.split('␟'), i, v, if(v != '␣', 'N1  - ' + forNonBlank(if(cells['noteFootnote_type_mv'].value.split('␟')[i] == '526n', 'Rezension von: ', if(cells['noteFootnote_type_mv'].value.split('␟')[i] == '519', 'Hochschulschrift: ', '')), z, z, '') + v.replace('\n','. '), null)).join('\n'), x, x + '\n', '')
     + forNonBlank(cells['note'].value, v, 'N1  - ' + 'Bemerkungen: ' + v.replace('\n','. ') + '\n', '')
     + forNonBlank(cells['publicationHistory'].value, v, 'N1  - ' + 'Erscheinungsverlauf: ' + v.replace('\n','. ') + '\n', '')
     + forNonBlank(forEach(cells['noteContent_mv'].value.split('␟'), v, if(v != '␣', 'N2  - ' + v.replace('\n','. '), null)).join('\n'), x, x + '\n', '')
