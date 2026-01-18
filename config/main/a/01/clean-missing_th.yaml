@@ -1,0 +1,106 @@
+# Verweise auf fehlende TH-Datensätze entfernen
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: child_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.split('␟'),
+        v,
+        forNonBlank(
+          v.cross('th','id')[0].cells['id'].value,
+          id,
+          id,
+          null
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: parent_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.split('␟'),
+        v,
+        forNonBlank(
+          v.cross('th','id')[0].cells['id'].value,
+          id,
+          id,
+          null
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: seeAlso_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.split('␟'),
+        v,
+        forNonBlank(
+          v.cross('th','id')[0].cells['id'].value,
+          id,
+          id,
+          null
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: useTerm_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.split('␟'),
+        v,
+        forNonBlank(
+          v.cross('th','id')[0].cells['id'].value,
+          id,
+          id,
+          null
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: usedFor_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.split('␟'),
+        v,
+        forNonBlank(
+          v.cross('th','id')[0].cells['id'].value,
+          id,
+          id,
+          null
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
