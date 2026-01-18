@@ -1,3 +1,4 @@
+# Anreicherung usedFor aus subject für die Suche (daher reduziert mit uniques)
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -10,11 +11,12 @@
         value.split('␟'),
         v,
         forNonBlank(
-          v.cross('th','id')[0].cells['useTerm_display_mv'].value,
+          v.cross('th','id')[0].cells['usedFor_display_mv'].value,
           x,
           x,
-          '␣')
-      ).join('␟'),
+          null
+        )
+      ).uniques().join('␟'),
       x,
       if(
         isNonBlank(x.replace(/␟|␣/,'')),
@@ -23,5 +25,5 @@
       ),
       null
     )
-  newColumnName: subject_useTerm_display_mv
+  newColumnName: subject_usedFor_mv
   columnInsertIndex: 2
