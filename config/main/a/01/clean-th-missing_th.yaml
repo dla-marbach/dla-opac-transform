@@ -1,4 +1,4 @@
-# Verweise auf fehlende TH-Datensätze entfernen
+# Links auf fehlende TH-Datensätze entfernen
 - op: core/text-transform
   engineConfig:
     facets: []
@@ -6,15 +6,10 @@
   expression: |
     grel:
     forNonBlank(
-      forEach(
+      filter(
         value.split('␟'),
         v,
-        forNonBlank(
-          v.cross('th','id')[0].cells['id'].value,
-          id,
-          id,
-          null
-        )
+        isNonBlank(v.cross('th','id')[0].cells['id'].value)
       ).join('␟'),
       x,
       x,
@@ -27,15 +22,10 @@
   expression: |
     grel:
     forNonBlank(
-      forEach(
+      filter(
         value.split('␟'),
         v,
-        forNonBlank(
-          v.cross('th','id')[0].cells['id'].value,
-          id,
-          id,
-          null
-        )
+        isNonBlank(v.cross('th','id')[0].cells['id'].value)
       ).join('␟'),
       x,
       x,
@@ -48,15 +38,10 @@
   expression: |
     grel:
     forNonBlank(
-      forEach(
+      filter(
         value.split('␟'),
         v,
-        forNonBlank(
-          v.cross('th','id')[0].cells['id'].value,
-          id,
-          id,
-          null
-        )
+        isNonBlank(v.cross('th','id')[0].cells['id'].value)
       ).join('␟'),
       x,
       x,
@@ -69,15 +54,10 @@
   expression: |
     grel:
     forNonBlank(
-      forEach(
+      filter(
         value.split('␟'),
         v,
-        forNonBlank(
-          v.cross('th','id')[0].cells['id'].value,
-          id,
-          id,
-          null
-        )
+        isNonBlank(v.cross('th','id')[0].cells['id'].value)
       ).join('␟'),
       x,
       x,
@@ -90,15 +70,10 @@
   expression: |
     grel:
     forNonBlank(
-      forEach(
+      filter(
         value.split('␟'),
         v,
-        forNonBlank(
-          v.cross('th','id')[0].cells['id'].value,
-          id,
-          id,
-          null
-        )
+        isNonBlank(v.cross('th','id')[0].cells['id'].value)
       ).join('␟'),
       x,
       x,
