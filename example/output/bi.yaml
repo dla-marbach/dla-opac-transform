@@ -19,7 +19,7 @@ corporationAbout_comment_mv:
 corporationAbout_display_mv:
   - Körperschaft 3
   - Körperschaft 4
-  - ␣
+  - KS99999999
 corporationAbout_id_mv:
   - KS00000003
   - KS00000004
@@ -31,7 +31,7 @@ corporationAbout_role_mv:
 corporationAt_display_mv:
   - Körperschaft 5
   - Körperschaft 6
-  - ␣
+  - KS99999999
 corporationAt_id_mv:
   - KS00000005
   - KS00000006
@@ -43,7 +43,7 @@ corporationBy_comment_mv:
 corporationBy_display_mv:
   - Körperschaft 1 (1982)
   - Körperschaft 2
-  - ␣
+  - KS99999999
 corporationBy_id_mv:
   - KS00000001
   - KS00000002
@@ -51,7 +51,7 @@ corporationBy_id_mv:
 corporationTo_display_mv:
   - Körperschaft 7
   - Körperschaft 8
-  - ␣
+  - KS99999999
 corporationTo_id_mv:
   - KS00000007
   - KS00000008
@@ -94,25 +94,30 @@ dimension_width_mv:
   - Maßangabe 2 Breite (cm)
 displayAddition1: Zeitraum 1 Anmerkung
 displayAddition2: 'Inventarnummer: Inventarnummer'
-displayName: Person 1 (1982–2001); Person 2 (1982–2001); Körperschaft 1 (1982); Körperschaft 2
+displayName: Person 1 (1982–2001); Person 2 (1982–2001); PE99999999; Körperschaft 1 (1982); Körperschaft 2; KS99999999
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Bild 1 [Objektart Unterkategorie]</dc:title>
     <dc:title>Titel Original</dc:title>
     <dc:title>Person 1 (1982-2001). Werk 1 (genre : 2000)</dc:title>
     <dc:title>Person 2 (1982-2001). Werk 2 (genre)</dc:title>
+    <dc:title>AK99999999</dc:title>
     <dc:creator>Person 1 (1982–2001)</dc:creator>
     <dc:creator>Person 2 (1982–2001)</dc:creator>
+    <dc:creator>PE99999999</dc:creator>
     <dc:creator>Person 7</dc:creator>
     <dc:creator>Person 8</dc:creator>
     <dc:creator>Körperschaft 1 (1982)</dc:creator>
     <dc:creator>Körperschaft 2</dc:creator>
+    <dc:creator>KS99999999</dc:creator>
     <dc:creator>Körperschaft 5</dc:creator>
     <dc:creator>Körperschaft 6</dc:creator>
     <dc:contributor>Person 3 (1982–2001)</dc:contributor>
     <dc:contributor>Person 4</dc:contributor>
+    <dc:contributor>PE99999999</dc:contributor>
     <dc:contributor>Körperschaft 7</dc:contributor>
     <dc:contributor>Körperschaft 8</dc:contributor>
+    <dc:contributor>KS99999999</dc:contributor>
     <dc:type>Objektart Hauptkategorie</dc:type>
     <dc:type>Objektart Unterkategorie</dc:type>
     <dc:type>Objektart 1</dc:type>
@@ -137,6 +142,8 @@ exportDC: |-
     <dc:subject>Körperschaft 4</dc:subject>
     <dc:subject>Werk 1</dc:subject>
     <dc:subject>Werk 2</dc:subject>
+    <dc:subject>PE99999999</dc:subject>
+    <dc:subject>KS99999999</dc:subject>
     <dc:coverage>Ort-Schlagwort 1</dc:coverage>
     <dc:coverage>Ort-Schlagwort 2</dc:coverage>
     <dc:source>https://www.dla-marbach.de/find/opac/id/BI00000002</dc:source>
@@ -177,6 +184,12 @@ exportMODS: |-
       </role>
     </name>
     <name type="personal">
+      <namePart>PE99999999</namePart>
+      <role>
+        <roleTerm type="code" authority="marcrelator">cre</roleTerm>
+      </role>
+    </name>
+    <name type="personal">
       <namePart>Person 3 (1982–2001)</namePart>
       <namePart type="date">1982 — 2001</namePart>
       <role>
@@ -190,6 +203,12 @@ exportMODS: |-
       </role>
     </name>
     <name type="personal">
+      <namePart>PE99999999</namePart>
+      <role>
+        <roleTerm type="code" authority="marcrelator">dte</roleTerm>
+      </role>
+    </name>
+    <name type="personal">
       <namePart>Person 7</namePart>
       <role>
         <roleTerm type="code" authority="marcrelator">fmo</roleTerm>
@@ -197,6 +216,12 @@ exportMODS: |-
     </name>
     <name type="personal">
       <namePart>Person 8</namePart>
+      <role>
+        <roleTerm type="code" authority="marcrelator">fmo</roleTerm>
+      </role>
+    </name>
+    <name type="personal">
+      <namePart>PE99999999</namePart>
       <role>
         <roleTerm type="code" authority="marcrelator">fmo</roleTerm>
       </role>
@@ -217,6 +242,12 @@ exportMODS: |-
       </role>
     </name>
     <name type="corporate">
+      <namePart>KS99999999</namePart>
+      <role>
+        <roleTerm type="code" authority="marcrelator">cre</roleTerm>
+      </role>
+    </name>
+    <name type="corporate">
       <namePart>Körperschaft 7</namePart>
       <role>
         <roleTerm type="code" authority="marcrelator">dte</roleTerm>
@@ -229,6 +260,12 @@ exportMODS: |-
       </role>
     </name>
     <name type="corporate">
+      <namePart>KS99999999</namePart>
+      <role>
+        <roleTerm type="code" authority="marcrelator">dte</roleTerm>
+      </role>
+    </name>
+    <name type="corporate">
       <namePart>Körperschaft 5</namePart>
       <role>
         <roleTerm type="code" authority="marcrelator">fmo</roleTerm>
@@ -236,6 +273,12 @@ exportMODS: |-
     </name>
     <name type="corporate">
       <namePart>Körperschaft 6</namePart>
+      <role>
+        <roleTerm type="code" authority="marcrelator">fmo</roleTerm>
+      </role>
+    </name>
+    <name type="corporate">
+      <namePart>KS99999999</namePart>
       <role>
         <roleTerm type="code" authority="marcrelator">fmo</roleTerm>
       </role>
@@ -304,6 +347,11 @@ exportMODS: |-
       </name>
     </subject>
     <subject>
+      <name type="personal">
+        <namePart>PE99999999</namePart>
+      </name>
+    </subject>
+    <subject>
       <name type="corporate">
         <namePart>Körperschaft 3</namePart>
       </name>
@@ -311,6 +359,11 @@ exportMODS: |-
     <subject>
       <name type="corporate">
         <namePart>Körperschaft 4</namePart>
+      </name>
+    </subject>
+    <subject>
+      <name type="corporate">
+        <namePart>KS99999999</namePart>
       </name>
     </subject>
     <relatedItem type="host">
@@ -359,10 +412,12 @@ exportRIS: |-
   TY  - GEN
   A2  - Person 1
   A2  - Person 2
+  A2  - PE99999999
   A2  - Person 3
   A2  - Person 4
   A2  - Körperschaft 7
   A2  - Körperschaft 8
+  A2  - KS99999999
   A2  - Person 5
   A2  - Person 6
   A2  - Körperschaft 3
@@ -374,6 +429,7 @@ exportRIS: |-
   AN  - Erwerbungsnummer
   AU  - Körperschaft 1
   AU  - Körperschaft 2
+  AU  - KS99999999
   CA  - Link Person 5 Anmerkung; Link Person 6 Anmerkung
   CN  - Mediennummer
   DB  - Z:Öffentlicher Bestand 1
@@ -405,6 +461,7 @@ exportRIS: |-
   N1  - Literatur: Quellenangabe
   OP  - Person 1 (1982-2001). Werk 1 (genre : 2000)
   OP  - Person 2 (1982-2001). Werk 2 (genre)
+  OP  - AK99999999
   RN  - Entstehung
   RN  - Sacherschließung
   RN  - Maßangabe Anmerkung
@@ -417,42 +474,59 @@ extent: Umfang
 filterAuthorityRelation_mv:
   - Person 1 (1982–2001)␝Von
   - Person 2 (1982–2001)␝Von
+  - PE99999999␝Von
   - Körperschaft 1 (1982)␝Von
   - Körperschaft 2␝Von
+  - KS99999999␝Von
   - Person 3 (1982–2001)␝An
   - Person 4␝An
+  - PE99999999␝An
   - Körperschaft 7␝An
   - Körperschaft 8␝An
+  - KS99999999␝An
   - Person 5␝Über
   - Person 6␝Über
+  - PE99999999␝Über
   - Körperschaft 3␝Über
   - Körperschaft 4␝Über
+  - KS99999999␝Über
   - Person 7␝Unter
   - Person 8␝Unter
+  - PE99999999␝Unter
   - Körperschaft 5␝Unter
   - Körperschaft 6␝Unter
+  - KS99999999␝Unter
 filterAuthorityRole_mv:
   - Person 1 (1982–2001)␝Link Person 1 Typ
   - Person 2 (1982–2001)␝Link Person 2 Typ
+  - PE99999999␝nicht bestimmt
   - Körperschaft 1 (1982)␝Verfasser/Urheber
   - Körperschaft 2␝Verfasser/Urheber
+  - KS99999999␝Verfasser/Urheber
   - Person 3 (1982–2001)␝Widmungsempfänger
   - Person 4␝Widmungsempfänger
+  - PE99999999␝Widmungsempfänger
   - Körperschaft 7␝Widmungsempfänger
   - Körperschaft 8␝Widmungsempfänger
+  - KS99999999␝Widmungsempfänger
   - Person 5␝Link Person 5 Typ
   - Person 6␝Link Person 6 Typ
   - Körperschaft 3␝Link Körperschaft 3 Typ
   - Körperschaft 4␝Link Körperschaft 4 Typ
+  - KS99999999␝nicht bestimmt
   - Person 7␝Bestandsbildner/Vorbesitzer
   - Person 8␝Bestandsbildner/Vorbesitzer
+  - PE99999999␝Bestandsbildner/Vorbesitzer
   - Körperschaft 5␝Bestandsbildner/Vorbesitzer
   - Körperschaft 6␝Bestandsbildner/Vorbesitzer
+  - KS99999999␝Bestandsbildner/Vorbesitzer
 filterAuthority_mv:
   - Person 1 (1982–2001)
   - Person 2 (1982–2001)
+  - PE99999999
   - Körperschaft 1 (1982)
   - Körperschaft 2
+  - KS99999999
   - Person 3 (1982–2001)
   - Person 4
   - Körperschaft 7
@@ -501,7 +575,7 @@ item_manifestation_id_mv: AK00000001
 library_display_mv:
   - Gesamttitel 1
   - Gesamttitel 2
-  - ␣
+  - AK99999999
 library_id_mv:
   - AK00000011
   - AK00000012
@@ -511,7 +585,7 @@ location_mv: Standort normiert
 manuscript_display_mv:
   - Handschrift 1
   - Handschrift 2 Noten
-  - ␣
+  - HS99999999
 manuscript_id_mv:
   - HS00000001
   - HS00000002
@@ -532,7 +606,7 @@ personAbout_comment_mv:
 personAbout_display_mv:
   - Person 5
   - Person 6
-  - ␣
+  - PE99999999
 personAbout_id_mv:
   - PE00000005
   - PE00000006
@@ -544,7 +618,7 @@ personAbout_role_mv:
 personAt_display_mv:
   - Person 7
   - Person 8
-  - ␣
+  - PE99999999
 personAt_id_mv:
   - PE00000007
   - PE00000008
@@ -556,7 +630,7 @@ personBy_comment_mv:
 personBy_display_mv:
   - Person 1 (1982–2001)
   - Person 2 (1982–2001)
-  - ␣
+  - PE99999999
 personBy_id_mv:
   - PE00000001
   - PE00000002
@@ -568,7 +642,7 @@ personBy_role_mv:
 personTo_display_mv:
   - Person 3 (1982–2001)
   - Person 4
-  - ␣
+  - PE99999999
 personTo_id_mv:
   - PE00000003
   - PE00000004
@@ -603,7 +677,7 @@ subjectLocation_comment_mv:
 subjectLocation_display_mv:
   - Ort-Schlagwort 1
   - Ort-Schlagwort 2
-  - ␣
+  - TH99999999
 subjectLocation_id_mv:
   - TH00000031
   - TH00000032
@@ -615,7 +689,7 @@ subjectLocation_type_mv:
 subject_display_mv:
   - Schlagwort 1
   - Schlagwort 2
-  - ␣
+  - TH99999999
 subject_id_mv:
   - TH00000021
   - TH00000022
@@ -631,7 +705,7 @@ usageRestriction: Benutzungsbeschränkung
 work_display_mv:
   - 'Person 1 (1982-2001). Werk 1 (genre : 2000)'
   - Person 2 (1982-2001). Werk 2 (genre)
-  - ␣
+  - AK99999999
 work_id_mv:
   - AK00000021
   - AK00000022
@@ -1109,9 +1183,12 @@ dimension_width_mv:
   - ' 14.4'
 displayAddition1: um 1840
 displayAddition2: 'Inventarnummer: B 1991.K 0185'
+displayName: PE00276308
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Hall. Michaelskirche [Druckgraphik]</dc:title>
+    <dc:creator>PE00276308</dc:creator>
+    <dc:creator>PE00074121</dc:creator>
     <dc:type>Druckgrafik</dc:type>
     <dc:date>1848-1852</dc:date>
     <dc:format> 15.0 x  23.3</dc:format>
@@ -1128,6 +1205,18 @@ exportMODS: |-
     <titleInfo>
       <title>Hall. Michaelskirche [Druckgraphik]</title>
     </titleInfo>
+    <name type="personal">
+      <namePart>PE00276308</namePart>
+      <role>
+        <roleTerm type="text">Urheber/in</roleTerm>
+      </role>
+    </name>
+    <name type="personal">
+      <namePart>PE00074121</namePart>
+      <role>
+        <roleTerm type="code" authority="marcrelator">fmo</roleTerm>
+      </role>
+    </name>
     <genre>Druckgrafik</genre>
     <originInfo eventType="production">
       <dateCreated>1848-1852</dateCreated>
@@ -1157,6 +1246,8 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
+  A2  - PE00074121
+  AU  - PE00276308
   CN  - BI000333901
   DA  - 1848
   DA  - 1852
@@ -1171,6 +1262,15 @@ exportRIS: |-
   TI  - Hall. Michaelskirche [Druckgraphik]
   UR  - https://www.dla-marbach.de/find/opac/id/BI00033390/
   ER  -
+filterAuthorityRelation_mv:
+  - PE00276308␝Von
+  - PE00074121␝Unter
+filterAuthorityRole_mv:
+  - PE00276308␝Verfasser/Urheber
+  - PE00074121␝Bestandsbildner/Vorbesitzer
+filterAuthority_mv:
+  - PE00276308
+  - PE00074121
 filterDatePoint_mv:
   - "1848-01-01T00:00:00Z"
   - "1852-01-01T00:00:00Z"
@@ -1185,11 +1285,16 @@ inventoryNumber: B 1991.K 0185
 location_mv: Graphik Ansichten
 material: Stahlstich
 mediaNumber: BI000333901
+parent_display_mv: BI00028179
 parent_id_mv: BI00028179
+personAt_display_mv:
+  - PE00074121
 personAt_id_mv:
   - PE00074121
 personBy_comment_mv:
   - ␣
+personBy_display_mv:
+  - PE00276308
 personBy_id_mv:
   - PE00276308
 personBy_role_mv:
@@ -1201,6 +1306,9 @@ statusPreservation: Blatt stockfleckig, fleckig u. angeschmutzt.
 subjectLocation_comment_mv:
   - ␣
   - ␣
+subjectLocation_display_mv:
+  - TH00154395
+  - TH00227392
 subjectLocation_id_mv:
   - TH00154395
   - TH00227392

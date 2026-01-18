@@ -20,6 +20,9 @@ AK00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
       <roleTerm type=""text"">Behandelte Person/Körperschaft</roleTerm>
     </role>
   </name>
+  <name type=""personal"">
+    <namePart>PE99999999</namePart>
+  </name>
   <name type=""corporate"">
     <namePart>Körperschaft 1 (1982)</namePart>
     <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
@@ -36,6 +39,9 @@ AK00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
     </role>
   </name>
   <name type=""corporate"">
+    <namePart>KS99999999</namePart>
+  </name>
+  <name type=""corporate"">
     <namePart>Konferenz 1</namePart>
     <role>
       <roleTerm type=""text"">Link Konferenz 1 Typ</roleTerm>
@@ -46,6 +52,9 @@ AK00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
     <role>
       <roleTerm type=""text"">Link Konferenz 2 Typ</roleTerm>
     </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>KS99999999</namePart>
   </name>
   <name type=""personal"">
     <namePart>Person 1 (1982–2001)</namePart>
@@ -176,6 +185,11 @@ AK00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
     </name>
   </subject>
   <subject>
+    <name type=""personal"">
+      <namePart>PE99999999</namePart>
+    </name>
+  </subject>
+  <subject>
     <name type=""corporate"">
       <namePart>Körperschaft 3</namePart>
     </name>
@@ -185,8 +199,14 @@ AK00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
       <namePart>Körperschaft 4</namePart>
     </name>
   </subject>
+  <subject>
+    <name type=""corporate"">
+      <namePart>KS99999999</namePart>
+    </name>
+  </subject>
   <classification authority=""DE-Mar1"">Sacherschließungskette 1</classification>
   <classification authority=""DE-Mar1"">Sacherschließungskette 2</classification>
+  <classification authority=""DE-Mar1"">SE99999999</classification>
   <relatedItem type=""host"">
     <titleInfo>
       <title>Gesamttitel 1</title>
@@ -204,6 +224,9 @@ AK00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
     </recordInfo>
   </relatedItem>
   <relatedItem type=""host"">
+    <titleInfo>
+      <title>AK99999999</title>
+    </titleInfo>
     <recordInfo>
       <recordIdentifier source=""https://www.dla-marbach.de/find/opac/id/"">AK99999999</recordIdentifier>
     </recordInfo>
@@ -769,6 +792,9 @@ AK00000111,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http
       <roleTerm type=""text"">Behandelte Person/Körperschaft</roleTerm>
     </role>
   </name>
+  <name type=""personal"">
+    <namePart>PE99999999</namePart>
+  </name>
   <name type=""corporate"">
     <namePart>Körperschaft 1 (1982)</namePart>
     <nameIdentifier type=""gnd"">GND-Nummer 1</nameIdentifier>
@@ -785,6 +811,9 @@ AK00000111,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http
     </role>
   </name>
   <name type=""corporate"">
+    <namePart>KS99999999</namePart>
+  </name>
+  <name type=""corporate"">
     <namePart>Konferenz 1</namePart>
     <role>
       <roleTerm type=""text"">Link Konferenz 1 Typ</roleTerm>
@@ -795,6 +824,9 @@ AK00000111,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http
     <role>
       <roleTerm type=""text"">Link Konferenz 2 Typ</roleTerm>
     </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>KS99999999</namePart>
   </name>
   <relatedItem type=""host"">
     <titleInfo>
@@ -1433,6 +1465,12 @@ BF00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
       <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
     </role>
   </name>
+  <name type=""personal"">
+    <namePart>PE99999999</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
+    </role>
+  </name>
   <name type=""corporate"">
     <namePart>Körperschaft 5</namePart>
     <role>
@@ -1441,6 +1479,12 @@ BF00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
   </name>
   <name type=""corporate"">
     <namePart>Körperschaft 6</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>KS99999999</namePart>
     <role>
       <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
     </role>
@@ -1488,6 +1532,11 @@ BF00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
     </name>
   </subject>
   <subject>
+    <name type=""personal"">
+      <namePart>PE99999999</namePart>
+    </name>
+  </subject>
+  <subject>
     <name type=""corporate"">
       <namePart>Körperschaft 3</namePart>
     </name>
@@ -1495,6 +1544,11 @@ BF00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
   <subject>
     <name type=""corporate"">
       <namePart>Körperschaft 4</namePart>
+    </name>
+  </subject>
+  <subject>
+    <name type=""corporate"">
+      <namePart>KS99999999</namePart>
     </name>
   </subject>
   <relatedItem type=""host"">
@@ -1600,6 +1654,12 @@ BI00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
     </role>
   </name>
   <name type=""personal"">
+    <namePart>PE99999999</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
     <namePart>Person 3 (1982–2001)</namePart>
     <namePart type=""date"">1982 — 2001</namePart>
     <role>
@@ -1613,6 +1673,12 @@ BI00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
     </role>
   </name>
   <name type=""personal"">
+    <namePart>PE99999999</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">dte</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
     <namePart>Person 7</namePart>
     <role>
       <roleTerm type=""code"" authority=""marcrelator"">fmo</roleTerm>
@@ -1620,6 +1686,12 @@ BI00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
   </name>
   <name type=""personal"">
     <namePart>Person 8</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">fmo</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
+    <namePart>PE99999999</namePart>
     <role>
       <roleTerm type=""code"" authority=""marcrelator"">fmo</roleTerm>
     </role>
@@ -1640,6 +1712,12 @@ BI00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
     </role>
   </name>
   <name type=""corporate"">
+    <namePart>KS99999999</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">cre</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
     <namePart>Körperschaft 7</namePart>
     <role>
       <roleTerm type=""code"" authority=""marcrelator"">dte</roleTerm>
@@ -1652,6 +1730,12 @@ BI00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
     </role>
   </name>
   <name type=""corporate"">
+    <namePart>KS99999999</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">dte</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
     <namePart>Körperschaft 5</namePart>
     <role>
       <roleTerm type=""code"" authority=""marcrelator"">fmo</roleTerm>
@@ -1659,6 +1743,12 @@ BI00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
   </name>
   <name type=""corporate"">
     <namePart>Körperschaft 6</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">fmo</roleTerm>
+    </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>KS99999999</namePart>
     <role>
       <roleTerm type=""code"" authority=""marcrelator"">fmo</roleTerm>
     </role>
@@ -1727,6 +1817,11 @@ BI00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
     </name>
   </subject>
   <subject>
+    <name type=""personal"">
+      <namePart>PE99999999</namePart>
+    </name>
+  </subject>
+  <subject>
     <name type=""corporate"">
       <namePart>Körperschaft 3</namePart>
     </name>
@@ -1734,6 +1829,11 @@ BI00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
   <subject>
     <name type=""corporate"">
       <namePart>Körperschaft 4</namePart>
+    </name>
+  </subject>
+  <subject>
+    <name type=""corporate"">
+      <namePart>KS99999999</namePart>
     </name>
   </subject>
   <relatedItem type=""host"">
@@ -1925,6 +2025,18 @@ BI00033390,2025-02-13,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
   <titleInfo>
     <title>Hall. Michaelskirche [Druckgraphik]</title>
   </titleInfo>
+  <name type=""personal"">
+    <namePart>PE00276308</namePart>
+    <role>
+      <roleTerm type=""text"">Urheber/in</roleTerm>
+    </role>
+  </name>
+  <name type=""personal"">
+    <namePart>PE00074121</namePart>
+    <role>
+      <roleTerm type=""code"" authority=""marcrelator"">fmo</roleTerm>
+    </role>
+  </name>
   <genre>Druckgrafik</genre>
   <originInfo eventType=""production"">
     <dateCreated>1848-1852</dateCreated>
@@ -1985,6 +2097,9 @@ HS00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
     </role>
   </name>
   <name type=""personal"">
+    <namePart>PE99999999</namePart>
+  </name>
+  <name type=""personal"">
     <namePart>Person 3 (1982–2001)</namePart>
     <namePart type=""date"">1982 — 2001</namePart>
     <role>
@@ -1996,6 +2111,9 @@ HS00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
     <role>
       <roleTerm type=""text"">Link Person 4 Typ</roleTerm>
     </role>
+  </name>
+  <name type=""personal"">
+    <namePart>PE99999999</namePart>
   </name>
   <name type=""corporate"">
     <namePart>Körperschaft 1 (1982)</namePart>
@@ -2013,6 +2131,9 @@ HS00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
     </role>
   </name>
   <name type=""corporate"">
+    <namePart>KS99999999</namePart>
+  </name>
+  <name type=""corporate"">
     <namePart>Körperschaft 7</namePart>
     <role>
       <roleTerm type=""text"">Link Körperschaft 7 Typ</roleTerm>
@@ -2023,6 +2144,9 @@ HS00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
     <role>
       <roleTerm type=""text"">Link Körperschaft 8 Typ</roleTerm>
     </role>
+  </name>
+  <name type=""corporate"">
+    <namePart>KS99999999</namePart>
   </name>
   <typeOfResource manuscript=""yes"">Handschrift</typeOfResource>
   <genre>Hauptgattung</genre>
@@ -2086,6 +2210,11 @@ HS00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
     </name>
   </subject>
   <subject>
+    <name type=""personal"">
+      <namePart>PE99999999</namePart>
+    </name>
+  </subject>
+  <subject>
     <name type=""corporate"">
       <namePart>Körperschaft 3</namePart>
     </name>
@@ -2093,6 +2222,11 @@ HS00000001,2023-06-06,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:
   <subject>
     <name type=""corporate"">
       <namePart>Körperschaft 4</namePart>
+    </name>
+  </subject>
+  <subject>
+    <name type=""corporate"">
+      <namePart>KS99999999</namePart>
     </name>
   </subject>
   <relatedItem type=""host"">

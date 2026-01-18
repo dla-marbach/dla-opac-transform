@@ -33,14 +33,11 @@
           v.cross('ks','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: corporationAbout_display_mv
@@ -60,14 +57,11 @@
           v.cross('ks','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: corporationBy_display_mv
@@ -87,14 +81,11 @@
           v.cross('ks','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: corporationTo_display_mv
@@ -114,14 +105,11 @@
           v.cross('mm','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: digitalObject_display_mv
@@ -141,14 +129,11 @@
           v.cross('bf','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: collection_display_mv
@@ -168,14 +153,11 @@
           v.cross('au','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: item_display_mv
@@ -195,14 +177,11 @@
           v.cross('ak','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: item_manifestation_display_mv
@@ -241,14 +220,11 @@
           v.cross('hs','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: parent_display_mv
@@ -268,14 +244,11 @@
           v.cross('pe','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: personAbout_display_mv
@@ -295,14 +268,11 @@
           v.cross('pe','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: personBy_display_mv
@@ -322,14 +292,11 @@
           v.cross('pe','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: personTo_display_mv
@@ -349,14 +316,11 @@
           v.cross('th','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: subject_display_mv
@@ -376,14 +340,11 @@
           v.cross('ak','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: work_display_mv

@@ -14,14 +14,11 @@
           v.cross('se','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: classification_display_mv
@@ -41,14 +38,11 @@
           v.cross('ks','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: corporationAt_display_mv
@@ -68,14 +62,11 @@
           v.cross('bf','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: collection_display_mv
@@ -95,14 +86,11 @@
           v.cross('mm','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: digitalObject_display_mv
@@ -141,14 +129,11 @@
           v.cross('pe','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: personAt_display_mv

@@ -14,14 +14,11 @@
           v.cross('th','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: child_display_mv
@@ -41,14 +38,11 @@
           v.cross('th','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: parent_display_mv
@@ -68,14 +62,11 @@
           v.cross('th','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: seeAlso_display_mv
@@ -95,14 +86,11 @@
           v.cross('th','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: usedFor_display_mv
@@ -122,14 +110,11 @@
           v.cross('th','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: useTerm_display_mv

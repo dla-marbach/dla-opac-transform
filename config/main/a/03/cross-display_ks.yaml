@@ -14,14 +14,11 @@
           v.cross('ks','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: host_display_mv
@@ -41,14 +38,11 @@
           v.cross('ks','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: nameFormerOrLater_display_mv
@@ -68,14 +62,11 @@
           v.cross('ks','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: nameTemporary_display_mv
@@ -95,14 +86,11 @@
           v.cross('ks','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: parent_display_mv
@@ -122,14 +110,11 @@
           v.cross('ks','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: predecessor_display_mv
@@ -149,14 +134,11 @@
           v.cross('ks','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: seeAlso_display_mv
@@ -176,14 +158,11 @@
           v.cross('ks','id')[0].cells['display'].value,
           x,
           x,
-          '␣')
+          v
+        )
       ).join('␟'),
       x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
+      x,
       null
     )
   newColumnName: successor_display_mv

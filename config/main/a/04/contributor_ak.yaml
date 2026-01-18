@@ -1,6 +1,6 @@
-# Bündelung aller Urheber in einem Feld
+# Bündelung aller (weiteren) Beteiligten in einem Feld
 # aus personBy, corporationBy, corporationByConference und corporationByTerritory
-# wenn das zugehörige _creator Feld "creator" beinhaltet
+# wenn das zugehörige _creator Feld "contributor" beinhaltet
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -18,9 +18,9 @@
             i,
             v,
             if(
-              v == 'creator',
+              v == 'contributor',
               forNonBlank(
-                cells['personBy_display_mv'].value.split('␟')[i],
+                cells['personBy_id_mv'].value.split('␟')[i],
                 y,
                 y,
                 null
@@ -38,9 +38,9 @@
             i,
             v,
             if(
-              v == 'creator',
+              v == 'contributor',
               forNonBlank(
-                cells['corporationBy_display_mv'].value.split('␟')[i],
+                cells['corporationBy_id_mv'].value.split('␟')[i],
                 y,
                 y,
                 null
@@ -58,9 +58,9 @@
             i,
             v,
             if(
-              v == 'creator',
+              v == 'contributor',
               forNonBlank(
-                cells['corporationByConference_display_mv'].value.split('␟')[i],
+                cells['corporationByConference_id_mv'].value.split('␟')[i],
                 y,
                 y,
                 null
@@ -78,9 +78,9 @@
             i,
             v,
             if(
-              v == 'creator',
+              v == 'contributor',
               forNonBlank(
-                cells['corporationByTerritory_display_mv'].value.split('␟')[i],
+                cells['corporationByTerritory_id_mv'].value.split('␟')[i],
                 y,
                 y,
                 null
@@ -99,5 +99,41 @@
       ).uniques().join('␟'),
       null
     )
-  newColumnName: creator_display_mv
+  newColumnName: contributor_id_mv
+  columnInsertIndex: 2
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: contributor_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.split('␟'),
+        id,
+        forNonBlank(
+          if(
+            id.startsWith('KS'),
+            id.cross('ks','id')[0].cells['display'].value,
+            if(
+              id.startsWith('PE'),
+              id.cross('pe','id')[0].cells['display'].value,
+              if(
+                id.startsWith('TH'),
+                id.cross('th','id')[0].cells['display'].value,
+                id
+              )
+            )
+          ),
+          x,
+          x,
+          id
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+  newColumnName: contributor_display_mv
   columnInsertIndex: 2
