@@ -22,9 +22,14 @@
               ),
               forNonBlank(
                 forEach(
-                    cells['relation_text_mv'].value.split('␟')[i].split(';'),
-                    x,
-                    x.replace('ohne Ort','').replace('[u.a.]','').replace('und andere','').trim()
+                  cells['relation_text_mv'].value.split('␟')[i].split(';'),
+                  x,
+                  forNonBlank(
+                    x.replace('␣','').replace('ohne Ort','').replace('[u.a.]','').replace('und andere','').trim(),
+                    xx,
+                    xx,
+                    null
+                  )
                 ).join('␟'),
                 z,
                 z,

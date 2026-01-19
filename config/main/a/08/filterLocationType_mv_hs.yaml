@@ -16,7 +16,12 @@
               forEach(
                 v.split(';'),
                 x,
-                x.replace('ohne Ort','').replace('[u.a.]','').replace('und andere','').trim()
+                forNonBlank(
+                  x.replace('␣','').replace('ohne Ort','').replace('[u.a.]','').replace('und andere','').trim(),
+                  xx,
+                  xx,
+                  null
+                )
               ).join('␟'),
               z,
               forEach(
@@ -44,7 +49,12 @@
                   forEach(
                     v.cross('th','id')[0].cells['title'].value.split(';'),
                     x,
-                    x.replace('␣','').replace('ohne Ort','').replace('[u.a.]','').replace('und andere','').trim()
+                    forNonBlank(
+                      x.replace('␣','').replace('ohne Ort','').replace('[u.a.]','').replace('und andere','').trim(),
+                      xx,
+                      xx,
+                      null
+                    )
                   ).join('␟'),
                   z,
                   forEach(
