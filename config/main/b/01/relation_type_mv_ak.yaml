@@ -13,7 +13,7 @@
         if(
           type == 'Werk: Werk',
           forNonBlank(
-            cells['relation_comment_mv'].value.split('␟')[i],
+            cells['relation_comment_mv'].value.split('␟')[i].replace('␣',''),
             comment,
             comment,
             type
