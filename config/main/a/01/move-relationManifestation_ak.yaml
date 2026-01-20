@@ -1,0 +1,173 @@
+# führende Felder: relationManifestation_id_mv und relation_type_mv
+# über Index dieser Felder iterieren, um sicherzustellen, dass in Beziehung stehende Felder weiterhin gleich oft belegt sind
+# relationManifestation_id_mv in relation_id_mv kopieren
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: list
+      expression: isNonBlank(value)
+      columnName: relationManifestation_id_mv
+      selection:
+      - v:
+          v: true
+  columnName: relation_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['relation_type_mv'].value,
+          x,
+          forEachIndex(
+            x.split('␟'),
+            i,
+            z,
+            forNonBlank(
+              cells['relation_id_mv'].value.split('␟')[i],
+              v,
+              v,
+              '␣'
+            )
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['relationManifestation_id_mv'].value,
+          x,
+          forEachIndex(
+            x.split('␟'),
+            i,
+            z,
+            forNonBlank(
+              cells['relationManifestation_id_mv'].value.split('␟')[i],
+              v,
+              v,
+              '␣'
+            )
+          ).join('␟'),
+          null
+        )
+      ].join('␟'),
+      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
+      null
+    )
+# relationManifestation_type_mv in relation_type_mv kopieren
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: list
+      expression: isNonBlank(value)
+      columnName: relationManifestation_type_mv
+      selection:
+      - v:
+          v: true
+  columnName: relation_type_mv
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['relation_type_mv'].value,
+          x,
+          forEachIndex(
+            x.split('␟'),
+            i,
+            z,
+            forNonBlank(
+              cells['relation_type_mv'].value.split('␟')[i],
+              v,
+              v,
+              '␣'
+            )
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(
+          cells['relationManifestation_id_mv'].value,
+          x,
+          forEachIndex(
+            x.split('␟'),
+            i,
+            z,
+            forNonBlank(
+              cells['relationManifestation_type_mv'].value.split('␟')[i],
+              v,
+              v,
+              '␣'
+            )
+          ).join('␟'),
+          null
+        )
+      ].join('␟'),
+      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
+      null
+    )
+# relationManifestation_id_mv und relationManifestation_type_mv löschen
+- op: core/column-removal
+  columnName: relationManifestation_id_mv
+- op: core/column-removal
+  columnName: relationManifestation_type_mv
+# Platzhalterzeichen in relation_text_mv einfügen
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_text_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEachIndex(
+        cells['relation_type_mv'].value.split('␟'),
+        i,
+        z,
+        forNonBlank(
+          value.split('␟')[i],
+          v,
+          v,
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
+      value
+    )
+# Platzhalterzeichen in relation_comment_mv einfügen
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_comment_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEachIndex(
+        cells['relation_type_mv'].value.split('␟'),
+        i,
+        z,
+        forNonBlank(
+          value.split('␟')[i],
+          v,
+          v,
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
+      value
+    )
