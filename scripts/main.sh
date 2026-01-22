@@ -113,19 +113,13 @@ for set in ${sets[@]}; do
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 
-# CSV
-for set in ${sets[@]}; do
-    orcli export csv "${set}" --output "${DIR}/tmp/${set}.csv" &
-    pids+=($!)
-done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
-
 # JSON-Lines
 for set in ${sets[@]}; do
     orcli export jsonl "${set}" --separator "␟" --output "${DIR}/tmp/${set}.jsonl" &
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 
-# export DC für OAI
+# DC für OAI
 for set in ak bf bi hs; do
     orcli export csv "${set}" \
     --select id,dateModified,exportDC \
@@ -135,7 +129,7 @@ for set in ak bf bi hs; do
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 head -n 1 "${DIR}"/tmp/tmp-oai-dc_ak.csv > "${DIR}"/tmp/oai-dc.csv && tail -n+2 -q "${DIR}"/tmp/tmp-oai-dc_*.csv >> "${DIR}"/tmp/oai-dc.csv
 
-# export MODS für OAI
+# MODS für OAI
 for set in ak bf bi hs; do
     orcli export csv "${set}" \
     --select id,dateModified,exportMODS \
@@ -144,3 +138,20 @@ for set in ak bf bi hs; do
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 head -n 1 "${DIR}"/tmp/tmp-oai-mods_ak.csv > "${DIR}"/tmp/oai-mods.csv && tail -n+2 -q "${DIR}"/tmp/tmp-oai-mods_*.csv >> "${DIR}"/tmp/oai-mods.csv
+
+# export-Spalten löschen
+grel='[
+{ "op": "core/column-removal", "columnName": "exportDC" },
+{ "op": "core/column-removal", "columnName": "exportMODS" },
+{ "op": "core/column-removal", "columnName": "exportRIS" }
+]'
+for set in ak bf bi hs; do
+    echo "${grel}" | orcli transform "${set}" &
+    pids+=($!)
+done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+
+# CSV
+for set in ${sets[@]}; do
+    orcli export csv "${set}" --output "${DIR}/tmp/${set}.csv" &
+    pids+=($!)
+done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
