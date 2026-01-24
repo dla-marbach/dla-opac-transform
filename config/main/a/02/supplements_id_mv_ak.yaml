@@ -1,0 +1,106 @@
+# zugeordnete Materialien aus BI und HS, ggf. über Exemplarsätze
+# Cross-Zielfelder BI library_id_mv, item_id_mv und HS item_id_mv sind in der Praxis nicht mehrfachbelegt
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['id'].value,
+          ids,
+          forNonBlank(
+            forEach(
+              ids.split('␟'),
+              id,
+              forNonBlank(
+                forEach(
+                  item.cross('bi', 'library_id_mv'),
+                  r,
+                  forNonBlank(
+                    r.cells['id'].value,
+                    v,
+                    v,
+                    null
+                  )
+                ).join('␟'),
+                x,
+                x,
+                null
+              )
+            ).join('␟'),
+            y,
+            y,
+            null
+          ),
+          null
+        ),
+        forNonBlank(
+          cells['item_id_mv'].value,
+          items,
+          forNonBlank(
+            forEach(
+              items.split('␟'),
+              item,
+              forNonBlank(
+                forEach(
+                  item.cross('bi', 'item_id_mv'),
+                  r,
+                  forNonBlank(
+                    r.cells['id'].value,
+                    v,
+                    v,
+                    null
+                  )
+                ).join('␟'),
+                x,
+                x,
+                null
+              )
+            ).join('␟'),
+            y,
+            y,
+            null
+          ),
+          null
+        ),
+        forNonBlank(
+          cells['item_id_mv'].value,
+          items,
+          forNonBlank(
+            forEach(
+              items.split('␟'),
+              item,
+              forNonBlank(
+                forEach(
+                  item.cross('hs', 'item_id_mv'),
+                  r,
+                  forNonBlank(
+                    r.cells['id'].value,
+                    v,
+                    v,
+                    null
+                  )
+                ).join('␟'),
+                x,
+                x,
+                null
+              )
+            ).join('␟'),
+            y,
+            y,
+            null
+          ),
+          null
+        )
+      ].join('␟'),
+      z,
+      z,
+      null
+    )
+  newColumnName: supplements_id_mv
+  columnInsertIndex: 2
+  
