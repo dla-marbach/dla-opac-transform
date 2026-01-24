@@ -1,0 +1,78 @@
+# Benutzungshinweis
+- op: core/column-addition
+  engineConfig:
+    mode: row-based
+    facets:
+      - mode: regex
+        caseSensitive: false
+        query: ^benutzbar$
+        type: text
+        columnName: usageRestriction
+  newColumnName: usageRestrictionNote
+  columnInsertIndex: 2
+  baseColumnName: id
+  expression: |
+    grel:
+    'benutzbar' + '\n'
+    + 'Die Benutzung ist nach vorheriger Terminabsprache möglich. Bitte wenden Sie sich nach der Bestellung an das Referat Bilder und Objekte.' + '\n'
+    + 'E-Mail: bilder-und-objekte@dla-marbach.de'
+- op: core/text-transform
+  engineConfig:
+    mode: row-based
+    facets:
+      - mode: regex
+        caseSensitive: false
+        query: ^eingeschränkt benutzbar$
+        type: text
+        columnName: usageRestriction
+      - expression: value
+        selection:
+          - v:
+              v: Magazin Sindelfingen - Bitte 3 Wochen im voraus bestellen!
+        invert: true
+        type: list
+        columnName: statusLoan
+  columnName: usageRestrictionNote
+  expression: |
+    grel:
+    'bedingt benutzbar' + '\n'
+    + 'Die Benutzung ist nach vorheriger Terminabsprache bedingt möglich. Bitte wenden Sie sich nach der Bestellung an das Referat Bilder und Objekte.' + '\n'
+    + 'E-Mail: bilder-und-objekte@dla-marbach.de'
+- op: core/text-transform
+  engineConfig:
+    mode: row-based
+    facets:
+      - mode: regex
+        caseSensitive: false
+        query: ^eingeschränkt benutzbar$
+        type: text
+        columnName: usageRestriction
+      - expression: value
+        selection:
+          - v:
+              v: Magazin Sindelfingen - Bitte 3 Wochen im voraus bestellen!
+        invert: false
+        type: list
+        columnName: statusLoan
+  columnName: usageRestrictionNote
+  expression: |
+    grel:
+    'bedingt benutzbar' + '\n'
+    + 'Magazin Sindelfingen - Bitte 3 Wochen im Voraus bestellen!' + '\n'
+    + 'Die Benutzung ist nach vorheriger Terminabsprache bedingt möglich. Bitte wenden Sie sich nach der Bestellung an das Referat Bilder und Objekte.'  + '\n'
+    + 'E-Mail: bilder-und-objekte@dla-marbach.de'
+- op: core/text-transform
+  engineConfig:
+    mode: row-based
+    facets:
+      - mode: regex
+        caseSensitive: false
+        query: ^nicht benutzbar$
+        type: text
+        columnName: usageRestriction
+  columnName: usageRestrictionNote
+  expression: |
+    grel:
+    'nicht benutzbar' + '\n'
+    + 'Die Benutzung ist leider nicht möglich. Bei Fragen wenden Sie sich bitte an das Referat Bilder und Objekte.' + '\n'
+    + 'E-Mail: bilder-und-objekte@dla-marbach.de'

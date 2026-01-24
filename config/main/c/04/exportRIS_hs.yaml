@@ -10,6 +10,7 @@
     + forNonBlank(forEach(cells['filterAuthorityRole_mv'].value.split('␟'), v, if(v.split('␝')[1] != 'Verfasser/Urheber', 'A2  - ' + v.split('␝')[0].replace(/\s\(.*/,''), null)).uniques().join('\n'), x, x + '\n', '')
     + forNonBlank(cells['accessionNumber'].value, v, 'AN  - ' + v + '\n', '')
     + forNonBlank(forEach(cells['filterAuthorityRole_mv'].value.split('␟'), v, if(v.split('␝')[1] == 'Verfasser/Urheber', 'AU  - ' + v.split('␝')[0].replace(/\s\(.*/,''), null)).uniques().join('\n'), x, x + '\n', '')
+    + forNonBlank(cells['detail_restrictions'].value, v, 'AV  - ' + v.replace('\n', '. ') + '\n', '')
     + forNonBlank(cells['mediaNumber'].value, v, 'CN  - ' + v + '\n', '')
     + forNonBlank(with(cells['filterDateRange_mv'].value.replace('[','').replace(']','').replace(' ','').replace('TO','␟'), x, forEach(filter(x.split('␟').uniques().sort(), f, isNumeric(f.replace('-',''))), v, 'DA  - ' + v.replace('-','/')).join('\n')),z,z + '\n','')
     + forNonBlank(forEach(cells['filterCollection_mv'].value.split('␟'), v, v).join('; '), x, 'DB  - ' + x + '\n', '')

@@ -1,0 +1,148 @@
+# Benutzungshinweis
+- op: core/column-addition
+  newColumnName: usageRestrictionNote
+  columnInsertIndex: 2
+  baseColumnName: id
+  engineConfig:
+    mode: row-based
+    facets:
+      - expression: isBlank(value)
+        selection:
+          - v:
+              v: true
+        invert: false
+        type: list
+        columnName: item_id_mv
+      - expression: isBlank(value)
+        selection:
+          - v:
+              v: false
+        invert: false
+        type: list
+        columnName: categorySub
+      - expression: value
+        selection:
+          - v:
+              v: Einzelbestandteil / unselbständiges Werk
+          - v:
+              v: Einzelne Einheit / nicht Teil eines Gesamtwerks
+          - v:
+              v: 'Einzelne Einheit / Stücktitel, Band'
+        invert: true
+        type: list
+        columnName: categorySub
+  expression: |
+    grel:
+    "Bitte wählen Sie über den Reiter 'Details' ein Heft oder einen Band aus (über den Link Enthaltene Bände und Hefte)."
+- op: core/text-transform
+  engineConfig:
+    mode: row-based
+    facets:
+      - expression: isBlank(value)
+        selection:
+          - v:
+              v: true
+        invert: false
+        type: list
+        columnName: item_id_mv
+      - expression: value
+        selection:
+          - v:
+              v: Einzelne Einheit / nicht Teil eines Gesamtwerks
+          - v:
+              v: 'Einzelne Einheit / Stücktitel, Band'
+        invert: false
+        type: list
+        columnName: categorySub
+  columnName: usageRestrictionNote
+  expression: |
+    grel:
+    'nicht benutzbar' + '\n'
+    + 'nur bibliographischer Nachweis, nicht im Bestand des DLA!'
+- op: core/text-transform
+  engineConfig:
+    mode: row-based
+    facets:
+      - expression: isBlank(value)
+        selection:
+          - v:
+              v: true
+        invert: false
+        type: list
+        columnName: item_id_mv
+      - expression: value
+        selection:
+          - v:
+              v: Zeitschriftenheft
+        invert: false
+        type: list
+        columnName: category
+  columnName: usageRestrictionNote
+  expression: |
+    grel:
+    "Bitte wählen Sie über den Reiter 'Details' den zugehörigen Band (über den Link 'Teil von')."
+- op: core/text-transform
+  engineConfig:
+    mode: row-based
+    facets:
+      - expression: isBlank(value)
+        selection:
+          - v:
+              v: true
+        invert: false
+        type: list
+        columnName: item_id_mv
+      - expression: value
+        selection:
+          - v:
+              v: Kennzeichnung von Mehrbändigen Werken
+        invert: false
+        type: list
+        columnName: statusCataloging
+  columnName: usageRestrictionNote
+  expression: |
+    grel:
+    'Bitte per Leihschein bestellen.'
+- op: core/text-transform
+  engineConfig:
+    mode: row-based
+    facets:
+      - expression: isBlank(value)
+        selection:
+          - v:
+              v: true
+        invert: false
+        type: list
+        columnName: item_id_mv
+      - mode: regex
+        caseSensitive: false
+        query: Nicht im Bestand des DLA|kein Bestand
+        type: text
+        columnName: callNumberBibliographic_mv
+  columnName: usageRestrictionNote
+  expression: |
+    grel:
+    'nicht benutzbar' + '\n' +
+    'nur bibliographischer Nachweis, nicht im Bestand des DLA!'
+- op: core/text-transform
+  engineConfig:
+    facets:
+      - type: list
+        expression: isBlank(value)
+        columnName: item_id_mv
+        invert: false
+        selection:
+          - v:
+              v: true
+      - type: list
+        expression: isBlank(value)
+        columnName: digitalObject_hyperlink_mv
+        invert: false
+        selection:
+          - v:
+              v: false
+    mode: row-based
+  columnName: usageRestrictionNote
+  expression: |
+    grel:
+    'Bitte verwenden Sie den Link zum Digitalen Objekt.'

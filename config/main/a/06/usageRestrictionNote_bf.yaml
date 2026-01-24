@@ -1,0 +1,64 @@
+# Benutzungshinweis
+- op: core/column-addition
+  engineConfig:
+    mode: row-based
+    facets:
+      - mode: regex
+        caseSensitive: false
+        query: ^Bilder und Objekte$
+        type: text
+        columnName: department
+  newColumnName: usageRestrictionNote
+  columnInsertIndex: 2
+  baseColumnName: id
+  expression: |
+    grel:
+    'bedingt benutzbar' + '\n'
+    + 'Die Benutzung ist nach vorheriger Terminabsprache bedingt möglich. Bitte wenden Sie sich nach der Bestellung an das Referat Bilder und Objekte.' + '\n'
+    + 'E-Mail: bilder-und-objekte@dla-marbach.de'
+- op: core/text-transform
+  engineConfig:
+    mode: row-based
+    facets:
+      - mode: regex
+        caseSensitive: false
+        query: ^Mediendokumentation$
+        type: text
+        columnName: department
+  columnName: usageRestrictionNote
+  expression: |
+    grel:
+    'bedingt benutzbar' + '\n'
+    + 'Die Benutzung ist nach vorheriger Terminabsprache bedingt möglich. Bitte wenden Sie sich nach der Bestellung an das Referat Mediendokumentation.' + '\n'
+    + 'E-Mail: mediendokumentation@dla-marbach.de'
+- op: core/text-transform
+  engineConfig:
+    mode: row-based
+    facets:
+      - mode: regex
+        caseSensitive: false
+        query: ^Bibliothek$
+        type: text
+        columnName: department
+  columnName: usageRestrictionNote
+  expression: |
+    grel:
+    'bedingt benutzbar' + '\n'
+    + 'Benutzung bedingt möglich nach vorheriger Terminabsprache. Bitte nehmen Sie Kontakt zu uns auf.' + '\n'
+    + 'E-Mail: bibliothek@dla-marbach.de' + '\n'
+    + 'Telefon: +49 7144 848 317'
+- op: core/text-transform
+  engineConfig:
+    mode: row-based
+    facets:
+      - mode: regex
+        caseSensitive: false
+        query: Handschriften|Suhrkamp-Archiv
+        type: text
+        columnName: department
+  columnName: usageRestrictionNote
+  expression: |
+    grel:
+    'Für nähere Angaben wenden Sie sich bitte an die Auskunft.' + '\n'
+    + 'E-Mail: auskunft-handschriften@dla-marbach.de' + '\n'
+    + 'Telefon: +49 7144 848 425'

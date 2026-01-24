@@ -232,6 +232,7 @@
   <field name="item_personAt_id_mv" type="strings"/>
   <field name="item_provenance_mv" type="booleans"/>
   <field name="item_usageRestriction_mv" type="texts"/>
+  <field name="item_usageRestrictionNote_mv" type="texts"/>
   <field name="item_virtualRecording_mv" type="texts"/>
   <field name="itemization_extent_mv" type="strings"/>
   <field name="itemization_status_mv" type="strings"/>
@@ -406,6 +407,7 @@
   <field name="url" type="string"/>
   <field name="usageRestriction" type="text"/>
   <field name="usageRestrictionComment" type="text"/>
+  <field name="usageRestrictionNote" type="text"/>
   <field name="usedFor_display_mv" type="texts"/>
   <field name="usedFor_id_mv" type="strings"/>
   <field name="useTerm_display_mv" type="texts"/>

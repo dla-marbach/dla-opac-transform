@@ -1,0 +1,243 @@
+# Benutzungshinweis
+- op: core/column-addition
+  engineConfig:
+    mode: row-based
+    facets: []
+  newColumnName: helper_benutzungscode
+  columnInsertIndex: 2
+  baseColumnName: id
+  expression: |
+    grel:
+    max(
+        forNonBlank(
+          cells['accession_id'].value.cross('be','id')[0].cells['usageRestriction'].value.
+            replace(/^benutzbar$/,'1').
+            replace(/^eingeschränkt benutzbar$/,'2').
+            replace(/^nicht benutzbar$/,'3').
+            replace(/^benutzbar trotz allg. Benutzungsbeschränkungen$/,'5').toNumber(),
+          v,
+          v,
+          0
+        ),
+        max(
+          forNonBlank(
+            cells['usageRestriction'].value.
+              replace(/^benutzbar$/,'1').
+              replace(/^eingeschränkt benutzbar$/,'2').
+              replace(/^nicht benutzbar$/,'3').
+              replace(/^benutzbar trotz allg. Benutzungsbeschränkungen$/,'5').toNumber(),
+            v,
+            v,
+            0
+          ),
+          forNonBlank(
+            cells['collection_id_mv'].value.cross('bf','id')[0].cells['usageRestriction'].value.
+              replace(/^benutzbar$/,'1').
+              replace(/^eingeschränkt benutzbar$/,'2').
+              replace(/^nicht benutzbar$/,'3').
+              replace(/^benutzbar trotz allg. Benutzungsbeschränkungen$/,'5').toNumber(),
+            v,
+            v,
+            0
+          )
+        )
+    ).floor()
+- op: core/column-addition
+  engineConfig:
+    mode: row-based
+    facets: []
+  newColumnName: helper_alive
+  columnInsertIndex: 2
+  baseColumnName: id
+  expression: |
+    grel:
+    with(
+      [
+        forNonBlank(cells['personBy_id_mv'].value, v, v, null),
+        forNonBlank(cells['personTo_id_mv'].value, v, v, null),
+        forNonBlank(cells['personAbout_id_mv'].value, v, v, null)
+      ].join('␟'),
+      persons,
+      forNonBlank(
+        forEach(
+          persons.split('␟'),
+          person,
+          forNonBlank(
+            forEach(
+              person.cross('pe', 'id'),
+              r,
+              if(
+                or(
+                  isNonBlank(r.cells['dateLifespanEnd'].value),
+                  forNonBlank(
+                    r.cells['dateLifespanStart'].value,
+                    v,
+                    v[0,4].toNumber() < 1900,
+                    false
+                  )
+                ),
+                'false',
+                'unknown'
+              )
+            ).join('␟'),
+            x,
+            x,
+            null
+          )
+        ).join('␟'),
+        y,
+        if(
+          y.contains('true'),
+          'true',
+          if(
+            y.contains('unknown'),
+            'unknown',
+            'false'
+          )
+        ),
+        null
+      )
+    )
+- op: core/column-addition
+  engineConfig:
+    mode: row-based
+    facets: []
+  newColumnName: helper_ausleihstatus_bf
+  columnInsertIndex: 2
+  baseColumnName: collection_id_mv
+  expression: |
+    grel:
+    value.cross('bf', 'id')[0].cells['statusLoan'].value.
+      replace(/^Ausgeliehen$/,'').
+      replace(/^Geschäftsgang$/,'').
+      replace(/^Verlust$/,'').
+      replace(/^Am Standort$/,'').
+      replace(/^Zur Bestellung vorgesehen$/,'').
+      replace(/^Noch nicht geliefert$/,'').
+      replace(/^Zur Zeit vermißt$/,'').
+      replace(/^Zur Löschung vorgesehen$/,'').
+      replace(/^Am Standort Marbach$/,'')
+- op: core/column-addition
+  engineConfig:
+    mode: row-based
+    facets: []
+  newColumnName: usageRestrictionNote
+  columnInsertIndex: 2
+  baseColumnName: helper_benutzungscode
+  expression: |
+    grel:
+    value.
+      replace('0','').
+      replace('1','').
+      replace('2','Benutzung nur bedingt möglich!').
+      replace('3','Für die Benutzung gesperrt!').
+      replace('5','')
+- op: core/text-transform
+  engineConfig:
+    mode: row-based
+    facets:
+      - mode: regex
+        caseSensitive: false
+        query: unknown|true
+        type: text
+        columnName: helper_alive
+      - expression: value
+        selection:
+          - v:
+              v: 3
+        invert: true
+        type: list
+        columnName: helper_benutzungscode
+  columnName: usageRestrictionNote
+  expression: |
+    grel:
+    with(
+      'Nur mit Einverständnis der beteiligten Personen ausleihbar!',
+      x,
+      forNonBlank(
+        value,
+        v,
+        v + '\n' + x,
+        x
+      )
+    )
+- op: core/text-transform
+  engineConfig:
+    mode: row-based
+    facets:
+      - expression: value
+        selection:
+          - v:
+              v: 3
+        invert: true
+        type: list
+        columnName: helper_benutzungscode
+      - expression: isBlank(value)
+        selection:
+          - v:
+              v: false
+        invert: false
+        type: list
+        columnName: helper_ausleihstatus_bf
+  columnName: usageRestrictionNote
+  expression: |
+    grel:
+    with(
+      cells['helper_ausleihstatus_bf'].value,
+      x,
+      forNonBlank(
+        value,
+        v,
+        v + '\n' + x,
+        x
+      )
+    )
+- op: core/text-transform
+  engineConfig:
+    mode: row-based
+    facets:
+      - expression: |
+          grel:
+          and(
+              or(
+                  cells['helper_benutzungscode'].value == 1,
+                  cells['helper_benutzungscode'].value == 5
+              ),
+              forNonBlank(
+                  cells['helper_alive'].value,
+                  v,
+                  if(
+                      v == 'false',
+                      true,
+                      false
+                  ),
+                  true
+              )
+          )
+        selection:
+          - v:
+              v: true
+        invert: true
+        type: list
+        columnName: helper_benutzungscode
+  columnName: usageRestrictionNote
+  expression: |
+    grel:
+    with(
+      'Für nähere Angaben wenden Sie sich bitte an die Auskunft des Deutschen Literaturarchivs Marbach:' + '\n'
+      + 'Telefon: +49 7144 848 425' + '\n'
+      + 'E-Mail: auskunft-handschriften@dla-marbach.de',
+      x,
+      forNonBlank(
+        value,
+        v,
+        v + '\n' + x,
+        x
+      )
+    )
+- op: core/column-removal
+  columnName: helper_alive
+- op: core/column-removal
+  columnName: helper_benutzungscode
+- op: core/column-removal
+  columnName: helper_ausleihstatus_bf

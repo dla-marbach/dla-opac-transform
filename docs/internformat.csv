@@ -117,8 +117,9 @@ AK,item_noteOther_mv,texts,aus AU noteOther_mv getrennt mit ␝ (U+241D),6241,0 
 AK,item_noteProvenance_mv,texts,aus AU noteProvenance_type_mv und noteProvenance_text_mv,18671,1 %,27981,9069,['Sammlungsbezogener Suchbegriff: Koselleck-Schlagwort-Notiz']
 AK,item_personAt_display_mv,texts,aus AU personAt_display_mv getrennt mit ␝ (U+241D),100206,6 %,150003,3436,"['Koselleck, Reinhart (1923–2006)']"
 AK,item_personAt_id_mv,strings,aus AU personAt_id_mv getrennt mit ␝ (U+241D),100206,6 %,150003,3437,['PE00000144']
-AK,item_provenance_mv,booleans,aus AU provenance_mv,119210,7 %,175025,2,['true']
-AK,item_usageRestriction_mv,texts,aus AU usageRestriction_mv,868678,49 %,943806,4,['benutzbar']
+AK,item_provenance_mv,booleans,aus AU provenance,119210,7 %,175025,2,['true']
+AK,item_usageRestriction_mv,texts,aus AU usageRestriction,868678,49 %,943806,4,['benutzbar']
+AK,item_usageRestrictionNote_mv,texts,aus AU usageRestrictionNote,,,,,
 AK,item_virtualRecording_mv,texts,aus AU virtualRecording getrennt mit ␝ (U+241D),1295,0 %,1564,1180,['Auflage der Ausgabe nicht ermittelbar']
 AK,journalIssue_display_mv,texts,aus AK display,3235,0 %,3235,684,"Hesperus : encyclopädische Zeitschrift für gebildete Leser. - (1816), H.1-5 = Nr.1-30 [Jg.unvollst.]"
 AK,journalIssue_id_mv,strings,,3235,0 %,3235,684,AK00124565
@@ -203,6 +204,7 @@ AK,titleResponsabilityFull,text,,3402,0 %,3402,2821,Oskar Pastior
 AK,titleShort,text,,173,0 %,173,169,MARC
 AK,titleSuffix,text,,764669,43 %,764669,468673,[Gedicht]
 AK,url,string,,1789827,100 %,1789827,1789827,https://www.dla-marbach.de/find/opac/id/AK01243986
+AK,usageRestrictionNote,text,Benutzungshinweis,,,,,
 AK,vendor_id_mv,strings,,1109690,62 %,1188228,697298,['GEMEL. 20090818']
 AK,vendor_type_mv,strings,,1109678,62 %,1188216,21,['K10Plus-PPN']
 AK,website_description_mv,texts,,126689,7 %,147137,4409,['Inhaltsverzeichnis']
@@ -258,6 +260,7 @@ AU,statusItem,string,,969299,100 %,969299,4,Verfügbar
 AU,statusLoan,string,,969299,100 %,969299,7,Am Standort
 AU,url,string,,969299,100 %,969299,969299,https://www.dla-marbach.de/find/opac/id/AU00746213
 AU,usageRestriction,text,,969229,100 %,969229,4,benutzbar
+AU,usageRestrictionNote,text,Benutzungshinweis,,,,,
 AU,virtualRecording,text,,1309,0 %,1309,1179,Tausenderzählung der Auflage nicht ermittelbar
 BE,accessionNumber,string,,6429,100 %,6429,6427,HS.1988.0005
 BE,corporationAt_display_mv,texts,aus KS display,29,0 %,29,27,Schwäbischer Schillerverein (1895)
@@ -359,6 +362,7 @@ BF,titleShort,text,,48427,100 %,48427,37372,Kopien
 BF,url,string,,48629,100 %,48629,48629,https://www.dla-marbach.de/find/opac/id/BF00011400
 BF,usageRestriction,text,,48629,100 %,48629,3,benutzbar
 BF,usageRestrictionComment,text,,385,1 %,385,127,Nur Digitalisat oder Mikroform benutzbar
+BF,usageRestrictionNote,text,Benutzungshinweis,,,,,
 BF,website_description_mv,texts,,6,0 %,6,5,"Informationen zum Projekt ""Erschließung der Bibliothek Paul Celan: Katalogisierung und Bestandsrekonstruktion"" und Hinweise zur Recherche"
 BF,website_url_mv,strings,,8,0 %,8,7,https://www.dla-marbach.de/bibliothek/spezialsammlungen/bestandsliste/bibliothek-paul-celan/
 BI,accession_display,text,aus BE display,15899,52 %,15899,2459,Teilnachlass Arthur Schnitzler
@@ -482,6 +486,7 @@ BI,title,text,,30438,100 %,30438,17175,Porträt Hermann Hesse
 BI,titleOriginal,text,,374,1 %,374,367,"""Weimars Goldene Tage"""
 BI,url,string,,30438,100 %,30438,30438,https://www.dla-marbach.de/find/opac/id/BI00009570
 BI,usageRestriction,text,,30438,100 %,30438,4,eingeschränkt benutzbar
+BI,usageRestrictionNote,text,Benutzungshinweis,,,,,
 BI,work_display_mv,texts,aus AK display,960,3 %,1160,831,"['Lessing, Gotthold Ephraim (1729-1781). Nathan der Weise (Drama : 1779)']"
 BI,work_id_mv,strings,,960,3 %,1160,831,['AK00000425']
 HS,accession_display,text,aus BE display,652416,57 %,652416,3032,Verlagsarchiv Suhrkamp
@@ -606,6 +611,7 @@ HS,titleOther_type_mv,strings,,34917,3 %,44577,12,['Manuskripttitel']
 HS,url,string,,1144646,100 %,1144646,1144646,https://www.dla-marbach.de/find/opac/id/HS00859775
 HS,usageRestriction,text,,1144627,100 %,1144627,3,benutzbar
 HS,usageRestrictionComment,text,,15979,1 %,15979,142,Nur Digitalisat oder Mikroform benutzbar
+HS,usageRestrictionNote,text,Benutzungshinweis,,,,,
 HS,website_description_mv,texts,,1259,0 %,1263,21,['RISM']
 HS,website_url_mv,strings,,1260,0 %,1264,1253,['http://www.germ.uni-tuebingen.de/abteilungen/neuere-deutsche-literatur/tuebinger-poetik-dozentur.html']
 HS,work_display_mv,texts,aus AK display,41402,4 %,51092,17269,"['Piper, Reinhard (1879-1953). Vormittag (Autobiografie)']"
