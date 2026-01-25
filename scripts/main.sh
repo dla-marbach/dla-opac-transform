@@ -87,7 +87,7 @@ grel='[ {
 "baseColumnName": "id",
 "newColumnName": "schemaVersion",
 "columnInsertIndex": 2,
-"expression": "grel:\"0.10.0\""
+"expression": "grel:\"0.11.0\""
 } ]'
 for set in ${sets[@]}; do
     echo "${grel}" | orcli transform "${set}" &
