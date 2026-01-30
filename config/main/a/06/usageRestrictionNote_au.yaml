@@ -29,25 +29,29 @@
         if(
             or(
                 cells['usageRestriction'].value == 'eingeschränkt benutzbar',
-                cells['usageRestriction'].value == 'nur im Handschriftenlesesaal benutzbar' 
+                cells['usageRestriction'].value == 'Rara' 
             ),
             if(
                 cells['location_mv'].value == 'Magazin Sindelfingen',
                 'bedingt benutzbar' + '\n' +
+                    'Rara-Bestand' + '\n' +
                     'Magazin Sindelfingen. Bereitstellung mit Wartezeit. Bitte bestellen Sie mind. 4 Wochen im Voraus und nehmen Sie Kontakt zu uns auf.' + '\n' +
                     'E-Mail: bibliothek@dla-marbach.de' + '\n' +
                     'Telefon: +49 7144 848 317',
                 if(
                     cells['location_mv'].value == 'Magazin Fellbach',
                     'bedingt benutzbar' + '\n' +
+                        'Rara-Bestand' + '\n' +
                         'Magazin Fellbach. Bereitstellung mit Wartezeit bis zu 2 Wochen. Bitte bestellen Sie rechtzeitig im Voraus.',
                     if(
                         cells['location_mv'].value == 'Jünger-Haus',
                         'bedingt benutzbar' + '\n' +
+                            'Rara-Bestand' + '\n' +
                             'Bereitstellung mit Wartezeit (mind. drei Wochen). Bitte bestellen Sie im Voraus und nehmen Sie Kontakt zu uns auf.' + '\n' +
                             'E-Mail: bibliothek@dla-marbach.de' + '\n' +
                             'Telefon: +49 7144 848 317',
                         'bedingt benutzbar' + '\n' +
+                            'Rara-Bestand' + '\n' +
                             'Bitte wenden Sie sich an die Auskunft der Bibliothek.' + '\n' +
                             'E-Mail: bibliothek@dla-marbach.de' + '\n' +
                             'Telefon: +49 7144 848 317' 
@@ -55,23 +59,31 @@
                 )
             ),
             if(
-                and(
-                    cells['usageRestriction'].value == 'nicht benutzbar',
-                    cells['location_mv'].value == 'nicht im Bestand des DLA' 
-                ),
-                'nicht benutzbar' + '\n' +
-                    'Virtuelles Exemplar − nicht im Bestand des DLA!',
+                cells['usageRestriction'].value == 'Rechteeinschränkung',
+                'bedingt benutzbar' + '\n' +
+                    'Rechteklärung erforderlich' + '\n' +
+                    'Bitte wenden Sie sich an die Auskunft der Bibliothek.' + '\n' +
+                    'E-Mail: bibliothek@dla-marbach.de' + '\n' +
+                    'Telefon: +49 7144 848 317',
                 if(
-                    cells['usageRestriction'].value == 'nicht benutzbar',
-                    if(
-                        cells['digitalObject_hyperlink_mv'].value.contains('https://digital.dla-marbach.de/viewer'),
-                        'Bitte verwenden Sie den Link zum Digitalen Objekt',
-                        'nicht benutzbar' + '\n' +
-                            'Bitte wenden Sie sich an die Auskunft der Bibliothek.' + '\n' +
-                            'E-Mail: bibliothek@dla-marbach.de' + '\n' +
-                            'Telefon: +49 7144 848 317'
+                    and(
+                        cells['usageRestriction'].value == 'nicht benutzbar',
+                        cells['location_mv'].value == 'nicht im Bestand des DLA' 
                     ),
-                    null
+                    'nicht benutzbar' + '\n' +
+                        'Virtuelles Exemplar − nicht im Bestand des DLA!',
+                    if(
+                        cells['usageRestriction'].value == 'nicht benutzbar',
+                        if(
+                            cells['digitalObject_hyperlink_mv'].value.contains('https://digital.dla-marbach.de/viewer'),
+                            'Bitte verwenden Sie den Link zum Digitalen Objekt',
+                            'nicht benutzbar' + '\n' +
+                                'Bitte wenden Sie sich an die Auskunft der Bibliothek.' + '\n' +
+                                'E-Mail: bibliothek@dla-marbach.de' + '\n' +
+                                'Telefon: +49 7144 848 317'
+                        ),
+                        null
+                    )
                 )
             )
         )
