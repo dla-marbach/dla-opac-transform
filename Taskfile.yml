@@ -105,6 +105,10 @@ tasks:
         # Prüfen, ob Datensätze nicht indexiert werden konnten
         diff <(perl -lne 'print substr($_,9,10)' example/output/*.jsonl | sort) <(curl --silent 'http://localhost:8983/solr/dla-indexing/query?fl=id&q=*%3A*&rows=10000000&wt=csv&csv.header=false' | sort) || true
       - |
+        # Index für Autovervollständigung aufbauen
+        [ $(curl --silent 'http://localhost:8983/solr/dla-indexing/suggest?suggest=true&suggest.build=true&suggest.dictionary=mySuggester' -o /dev/stderr -w "%{http_code}") -eq 200 ]
+        [ $(curl --silent 'http://localhost:8983/solr/dla-indexing/suggest?suggest=true&suggest.build=true&suggest.dictionary=text' -o /dev/stderr -w "%{http_code}") -eq 200 ]
+      - |
         # Neu befüllten Index live schalten durch Swap
         [ $(curl --silent 'http://localhost:8983/solr/admin/cores?action=SWAP&core=dla-indexing&other=dla-prod' -o /dev/stderr -w "%{http_code}") -eq 200 ]
       - |

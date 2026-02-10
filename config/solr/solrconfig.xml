@@ -136,4 +136,44 @@
     <processor class="solr.RunUpdateProcessorFactory"/>
   </updateRequestProcessorChain>
 
+  <!-- Suggester für Autovervollständigung im Suchschlitz -->
+  <searchComponent name="suggest" class="solr.SuggestComponent">
+    <!-- Normdaten-Autovervollständigung -->
+    <lst name="suggester">
+      <str name="name">mySuggester</str>
+      <str name="lookupImpl">AnalyzingInfixLookupFactory</str>
+      <str name="dictionaryImpl">DocumentDictionaryFactory</str>
+      <str name="field">searchSuggestTerm_mv</str>
+      <str name="payloadField">searchSuggestPayload</str>
+      <str name="suggestAnalyzerFieldType">text</str>
+      <str name="buildOnStartup">false</str>
+      <str name="weightField">searchEntityScore</str>
+      <str name="highlight">false</str>
+    </lst>
+    <!-- Titel-Autovervollständigung -->
+    <lst name="suggester">
+      <str name="name">text</str>
+      <str name="storeDir">suggester_text</str>
+      <str name="lookupImpl">FreeTextLookupFactory</str>
+      <str name="dictionaryImpl">DocumentDictionaryFactory</str>
+      <str name="field">display</str>
+      <str name="suggestFreeTextAnalyzerFieldType">text</str>
+      <str name="ngrams">4</str>
+      <str name="separator"> </str>
+      <str name="highlight">false</str>
+      <str name="buildOnStartup">false</str>
+    </lst>
+  </searchComponent>
+
+  <!-- requestHandler für Autovervollständigung im Suchschlitz -->
+  <requestHandler name="/suggest" class="solr.SearchHandler" startup="lazy">
+    <lst name="defaults">
+      <str name="suggest">true</str>
+      <str name="suggest.count">50</str>
+    </lst>
+    <arr name="components">
+      <str>suggest</str>
+    </arr>
+  </requestHandler>
+
 </config>
