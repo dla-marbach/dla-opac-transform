@@ -1,0 +1,23 @@
+# Suchbegriffe für die Autovervollständigung
+- op: core/column-addition
+  engineConfig:
+    facets:
+    - type: list
+      expression: value
+      columnName: statusEditing
+      selection:
+      - v:
+          v: individualisiert
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    cells['display'].value
+    + forNonBlank(
+      cells['nameAlternative_name_mv'].value,
+      v,
+      '␟' + v,
+      ''
+    )
+  newColumnName: searchSuggestTerm_mv
+  columnInsertIndex: 2

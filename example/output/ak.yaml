@@ -1154,6 +1154,8 @@ searchEntity_id_mv:
   - PE00000001
   - KS00000001
   - AK00000021
+searchSuggestPayload: 'AK00000021␝Person 1 (1982-2001). Werk 1 (genre : 2000)'
+searchSuggestTerm_mv: 'Person 1 (1982-2001). Werk 1 (genre : 2000)'
 source: AK
 title: Werk 1
 titleMain_text: Werk 1
@@ -1187,6 +1189,8 @@ schemaVersion: 0.11.0
 searchEntity_id_mv:
   - PE00000002
   - AK00000022
+searchSuggestPayload: AK00000022␝Person 2 (1982-2001). Werk 2 (genre)
+searchSuggestTerm_mv: Person 2 (1982-2001). Werk 2 (genre)
 source: AK
 title: Werk 2
 titleMain_text: Werk 2
@@ -1217,6 +1221,8 @@ schemaVersion: 0.11.0
 searchEntity_id_mv:
   - PE00000003
   - AK00000023
+searchSuggestPayload: AK00000023␝Person 3 (1982-2001). Werk 3 (2000-01)
+searchSuggestTerm_mv: Person 3 (1982-2001). Werk 3 (2000-01)
 source: AK
 title: Werk 3
 titleMain_text: Werk 3
@@ -2587,6 +2593,8 @@ filterType: Normdaten
 schemaVersion: 0.11.0
 searchEntity_id_mv:
   - AK00000093
+searchSuggestPayload: AK00000093␝ohne Titel
+searchSuggestTerm_mv: ohne Titel
 source: AK
 title: 'Facette Medientyp: Normdaten'
 ---

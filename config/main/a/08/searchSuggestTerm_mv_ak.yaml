@@ -1,0 +1,58 @@
+# Suchbegriffe für die Autovervollständigung
+- op: core/column-addition
+  engineConfig:
+    facets:
+    - type: list
+      expression: value
+      columnName: category
+      selection:
+      - v:
+          v: Werktitel
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    with(
+      forNonBlank(
+        forEachIndex(
+          cells['relation_type_mv'].value.split('␟'),
+          i,
+          v,
+          if(
+            and(
+              or(
+                v.contains('basiert auf'),
+                v.contains(' von')
+              ),
+              isNonBlank(cells['relation_text_mv'].value[i])
+            ),
+            cells['display'].value
+              + ' – ' 
+              + cells['relation_type_mv'].value.split('␟')[i]
+              + ' ' 
+              + cells['relation_text_mv'].value.split('␟')[i],
+            null
+          )
+        ).join('␟'),
+        z,
+        z,
+        cells['display'].value
+      ),
+      x,
+      if(
+        isNonBlank(cells['titleOther_text_mv'].value),
+        x + '␟' + forEach(
+          cells['titleOther_text_mv'].value.split('␟'),
+          v,
+          forNonBlank(
+            cells['personBy_display_mv'].value.split('␟')[0],
+            z,
+            z + ': ' + v,
+            v
+          )
+        ).join('␟'),
+        x
+      )
+    )
+  newColumnName: searchSuggestTerm_mv
+  columnInsertIndex: 2

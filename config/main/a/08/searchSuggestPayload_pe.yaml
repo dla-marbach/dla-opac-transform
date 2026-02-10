@@ -1,0 +1,17 @@
+# ID und Anzeigetitel für die Autovervollständigung (Trennzeichen: ␝)
+- op: core/column-addition
+  engineConfig:
+    facets:
+    - type: list
+      expression: value
+      columnName: statusEditing
+      selection:
+      - v:
+          v: individualisiert
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    cells['id'].value + '␝' + cells['display'].value
+  newColumnName: searchSuggestPayload
+  columnInsertIndex: 2

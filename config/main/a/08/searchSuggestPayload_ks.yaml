@@ -1,0 +1,15 @@
+# ID und Anzeigetitel für die Autovervollständigung (Trennzeichen: ␝)
+- op: core/column-addition
+  engineConfig:
+    facets:
+    - type: text
+      columnName: categoryIndex_mv
+      query: "Körperschaft|Konferenz|Verlag"
+      mode: regex
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    cells['id'].value + '␝' + cells['display'].value
+  newColumnName: searchSuggestPayload
+  columnInsertIndex: 2
