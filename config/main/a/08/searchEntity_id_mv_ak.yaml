@@ -1,0 +1,108 @@
+# Suche nach Normdaten-Identifiern
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(cells['corporationAbout_id_mv'].value, v, v, null),
+        forNonBlank(cells['corporationBy_id_mv'].value, v, v, null),
+        forNonBlank(cells['corporationByConference_id_mv'].value, v, v, null),
+        forNonBlank(
+          cells['item_corporationAt_id_mv'].value,
+          v,
+          v.replace('␝','␟'),
+          null
+        ),
+        forNonBlank(
+          cells['item_personAt_id_mv'].value,
+          v,
+          v.replace('␝','␟'),
+          null
+        ),
+        forNonBlank(cells['personAbout_id_mv'].value, v, v, null),
+        forNonBlank(cells['personBy_id_mv'].value, v, v, null),
+        forNonBlank(cells['publisher_id_mv'].value, v, v, null),
+        forNonBlank(
+          cells['relation_id_mv'].value,
+          x,
+          filter(
+            x.split('␟'),
+            v,
+            or(
+              v.startsWith('AK'),
+              v.startsWith('KS'),
+              v.startsWith('PE')
+            )
+          ).join('␟'),
+          null
+        ),
+        forNonBlank(cells['work_id_mv'].value, v, v, null),
+        forNonBlank(cells['workAbout_id_mv'].value, v, v, null),
+        forNonBlank(cells['workCompilation_id_mv'].value, v, v, null)
+      ].join('␟'),
+      x,
+      filter(
+        x.split('␟'),
+        f,
+        f[0] != '␣'
+      ).uniques().join('␟'),
+      null
+    )
+  newColumnName: searchEntity_id_mv
+  columnInsertIndex: 2
+# Links zu Datensätzen aus AK auf Werktitel einschränken
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: text
+      columnName: searchEntity_id_mv
+      query: AK
+      mode: text
+  columnName: searchEntity_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.split('␟'),
+        v,
+        if(
+          v.startsWith('AK'),
+          forNonBlank(
+            v.cross('ak', 'id')[0].cells['category'].value,
+            x,
+            if(
+              x == 'Werktitel',
+              v,
+              null
+            ),
+            null
+          ),
+          v
+        )
+      ).join('␟'),
+      x,
+      x,
+      null
+    )
+# IDs von Werktiteln ergänzen:
+- op: core/text-transform
+  engineConfig:
+    facets:
+    - type: list
+      expression: value
+      columnName: category
+      selection:
+      - v:
+          v: Werktitel
+  columnName: searchEntity_id_mv
+  expression: |
+    grel:
+    if(
+      isNonBlank(value),
+      value + '␟' + cells['id'].value,
+      cells['id'].value
+    )

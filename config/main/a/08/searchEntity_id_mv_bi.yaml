@@ -1,0 +1,26 @@
+# Suche nach Normdaten-Identifiern
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(cells['corporationAbout_id_mv'].value, v, v, null),
+        forNonBlank(cells['corporationAt_id_mv'].value, v, v, null),
+        forNonBlank(cells['corporationBy_id_mv'].value, v, v, null),
+        forNonBlank(cells['personAbout_id_mv'].value, v, v, null),
+        forNonBlank(cells['personAt_id_mv'].value, v, v, null)
+      ].join('␟'),
+      x,
+      filter(
+        x.split('␟'),
+        f,
+        f[0] != '␣'
+      ).uniques().join('␟'),
+      null
+    )
+  newColumnName: searchEntity_id_mv
+  columnInsertIndex: 2
