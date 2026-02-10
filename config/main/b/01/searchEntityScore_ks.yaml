@@ -1,0 +1,15 @@
+# Verweise auf Normdaten zählen für Relevanzranking
+- op: core/column-addition
+  engineConfig:
+    facets:
+    - type: text
+      columnName: categoryIndex_mv
+      query: "Körperschaft|Konferenz|Verlag"
+      mode: regex
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    value.cross('lookup_entity','searchEntity_id_mv').length()
+  newColumnName: searchEntityScore
+  columnInsertIndex: 2

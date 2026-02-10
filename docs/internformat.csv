@@ -182,9 +182,10 @@ AK,scholarlyPublication_text_mv,texts,,2831,0 %,2870,645,['Univ.']
 AK,scholarlyPublication_type_mv,strings,,2848,0 %,2887,43,['Dissertation']
 AK,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),126028,7 %,185277,353,"['Jünger, Ernst (1895–1998)']"
 AK,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),126028,7 %,185277,353,['PE00001233']
-AK,searchEntity_id_mv,strings,,,,,,
-AK,searchSuggestPayload,string,,,,,,
-AK,searchSuggestTerm_mv,strings,,,,,,
+AK,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,,,,,
+AK,searchEntityScore,pint,Anzahl der Verweise auf den Normdatensatz,,,,,
+AK,searchSuggestPayload,string,ID und Anzeigetitel für Suggester (Trennzeichen: ␝),,,,,
+AK,searchSuggestTerm_mv,strings,Suchbegriffe für Suggester,,,,,
 AK,source,string,,1791129,100 %,1791129,1,AK
 AK,statusCataloging,string,,836058,47 %,836058,10,"f-fertig, i-fertig"
 AK,statusEditing,string,,1615283,90 %,1615283,13,Retrokonversion
@@ -354,7 +355,7 @@ BF,reference_text_mv,texts,,950,2 %,950,719,Jb. XXXIII 465
 BF,schemaVersion,string,,48737,100 %,48737,1,0.11.0
 BF,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“,45557,93 %,47568,28176,"['Suhrkamp-Verlag <Frankfurt, Main> (1950)']"
 BF,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“,45557,93 %,47568,28180,['KS00001261']
-BF,searchEntity_id_mv,strings,,,,,,
+BF,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,,,,,
 BF,source,string,,48737,100 %,48737,1,BF
 BF,statusLoan,string,,48737,100 %,48737,8,Am Standort
 BF,subject_display_mv,texts,aus TH display,1739,4 %,1899,1304,['Deutschland <DDR>']
@@ -473,7 +474,7 @@ BI,reference_text_mv,texts,,3317,11 %,3317,2667,"Nicolin, Günther: Kunst zu Kaf
 BI,schemaVersion,string,,30563,100 %,30563,1,0.11.0
 BI,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),15735,51 %,17650,589,"['Kunz-Hutterstrasser, Hermine (1873–1948)']"
 BI,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),15735,51 %,17650,589,['PE00324458']
-BI,searchEntity_id_mv,strings,,,,,,
+BI,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,,,,,
 BI,source,string,,30563,100 %,30563,1,BI
 BI,statusEditing,string,,9647,32 %,9647,3,Retrokonversion
 BI,statusLoan,string,,30563,100 %,30563,5,Am Standort
@@ -593,7 +594,7 @@ HS,place_mv,texts,,763539,67 %,913241,28907,['Stuttgart']
 HS,schemaVersion,string,,1145723,100 %,1145723,1,0.11.0
 HS,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),1137567,99 %,1342425,5851,"['Suhrkamp-Verlag <Frankfurt, Main> (1950)']"
 HS,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),1137567,99 %,1342425,5852,['KS00001261']
-HS,searchEntity_id_mv,strings,,,,,,
+HS,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,,,,,
 HS,sortingKey,string,,1145719,100 %,1145719,246599,"SUHRKAMPVERLAG FRANKFURT, MAIN"
 HS,sortingKeySub,string,,916787,80 %,916787,179780,"JUENGER, ERNST"
 HS,sortingTitleMain,string,,235051,21 %,235051,180423,GEDICHTE
@@ -679,9 +680,10 @@ KS,relation_id_mv,strings,,40548,31 %,157647,75932,['KS00017343']
 KS,relation_text_mv,texts,,41017,31 %,158186,80157,['Berlin']
 KS,relation_type_mv,strings,,41032,32 %,158201,48,"['Sitz, Ort']"
 KS,schemaVersion,string,,130224,100 %,130224,1,0.11.0
-KS,searchEntity_id_mv,strings,,,,,,
-KS,searchSuggestPayload,string,,,,,,
-KS,searchSuggestTerm_mv,strings,,,,,,
+KS,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,,,,,
+KS,searchEntityScore,pint,Anzahl der Verweise auf den Normdatensatz,,,,,
+KS,searchSuggestPayload,string,ID und Anzeigetitel für Suggester (Trennzeichen: ␝),,,,,
+KS,searchSuggestTerm_mv,strings,Suchbegriffe für Suggester,,,,,
 KS,seeAlso_display_mv,texts,aus KS display,89,0 %,119,90,['S. Fischer-Verlag']
 KS,seeAlso_id_mv,strings,,89,0 %,119,90,['KS00131373']
 KS,source,string,,130224,100 %,130224,1,KS
@@ -768,9 +770,10 @@ PE,relation_id_mv,strings,,139111,24 %,585268,52832,['TH00001621']
 PE,relation_text_mv,texts,,181395,31 %,686013,98351,['Schriftsteller']
 PE,relation_type_mv,strings,,181404,31 %,686022,51,['Charakt. Beruf']
 PE,schemaVersion,string,,579498,100 %,579498,1,0.11.0
-PE,searchEntity_id_mv,strings,,,,,,
-PE,searchSuggestPayload,string,,,,,,
-PE,searchSuggestTerm_mv,strings,,,,,,
+PE,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,,,,,
+PE,searchEntityScore,pint,Anzahl der Verweise auf diesen Normdatensatz,,,,,
+PE,searchSuggestPayload,string,ID und Anzeigetitel für Suggester (Trennzeichen: ␝),,,,,
+PE,searchSuggestTerm_mv,strings,Suchbegriffe für Suggester,,,,,
 PE,seeAlso_display_mv,texts,aus PE display,164,0 %,164,164,"Rüthel, Else (1899–1938)"
 PE,seeAlso_id_mv,strings,,164,0 %,164,164,PE00010622
 PE,source,string,,579498,100 %,579498,1,PE
@@ -803,7 +806,7 @@ SE,id,string,,229662,100 %,229662,229662,SE00038028
 SE,person_display_mv,texts,aus PE display,172066,75 %,180936,46179,"['Döblin, Alfred (1878–1957)']"
 SE,person_id_mv,strings,,172066,75 %,180936,46191,['PE00006675']
 SE,schemaVersion,string,,229662,100 %,229662,1,0.11.0
-SE,searchEntity_id_mv,strings,,,,,,
+SE,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,,,,,
 SE,sequence_mv,strings,,229650,100 %,591542,8,"['Person', 'Autorenschema']"
 SE,source,string,,229662,100 %,229662,1,SE
 SE,subject_display_mv,texts,aus TH display,86677,38 %,146496,23467,['Autogramm']

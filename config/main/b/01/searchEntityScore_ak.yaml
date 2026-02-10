@@ -1,0 +1,17 @@
+# Verweise auf Normdaten zählen für Relevanzranking
+- op: core/column-addition
+  engineConfig:
+    facets:
+    - type: list
+      expression: value
+      columnName: category
+      selection:
+      - v:
+          v: Werktitel
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    value.cross('lookup_entity','searchEntity_id_mv').length()
+  newColumnName: searchEntityScore
+  columnInsertIndex: 2

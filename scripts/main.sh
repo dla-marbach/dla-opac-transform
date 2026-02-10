@@ -55,6 +55,15 @@ for set in ak ks pe th; do
 done
 orcli import csv "${DIR}"/tmp/tmp-lookup_gnd.csv --projectName "lookup_gnd"
 
+# Lookup-Tabelle mit Normdaten-IDs erstellen für searchEntityScore
+echo 'searchEntity_id_mv' > "${DIR}"/tmp/tmp-lookup_entity.csv
+for set in ak bf bi hs ks pe se; do
+    orcli export template "${set}" \
+    <<< '{{ forNonBlank(cells["searchEntity_id_mv"].value, x, forEach(x.split("␟"), v, v + "\n"), "") }}' \
+    >> "${DIR}"/tmp/tmp-lookup_entity.csv
+done
+orcli import csv "${DIR}"/tmp/tmp-lookup_entity.csv --projectName "lookup_entity"
+
 # Teil b Verzeichnisse nacheinander bearbeiten
 for d in "${DIR}"/tmp/config/main/b/*/ ; do
     for set in ${sets[@]}; do
