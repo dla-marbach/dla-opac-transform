@@ -11,12 +11,8 @@
         forNonBlank(cells['corporationAbout_id_mv'].value, v, v, null),
         forNonBlank(cells['corporationAt_id_mv'].value, v, v, null),
         forNonBlank(cells['corporationBy_id_mv'].value, v, v, null),
-        forNonBlank(cells['corporationTo_id_mv'].value, v, v, null),
         forNonBlank(cells['personAbout_id_mv'].value, v, v, null),
-        forNonBlank(cells['personAt_id_mv'].value, v, v, null),
-        forNonBlank(cells['personBy_id_mv'].value, v, v, null),
-        forNonBlank(cells['personTo_id_mv'].value, v, v, null),
-        forNonBlank(cells['work_id_mv'].value, v, v, null)
+        forNonBlank(cells['personAt_id_mv'].value, v, v, null)
       ].join('␟'),
       x,
       filter(
