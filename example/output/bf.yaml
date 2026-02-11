@@ -32,7 +32,7 @@ corporationAt_id_mv:
   - KS00000006
   - KS99999999
 corporationBy_display_mv:
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 2
   - KS99999999
 corporationBy_id_mv:
@@ -508,7 +508,7 @@ url: https://www.dla-marbach.de/find/opac/id/BF00000003
 id: BF00000004
 display: Facette Personen und Körperschaften
 corporationAbout_display_mv:
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
 corporationAbout_id_mv:
   - KS00000001
 corporationAbout_role_mv:
@@ -527,7 +527,7 @@ exportDC: |-
     <dc:format></dc:format>
     <dc:subject>Person 1 (1982–2001)</dc:subject>
     <dc:subject>Körperschaft 1</dc:subject>
-    <dc:subject>Körperschaft 1 (1982)</dc:subject>
+    <dc:subject>Körperschaft 1 (1982–2001)</dc:subject>
     <dc:identifier>Facette Personen und Körperschaften</dc:identifier>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/BF00000004</dc:identifier>
     <dc:identifier>BF00000004</dc:identifier>
@@ -564,7 +564,7 @@ exportMODS: |-
     </subject>
     <subject>
       <name type="corporate">
-        <namePart>Körperschaft 1 (1982)</namePart>
+        <namePart>Körperschaft 1 (1982–2001)</namePart>
       </name>
     </subject>
     <location>
@@ -592,17 +592,17 @@ exportRIS: |-
   ER  -
 filterAuthorityRelation_mv:
   - Person 1 (1982–2001)␝Über
-  - Körperschaft 1 (1982)␝Über
+  - Körperschaft 1 (1982–2001)␝Über
   - Person 2 (1982–2001)␝Unter
   - Körperschaft 2␝Unter
 filterAuthorityRole_mv:
   - Person 1 (1982–2001)␝Behandelte Person/Körperschaft
-  - Körperschaft 1 (1982)␝Behandelte Person/Körperschaft
+  - Körperschaft 1 (1982–2001)␝Behandelte Person/Körperschaft
   - Person 2 (1982–2001)␝Bestandsbildner/Vorbesitzer
   - Körperschaft 2␝Bestandsbildner/Vorbesitzer
 filterAuthority_mv:
   - Person 1 (1982–2001)
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Person 2 (1982–2001)
   - Körperschaft 2
 filterCollection_mv: Facette Personen und Körperschaften

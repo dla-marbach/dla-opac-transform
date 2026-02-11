@@ -38,7 +38,7 @@ confidential: false
 contributor_display_mv:
   - Person 2 (1982–2001)
   - PE99999999
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 2
   - Konferenz 1
   - Konferenz 2
@@ -100,7 +100,7 @@ corporationBy_creator_mv:
   - contributor
   - creator
 corporationBy_display_mv:
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 2
   - KS99999999
 corporationBy_id_mv:
@@ -148,7 +148,7 @@ digitalObject_licenseNote_mv:
   - ␣
 displayAddition1: 'Verlagsort 1 : Verlag Vorlageform 1, Jahr/Datum 1 - Umfang'
 displayAddition2: Bibliographie 1, Bibliographie 2
-displayName: Person 1 (1982–2001); Person 2 (1982–2001); PE99999999; Körperschaft 1 (1982); Körperschaft 2; KS99999999
+displayName: Person 1 (1982–2001); Person 2 (1982–2001); PE99999999; Körperschaft 1 (1982–2001); Körperschaft 2; KS99999999
 edition: Ausgabebezeichnung Vorlageform
 editionNormalized: Ausgabebezeichnung normiert
 exportDC: |-
@@ -160,7 +160,7 @@ exportDC: |-
     <dc:creator>KS99999999</dc:creator>
     <dc:contributor>Person 2 (1982–2001)</dc:contributor>
     <dc:contributor>PE99999999</dc:contributor>
-    <dc:contributor>Körperschaft 1 (1982)</dc:contributor>
+    <dc:contributor>Körperschaft 1 (1982–2001)</dc:contributor>
     <dc:contributor>Körperschaft 2</dc:contributor>
     <dc:contributor>Konferenz 1</dc:contributor>
     <dc:contributor>Konferenz 2</dc:contributor>
@@ -263,7 +263,7 @@ exportMODS: |-
       <namePart>PE99999999</namePart>
     </name>
     <name type="corporate">
-      <namePart>Körperschaft 1 (1982)</namePart>
+      <namePart>Körperschaft 1 (1982–2001)</namePart>
       <nameIdentifier type="gnd">GND-Nummer 1</nameIdentifier>
       <nameIdentifier type="gnd">GND-Nummer 2</nameIdentifier>
       <namePart type="date">1982-05-22 — 2001-01-02</namePart>
@@ -312,7 +312,7 @@ exportMODS: |-
       </role>
     </name>
     <name type="corporate">
-      <namePart>Körperschaft 1 (1982)</namePart>
+      <namePart>Körperschaft 1 (1982–2001)</namePart>
       <nameIdentifier type="gnd">GND-Nummer 1</nameIdentifier>
       <nameIdentifier type="gnd">GND-Nummer 2</nameIdentifier>
       <namePart type="date">1982-05-22 — 2001-01-02</namePart>
@@ -607,29 +607,29 @@ filterAuthorityRelation_mv:
   - Person 1 (1982–2001)␝Von
   - Person 2 (1982–2001)␝Von
   - PE99999999␝nicht bestimmt
-  - Körperschaft 1 (1982)␝Von
+  - Körperschaft 1 (1982–2001)␝Von
   - Körperschaft 2␝Von
   - KS99999999␝nicht bestimmt
   - Person 1 (1982–2001)␝Unter
   - Person 2 (1982–2001)␝Unter
-  - Körperschaft 1 (1982)␝Unter
+  - Körperschaft 1 (1982–2001)␝Unter
   - Körperschaft 2␝Unter
 filterAuthorityRole_mv:
   - Person 1 (1982–2001)␝Verfasser/Urheber
   - Person 2 (1982–2001)␝Behandelte Person/Körperschaft
   - PE99999999␝nicht bestimmt
-  - Körperschaft 1 (1982)␝Verfasser/Urheber
+  - Körperschaft 1 (1982–2001)␝Verfasser/Urheber
   - Körperschaft 2␝Behandelte Person/Körperschaft
   - KS99999999␝nicht bestimmt
   - Person 1 (1982–2001)␝Bestandsbildner/Vorbesitzer
   - Person 2 (1982–2001)␝Bestandsbildner/Vorbesitzer
-  - Körperschaft 1 (1982)␝Bestandsbildner/Vorbesitzer
+  - Körperschaft 1 (1982–2001)␝Bestandsbildner/Vorbesitzer
   - Körperschaft 2␝Bestandsbildner/Vorbesitzer
 filterAuthority_mv:
   - Person 1 (1982–2001)
   - Person 2 (1982–2001)
   - PE99999999
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 2
   - KS99999999
 filterBibliography_mv:
@@ -729,7 +729,7 @@ item_classification_id_mv:
   - SE00000001␝SE00000002␝SE99999999
 item_collection_display_mv: Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]␝Z:Öffentlicher Bestand 2␝BF99999999
 item_collection_id_mv: BF00000001␝BF00000002␝BF99999999
-item_corporationAt_display_mv: Körperschaft 1 (1982)␝Körperschaft 2␝KS99999999
+item_corporationAt_display_mv: Körperschaft 1 (1982–2001)␝Körperschaft 2␝KS99999999
 item_corporationAt_id_mv: KS00000001␝KS00000002␝KS99999999
 item_digitalObject_accessLevel_mv: Zugriffsstufe␝␣
 item_digitalObject_display_mv: Multimedia 1␝Multimedia 2
@@ -1145,7 +1145,7 @@ relation_id_mv:
   - KS00000001
 relation_text_mv:
   - Person 1 (1982–2001)
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
 relation_type_mv:
   - GND-Relation 1 Typ
   - GND-Relation 2 Typ
@@ -1681,17 +1681,17 @@ title: Facette Medium
 id: AK00000063
 display: Facette Personen und Körperschaften
 corporationBy_display_mv:
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
 corporationBy_id_mv:
   - KS00000001
 corporationBy_role_mv:
   - Widmungsempfänger
-displayName: Person 1 (1982–2001); Körperschaft 1 (1982)
+displayName: Person 1 (1982–2001); Körperschaft 1 (1982–2001)
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Personen und Körperschaften</dc:title>
     <dc:creator>Person 1 (1982–2001)</dc:creator>
-    <dc:creator>Körperschaft 1 (1982)</dc:creator>
+    <dc:creator>Körperschaft 1 (1982–2001)</dc:creator>
     <dc:contributor>Person 7</dc:contributor>
     <dc:contributor>Körperschaft 7</dc:contributor>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000063</dc:identifier>
@@ -1712,7 +1712,7 @@ exportMODS: |-
       </role>
     </name>
     <name type="corporate">
-      <namePart>Körperschaft 1 (1982)</namePart>
+      <namePart>Körperschaft 1 (1982–2001)</namePart>
       <nameIdentifier type="gnd">GND-Nummer 1</nameIdentifier>
       <nameIdentifier type="gnd">GND-Nummer 2</nameIdentifier>
       <namePart type="date">1982-05-22 — 2001-01-02</namePart>
@@ -1753,17 +1753,17 @@ exportRIS: |-
   ER  -
 filterAuthorityRelation_mv:
   - Person 1 (1982–2001)␝An
-  - Körperschaft 1 (1982)␝An
+  - Körperschaft 1 (1982–2001)␝An
   - Person 7␝Unter
   - Körperschaft 7␝Unter
 filterAuthorityRole_mv:
   - Person 1 (1982–2001)␝Widmungsempfänger
-  - Körperschaft 1 (1982)␝Widmungsempfänger
+  - Körperschaft 1 (1982–2001)␝Widmungsempfänger
   - Person 7␝Bestandsbildner/Vorbesitzer
   - Körperschaft 7␝Bestandsbildner/Vorbesitzer
 filterAuthority_mv:
   - Person 1 (1982–2001)
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Person 7
   - Körperschaft 7
 filterSource: Bibliotheksmaterialien
@@ -1794,7 +1794,7 @@ title: Facette Personen und Körperschaften
 id: AK00000064
 display: Facette Personen und Körperschaften
 corporationBy_display_mv:
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 2
 corporationBy_id_mv:
   - KS00000001
@@ -1802,13 +1802,13 @@ corporationBy_id_mv:
 corporationBy_role_mv:
   - Verfasser
   - ␣
-displayName: Person 1 (1982–2001); Person 2 (1982–2001); Körperschaft 1 (1982); Körperschaft 2
+displayName: Person 1 (1982–2001); Person 2 (1982–2001); Körperschaft 1 (1982–2001); Körperschaft 2
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Personen und Körperschaften</dc:title>
     <dc:creator>Person 1 (1982–2001)</dc:creator>
     <dc:creator>Person 2 (1982–2001)</dc:creator>
-    <dc:creator>Körperschaft 1 (1982)</dc:creator>
+    <dc:creator>Körperschaft 1 (1982–2001)</dc:creator>
     <dc:creator>Körperschaft 2</dc:creator>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00000064</dc:identifier>
     <dc:identifier>AK00000064</dc:identifier>
@@ -1832,7 +1832,7 @@ exportMODS: |-
       <namePart type="date">1982-05 — 2001-01</namePart>
     </name>
     <name type="corporate">
-      <namePart>Körperschaft 1 (1982)</namePart>
+      <namePart>Körperschaft 1 (1982–2001)</namePart>
       <nameIdentifier type="gnd">GND-Nummer 1</nameIdentifier>
       <nameIdentifier type="gnd">GND-Nummer 2</nameIdentifier>
       <namePart type="date">1982-05-22 — 2001-01-02</namePart>
@@ -1865,17 +1865,17 @@ exportRIS: |-
 filterAuthorityRelation_mv:
   - Person 1 (1982–2001)␝Von
   - Person 2 (1982–2001)␝nicht bestimmt
-  - Körperschaft 1 (1982)␝Von
+  - Körperschaft 1 (1982–2001)␝Von
   - Körperschaft 2␝nicht bestimmt
 filterAuthorityRole_mv:
   - Person 1 (1982–2001)␝Verfasser/Urheber
   - Person 2 (1982–2001)␝nicht bestimmt
-  - Körperschaft 1 (1982)␝Verfasser/Urheber
+  - Körperschaft 1 (1982–2001)␝Verfasser/Urheber
   - Körperschaft 2␝nicht bestimmt
 filterAuthority_mv:
   - Person 1 (1982–2001)
   - Person 2 (1982–2001)
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 2
 filterSource: Bibliotheksmaterialien
 filterType: Sonstiges
@@ -1989,7 +1989,7 @@ exportRIS: |-
 filterAuthorityRelation_mv:
   - Person 1 (1982–2001)␝Von
   - Person 2 (1982–2001)␝Von
-  - Körperschaft 1 (1982)␝Von
+  - Körperschaft 1 (1982–2001)␝Von
   - Körperschaft 2␝Von
   - Person 3 (1982–2001)␝Über
   - Person 4␝Über
@@ -1998,7 +1998,7 @@ filterAuthorityRelation_mv:
 filterAuthorityRole_mv:
   - Person 1 (1982–2001)␝Verfasser/Urheber
   - Person 2 (1982–2001)␝Verfasser/Urheber
-  - Körperschaft 1 (1982)␝Verfasser/Urheber
+  - Körperschaft 1 (1982–2001)␝Verfasser/Urheber
   - Körperschaft 2␝Verfasser/Urheber
   - Person 3 (1982–2001)␝Behandelte Person/Körperschaft
   - Person 4␝Behandelte Person/Körperschaft
@@ -2007,7 +2007,7 @@ filterAuthorityRole_mv:
 filterAuthority_mv:
   - Person 1 (1982–2001)
   - Person 2 (1982–2001)
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 2
   - Person 3 (1982–2001)
   - Person 4
@@ -2072,7 +2072,7 @@ exportRIS: |-
 filterAuthorityRelation_mv:
   - Person 1 (1982–2001)␝An
   - Person 2 (1982–2001)␝An
-  - Körperschaft 1 (1982)␝An
+  - Körperschaft 1 (1982–2001)␝An
   - Körperschaft 2␝An
   - Person 3 (1982–2001)␝Unter
   - Person 4␝Unter
@@ -2085,7 +2085,7 @@ filterAuthorityRelation_mv:
 filterAuthorityRole_mv:
   - Person 1 (1982–2001)␝Widmungsempfänger
   - Person 2 (1982–2001)␝Widmungsempfänger
-  - Körperschaft 1 (1982)␝Widmungsempfänger
+  - Körperschaft 1 (1982–2001)␝Widmungsempfänger
   - Körperschaft 2␝Widmungsempfänger
   - Person 3 (1982–2001)␝nicht bestimmt
   - Person 4␝nicht bestimmt
@@ -2098,7 +2098,7 @@ filterAuthorityRole_mv:
 filterAuthority_mv:
   - Person 1 (1982–2001)
   - Person 2 (1982–2001)
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 2
   - Person 3 (1982–2001)
   - Person 4
@@ -2732,7 +2732,7 @@ display: Teil eines mehrbändigen Werks
 contributor_display_mv:
   - Person 2 (1982–2001)
   - PE99999999
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 2
   - Konferenz 1
   - Konferenz 2
@@ -2786,7 +2786,7 @@ corporationBy_creator_mv:
   - contributor
   - creator
 corporationBy_display_mv:
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 2
   - KS99999999
 corporationBy_id_mv:
@@ -2805,7 +2805,7 @@ creator_id_mv:
   - PE00000001
   - KS99999999
   - TH00000011
-displayName: Person 1 (1982–2001); Person 2 (1982–2001); PE99999999; Körperschaft 1 (1982); Körperschaft 2; KS99999999; Person 1 (1982–2001); Person 2 (1982–2001); PE99999999; Körperschaft 1 (1982); Körperschaft 2; KS99999999
+displayName: Person 1 (1982–2001); Person 2 (1982–2001); PE99999999; Körperschaft 1 (1982–2001); Körperschaft 2; KS99999999; Person 1 (1982–2001); Person 2 (1982–2001); PE99999999; Körperschaft 1 (1982–2001); Körperschaft 2; KS99999999
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Teil eines mehrbändigen Werks</dc:title>
@@ -2813,7 +2813,7 @@ exportDC: |-
     <dc:creator>KS99999999</dc:creator>
     <dc:contributor>Person 2 (1982–2001)</dc:contributor>
     <dc:contributor>PE99999999</dc:contributor>
-    <dc:contributor>Körperschaft 1 (1982)</dc:contributor>
+    <dc:contributor>Körperschaft 1 (1982–2001)</dc:contributor>
     <dc:contributor>Körperschaft 2</dc:contributor>
     <dc:contributor>Konferenz 1</dc:contributor>
     <dc:contributor>Konferenz 2</dc:contributor>
@@ -2847,7 +2847,7 @@ exportMODS: |-
       <namePart>PE99999999</namePart>
     </name>
     <name type="corporate">
-      <namePart>Körperschaft 1 (1982)</namePart>
+      <namePart>Körperschaft 1 (1982–2001)</namePart>
       <nameIdentifier type="gnd">GND-Nummer 1</nameIdentifier>
       <nameIdentifier type="gnd">GND-Nummer 2</nameIdentifier>
       <namePart type="date">1982-05-22 — 2001-01-02</namePart>
@@ -2913,21 +2913,21 @@ filterAuthorityRelation_mv:
   - Person 1 (1982–2001)␝Von
   - Person 2 (1982–2001)␝Von
   - PE99999999␝nicht bestimmt
-  - Körperschaft 1 (1982)␝Von
+  - Körperschaft 1 (1982–2001)␝Von
   - Körperschaft 2␝Von
   - KS99999999␝nicht bestimmt
 filterAuthorityRole_mv:
   - Person 1 (1982–2001)␝Verfasser/Urheber
   - Person 2 (1982–2001)␝Behandelte Person/Körperschaft
   - PE99999999␝nicht bestimmt
-  - Körperschaft 1 (1982)␝Verfasser/Urheber
+  - Körperschaft 1 (1982–2001)␝Verfasser/Urheber
   - Körperschaft 2␝Behandelte Person/Körperschaft
   - KS99999999␝nicht bestimmt
 filterAuthority_mv:
   - Person 1 (1982–2001)
   - Person 2 (1982–2001)
   - PE99999999
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 2
   - KS99999999
 filterSource: Bibliotheksmaterialien
@@ -4283,21 +4283,21 @@ corporationBy_creator_mv:
   - creator
   - contributor
 corporationBy_display_mv:
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 2
 corporationBy_id_mv:
   - KS00000001
   - KS00000002
 creator_display_mv:
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
 creator_id_mv:
   - KS00000001
-displayName: Person 1 (1982–2001); Person 2 (1982–2001); Körperschaft 1 (1982); Körperschaft 2
+displayName: Person 1 (1982–2001); Person 2 (1982–2001); Körperschaft 1 (1982–2001); Körperschaft 2
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Fehlende Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: -) und zwei Körperschaften (1: urheber, 2: beteiligt)</dc:title>
     <dc:creator>Person 2 (1982–2001)</dc:creator>
-    <dc:creator>Körperschaft 1 (1982)</dc:creator>
+    <dc:creator>Körperschaft 1 (1982–2001)</dc:creator>
     <dc:contributor>Person 1 (1982–2001)</dc:contributor>
     <dc:contributor>Körperschaft 2</dc:contributor>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00006001</dc:identifier>
@@ -4319,7 +4319,7 @@ exportMODS: |-
       <namePart type="date">1982-05 — 2001-01</namePart>
     </name>
     <name type="corporate">
-      <namePart>Körperschaft 1 (1982)</namePart>
+      <namePart>Körperschaft 1 (1982–2001)</namePart>
       <nameIdentifier type="gnd">GND-Nummer 1</nameIdentifier>
       <nameIdentifier type="gnd">GND-Nummer 2</nameIdentifier>
       <namePart type="date">1982-05-22 — 2001-01-02</namePart>
@@ -4349,17 +4349,17 @@ exportRIS: |-
 filterAuthorityRelation_mv:
   - Person 1 (1982–2001)␝nicht bestimmt
   - Person 2 (1982–2001)␝nicht bestimmt
-  - Körperschaft 1 (1982)␝nicht bestimmt
+  - Körperschaft 1 (1982–2001)␝nicht bestimmt
   - Körperschaft 2␝nicht bestimmt
 filterAuthorityRole_mv:
   - Person 1 (1982–2001)␝nicht bestimmt
   - Person 2 (1982–2001)␝nicht bestimmt
-  - Körperschaft 1 (1982)␝nicht bestimmt
+  - Körperschaft 1 (1982–2001)␝nicht bestimmt
   - Körperschaft 2␝nicht bestimmt
 filterAuthority_mv:
   - Person 1 (1982–2001)
   - Person 2 (1982–2001)
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 2
 filterSource: Bibliotheksmaterialien
 filterType: Sonstiges
@@ -4394,23 +4394,23 @@ corporationBy_creator_mv:
   - creator
   - contributor
 corporationBy_display_mv:
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 2
 corporationBy_id_mv:
   - KS00000001
   - KS00000002
 creator_display_mv:
   - Person 2 (1982–2001)
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
 creator_id_mv:
   - PE00000002
   - KS00000001
-displayName: Person 1 (1982–2001); Person 2 (1982–2001); Körperschaft 1 (1982); Körperschaft 2
+displayName: Person 1 (1982–2001); Person 2 (1982–2001); Körperschaft 1 (1982–2001); Körperschaft 2
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Zusätzliche Angabe in SUCHEF/GFUPER: Zwei Personen (1: beteiligt, 2: urheber) und zwei Körperschaften (1: urheber, 2: beteiligt)</dc:title>
     <dc:creator>Person 2 (1982–2001)</dc:creator>
-    <dc:creator>Körperschaft 1 (1982)</dc:creator>
+    <dc:creator>Körperschaft 1 (1982–2001)</dc:creator>
     <dc:contributor>Person 1 (1982–2001)</dc:contributor>
     <dc:contributor>Körperschaft 2</dc:contributor>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK00006002</dc:identifier>
@@ -4432,7 +4432,7 @@ exportMODS: |-
       <namePart type="date">1982-05 — 2001-01</namePart>
     </name>
     <name type="corporate">
-      <namePart>Körperschaft 1 (1982)</namePart>
+      <namePart>Körperschaft 1 (1982–2001)</namePart>
       <nameIdentifier type="gnd">GND-Nummer 1</nameIdentifier>
       <nameIdentifier type="gnd">GND-Nummer 2</nameIdentifier>
       <namePart type="date">1982-05-22 — 2001-01-02</namePart>
@@ -4462,17 +4462,17 @@ exportRIS: |-
 filterAuthorityRelation_mv:
   - Person 1 (1982–2001)␝nicht bestimmt
   - Person 2 (1982–2001)␝nicht bestimmt
-  - Körperschaft 1 (1982)␝nicht bestimmt
+  - Körperschaft 1 (1982–2001)␝nicht bestimmt
   - Körperschaft 2␝nicht bestimmt
 filterAuthorityRole_mv:
   - Person 1 (1982–2001)␝nicht bestimmt
   - Person 2 (1982–2001)␝nicht bestimmt
-  - Körperschaft 1 (1982)␝nicht bestimmt
+  - Körperschaft 1 (1982–2001)␝nicht bestimmt
   - Körperschaft 2␝nicht bestimmt
 filterAuthority_mv:
   - Person 1 (1982–2001)
   - Person 2 (1982–2001)
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 2
 filterSource: Bibliotheksmaterialien
 filterType: Sonstiges

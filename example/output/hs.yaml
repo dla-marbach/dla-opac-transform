@@ -33,7 +33,7 @@ corporationBy_comment_mv:
   - Link Körperschaft 2 Anmerkung
   - ␣
 corporationBy_display_mv:
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 2
   - KS99999999
 corporationBy_id_mv:
@@ -93,7 +93,7 @@ exportDC: |-
     <dc:creator>Person 1 (1982–2001)</dc:creator>
     <dc:creator>Person 2 (1982–2001)</dc:creator>
     <dc:creator>PE99999999</dc:creator>
-    <dc:creator>Körperschaft 1 (1982)</dc:creator>
+    <dc:creator>Körperschaft 1 (1982–2001)</dc:creator>
     <dc:creator>Körperschaft 2</dc:creator>
     <dc:creator>KS99999999</dc:creator>
     <dc:contributor>Person 3 (1982–2001)</dc:contributor>
@@ -184,7 +184,7 @@ exportMODS: |-
       <namePart>PE99999999</namePart>
     </name>
     <name type="corporate">
-      <namePart>Körperschaft 1 (1982)</namePart>
+      <namePart>Körperschaft 1 (1982–2001)</namePart>
       <nameIdentifier type="gnd">GND-Nummer 1</nameIdentifier>
       <nameIdentifier type="gnd">GND-Nummer 2</nameIdentifier>
       <namePart type="date">1982-05-22 — 2001-01-02</namePart>
@@ -383,7 +383,7 @@ filterAuthorityRelation_mv:
   - Person 1 (1982–2001)␝Von
   - Person 2 (1982–2001)␝Von
   - PE99999999␝Von
-  - Körperschaft 1 (1982)␝Von
+  - Körperschaft 1 (1982–2001)␝Von
   - Körperschaft 2␝Von
   - KS99999999␝Von
   - Person 3 (1982–2001)␝An
@@ -402,7 +402,7 @@ filterAuthorityRole_mv:
   - Person 1 (1982–2001)␝Link Person 1 Typ
   - Person 2 (1982–2001)␝Link Person 2 Typ
   - PE99999999␝nicht bestimmt
-  - Körperschaft 1 (1982)␝Link Körperschaft 1 Typ
+  - Körperschaft 1 (1982–2001)␝Link Körperschaft 1 Typ
   - Körperschaft 2␝Link Körperschaft 2 Typ
   - KS99999999␝nicht bestimmt
   - Person 3 (1982–2001)␝Link Person 3 Typ
@@ -417,7 +417,7 @@ filterAuthority_mv:
   - Person 1 (1982–2001)
   - Person 2 (1982–2001)
   - PE99999999
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 2
   - KS99999999
   - Person 3 (1982–2001)
@@ -798,7 +798,7 @@ corporationAbout_comment_mv:
   - ␣
   - ␣
 corporationAbout_display_mv:
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 6
 corporationAbout_id_mv:
   - KS00000001
@@ -847,7 +847,7 @@ exportDC: |-
     <dc:subject>Person 6</dc:subject>
     <dc:subject>Körperschaft 1</dc:subject>
     <dc:subject>Körperschaft 6</dc:subject>
-    <dc:subject>Körperschaft 1 (1982)</dc:subject>
+    <dc:subject>Körperschaft 1 (1982–2001)</dc:subject>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/HS00000005</dc:identifier>
     <dc:identifier>HS00000005</dc:identifier>
   </oai_dc:dc>
@@ -919,7 +919,7 @@ exportMODS: |-
     </subject>
     <subject>
       <name type="corporate">
-        <namePart>Körperschaft 1 (1982)</namePart>
+        <namePart>Körperschaft 1 (1982–2001)</namePart>
       </name>
     </subject>
     <subject>
@@ -966,7 +966,7 @@ filterAuthorityRelation_mv:
   - Körperschaft 6␝An
   - Person 1 (1982–2001)␝Über
   - Person 6␝Über
-  - Körperschaft 1 (1982)␝Über
+  - Körperschaft 1 (1982–2001)␝Über
   - Körperschaft 6␝Über
 filterAuthorityRole_mv:
   - Person 2 (1982–2001)␝Verfasser/Urheber
@@ -976,7 +976,7 @@ filterAuthorityRole_mv:
   - Person 3 (1982–2001)␝Adressat
   - Körperschaft 3␝Adressat
   - Person 1 (1982–2001)␝Behandelte Person/Körperschaft
-  - Körperschaft 1 (1982)␝Behandelte Person/Körperschaft
+  - Körperschaft 1 (1982–2001)␝Behandelte Person/Körperschaft
 filterAuthority_mv:
   - Person 2 (1982–2001)
   - Person 6
@@ -985,7 +985,7 @@ filterAuthority_mv:
   - Person 3 (1982–2001)
   - Körperschaft 3
   - Person 1 (1982–2001)
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
 filterSource: Handschriften Einzelnachweise
 filterSubject_mv:
   - Person 1 (1982–2001)

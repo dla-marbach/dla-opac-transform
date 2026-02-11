@@ -41,7 +41,7 @@ corporationBy_comment_mv:
   - Link Körperschaft 2 Anmerkung
   - ␣
 corporationBy_display_mv:
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 2
   - KS99999999
 corporationBy_id_mv:
@@ -94,7 +94,7 @@ dimension_width_mv:
   - Maßangabe 2 Breite (cm)
 displayAddition1: Zeitraum 1 Anmerkung
 displayAddition2: 'Inventarnummer: Inventarnummer'
-displayName: Person 1 (1982–2001); Person 2 (1982–2001); PE99999999; Körperschaft 1 (1982); Körperschaft 2; KS99999999
+displayName: Person 1 (1982–2001); Person 2 (1982–2001); PE99999999; Körperschaft 1 (1982–2001); Körperschaft 2; KS99999999
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Bild 1 [Objektart Unterkategorie]</dc:title>
@@ -107,7 +107,7 @@ exportDC: |-
     <dc:creator>PE99999999</dc:creator>
     <dc:creator>Person 7</dc:creator>
     <dc:creator>Person 8</dc:creator>
-    <dc:creator>Körperschaft 1 (1982)</dc:creator>
+    <dc:creator>Körperschaft 1 (1982–2001)</dc:creator>
     <dc:creator>Körperschaft 2</dc:creator>
     <dc:creator>KS99999999</dc:creator>
     <dc:creator>Körperschaft 5</dc:creator>
@@ -227,7 +227,7 @@ exportMODS: |-
       </role>
     </name>
     <name type="corporate">
-      <namePart>Körperschaft 1 (1982)</namePart>
+      <namePart>Körperschaft 1 (1982–2001)</namePart>
       <nameIdentifier type="gnd">GND-Nummer 1</nameIdentifier>
       <nameIdentifier type="gnd">GND-Nummer 2</nameIdentifier>
       <namePart type="date">1982-05-22 — 2001-01-02</namePart>
@@ -475,7 +475,7 @@ filterAuthorityRelation_mv:
   - Person 1 (1982–2001)␝Von
   - Person 2 (1982–2001)␝Von
   - PE99999999␝Von
-  - Körperschaft 1 (1982)␝Von
+  - Körperschaft 1 (1982–2001)␝Von
   - Körperschaft 2␝Von
   - KS99999999␝Von
   - Person 3 (1982–2001)␝An
@@ -500,7 +500,7 @@ filterAuthorityRole_mv:
   - Person 1 (1982–2001)␝Link Person 1 Typ
   - Person 2 (1982–2001)␝Link Person 2 Typ
   - PE99999999␝nicht bestimmt
-  - Körperschaft 1 (1982)␝Verfasser/Urheber
+  - Körperschaft 1 (1982–2001)␝Verfasser/Urheber
   - Körperschaft 2␝Verfasser/Urheber
   - KS99999999␝Verfasser/Urheber
   - Person 3 (1982–2001)␝Widmungsempfänger
@@ -524,7 +524,7 @@ filterAuthority_mv:
   - Person 1 (1982–2001)
   - Person 2 (1982–2001)
   - PE99999999
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 2
   - KS99999999
   - Person 3 (1982–2001)
@@ -843,7 +843,7 @@ url: https://www.dla-marbach.de/find/opac/id/BI00000003
 id: BI00000004
 display: Facette Personen und Körperschaften
 corporationAbout_display_mv:
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 6
 corporationAbout_id_mv:
   - KS00000001
@@ -881,7 +881,7 @@ exportDC: |-
     <dc:subject>Person 6</dc:subject>
     <dc:subject>Körperschaft 1</dc:subject>
     <dc:subject>Körperschaft 6</dc:subject>
-    <dc:subject>Körperschaft 1 (1982)</dc:subject>
+    <dc:subject>Körperschaft 1 (1982–2001)</dc:subject>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/BI00000004</dc:identifier>
     <dc:identifier>BI00000004</dc:identifier>
   </oai_dc:dc>
@@ -964,7 +964,7 @@ exportMODS: |-
     </subject>
     <subject>
       <name type="corporate">
-        <namePart>Körperschaft 1 (1982)</namePart>
+        <namePart>Körperschaft 1 (1982–2001)</namePart>
       </name>
     </subject>
     <subject>
@@ -1011,7 +1011,7 @@ filterAuthorityRelation_mv:
   - Körperschaft 4␝An
   - Person 1 (1982–2001)␝Über
   - Person 6␝Über
-  - Körperschaft 1 (1982)␝Über
+  - Körperschaft 1 (1982–2001)␝Über
   - Körperschaft 6␝Über
   - Person 2 (1982–2001)␝Unter
   - Körperschaft 2␝Unter
@@ -1023,7 +1023,7 @@ filterAuthorityRole_mv:
   - Person 4␝Widmungsempfänger
   - Körperschaft 4␝Widmungsempfänger
   - Person 1 (1982–2001)␝Dargestellte Person allein
-  - Körperschaft 1 (1982)␝Veranstaltung
+  - Körperschaft 1 (1982–2001)␝Veranstaltung
   - Körperschaft 6␝nicht bestimmt
   - Person 2 (1982–2001)␝Bestandsbildner/Vorbesitzer
   - Körperschaft 2␝Bestandsbildner/Vorbesitzer
@@ -1035,7 +1035,7 @@ filterAuthority_mv:
   - Person 4
   - Körperschaft 4
   - Person 1 (1982–2001)
-  - Körperschaft 1 (1982)
+  - Körperschaft 1 (1982–2001)
   - Körperschaft 6
   - Person 2 (1982–2001)
   - Körperschaft 2

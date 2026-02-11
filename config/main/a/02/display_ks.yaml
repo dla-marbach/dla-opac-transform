@@ -1,4 +1,4 @@
-# title (dateLifespanStart[0,4])
+# title (Jahresangabe aus dateLifespanStart-Jahresangabe aus dateLifespanEnd)
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -13,7 +13,18 @@
       'ohne Titel'
     )
     + forNonBlank(
-      cells['dateLifespanStart'].value[0,4],
+      forNonBlank(
+        cells['dateLifespanStart'].value,
+        x,
+        x[0,4],
+        ''
+      )
+      + forNonBlank(
+        cells['dateLifespanEnd'].value,
+        x,
+        '–' + x[0,4],
+        ''
+      ),
       x,
       ' (' + x + ')',
       ''
