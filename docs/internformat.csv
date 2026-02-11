@@ -175,7 +175,7 @@ AK,relation_comment_mv,texts,,197,0 %,774,43,"['␣', 'Anregung für']"
 AK,relation_id_mv,strings,,57126,3 %,85297,51133,['AK00121480']
 AK,relation_text_mv,texts,,57393,3 %,85602,51606,"['Kirsch, Sarah (1935-2013). Schwanenliebe (Zusammenstellung : 2001)']"
 AK,relation_type_mv,strings,,57421,3 %,85631,192,['Rezension von']
-AK,schemaVersion,string,,1791246,100 %,1791246,1,0.11.0
+AK,schemaVersion,string,,1791246,100 %,1791246,1,0.12.0
 AK,scholarlyPublication_date_mv,texts,,2726,0 %,2763,139,['2015']
 AK,scholarlyPublication_location_mv,texts,,21780,1 %,21841,822,['München']
 AK,scholarlyPublication_text_mv,texts,,2832,0 %,2871,645,['Univ.']
@@ -258,7 +258,7 @@ AU,noteProvenance_type_mv,strings,,21094,2 %,33747,6,"['Inventar-Nummer', 'Sachg
 AU,personAt_display_mv,texts,aus PE display,117263,12 %,148133,3459,"['Jünger, Ernst (1895–1998)']"
 AU,personAt_id_mv,strings,,117263,12 %,148133,3460,['PE00001233']
 AU,provenance,boolean,,137481,14 %,137481,1,True
-AU,schemaVersion,string,,970950,100 %,970950,1,0.11.0
+AU,schemaVersion,string,,970950,100 %,970950,1,0.12.0
 AU,source,string,,970950,100 %,970950,1,AU
 AU,statusItem,string,,970950,100 %,970950,4,Verfügbar
 AU,statusLoan,string,,970950,100 %,970950,7,Am Standort
@@ -274,7 +274,7 @@ BE,display,text,Hauptbezeichnung,6462,100 %,6462,6389,Unbekannt
 BE,id,string,,6462,100 %,6462,6462,BE00005193
 BE,personAt_display_mv,texts,aus PE display,326,5 %,368,321,"['Meinke, Hanns (1884–1974)']"
 BE,personAt_id_mv,strings,,326,5 %,368,321,['PE00008533']
-BE,schemaVersion,string,,6462,100 %,6462,1,0.11.0
+BE,schemaVersion,string,,6462,100 %,6462,1,0.12.0
 BE,source,string,,6462,100 %,6462,1,BE
 BE,statusLoan,string,,6412,99 %,6412,7,Am Standort
 BE,title,text,,6462,100 %,6462,6389,Unbekannt
@@ -352,7 +352,7 @@ BF,personAbout_role_mv,strings,,14,0 %,14,2,[Behandelte Person]
 BF,personAt_display_mv,texts,aus PE display,41500,85 %,42192,26193,"['Grimm, Hans (1875–1959)']"
 BF,personAt_id_mv,strings,,41500,85 %,42192,26195,['PE00017920']
 BF,reference_text_mv,texts,,950,2 %,950,719,Jb. XXXIII 465
-BF,schemaVersion,string,,48748,100 %,48748,1,0.11.0
+BF,schemaVersion,string,,48748,100 %,48748,1,0.12.0
 BF,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“,45568,93 %,47590,28186,"['Suhrkamp-Verlag <Frankfurt, Main> (1950)']"
 BF,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“,45568,93 %,47590,28190,['KS00001261']
 BF,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,45568,93 %,49341,28890,['PE00017920']
@@ -471,7 +471,7 @@ BI,personTo_display_mv,texts,aus PE display,1076,4 %,1131,491,['Unbekannt']
 BI,personTo_id_mv,strings,,1076,4 %,1131,491,['PE00250583']
 BI,photoNegativeNumber_mv,strings,,22347,73 %,30435,29791,['M3109-0']
 BI,reference_text_mv,texts,,3317,11 %,3317,2667,"Nicolin, Günther: Kunst zu Kafka. Bonn: bücherstube am theater 1974. S. 29."
-BI,schemaVersion,string,,30569,100 %,30569,1,0.11.0
+BI,schemaVersion,string,,30569,100 %,30569,1,0.12.0
 BI,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),15741,51 %,17656,589,"['Kunz-Hutterstrasser, Hermine (1873–1948)']"
 BI,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),15741,51 %,17656,589,['PE00324458']
 BI,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,29727,97 %,58084,12847,['PE00002037']
@@ -591,7 +591,7 @@ HS,personTo_id_mv,strings,,824763,72 %,972908,179354,['PE00001233']
 HS,personTo_role_mv,strings,,714651,62 %,740182,6,['[Adressat/in]']
 HS,photoNegativeNumber_mv,strings,,1027,0 %,1340,1307,['Mikroform benutzen']
 HS,place_mv,texts,,763601,67 %,913310,28911,['Stuttgart']
-HS,schemaVersion,string,,1145782,100 %,1145782,1,0.11.0
+HS,schemaVersion,string,,1145782,100 %,1145782,1,0.12.0
 HS,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),1137626,99 %,1342541,5851,"['Suhrkamp-Verlag <Frankfurt, Main> (1950)']"
 HS,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),1137626,99 %,1342541,5852,['KS00001261']
 HS,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,1145779,100 %,2704106,400386,['PE00000144']
@@ -679,7 +679,7 @@ KS,relation_comment_mv,texts,,1116,1 %,6039,922,['gegründet durch']
 KS,relation_id_mv,strings,,40554,31 %,157694,75958,['KS00017343']
 KS,relation_text_mv,texts,,41023,31 %,158233,80183,['Berlin']
 KS,relation_type_mv,strings,,41038,32 %,158248,48,"['Sitz, Ort']"
-KS,schemaVersion,string,,130234,100 %,130234,1,0.11.0
+KS,schemaVersion,string,,130234,100 %,130234,1,0.12.0
 KS,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,130234,100 %,130234,130234,KS00160767
 KS,searchEntityScore,pint,Anzahl der Verweise auf den Normdatensatz,130234,100 %,130234,588,2
 KS,searchSuggestPayload,string,ID und Anzeigetitel für Suggester (Trennzeichen: ␝),130234,100 %,130234,130234,"KS00102279␝Ausstellung Ulrich Tarlatt, Hortus Animae <1996 - 1997, Burgk u.a.>"
@@ -706,7 +706,7 @@ MM,hyperlink,string,Link zum Objekt,4553,3 %,4553,4449,https://digital.dla-marba
 MM,id,string,,139500,100 %,139500,139500,MM01517291
 MM,license,string,,984,1 %,984,3,CC0
 MM,licenseNote,text,,733,1 %,733,101,CC BY 4.0 | Open Access
-MM,schemaVersion,string,,139500,100 %,139500,1,0.11.0
+MM,schemaVersion,string,,139500,100 %,139500,1,0.12.0
 MM,source,string,,139500,100 %,139500,1,MM
 MM,storageArea,string,,134943,97 %,134943,19,PHST01
 MM,thumbnail,string,Link zum Vorschaubild,1940,1 %,1940,1935,"https://digital.dla-marbach.de/viewer/api/v1/records/HS01317070/files/images/HS01317070_0001.tif/full/!480,480/0/default.jpg"
@@ -769,7 +769,7 @@ PE,relation_comment_mv,texts,,32848,6 %,204627,13804,"['Ehemann', '␣']"
 PE,relation_id_mv,strings,,139163,24 %,585595,52846,['TH00001621']
 PE,relation_text_mv,texts,,181437,31 %,686317,98403,['Schriftsteller']
 PE,relation_type_mv,strings,,181446,31 %,686326,51,['Charakt. Beruf']
-PE,schemaVersion,string,,579558,100 %,579558,1,0.11.0
+PE,schemaVersion,string,,579558,100 %,579558,1,0.12.0
 PE,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,214547,37 %,214547,214547,PE00287998
 PE,searchEntityScore,pint,Anzahl der Verweise auf diesen Normdatensatz,214547,37 %,214547,1172,2
 PE,searchSuggestPayload,string,ID und Anzeigetitel für Suggester (Trennzeichen: ␝),214547,37 %,214547,214547,"PE00660746␝Siebert, Werner (1883–1954)"
@@ -805,7 +805,7 @@ SE,filterType,string,Facette Medientyp,229684,100 %,229684,1,Normdaten
 SE,id,string,,229684,100 %,229684,229684,SE00240901
 SE,person_display_mv,texts,aus PE display,172084,75 %,180954,46185,"['Döblin, Alfred (1878–1957)']"
 SE,person_id_mv,strings,,172084,75 %,180954,46197,['PE00006675']
-SE,schemaVersion,string,,229684,100 %,229684,1,0.11.0
+SE,schemaVersion,string,,229684,100 %,229684,1,0.12.0
 SE,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,191091,83 %,247477,97199,['PE00001233']
 SE,sequence_mv,strings,,229672,100 %,591598,8,"['Person', 'Autorenschema']"
 SE,source,string,,229684,100 %,229684,1,SE
@@ -828,7 +828,7 @@ SY,id,string,,7587,100 %,7587,7587,SY00013615
 SY,notation,string,,7587,100 %,7587,7559,S8.6.Vw
 SY,parent_display_mv,texts,aus SY display,7573,100 %,7573,1552,S8.6. Deutsche Literatur / Aspekte
 SY,parent_id_mv,strings,,7573,100 %,7573,1552,SY00004531
-SY,schemaVersion,string,,7587,100 %,7587,1,0.11.0
+SY,schemaVersion,string,,7587,100 %,7587,1,0.12.0
 SY,seeAlso_display_mv,texts,aus SY display,76,1 %,82,74,['S8.6.6. Geistliche Literatur']
 SY,seeAlso_id_mv,strings,,76,1 %,82,76,['SY00005895']
 SY,source,string,,7587,100 %,7587,1,SY
@@ -866,7 +866,7 @@ TH,relation_comment_mv,texts,,238,0 %,2242,71,"['Ort der Verleihung', '␣', '�
 TH,relation_id_mv,strings,,30418,42 %,479994,176025,['TH00122554']
 TH,relation_text_mv,texts,,31957,44 %,481998,183883,['Fluss']
 TH,relation_type_mv,strings,,31957,44 %,481998,70,['Relation']
-TH,schemaVersion,string,,71846,100 %,71846,1,0.11.0
+TH,schemaVersion,string,,71846,100 %,71846,1,0.12.0
 TH,seeAlso_display_mv,texts,aus TH display,61,0 %,86,59,['Nummer']
 TH,seeAlso_id_mv,strings,,61,0 %,86,61,['TH00039104']
 TH,source,string,,71846,100 %,71846,1,TH
