@@ -84,36 +84,36 @@ tasks:
     env:
       SOLR_JETTY_HOST: 0.0.0.0
     cmds:
-      - solr/bin/solr delete -c dla-indexing &> /dev/null || true
-      - solr/bin/solr delete -c dla-prod &> /dev/null || true
+      - solr/bin/solr delete -c indexing &> /dev/null || true
+      - solr/bin/solr delete -c internformat &> /dev/null || true
       - solr/bin/solr stop &> /dev/null || true
-      - rm -r "solr/server/solr/dla-indexing" 2> /dev/null || true; mkdir -p "solr/server/solr/dla-indexing"
-      - rm -r "solr/server/solr/dla-prod" 2> /dev/null || true; mkdir -p "solr/server/solr/dla-prod"
-      - cp config/solr/* solr/server/solr/dla-indexing/
-      - cp config/solr/* solr/server/solr/dla-prod/
-      - touch solr/server/solr/dla-indexing/core.properties solr/server/solr/dla-indexing/stopwords.txt solr/server/solr/dla-indexing/synonyms.txt
-      - touch solr/server/solr/dla-prod/core.properties solr/server/solr/dla-prod/stopwords.txt solr/server/solr/dla-prod/synonyms.txt
+      - rm -r "solr/server/solr/indexing" 2> /dev/null || true; mkdir -p "solr/server/solr/indexing"
+      - rm -r "solr/server/solr/internformat" 2> /dev/null || true; mkdir -p "solr/server/solr/internformat"
+      - cp config/solr/* solr/server/solr/indexing/
+      - cp config/solr/* solr/server/solr/internformat/
+      - touch solr/server/solr/indexing/core.properties solr/server/solr/indexing/stopwords.txt solr/server/solr/indexing/synonyms.txt
+      - touch solr/server/solr/internformat/core.properties solr/server/solr/internformat/stopwords.txt solr/server/solr/internformat/synonyms.txt
       - solr/bin/solr start --user-managed
       - solr/docker/scripts/wait-for-solr.sh
       - |
-        # JSON-Lines an Solr core dla-indexing senden
+        # JSON-Lines an Solr core indexing senden
         for f in "{{.DIR}}/output/"*.jsonl; do
-          [ $(curl --silent --upload-file "$f" 'http://localhost:8983/solr/dla-indexing/update/json/docs?overwrite=true' -X POST -H 'Content-Type: application/json' -o /dev/stderr -w "%{http_code}") -eq 200 ]
+          [ $(curl --silent --upload-file "$f" 'http://localhost:8983/solr/indexing/update/json/docs?overwrite=true' -X POST -H 'Content-Type: application/json' -o /dev/stderr -w "%{http_code}") -eq 200 ]
         done
-        [ $(curl --silent 'http://localhost:8983/solr/dla-indexing/update?commit=true&optimize=true' -o /dev/stderr -w "%{http_code}") -eq 200 ]
+        [ $(curl --silent 'http://localhost:8983/solr/indexing/update?commit=true&optimize=true' -o /dev/stderr -w "%{http_code}") -eq 200 ]
       - |
         # Prüfen, ob Datensätze nicht indexiert werden konnten
-        diff <(perl -lne 'print substr($_,9,10)' example/output/*.jsonl | sort) <(curl --silent 'http://localhost:8983/solr/dla-indexing/query?fl=id&q=*%3A*&rows=10000000&wt=csv&csv.header=false' | sort) || true
+        diff <(perl -lne 'print substr($_,9,10)' example/output/*.jsonl | sort) <(curl --silent 'http://localhost:8983/solr/indexing/query?fl=id&q=*%3A*&rows=10000000&wt=csv&csv.header=false' | sort) || true
       - |
         # Index für Autovervollständigung aufbauen
-        [ $(curl --silent 'http://localhost:8983/solr/dla-indexing/suggest?suggest=true&suggest.build=true&suggest.dictionary=mySuggester' -o /dev/stderr -w "%{http_code}") -eq 200 ]
-        [ $(curl --silent 'http://localhost:8983/solr/dla-indexing/suggest?suggest=true&suggest.build=true&suggest.dictionary=text' -o /dev/stderr -w "%{http_code}") -eq 200 ]
+        [ $(curl --silent 'http://localhost:8983/solr/indexing/suggest?suggest=true&suggest.build=true&suggest.dictionary=mySuggester' -o /dev/stderr -w "%{http_code}") -eq 200 ]
+        [ $(curl --silent 'http://localhost:8983/solr/indexing/suggest?suggest=true&suggest.build=true&suggest.dictionary=text' -o /dev/stderr -w "%{http_code}") -eq 200 ]
       - |
         # Neu befüllten Index live schalten durch Swap
-        [ $(curl --silent 'http://localhost:8983/solr/admin/cores?action=SWAP&core=dla-indexing&other=dla-prod' -o /dev/stderr -w "%{http_code}") -eq 200 ]
+        [ $(curl --silent 'http://localhost:8983/solr/admin/cores?action=SWAP&core=indexing&other=internformat' -o /dev/stderr -w "%{http_code}") -eq 200 ]
       - |
-        # Test query auf Solr core dla-prod
-        [ $(curl --silent 'http://localhost:8983/solr/dla-prod/query?q=*:*&rows=0' -o /dev/stderr -w "%{http_code}") -eq 200 ]
+        # Test query auf Solr core internformat
+        [ $(curl --silent 'http://localhost:8983/solr/internformat/query?q=*:*&rows=0' -o /dev/stderr -w "%{http_code}") -eq 200 ]
 
   yaml:
     desc: JSONL zusätzlich in YAML konvertieren
