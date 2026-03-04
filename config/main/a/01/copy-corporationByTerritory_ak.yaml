@@ -12,65 +12,64 @@
   expression: |
     grel:
     forNonBlank(
-      forEachIndex(
-        cells['parent_type_mv'].value.split('␟'),
-        i_parent_type,
-        v_parent_type,
-        if(
-          v_parent_type == 'Teil mit abhängigem Titel',
-          forNonBlank(
-            cells['parent_id_mv'].value.split('␟')[i_parent_type].cross('ak', 'id')[0],
-            r,
-            forNonBlank(
-              r.cells['corporationByTerritory_id_mv'].value,
-              x,
-              forEachIndex(
-                x.split('␟'),
-                i_corporation_id,
-                v_corporation_id,
-                forNonBlank(
-                  r.cells[columnName].value.split('␟')[i_corporation_id],
-                  v,
-                  v,
-                  '␣'
-                )
-              ).join('␟'),
-              null
-            ),
-            null
-          ),
-          null
-        )
-      ).join('␟'),
-      new,
-      with(
+      [
         forNonBlank(
-          forNonBlank(
-            cells['corporationByTerritory_id_mv'].value,
-            x,
-            forEachIndex(
-              x.split('␟'),
-              i,
+          cells['corporationByTerritory_id_mv'].value,
+          x,
+          forEachIndex(
+            x.split('␟'),
+            i,
+            v,
+            forNonBlank(
+              value.split('␟')[i],
               v,
-              forNonBlank(
-                value.split('␟')[i],
-                v,
-                v,
-                '␣'
-              )
-            ).join('␟'),
-            null
-          ),
-          old,
-          old + '␟' + new,
-          new
+              v,
+              '␣'
+            )
+          ).join('␟'),
+          null
         ),
-        z,
-        if(
-          isNonBlank(z.replace(/␟|␣/,'')),
-          z,
+        forNonBlank(
+          forEachIndex(
+            cells['parent_type_mv'].value.split('␟'),
+            i_parent_type,
+            v_parent_type,
+            if(
+              v_parent_type == 'Teil mit abhängigem Titel',
+              forNonBlank(
+                cells['parent_id_mv'].value.split('␟')[i_parent_type].cross('ak', 'id')[0],
+                r,
+                forNonBlank(
+                  r.cells['corporationByTerritory_id_mv'].value,
+                  x,
+                  forEachIndex(
+                    x.split('␟'),
+                    i_corporation_id,
+                    v_corporation_id,
+                    forNonBlank(
+                      r.cells[columnName].value.split('␟')[i_corporation_id],
+                      v,
+                      v,
+                      '␣'
+                    )
+                  ).join('␟'),
+                  null
+                ),
+                null
+              ),
+              null
+            )
+          ).join('␟'),
+          x,
+          x,
           null
         )
+      ].join('␟'),
+      z,
+      if(
+        isNonBlank(z.replace(/␟|␣/,'')),
+        z,
+        null
       ),
       null
     )
@@ -85,65 +84,64 @@
   expression: |
     grel:
     forNonBlank(
-      forEachIndex(
-        cells['parent_type_mv'].value.split('␟'),
-        i_parent_type,
-        v_parent_type,
-        if(
-          v_parent_type == 'Teil mit abhängigem Titel',
-          forNonBlank(
-            cells['parent_id_mv'].value.split('␟')[i_parent_type].cross('ak', 'id')[0],
-            r,
-            forNonBlank(
-              r.cells['corporationByTerritory_id_mv'].value,
-              x,
-              forEachIndex(
-                x.split('␟'),
-                i_corporation_id,
-                v_corporation_id,
-                forNonBlank(
-                  r.cells[columnName].value.split('␟')[i_corporation_id],
-                  v,
-                  v,
-                  '␣'
-                )
-              ).join('␟'),
-              null
-            ),
-            null
-          ),
-          null
-        )
-      ).join('␟'),
-      new,
-      with(
+      [
         forNonBlank(
-          forNonBlank(
-            cells['corporationByTerritory_id_mv'].value,
-            x,
-            forEachIndex(
-              x.split('␟'),
-              i,
+          cells['corporationByTerritory_id_mv'].value,
+          x,
+          forEachIndex(
+            x.split('␟'),
+            i,
+            v,
+            forNonBlank(
+              value.split('␟')[i],
               v,
-              forNonBlank(
-                value.split('␟')[i],
-                v,
-                v,
-                '␣'
-              )
-            ).join('␟'),
-            null
-          ),
-          old,
-          old + '␟' + new,
-          new
+              v,
+              '␣'
+            )
+          ).join('␟'),
+          null
         ),
-        z,
-        if(
-          isNonBlank(z.replace(/␟|␣/,'')),
-          z,
+        forNonBlank(
+          forEachIndex(
+            cells['parent_type_mv'].value.split('␟'),
+            i_parent_type,
+            v_parent_type,
+            if(
+              v_parent_type == 'Teil mit abhängigem Titel',
+              forNonBlank(
+                cells['parent_id_mv'].value.split('␟')[i_parent_type].cross('ak', 'id')[0],
+                r,
+                forNonBlank(
+                  r.cells['corporationByTerritory_id_mv'].value,
+                  x,
+                  forEachIndex(
+                    x.split('␟'),
+                    i_corporation_id,
+                    v_corporation_id,
+                    forNonBlank(
+                      r.cells[columnName].value.split('␟')[i_corporation_id],
+                      v,
+                      v,
+                      '␣'
+                    )
+                  ).join('␟'),
+                  null
+                ),
+                null
+              ),
+              null
+            )
+          ).join('␟'),
+          x,
+          x,
           null
         )
+      ].join('␟'),
+      z,
+      if(
+        isNonBlank(z.replace(/␟|␣/,'')),
+        z,
+        null
       ),
       null
     )
@@ -158,65 +156,64 @@
   expression: |
     grel:
     forNonBlank(
-      forEachIndex(
-        cells['parent_type_mv'].value.split('␟'),
-        i_parent_type,
-        v_parent_type,
-        if(
-          v_parent_type == 'Teil mit abhängigem Titel',
-          forNonBlank(
-            cells['parent_id_mv'].value.split('␟')[i_parent_type].cross('ak', 'id')[0],
-            r,
-            forNonBlank(
-              r.cells['corporationByTerritory_id_mv'].value,
-              x,
-              forEachIndex(
-                x.split('␟'),
-                i_corporation_id,
-                v_corporation_id,
-                forNonBlank(
-                  r.cells[columnName].value.split('␟')[i_corporation_id],
-                  v,
-                  v,
-                  '␣'
-                )
-              ).join('␟'),
-              null
-            ),
-            null
-          ),
-          null
-        )
-      ).join('␟'),
-      new,
-      with(
+      [
         forNonBlank(
-          forNonBlank(
-            cells['corporationByTerritory_id_mv'].value,
-            x,
-            forEachIndex(
-              x.split('␟'),
-              i,
+          cells['corporationByTerritory_id_mv'].value,
+          x,
+          forEachIndex(
+            x.split('␟'),
+            i,
+            v,
+            forNonBlank(
+              value.split('␟')[i],
               v,
-              forNonBlank(
-                value.split('␟')[i],
-                v,
-                v,
-                '␣'
-              )
-            ).join('␟'),
-            null
-          ),
-          old,
-          old + '␟' + new,
-          new
+              v,
+              '␣'
+            )
+          ).join('␟'),
+          null
         ),
-        z,
-        if(
-          isNonBlank(z.replace(/␟|␣/,'')),
-          z,
+        forNonBlank(
+          forEachIndex(
+            cells['parent_type_mv'].value.split('␟'),
+            i_parent_type,
+            v_parent_type,
+            if(
+              v_parent_type == 'Teil mit abhängigem Titel',
+              forNonBlank(
+                cells['parent_id_mv'].value.split('␟')[i_parent_type].cross('ak', 'id')[0],
+                r,
+                forNonBlank(
+                  r.cells['corporationByTerritory_id_mv'].value,
+                  x,
+                  forEachIndex(
+                    x.split('␟'),
+                    i_corporation_id,
+                    v_corporation_id,
+                    forNonBlank(
+                      r.cells[columnName].value.split('␟')[i_corporation_id],
+                      v,
+                      v,
+                      '␣'
+                    )
+                  ).join('␟'),
+                  null
+                ),
+                null
+              ),
+              null
+            )
+          ).join('␟'),
+          x,
+          x,
           null
         )
+      ].join('␟'),
+      z,
+      if(
+        isNonBlank(z.replace(/␟|␣/,'')),
+        z,
+        null
       ),
       null
     )
