@@ -9,10 +9,11 @@
     forNonBlank(
       if(
           or(
-              cells['category'].value == 'Zeitungsausschnittsammlung der Mediendokumentation',
+              cells['category'].value == 'Aufgelöster Bestand der Bibliothek',
               cells['category'].value == 'Dokumentensammlung der Mediendokumentation',
               cells['category'].value == 'Geschlossener Bestand der Bibliothek',
-              cells['category'].value == 'Theaterprogramme der Mediendokumentation'
+              cells['category'].value == 'Theaterprogramme der Mediendokumentation',
+              cells['category'].value == 'Zeitungsausschnittsammlung der Mediendokumentation'
           ),
           'Gedrucktes',
           ''
@@ -27,6 +28,7 @@
               cells['category'].value == 'Depositum im Siegfried Unseld Archiv',
               cells['category'].value == 'Depositum in der A-Reihe',
               cells['category'].value == 'Depositum in der B-Reihe',
+              cells['category'].value == 'Depositum in der C-Reihe',
               cells['category'].value == 'Einzelautograph',
               cells['category'].value == 'Kryptobestand',
               cells['category'].value == 'Pauschalaufnahme',
