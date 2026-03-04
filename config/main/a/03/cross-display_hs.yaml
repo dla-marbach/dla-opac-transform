@@ -6,16 +6,7 @@
   baseColumnName: accession_id
   expression: |
     grel:
-    forNonBlank(
-      value.cross('be','id')[0].cells['display'].value,
-      x,
-      if(
-        isNonBlank(x.replace(/␟|␣/,'')),
-        x,
-        null
-      ),
-      null
-    )
+    value
   newColumnName: accession_display
   columnInsertIndex: 2
 - op: core/column-addition
