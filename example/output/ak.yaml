@@ -749,13 +749,15 @@ item_digitalObject_display_mv: Multimedia 1␝Multimedia 2
 item_digitalObject_id_mv: MM00000001␝MM00000002
 item_digitalObject_licenseNote_mv: 'Creative Commons 10th Birthday Celebration San Francisco / Timothy Vollmer / CC BY 4.0. Quelle: http://www.flickr.com/photos/sixteenmilesofstring/8256206923/in/set-72157632200936657␝␣'
 item_display_mv:
-  - Öffentliches Exemplar
+  - 'Exemplarsignatur (Exemplarsignaturzusatz). Zugangsnummer. Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1]'
 item_enveloped_mv: "true"
 item_id_mv:
   - AU00000001
 item_location_mv: Standort
 item_noteOther_mv: Bemerkung
 item_noteProvenance_mv: 'Sammlungsspezifischer Vermerk 1 Typ: Sammlungsspezifischer Vermerk 1; Sammlungsspezifischer Vermerk 2 Typ: Sammlungsspezifischer Vermerk 2'
+item_note_mv:
+  - Öffentliches Exemplar
 item_personAt_display_mv: Person 1 (1982-2001)␝Person 2 (1982-2001)␝PE99999999
 item_personAt_id_mv: PE00000001␝PE00000002␝PE99999999
 item_provenance_mv: "true"
@@ -1672,10 +1674,12 @@ filterMedium_mv:
 filterSource: Bibliotheksmaterialien
 filterType: Gedrucktes
 item_display_mv:
-  - Buchumschlag
+  - 'Facette Medium : [Musikalia]'
 item_enveloped_mv: "true"
 item_id_mv:
   - AU00000005
+item_note_mv:
+  - Buchumschlag
 noteContent_mv:
   - Noten
   - Buch
@@ -1780,6 +1784,8 @@ item_display_mv:
   - Facette Personen und Körperschaften
 item_id_mv:
   - AU00000011
+item_note_mv:
+  - Facette Personen und Körperschaften
 item_personAt_display_mv: Person 7
 item_personAt_id_mv: PE00000007
 personBy_display_mv:
@@ -2127,11 +2133,14 @@ item_classification_id_mv:
   - SE00000013
   - SE00000014␝SE00000015
 item_display_mv:
-  - Facette Personen und Körperschaften / Provenienzketten / An
-  - Facette Personen und Körperschaften / Provenienzketten / Unter
+  - Facette Personen und Körperschaften Provenienzketten über Exemplare
+  - Facette Personen und Körperschaften Provenienzketten über Exemplare
 item_id_mv:
   - AU00000012
   - AU00000013
+item_note_mv:
+  - Facette Personen und Körperschaften / Provenienzketten / An
+  - Facette Personen und Körperschaften / Provenienzketten / Unter
 schemaVersion: 0.12.0
 source: AK
 title: Facette Personen und Körperschaften Provenienzketten über Exemplare
@@ -2201,6 +2210,8 @@ item_display_mv:
   - Verknüpfte Digitale Objekte
 item_id_mv:
   - AU00000003
+item_note_mv:
+  - Verknüpfte Digitale Objekte
 schemaVersion: 0.12.0
 source: AK
 title: Verknüpfte Digitale Objekte
@@ -2255,9 +2266,11 @@ item_digitalObject_hyperlink_mv: https://digital.dla-marbach.de/files/dbst02/pub
 item_digitalObject_id_mv: MM00000005␝MM00000015
 item_digitalObject_license_mv: C BY-NC-ND␝␣
 item_display_mv:
-  - Verknüpfte Digitale Objekte
+  - Das erste verknüpfte digitale Objekt auf Exemplarebene wird kopiert
 item_id_mv:
   - AU00000004
+item_note_mv:
+  - Verknüpfte Digitale Objekte
 schemaVersion: 0.12.0
 source: AK
 title: Das erste verknüpfte digitale Objekt auf Exemplarebene wird kopiert
@@ -2305,6 +2318,8 @@ item_display_mv:
   - 'Facette Zeit: Sendedatum'
 item_id_mv:
   - AU00000021
+item_note_mv:
+  - 'Facette Zeit: Sendedatum'
 noteContent_mv:
   - "1982-05-22"
 schemaVersion: 0.12.0
@@ -2357,6 +2372,8 @@ item_display_mv:
   - 'Facette Zeit: Provenienzketten'
 item_id_mv:
   - AU00000022
+item_note_mv:
+  - 'Facette Zeit: Provenienzketten'
 noteContent_mv:
   - "1999"
 schemaVersion: 0.12.0

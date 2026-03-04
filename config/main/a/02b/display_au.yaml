@@ -1,0 +1,41 @@
+# callNumberItem (callNumberItemSuffix). accessionNumber. manifestation_display
+# manifestation_display wird erst später gebildet, daher hier direkt via cross
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['callNumberItem'].value,
+          v,
+          forNonBlank(
+            cells['callNumberItemSuffix'].value,
+            suffix,
+            v + ' (' + suffix + ')',
+            v 
+          ),
+          null
+        ),
+        forNonBlank(
+          cells['accessionNumber'].value,
+          v,
+          v,
+          null
+        ),
+        forNonBlank(
+          cells['manifestation_id'].value.cross('ak','id')[0].cells['display'].value,
+          v,
+          v,
+          null
+        )
+      ].join('. '),
+      x,
+      x.replace('\n', '. '),
+      'ohne Titel'
+    )
+  newColumnName: display
+  columnInsertIndex: 1

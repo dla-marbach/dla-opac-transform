@@ -11,7 +11,7 @@
         value.cross('au','manifestation_id'),
         r,
         forNonBlank(
-          r.cells['noteOther_mv'].value,
+          r.cells['note'].value,
           x,
           x.replace('␟','␝'),
           '␣'
@@ -25,5 +25,5 @@
       ),
       null
     )
-  newColumnName: item_noteOther_mv
+  newColumnName: item_note_mv
   columnInsertIndex: 2
