@@ -120,6 +120,7 @@ AK,item_noteProvenance_mv,texts,aus AU noteProvenance_type_mv und noteProvenance
 AK,item_personAt_display_mv,texts,aus AU personAt_display_mv getrennt mit ␝ (U+241D),100735,6 %,150686,3472,"['Koselleck, Reinhart (1923–2006)']"
 AK,item_personAt_id_mv,strings,aus AU personAt_id_mv getrennt mit ␝ (U+241D),100735,6 %,150686,3473,['PE00000144']
 AK,item_provenance_mv,booleans,aus AU provenance,119563,7 %,175495,2,['true']
+AK,item_supplements_id_mv,strings,zugeordnete Materialien aus BI und HS über Exemplarsätze,,,,,
 AK,item_usageRestriction_mv,texts,aus AU usageRestriction,870731,49 %,946007,5,['benutzbar']
 AK,item_usageRestrictionNote_mv,texts,aus AU usageRestrictionNote,83492,5 %,111617,12,['bedingt benutzbar\nRara-Bestand\nBitte wenden Sie sich an die Auskunft der Bibliothek.\nE-Mail: bibliothek@dla-marbach.de\nTelefon: +49 7144 848 317']
 AK,item_virtualRecording_mv,texts,aus AU virtualRecording getrennt mit ␝ (U+241D),1295,0 %,1564,1180,['Auflage der Ausgabe nicht ermittelbar']
@@ -195,7 +196,7 @@ AK,subject_id_mv,strings,,140746,8 %,178522,12688,['TH00000233']
 AK,subject_useTerm_mv,texts,aus TH useTerm_display_mv,18,0 %,18,14,Opava
 AK,subject_usedFor_mv,texts,aus TH usedFor_display_mv,116625,7 %,868738,23270,"['Grossberlin', 'Groß-Berlin', 'Haupt- und Residenz-Stadt Berlin', 'Reichshauptstadt Berlin', 'Berlino', 'Berolino', 'Stadtgemeinde Berlin', 'Hauptstadt Berlin', 'Birlin', 'Barlin', 'Berolinon', 'Land Berlin', 'Coloniae Brandenburgicae', 'Berlinum', 'Verolino', 'Berolinum', 'Cölln an der Spree', 'Colonia Brandenburgica', 'Colonia Marchica', 'Cöln an der Spree', 'Berlin <1945-1948>', '""Besonderes Gebiet"" Berlin', 'Groß-Berlin']"
 AK,subjectOther_mv,texts,,157478,9 %,233150,161412,['Frau']
-AK,supplements_id_mv,strings,zugeordnete Materialien aus BI und HS,15432,1 %,16658,16658,"['HS00651977', 'HS00651911', 'HS00868511']"
+AK,supplements_id_mv,strings,zugeordnete Materialien aus BI,,,,,
 AK,textualHolding_mv,texts,Bestandsangabe für Zeitschriften,14405,1 %,19840,19336,['Serie; Bestandsnachweis im AK']
 AK,title,text,,1792826,100 %,1792826,1626301,Gedichte
 AK,titleMain_text,text,,1521632,85 %,1521632,1110819,Gedichte

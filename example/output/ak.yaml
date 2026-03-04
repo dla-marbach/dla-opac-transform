@@ -761,6 +761,9 @@ item_note_mv:
 item_personAt_display_mv: Person 1 (1982-2001)␝Person 2 (1982-2001)␝PE99999999
 item_personAt_id_mv: PE00000001␝PE00000002␝PE99999999
 item_provenance_mv: "true"
+item_supplements_id_mv:
+  - BI00000001
+  - HS00000001
 item_usageRestriction_mv: Benutzungsbeschränkung
 item_virtualRecording_mv: Virtuelle Aufnahme
 journalIssue_display_mv:
@@ -956,9 +959,6 @@ subject_useTerm_mv:
 subject_usedFor_mv:
   - Thesaurus-Begriff 41 used-for
   - Thesaurus-Begriff 42 used-for
-supplements_id_mv:
-  - BI00000001
-  - HS00000001
 title: Bibliotheksdokument 1
 titleMain_text: Haupttitel
 titleOther_language_mv:
