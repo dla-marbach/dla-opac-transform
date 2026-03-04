@@ -1,6 +1,10 @@
 # Bündelung aller Urheber in einem Feld
 # aus personBy, corporationBy, corporationByConference und corporationByTerritory
 # wenn das zugehörige _creator Feld "creator" beinhaltet
+# Vorgehen:
+# 1. id und role zusammen mit Trennzeichen ␝ in creator_tmp
+# 2. daraus Felder _id und _role extrahieren
+# 3. aus _id via cross _display bilden
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -22,7 +26,12 @@
               forNonBlank(
                 cells['personBy_id_mv'].value.split('␟')[i],
                 y,
-                y,
+                y + forNonBlank(
+                  cells['personBy_role_mv'].value.split('␟')[i],
+                  y,
+                  '␝' + y,
+                  '␝' + '␣'
+                ),
                 null
               ),
               null
@@ -42,7 +51,12 @@
               forNonBlank(
                 cells['corporationBy_id_mv'].value.split('␟')[i],
                 y,
-                y,
+                y + forNonBlank(
+                  cells['personBy_role_mv'].value.split('␟')[i],
+                  y,
+                  '␝' + y,
+                  '␝' + '␣'
+                ),
                 null
               ),
               null
@@ -62,7 +76,12 @@
               forNonBlank(
                 cells['corporationByConference_id_mv'].value.split('␟')[i],
                 y,
-                y,
+                y + forNonBlank(
+                  cells['personBy_role_mv'].value.split('␟')[i],
+                  y,
+                  '␝' + y,
+                  '␝' + '␣'
+                ),
                 null
               ),
               null
@@ -82,7 +101,12 @@
               forNonBlank(
                 cells['corporationByTerritory_id_mv'].value.split('␟')[i],
                 y,
-                y,
+                y + forNonBlank(
+                  cells['personBy_role_mv'].value.split('␟')[i],
+                  y,
+                  '␝' + y,
+                  '␝' + '␣'
+                ),
                 null
               ),
               null
@@ -95,12 +119,56 @@
       filter(
         z.split('␟'),
         f,
-        f[0] != '␣'
+        f[0] != '␣␝␣'
       ).uniques().join('␟'),
+      null
+    )
+  newColumnName: creator_tmp
+  columnInsertIndex: 2
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: creator_tmp
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.split('␟'),
+        v,
+        v.split('␝')[0]
+      ).join('␟'),
+      x,
+      x,
       null
     )
   newColumnName: creator_id_mv
   columnInsertIndex: 2
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: creator_tmp
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        value.split('␟'),
+        v,
+        v.split('␝')[1]
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(x.replace(/␟|␣/,'')),
+        x,
+        null
+      ),
+      null
+    )
+  newColumnName: creator_role_mv
+  columnInsertIndex: 2
+- op: core/column-removal
+  columnName: creator_tmp
 - op: core/column-addition
   engineConfig:
     facets: []
