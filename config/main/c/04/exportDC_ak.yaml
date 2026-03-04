@@ -138,7 +138,7 @@
 
     forEach(
       [
-        forNonBlank(cells['publisherOriginal_text_mv'].value, v, v, '')
+        forNonBlank(cells['publisherOriginalText_mv'].value, v, v, '')
       ].join('␟').replace('␣','').split('␟').uniques(),
       v,
       '  <dc:publisher>' + v.escape('xml') + '</dc:publisher>' + '\n'

@@ -1363,12 +1363,12 @@ AK00006002,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http
 </mods>"
 AK00007001,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
   <titleInfo>
-    <title>Platzhalter in Korrelationen: 2x A0412 (A,B) ohne AI412</title>
+    <title>Platzhalter in Korrelationen: 2x A0653 (A,B) ohne AI653</title>
   </titleInfo>
-  <originInfo eventType=""publication"">
-    <publisher>A</publisher>
-    <publisher>B</publisher>
-  </originInfo>
+  <physicalDescription>
+    <note type=""physical description"">A</note>
+    <note type=""physical description"">B</note>
+  </physicalDescription>
   <location>
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
@@ -1380,7 +1380,7 @@ AK00007001,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http
 </mods>"
 AK00007002,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
   <titleInfo>
-    <title>Platzhalter in Korrelationen: 2x AI412 (A,B) ohne A0412</title>
+    <title>Platzhalter in Korrelationen: 2x AI653 (A,B) ohne A0653</title>
   </titleInfo>
   <location>
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
@@ -1393,15 +1393,15 @@ AK00007002,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http
 </mods>"
 AK00007003,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
   <titleInfo>
-    <title>Platzhalter in Korrelationen: 5x A0412 (A,B,C,D,E) und 2x AI412 (B,D)</title>
+    <title>Platzhalter in Korrelationen: 5x A0653 (A,B,C,D,E) und 2x AI653 (B,D)</title>
   </titleInfo>
-  <originInfo eventType=""publication"">
-    <publisher>A</publisher>
-    <publisher>B</publisher>
-    <publisher>C</publisher>
-    <publisher>D</publisher>
-    <publisher>E</publisher>
-  </originInfo>
+  <physicalDescription>
+    <note type=""physical description"">A</note>
+    <note type=""physical description"">B</note>
+    <note type=""physical description"">C</note>
+    <note type=""physical description"">D</note>
+    <note type=""physical description"">E</note>
+  </physicalDescription>
   <location>
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>
@@ -1413,12 +1413,12 @@ AK00007003,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http
 </mods>"
 AK00007004,,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">
   <titleInfo>
-    <title>Platzhalter in Korrelationen: 5x AI412 (A,B,C,D,E) und 2x AO412 (B,D)</title>
+    <title>Platzhalter in Korrelationen: 5x AI653 (A,B,C,D,E) und 2x AO412 (B,D)</title>
   </titleInfo>
-  <originInfo eventType=""publication"">
-    <publisher>B</publisher>
-    <publisher>D</publisher>
-  </originInfo>
+  <physicalDescription>
+    <note type=""physical description"">B</note>
+    <note type=""physical description"">D</note>
+  </physicalDescription>
   <location>
     <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
   </location>

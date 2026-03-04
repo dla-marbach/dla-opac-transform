@@ -38,7 +38,7 @@
     + forNonBlank(cells['parentVolumeTotal'].value, v, 'NV  - ' + v + '\n', '')
     + forNonBlank(forEachIndex(cells['titleOther_text_mv'].value.split('␟'), i, v, forNonBlank(cells['titleOther_type_mv'].value.split('␟')[i], z, if(and(v != '␣', z == '303n'), 'OP  - ' + v.replace('\n','. '), null), null)).join('\n'), x, x + '\n', '')
     + forNonBlank(forEach(cells['work_display_mv'].value.split('␟'), v, if(v != '␣', 'OP  - ' + v.replace('\n','. '), null)).join('\n'), x, x + '\n', '')
-    + forNonBlank(filter(cells['publisherOriginal_text_mv'].value.split('␟'), v, v != '␣').join('; '), x, 'PB  - ' + x.replace('\n','. ') + '\n', '')
+    + forNonBlank(filter(cells['publisherOriginalText_mv'].value.split('␟'), v, v != '␣').join('; '), x, 'PB  - ' + x.replace('\n','. ') + '\n', '')
     + forNonBlank(cells['dateOrigin'].value, v, 'PY  - ' + v + '\n', '')
     + forNonBlank(forEachIndex(cells['noteRemark_text_mv'].value.split('␟'), i, v, if(v != '␣', 'RN  - ' + forNonBlank(cells['noteRemark_type_mv'].value.split('␟')[i].replace('␣', ''), z, z + ': ', '') + v.replace('\n','. '), null)).join('\n'), x, x + '\n', '')
     + forNonBlank(forEach(cells['isbn_mv'].value.split('␟'), v, if(v != '␣', 'SN  - ' + v, null)).join('\n'), x, x + '\n', '')

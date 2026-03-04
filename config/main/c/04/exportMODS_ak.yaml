@@ -196,7 +196,7 @@
           , '')
         ).join('')
       , '') +
-      forNonBlank(cells['publisherOriginal_text_mv'].value, x,
+      forNonBlank(cells['publisherOriginalText_mv'].value, x,
         forEach(x.split('␟'), v, if(v != '␣',
           '    <publisher>' + v.escape('xml') + '</publisher>' + '\n'
         , '')).join('')

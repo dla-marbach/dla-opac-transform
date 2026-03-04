@@ -1,6 +1,6 @@
 # Trefferliste dritte Zeile
 # bei Zeitschriften oder Reihen:
-# publisherOriginalLocation_mv : publisherOriginal_text_mv, publicationHistory. - extent
+# publisherOriginalLocation_mv : publisherOriginalText_mv, publicationHistory. - extent
 - op: core/column-addition
   engineConfig:
     facets:
@@ -25,14 +25,14 @@
     + if(
       and(
         isNonBlank(cells['publisherOriginalLocation_mv'].value),
-        isNonBlank(cells['publisherOriginal_text_mv'].value)
+        isNonBlank(cells['publisherOriginalText_mv'].value)
       ),
       ' : ',
       ''
     )
     + forNonBlank(
       filter(
-        cells['publisherOriginal_text_mv'].value.split('␟'),
+        cells['publisherOriginalText_mv'].value.split('␟'),
         v,
         not(v=='␣')
       )[0],
@@ -44,7 +44,7 @@
       and(
         or(
           isNonBlank(cells['publisherOriginalLocation_mv'].value),
-          isNonBlank(cells['publisherOriginal_text_mv'].value)
+          isNonBlank(cells['publisherOriginalText_mv'].value)
         ),
         isNonBlank(cells['publicationHistory'].value)
       ),
@@ -61,7 +61,7 @@
       and(
         or(
           isNonBlank(cells['publisherOriginalLocation_mv'].value),
-          isNonBlank(cells['publisherOriginal_text_mv'].value),
+          isNonBlank(cells['publisherOriginalText_mv'].value),
           isNonBlank(cells['publicationHistory'].value)
         ),
         isNonBlank(cells['extent'].value)
@@ -145,7 +145,7 @@
       )
     )
 # bei allen anderen:
-# publisherOriginalLocation_mv : publisherOriginal_text_mv, dateOriginComment_mv. - extent
+# publisherOriginalLocation_mv : publisherOriginalText_mv, dateOriginComment_mv. - extent
 - op: core/text-transform
   engineConfig:
     facets:
@@ -173,14 +173,14 @@
     + if(
       and(
         isNonBlank(cells['publisherOriginalLocation_mv'].value),
-        isNonBlank(cells['publisherOriginal_text_mv'].value)
+        isNonBlank(cells['publisherOriginalText_mv'].value)
       ),
       ' : ',
       ''
     )
     + forNonBlank(
       filter(
-        cells['publisherOriginal_text_mv'].value.split('␟'),
+        cells['publisherOriginalText_mv'].value.split('␟'),
         v,
         not(v=='␣')
       )[0],
@@ -192,7 +192,7 @@
       and(
         or(
           isNonBlank(cells['publisherOriginalLocation_mv'].value),
-          isNonBlank(cells['publisherOriginal_text_mv'].value)
+          isNonBlank(cells['publisherOriginalText_mv'].value)
         ),
         isNonBlank(cells['dateOriginComment_mv'].value)
       ),
@@ -213,7 +213,7 @@
       and(
         or(
           isNonBlank(cells['publisherOriginalLocation_mv'].value),
-          isNonBlank(cells['publisherOriginal_text_mv'].value),
+          isNonBlank(cells['publisherOriginalText_mv'].value),
           isNonBlank(cells['dateOriginComment_mv'].value)
         ),
         isNonBlank(cells['extent'].value)
