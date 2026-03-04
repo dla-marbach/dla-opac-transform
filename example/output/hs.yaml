@@ -33,7 +33,7 @@ corporationBy_comment_mv:
   - Link Körperschaft 2 Anmerkung
   - ␣
 corporationBy_display_mv:
-  - Körperschaft 1 (1982–2001)
+  - Körperschaft 1 (1982-2001)
   - Körperschaft 2
   - KS99999999
 corporationBy_id_mv:
@@ -79,7 +79,7 @@ digitalObject_id_mv:
 digitalObject_licenseNote_mv:
   - 'Creative Commons 10th Birthday Celebration San Francisco / Timothy Vollmer / CC BY 4.0. Quelle: http://www.flickr.com/photos/sixteenmilesofstring/8256206923/in/set-72157632200936657'
   - ␣
-displayAddition1: 22.05.1982 – 01.01.2001
+displayAddition1: 22.05.1982 - 01.01.2001
 displayAddition2: Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
@@ -90,13 +90,13 @@ exportDC: |-
     <dc:title>Person 1 (1982-2001). Werk 1 (genre : 2000)</dc:title>
     <dc:title>AK99999999</dc:title>
     <dc:title>Person 2 (1982-2001). Werk 2 (genre)</dc:title>
-    <dc:creator>Person 1 (1982–2001)</dc:creator>
-    <dc:creator>Person 2 (1982–2001)</dc:creator>
+    <dc:creator>Person 1 (1982-2001)</dc:creator>
+    <dc:creator>Person 2 (1982-2001)</dc:creator>
     <dc:creator>PE99999999</dc:creator>
-    <dc:creator>Körperschaft 1 (1982–2001)</dc:creator>
+    <dc:creator>Körperschaft 1 (1982-2001)</dc:creator>
     <dc:creator>Körperschaft 2</dc:creator>
     <dc:creator>KS99999999</dc:creator>
-    <dc:contributor>Person 3 (1982–2001)</dc:contributor>
+    <dc:contributor>Person 3 (1982-2001)</dc:contributor>
     <dc:contributor>Person 4</dc:contributor>
     <dc:contributor>PE99999999</dc:contributor>
     <dc:contributor>Körperschaft 7</dc:contributor>
@@ -149,7 +149,7 @@ exportMODS: |-
       <title>Person 1 (1982-2001). Werk 1 (genre : 2000)</title>
     </titleInfo>
     <name type="personal">
-      <namePart>Person 1 (1982–2001)</namePart>
+      <namePart>Person 1 (1982-2001)</namePart>
       <nameIdentifier type="gnd">GND-Nummer 1</nameIdentifier>
       <nameIdentifier type="gnd">GND-Nummer 2</nameIdentifier>
       <namePart type="date">1982-05-22 — 2001-01-02</namePart>
@@ -158,7 +158,7 @@ exportMODS: |-
       </role>
     </name>
     <name type="personal">
-      <namePart>Person 2 (1982–2001)</namePart>
+      <namePart>Person 2 (1982-2001)</namePart>
       <namePart type="date">1982-05 — 2001-01</namePart>
       <role>
         <roleTerm type="text">Link Person 2 Typ</roleTerm>
@@ -168,7 +168,7 @@ exportMODS: |-
       <namePart>PE99999999</namePart>
     </name>
     <name type="personal">
-      <namePart>Person 3 (1982–2001)</namePart>
+      <namePart>Person 3 (1982-2001)</namePart>
       <namePart type="date">1982 — 2001</namePart>
       <role>
         <roleTerm type="text">Link Person 3 Typ</roleTerm>
@@ -184,7 +184,7 @@ exportMODS: |-
       <namePart>PE99999999</namePart>
     </name>
     <name type="corporate">
-      <namePart>Körperschaft 1 (1982–2001)</namePart>
+      <namePart>Körperschaft 1 (1982-2001)</namePart>
       <nameIdentifier type="gnd">GND-Nummer 1</nameIdentifier>
       <nameIdentifier type="gnd">GND-Nummer 2</nameIdentifier>
       <namePart type="date">1982-05-22 — 2001-01-02</namePart>
@@ -380,13 +380,13 @@ exportRIS: |-
   ER  -
 extent: Umfang
 filterAuthorityRelation_mv:
-  - Person 1 (1982–2001)␝Von
-  - Person 2 (1982–2001)␝Von
+  - Person 1 (1982-2001)␝Von
+  - Person 2 (1982-2001)␝Von
   - PE99999999␝Von
-  - Körperschaft 1 (1982–2001)␝Von
+  - Körperschaft 1 (1982-2001)␝Von
   - Körperschaft 2␝Von
   - KS99999999␝Von
-  - Person 3 (1982–2001)␝An
+  - Person 3 (1982-2001)␝An
   - Person 4␝An
   - PE99999999␝An
   - Körperschaft 7␝An
@@ -399,13 +399,13 @@ filterAuthorityRelation_mv:
   - Körperschaft 4␝Über
   - KS99999999␝Über
 filterAuthorityRole_mv:
-  - Person 1 (1982–2001)␝Link Person 1 Typ
-  - Person 2 (1982–2001)␝Link Person 2 Typ
+  - Person 1 (1982-2001)␝Link Person 1 Typ
+  - Person 2 (1982-2001)␝Link Person 2 Typ
   - PE99999999␝nicht bestimmt
-  - Körperschaft 1 (1982–2001)␝Link Körperschaft 1 Typ
+  - Körperschaft 1 (1982-2001)␝Link Körperschaft 1 Typ
   - Körperschaft 2␝Link Körperschaft 2 Typ
   - KS99999999␝nicht bestimmt
-  - Person 3 (1982–2001)␝Link Person 3 Typ
+  - Person 3 (1982-2001)␝Link Person 3 Typ
   - Person 4␝Link Person 4 Typ
   - Körperschaft 7␝Link Körperschaft 7 Typ
   - Körperschaft 8␝Link Körperschaft 8 Typ
@@ -414,13 +414,13 @@ filterAuthorityRole_mv:
   - Körperschaft 3␝Link Körperschaft 3 Typ
   - Körperschaft 4␝Link Körperschaft 4 Typ
 filterAuthority_mv:
-  - Person 1 (1982–2001)
-  - Person 2 (1982–2001)
+  - Person 1 (1982-2001)
+  - Person 2 (1982-2001)
   - PE99999999
-  - Körperschaft 1 (1982–2001)
+  - Körperschaft 1 (1982-2001)
   - Körperschaft 2
   - KS99999999
-  - Person 3 (1982–2001)
+  - Person 3 (1982-2001)
   - Person 4
   - Körperschaft 7
   - Körperschaft 8
@@ -516,8 +516,8 @@ personBy_comment_mv:
   - Link Person 2 Anmerkung
   - ␣
 personBy_display_mv:
-  - Person 1 (1982–2001)
-  - Person 2 (1982–2001)
+  - Person 1 (1982-2001)
+  - Person 2 (1982-2001)
   - PE99999999
 personBy_id_mv:
   - PE00000001
@@ -532,7 +532,7 @@ personTo_comment_mv:
   - Link Person 4 Anmerkung
   - ␣
 personTo_display_mv:
-  - Person 3 (1982–2001)
+  - Person 3 (1982-2001)
   - Person 4
   - PE99999999
 personTo_id_mv:
@@ -551,7 +551,7 @@ place_mv:
   - Entstehungsort 2
 schemaVersion: 0.12.0
 searchCollectionCreator_display_mv:
-  - Person 3 (1982–2001)
+  - Person 3 (1982-2001)
   - Person 4
   - PE99999999
   - Körperschaft 5
@@ -798,7 +798,7 @@ corporationAbout_comment_mv:
   - ␣
   - ␣
 corporationAbout_display_mv:
-  - Körperschaft 1 (1982–2001)
+  - Körperschaft 1 (1982-2001)
   - Körperschaft 6
 corporationAbout_id_mv:
   - KS00000001
@@ -830,24 +830,24 @@ corporationTo_id_mv:
 corporationTo_role_mv:
   - '[Adressat]'
   - ␣
-displayName: Person 2 (1982–2001) [Verfasser/in]; Körperschaft 2 [Verfasser]; Person 3 (1982–2001) [Adressat/in]; Körperschaft 3 [Adressat]
+displayName: Person 2 (1982-2001) [Verfasser/in]; Körperschaft 2 [Verfasser]; Person 3 (1982-2001) [Adressat/in]; Körperschaft 3 [Adressat]
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Personen und Körperschaften</dc:title>
-    <dc:creator>Person 2 (1982–2001)</dc:creator>
+    <dc:creator>Person 2 (1982-2001)</dc:creator>
     <dc:creator>Person 6</dc:creator>
     <dc:creator>Körperschaft 2</dc:creator>
     <dc:creator>Körperschaft 6</dc:creator>
-    <dc:contributor>Person 3 (1982–2001)</dc:contributor>
+    <dc:contributor>Person 3 (1982-2001)</dc:contributor>
     <dc:contributor>Person 6</dc:contributor>
     <dc:contributor>Körperschaft 3</dc:contributor>
     <dc:contributor>Körperschaft 6</dc:contributor>
     <dc:type>Handschrift</dc:type>
-    <dc:subject>Person 1 (1982–2001)</dc:subject>
+    <dc:subject>Person 1 (1982-2001)</dc:subject>
     <dc:subject>Person 6</dc:subject>
     <dc:subject>Körperschaft 1</dc:subject>
     <dc:subject>Körperschaft 6</dc:subject>
-    <dc:subject>Körperschaft 1 (1982–2001)</dc:subject>
+    <dc:subject>Körperschaft 1 (1982-2001)</dc:subject>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/HS00000005</dc:identifier>
     <dc:identifier>HS00000005</dc:identifier>
   </oai_dc:dc>
@@ -857,7 +857,7 @@ exportMODS: |-
       <title>Facette Personen und Körperschaften</title>
     </titleInfo>
     <name type="personal">
-      <namePart>Person 2 (1982–2001)</namePart>
+      <namePart>Person 2 (1982-2001)</namePart>
       <namePart type="date">1982-05 — 2001-01</namePart>
       <role>
         <roleTerm type="text">[Verfasser/in]</roleTerm>
@@ -867,7 +867,7 @@ exportMODS: |-
       <namePart>Person 6</namePart>
     </name>
     <name type="personal">
-      <namePart>Person 3 (1982–2001)</namePart>
+      <namePart>Person 3 (1982-2001)</namePart>
       <namePart type="date">1982 — 2001</namePart>
       <role>
         <roleTerm type="text">[Adressat/in]</roleTerm>
@@ -896,7 +896,7 @@ exportMODS: |-
     </name>
     <typeOfResource manuscript="yes">Handschrift</typeOfResource>
     <subject>
-      <topic>Person 1 (1982–2001)</topic>
+      <topic>Person 1 (1982-2001)</topic>
     </subject>
     <subject>
       <topic>Person 6</topic>
@@ -909,7 +909,7 @@ exportMODS: |-
     </subject>
     <subject>
       <name type="personal">
-        <namePart>Person 1 (1982–2001)</namePart>
+        <namePart>Person 1 (1982-2001)</namePart>
       </name>
     </subject>
     <subject>
@@ -919,7 +919,7 @@ exportMODS: |-
     </subject>
     <subject>
       <name type="corporate">
-        <namePart>Körperschaft 1 (1982–2001)</namePart>
+        <namePart>Körperschaft 1 (1982-2001)</namePart>
       </name>
     </subject>
     <subject>
@@ -947,7 +947,7 @@ exportRIS: |-
   AU  - Person 2
   AU  - Körperschaft 2
   ID  - HS00000005
-  KW  - Person 1 (1982–2001)
+  KW  - Person 1 (1982-2001)
   KW  - Person 6
   KW  - Körperschaft 1
   KW  - Körperschaft 6
@@ -956,39 +956,39 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/HS00000005/
   ER  -
 filterAuthorityRelation_mv:
-  - Person 2 (1982–2001)␝Von
+  - Person 2 (1982-2001)␝Von
   - Person 6␝Von
   - Körperschaft 2␝Von
   - Körperschaft 6␝Von
-  - Person 3 (1982–2001)␝An
+  - Person 3 (1982-2001)␝An
   - Person 6␝An
   - Körperschaft 3␝An
   - Körperschaft 6␝An
-  - Person 1 (1982–2001)␝Über
+  - Person 1 (1982-2001)␝Über
   - Person 6␝Über
-  - Körperschaft 1 (1982–2001)␝Über
+  - Körperschaft 1 (1982-2001)␝Über
   - Körperschaft 6␝Über
 filterAuthorityRole_mv:
-  - Person 2 (1982–2001)␝Verfasser/Urheber
+  - Person 2 (1982-2001)␝Verfasser/Urheber
   - Person 6␝nicht bestimmt
   - Körperschaft 2␝Verfasser/Urheber
   - Körperschaft 6␝nicht bestimmt
-  - Person 3 (1982–2001)␝Adressat
+  - Person 3 (1982-2001)␝Adressat
   - Körperschaft 3␝Adressat
-  - Person 1 (1982–2001)␝Behandelte Person/Körperschaft
-  - Körperschaft 1 (1982–2001)␝Behandelte Person/Körperschaft
+  - Person 1 (1982-2001)␝Behandelte Person/Körperschaft
+  - Körperschaft 1 (1982-2001)␝Behandelte Person/Körperschaft
 filterAuthority_mv:
-  - Person 2 (1982–2001)
+  - Person 2 (1982-2001)
   - Person 6
   - Körperschaft 2
   - Körperschaft 6
-  - Person 3 (1982–2001)
+  - Person 3 (1982-2001)
   - Körperschaft 3
-  - Person 1 (1982–2001)
-  - Körperschaft 1 (1982–2001)
+  - Person 1 (1982-2001)
+  - Körperschaft 1 (1982-2001)
 filterSource: Handschriften Einzelnachweise
 filterSubject_mv:
-  - Person 1 (1982–2001)
+  - Person 1 (1982-2001)
   - Person 6
   - Körperschaft 1
   - Körperschaft 6
@@ -997,7 +997,7 @@ personAbout_comment_mv:
   - ␣
   - ␣
 personAbout_display_mv:
-  - Person 1 (1982–2001)
+  - Person 1 (1982-2001)
   - Person 6
 personAbout_id_mv:
   - PE00000001
@@ -1009,7 +1009,7 @@ personBy_comment_mv:
   - ␣
   - ␣
 personBy_display_mv:
-  - Person 2 (1982–2001)
+  - Person 2 (1982-2001)
   - Person 6
 personBy_id_mv:
   - PE00000002
@@ -1021,7 +1021,7 @@ personTo_comment_mv:
   - ␣
   - ␣
 personTo_display_mv:
-  - Person 3 (1982–2001)
+  - Person 3 (1982-2001)
   - Person 6
 personTo_id_mv:
   - PE00000003

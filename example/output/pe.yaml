@@ -1,5 +1,5 @@
 id: PE00000001
-display: Person 1 (1982–2001)
+display: Person 1 (1982-2001)
 categoryEntity_mv:
   - Entitätstyp 1
   - Entitätstyp 2
@@ -19,7 +19,7 @@ classificationOther_text_mv:
   - Systematikstelle Bib 1
   - Systematikstelle Bib 2
 corporation_display_mv:
-  - Körperschaft 1 (1982–2001)
+  - Körperschaft 1 (1982-2001)
   - Körperschaft 2
   - KS99999999
 corporation_id_mv:
@@ -40,7 +40,7 @@ dateLifespanStart: "1982-05-22"
 dateModified: "2023-06-06"
 dateRetention: Schutzfrist
 displayAddition1: Beschäftigung 1, Beschäftigung 2
-displayAddition2: 'Wirkungsdaten: 1982 – 2001'
+displayAddition2: 'Wirkungsdaten: 1982-2001'
 filterDatePoint_mv:
   - "1982-05-22T00:00:00Z"
   - "1982-05-23T00:00:00Z"
@@ -111,11 +111,11 @@ relation_id_mv:
   - PE00000001
   - TH00000001
 relation_text_mv:
-  - Person 1 (1982–2001)
-  - Körperschaft 1 (1982–2001)
-  - Körperschaft 1 (1982–2001)
+  - Person 1 (1982-2001)
+  - Körperschaft 1 (1982-2001)
+  - Körperschaft 1 (1982-2001)
   - 'Person 1 (1982-2001). Werk 1 (genre : 2000)'
-  - Person 1 (1982–2001)
+  - Person 1 (1982-2001)
   - Thesaurus-Begriff 1
 relation_type_mv:
   - GND-Relation 1 Typ
@@ -126,7 +126,7 @@ relation_type_mv:
   - Relation
 schemaVersion: 0.12.0
 seeAlso_display_mv:
-  - Person 3 (1982–2001)
+  - Person 3 (1982-2001)
   - Person 4
   - PE99999999
 seeAlso_id_mv:
@@ -148,7 +148,7 @@ website_url_mv:
   - URL 2
 ---
 id: PE00000002
-display: Person 2 (1982–2001)
+display: Person 2 (1982-2001)
 dateLifespanEnd: 2001-01
 dateLifespanStart: 1982-05
 filterDatePoint_mv:
@@ -161,15 +161,15 @@ filterType: Normdaten
 schemaVersion: 0.12.0
 searchEntityScore: 19
 searchEntity_id_mv: PE00000002
-searchSuggestPayload: PE00000002␝Person 2 (1982–2001)
-searchSuggestTerm_mv: Person 2 (1982–2001)
+searchSuggestPayload: PE00000002␝Person 2 (1982-2001)
+searchSuggestTerm_mv: Person 2 (1982-2001)
 source: PE
 statusEditing: individualisiert
 title: Person 2
 url: https://www.dla-marbach.de/find/opac/id/PE00000002
 ---
 id: PE00000003
-display: Person 3 (1982–2001)
+display: Person 3 (1982-2001)
 dateLifespanEnd: "2001"
 dateLifespanStart: "1982"
 filterDatePoint_mv:
@@ -182,8 +182,8 @@ filterType: Normdaten
 schemaVersion: 0.12.0
 searchEntityScore: 11
 searchEntity_id_mv: PE00000003
-searchSuggestPayload: PE00000003␝Person 3 (1982–2001)
-searchSuggestTerm_mv: Person 3 (1982–2001)
+searchSuggestPayload: PE00000003␝Person 3 (1982-2001)
+searchSuggestTerm_mv: Person 3 (1982-2001)
 source: PE
 statusEditing: individualisiert
 title: Person 3
@@ -263,12 +263,12 @@ title: Person 8
 url: https://www.dla-marbach.de/find/opac/id/PE00000008
 ---
 id: PE00000009
-display: Pindar v. Chr. (-0518–-0446)
+display: Pindar v. Chr. (-0518--0446)
 dateActivityEnd: "-0446"
 dateActivityStart: "-0500"
 dateLifespanEnd: "-0446"
 dateLifespanStart: "-0518"
-displayAddition2: 'Wirkungsdaten: -050 – -044'
+displayAddition2: 'Wirkungsdaten: -0500--0446'
 filterDateRange_mv:
   - '[-0518 TO -0446]'
   - '[-0500 TO -0446]'
@@ -277,8 +277,8 @@ filterType: Normdaten
 schemaVersion: 0.12.0
 searchEntityScore: 1
 searchEntity_id_mv: PE00000009
-searchSuggestPayload: PE00000009␝Pindar v. Chr. (-0518–-0446)
-searchSuggestTerm_mv: Pindar v. Chr. (-0518–-0446)
+searchSuggestPayload: PE00000009␝Pindar v. Chr. (-0518--0446)
+searchSuggestTerm_mv: Pindar v. Chr. (-0518--0446)
 source: PE
 statusEditing: individualisiert
 title: Pindar v. Chr.
@@ -352,7 +352,7 @@ source: PE
 title: Lindgren, Astrid
 ---
 id: PE00000021
-display: Huch, Ricarda (1864–1947)
+display: Huch, Ricarda (1864-1947)
 dateLifespanEnd: "1947"
 dateLifespanStart: "1864"
 filterDatePoint_mv:
@@ -385,7 +385,7 @@ relation_id_mv:
 relation_text_mv:
   - Dr. phil. h.c.
   - Huch, Ilona
-  - Huch, Richard (1850–1914)
+  - Huch, Richard (1850-1914)
   - Braunschweig
 relation_type_mv:
   - Akad. Grad
@@ -410,7 +410,7 @@ relation_id_mv:
   - PE00000021
 relation_text_mv:
   - Huch, Friedrich
-  - Huch, Ricarda (1864–1947)
+  - Huch, Ricarda (1864-1947)
 relation_type_mv:
   - Beziehung familiär
   - Beziehung familiär
@@ -419,7 +419,7 @@ source: PE
 title: Huch, Ilona
 ---
 id: PE00000023
-display: Huch, Richard (1850–1914)
+display: Huch, Richard (1850-1914)
 dateLifespanEnd: "1914"
 dateLifespanStart: "1850"
 filterDatePoint_mv:
@@ -437,7 +437,7 @@ relation_comment_mv:
 relation_id_mv:
   - PE00000021
 relation_text_mv:
-  - Huch, Ricarda (1864–1947)
+  - Huch, Ricarda (1864-1947)
 relation_type_mv:
   - Beziehung familiär
 schemaVersion: 0.12.0

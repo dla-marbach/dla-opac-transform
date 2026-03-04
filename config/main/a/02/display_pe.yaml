@@ -20,10 +20,18 @@
         x.split(/(?=-)/)[0],
         ''
       )
+      + if(
+          or(
+            isNonBlank(cells['dateLifespanStart'].value),
+            isNonBlank(cells['dateLifespanEnd'].value)
+          ),
+          '-',
+          ''
+        )
       + forNonBlank(
         cells['dateLifespanEnd'].value,
         x,
-        '–' + x.split(/(?=-)/)[0],
+        x.split(/(?=-)/)[0],
         ''
       ),
       x,

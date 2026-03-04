@@ -1,5 +1,5 @@
 # Trefferliste vierte Zeile
-# Wirkungsdaten nur Jahr, also z.B. 2016 statt 20161014
+# Jahresangabe wird bei Personen extrahiert mit RegEx positive lookahead, weil auch Angaben v. Chr. (-0123) erlaubt sind
 - op: core/column-addition
   engineConfig:
     facets: []
@@ -11,7 +11,7 @@
       forNonBlank(
         cells['dateActivityStart'].value,
         v,
-        slice(v,0,4),
+        v.split(/(?=-)/)[0],
         ''
       )
       +
@@ -20,14 +20,14 @@
           isNonBlank(cells['dateActivityStart'].value),
           isNonBlank(cells['dateActivityEnd'].value)
         ),
-        ' – ',
+        '-',
         ''
       )
       +
       forNonBlank(
         cells['dateActivityEnd'].value,
         v,
-        slice(v,0,4),
+        v.split(/(?=-)/)[0],
         ''
       ),
       x,

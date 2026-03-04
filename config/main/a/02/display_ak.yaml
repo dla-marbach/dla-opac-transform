@@ -21,15 +21,23 @@
         r[0].cells['title'].value
         + forNonBlank(
           forNonBlank(
-            r[0].cells['dateLifespanStart'].value[0,4],
+            r[0].cells['dateLifespanStart'].value,
             x,
-            x,
+            x[0,4],
             ''
           )
+          + if(
+              or(
+                isNonBlank(r[0].cells['dateLifespanStart'].value),
+                isNonBlank(r[0].cells['dateLifespanEnd'].value)
+              ),
+              '-',
+              ''
+            )
           + forNonBlank(
-            r[0].cells['dateLifespanEnd'].value[0,4],
+            r[0].cells['dateLifespanEnd'].value,
             x,
-            '-' + x,
+            x[0,4],
             ''
           ),
           x,

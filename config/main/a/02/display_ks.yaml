@@ -19,10 +19,18 @@
         x[0,4],
         ''
       )
+      + if(
+          or(
+            isNonBlank(cells['dateLifespanStart'].value),
+            isNonBlank(cells['dateLifespanEnd'].value)
+          ),
+          '-',
+          ''
+        )
       + forNonBlank(
         cells['dateLifespanEnd'].value,
         x,
-        '–' + x[0,4],
+        x[0,4],
         ''
       ),
       x,

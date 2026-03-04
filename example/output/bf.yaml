@@ -32,7 +32,7 @@ corporationAt_id_mv:
   - KS00000006
   - KS99999999
 corporationBy_display_mv:
-  - Körperschaft 1 (1982–2001)
+  - Körperschaft 1 (1982-2001)
   - Körperschaft 2
   - KS99999999
 corporationBy_id_mv:
@@ -60,11 +60,11 @@ digitalObject_licenseNote_mv:
   - 'Creative Commons 10th Birthday Celebration San Francisco / Timothy Vollmer / CC BY 4.0. Quelle: http://www.flickr.com/photos/sixteenmilesofstring/8256206923/in/set-72157632200936657'
   - ␣
 displayAddition1: Umfang
-displayName: Person 3 (1982–2001); Person 4; PE99999999; Körperschaft 5; Körperschaft 6; KS99999999
+displayName: Person 3 (1982-2001); Person 4; PE99999999; Körperschaft 5; Körperschaft 6; KS99999999
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]</dc:title>
-    <dc:creator>Person 3 (1982–2001)</dc:creator>
+    <dc:creator>Person 3 (1982-2001)</dc:creator>
     <dc:creator>Person 4</dc:creator>
     <dc:creator>PE99999999</dc:creator>
     <dc:creator>Körperschaft 5</dc:creator>
@@ -80,8 +80,8 @@ exportDC: |-
     <dc:description>Rotes Buch 2</dc:description>
     <dc:subject>Thesaurus-Begriff 1</dc:subject>
     <dc:subject>Thesaurus-Begriff 2</dc:subject>
-    <dc:subject>Person 1 (1982–2001)</dc:subject>
-    <dc:subject>Person 2 (1982–2001)</dc:subject>
+    <dc:subject>Person 1 (1982-2001)</dc:subject>
+    <dc:subject>Person 2 (1982-2001)</dc:subject>
     <dc:subject>Körperschaft 3</dc:subject>
     <dc:subject>Körperschaft 4</dc:subject>
     <dc:subject>PE99999999</dc:subject>
@@ -98,7 +98,7 @@ exportMODS: |-
       <title>Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]</title>
     </titleInfo>
     <name type="personal">
-      <namePart>Person 3 (1982–2001)</namePart>
+      <namePart>Person 3 (1982-2001)</namePart>
       <namePart type="date">1982 — 2001</namePart>
       <role>
         <roleTerm type="code" authority="marcrelator">cre</roleTerm>
@@ -152,10 +152,10 @@ exportMODS: |-
       <topic>Thesaurus-Begriff 2</topic>
     </subject>
     <subject>
-      <topic>Person 1 (1982–2001)</topic>
+      <topic>Person 1 (1982-2001)</topic>
     </subject>
     <subject>
-      <topic>Person 2 (1982–2001)</topic>
+      <topic>Person 2 (1982-2001)</topic>
     </subject>
     <subject>
       <topic>Körperschaft 3</topic>
@@ -168,12 +168,12 @@ exportMODS: |-
     </subject>
     <subject>
       <name type="personal">
-        <namePart>Person 1 (1982–2001)</namePart>
+        <namePart>Person 1 (1982-2001)</namePart>
       </name>
     </subject>
     <subject>
       <name type="personal">
-        <namePart>Person 2 (1982–2001)</namePart>
+        <namePart>Person 2 (1982-2001)</namePart>
       </name>
     </subject>
     <subject>
@@ -235,8 +235,8 @@ exportRIS: |-
   ID  - BF00000001
   KW  - Thesaurus-Begriff 1
   KW  - Thesaurus-Begriff 2
-  KW  - Person 1 (1982–2001)
-  KW  - Person 2 (1982–2001)
+  KW  - Person 1 (1982-2001)
+  KW  - Person 2 (1982-2001)
   KW  - Körperschaft 3
   KW  - Körperschaft 4
   M3  - Bestandsart
@@ -257,39 +257,39 @@ exportRIS: |-
   ER  -
 extent: Umfang
 filterAuthorityRelation_mv:
-  - Person 1 (1982–2001)␝Über
-  - Person 2 (1982–2001)␝Über
+  - Person 1 (1982-2001)␝Über
+  - Person 2 (1982-2001)␝Über
   - PE99999999␝Über
   - Körperschaft 3␝Über
   - Körperschaft 4␝Über
   - KS99999999␝Über
-  - Person 3 (1982–2001)␝Unter
+  - Person 3 (1982-2001)␝Unter
   - Person 4␝Unter
   - PE99999999␝Unter
   - Körperschaft 5␝Unter
   - Körperschaft 6␝Unter
   - KS99999999␝Unter
 filterAuthorityRole_mv:
-  - Person 1 (1982–2001)␝Link Person 1 Typ
-  - Person 2 (1982–2001)␝Link Person 2 Typ
+  - Person 1 (1982-2001)␝Link Person 1 Typ
+  - Person 2 (1982-2001)␝Link Person 2 Typ
   - PE99999999␝Behandelte Person/Körperschaft
   - Körperschaft 3␝Link Körperschaft 3 Typ
   - Körperschaft 4␝Link Körperschaft 4 Typ
   - KS99999999␝Behandelte Person/Körperschaft
-  - Person 3 (1982–2001)␝Bestandsbildner/Vorbesitzer
+  - Person 3 (1982-2001)␝Bestandsbildner/Vorbesitzer
   - Person 4␝Bestandsbildner/Vorbesitzer
   - PE99999999␝Bestandsbildner/Vorbesitzer
   - Körperschaft 5␝Bestandsbildner/Vorbesitzer
   - Körperschaft 6␝Bestandsbildner/Vorbesitzer
   - KS99999999␝Bestandsbildner/Vorbesitzer
 filterAuthority_mv:
-  - Person 1 (1982–2001)
-  - Person 2 (1982–2001)
+  - Person 1 (1982-2001)
+  - Person 2 (1982-2001)
   - PE99999999
   - Körperschaft 3
   - Körperschaft 4
   - KS99999999
-  - Person 3 (1982–2001)
+  - Person 3 (1982-2001)
   - Person 4
   - Körperschaft 5
   - Körperschaft 6
@@ -307,8 +307,8 @@ filterSource: Nachlässe und Spezialsammlungen
 filterSubject_mv:
   - Thesaurus-Begriff 1
   - Thesaurus-Begriff 2
-  - Person 1 (1982–2001)
-  - Person 2 (1982–2001)
+  - Person 1 (1982-2001)
+  - Person 2 (1982-2001)
   - Körperschaft 3
   - Körperschaft 4
 filterType: Sonstiges
@@ -341,8 +341,8 @@ order_unit_mv:
 parent_display_mv: Z:Öffentlicher Bestand 2
 parent_id_mv: BF00000002
 personAbout_display_mv:
-  - Person 1 (1982–2001)
-  - Person 2 (1982–2001)
+  - Person 1 (1982-2001)
+  - Person 2 (1982-2001)
   - PE99999999
 personAbout_id_mv:
   - PE00000001
@@ -353,7 +353,7 @@ personAbout_role_mv:
   - Link Person 2 Typ
   - ␣
 personAt_display_mv:
-  - Person 3 (1982–2001)
+  - Person 3 (1982-2001)
   - Person 4
   - PE99999999
 personAt_id_mv:
@@ -363,7 +363,7 @@ personAt_id_mv:
 reference_text_mv: Quellenangabe
 schemaVersion: 0.12.0
 searchCollectionCreator_display_mv:
-  - Person 3 (1982–2001)
+  - Person 3 (1982-2001)
   - Person 4
   - PE99999999
   - Körperschaft 5
@@ -508,7 +508,7 @@ url: https://www.dla-marbach.de/find/opac/id/BF00000003
 id: BF00000004
 display: Facette Personen und Körperschaften
 corporationAbout_display_mv:
-  - Körperschaft 1 (1982–2001)
+  - Körperschaft 1 (1982-2001)
 corporationAbout_id_mv:
   - KS00000001
 corporationAbout_role_mv:
@@ -517,17 +517,17 @@ corporationAt_display_mv:
   - Körperschaft 2
 corporationAt_id_mv:
   - KS00000002
-displayName: Person 2 (1982–2001); Körperschaft 2
+displayName: Person 2 (1982-2001); Körperschaft 2
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Facette Personen und Körperschaften</dc:title>
-    <dc:creator>Person 2 (1982–2001)</dc:creator>
+    <dc:creator>Person 2 (1982-2001)</dc:creator>
     <dc:creator>Körperschaft 2</dc:creator>
     <dc:type>Bestand</dc:type>
     <dc:format></dc:format>
-    <dc:subject>Person 1 (1982–2001)</dc:subject>
+    <dc:subject>Person 1 (1982-2001)</dc:subject>
     <dc:subject>Körperschaft 1</dc:subject>
-    <dc:subject>Körperschaft 1 (1982–2001)</dc:subject>
+    <dc:subject>Körperschaft 1 (1982-2001)</dc:subject>
     <dc:identifier>Facette Personen und Körperschaften</dc:identifier>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/BF00000004</dc:identifier>
     <dc:identifier>BF00000004</dc:identifier>
@@ -538,7 +538,7 @@ exportMODS: |-
       <title>Facette Personen und Körperschaften</title>
     </titleInfo>
     <name type="personal">
-      <namePart>Person 2 (1982–2001)</namePart>
+      <namePart>Person 2 (1982-2001)</namePart>
       <namePart type="date">1982-05 — 2001-01</namePart>
       <role>
         <roleTerm type="code" authority="marcrelator">cre</roleTerm>
@@ -552,19 +552,19 @@ exportMODS: |-
     </name>
     <typeOfResource collection="yes">Bestand</typeOfResource>
     <subject>
-      <topic>Person 1 (1982–2001)</topic>
+      <topic>Person 1 (1982-2001)</topic>
     </subject>
     <subject>
       <topic>Körperschaft 1</topic>
     </subject>
     <subject>
       <name type="personal">
-        <namePart>Person 1 (1982–2001)</namePart>
+        <namePart>Person 1 (1982-2001)</namePart>
       </name>
     </subject>
     <subject>
       <name type="corporate">
-        <namePart>Körperschaft 1 (1982–2001)</namePart>
+        <namePart>Körperschaft 1 (1982-2001)</namePart>
       </name>
     </subject>
     <location>
@@ -585,46 +585,46 @@ exportRIS: |-
   AU  - Körperschaft 2
   DB  - Facette Personen und Körperschaften
   ID  - BF00000004
-  KW  - Person 1 (1982–2001)
+  KW  - Person 1 (1982-2001)
   KW  - Körperschaft 1
   TI  - Facette Personen und Körperschaften
   UR  - https://www.dla-marbach.de/find/opac/id/BF00000004/
   ER  -
 filterAuthorityRelation_mv:
-  - Person 1 (1982–2001)␝Über
-  - Körperschaft 1 (1982–2001)␝Über
-  - Person 2 (1982–2001)␝Unter
+  - Person 1 (1982-2001)␝Über
+  - Körperschaft 1 (1982-2001)␝Über
+  - Person 2 (1982-2001)␝Unter
   - Körperschaft 2␝Unter
 filterAuthorityRole_mv:
-  - Person 1 (1982–2001)␝Behandelte Person/Körperschaft
-  - Körperschaft 1 (1982–2001)␝Behandelte Person/Körperschaft
-  - Person 2 (1982–2001)␝Bestandsbildner/Vorbesitzer
+  - Person 1 (1982-2001)␝Behandelte Person/Körperschaft
+  - Körperschaft 1 (1982-2001)␝Behandelte Person/Körperschaft
+  - Person 2 (1982-2001)␝Bestandsbildner/Vorbesitzer
   - Körperschaft 2␝Bestandsbildner/Vorbesitzer
 filterAuthority_mv:
-  - Person 1 (1982–2001)
-  - Körperschaft 1 (1982–2001)
-  - Person 2 (1982–2001)
+  - Person 1 (1982-2001)
+  - Körperschaft 1 (1982-2001)
+  - Person 2 (1982-2001)
   - Körperschaft 2
 filterCollection_mv: Facette Personen und Körperschaften
 filterMultipart: true
 filterSource: Nachlässe und Spezialsammlungen
 filterSubject_mv:
-  - Person 1 (1982–2001)
+  - Person 1 (1982-2001)
   - Körperschaft 1
 filterType: Sonstiges
 personAbout_display_mv:
-  - Person 1 (1982–2001)
+  - Person 1 (1982-2001)
 personAbout_id_mv:
   - PE00000001
 personAbout_role_mv:
   - '[Behandelte Person]'
 personAt_display_mv:
-  - Person 2 (1982–2001)
+  - Person 2 (1982-2001)
 personAt_id_mv:
   - PE00000002
 schemaVersion: 0.12.0
 searchCollectionCreator_display_mv:
-  - Person 2 (1982–2001)
+  - Person 2 (1982-2001)
   - Körperschaft 2
 searchCollectionCreator_id_mv:
   - PE00000002
