@@ -34,24 +34,24 @@
             if(
                 cells['location_mv'].value == 'Magazin Sindelfingen',
                 'bedingt benutzbar' + '\n' +
-                    'Rara-Bestand' + '\n' +
+                    if(cells['usageRestriction'].value == 'Rara', 'Rara-Bestand' + '\n', '') +
                     'Magazin Sindelfingen. Bereitstellung mit Wartezeit. Bitte bestellen Sie mind. 4 Wochen im Voraus und nehmen Sie Kontakt zu uns auf.' + '\n' +
                     'E-Mail: bibliothek@dla-marbach.de' + '\n' +
                     'Telefon: +49 7144 848 317',
                 if(
                     cells['location_mv'].value == 'Magazin Fellbach',
                     'bedingt benutzbar' + '\n' +
-                        'Rara-Bestand' + '\n' +
+                        if(cells['usageRestriction'].value == 'Rara', 'Rara-Bestand' + '\n', '') +
                         'Magazin Fellbach. Bereitstellung mit Wartezeit bis zu 2 Wochen. Bitte bestellen Sie rechtzeitig im Voraus.',
                     if(
                         cells['location_mv'].value == 'Jünger-Haus',
                         'bedingt benutzbar' + '\n' +
-                            'Rara-Bestand' + '\n' +
+                            if(cells['usageRestriction'].value == 'Rara', 'Rara-Bestand' + '\n', '') +
                             'Bereitstellung mit Wartezeit (mind. drei Wochen). Bitte bestellen Sie im Voraus und nehmen Sie Kontakt zu uns auf.' + '\n' +
                             'E-Mail: bibliothek@dla-marbach.de' + '\n' +
                             'Telefon: +49 7144 848 317',
                         'bedingt benutzbar' + '\n' +
-                            'Rara-Bestand' + '\n' +
+                            if(cells['usageRestriction'].value == 'Rara', 'Rara-Bestand' + '\n', '') +
                             'Bitte wenden Sie sich an die Auskunft der Bibliothek.' + '\n' +
                             'E-Mail: bibliothek@dla-marbach.de' + '\n' +
                             'Telefon: +49 7144 848 317' 
