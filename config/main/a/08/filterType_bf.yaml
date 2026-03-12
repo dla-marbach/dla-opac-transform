@@ -49,7 +49,7 @@
           cells['category'].value == 'Geschlossener Bestand der Mediendokumentation',
           if(
               cells['title'].value.contains('Bild- und Tonträger'),
-              'Video',
+              'Audio␟Video',
               'Gedrucktes'
           ),
           ''
@@ -58,5 +58,5 @@
       x,
       'Sonstiges'
     )
-  newColumnName: filterType
+  newColumnName: filterType_mv
   columnInsertIndex: 2

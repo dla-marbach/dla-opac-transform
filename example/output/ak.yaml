@@ -705,7 +705,7 @@ filterSubject_mv:
   - Körperschaft 2
   - Bibliotheksdokument 1
   - Vertrauliches Bibliotheksdokument 2
-filterType: Sonstiges
+filterType_mv: Sonstiges
 genreOther_mv:
   - Gattung 1
   - Gattung 2
@@ -1042,7 +1042,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000002/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: Vertrauliches Bibliotheksdokument 2
@@ -1077,7 +1077,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000011/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: Gesamttitel 1
@@ -1112,7 +1112,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000012/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: Gesamttitel 2
@@ -1136,7 +1136,7 @@ filterDateRange_mv:
 filterFormContent_mv:
   - genre
 filterSource: Werke
-filterType: Normdaten
+filterType_mv: Normdaten
 genreOther_mv:
   - genre
 gnd_id_mv:
@@ -1187,7 +1187,7 @@ filterAuthority_mv:
 filterFormContent_mv:
   - genre
 filterSource: Werke
-filterType: Normdaten
+filterType_mv: Normdaten
 genreOther_mv:
   - genre
 personBy_display_mv:
@@ -1222,7 +1222,7 @@ filterDatePoint_mv:
 filterDateRange_mv:
   - 2000-01
 filterSource: Werke
-filterType: Normdaten
+filterType_mv: Normdaten
 personBy_display_mv:
   - Person 3 (1982-2001)
 personBy_id_mv:
@@ -1268,7 +1268,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000031/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: Titel über 1
@@ -1306,7 +1306,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000032/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: Titel über 2
@@ -1352,7 +1352,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000041/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 relation_id_mv:
   - AK00000001
 relation_text_mv:
@@ -1402,7 +1402,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000042/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 relation_id_mv:
   - AK00000001
 relation_text_mv:
@@ -1443,7 +1443,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000051/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: Zeitschriftenheft 1
@@ -1478,7 +1478,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000052/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: Zeitschriftenheft 2
@@ -1513,7 +1513,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000053/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 textualHolding_mv: '1.1918/19 : X'
@@ -1594,7 +1594,7 @@ filterFormContent_mv:
 filterMedium_mv:
   - Beitrag
 filterSource: Bibliotheksmaterialien
-filterType: Gedrucktes
+filterType_mv: Gedrucktes
 genreOther_mv:
   - Epik
   - Schwank
@@ -1672,7 +1672,7 @@ filterMedium_mv:
   - Buch
   - Buchumschlag
 filterSource: Bibliotheksmaterialien
-filterType: Gedrucktes
+filterType_mv: Gedrucktes
 item_display_mv:
   - 'Facette Medium : [Musikalia]'
 item_enveloped_mv: "true"
@@ -1777,7 +1777,7 @@ filterAuthority_mv:
   - Person 7
   - Körperschaft 7
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 item_corporationAt_display_mv: Körperschaft 7
 item_corporationAt_id_mv: KS00000007
 item_display_mv:
@@ -1890,7 +1890,7 @@ filterAuthority_mv:
   - Körperschaft 1 (1982-2001)
   - Körperschaft 2
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 personBy_display_mv:
   - Person 1 (1982-2001)
   - Person 2 (1982-2001)
@@ -2035,7 +2035,7 @@ filterSubject_mv:
   - Körperschaft 2
   - Körperschaft 3
   - Körperschaft 4
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: Facette Personen und Körperschaften Systematikketten
@@ -2125,7 +2125,7 @@ filterLocationType_mv:
 filterLocation_mv:
   - Thesaurus-Begriff 1
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 item_classification_display_mv:
   - Facette Personen und Körperschaften / Provenienzketten / An
   - Facette Personen und Körperschaften / Provenienzketten / Unter / nicht bestimmt␝Facette Personen und Körperschaften / Provenienzketten / Unter / Bestandsbildner/Vorbesitzer
@@ -2199,7 +2199,7 @@ exportRIS: |-
   ER  -
 filterDigital: true
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 item_digitalObject_accessLevel_mv: public␝public
 item_digitalObject_display_mv: Multimedia 5 pdf public license CC BY-NC-ND␝Multimedia 15 wacz public
 item_digitalObject_fileExtension_mv: pdf␝wacz
@@ -2258,7 +2258,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000072/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 item_digitalObject_accessLevel_mv: public␝public
 item_digitalObject_display_mv: Multimedia 5 pdf public license CC BY-NC-ND␝Multimedia 15 wacz public
 item_digitalObject_fileExtension_mv: pdf␝wacz
@@ -2312,7 +2312,7 @@ filterDatePoint_mv:
 filterDateRange_mv:
   - "1982-05-22"
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 item_broadcastDate_mv: "1982-05-22"
 item_display_mv:
   - 'Facette Zeit: Sendedatum'
@@ -2363,7 +2363,7 @@ filterDatePoint_mv:
 filterDateRange_mv:
   - "1999"
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 item_classification_display_mv:
   - 'Facette Zeit: Provenienzketten'
 item_classification_id_mv:
@@ -2431,7 +2431,7 @@ filterDateRange_mv:
   - "1981"
   - '[1982 TO 2011]'
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 noteContent_mv:
   - "1981"
   - '[1982 TO 2011]'
@@ -2481,7 +2481,7 @@ exportRIS: |-
 filterDateRange_mv:
   - 1900-02-29
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 noteContent_mv:
   - 1900 kein Schaltjahr
 schemaVersion: 0.13.0
@@ -2527,7 +2527,7 @@ filterDatePoint_mv:
 filterDateRange_mv:
   - '[2011 TO 2010]'
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 noteContent_mv:
   - Zeitspanne in falscher Reihenfolge
 parentIssueYear: 2011/2010
@@ -2571,7 +2571,7 @@ exportRIS: |-
 filterMedium_mv:
   - Online-Ressource
 filterSource: Bibliotheksmaterialien
-filterType: Daten
+filterType_mv: Daten
 schemaVersion: 0.13.0
 source: AK
 title: 'Facette Medientyp: Daten'
@@ -2606,7 +2606,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000092/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Gedrucktes
+filterType_mv: Gedrucktes
 schemaVersion: 0.13.0
 source: AK
 title: 'Facette Medientyp: Gedrucktes'
@@ -2615,7 +2615,7 @@ id: AK00000093
 display: ohne Titel
 category: Werktitel
 filterSource: Werke
-filterType: Normdaten
+filterType_mv: Normdaten
 schemaVersion: 0.13.0
 searchEntityScore: 1
 searchEntity_id_mv:
@@ -2661,7 +2661,7 @@ exportRIS: |-
 filterMedium_mv:
   - Audiodatei
 filterSource: Bibliotheksmaterialien
-filterType: Audio
+filterType_mv: Audio
 schemaVersion: 0.13.0
 source: AK
 title: 'Facette Medientyp: Audio'
@@ -2702,7 +2702,7 @@ exportRIS: |-
 filterMedium_mv:
   - Videokassette
 filterSource: Bibliotheksmaterialien
-filterType: Video
+filterType_mv: Video
 schemaVersion: 0.13.0
 source: AK
 title: 'Facette Medientyp: Video'
@@ -2741,7 +2741,7 @@ filterLocationType_mv:
 filterLocation_mv:
   - Berlin
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 relation_text_mv:
   - Berlin [u.a.]
 relation_type_mv:
@@ -2968,7 +2968,7 @@ filterAuthority_mv:
   - Körperschaft 2
   - KS99999999
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 parent_displayAddition1_mv: 'Verlagsort 1 : Verlag Vorlageform 1, Jahr/Datum 1 - Umfang'
 parent_display_mv:
   - 'Bibliotheksdokument 1 - Ausgabebezeichnung Vorlageform : [Veröffentlichungsart 1]'
@@ -3035,7 +3035,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000121/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 gnd_id_mv:
   - "1024427587"
   - "1024289575"
@@ -3080,7 +3080,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000122/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 gnd_id_mv:
   - 4546180-6
 linkFilmportal_mv: a4a93cce49f1495286c19073e0b27c67
@@ -3122,7 +3122,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000123/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 gnd_id_mv:
   - 4099250-0
 linkCommonsImage_file_mv: Kafka%20Der%20Prozess%201925.jpg
@@ -3174,7 +3174,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000131/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 gnd_id_mv:
   - "123456789"
   - 4707446-2
@@ -3233,7 +3233,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000132/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 relation_id_mv:
   - ␣
   - AK00000131
@@ -3277,7 +3277,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000141/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: 'Statt etwas oder Der letzte Rank : Roman - 1. Auflage'
@@ -3321,7 +3321,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00000142/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 relation_id_mv:
   - AK00000141
 relation_text_mv:
@@ -3391,7 +3391,7 @@ filterAuthority_mv:
   - Person 1 (1982-2001)
   - Person 2 (1982-2001)
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 personBy_display_mv:
   - Person 1 (1982-2001)
   - Person 2 (1982-2001)
@@ -3456,7 +3456,7 @@ filterAuthorityRole_mv:
 filterAuthority_mv:
   - Person 1 (1982-2001)
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 personBy_display_mv:
   - Person 1 (1982-2001)
 personBy_id_mv:
@@ -3535,7 +3535,7 @@ filterAuthority_mv:
   - Person 2 (1982-2001)
   - Person 3 (1982-2001)
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 personBy_display_mv:
   - Person 1 (1982-2001)
   - Person 2 (1982-2001)
@@ -3616,7 +3616,7 @@ filterAuthority_mv:
   - Person 1 (1982-2001)
   - Person 2 (1982-2001)
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 personBy_display_mv:
   - Person 1 (1982-2001)
   - Person 2 (1982-2001)
@@ -3664,7 +3664,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00002001/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Gedrucktes
+filterType_mv: Gedrucktes
 schemaVersion: 0.13.0
 source: AK
 title: 'Wertetabelle: Code b wird aufgelöst zu Bibliotheksdokumente'
@@ -3699,7 +3699,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00002002/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: 'Mappings: AdressatIn wird zu Adressat normalisiert'
@@ -3734,7 +3734,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00002003/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: Dieser Datensatz enhält ein Zusatzfeld BLABLA, das bei der Konvertierung entfällt.
@@ -3776,7 +3776,7 @@ exportRIS: |-
 filterMedium_mv:
   - Audio-CD
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: Von drei Codes in categoryMedia_mv bleibt nur CD erhalten
@@ -3822,7 +3822,7 @@ filterDatePoint_mv:
 filterDateRange_mv:
   - "1968-05-22"
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: Konvertierung von 19680522 in 1968-05-22
@@ -3868,7 +3868,7 @@ filterDatePoint_mv:
 filterDateRange_mv:
   - 1968-05
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: Konvertierung von 19680500 in 1968-05
@@ -3914,7 +3914,7 @@ filterDatePoint_mv:
 filterDateRange_mv:
   - "1968"
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: Konvertierung von 19680000 in 1968
@@ -3949,7 +3949,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00003004/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: Nichtnormierte Datumsangabe Mai 1968 entfällt
@@ -3984,7 +3984,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00003005/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: Nichtnormierte Datumsangabe 2021/2022 entfällt
@@ -4019,7 +4019,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00003006/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: Zwei nichtnormierte Datumsangaben entfallen
@@ -4057,7 +4057,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00004001/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 noteContent_mv:
   - 'Kapitel 1: Einleitung<br>Kapitel 2: Hauptteil/SP/Kapitel 3: Schluss'
 schemaVersion: 0.13.0
@@ -4101,7 +4101,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00004002/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 noteFootnote_text_mv:
   - |-
     [1] Fußnote mit aDIS Zeilenumbruch Variante 1
@@ -4144,7 +4144,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00004003/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 noteContent_mv:
   - Diese Zusammenfassung enthält mehr als 100 Zeichen und hat deshalb einen Zeilenumbruch im Quellformat aDIS Token aber nicht im Zielformat CSV.
 schemaVersion: 0.13.0
@@ -4187,7 +4187,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00004004/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 noteContent_mv:
   - 'Tabs und Leerzeichen am Ende entfallen:'
   - 'Tabs mittendrin:           werden ersetzt.'
@@ -4228,7 +4228,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00004005/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 noteContent_mv:
   - Dieser Titel hat jetzt keine Nicht-Sortierzeichen mehr.
 schemaVersion: 0.13.0
@@ -4266,7 +4266,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00005001/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: Vertraulicher Datensatz
@@ -4302,7 +4302,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00005002/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: Öffentlicher Datensatz
@@ -4399,7 +4399,7 @@ filterAuthority_mv:
   - Körperschaft 1 (1982-2001)
   - Körperschaft 2
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 personBy_creator_mv:
   - contributor
   - ␣
@@ -4512,7 +4512,7 @@ filterAuthority_mv:
   - Körperschaft 1 (1982-2001)
   - Körperschaft 2
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 personBy_creator_mv:
   - contributor
   - creator
@@ -4570,7 +4570,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00007001/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: 'Platzhalter in Korrelationen: 2x A0653 (A,B) ohne AI653'
@@ -4605,7 +4605,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00007002/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: 'Platzhalter in Korrelationen: 2x AI653 (A,B) ohne A0653'
@@ -4664,7 +4664,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00007003/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: 'Platzhalter in Korrelationen: 5x A0653 (A,B,C,D,E) und 2x AI653 (B,D)'
@@ -4711,7 +4711,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00007004/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 schemaVersion: 0.13.0
 source: AK
 title: 'Platzhalter in Korrelationen: 5x AI653 (A,B,C,D,E) und 2x AO412 (B,D)'
@@ -4765,7 +4765,7 @@ exportRIS: |-
   UR  - https://www.dla-marbach.de/find/opac/id/AK00099999/
   ER  -
 filterSource: Bibliotheksmaterialien
-filterType: Sonstiges
+filterType_mv: Sonstiges
 noteContent_mv:
   - 'Null: wird gelöscht'
   - |-

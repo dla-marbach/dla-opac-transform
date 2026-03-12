@@ -77,7 +77,7 @@ AK,filterMedium_mv,strings,Facette Sammlung,1668649,93 %,1802174,36,['Beitrag']
 AK,filterRecent,daterange,Facette Neu im Katalog,1793582,100 %,1793582,10340,2010-07-04
 AK,filterSource,string,Facette Datenbestand,1793638,100 %,1793638,2,Bibliotheksmaterialien
 AK,filterSubject_mv,strings,Facette Thema,738645,41 %,1892244,103728,['Kunst / Einzelne Künstler']
-AK,filterType,string,Facette Medientyp,1793638,100 %,1793638,6,Gedrucktes
+AK,filterType_mv,strings,Facette Medientyp,1793638,100 %,1793638,6,Gedrucktes
 AK,genreOther_mv,texts,,401102,22 %,429019,372,['Erzählende Prosa']
 AK,gnd_id_mv,strings,GND-Nummer für Werktitel extrahiert aus vendor_id_mv / vendor_type_mv,47357,3 %,47359,47340,['1155199685']
 AK,headword_mv,texts,,38799,2 %,44371,27277,['sämtliche']
@@ -332,7 +332,7 @@ BF,filterMultipart,boolean,Filter Mehrteilig,48827,100 %,48827,1,True
 BF,filterRecent,daterange,Facette Neu im Katalog,48827,100 %,48827,4764,1999-03-06
 BF,filterSource,string,Facette Datenbestand,48827,100 %,48827,1,Nachlässe und Spezialsammlungen
 BF,filterSubject_mv,strings,Facette Thema,3468,7 %,3808,2953,['Deutschland <DDR>']
-BF,filterType,string,Facette Medientyp,48827,100 %,48827,4,Gedrucktes
+BF,filterType_mv,strings,Facette Medientyp,48827,100 %,48827,4,Gedrucktes
 BF,id,string,,48827,100 %,48827,48827,BF00046067
 BF,itemization_extent_mv,strings,,3602,7 %,4367,386,['1']
 BF,itemization_status_mv,strings,,3839,8 %,4621,9,['katalogisiert']
@@ -434,7 +434,7 @@ BI,filterMultipart,boolean,Filter Mehrteilig (nur Konvolute),2852,9 %,2852,1,Tru
 BI,filterRecent,daterange,Facette Neu im Katalog,30749,100 %,30749,3588,2020-10-15
 BI,filterSource,string,Facette Datenbestand,30749,100 %,30749,1,Bilder und Objekte
 BI,filterSubject_mv,strings,Facette Thema,27692,90 %,49599,13951,"['Hesse, Hermann (1877-1962)']"
-BI,filterType,string,Facette Medientyp,30749,100 %,30749,1,Bilder und Objekte
+BI,filterType_mv,strings,Facette Medientyp,30749,100 %,30749,1,Bilder und Objekte
 BI,id,string,,30749,100 %,30749,30749,BI00031492
 BI,inscription,text,,18466,60 %,18466,12847,Rückseite mit Stempel und Beschriftung des Photographen
 BI,inventoryNumber,text,,30747,100 %,30747,29168,CO.Altbestand (darin)
@@ -553,7 +553,7 @@ HS,filterMedium_mv,strings,Facette Sammlung,3005,0 %,3005,4,Noten
 HS,filterRecent,daterange,Facette Neu im Katalog,1147348,100 %,1147348,6819,2007-10-20
 HS,filterSource,string,Facette Datenbestand,1147348,100 %,1147348,1,Handschriften Einzelnachweise
 HS,filterSubject_mv,strings,Facette Thema,120629,11 %,208013,52772,"['Brecht, Bertolt (1898-1956)']"
-HS,filterType,string,Facette Medientyp,1147348,100 %,1147348,1,Handschriften
+HS,filterType_mv,strings,Facette Medientyp,1147348,100 %,1147348,1,Handschriften
 HS,genre,text,,1147284,100 %,1147284,16,Briefe
 HS,genreOther_mv,texts,,32290,3 %,41437,14,['Verschiedenes']
 HS,genreSub,text,,60184,5 %,60184,84,Widmungen
@@ -644,7 +644,7 @@ KS,filterDateRange_mv,dateranges,Facette Zeit (Zeiträume),16181,12 %,16207,7003
 KS,filterLocation_mv,strings,Facette Ort,32505,25 %,35053,4334,['Berlin']
 KS,filterLocationType_mv,strings,Facette Ort mit Typ,32505,25 %,35053,5045,['Berlin␝Sitz']
 KS,filterSource,string,Facette Datenbestand,130394,100 %,130394,1,Körperschaften
-KS,filterType,string,Facette Medientyp,130394,100 %,130394,1,Normdaten
+KS,filterType_mv,strings,Facette Medientyp,130394,100 %,130394,1,Normdaten
 KS,gnd_id_mv,strings,,58692,45 %,58694,58525,['5266528-8']
 KS,gnd_type_mv,strings,,22666,17 %,22668,6,['GND-Nr.']
 KS,host_display_mv,texts,aus KS display,113,0 %,142,119,['Literaturwerkstatt Berlin (1991-2016)']
@@ -736,7 +736,7 @@ PE,filterDateRange_mv,dateranges,Facette Zeit (Zeiträume),186402,32 %,188743,83
 PE,filterLocation_mv,strings,Facette Ort,132413,23 %,230528,32049,['Berlin']
 PE,filterLocationType_mv,strings,Facette Ort mit Typ,132413,23 %,230528,41160,['Berlin␝Wirkungsort']
 PE,filterSource,string,Facette Datenbestand,580382,100 %,580382,1,Personen
-PE,filterType,string,Facette Medientyp,580382,100 %,580382,1,Normdaten
+PE,filterType_mv,strings,Facette Medientyp,580382,100 %,580382,1,Normdaten
 PE,gender,string,,184930,32 %,184930,3,männlich
 PE,gnd_id_mv,strings,,194346,33 %,195273,195189,['11921895X']
 PE,gnd_type_mv,strings,,194337,33 %,195264,4,['GND-Nr.']
@@ -800,7 +800,7 @@ SE,display,text,Hauptbezeichnung,230056,100 %,230056,229513,ohne Titel
 SE,displayAddition1,text,Dritte Zeile der Trefferliste,229861,100 %,229861,3,Kette Bibliothek
 SE,filterSource,string,Facette Datenbestand,230056,100 %,230056,1,Systematikketten
 SE,filterSubject_mv,strings,Facette Thema,33862,15 %,34922,14680,"['Jünger, Ernst (1895-1998)']"
-SE,filterType,string,Facette Medientyp,230056,100 %,230056,1,Normdaten
+SE,filterType_mv,strings,Facette Medientyp,230056,100 %,230056,1,Normdaten
 SE,id,string,,230056,100 %,230056,230056,SE00264660
 SE,person_display_mv,texts,aus PE display,172374,75 %,181254,46240,"['Döblin, Alfred (1878-1957)']"
 SE,person_id_mv,strings,,172374,75 %,181254,46252,['PE00006675']
@@ -822,7 +822,7 @@ SY,dateModified,daterange,,7587,100 %,7587,111,2010-03-05
 SY,display,text,Hauptbezeichnung,7587,100 %,7587,7584,S8.6.13. Katholische Literatur
 SY,displayAddition1,text,Dritte Zeile der Trefferliste,7585,100 %,7585,3,Basisnotation
 SY,filterSource,string,Facette Datenbestand,7587,100 %,7587,1,Fachsystematik
-SY,filterType,string,Facette Medientyp,7587,100 %,7587,1,Normdaten
+SY,filterType_mv,strings,Facette Medientyp,7587,100 %,7587,1,Normdaten
 SY,id,string,,7587,100 %,7587,7587,SY00004693
 SY,notation,string,,7587,100 %,7587,7559,S8.6.Vw
 SY,parent_display_mv,texts,aus SY display,7573,100 %,7573,1552,S8.6. Deutsche Literatur / Aspekte
@@ -853,7 +853,7 @@ TH,filterLanguageType_mv,strings,Facette Sprache mit Typ,272,0 %,272,84,Deutsch�
 TH,filterLocation_mv,strings,Facette Ort,1263,2 %,1427,717,['Deutschland']
 TH,filterLocationType_mv,strings,Facette Ort mit Typ,1263,2 %,1427,783,['Deutschland␝nicht bestimmt']
 TH,filterSource,string,Facette Datenbestand,71989,100 %,71989,1,Orte und Sachbegriffe
-TH,filterType,string,Facette Medientyp,71989,100 %,71989,1,Normdaten
+TH,filterType_mv,strings,Facette Medientyp,71989,100 %,71989,1,Normdaten
 TH,gnd_id_mv,strings,,33840,47 %,33840,33833,4066347-4
 TH,id,string,,71989,100 %,71989,71989,TH00073871
 TH,language_mv,texts,,272,0 %,272,84,Deutsch

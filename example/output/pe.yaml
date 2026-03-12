@@ -50,7 +50,7 @@ filterDateRange_mv:
   - '[1982-05-22 TO 2001-01-02]'
   - '[1982-05-23 TO 2001-01-01]'
 filterSource: Personen
-filterType: Normdaten
+filterType_mv: Normdaten
 gender: Geschlecht
 gnd_id_mv:
   - GND-Nummer 1
@@ -157,7 +157,7 @@ filterDatePoint_mv:
 filterDateRange_mv:
   - '[1982-05 TO 2001-01]'
 filterSource: Personen
-filterType: Normdaten
+filterType_mv: Normdaten
 schemaVersion: 0.13.0
 searchEntityScore: 19
 searchEntity_id_mv: PE00000002
@@ -178,7 +178,7 @@ filterDatePoint_mv:
 filterDateRange_mv:
   - '[1982 TO 2001]'
 filterSource: Personen
-filterType: Normdaten
+filterType_mv: Normdaten
 schemaVersion: 0.13.0
 searchEntityScore: 11
 searchEntity_id_mv: PE00000003
@@ -195,7 +195,7 @@ country_mv:
   - Österreich
   - Deutschland
 filterSource: Personen
-filterType: Normdaten
+filterType_mv: Normdaten
 schemaVersion: 0.13.0
 searchEntityScore: 8
 searchEntity_id_mv: PE00000004
@@ -209,7 +209,7 @@ url: https://www.dla-marbach.de/find/opac/id/PE00000004
 id: PE00000005
 display: Person 5
 filterSource: Personen
-filterType: Normdaten
+filterType_mv: Normdaten
 schemaVersion: 0.13.0
 searchEntityScore: 5
 searchEntity_id_mv: PE00000005
@@ -223,7 +223,7 @@ url: https://www.dla-marbach.de/find/opac/id/PE00000005
 id: PE00000006
 display: Person 6
 filterSource: Personen
-filterType: Normdaten
+filterType_mv: Normdaten
 schemaVersion: 0.13.0
 searchEntityScore: 6
 searchEntity_id_mv: PE00000006
@@ -237,7 +237,7 @@ url: https://www.dla-marbach.de/find/opac/id/PE00000006
 id: PE00000007
 display: Person 7
 filterSource: Personen
-filterType: Normdaten
+filterType_mv: Normdaten
 schemaVersion: 0.13.0
 searchEntityScore: 3
 searchEntity_id_mv: PE00000007
@@ -251,7 +251,7 @@ url: https://www.dla-marbach.de/find/opac/id/PE00000007
 id: PE00000008
 display: Person 8
 filterSource: Personen
-filterType: Normdaten
+filterType_mv: Normdaten
 schemaVersion: 0.13.0
 searchEntityScore: 2
 searchEntity_id_mv: PE00000008
@@ -273,7 +273,7 @@ filterDateRange_mv:
   - '[-0518 TO -0446]'
   - '[-0500 TO -0446]'
 filterSource: Personen
-filterType: Normdaten
+filterType_mv: Normdaten
 schemaVersion: 0.13.0
 searchEntityScore: 1
 searchEntity_id_mv: PE00000009
@@ -289,7 +289,7 @@ display: 'Facette Ort: Berlin␝Sterbeort'
 filterLocationType_mv: Berlin␝Sterbeort
 filterLocation_mv: Berlin
 filterSource: Personen
-filterType: Normdaten
+filterType_mv: Normdaten
 relation_text_mv:
   - Berlin [u.a.]
 relation_type_mv:
@@ -301,7 +301,7 @@ title: 'Facette Ort: Berlin␝Sterbeort'
 id: PE00000011
 display: Wikidata Q19370742
 filterSource: Personen
-filterType: Normdaten
+filterType_mv: Normdaten
 gnd_id_mv:
   - "116964812"
   - "100838995"
@@ -316,7 +316,7 @@ title: Wikidata Q19370742
 id: PE00000012
 display: Schiller, Friedrich von
 filterSource: Personen
-filterType: Normdaten
+filterType_mv: Normdaten
 gnd_id_mv:
   - "118607626"
 linkCommonsImage_file_mv: Friedrich%20Schiller%20by%20Ludovike%20Simanowiz.jpg
@@ -336,7 +336,7 @@ title: Schiller, Friedrich von
 id: PE00000013
 display: Lindgren, Astrid
 filterSource: Personen
-filterType: Normdaten
+filterType_mv: Normdaten
 gnd_id_mv:
   - "118573217"
 linkCommonsImage_file_mv: Astrid%20Lindgren%20%28cropped%29.jpg
@@ -363,7 +363,7 @@ filterDateRange_mv:
 filterLocationType_mv: Braunschweig␝Geburtsort
 filterLocation_mv: Braunschweig
 filterSource: Personen
-filterType: Normdaten
+filterType_mv: Normdaten
 gnd_id_mv:
   - "118554190"
 linkCommonsImage_file_mv: Zentralbibliothek%20Z%C3%BCrich%20-%20Ricarda%20Huch%20-%20500000166.jpg
@@ -399,7 +399,7 @@ title: Huch, Ricarda
 id: PE00000022
 display: Huch, Ilona
 filterSource: Personen
-filterType: Normdaten
+filterType_mv: Normdaten
 gnd_id_mv:
   - "1121311261"
 relation_comment_mv:
@@ -428,7 +428,7 @@ filterDatePoint_mv:
 filterDateRange_mv:
   - '[1850 TO 1914]'
 filterSource: Personen
-filterType: Normdaten
+filterType_mv: Normdaten
 gnd_id_mv:
   - "117035505"
 linkWikidata: Q61103285
