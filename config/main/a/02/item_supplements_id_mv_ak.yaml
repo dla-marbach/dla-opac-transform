@@ -8,68 +8,63 @@
   expression: |
     grel:
     forNonBlank(
-      [
+      forNonBlank(
+        cells['item_id_mv'].value,
+        items,
         forNonBlank(
-          cells['item_id_mv'].value,
-          items,
-          forNonBlank(
-            forEach(
-              items.split('␟'),
-              item,
-              forNonBlank(
-                forEach(
-                  item.cross('bi', 'item_id_mv'),
-                  r,
-                  forNonBlank(
-                    r.cells['id'].value,
-                    v,
-                    v,
-                    null
-                  )
-                ).join('␟'),
-                x,
-                x,
-                null
-              )
-            ).join('␟'),
-            y,
-            y,
-            null
-          ),
+          forEach(
+            items.split('␟'),
+            item,
+            forNonBlank(
+              [
+                forNonBlank(
+                  forEach(
+                    item.cross('bi', 'item_id_mv'),
+                    r,
+                    forNonBlank(
+                      r.cells['id'].value,
+                      v,
+                      v,
+                      null
+                    )
+                  ).join('␟'),
+                  x,
+                  x,
+                  null
+                ),
+                forNonBlank(
+                  forEach(
+                    item.cross('hs', 'item_id_mv'),
+                    r,
+                    forNonBlank(
+                      r.cells['id'].value,
+                      v,
+                      v,
+                      null
+                    )
+                  ).join('␟'),
+                  x,
+                  x,
+                  null
+                )
+              ].join('␟'),
+              x,
+              x,
+              '␣'
+            )
+          ).join('␟'),
+          y,
+          y,
           null
         ),
-        forNonBlank(
-          cells['item_id_mv'].value,
-          items,
-          forNonBlank(
-            forEach(
-              items.split('␟'),
-              item,
-              forNonBlank(
-                forEach(
-                  item.cross('hs', 'item_id_mv'),
-                  r,
-                  forNonBlank(
-                    r.cells['id'].value,
-                    v,
-                    v,
-                    null
-                  )
-                ).join('␟'),
-                x,
-                x,
-                null
-              )
-            ).join('␟'),
-            y,
-            y,
-            null
-          ),
-          null
-        )
-      ].join('␟'),
+        null
+      ),
       z,
-      z,
+      if(
+        isNonBlank(z.replace(/␟|␣/,'')),
+        z,
+        null
+      ),
       null
     )
   newColumnName: item_supplements_id_mv
