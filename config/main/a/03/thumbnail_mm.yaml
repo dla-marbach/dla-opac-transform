@@ -11,10 +11,9 @@
       mode: regex
     mode: row-based
   baseColumnName: hyperlink
-  # Kodierte Slashes (%2f oder %2F) werden zunächst aufgelöst
   expression: |
     grel:
-    cells['hyperlink'].value.replace('%2f','/').replace('%2F','/').replace('full/full/','full/!480,480/')
+    cells['hyperlink'].value.replace('full/full/','full/!480,480/')
   newColumnName: thumbnail
   columnInsertIndex: 2
 # Goobi mit Goobi-Interface /viewer/image/
