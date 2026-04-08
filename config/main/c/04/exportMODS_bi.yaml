@@ -110,7 +110,7 @@
           '    <namePart type="date">' + v.escape('xml') + forNonBlank(z.cross('ks','id')[0].cells['dateLifespanEnd'].value, v, ' — ' + v.escape('xml'), '') + '</namePart>' + '\n'
           , '') +
           '    <role>' + '\n' +
-          '      <roleTerm type="code" authority="marcrelator">' + 'cre' + '</roleTerm>' + '\n' +
+          '      <roleTerm type="text">' + 'Urheber/in' + '</roleTerm>' + '\n' +
           '    </role>' + '\n'
           +
           '  </name>' + '\n'
