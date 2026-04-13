@@ -16,27 +16,18 @@ tasks:
     desc: Internformat aufbereiten für Online-Katalog
     cmds:
       - |
-        # Zeitstempel zu Beginn
-        mkdir -p .task/timer; date -u +%s.%N > ".task/timer/{{.TASK}}"
-      - |
-        # Arbeitsverzeichnis leeren
+        # Arbeitsverzeichnis leeren und Konfigurationsdateien kopieren
         rm -r "{{.DIR}}/tmp" 2> /dev/null || true; mkdir -p "{{.DIR}}/tmp"
-      - |
-        # Konfigurationsdateien ins Arbeitsverzeichnis kopieren
         cp -r "config" "{{.DIR}}/tmp/"
       - |
         # orcli das script main.sh ausführen lassen
         DIR={{.DIR}} openrefine/orcli run "scripts/main.sh" --memory "{{.MEMORY}}" --port "{{.PORT}}"
       - |
-        # Kopie der Konfigurationsdateien und temporäre Dateien im Arbeitsverzeichnis löschen
+        # Arbeitsverzeichnis aufräumen und dann in Ausgabeverzeichnis verschieben
         rm -r "{{.DIR}}"/tmp/config 2> /dev/null || true
         rm "{{.DIR}}"/tmp/tmp* 2> /dev/null || true
-      - |
-        # Vorheriges Ergebnis überschreiben
-        rm -r "{{.DIR}}/output" 2> /dev/null || true; mv "{{.DIR}}/tmp" "{{.DIR}}/output"
-      - |
-        # Laufzeit berechnen
-        >&2 echo "{{.TASK}} run time: $(awk -v now=$(date -u +%s.%N) -v timer=$(cat .task/timer/{{.TASK}}) 'BEGIN {print now-timer}') seconds"
+        rm -r "{{.DIR}}/output" 2> /dev/null || true
+        mv "{{.DIR}}/tmp" "{{.DIR}}/output"
     sources:
       - '{{.DIR}}/input/**'
       - scripts/main.sh
@@ -58,10 +49,8 @@ tasks:
     desc: Entwicklungsmodus (interaktiv)
     cmds:
       - |
-        # Arbeitsverzeichnis leeren
+        # Arbeitsverzeichnis leeren und Konfigurationsdateien kopieren
         rm -r "{{.DIR}}/tmp" 2> /dev/null || true; mkdir -p "{{.DIR}}/tmp"
-      - |
-        # Konfigurationsdateien ins Arbeitsverzeichnis kopieren
         cp -r "config" "{{.DIR}}/tmp/"
       - |
         # orcli das script main.sh im interaktiven Modus ausführen lassen
@@ -119,9 +108,6 @@ tasks:
     desc: JSONL zusätzlich in YAML konvertieren
     cmds:
       - |
-        # Zeitstempel zu Beginn
-        mkdir -p .task/timer; date -u +%s.%N > ".task/timer/{{.TASK}}"
-      - |
         # TSV konvertieren in YAML ohne null values
         for f in "{{.DIR}}"/output/*.jsonl; do
             f="${f##*/}"
@@ -129,9 +115,6 @@ tasks:
             yq -p json -o yaml "{{.DIR}}"/output/${f}.jsonl \
             > "{{.DIR}}"/output/${f}.yaml
         done
-      - |
-        # Laufzeit berechnen
-        >&2 echo "{{.TASK}} run time: $(awk -v now=$(date -u +%s.%N) -v timer=$(cat .task/timer/{{.TASK}}) 'BEGIN {print now-timer}') seconds"
     sources:
       - '{{.DIR}}/output/*.tsv'
       - Taskfile.yml
@@ -144,14 +127,8 @@ tasks:
   validate:
     desc: Validierung der XML-Dateien
     cmds:
-      - |
-        # Zeitstempel zu Beginn
-        mkdir -p .task/timer; date -u +%s.%N > ".task/timer/{{.TASK}}"
       - python3 scripts/validate_dc_csv.py "{{.DIR}}"/output/oai-dc.csv
       - python3 scripts/validate_mods_csv.py "{{.DIR}}"/output/oai-mods.csv
-      - |
-        # Laufzeit berechnen
-        >&2 echo "{{.TASK}} run time: $(awk -v now=$(date -u +%s.%N) -v timer=$(cat .task/timer/{{.TASK}}) 'BEGIN {print now-timer}') seconds"
     preconditions:
       - command -v python3
       - test -d {{.DIR}}/output
@@ -159,14 +136,8 @@ tasks:
   docs:
     desc: Aktualisierung der Statistiken und Feldtypen in docs/internformat.csv
     cmds:
-      - |
-        # Zeitstempel zu Beginn
-        mkdir -p .task/timer; date -u +%s.%N > ".task/timer/{{.TASK}}"
       - python3 scripts/stats.py "{{.DIR}}"/output
       - python3 scripts/schema_to_docs.py
-      - |
-        # Laufzeit berechnen
-        >&2 echo "{{.TASK}} run time: $(awk -v now=$(date -u +%s.%N) -v timer=$(cat .task/timer/{{.TASK}}) 'BEGIN {print now-timer}') seconds"
     preconditions:
       - command -v python3
       - test -d {{.DIR}}/output
