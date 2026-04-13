@@ -4923,14 +4923,19 @@ id: AK99000002
 display: Systematik Testdokument Beta
 category: Bibliotheksdokumente
 classificationSubjectOther_mv:
+  - Register Test Basis A
+  - Register Test Basis B
   - Register Test Basis B
 classification_category_mv:
   - Kette Bibliothek
+  - Kette Bibliothek
   - Provenienz-Kette
 classification_display_mv:
+  - Systematik Testkette Autoren
   - Systematik Testkette Fach
   - Systematik Testkette Provenienz
 classification_id_mv:
+  - SE99000011
   - SE99000012
   - SE99000014
 confidential: false
@@ -4939,14 +4944,18 @@ exportDC: |-
     <dc:title>Systematik Testdokument Beta</dc:title>
     <dc:subject>Thesaurus Systematik Alpha</dc:subject>
     <dc:subject>Thesaurus Systematik Beta</dc:subject>
+    <dc:subject>Basisnotation Test A</dc:subject>
     <dc:subject>Basisnotation Test B</dc:subject>
-    <dc:subject>Autorenschema Test C</dc:subject>
     <dc:subject>Autorenschema Test A</dc:subject>
+    <dc:subject>Autorenschema Test B</dc:subject>
+    <dc:subject>Autorenschema Test C</dc:subject>
     <dc:subject>Person Systematik Alpha</dc:subject>
     <dc:subject>Person Systematik Beta</dc:subject>
     <dc:subject>Koerperschaft Systematik Alpha</dc:subject>
     <dc:subject>Koerperschaft Systematik Beta</dc:subject>
+    <dc:subject>Systematik Testdokument Alpha</dc:subject>
     <dc:subject>Systematik Testdokument Beta</dc:subject>
+    <dc:subject>Systematik Testkette Autoren</dc:subject>
     <dc:subject>Systematik Testkette Fach</dc:subject>
     <dc:subject>Systematik Testkette Provenienz</dc:subject>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/AK99000002</dc:identifier>
@@ -4964,13 +4973,19 @@ exportMODS: |-
       <topic>Thesaurus Systematik Beta</topic>
     </subject>
     <subject>
+      <topic>Basisnotation Test A</topic>
+    </subject>
+    <subject>
       <topic>Basisnotation Test B</topic>
     </subject>
     <subject>
-      <topic>Autorenschema Test C</topic>
+      <topic>Autorenschema Test A</topic>
     </subject>
     <subject>
-      <topic>Autorenschema Test A</topic>
+      <topic>Autorenschema Test B</topic>
+    </subject>
+    <subject>
+      <topic>Autorenschema Test C</topic>
     </subject>
     <subject>
       <topic>Person Systematik Alpha</topic>
@@ -4985,8 +5000,12 @@ exportMODS: |-
       <topic>Koerperschaft Systematik Beta</topic>
     </subject>
     <subject>
+      <topic>Systematik Testdokument Alpha</topic>
+    </subject>
+    <subject>
       <topic>Systematik Testdokument Beta</topic>
     </subject>
+    <classification authority="DE-Mar1">Systematik Testkette Autoren</classification>
     <classification authority="DE-Mar1">Systematik Testkette Fach</classification>
     <classification authority="DE-Mar1">Systematik Testkette Provenienz</classification>
     <location>
@@ -5001,41 +5020,55 @@ exportMODS: |-
 exportRIS: |-
   TY  - GEN
   A2  - Person Systematik Alpha
+  A2  - Person Systematik Beta
   A2  - Koerperschaft Systematik Alpha
+  A2  - Koerperschaft Systematik Beta
   ID  - AK99000002
   KW  - Thesaurus Systematik Alpha
   KW  - Thesaurus Systematik Beta
+  KW  - Basisnotation Test A
   KW  - Basisnotation Test B
-  KW  - Autorenschema Test C
   KW  - Autorenschema Test A
+  KW  - Autorenschema Test B
+  KW  - Autorenschema Test C
   KW  - Person Systematik Alpha
   KW  - Person Systematik Beta
   KW  - Koerperschaft Systematik Alpha
   KW  - Koerperschaft Systematik Beta
+  KW  - Systematik Testdokument Alpha
   KW  - Systematik Testdokument Beta
   TI  - Systematik Testdokument Beta
   UR  - https://www.dla-marbach.de/find/opac/id/AK99000002/
   ER  -
 filterAuthorityRelation_mv:
   - Person Systematik Alpha␝Über
+  - Person Systematik Beta␝Über
   - Koerperschaft Systematik Alpha␝Über
+  - Koerperschaft Systematik Beta␝Über
 filterAuthorityRole_mv:
   - Person Systematik Alpha␝Behandelte Person/Körperschaft
+  - Person Systematik Beta␝Behandelte Person/Körperschaft
   - Koerperschaft Systematik Alpha␝Behandelte Person/Körperschaft
+  - Koerperschaft Systematik Beta␝Behandelte Person/Körperschaft
 filterAuthority_mv:
-  - Person Systematik Alpha
-  - Koerperschaft Systematik Alpha
-filterSource: Bibliotheksmaterialien
-filterSubject_mv:
-  - Thesaurus Systematik Alpha
-  - Thesaurus Systematik Beta
-  - Basisnotation Test B
-  - Autorenschema Test C
-  - Autorenschema Test A
   - Person Systematik Alpha
   - Person Systematik Beta
   - Koerperschaft Systematik Alpha
   - Koerperschaft Systematik Beta
+filterSource: Bibliotheksmaterialien
+filterSubject_mv:
+  - Thesaurus Systematik Alpha
+  - Thesaurus Systematik Beta
+  - Basisnotation Test A
+  - Basisnotation Test B
+  - Autorenschema Test A
+  - Autorenschema Test B
+  - Autorenschema Test C
+  - Person Systematik Alpha
+  - Person Systematik Beta
+  - Koerperschaft Systematik Alpha
+  - Koerperschaft Systematik Beta
+  - Systematik Testdokument Alpha
   - Systematik Testdokument Beta
 filterType_mv: Gedrucktes
 schemaVersion: 0.14.0

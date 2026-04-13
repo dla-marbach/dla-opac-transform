@@ -28,15 +28,15 @@ uid	record_id	count	hasChild	parent_id	displayTree	display	displayName	displayAd
 10000025	10000025	0	1	10000000	X	X				
 10000026	10000026	0	1	10000000	Y	Y				
 10000027	10000027	0	1	10000000	Z	Z				
-10000028	PE99000001	1	1	10000020	Person Systematik Alpha	Person Systematik Alpha				SE99000011
-10000029	SY99000031	1	1	10000028	AUT A	AUT-1. Autorenschema Test A		Autorenschema	Register Test Autor A | Person Systematik Alpha	SE99000011
-10000030	SY99000032	1	1	10000029	AUT B	AUT-2. Autorenschema Test B		Autorenschema	Register Test Autor B | Person Systematik Alpha	SE99000011
-10000031	TH99000001	1	1	10000030	Thesaurus Systematik Alpha	Thesaurus Systematik Alpha		Entitaetstyp	Person Systematik Alpha	SE99000011
-10000032	TH99000002	1	1	10000031	Thesaurus Systematik Beta	Thesaurus Systematik Beta		Entitaetstyp	Person Systematik Alpha	SE99000011
-10000033	AK99000001	1	1	10000032	Systematik Testdokument Alpha	Systematik Testdokument Alpha			Person Systematik Alpha	SE99000011
-10000034	KS99000001	1	1	10000033	Koerperschaft Systematik Alpha	Koerperschaft Systematik Alpha			Person Systematik Alpha	SE99000011
-10000035	PE99000002	1	1	10000034	Person Systematik Beta	Person Systematik Beta			AUT-1. Autorenschema Test A	SE99000011
-10000036	KS99000002	1	0	10000035	Koerperschaft Systematik Beta	Koerperschaft Systematik Beta			AUT-2. Autorenschema Test B	SE99000011
+10000028	PE99000001	2	1	10000020	Person Systematik Alpha	Person Systematik Alpha				SE99000011
+10000029	SY99000031	2	1	10000028	AUT A	AUT-1. Autorenschema Test A		Autorenschema	Register Test Autor A | Person Systematik Alpha	SE99000011
+10000030	SY99000032	2	1	10000029	AUT B	AUT-2. Autorenschema Test B		Autorenschema	Register Test Autor B | Person Systematik Alpha	SE99000011
+10000031	TH99000001	2	1	10000030	Thesaurus Systematik Alpha	Thesaurus Systematik Alpha		Entitaetstyp	Person Systematik Alpha	SE99000011
+10000032	TH99000002	2	1	10000031	Thesaurus Systematik Beta	Thesaurus Systematik Beta		Entitaetstyp	Person Systematik Alpha	SE99000011
+10000033	AK99000001	2	1	10000032	Systematik Testdokument Alpha	Systematik Testdokument Alpha			Person Systematik Alpha	SE99000011
+10000034	KS99000001	2	1	10000033	Koerperschaft Systematik Alpha	Koerperschaft Systematik Alpha			Person Systematik Alpha	SE99000011
+10000035	PE99000002	2	1	10000034	Person Systematik Beta	Person Systematik Beta			AUT-1. Autorenschema Test A	SE99000011
+10000036	KS99000002	2	0	10000035	Koerperschaft Systematik Beta	Koerperschaft Systematik Beta			AUT-2. Autorenschema Test B	SE99000011
 20000000	20000000	0	1	0	Bibliographieschema	Bibliographieschema				
 20000001	PE99000002	1	1	20000000	Person Systematik Beta	Person Systematik Beta				SE99000013
 20000002	SY99000030	1	1	20000001	AUT Root	AUT-0. Autorenschema Test Root		Autorenschema	Register Test Autor | Person Systematik Beta	SE99000013
