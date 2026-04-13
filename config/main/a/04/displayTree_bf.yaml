@@ -1,0 +1,51 @@
+# Anzeigetitel für Baumansicht
+# Unterscheidung zwischen a) Hauptbestände oder Kryptobestände und b) Unterbestände
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    if(
+      or(
+        isBlank(cells['parent_id_mv'].value),
+        forNonBlank(cells['category'].value, v, v =='Kryptobestand', false)
+      ),
+      forNonBlank(
+        cells['categorySub'].value,
+        v,
+        v,
+        forNonBlank(
+          cells['category'].value,
+          v,
+          v,
+          ''
+        )
+      )
+      + forNonBlank(
+        cells['department'].value,
+        v,
+        ', ' + v,
+        ''
+      )
+      + forNonBlank(
+        cells['title'].value,
+        v,
+        ' [' + v + ']',
+        ''
+      ),
+      forNonBlank(
+        cells['titleShort'].value,
+        v,
+        v,
+        forNonBlank(
+          cells['display'].value,
+          v,
+          v,
+          ''
+        )
+      )
+    )
+  newColumnName: displayTree
+  columnInsertIndex: 1
