@@ -1,0 +1,14 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "count",
+    "columnInsertIndex": 2,
+    "baseColumnName": "facet_value",
+    "expression": "grel:forEach(value.cross('systematik-count', 'synkey', ' OR '), r, r.cells['id'].value).uniques().length()",
+    "onError": "set-to-blank"
+  }
+]

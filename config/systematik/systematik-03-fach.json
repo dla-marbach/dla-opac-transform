@@ -1,0 +1,102 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent2",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent2"
+        }
+      ]
+    },
+    "newColumnName": "tmp",
+    "columnInsertIndex": 1,
+    "baseColumnName": "uid",
+    "expression": "grel:[ forNonBlank(cells['parent7'].value,v,v,null), forNonBlank(cells['parent6'].value,v,v,null), forNonBlank(cells['parent5'].value,v,v,null), forNonBlank(cells['parent4'].value,v,v,null), forNonBlank(cells['parent3'].value,v,v,null), forNonBlank(cells['parent2'].value,v,v,null), forNonBlank(cells['parent_id'].value,v,v,null) ].join(',').split(',')[1]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "tmp",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "tmp"
+        }
+      ]
+    },
+    "columnName": "tmp",
+    "expression": "grel:cell.cross('systematik-fach','uid')[0].cells['display'].value",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "tmp",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "tmp"
+        }
+      ]
+    },
+    "columnName": "displayAddition2",
+    "expression": "grel:forNonBlank(value,v,v + ' | ','') + cells['tmp'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "tmp"
+  }
+]

@@ -1,0 +1,73 @@
+{{
+with(
+    ['id', 'personAt_id_mv', 'corporationAt_id_mv', 'filterCollection_mv', 'displayTree', 'display', 'displayName', 'displayAddition1', 'displayAddition2'],
+    columns,
+    if(
+        row.index == 0,
+        forEach(
+            columns,
+            cn,
+            cn.escape('csv')
+            ).join(',')
+          + '\n'
+          + if(
+              not(
+                  or(
+                      cells['category'].value == 'Zeitungsausschnittsammlung der Mediendokumentation',
+                      cells['category'].value == 'Dokumentensammlung der Mediendokumentation',
+                      cells['category'].value == 'Theaterprogramme der Mediendokumentation',
+                      and(
+                          isNonBlank(cells['parent_id_mv'].value),
+                          cells['category'].value != 'Kryptobestand'
+                      ),
+                      and(
+                          isBlank(cells['personAt_id_mv'].value),
+                          isBlank(cells['corporationAt_id_mv'].value)
+                      ),
+                      cells['confidential'].value == 'true'
+                  )
+              ),
+              forEach(
+                  columns,
+                  cn,
+                  forNonBlank(
+                      cells[cn].value,
+                      v,
+                      v.escape('csv'),
+                      ''
+                  )
+              ).join(',') + '\n',
+              ''
+            ),
+        if(
+            not(
+                or(
+                    cells['category'].value == 'Zeitungsausschnittsammlung der Mediendokumentation',
+                    cells['category'].value == 'Dokumentensammlung der Mediendokumentation',
+                    cells['category'].value == 'Theaterprogramme der Mediendokumentation',
+                    and(
+                        isNonBlank(cells['parent_id_mv'].value),
+                        cells['category'].value != 'Kryptobestand'
+                    ),
+                    and(
+                        isBlank(cells['personAt_id_mv'].value),
+                        isBlank(cells['corporationAt_id_mv'].value)
+                    ),
+                    cells['confidential'].value == 'true'
+                )
+            ),
+            forEach(
+                columns,
+                cn,
+                forNonBlank(
+                    cells[cn].value,
+                    v,
+                    v.escape('csv'),
+                    ''
+                )
+            ).join(',') + '\n',
+            ''
+        )
+    )
+)
+}}

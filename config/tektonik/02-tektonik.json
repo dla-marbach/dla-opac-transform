@@ -1,0 +1,913 @@
+[
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "record_id",
+      "personAt_id_mv",
+      "corporationAt_id_mv",
+      "parent_id",
+      "displayTree",
+      "display",
+      "displayName",
+      "displayAddition1",
+      "displayAddition2",
+      "facet_value",
+      "uid",
+      "hasChild"
+    ]
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "grel:or(isNonBlank(cells['corporationAt_id_mv'].value),isNonBlank(cells['personAt_id_mv'].value))",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "corporationAt_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "corporationAt_id_mv"
+        }
+      ]
+    },
+    "newColumnName": "personAt_id_mv+corporationAt_id_mv",
+    "columnInsertIndex": 3,
+    "baseColumnName": "personAt_id_mv",
+    "expression": "grel:[ forNonBlank(cells['corporationAt_id_mv'].value, v, v, null), forNonBlank(cells['personAt_id_mv'].value, v, v, null) ].join('␟')",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "corporationAt_id_mv"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "personAt_id_mv"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "personAt_id_mv+corporationAt_id_mv",
+    "expression": "grel:filter(value.split('␟'),v,v.length()>7).join('␟')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/multivalued-cell-split",
+    "columnName": "personAt_id_mv+corporationAt_id_mv",
+    "keyColumnName": "record_id",
+    "mode": "separator",
+    "separator": "␟",
+    "regex": false
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "personAt_id_mv+corporationAt_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "personAt_id_mv+corporationAt_id_mv"
+        }
+      ]
+    },
+    "columnName": "record_id",
+    "expression": "grel:row.record.cells[columnName].value[0]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "personAt_id_mv+corporationAt_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "personAt_id_mv+corporationAt_id_mv"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id"
+        }
+      ]
+    },
+    "columnName": "parent_id",
+    "expression": "grel:cells['personAt_id_mv+corporationAt_id_mv'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id"
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/row-reorder",
+    "mode": "row-based",
+    "sorting": {
+      "criteria": [
+        {
+          "errorPosition": 1,
+          "caseSensitive": false,
+          "valueType": "string",
+          "column": "personAt_id_mv+corporationAt_id_mv",
+          "blankPosition": 2,
+          "reverse": false
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "personAt_id_mv+corporationAt_id_mv"
+  },
+  {
+    "op": "core/transpose-columns-into-rows",
+    "startColumnName": "record_id",
+    "columnCount": 2,
+    "ignoreBlankCells": true,
+    "fillDown": false,
+    "combinedColumnName": "tmp",
+    "prependColumnName": false,
+    "separator": ":"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "tmp",
+    "newColumnName": "record_id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "PE",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "newColumnName": "tmp",
+    "columnInsertIndex": 1,
+    "baseColumnName": "record_id",
+    "expression": "grel:value.cross('pe','id')[0].cells['display'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "PE",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "columnName": "display",
+    "expression": "grel:cells['tmp'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "PE",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "columnName": "displayTree",
+    "expression": "grel:cells['tmp'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "tmp"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "PE",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "newColumnName": "tmp",
+    "columnInsertIndex": 1,
+    "baseColumnName": "record_id",
+    "expression": "grel:value.cross('pe','id')[0].cells['displayName'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "PE",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "columnName": "displayName",
+    "expression": "grel:cells['tmp'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column tmp",
+    "columnName": "tmp"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "PE",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "newColumnName": "tmp",
+    "columnInsertIndex": 1,
+    "baseColumnName": "record_id",
+    "expression": "grel:value.cross('pe','id')[0].cells['displayAddition1'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "PE",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "columnName": "displayAddition1",
+    "expression": "grel:cells['tmp'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "tmp"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "PE",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "newColumnName": "tmp",
+    "columnInsertIndex": 1,
+    "baseColumnName": "record_id",
+    "expression": "grel:value.cross('pe','id')[0].cells['displayAddition2'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "PE",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "columnName": "displayAddition2",
+    "expression": "grel:cells['tmp'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "tmp"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "KS",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "newColumnName": "tmp",
+    "columnInsertIndex": 1,
+    "baseColumnName": "record_id",
+    "expression": "grel:value.cross('ks','id')[0].cells['display'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "KS",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "columnName": "display",
+    "expression": "grel:cells['tmp'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "KS",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "columnName": "displayTree",
+    "expression": "grel:cells['tmp'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "tmp"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "KS",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "newColumnName": "tmp",
+    "columnInsertIndex": 1,
+    "baseColumnName": "record_id",
+    "expression": "grel:value.cross('ks','id')[0].cells['displayName'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "KS",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "columnName": "displayName",
+    "expression": "grel:cells['tmp'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "tmp"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "KS",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "newColumnName": "tmp",
+    "columnInsertIndex": 1,
+    "baseColumnName": "record_id",
+    "expression": "grel:value.cross('ks','id')[0].cells['displayAddition1'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "KS",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "columnName": "displayAddition1",
+    "expression": "grel:cells['tmp'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "tmp"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "KS",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "newColumnName": "tmp",
+    "columnInsertIndex": 1,
+    "baseColumnName": "record_id",
+    "expression": "grel:value.cross('ks','id')[0].cells['displayAddition2'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "KS",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "columnName": "displayAddition2",
+    "expression": "grel:cells['tmp'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "tmp"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "KS|PE",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "columnName": "parent_id",
+    "expression": "grel:unicode(cells['display'].value[0].toLowercase())[0].toNumber() - 96",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "KS|PE",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "columnName": "parent_id",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "-50"
+        ],
+        "to": 1
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "KS|PE",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "columnName": "parent_id",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "133"
+        ],
+        "to": 1
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "KS|PE",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "columnName": "parent_id",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "156"
+        ],
+        "to": 21
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "KS|PE",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "columnName": "parent_id",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "226"
+        ],
+        "to": 12
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "KS|PE",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "columnName": "parent_id",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "286"
+        ],
+        "to": 26
+      }
+    ]
+  },
+  {
+    "op": "core/row-reorder",
+    "mode": "row-based",
+    "sorting": {
+      "criteria": [
+        {
+          "errorPosition": 1,
+          "valueType": "number",
+          "column": "uid",
+          "blankPosition": 2,
+          "reverse": false
+        },
+        {
+          "errorPosition": 1,
+          "caseSensitive": false,
+          "valueType": "string",
+          "column": "record_id",
+          "blankPosition": 2,
+          "reverse": false
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "uid",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "uid"
+        }
+      ]
+    },
+    "columnName": "uid",
+    "expression": "grel:rowIndex",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "grel:isNumeric(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id"
+        }
+      ]
+    },
+    "columnName": "parent_id",
+    "expression": "grel:value.cross('tektonik','record_id')[0].cells['uid'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "PE|KS",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "columnName": "hasChild",
+    "expression": "grel:if(facetCount(cells['uid'].value,'value','parent_id')>0,'1','0')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "uid",
+    "index": 0
+  }
+]

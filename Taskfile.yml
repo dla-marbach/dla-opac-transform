@@ -11,6 +11,8 @@ tasks:
   default:
     cmds:
       - task: main
+      - task: systematik
+      - task: tektonik
     
   main:
     desc: Internformat aufbereiten für Online-Katalog
@@ -44,6 +46,40 @@ tasks:
       - command -v curl
       - command -v java
       - test -d {{.DIR}}
+
+  systematik:
+    desc: Tektonik (Bestandsübersicht) für TYPO3-Datenbank
+    cmds:
+      - |
+        # Arbeitsverzeichnis leeren und Konfigurationsdateien kopieren
+        rm -r "{{.DIR}}/tmp" 2> /dev/null || true; mkdir -p "{{.DIR}}/tmp"
+        cp -r "config" "{{.DIR}}/tmp/"
+      - |
+        # orcli das script systematik.sh ausführen lassen
+        DIR={{.DIR}} openrefine/orcli run "scripts/systematik.sh" --memory "{{.MEMORY}}" --port "{{.PORT}}"
+      - |
+        # Arbeitsverzeichnis aufräumen und dann in Ausgabeverzeichnis verschieben
+        rm -r "{{.DIR}}"/tmp/config 2> /dev/null || true
+        rm "{{.DIR}}"/tmp/tmp* 2> /dev/null || true
+        rm -r "{{.DIR}}/output" 2> /dev/null || true
+        mv "{{.DIR}}/tmp" "{{.DIR}}/output"
+
+  tektonik:
+    desc: Systematik (Thematischer Sucheinstieg) für TYPO3-Datenbank
+    cmds:
+      - |
+        # Arbeitsverzeichnis leeren und Konfigurationsdateien kopieren
+        rm -r "{{.DIR}}/tmp" 2> /dev/null || true; mkdir -p "{{.DIR}}/tmp"
+        cp -r "config" "{{.DIR}}/tmp/"
+      - |
+        # orcli das script tektonik.sh ausführen lassen
+        DIR={{.DIR}} openrefine/orcli run "scripts/tektonik.sh" --memory "{{.MEMORY}}" --port "{{.PORT}}"
+      - |
+        # Arbeitsverzeichnis aufräumen und dann in Ausgabeverzeichnis verschieben
+        rm -r "{{.DIR}}"/tmp/config 2> /dev/null || true
+        rm "{{.DIR}}"/tmp/tmp* 2> /dev/null || true
+        rm -r "{{.DIR}}/output" 2> /dev/null || true
+        mv "{{.DIR}}/tmp" "{{.DIR}}/output"
 
   dev:
     desc: Entwicklungsmodus (interaktiv)

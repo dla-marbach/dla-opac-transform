@@ -1,0 +1,282 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "hasChild",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "hasChild"
+        }
+      ]
+    },
+    "newColumnName": "tmp",
+    "columnInsertIndex": 2,
+    "baseColumnName": "record_id",
+    "expression": "grel:value.slice(2)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "BF",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "newColumnName": "bf",
+    "columnInsertIndex": 3,
+    "baseColumnName": "tmp",
+    "expression": "grel:forEach(value.cross('bf','parent_id_mv'),r,forNonBlank(r.cells['id'].value,v,if(r.cells['confidential'].value != 'true',v,null),'')).join('␟')",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "BF",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "newColumnName": "bi",
+    "columnInsertIndex": 3,
+    "baseColumnName": "tmp",
+    "expression": "grel:forEach(value.cross('bi','collection_id_mv'),r,forNonBlank(r.cells['id'].value,v,v,'')).join('␟')",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "tmp",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "tmp"
+        }
+      ]
+    },
+    "columnName": "tmp",
+    "expression": "grel:forNonBlank([ forNonBlank(cells['bf'].value,v,v,null), forNonBlank(cells['bi'].value,v,v,null) ].join('␟'),x,x,null)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "bi"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "bf"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "hasChild",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "hasChild"
+        }
+      ]
+    },
+    "columnName": "hasChild",
+    "expression": "grel:if(isNonBlank(cells['tmp'].value),1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/transpose-columns-into-rows",
+    "startColumnName": "record_id",
+    "columnCount": 2,
+    "ignoreBlankCells": true,
+    "fillDown": false,
+    "combinedColumnName": "id",
+    "prependColumnName": false,
+    "separator": ":"
+  },
+  {
+    "op": "core/multivalued-cell-split",
+    "columnName": "id",
+    "keyColumnName": "uid",
+    "mode": "separator",
+    "separator": "␟",
+    "regex": false
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "uid",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "uid"
+        }
+      ]
+    },
+    "columnName": "parent_id",
+    "expression": "grel:row.record.cells['uid'].value[0]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "uid",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "uid"
+        }
+      ]
+    },
+    "columnName": "uid",
+    "expression": "grel:' '",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/row-reorder",
+    "mode": "record-based",
+    "sorting": {
+      "criteria": [
+        {
+          "errorPosition": 1,
+          "valueType": "number",
+          "column": "uid",
+          "blankPosition": 2,
+          "reverse": false
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "hasChild",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "hasChild"
+        }
+      ]
+    },
+    "columnName": "uid",
+    "expression": "grel:rowIndex",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "id",
+    "newColumnName": "record_id"
+  }
+]

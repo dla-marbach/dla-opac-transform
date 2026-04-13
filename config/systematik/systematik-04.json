@@ -1,0 +1,121 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "displayTree",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "displayTree"
+        }
+      ]
+    },
+    "columnName": "displayTree",
+    "expression": "grel:cells['display'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "displayTree",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "displayTree"
+        }
+      ]
+    },
+    "columnName": "displayTree",
+    "expression": "grel:'ohne Titel'",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Basisnotation",
+                "l": "Basisnotation"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "displayAddition1",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "displayAddition1"
+        },
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "SY",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        }
+      ]
+    },
+    "columnName": "display",
+    "expression": "grel:'S' + forEach(value.split(' ')[0].slice(1).slice(0,-1).split('.'), v, '00'[0,2-v.length()] + v).join('.') + '. ' + value.split(' ').slice(1).join(' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "uid",
+      "record_id",
+      "hasChild",
+      "parent_id",
+      "displayTree",
+      "display",
+      "displayName",
+      "displayAddition1",
+      "displayAddition2",
+      "facet_value"
+    ]
+  }
+]

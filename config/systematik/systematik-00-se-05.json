@@ -1,0 +1,50 @@
+[
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "id",
+      "rang",
+      "title",
+      "parent",
+      "part"
+    ]
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "rangfolge",
+    "columnInsertIndex": 2,
+    "baseColumnName": "rang",
+    "expression": "grel:value.replace('␟','␝')",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "rang",
+    "expression": "grel:forEachIndex(value.split('␟'),i,v,value.split('␟')[0,i+1].join('␝')).join('␟')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "rang",
+    "guessCellType": false,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": "␟",
+    "regex": false,
+    "maxColumns": 0
+  }
+]

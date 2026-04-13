@@ -1,0 +1,43 @@
+{{
+with(
+    ['id', 'rangfolge', 'rang 1', 'rang 2', 'rang 3', 'rang 4', 'rang 5', 'rang 6', 'rang 7', 'rang 8', 'rang 9', 'title', 'parent'],
+    columns,
+    if(
+        row.index == 0,
+        forEach(
+            columns,
+            cn,
+            cn.escape('csv')
+            ).join(',')
+          + '\n'
+          + if(
+              cells['part'].value == 'autoren',
+              forEach(
+                  columns,
+                  cn,
+                  forNonBlank(
+                      cells[cn].value,
+                      v,
+                      v.escape('csv'),
+                      ''
+                  )
+              ).join(',') + '\n',
+              ''
+            ),
+        if(
+            cells['part'].value == 'autoren',
+            forEach(
+                columns,
+                cn,
+                forNonBlank(
+                    cells[cn].value,
+                    v,
+                    v.escape('csv'),
+                    ''
+                )
+            ).join(',') + '\n',
+            ''
+        )
+    )
+)
+}}

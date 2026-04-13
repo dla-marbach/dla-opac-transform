@@ -1,0 +1,4 @@
+{{if(cells['confidential'].value != 'true',
+forNonBlank(forEach(cells['classification_id_mv'].value.split('␟'),v,if(v == '#NV', null, cells['id'].value + ',' + v + '\n')).join(''), x, x, '')
++ forNonBlank(forEach(cells['item_classification_id_mv'].value.split('␟'),v,if(or(v == '#NV',v == '␞'), null, cells['id'].value + ',' + v + '\n')).join(''), x, x, '')
+,'')}}

@@ -1,0 +1,104 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "autoren",
+                "l": "autoren"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "part",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "part"
+        },
+        {
+          "omitError": false,
+          "expression": "grel:value[0,2]",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "KS",
+                "l": "KS"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "classificationChain",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "classificationChain"
+        }
+      ]
+    },
+    "newColumnName": "rang",
+    "columnInsertIndex": 2,
+    "baseColumnName": "id",
+    "expression": "grel:[\nforNonBlank(cells['corporation_id_mv'].value.split('␟')[0], x ,'KS' + x , null),\nforNonBlank(cells['classificationAuthor_id_mv'].value.split('␟')[0], x ,'SY' + x , null),\nforNonBlank(cells['classificationAuthor_id_mv'].value.split('␟')[1], x ,'SY' + x , null),\nforNonBlank(cells['classificationAuthor_id_mv'].value.split('␟')[2], x ,'SY' + x , null),\nforNonBlank(cells['classificationAuthor_id_mv'].value.split('␟')[3], x ,'SY' + x , null),\nforNonBlank(cells['classificationAuthor_id_mv'].value.split('␟')[4], x ,'SY' + x , null),\nforNonBlank(cells['subject_id_mv'].value.split('␟')[0], x ,'TH' + x , null),\nforNonBlank(cells['subject_id_mv'].value.split('␟')[1], x ,'TH' + x , null),\nforNonBlank(cells['subject_id_mv'].value.split('␟')[2], x ,'TH' + x , null),\nforNonBlank(cells['subject_id_mv'].value.split('␟')[3], x ,'TH' + x , null),\nforNonBlank(cells['subject_id_mv'].value.split('␟')[4], x ,'TH' + x , null),\nforNonBlank(cells['subject_id_mv'].value.split('␟')[5], x ,'TH' + x , null),\nforNonBlank(cells['subject_id_mv'].value.split('␟')[6], x ,'TH' + x , null),\nforNonBlank(cells['subject_id_mv'].value.split('␟')[7], x ,'TH' + x , null),\nforNonBlank(cells['work_id_mv'].value.split('␟')[0], x ,'AK' + x , null),\nforNonBlank(cells['work_id_mv'].value.split('␟')[1], x ,'AK' + x , null),\nforNonBlank(cells['person_id_mv'].value.split('␟')[0], x ,'PE' + x , null),\nforNonBlank(cells['person_id_mv'].value.split('␟')[1], x ,'PE' + x , null),\nforNonBlank(cells['person_id_mv'].value.split('␟')[2], x ,'PE' + x , null),\nforNonBlank(cells['corporation_id_mv'].value.split('␟')[1], x ,'KS' + x , null)\n].join('␟')",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "autoren",
+                "l": "autoren"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "part",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "part"
+        },
+        {
+          "omitError": false,
+          "expression": "grel:value[0,2]",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "PE",
+                "l": "PE"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "classificationChain",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "classificationChain"
+        }
+      ]
+    },
+    "columnName": "rang",
+    "expression": "grel:[\nforNonBlank(cells['person_id_mv'].value.split('␟')[0], x ,'PE' + x , null),\nforNonBlank(cells['classificationAuthor_id_mv'].value.split('␟')[0], x ,'SY' + x , null),\nforNonBlank(cells['classificationAuthor_id_mv'].value.split('␟')[1], x ,'SY' + x , null),\nforNonBlank(cells['classificationAuthor_id_mv'].value.split('␟')[2], x ,'SY' + x , null),\nforNonBlank(cells['classificationAuthor_id_mv'].value.split('␟')[3], x ,'SY' + x , null),\nforNonBlank(cells['classificationAuthor_id_mv'].value.split('␟')[4], x ,'SY' + x , null),\nforNonBlank(cells['subject_id_mv'].value.split('␟')[0], x ,'TH' + x , null),\nforNonBlank(cells['subject_id_mv'].value.split('␟')[1], x ,'TH' + x , null),\nforNonBlank(cells['subject_id_mv'].value.split('␟')[2], x ,'TH' + x , null),\nforNonBlank(cells['subject_id_mv'].value.split('␟')[3], x ,'TH' + x , null),\nforNonBlank(cells['subject_id_mv'].value.split('␟')[4], x ,'TH' + x , null),\nforNonBlank(cells['subject_id_mv'].value.split('␟')[5], x ,'TH' + x , null),\nforNonBlank(cells['subject_id_mv'].value.split('␟')[6], x ,'TH' + x , null),\nforNonBlank(cells['subject_id_mv'].value.split('␟')[7], x ,'TH' + x , null),\nforNonBlank(cells['work_id_mv'].value.split('␟')[0], x ,'AK' + x , null),\nforNonBlank(cells['work_id_mv'].value.split('␟')[1], x ,'AK' + x , null),\nforNonBlank(cells['corporation_id_mv'].value.split('␟')[0], x ,'KS' + x , null),\nforNonBlank(cells['person_id_mv'].value.split('␟')[1], x ,'PE' + x , null),\nforNonBlank(cells['person_id_mv'].value.split('␟')[2], x ,'PE' + x , null),\nforNonBlank(cells['corporation_id_mv'].value.split('␟')[1], x ,'KS' + x , null)\n].join('␟')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  }
+]

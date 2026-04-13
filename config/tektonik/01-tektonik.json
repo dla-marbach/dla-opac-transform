@@ -1,0 +1,12 @@
+[
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "id",
+    "newColumnName": "record_id"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "filterCollection_mv",
+    "newColumnName": "facet_value"
+  }
+]

@@ -1,0 +1,506 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "BI",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "displayTree",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "displayTree"
+        }
+      ]
+    },
+    "newColumnName": "tmp",
+    "columnInsertIndex": 2,
+    "baseColumnName": "record_id",
+    "expression": "grel:value.cross('bi','id')[0].cells['display'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "BI",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "displayTree",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "displayTree"
+        }
+      ]
+    },
+    "columnName": "displayTree",
+    "expression": "grel:cells['tmp'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "tmp"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "BI",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "display",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "display"
+        }
+      ]
+    },
+    "newColumnName": "tmp",
+    "columnInsertIndex": 2,
+    "baseColumnName": "record_id",
+    "expression": "grel:value.cross('bi','id')[0].cells['display'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "BI",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "display",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "display"
+        }
+      ]
+    },
+    "columnName": "display",
+    "expression": "grel:cells['tmp'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "tmp"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "BI",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "displayName",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "displayName"
+        }
+      ]
+    },
+    "newColumnName": "tmp",
+    "columnInsertIndex": 2,
+    "baseColumnName": "record_id",
+    "expression": "grel:value.cross('bi','id')[0].cells['displayName'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "BI",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "displayName",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "displayName"
+        }
+      ]
+    },
+    "columnName": "displayName",
+    "expression": "grel:cells['tmp'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "tmp"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "BI",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "displayAddition1",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "displayAddition1"
+        }
+      ]
+    },
+    "newColumnName": "tmp",
+    "columnInsertIndex": 2,
+    "baseColumnName": "record_id",
+    "expression": "grel:value.cross('bi','id')[0].cells['displayAddition1'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "BI",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "displayAddition1",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "displayAddition1"
+        }
+      ]
+    },
+    "columnName": "displayAddition1",
+    "expression": "grel:cells['tmp'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "tmp"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "BI",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "displayAddition2",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "displayAddition2"
+        }
+      ]
+    },
+    "newColumnName": "tmp",
+    "columnInsertIndex": 2,
+    "baseColumnName": "record_id",
+    "expression": "grel:value.cross('bi','id')[0].cells['displayAddition2'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "BI",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "displayAddition2",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "displayAddition2"
+        }
+      ]
+    },
+    "columnName": "displayAddition2",
+    "expression": "grel:cells['tmp'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "tmp"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "BI",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "facet_value",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "facet_value"
+        }
+      ]
+    },
+    "newColumnName": "tmp",
+    "columnInsertIndex": 2,
+    "baseColumnName": "record_id",
+    "expression": "grel:value.cross('bi','id')[0].cells['filterCollection_mv'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "BI",
+          "name": "record_id",
+          "type": "text",
+          "columnName": "record_id"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "facet_value",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "facet_value"
+        }
+      ]
+    },
+    "columnName": "facet_value",
+    "expression": "grel:cells['tmp'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "tmp"
+  }
+]

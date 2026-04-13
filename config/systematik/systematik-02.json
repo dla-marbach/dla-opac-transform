@@ -1,0 +1,106 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "facet_value",
+    "expression": "grel:value.split(' OR ').uniques().join(' OR ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "grel:value.length() > 1200",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "facet_value",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "facet_value"
+        }
+      ]
+    },
+    "columnName": "facet_value",
+    "expression": "grel:null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "record_id",
+    "expression": "grel:value.split('␝')[-1]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "displayTree",
+    "columnInsertIndex": 5,
+    "baseColumnName": "display",
+    "expression": "grel:''",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "displayName",
+    "columnInsertIndex": 5,
+    "baseColumnName": "display",
+    "expression": "grel:''",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "displayAddition1",
+    "columnInsertIndex": 5,
+    "baseColumnName": "display",
+    "expression": "grel:''",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "displayAddition2",
+    "columnInsertIndex": 5,
+    "baseColumnName": "display",
+    "expression": "grel:''",
+    "onError": "set-to-blank"
+  }
+]

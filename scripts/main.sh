@@ -36,7 +36,7 @@ done
 ### Transform ###
 
 # Konfigurationsdateien in-place von YAML nach JSON konvertieren
-find "${DIR}/tmp/config" -name '*.yaml' -exec yq -i -o json {} \;
+find "${DIR}/tmp/config/main" -name '*.yaml' -exec yq -i -o json {} \;
 
 # Teil a Verzeichnisse nacheinander bearbeiten
 for d in "${DIR}"/tmp/config/main/a/*/ ; do

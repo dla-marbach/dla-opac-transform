@@ -1,0 +1,590 @@
+[
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value",
+          "selectBlank": true,
+          "selection": [],
+          "selectError": false,
+          "invert": false,
+          "name": "category",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "category"
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Bibliographie-Kette",
+                "l": "Bibliographie-Kette"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "category",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "category"
+        },
+        {
+          "omitError": false,
+          "expression": "grel:value[0,2]",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "PE",
+                "l": "PE"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": true,
+          "name": "classificationChain",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "classificationChain"
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Provenienz-Kette",
+                "l": "Provenienz-Kette"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "category",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "category"
+        },
+        {
+          "omitError": false,
+          "expression": "grel:value[0,2]",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "PE",
+                "l": "PE"
+              }
+            },
+            {
+              "v": {
+                "v": "KS",
+                "l": "KS"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": true,
+          "name": "classificationChain",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "classificationChain"
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Kette Bibliothek",
+                "l": "Kette Bibliothek"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "category",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "category"
+        },
+        {
+          "omitError": false,
+          "expression": "grel:value[0,2]",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "PE",
+                "l": "PE"
+              }
+            },
+            {
+              "v": {
+                "v": "KS",
+                "l": "KS"
+              }
+            },
+            {
+              "v": {
+                "v": "SB",
+                "l": "SB"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": true,
+          "name": "classificationChain",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "classificationChain"
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "part",
+    "columnInsertIndex": 2,
+    "baseColumnName": "category",
+    "expression": "grel:if(value == 'Bibliographie-Kette','bibliographie',if(value == 'Provenienz-Kette','provenienz',if(and(value == 'Kette Bibliothek', or(cells['classificationChain'].value[0,2] == 'PE', cells['classificationChain'].value[0,2] == 'KS')),'autoren',if(and(value == 'Kette Bibliothek', cells['classificationChain'].value[0,2] == 'SB'),'fach','')))))",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "bibliographie",
+                "l": "bibliographie"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "part",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "part"
+        }
+      ]
+    },
+    "newColumnName": "parent",
+    "columnInsertIndex": 2,
+    "baseColumnName": "part",
+    "expression": "grel:'20000000'",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "fach",
+                "l": "fach"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "part",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "part"
+        }
+      ]
+    },
+    "columnName": "parent",
+    "expression": "grel:'30000000'",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "autoren",
+                "l": "autoren"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "part",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "part"
+        }
+      ]
+    },
+    "columnName": "parent",
+    "expression": "grel:toString(with(unicode(forNonBlank(cells['title'].value[0].fingerprint().toLowercase(),v,v,cells['title'].value[0]))[0].toNumber() - 96,x,if(and(x > 0, x < 27),x+10000001,10000001))))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "provenienz",
+                "l": "provenienz"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "part",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "part"
+        }
+      ]
+    },
+    "columnName": "parent",
+    "expression": "grel:toString(with(unicode(forNonBlank(cells['title'].value[0].fingerprint().toLowercase(),v,v,cells['title'].value[0]))[0].toNumber() - 96,x,if(and(x > 0, x < 27),x+40000001,40000001))))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "classificationSubject_id_mv+1",
+    "columnInsertIndex": 2,
+    "baseColumnName": "classificationSubject_id_mv",
+    "expression": "grel:value.cross('sy','id')[0].cells['parent_id_mv'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "classificationSubject_id_mv+2",
+    "columnInsertIndex": 2,
+    "baseColumnName": "classificationSubject_id_mv+1",
+    "expression": "grel:value.cross('sy','id')[0].cells['parent_id_mv'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "classificationSubject_id_mv+3",
+    "columnInsertIndex": 2,
+    "baseColumnName": "classificationSubject_id_mv+2",
+    "expression": "grel:value.cross('sy','id')[0].cells['parent_id_mv'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "classificationSubject_id_mv+4",
+    "columnInsertIndex": 2,
+    "baseColumnName": "classificationSubject_id_mv+3",
+    "expression": "grel:value.cross('sy','id')[0].cells['parent_id_mv'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "classificationSubject_id_mv+5",
+    "columnInsertIndex": 2,
+    "baseColumnName": "classificationSubject_id_mv+4",
+    "expression": "grel:value.cross('sy','id')[0].cells['parent_id_mv'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "classificationSubject_id_mv+6",
+    "columnInsertIndex": 2,
+    "baseColumnName": "classificationSubject_id_mv+5",
+    "expression": "grel:value.cross('sy','id')[0].cells['parent_id_mv'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "classificationSubject_id_mv+7",
+    "columnInsertIndex": 2,
+    "baseColumnName": "classificationSubject_id_mv+6",
+    "expression": "grel:value.cross('sy','id')[0].cells['parent_id_mv'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "classificationSubject_id_mv+8",
+    "columnInsertIndex": 2,
+    "baseColumnName": "classificationSubject_id_mv+7",
+    "expression": "grel:value.cross('sy','id')[0].cells['parent_id_mv'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "classificationSubject_id_mv+9",
+    "columnInsertIndex": 2,
+    "baseColumnName": "classificationSubject_id_mv+8",
+    "expression": "grel:value.cross('sy','id')[0].cells['parent_id_mv'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "classificationSubject_id_mv",
+    "expression": "grel:with(['classificationSubject_id_mv+9', 'classificationSubject_id_mv+8', 'classificationSubject_id_mv+7', 'classificationSubject_id_mv+6', 'classificationSubject_id_mv+5', 'classificationSubject_id_mv+4', 'classificationSubject_id_mv+3', 'classificationSubject_id_mv+2', 'classificationSubject_id_mv+1', 'classificationSubject_id_mv'], cn, forEach(cn, v,  forNonBlank(cells[v].value, x, x, null))).join('␟')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "classificationSubject_id_mv+1"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "classificationSubject_id_mv+2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "classificationSubject_id_mv+3"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "classificationSubject_id_mv+4"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "classificationSubject_id_mv+5"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "classificationSubject_id_mv+6"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "classificationSubject_id_mv+7"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "classificationSubject_id_mv+8"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "classificationSubject_id_mv+9"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "classificationSubject_id_mv",
+    "expression": "grel:filter(value.split('␟'),v,v != '00004411').join('␟')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "classificationAuthor_id_mv+1",
+    "columnInsertIndex": 2,
+    "baseColumnName": "classificationAuthor_id_mv",
+    "expression": "grel:value.cross('sy','id')[0].cells['parent_id_mv'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "classificationAuthor_id_mv+2",
+    "columnInsertIndex": 2,
+    "baseColumnName": "classificationAuthor_id_mv+1",
+    "expression": "grel:value.cross('sy','id')[0].cells['parent_id_mv'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "classificationAuthor_id_mv+3",
+    "columnInsertIndex": 2,
+    "baseColumnName": "classificationAuthor_id_mv+2",
+    "expression": "grel:value.cross('sy','id')[0].cells['parent_id_mv'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "classificationAuthor_id_mv+4",
+    "columnInsertIndex": 2,
+    "baseColumnName": "classificationAuthor_id_mv+3",
+    "expression": "grel:value.cross('sy','id')[0].cells['parent_id_mv'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "classificationAuthor_id_mv+5",
+    "columnInsertIndex": 2,
+    "baseColumnName": "classificationAuthor_id_mv+4",
+    "expression": "grel:value.cross('sy','id')[0].cells['parent_id_mv'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "classificationAuthor_id_mv",
+    "expression": "grel:with(['classificationAuthor_id_mv+5', 'classificationAuthor_id_mv+4', 'classificationAuthor_id_mv+3', 'classificationAuthor_id_mv+2', 'classificationAuthor_id_mv+1', 'classificationAuthor_id_mv'], cn, forEach(cn, v,  forNonBlank(cells[v].value, x, x, null))).join('␟')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "classificationAuthor_id_mv+1"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "classificationAuthor_id_mv+2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "classificationAuthor_id_mv+3"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "classificationAuthor_id_mv+4"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "classificationAuthor_id_mv+5"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "classificationAuthor_id_mv",
+    "expression": "grel:filter(value.split('␟'),v,not(or(v == '00021569', v == '00000069', v == '00021570', v == '00189312', v == '00189321'))).join('␟')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  }
+]
