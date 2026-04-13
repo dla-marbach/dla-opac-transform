@@ -2058,7 +2058,7 @@
     "newColumnName": "facet_value",
     "columnInsertIndex": 2,
     "baseColumnName": "record_id",
-    "expression": "grel:forEach(value.cross('mapping-provenienz','rangfolge'), r, forNonBlank(r.cells['id'].value, v, v[2,10], null)).uniques().join(' OR ')",
+    "expression": "grel:forEach(value.cross('mapping-provenienz','rangfolge'), r, forNonBlank(r.cells['id'].value, v, v, null)).uniques().join(' OR ')",
     "onError": "set-to-blank"
   },
   {

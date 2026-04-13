@@ -58,11 +58,8 @@ tasks:
         # orcli das script systematik.sh ausführen lassen
         DIR={{.DIR}} openrefine/orcli run "scripts/systematik.sh" --memory "{{.MEMORY}}" --port "{{.PORT}}"
       - |
-        # Arbeitsverzeichnis aufräumen und dann in Ausgabeverzeichnis verschieben
-        rm -r "{{.DIR}}"/tmp/config 2> /dev/null || true
-        rm "{{.DIR}}"/tmp/tmp* 2> /dev/null || true
-        rm -r "{{.DIR}}/output" 2> /dev/null || true
-        mv "{{.DIR}}/tmp" "{{.DIR}}/output"
+        # Ergebnis in Ausgabeverzeichnis verschieben
+        mv "{{.DIR}}/tmp/systematik.tsv" "{{.DIR}}/output/systematik.tsv"
 
   tektonik:
     desc: Tektonik (Bestandsübersicht) für TYPO3-Datenbank
@@ -75,11 +72,8 @@ tasks:
         # orcli das script tektonik.sh ausführen lassen
         DIR={{.DIR}} openrefine/orcli run "scripts/tektonik.sh" --memory "{{.MEMORY}}" --port "{{.PORT}}"
       - |
-        # Arbeitsverzeichnis aufräumen und dann in Ausgabeverzeichnis verschieben
-        rm -r "{{.DIR}}"/tmp/config 2> /dev/null || true
-        rm "{{.DIR}}"/tmp/tmp* 2> /dev/null || true
-        rm -r "{{.DIR}}/output" 2> /dev/null || true
-        mv "{{.DIR}}/tmp" "{{.DIR}}/output"
+        # Ergebnis in Ausgabeverzeichnis verschieben
+        mv "{{.DIR}}/tmp/tektonik.tsv" "{{.DIR}}/output/tektonik.tsv"
 
   dev:
     desc: Entwicklungsmodus (interaktiv)

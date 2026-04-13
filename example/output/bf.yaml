@@ -640,3 +640,377 @@ searchEntity_id_mv:
   - PE00000002
 source: BF
 title: Facette Personen und Körperschaften
+---
+id: BF99000001
+display: Z:Tektonik Testbestand Alpha - [Kryptobestand]
+category: Kryptobestand
+confidential: false
+corporationAt_display_mv:
+  - Koerperschaft Systematik Alpha
+corporationAt_id_mv:
+  - KS99000001
+displayName: Person Systematik Alpha; Koerperschaft Systematik Alpha
+displayTree: Kryptobestand [Z:Tektonik Testbestand Alpha]
+exportDC: |-
+  <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Z:Tektonik Testbestand Alpha - [Kryptobestand]</dc:title>
+    <dc:creator>Person Systematik Alpha</dc:creator>
+    <dc:creator>Koerperschaft Systematik Alpha</dc:creator>
+    <dc:type>Bestand</dc:type>
+    <dc:format></dc:format>
+    <dc:identifier>Z:Tektonik Testbestand Alpha</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/BF99000001</dc:identifier>
+    <dc:identifier>BF99000001</dc:identifier>
+  </oai_dc:dc>
+exportMODS: |-
+  <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
+    <titleInfo>
+      <title>Z:Tektonik Testbestand Alpha - [Kryptobestand]</title>
+    </titleInfo>
+    <name type="personal">
+      <namePart>Person Systematik Alpha</namePart>
+      <role>
+        <roleTerm type="code" authority="marcrelator">cre</roleTerm>
+      </role>
+    </name>
+    <name type="corporate">
+      <namePart>Koerperschaft Systematik Alpha</namePart>
+      <role>
+        <roleTerm type="code" authority="marcrelator">cre</roleTerm>
+      </role>
+    </name>
+    <typeOfResource collection="yes">Bestand</typeOfResource>
+    <location>
+      <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+      <shelfLocator>Z:Tektonik Testbestand Alpha</shelfLocator>
+    </location>
+    <recordInfo>
+      <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+      <recordContentSource authority="marcorg">DE-2498</recordContentSource>
+      <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">BF99000001</recordIdentifier>
+    </recordInfo>
+  </mods>
+exportRIS: |-
+  TY  - GEN
+  AU  - Person Systematik Alpha
+  AU  - Koerperschaft Systematik Alpha
+  DB  - Z:Tektonik Testbestand Alpha
+  ID  - BF99000001
+  TI  - Z:Tektonik Testbestand Alpha - [Kryptobestand]
+  UR  - https://www.dla-marbach.de/find/opac/id/BF99000001/
+  ER  -
+filterAuthorityRelation_mv:
+  - Person Systematik Alpha␝Unter
+  - Koerperschaft Systematik Alpha␝Unter
+filterAuthorityRole_mv:
+  - Person Systematik Alpha␝Bestandsbildner/Vorbesitzer
+  - Koerperschaft Systematik Alpha␝Bestandsbildner/Vorbesitzer
+filterAuthority_mv:
+  - Person Systematik Alpha
+  - Koerperschaft Systematik Alpha
+filterCollection_mv: Z:Tektonik Testbestand Alpha
+filterMultipart: true
+filterSource: Nachlässe und Spezialsammlungen
+filterType_mv: Handschriften
+personAt_display_mv:
+  - Person Systematik Alpha
+personAt_id_mv:
+  - PE99000001
+schemaVersion: 0.14.0
+searchCollectionCreator_display_mv:
+  - Person Systematik Alpha
+  - Koerperschaft Systematik Alpha
+searchCollectionCreator_id_mv:
+  - PE99000001
+  - KS99000001
+searchEntity_id_mv:
+  - KS99000001
+  - PE99000001
+source: BF
+title: Z:Tektonik Testbestand Alpha
+url: https://www.dla-marbach.de/find/opac/id/BF99000001
+---
+id: BF99000002
+display: Z:Tektonik Unterbestand Alpha - [Kryptobestand]
+category: Kryptobestand
+confidential: false
+displayName: Person Systematik Alpha
+displayTree: Kryptobestand [Z:Tektonik Unterbestand Alpha]
+exportDC: |-
+  <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Z:Tektonik Unterbestand Alpha - [Kryptobestand]</dc:title>
+    <dc:creator>Person Systematik Alpha</dc:creator>
+    <dc:type>Bestand</dc:type>
+    <dc:format></dc:format>
+    <dc:source>https://www.dla-marbach.de/find/opac/id/BF99000001</dc:source>
+    <dc:identifier>Z:Tektonik Unterbestand Alpha</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/BF99000002</dc:identifier>
+    <dc:identifier>BF99000002</dc:identifier>
+  </oai_dc:dc>
+exportMODS: |-
+  <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
+    <titleInfo>
+      <title>Z:Tektonik Unterbestand Alpha - [Kryptobestand]</title>
+    </titleInfo>
+    <name type="personal">
+      <namePart>Person Systematik Alpha</namePart>
+      <role>
+        <roleTerm type="code" authority="marcrelator">cre</roleTerm>
+      </role>
+    </name>
+    <typeOfResource collection="yes">Bestand</typeOfResource>
+    <relatedItem type="host">
+      <recordInfo>
+        <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">BF99000001</recordIdentifier>
+      </recordInfo>
+    </relatedItem>
+    <location>
+      <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+      <shelfLocator>Z:Tektonik Unterbestand Alpha</shelfLocator>
+    </location>
+    <recordInfo>
+      <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+      <recordContentSource authority="marcorg">DE-2498</recordContentSource>
+      <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">BF99000002</recordIdentifier>
+    </recordInfo>
+  </mods>
+exportRIS: |-
+  TY  - GEN
+  AU  - Person Systematik Alpha
+  DB  - Z:Tektonik Unterbestand Alpha
+  ID  - BF99000002
+  TI  - Z:Tektonik Unterbestand Alpha - [Kryptobestand]
+  UR  - https://www.dla-marbach.de/find/opac/id/BF99000002/
+  ER  -
+filterAuthorityRelation_mv:
+  - Person Systematik Alpha␝Unter
+filterAuthorityRole_mv:
+  - Person Systematik Alpha␝Bestandsbildner/Vorbesitzer
+filterAuthority_mv:
+  - Person Systematik Alpha
+filterCollection_mv: Z:Tektonik Unterbestand Alpha
+filterMultipart: true
+filterSource: Nachlässe und Spezialsammlungen
+filterType_mv: Handschriften
+parent_display_mv: Z:Tektonik Testbestand Alpha - [Kryptobestand]
+parent_id_mv: BF99000001
+personAt_display_mv:
+  - Person Systematik Alpha
+personAt_id_mv:
+  - PE99000001
+schemaVersion: 0.14.0
+searchCollectionCreator_display_mv:
+  - Person Systematik Alpha
+searchCollectionCreator_id_mv:
+  - PE99000001
+searchEntity_id_mv:
+  - PE99000001
+source: BF
+title: Z:Tektonik Unterbestand Alpha
+url: https://www.dla-marbach.de/find/opac/id/BF99000002
+---
+id: BF99000003
+display: Z:Tektonik Bestand ohne Krypto-Parent - [Bestandstyp]
+category: Bestandstyp
+confidential: false
+displayName: Person Systematik Beta
+displayTree: Bestandstyp [Z:Tektonik Bestand ohne Krypto-Parent]
+exportDC: |-
+  <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Z:Tektonik Bestand ohne Krypto-Parent - [Bestandstyp]</dc:title>
+    <dc:creator>Person Systematik Beta</dc:creator>
+    <dc:type>Bestand</dc:type>
+    <dc:format></dc:format>
+    <dc:identifier>Z:Tektonik Bestand ohne Krypto-Parent</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/BF99000003</dc:identifier>
+    <dc:identifier>BF99000003</dc:identifier>
+  </oai_dc:dc>
+exportMODS: |-
+  <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
+    <titleInfo>
+      <title>Z:Tektonik Bestand ohne Krypto-Parent - [Bestandstyp]</title>
+    </titleInfo>
+    <name type="personal">
+      <namePart>Person Systematik Beta</namePart>
+      <role>
+        <roleTerm type="code" authority="marcrelator">cre</roleTerm>
+      </role>
+    </name>
+    <typeOfResource collection="yes">Bestand</typeOfResource>
+    <location>
+      <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+      <shelfLocator>Z:Tektonik Bestand ohne Krypto-Parent</shelfLocator>
+    </location>
+    <recordInfo>
+      <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+      <recordContentSource authority="marcorg">DE-2498</recordContentSource>
+      <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">BF99000003</recordIdentifier>
+    </recordInfo>
+  </mods>
+exportRIS: |-
+  TY  - GEN
+  AU  - Person Systematik Beta
+  DB  - Z:Tektonik Bestand ohne Krypto-Parent
+  ID  - BF99000003
+  TI  - Z:Tektonik Bestand ohne Krypto-Parent - [Bestandstyp]
+  UR  - https://www.dla-marbach.de/find/opac/id/BF99000003/
+  ER  -
+filterAuthorityRelation_mv:
+  - Person Systematik Beta␝Unter
+filterAuthorityRole_mv:
+  - Person Systematik Beta␝Bestandsbildner/Vorbesitzer
+filterAuthority_mv:
+  - Person Systematik Beta
+filterCollection_mv: Z:Tektonik Bestand ohne Krypto-Parent
+filterMultipart: true
+filterSource: Nachlässe und Spezialsammlungen
+filterType_mv: Sonstiges
+personAt_display_mv:
+  - Person Systematik Beta
+personAt_id_mv:
+  - PE99000002
+schemaVersion: 0.14.0
+searchCollectionCreator_display_mv:
+  - Person Systematik Beta
+searchCollectionCreator_id_mv:
+  - PE99000002
+searchEntity_id_mv:
+  - PE99000002
+source: BF
+title: Z:Tektonik Bestand ohne Krypto-Parent
+url: https://www.dla-marbach.de/find/opac/id/BF99000003
+---
+id: BF99000004
+display: Z:Tektonik Vertraulich (soll rausfallen) - [Bestandstyp]
+category: Bestandstyp
+confidential: true
+corporationAt_display_mv:
+  - Koerperschaft Systematik Beta
+corporationAt_id_mv:
+  - KS99000002
+displayName: Person Systematik Beta; Koerperschaft Systematik Beta
+displayTree: Bestandstyp [Z:Tektonik Vertraulich (soll rausfallen)]
+exportDC: |-
+  <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Z:Tektonik Vertraulich (soll rausfallen) - [Bestandstyp]</dc:title>
+    <dc:creator>Person Systematik Beta</dc:creator>
+    <dc:creator>Koerperschaft Systematik Beta</dc:creator>
+    <dc:type>Bestand</dc:type>
+    <dc:format></dc:format>
+    <dc:identifier>Z:Tektonik Vertraulich (soll rausfallen)</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/BF99000004</dc:identifier>
+    <dc:identifier>BF99000004</dc:identifier>
+  </oai_dc:dc>
+exportMODS: |-
+  <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
+    <titleInfo>
+      <title>Z:Tektonik Vertraulich (soll rausfallen) - [Bestandstyp]</title>
+    </titleInfo>
+    <name type="personal">
+      <namePart>Person Systematik Beta</namePart>
+      <role>
+        <roleTerm type="code" authority="marcrelator">cre</roleTerm>
+      </role>
+    </name>
+    <name type="corporate">
+      <namePart>Koerperschaft Systematik Beta</namePart>
+      <role>
+        <roleTerm type="code" authority="marcrelator">cre</roleTerm>
+      </role>
+    </name>
+    <typeOfResource collection="yes">Bestand</typeOfResource>
+    <location>
+      <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+      <shelfLocator>Z:Tektonik Vertraulich (soll rausfallen)</shelfLocator>
+    </location>
+    <recordInfo>
+      <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+      <recordContentSource authority="marcorg">DE-2498</recordContentSource>
+      <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">BF99000004</recordIdentifier>
+    </recordInfo>
+  </mods>
+exportRIS: |-
+  TY  - GEN
+  AU  - Person Systematik Beta
+  AU  - Koerperschaft Systematik Beta
+  DB  - Z:Tektonik Vertraulich (soll rausfallen)
+  ID  - BF99000004
+  TI  - Z:Tektonik Vertraulich (soll rausfallen) - [Bestandstyp]
+  UR  - https://www.dla-marbach.de/find/opac/id/BF99000004/
+  ER  -
+filterAuthorityRelation_mv:
+  - Person Systematik Beta␝Unter
+  - Koerperschaft Systematik Beta␝Unter
+filterAuthorityRole_mv:
+  - Person Systematik Beta␝Bestandsbildner/Vorbesitzer
+  - Koerperschaft Systematik Beta␝Bestandsbildner/Vorbesitzer
+filterAuthority_mv:
+  - Person Systematik Beta
+  - Koerperschaft Systematik Beta
+filterCollection_mv: Z:Tektonik Vertraulich (soll rausfallen)
+filterMultipart: true
+filterSource: Nachlässe und Spezialsammlungen
+filterType_mv: Sonstiges
+personAt_display_mv:
+  - Person Systematik Beta
+personAt_id_mv:
+  - PE99000002
+schemaVersion: 0.14.0
+searchCollectionCreator_display_mv:
+  - Person Systematik Beta
+  - Koerperschaft Systematik Beta
+searchCollectionCreator_id_mv:
+  - PE99000002
+  - KS99000002
+searchEntity_id_mv:
+  - KS99000002
+  - PE99000002
+source: BF
+title: Z:Tektonik Vertraulich (soll rausfallen)
+url: https://www.dla-marbach.de/find/opac/id/BF99000004
+---
+id: BF99000005
+display: Z:Tektonik Ohne Authority (soll rausfallen) - [Bestandstyp]
+category: Bestandstyp
+confidential: false
+displayTree: Bestandstyp [Z:Tektonik Ohne Authority (soll rausfallen)]
+exportDC: |-
+  <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <dc:title>Z:Tektonik Ohne Authority (soll rausfallen) - [Bestandstyp]</dc:title>
+    <dc:type>Bestand</dc:type>
+    <dc:format></dc:format>
+    <dc:identifier>Z:Tektonik Ohne Authority (soll rausfallen)</dc:identifier>
+    <dc:identifier>https://www.dla-marbach.de/find/opac/id/BF99000005</dc:identifier>
+    <dc:identifier>BF99000005</dc:identifier>
+  </oai_dc:dc>
+exportMODS: |-
+  <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
+    <titleInfo>
+      <title>Z:Tektonik Ohne Authority (soll rausfallen) - [Bestandstyp]</title>
+    </titleInfo>
+    <typeOfResource collection="yes">Bestand</typeOfResource>
+    <location>
+      <physicalLocation>Deutsches Literaturarchiv Marbach</physicalLocation>
+      <shelfLocator>Z:Tektonik Ohne Authority (soll rausfallen)</shelfLocator>
+    </location>
+    <recordInfo>
+      <recordContentSource>Deutsches Literaturarchiv Marbach</recordContentSource>
+      <recordContentSource authority="marcorg">DE-2498</recordContentSource>
+      <recordIdentifier source="https://www.dla-marbach.de/find/opac/id/">BF99000005</recordIdentifier>
+    </recordInfo>
+  </mods>
+exportRIS: |-
+  TY  - GEN
+  DB  - Z:Tektonik Ohne Authority (soll rausfallen)
+  ID  - BF99000005
+  TI  - Z:Tektonik Ohne Authority (soll rausfallen) - [Bestandstyp]
+  UR  - https://www.dla-marbach.de/find/opac/id/BF99000005/
+  ER  -
+filterCollection_mv: Z:Tektonik Ohne Authority (soll rausfallen)
+filterMultipart: true
+filterSource: Nachlässe und Spezialsammlungen
+filterType_mv: Sonstiges
+schemaVersion: 0.14.0
+source: BF
+title: Z:Tektonik Ohne Authority (soll rausfallen)
+url: https://www.dla-marbach.de/find/opac/id/BF99000005

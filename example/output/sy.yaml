@@ -149,3 +149,157 @@ schemaVersion: 0.14.0
 source: SY
 title: Autorenschema 2
 url: https://www.dla-marbach.de/find/opac/id/SY00000022
+---
+id: SY99000030
+display: AUT-0. Autorenschema Test Root
+category: Autorenschema
+child_display_mv:
+  - AUT-1. Autorenschema Test A
+child_id_mv:
+  - SY99000031
+dateCataloged: "2026-04-13"
+dateModified: "2026-04-13"
+displayAddition1: Autorenschema
+filterSource: Fachsystematik
+filterType_mv: Normdaten
+notation: AUT-0
+schemaVersion: 0.14.0
+source: SY
+subjectOther_mv: Register Test Autor
+title: Autorenschema Test Root
+titleShort: AUT Root
+url: https://www.dla-marbach.de/find/opac/id/SY99000030
+---
+id: SY99000031
+display: AUT-1. Autorenschema Test A
+category: Autorenschema
+child_display_mv:
+  - AUT-2. Autorenschema Test B
+child_id_mv:
+  - SY99000032
+dateCataloged: "2026-04-13"
+dateModified: "2026-04-13"
+displayAddition1: Autorenschema
+filterSource: Fachsystematik
+filterType_mv: Normdaten
+notation: AUT-1
+parent_display_mv: AUT-0. Autorenschema Test Root
+parent_id_mv: SY99000030
+schemaVersion: 0.14.0
+source: SY
+subjectOther_mv: Register Test Autor A
+title: Autorenschema Test A
+titleShort: AUT A
+url: https://www.dla-marbach.de/find/opac/id/SY99000031
+---
+id: SY99000032
+display: AUT-2. Autorenschema Test B
+category: Autorenschema
+dateCataloged: "2026-04-13"
+dateModified: "2026-04-13"
+displayAddition1: Autorenschema
+filterSource: Fachsystematik
+filterType_mv: Normdaten
+notation: AUT-2
+parent_display_mv: AUT-1. Autorenschema Test A
+parent_id_mv: SY99000031
+schemaVersion: 0.14.0
+source: SY
+subjectOther_mv: Register Test Autor B
+title: Autorenschema Test B
+titleShort: AUT B
+url: https://www.dla-marbach.de/find/opac/id/SY99000032
+---
+id: SY99000033
+display: AUT-3. Autorenschema Test C
+category: Autorenschema
+dateCataloged: "2026-04-13"
+dateModified: "2026-04-13"
+displayAddition1: Autorenschema
+filterSource: Fachsystematik
+filterType_mv: Normdaten
+notation: AUT-3
+parent_display_mv: AUT-1. Autorenschema Test A
+parent_id_mv: SY99000031
+schemaVersion: 0.14.0
+source: SY
+subjectOther_mv: Register Test Autor C
+title: Autorenschema Test C
+titleShort: AUT C
+url: https://www.dla-marbach.de/find/opac/id/SY99000033
+---
+id: SY99000041
+display: FORM-1. Formschema Test
+category: Formschema
+dateCataloged: "2026-04-13"
+dateModified: "2026-04-13"
+displayAddition1: Formschema
+filterSource: Fachsystematik
+filterType_mv: Normdaten
+notation: FORM-1
+schemaVersion: 0.14.0
+source: SY
+subjectOther_mv: Register Test Form
+title: Formschema Test
+titleShort: FORM T
+url: https://www.dla-marbach.de/find/opac/id/SY99000041
+---
+id: SY99000050
+display: BAS-0. Basisnotation Test Root
+category: Basisnotation
+child_display_mv:
+  - BAS-1. Basisnotation Test A
+child_id_mv:
+  - SY99000051
+dateCataloged: "2026-04-13"
+dateModified: "2026-04-13"
+displayAddition1: Basisnotation
+filterSource: Fachsystematik
+filterType_mv: Normdaten
+notation: BAS-0
+schemaVersion: 0.14.0
+source: SY
+subjectOther_mv: Register Test Basis
+title: Basisnotation Test Root
+titleShort: BAS Root
+url: https://www.dla-marbach.de/find/opac/id/SY99000050
+---
+id: SY99000051
+display: BAS-1. Basisnotation Test A
+category: Basisnotation
+child_display_mv:
+  - BAS-2. Basisnotation Test B
+child_id_mv:
+  - SY99000052
+dateCataloged: "2026-04-13"
+dateModified: "2026-04-13"
+displayAddition1: Basisnotation
+filterSource: Fachsystematik
+filterType_mv: Normdaten
+notation: BAS-1
+parent_display_mv: BAS-0. Basisnotation Test Root
+parent_id_mv: SY99000050
+schemaVersion: 0.14.0
+source: SY
+subjectOther_mv: Register Test Basis A
+title: Basisnotation Test A
+titleShort: BAS A
+url: https://www.dla-marbach.de/find/opac/id/SY99000051
+---
+id: SY99000052
+display: BAS-2. Basisnotation Test B
+category: Basisnotation
+dateCataloged: "2026-04-13"
+dateModified: "2026-04-13"
+displayAddition1: Basisnotation
+filterSource: Fachsystematik
+filterType_mv: Normdaten
+notation: BAS-2
+parent_display_mv: BAS-1. Basisnotation Test A
+parent_id_mv: SY99000051
+schemaVersion: 0.14.0
+source: SY
+subjectOther_mv: Register Test Basis B
+title: Basisnotation Test B
+titleShort: BAS B
+url: https://www.dla-marbach.de/find/opac/id/SY99000052

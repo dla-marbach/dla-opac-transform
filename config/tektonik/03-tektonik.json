@@ -28,7 +28,7 @@
     "newColumnName": "tmp",
     "columnInsertIndex": 2,
     "baseColumnName": "record_id",
-    "expression": "grel:value.slice(2)",
+    "expression": "grel:value",
     "onError": "set-to-blank"
   },
   {
@@ -70,7 +70,7 @@
     "newColumnName": "bi",
     "columnInsertIndex": 3,
     "baseColumnName": "tmp",
-    "expression": "grel:forEach(value.cross('bi','collection_id_mv'),r,forNonBlank(r.cells['id'].value,v,v,'')).join('␟')",
+    "expression": "grel:forEach(value.cross('bi','collection_id_mv'),r,forNonBlank(r.cells['id'].value,v,if(r.cells['confidential'].value != 'true',v,null),'')).join('␟')",
     "onError": "set-to-blank"
   },
   {

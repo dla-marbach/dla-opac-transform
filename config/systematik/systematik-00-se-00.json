@@ -478,7 +478,7 @@
       "facets": []
     },
     "columnName": "classificationSubject_id_mv",
-    "expression": "grel:filter(value.split('␟'),v,v != '00004411').join('␟')",
+    "expression": "grel:filter(value.split('␟'),v,v != 'SY00004411').join('␟')",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10
@@ -582,7 +582,7 @@
       "facets": []
     },
     "columnName": "classificationAuthor_id_mv",
-    "expression": "grel:filter(value.split('␟'),v,not(or(v == '00021569', v == '00000069', v == '00021570', v == '00189312', v == '00189321'))).join('␟')",
+    "expression": "grel:filter(value.split('␟'),v,not(or(v == 'SY00021569', v == 'SY00000069', v == 'SY00021570', v == 'SY00189312', v == 'SY00189321'))).join('␟')",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10
