@@ -48,7 +48,7 @@ tasks:
       - test -d {{.DIR}}
 
   systematik:
-    desc: Tektonik (Bestandsübersicht) für TYPO3-Datenbank
+    desc: Systematik (Thematischer Sucheinstieg) für TYPO3-Datenbank
     cmds:
       - |
         # Arbeitsverzeichnis leeren und Konfigurationsdateien kopieren
@@ -65,7 +65,7 @@ tasks:
         mv "{{.DIR}}/tmp" "{{.DIR}}/output"
 
   tektonik:
-    desc: Systematik (Thematischer Sucheinstieg) für TYPO3-Datenbank
+    desc: Tektonik (Bestandsübersicht) für TYPO3-Datenbank
     cmds:
       - |
         # Arbeitsverzeichnis leeren und Konfigurationsdateien kopieren
