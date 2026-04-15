@@ -8,7 +8,7 @@
     "newColumnName": "count",
     "columnInsertIndex": 2,
     "baseColumnName": "facet_value",
-    "expression": "grel:forNonBlank(value, v, filter(forEach(v.split(' OR '), k, forEach(k.cross('systematik-count', 'synkey'), r, r.cells['id'].value).join('␟')).join('␟').split('␟'), x, isNonBlank(x)).uniques().length(), 0)",
+    "expression": "grel:forNonBlank(value, v, filter(forEach(v.split(' OR '), k, forEach(k.cross('systematik-count', 'synkey'), r, r.cells['id'].value).join('␟')).join('␟').split('␟'), x, isNonBlank(x)).uniques().length(), null)",
     "onError": "set-to-blank"
   }
 ]
