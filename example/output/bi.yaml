@@ -688,6 +688,53 @@ searchEntity_id_mv:
   - AK00000021
   - AK00000022
   - AK99999999
+searchNameAbout_mv:
+  - Person 7
+  - Person 8
+  - PE99999999
+  - Körperschaft 5
+  - Körperschaft 6
+  - KS99999999
+searchNameAt_mv:
+  - Person 5
+  - Person 6
+  - PE99999999
+  - Körperschaft 3
+  - Körperschaft 4
+  - KS99999999
+searchNameBy_mv:
+  - Person 1 (1982-2001)
+  - Person 2 (1982-2001)
+  - PE99999999
+  - Körperschaft 1 (1982-2001)
+  - Körperschaft 2
+  - KS99999999
+searchNameTo_mv:
+  - Person 3 (1982-2001)
+  - Person 4
+  - PE99999999
+  - Körperschaft 7
+  - Körperschaft 8
+  - KS99999999
+searchName_mv:
+  - Person 1 (1982-2001)
+  - Person 2 (1982-2001)
+  - PE99999999
+  - Körperschaft 1 (1982-2001)
+  - Körperschaft 2
+  - KS99999999
+  - Person 3 (1982-2001)
+  - Person 4
+  - Körperschaft 7
+  - Körperschaft 8
+  - Person 5
+  - Person 6
+  - Körperschaft 3
+  - Körperschaft 4
+  - Person 7
+  - Person 8
+  - Körperschaft 5
+  - Körperschaft 6
 source: BI
 statusLoan: Ausleihstatus
 statusPreservation: Erhaltungszustand
@@ -1091,6 +1138,34 @@ searchEntity_id_mv:
   - PE00000003
   - PE00000005
   - PE00000004
+searchNameAbout_mv:
+  - Person 2 (1982-2001)
+  - Körperschaft 2
+searchNameAt_mv:
+  - Person 1 (1982-2001)
+  - Person 6
+  - Körperschaft 1 (1982-2001)
+  - Körperschaft 6
+searchNameBy_mv:
+  - Person 3 (1982-2001)
+  - Person 5
+  - Person 6
+  - Körperschaft 3
+searchNameTo_mv:
+  - Person 4
+  - Körperschaft 4
+searchName_mv:
+  - Person 3 (1982-2001)
+  - Person 5
+  - Person 6
+  - Körperschaft 3
+  - Person 4
+  - Körperschaft 4
+  - Person 1 (1982-2001)
+  - Körperschaft 1 (1982-2001)
+  - Körperschaft 6
+  - Person 2 (1982-2001)
+  - Körperschaft 2
 source: BI
 title: Facette Personen und Körperschaften
 ---
@@ -1329,6 +1404,13 @@ schemaVersion: 0.14.0
 searchEntity_id_mv:
   - PE00074121
   - PE00276308
+searchNameAbout_mv:
+  - PE00074121
+searchNameBy_mv:
+  - PE00276308
+searchName_mv:
+  - PE00276308
+  - PE00074121
 source: BI
 statusLoan: Am Standort
 statusPreservation: Blatt stockfleckig, fleckig u. angeschmutzt.
@@ -1433,6 +1515,12 @@ searchCollectionCreator_id_mv:
 searchEntity_id_mv:
   - KS99000001
   - PE99000001
+searchNameAbout_mv:
+  - Person Systematik Alpha
+  - Koerperschaft Systematik Alpha
+searchName_mv:
+  - Person Systematik Alpha
+  - Koerperschaft Systematik Alpha
 source: BI
 title: Tektonik Objekt Alpha
 url: https://www.dla-marbach.de/find/opac/id/BI99000001
@@ -1503,6 +1591,10 @@ searchCollectionCreator_id_mv:
   - PE99000001
 searchEntity_id_mv:
   - PE99000002
+searchNameAbout_mv:
+  - Person Systematik Beta
+searchName_mv:
+  - Person Systematik Beta
 source: BI
 title: Tektonik Objekt Beta
 url: https://www.dla-marbach.de/find/opac/id/BI99000002
@@ -1591,6 +1683,12 @@ searchCollectionCreator_id_mv:
 searchEntity_id_mv:
   - KS99000001
   - PE99000001
+searchNameAbout_mv:
+  - Person Systematik Alpha
+  - Koerperschaft Systematik Alpha
+searchName_mv:
+  - Person Systematik Alpha
+  - Koerperschaft Systematik Alpha
 source: BI
 title: Tektonik Objekt Vertraulich (soll rausfallen)
 url: https://www.dla-marbach.de/find/opac/id/BI99000003

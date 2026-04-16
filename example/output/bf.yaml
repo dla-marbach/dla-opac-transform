@@ -390,6 +390,31 @@ searchEntity_id_mv:
   - PE99999999
   - PE00000003
   - PE00000004
+searchNameAbout_mv:
+  - Person 3 (1982-2001)
+  - Person 4
+  - PE99999999
+  - Körperschaft 5
+  - Körperschaft 6
+  - KS99999999
+searchNameAt_mv:
+  - Person 1 (1982-2001)
+  - Person 2 (1982-2001)
+  - PE99999999
+  - Körperschaft 3
+  - Körperschaft 4
+  - KS99999999
+searchName_mv:
+  - Person 1 (1982-2001)
+  - Person 2 (1982-2001)
+  - PE99999999
+  - Körperschaft 3
+  - Körperschaft 4
+  - KS99999999
+  - Person 3 (1982-2001)
+  - Person 4
+  - Körperschaft 5
+  - Körperschaft 6
 source: BF
 statusLoan: Ausleihstatus
 subject_display_mv:
@@ -638,6 +663,17 @@ searchEntity_id_mv:
   - KS00000002
   - PE00000001
   - PE00000002
+searchNameAbout_mv:
+  - Person 2 (1982-2001)
+  - Körperschaft 2
+searchNameAt_mv:
+  - Person 1 (1982-2001)
+  - Körperschaft 1 (1982-2001)
+searchName_mv:
+  - Person 1 (1982-2001)
+  - Körperschaft 1 (1982-2001)
+  - Person 2 (1982-2001)
+  - Körperschaft 2
 source: BF
 title: Facette Personen und Körperschaften
 ---
@@ -726,6 +762,12 @@ searchCollectionCreator_id_mv:
 searchEntity_id_mv:
   - KS99000001
   - PE99000001
+searchNameAbout_mv:
+  - Person Systematik Alpha
+  - Koerperschaft Systematik Alpha
+searchName_mv:
+  - Person Systematik Alpha
+  - Koerperschaft Systematik Alpha
 source: BF
 title: Z:Tektonik Testbestand Alpha
 url: https://www.dla-marbach.de/find/opac/id/BF99000001
@@ -805,6 +847,10 @@ searchCollectionCreator_id_mv:
   - PE99000001
 searchEntity_id_mv:
   - PE99000001
+searchNameAbout_mv:
+  - Person Systematik Alpha
+searchName_mv:
+  - Person Systematik Alpha
 source: BF
 title: Z:Tektonik Unterbestand Alpha
 url: https://www.dla-marbach.de/find/opac/id/BF99000002
@@ -876,6 +922,10 @@ searchCollectionCreator_id_mv:
   - PE99000002
 searchEntity_id_mv:
   - PE99000002
+searchNameAbout_mv:
+  - Person Systematik Beta
+searchName_mv:
+  - Person Systematik Beta
 source: BF
 title: Z:Tektonik Bestand ohne Krypto-Parent
 url: https://www.dla-marbach.de/find/opac/id/BF99000003
@@ -965,6 +1015,12 @@ searchCollectionCreator_id_mv:
 searchEntity_id_mv:
   - KS99000002
   - PE99000002
+searchNameAbout_mv:
+  - Person Systematik Beta
+  - Koerperschaft Systematik Beta
+searchName_mv:
+  - Person Systematik Beta
+  - Koerperschaft Systematik Beta
 source: BF
 title: Z:Tektonik Vertraulich (soll rausfallen)
 url: https://www.dla-marbach.de/find/opac/id/BF99000004
