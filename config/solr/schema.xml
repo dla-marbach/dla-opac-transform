@@ -362,6 +362,11 @@
   <field name="searchCollectionCreator_id_mv" type="strings"/>
   <field name="searchEntity_id_mv" type="strings"/>
   <field name="searchEntityScore" type="pint"/>
+  <field name="searchName_mv" type="texts"/>
+  <field name="searchNameAbout_mv" type="texts"/>
+  <field name="searchNameAt_mv" type="texts"/>
+  <field name="searchNameBy_mv" type="texts"/>
+  <field name="searchNameTo_mv" type="texts"/>
   <field name="searchSuggestPayload" type="string"/>
   <field name="searchSuggestTerm_mv" type="strings"/>
   <field name="seeAlso_display_mv" type="texts"/>

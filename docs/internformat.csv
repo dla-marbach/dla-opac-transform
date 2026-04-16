@@ -185,6 +185,11 @@ AK,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relatio
 AK,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),126830,7 %,186140,360,['PE00001233']
 AK,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,1559880,87 %,3543560,451859,['PE00003977']
 AK,searchEntityScore,pint,Anzahl der Verweise auf den Normdatensatz,71053,4 %,71053,253,3
+AK,searchName_mv,texts,Personen/Körperschaften für erweiterte Suche,,,,,
+AK,searchNameAbout_mv,texts,Personen/Körperschaften mit Relation "Unter" für erweiterte Suche,,,,,
+AK,searchNameAt_mv,texts,Personen/Körperschaften mit Relation "Über" für erweiterte Suche,,,,,
+AK,searchNameBy_mv,texts,Personen/Körperschaften mit Relation "Von" für erweiterte Suche,,,,,
+AK,searchNameTo_mv,texts,Personen/Körperschaften mit Relation "An" für erweiterte Suche,,,,,
 AK,searchSuggestPayload,string,ID und Anzeigetitel für Suggester (Trennzeichen: ␝),71053,4 %,71053,71053,"AK01852627␝Reger, Max (1873-1916). Gesänge, op. 75. Hat gesagt - bleibt's nicht dabei (Lied : 1903)"
 AK,searchSuggestTerm_mv,strings,Suchbegriffe für Suggester,71053,4 %,127319,125939,"['Kracauer, Siegfried (1889-1966). Ginster (1928)']"
 AK,source,string,,1796388,100 %,1796388,1,AK
@@ -357,6 +362,11 @@ BF,schemaVersion,string,,48998,100 %,48998,1,0.14.0
 BF,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“,45774,93 %,47805,28289,"['Suhrkamp-Verlag <Frankfurt, Main> (1950-)']"
 BF,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“,45774,93 %,47805,28293,['KS00001261']
 BF,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,45774,93 %,49565,28998,['PE00017920']
+BF,searchName_mv,texts,Personen/Körperschaften für erweiterte Suche,,,,,
+BF,searchNameAbout_mv,texts,Personen/Körperschaften mit Relation "Unter" für erweiterte Suche,,,,,
+BF,searchNameAt_mv,texts,Personen/Körperschaften mit Relation "Über" für erweiterte Suche,,,,,
+BF,searchNameBy_mv,texts,Personen/Körperschaften mit Relation "Von" für erweiterte Suche,,,,,
+BF,searchNameTo_mv,texts,Personen/Körperschaften mit Relation "An" für erweiterte Suche,,,,,
 BF,source,string,,48998,100 %,48998,1,BF
 BF,statusLoan,string,,48998,100 %,48998,8,Am Standort
 BF,subject_display_mv,texts,aus TH display,1746,4 %,1908,1314,['Deutschland <DDR>']
@@ -476,6 +486,11 @@ BI,schemaVersion,string,,31008,100 %,31008,1,0.14.0
 BI,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),15960,51 %,17875,594,"['Kunz-Hutterstrasser, Hermine (1873-1948)']"
 BI,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),15960,51 %,17875,594,['PE00324458']
 BI,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,30691,99 %,87416,18163,"['PE00030955', 'PE00250583']"
+BI,searchName_mv,texts,Personen/Körperschaften für erweiterte Suche,,,,,
+BI,searchNameAbout_mv,texts,Personen/Körperschaften mit Relation "Unter" für erweiterte Suche,,,,,
+BI,searchNameAt_mv,texts,Personen/Körperschaften mit Relation "Über" für erweiterte Suche,,,,,
+BI,searchNameBy_mv,texts,Personen/Körperschaften mit Relation "Von" für erweiterte Suche,,,,,
+BI,searchNameTo_mv,texts,Personen/Körperschaften mit Relation "An" für erweiterte Suche,,,,,
 BI,source,string,,31008,100 %,31008,1,BI
 BI,statusLoan,string,,31008,100 %,31008,5,Am Standort
 BI,statusPreservation,string,,10231,33 %,10231,8049,Mit leichtem Silberspiegel
@@ -595,6 +610,11 @@ HS,schemaVersion,string,,1149602,100 %,1149602,1,0.14.0
 HS,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),1141444,99 %,1347099,5851,"['Suhrkamp-Verlag <Frankfurt, Main> (1950-)']"
 HS,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),1141444,99 %,1347099,5852,['KS00001261']
 HS,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,1149599,100 %,2717618,401702,['PE00000144']
+HS,searchName_mv,texts,Personen/Körperschaften für erweiterte Suche,,,,,
+HS,searchNameAbout_mv,texts,Personen/Körperschaften mit Relation "Unter" für erweiterte Suche,,,,,
+HS,searchNameAt_mv,texts,Personen/Körperschaften mit Relation "Über" für erweiterte Suche,,,,,
+HS,searchNameBy_mv,texts,Personen/Körperschaften mit Relation "Von" für erweiterte Suche,,,,,
+HS,searchNameTo_mv,texts,Personen/Körperschaften mit Relation "An" für erweiterte Suche,,,,,
 HS,sortingKey,string,,1149598,100 %,1149598,246696,"SUHRKAMPVERLAG FRANKFURT, MAIN"
 HS,sortingKeySub,string,,920219,80 %,920219,181146,"JUENGER, ERNST"
 HS,sortingTitleMain,string,,235502,20 %,235502,180807,GEDICHTE

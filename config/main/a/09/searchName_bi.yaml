@@ -1,0 +1,129 @@
+# Personen/Körperschaften für erweiterte Suche
+# basierend auf filterAuthority_mv und filterAuthorityRelation_mv
+# searchName_mv: Alle Relationen
+# searchNameAbout_mv: mit Relation "Unter"
+# searchNameAt_mv: mit Relation "Über"
+# searchNameBy_mv: mit Relation "Von"
+# searchNameTo_mv: mit Relation "An"
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: filterAuthority_mv
+  expression: |
+    grel:
+    value
+  newColumnName: searchName_mv
+  columnInsertIndex: 2
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: filterAuthorityRelation_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forNonBlank(
+        cells['filterAuthorityRelation_mv'].value,
+        x,
+        forEach(
+          x.split('␟'),
+          v,
+          if(
+            v.split('␝')[1] == 'Unter',
+            v.split('␝')[0],
+            null
+          )
+        ).join('␟'),
+        null
+      ),
+      x,
+      x,
+      null
+    )
+  newColumnName: searchNameAbout_mv
+  columnInsertIndex: 2
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: filterAuthorityRelation_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forNonBlank(
+        cells['filterAuthorityRelation_mv'].value,
+        x,
+        forEach(
+          x.split('␟'),
+          v,
+          if(
+            v.split('␝')[1] == 'Über',
+            v.split('␝')[0],
+            null
+          )
+        ).join('␟'),
+        null
+      ),
+      x,
+      x,
+      null
+    )
+  newColumnName: searchNameAt_mv
+  columnInsertIndex: 2
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: filterAuthorityRelation_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forNonBlank(
+        cells['filterAuthorityRelation_mv'].value,
+        x,
+        forEach(
+          x.split('␟'),
+          v,
+          if(
+            v.split('␝')[1] == 'Von',
+            v.split('␝')[0],
+            null
+          )
+        ).join('␟'),
+        null
+      ),
+      x,
+      x,
+      null
+    )
+  newColumnName: searchNameBy_mv
+  columnInsertIndex: 2
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: filterAuthorityRelation_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forNonBlank(
+        cells['filterAuthorityRelation_mv'].value,
+        x,
+        forEach(
+          x.split('␟'),
+          v,
+          if(
+            v.split('␝')[1] == 'An',
+            v.split('␝')[0],
+            null
+          )
+        ).join('␟'),
+        null
+      ),
+      x,
+      x,
+      null
+    )
+  newColumnName: searchNameTo_mv
+  columnInsertIndex: 2
