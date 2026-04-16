@@ -67,7 +67,7 @@ task yaml
     * JSON aus OpenRefine-History [in YAML konvertieren](https://onlineyamltools.com/convert-json-to-yaml)
 4. Daten generieren und Indexierung testen
     ```sh
-    task main yaml solr
+    task main tektonik systematik yaml solr
     ```
 5. Ergebnisse prüfen mit git diff
     ```sh
@@ -87,7 +87,7 @@ task yaml
 10. schemaVersion in [scripts/main.sh](scripts/main.sh) hochzählen
 11. Erneut Daten generieren
     ```sh
-    task main yaml
+    task main tektonik systematik yaml
     ```
 12. Erneut Git commit und push
 13. GitHub [Release Notes](https://github.com/dla-marbach/dla-opac-transform/releases)
