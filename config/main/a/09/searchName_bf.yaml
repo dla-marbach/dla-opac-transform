@@ -1,8 +1,8 @@
 # Personen/Körperschaften für erweiterte Suche
 # basierend auf filterAuthority_mv und filterAuthorityRelation_mv
 # searchName_mv: Alle Relationen
-# searchNameAbout_mv: mit Relation "Unter"
-# searchNameAt_mv: mit Relation "Über"
+# searchNameAbout_mv: mit Relation "Über"
+# searchNameAt_mv: mit Relation "Unter"
 # searchNameBy_mv: mit Relation "Von"
 # searchNameTo_mv: mit Relation "An"
 - op: core/column-addition
@@ -30,7 +30,7 @@
           x.split('␟'),
           v,
           if(
-            v.split('␝')[1] == 'Unter',
+            v.split('␝')[1] == 'Über',
             v.split('␝')[0],
             null
           )
@@ -58,7 +58,7 @@
           x.split('␟'),
           v,
           if(
-            v.split('␝')[1] == 'Über',
+            v.split('␝')[1] == 'Unter',
             v.split('␝')[0],
             null
           )

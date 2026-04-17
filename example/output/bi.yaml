@@ -689,18 +689,18 @@ searchEntity_id_mv:
   - AK00000022
   - AK99999999
 searchNameAbout_mv:
-  - Person 7
-  - Person 8
-  - PE99999999
-  - Körperschaft 5
-  - Körperschaft 6
-  - KS99999999
-searchNameAt_mv:
   - Person 5
   - Person 6
   - PE99999999
   - Körperschaft 3
   - Körperschaft 4
+  - KS99999999
+searchNameAt_mv:
+  - Person 7
+  - Person 8
+  - PE99999999
+  - Körperschaft 5
+  - Körperschaft 6
   - KS99999999
 searchNameBy_mv:
   - Person 1 (1982-2001)
@@ -1139,13 +1139,13 @@ searchEntity_id_mv:
   - PE00000005
   - PE00000004
 searchNameAbout_mv:
-  - Person 2 (1982-2001)
-  - Körperschaft 2
-searchNameAt_mv:
   - Person 1 (1982-2001)
   - Person 6
   - Körperschaft 1 (1982-2001)
   - Körperschaft 6
+searchNameAt_mv:
+  - Person 2 (1982-2001)
+  - Körperschaft 2
 searchNameBy_mv:
   - Person 3 (1982-2001)
   - Person 5
@@ -1404,7 +1404,7 @@ schemaVersion: 0.15.0
 searchEntity_id_mv:
   - PE00074121
   - PE00276308
-searchNameAbout_mv:
+searchNameAt_mv:
   - PE00074121
 searchNameBy_mv:
   - PE00276308
@@ -1515,7 +1515,7 @@ searchCollectionCreator_id_mv:
 searchEntity_id_mv:
   - KS99000001
   - PE99000001
-searchNameAbout_mv:
+searchNameAt_mv:
   - Person Systematik Alpha
   - Koerperschaft Systematik Alpha
 searchName_mv:
@@ -1591,7 +1591,7 @@ searchCollectionCreator_id_mv:
   - PE99000001
 searchEntity_id_mv:
   - PE99000002
-searchNameAbout_mv:
+searchNameAt_mv:
   - Person Systematik Beta
 searchName_mv:
   - Person Systematik Beta
@@ -1683,7 +1683,7 @@ searchCollectionCreator_id_mv:
 searchEntity_id_mv:
   - KS99000001
   - PE99000001
-searchNameAbout_mv:
+searchNameAt_mv:
   - Person Systematik Alpha
   - Koerperschaft Systematik Alpha
 searchName_mv:
