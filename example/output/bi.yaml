@@ -1437,14 +1437,14 @@ collection_display_mv: Z:Tektonik Testbestand Alpha - [Kryptobestand]
 collection_id_mv: BF99000001
 confidential: false
 corporationAt_display_mv:
-  - Koerperschaft Systematik Alpha
+  - Körperschaft Tektonik Alpha
 corporationAt_id_mv:
-  - KS99000001
+  - KS92000001
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Tektonik Objekt Alpha</dc:title>
-    <dc:creator>Person Systematik Alpha</dc:creator>
-    <dc:creator>Koerperschaft Systematik Alpha</dc:creator>
+    <dc:creator>Person Tektonik Alpha</dc:creator>
+    <dc:creator>Körperschaft Tektonik Alpha</dc:creator>
     <dc:source>https://www.dla-marbach.de/find/opac/id/BF99000001</dc:source>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/BI99000001</dc:identifier>
     <dc:identifier>BI99000001</dc:identifier>
@@ -1455,13 +1455,13 @@ exportMODS: |-
       <title>Tektonik Objekt Alpha</title>
     </titleInfo>
     <name type="personal">
-      <namePart>Person Systematik Alpha</namePart>
+      <namePart>Person Tektonik Alpha</namePart>
       <role>
         <roleTerm type="code" authority="marcrelator">fmo</roleTerm>
       </role>
     </name>
     <name type="corporate">
-      <namePart>Koerperschaft Systematik Alpha</namePart>
+      <namePart>Körperschaft Tektonik Alpha</namePart>
       <role>
         <roleTerm type="code" authority="marcrelator">fmo</roleTerm>
       </role>
@@ -1482,45 +1482,45 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
-  A2  - Person Systematik Alpha
-  A2  - Koerperschaft Systematik Alpha
+  A2  - Person Tektonik Alpha
+  A2  - Körperschaft Tektonik Alpha
   DB  - Z:Tektonik Testbestand Alpha
   ID  - BI99000001
   TI  - Tektonik Objekt Alpha
   UR  - https://www.dla-marbach.de/find/opac/id/BI99000001/
   ER  -
 filterAuthorityRelation_mv:
-  - Person Systematik Alpha␝Unter
-  - Koerperschaft Systematik Alpha␝Unter
+  - Person Tektonik Alpha␝Unter
+  - Körperschaft Tektonik Alpha␝Unter
 filterAuthorityRole_mv:
-  - Person Systematik Alpha␝Bestandsbildner/Vorbesitzer
-  - Koerperschaft Systematik Alpha␝Bestandsbildner/Vorbesitzer
+  - Person Tektonik Alpha␝Bestandsbildner/Vorbesitzer
+  - Körperschaft Tektonik Alpha␝Bestandsbildner/Vorbesitzer
 filterAuthority_mv:
-  - Person Systematik Alpha
-  - Koerperschaft Systematik Alpha
+  - Person Tektonik Alpha
+  - Körperschaft Tektonik Alpha
 filterCollection_mv: Z:Tektonik Testbestand Alpha
 filterSource: Bilder und Objekte
 filterType_mv: Bilder und Objekte
 personAt_display_mv:
-  - Person Systematik Alpha
+  - Person Tektonik Alpha
 personAt_id_mv:
-  - PE99000001
+  - PE92000001
 schemaVersion: 0.15.0
 searchCollectionCreator_display_mv:
-  - Person Systematik Alpha
-  - Koerperschaft Systematik Alpha
+  - Person Tektonik Alpha
+  - Körperschaft Tektonik Alpha
 searchCollectionCreator_id_mv:
-  - PE99000001
-  - KS99000001
+  - PE92000001
+  - KS92000001
 searchEntity_id_mv:
-  - KS99000001
-  - PE99000001
+  - KS92000001
+  - PE92000001
 searchNameAt_mv:
-  - Person Systematik Alpha
-  - Koerperschaft Systematik Alpha
+  - Person Tektonik Alpha
+  - Körperschaft Tektonik Alpha
 searchName_mv:
-  - Person Systematik Alpha
-  - Koerperschaft Systematik Alpha
+  - Person Tektonik Alpha
+  - Körperschaft Tektonik Alpha
 source: BI
 title: Tektonik Objekt Alpha
 url: https://www.dla-marbach.de/find/opac/id/BI99000001
@@ -1533,7 +1533,7 @@ confidential: false
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Tektonik Objekt Beta</dc:title>
-    <dc:creator>Person Systematik Beta</dc:creator>
+    <dc:creator>Person Tektonik Beta</dc:creator>
     <dc:source>https://www.dla-marbach.de/find/opac/id/BF99000002</dc:source>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/BI99000002</dc:identifier>
     <dc:identifier>BI99000002</dc:identifier>
@@ -1544,7 +1544,7 @@ exportMODS: |-
       <title>Tektonik Objekt Beta</title>
     </titleInfo>
     <name type="personal">
-      <namePart>Person Systematik Beta</namePart>
+      <namePart>Person Tektonik Beta</namePart>
       <role>
         <roleTerm type="code" authority="marcrelator">fmo</roleTerm>
       </role>
@@ -1565,36 +1565,36 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
-  A2  - Person Systematik Beta
+  A2  - Person Tektonik Beta
   DB  - Z:Tektonik Unterbestand Alpha
   ID  - BI99000002
   TI  - Tektonik Objekt Beta
   UR  - https://www.dla-marbach.de/find/opac/id/BI99000002/
   ER  -
 filterAuthorityRelation_mv:
-  - Person Systematik Beta␝Unter
+  - Person Tektonik Beta␝Unter
 filterAuthorityRole_mv:
-  - Person Systematik Beta␝Bestandsbildner/Vorbesitzer
+  - Person Tektonik Beta␝Bestandsbildner/Vorbesitzer
 filterAuthority_mv:
-  - Person Systematik Beta
+  - Person Tektonik Beta
 filterCollection_mv: Z:Tektonik Unterbestand Alpha
 filterSource: Bilder und Objekte
 filterType_mv: Bilder und Objekte
 personAt_display_mv:
-  - Person Systematik Beta
+  - Person Tektonik Beta
 personAt_id_mv:
-  - PE99000002
+  - PE92000002
 schemaVersion: 0.15.0
 searchCollectionCreator_display_mv:
-  - Person Systematik Alpha
+  - Person Tektonik Alpha
 searchCollectionCreator_id_mv:
-  - PE99000001
+  - PE92000001
 searchEntity_id_mv:
-  - PE99000002
+  - PE92000002
 searchNameAt_mv:
-  - Person Systematik Beta
+  - Person Tektonik Beta
 searchName_mv:
-  - Person Systematik Beta
+  - Person Tektonik Beta
 source: BI
 title: Tektonik Objekt Beta
 url: https://www.dla-marbach.de/find/opac/id/BI99000002
@@ -1605,14 +1605,14 @@ collection_display_mv: Z:Tektonik Testbestand Alpha - [Kryptobestand]
 collection_id_mv: BF99000001
 confidential: true
 corporationAt_display_mv:
-  - Koerperschaft Systematik Alpha
+  - Körperschaft Tektonik Alpha
 corporationAt_id_mv:
-  - KS99000001
+  - KS92000001
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title>Tektonik Objekt Vertraulich (soll rausfallen)</dc:title>
-    <dc:creator>Person Systematik Alpha</dc:creator>
-    <dc:creator>Koerperschaft Systematik Alpha</dc:creator>
+    <dc:creator>Person Tektonik Alpha</dc:creator>
+    <dc:creator>Körperschaft Tektonik Alpha</dc:creator>
     <dc:source>https://www.dla-marbach.de/find/opac/id/BF99000001</dc:source>
     <dc:identifier>https://www.dla-marbach.de/find/opac/id/BI99000003</dc:identifier>
     <dc:identifier>BI99000003</dc:identifier>
@@ -1623,13 +1623,13 @@ exportMODS: |-
       <title>Tektonik Objekt Vertraulich (soll rausfallen)</title>
     </titleInfo>
     <name type="personal">
-      <namePart>Person Systematik Alpha</namePart>
+      <namePart>Person Tektonik Alpha</namePart>
       <role>
         <roleTerm type="code" authority="marcrelator">fmo</roleTerm>
       </role>
     </name>
     <name type="corporate">
-      <namePart>Koerperschaft Systematik Alpha</namePart>
+      <namePart>Körperschaft Tektonik Alpha</namePart>
       <role>
         <roleTerm type="code" authority="marcrelator">fmo</roleTerm>
       </role>
@@ -1650,45 +1650,45 @@ exportMODS: |-
   </mods>
 exportRIS: |-
   TY  - GEN
-  A2  - Person Systematik Alpha
-  A2  - Koerperschaft Systematik Alpha
+  A2  - Person Tektonik Alpha
+  A2  - Körperschaft Tektonik Alpha
   DB  - Z:Tektonik Testbestand Alpha
   ID  - BI99000003
   TI  - Tektonik Objekt Vertraulich (soll rausfallen)
   UR  - https://www.dla-marbach.de/find/opac/id/BI99000003/
   ER  -
 filterAuthorityRelation_mv:
-  - Person Systematik Alpha␝Unter
-  - Koerperschaft Systematik Alpha␝Unter
+  - Person Tektonik Alpha␝Unter
+  - Körperschaft Tektonik Alpha␝Unter
 filterAuthorityRole_mv:
-  - Person Systematik Alpha␝Bestandsbildner/Vorbesitzer
-  - Koerperschaft Systematik Alpha␝Bestandsbildner/Vorbesitzer
+  - Person Tektonik Alpha␝Bestandsbildner/Vorbesitzer
+  - Körperschaft Tektonik Alpha␝Bestandsbildner/Vorbesitzer
 filterAuthority_mv:
-  - Person Systematik Alpha
-  - Koerperschaft Systematik Alpha
+  - Person Tektonik Alpha
+  - Körperschaft Tektonik Alpha
 filterCollection_mv: Z:Tektonik Testbestand Alpha
 filterSource: Bilder und Objekte
 filterType_mv: Bilder und Objekte
 personAt_display_mv:
-  - Person Systematik Alpha
+  - Person Tektonik Alpha
 personAt_id_mv:
-  - PE99000001
+  - PE92000001
 schemaVersion: 0.15.0
 searchCollectionCreator_display_mv:
-  - Person Systematik Alpha
-  - Koerperschaft Systematik Alpha
+  - Person Tektonik Alpha
+  - Körperschaft Tektonik Alpha
 searchCollectionCreator_id_mv:
-  - PE99000001
-  - KS99000001
+  - PE92000001
+  - KS92000001
 searchEntity_id_mv:
-  - KS99000001
-  - PE99000001
+  - KS92000001
+  - PE92000001
 searchNameAt_mv:
-  - Person Systematik Alpha
-  - Koerperschaft Systematik Alpha
+  - Person Tektonik Alpha
+  - Körperschaft Tektonik Alpha
 searchName_mv:
-  - Person Systematik Alpha
-  - Koerperschaft Systematik Alpha
+  - Person Tektonik Alpha
+  - Körperschaft Tektonik Alpha
 source: BI
 title: Tektonik Objekt Vertraulich (soll rausfallen)
 url: https://www.dla-marbach.de/find/opac/id/BI99000003

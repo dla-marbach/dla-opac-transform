@@ -28,18 +28,18 @@ uid	parent_id	record_id	displayTree	display	displayName	displayAddition1	display
 26	0	26	Z	Z					1
 27	33	BF00000004	[Facette Personen und Körperschaften]	Facette Personen und Körperschaften	Person 2 (1982-2001); Körperschaft 2			Facette Personen und Körperschaften	0
 28	35	BF00000004	[Facette Personen und Körperschaften]	Facette Personen und Körperschaften	Person 2 (1982-2001); Körperschaft 2			Facette Personen und Körperschaften	0
-29	34	BF99000001	Kryptobestand [Z:Tektonik Testbestand Alpha]	Z:Tektonik Testbestand Alpha - [Kryptobestand]	Person Systematik Alpha; Koerperschaft Systematik Alpha			Z:Tektonik Testbestand Alpha	1
-30	36	BF99000001	Kryptobestand [Z:Tektonik Testbestand Alpha]	Z:Tektonik Testbestand Alpha - [Kryptobestand]	Person Systematik Alpha; Koerperschaft Systematik Alpha			Z:Tektonik Testbestand Alpha	1
-31	36	BF99000002	Kryptobestand [Z:Tektonik Unterbestand Alpha]	Z:Tektonik Unterbestand Alpha - [Kryptobestand]	Person Systematik Alpha			Z:Tektonik Unterbestand Alpha	1
-32	37	BF99000003	Bestandstyp [Z:Tektonik Bestand ohne Krypto-Parent]	Z:Tektonik Bestand ohne Krypto-Parent - [Bestandstyp]	Person Systematik Beta			Z:Tektonik Bestand ohne Krypto-Parent	0
+29	34	BF99000001	Kryptobestand [Z:Tektonik Testbestand Alpha]	Z:Tektonik Testbestand Alpha - [Kryptobestand]	Person Tektonik Alpha; Körperschaft Tektonik Alpha			Z:Tektonik Testbestand Alpha	1
+30	36	BF99000001	Kryptobestand [Z:Tektonik Testbestand Alpha]	Z:Tektonik Testbestand Alpha - [Kryptobestand]	Person Tektonik Alpha; Körperschaft Tektonik Alpha			Z:Tektonik Testbestand Alpha	1
+31	36	BF99000002	Kryptobestand [Z:Tektonik Unterbestand Alpha]	Z:Tektonik Unterbestand Alpha - [Kryptobestand]	Person Tektonik Alpha			Z:Tektonik Unterbestand Alpha	1
+32	37	BF99000003	Bestandstyp [Z:Tektonik Bestand ohne Krypto-Parent]	Z:Tektonik Bestand ohne Krypto-Parent - [Bestandstyp]	Person Tektonik Beta			Z:Tektonik Bestand ohne Krypto-Parent	0
 33	11	KS00000002	Körperschaft 2	Körperschaft 2					1
-34	11	KS99000001	Koerperschaft Systematik Alpha	Koerperschaft Systematik Alpha					1
+34	11	KS92000001	Körperschaft Tektonik Alpha	Körperschaft Tektonik Alpha					1
 35	16	PE00000002	Person 2 (1982-2001)	Person 2 (1982-2001)					1
-36	16	PE99000001	Person Systematik Alpha	Person Systematik Alpha					1
-37	16	PE99000002	Person Systematik Beta	Person Systematik Beta					1
-38	29	BF99000002	Kryptobestand [Z:Tektonik Unterbestand Alpha]	Z:Tektonik Unterbestand Alpha - [Kryptobestand]	Person Systematik Alpha			Z:Tektonik Unterbestand Alpha	1
+36	16	PE92000001	Person Tektonik Alpha	Person Tektonik Alpha					1
+37	16	PE92000002	Person Tektonik Beta	Person Tektonik Beta					1
+38	29	BF99000002	Kryptobestand [Z:Tektonik Unterbestand Alpha]	Z:Tektonik Unterbestand Alpha - [Kryptobestand]	Person Tektonik Alpha			Z:Tektonik Unterbestand Alpha	1
 39	29	BI99000001	Tektonik Objekt Alpha	Tektonik Objekt Alpha				Z:Tektonik Testbestand Alpha	0
-40	30	BF99000002	Kryptobestand [Z:Tektonik Unterbestand Alpha]	Z:Tektonik Unterbestand Alpha - [Kryptobestand]	Person Systematik Alpha			Z:Tektonik Unterbestand Alpha	1
+40	30	BF99000002	Kryptobestand [Z:Tektonik Unterbestand Alpha]	Z:Tektonik Unterbestand Alpha - [Kryptobestand]	Person Tektonik Alpha			Z:Tektonik Unterbestand Alpha	1
 41	30	BI99000001	Tektonik Objekt Alpha	Tektonik Objekt Alpha				Z:Tektonik Testbestand Alpha	0
 42	31	BI99000002	Tektonik Objekt Beta	Tektonik Objekt Beta				Z:Tektonik Unterbestand Alpha	0
 43	38	BI99000002	Tektonik Objekt Beta	Tektonik Objekt Beta				Z:Tektonik Unterbestand Alpha	0
