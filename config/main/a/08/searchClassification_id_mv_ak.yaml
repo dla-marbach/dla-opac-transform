@@ -1,0 +1,33 @@
+# Suche nach Systematik (Identnummer) in erweiterter Suche
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      [
+        forNonBlank(
+          cells['classification_id_mv'].value,
+          v,
+          v,
+          null
+        ),
+        forNonBlank(
+          cells['item_classification_id_mv'].value,
+          v,
+          v.split('␝').join('␟'),
+          null
+        )
+      ].join('␟'),
+      x,
+      filter(
+        x.split('␟'),
+        f,
+        f != '␣'
+      ).uniques().join('␟'),
+      null
+    )
+  newColumnName: searchClassification_id_mv
+  columnInsertIndex: 2
