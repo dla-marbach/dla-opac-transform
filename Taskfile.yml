@@ -122,7 +122,7 @@ tasks:
         [ $(curl --silent 'http://localhost:8983/solr/indexing/update?commit=true&optimize=true' -o /dev/stderr -w "%{http_code}") -eq 200 ]
       - |
         # Prüfen, ob Datensätze nicht indexiert werden konnten
-        diff <(perl -lne 'print substr($_,9,10)' example/output/*.jsonl | sort) <(curl --silent 'http://localhost:8983/solr/indexing/query?fl=id&q=*%3A*&rows=10000000&wt=csv&csv.header=false' | sort) || true
+        diff <(perl -lne 'print $1 if /"id":\s*"([^"]+)"/' example/output/*.jsonl | sort) <(curl --silent 'http://localhost:8983/solr/indexing/query?fl=id&q=*%3A*&rows=10000000&wt=csv&csv.header=false' | sort) || true
       - |
         # Index für Autovervollständigung aufbauen
         [ $(curl --silent 'http://localhost:8983/solr/indexing/suggest?suggest=true&suggest.build=true&suggest.dictionary=mySuggester' -o /dev/stderr -w "%{http_code}") -eq 200 ]

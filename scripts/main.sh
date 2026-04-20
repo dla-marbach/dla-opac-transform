@@ -1,10 +1,10 @@
 DIR="${DIR:-example}"
-sets=(ak au be bf bi hs ks mm pe se sy th)
+sets=(ak au be bf bi hs ks mm pe se sy th ezb)
 
 ### Import ###
 
 # Kallías im Internformat
-for set in ${sets[@]}; do
+for set in ak au be bf bi hs ks mm pe se sy th; do
     orcli import tsv "${DIR}"/input/${set}*.tsv --projectName "${set}" &
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
@@ -32,6 +32,10 @@ files=(
 for f in "${files[@]}"; do
     orcli import tsv "${url}${f}" --projectName "${f%.tsv}" --columnNames "key,value"
 done
+
+# EZB
+url="https://github.com/dla-marbach/dla-opac-ezb/raw/refs/heads/main/output/ezb.tsv"
+orcli import tsv "${url}" --projectName "ezb"
 
 ### Transform ###
 
