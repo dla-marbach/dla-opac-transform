@@ -517,31 +517,33 @@ DBIS,categoryPublication_mv,texts,,1358,100 %,1358,126,"Wörterbuch, Enzyklopäd
 DBIS,country_mv,texts,,745,55 %,998,80,['Deutschland']
 DBIS,dateCataloged,daterange,,1358,100 %,1358,410,2020-08-18
 DBIS,dateModified,daterange,,1358,100 %,1358,152,2025-01-13
-DBIS,dateOrigin,text,,40,3 %,40,20,2003.0
-DBIS,dateOriginComment_mv,texts,,40,3 %,40,23,2003-01-01
+DBIS,dateOrigin,text,,40,3 %,40,20,2003
+DBIS,dateOriginComment_mv,texts,,40,3 %,40,23,2003-
 DBIS,display,text,,1358,100 %,1358,1357,Scriptorium
 DBIS,displayAddition1,text,,1358,100 %,1358,126,"Wörterbuch, Enzyklopädie, Nachschlagwerk"
-DBIS,displayAddition2,text,,298,22 %,298,244,1993-01-01
+DBIS,displayAddition2,text,,298,22 %,298,241,1993-
 DBIS,displayName,text,,725,53 %,725,554,"Directmedia Publishing GmbH, Berlin"
 DBIS,filterDigital,boolean,,1358,100 %,1358,1,True
 DBIS,filterMedium_mv,strings,,1358,100 %,1358,1,Datenbank
 DBIS,filterSource,string,,1358,100 %,1358,1,Digitale Nachschlagewerke
 DBIS,filterType_mv,strings,,1358,100 %,1358,1,Daten
-DBIS,id,string,,1358,100 %,1358,1358,DBIS183
-DBIS,note,text,,111,8 %,111,108,"<a href=""https://www.gbv.de/benutzer/datenbanken/hilfe"">Hinweise zur Suche</a>"
-DBIS,noteContent_mv,texts,,1358,100 %,1358,1358,"In der EODOPEN-Sammlung befinden sich Werke des 20. und 21. Jahrhunderts, die von der Universitätsbibliothek Regensburg im Rahmen des Digitalisierungsprojektes EODOPEN digitalisiert und veröffentlicht wurden. Die EODOPEN-Sammlung ist heterogen, sowohl thematisch als auch hinsichtlich der urheberrechtlichen Situation der Werke. Die Themen der Sammlung reichen von der regionalen Landeskunde bis zu wissenschaftlichen Publikationen unterschiedlicher Disziplinen, ebenso sind auch einige populäre Sach (...)"
+DBIS,id,string,,1358,100 %,1358,1358,DBIS100015
+DBIS,noteContent_mv,texts,,1358,100 %,1358,1358,"Fiska ist eine von der Schwedischen Literaturgesellschaft in Finnland herausgegebene bibliografische Datenbank über die sprachwissenschaftliche Forschung zum Thema Schwedisch als Muttersprache in Finnland. Sie weist Monografien und Artikel zur schwedischen Sprache in Finnland nach, z. B. zu finnlandschwedischen Dialekten, Slang, Umgangssprache und Zweisprachigkeit."
+DBIS,noteRequirements_mv,texts,,111,8 %,113,110,"['<a href=""https://www.gbv.de/benutzer/datenbanken/hilfe"">Hinweise zur Suche</a>']"
+DBIS,publicationHistory,text,,298,22 %,298,241,1993-
 DBIS,publisherOriginalText_mv,texts,,725,53 %,766,577,"['Directmedia Publishing GmbH, Berlin']"
 DBIS,schemaVersion,string,,1358,100 %,1358,1,0.16.0
 DBIS,source,string,,1358,100 %,1358,1,AK
 DBIS,subjectOther_mv,texts,,1357,100 %,5117,1870,['Literatur']
-DBIS,textualHolding_mv,texts,,298,22 %,298,244,1993-01-01
+DBIS,textualHolding_mv,texts,,298,22 %,298,241,1993-
 DBIS,title,text,,1358,100 %,1358,1357,Scriptorium
 DBIS,titleOther_text_mv,texts,,907,67 %,1599,1560,['Marburger Repertorien']
-DBIS,url,string,,1358,100 %,1358,1358,https://www.dla-marbach.de/find/opac/id/DBIS6878
+DBIS,titleOther_type_mv,strings,,907,67 %,1599,1,['370n']
+DBIS,url,string,,1358,100 %,1358,1358,https://www.dla-marbach.de/find/opac/id/DBIS100015
 DBIS,website_description_mv,texts,,1357,100 %,1424,8,['Zugang']
-DBIS,website_url_mv,strings,,1357,100 %,1424,1420,['https://englisch.ph-karlsruhe.de/indexing/']
-EZB,display,text,,1343,100 %,1343,1311,Poetica
-EZB,displayAddition1,text,,1343,100 %,1343,1297,"De Gruyter, 1 (2014) -"
+DBIS,website_url_mv,strings,,1357,100 %,1424,1420,['https://sls.finna.fi/Content/fiska_databasen']
+EZB,display,text,,1343,100 %,1343,1311,Philosophical Studies: An International Journal for Philosophy in the Analytic Tradition
+EZB,displayAddition1,text,,1343,100 %,1343,1297,"(via De Gruyter Brill), 1 (1919), 1 - 1 (1919), 1"
 EZB,displayAddition2,text,,1343,100 %,1343,1,Volltext (Elektronische Zeitschriftenbibliothek)
 EZB,filterDatePoint_mv,datepoints,,1342,100 %,1964,229,['2009-01-01T00:00:00Z']
 EZB,filterDateRange_mv,dateranges,,1342,100 %,1342,632,2012
@@ -550,20 +552,20 @@ EZB,filterLanguage_mv,strings,,1280,95 %,1667,34,['Englisch']
 EZB,filterMedium_mv,strings,,1343,100 %,1343,1,Zeitschrift
 EZB,filterSource,string,,1343,100 %,1343,1,Elektronische Zeitschriftenbibliothek
 EZB,filterType_mv,strings,,1343,100 %,1343,1,Gedrucktes
-EZB,id,string,,1343,100 %,1343,1343,EZB488677
+EZB,id,string,,1343,100 %,1343,1343,EZB100039
 EZB,identifier_id_mv,strings,,1332,99 %,1332,1244,2565999-6
-EZB,identifier_type_mv,strings,,1343,100 %,1343,1,572z
+EZB,identifier_type_mv,strings,,1332,99 %,1332,1,572z
 EZB,issn_mv,strings,,861,64 %,861,783,1572-8420
-EZB,publicationHistory,text,,1343,100 %,1343,1111,1 (2012) -
+EZB,publicationHistory,text,,1343,100 %,1343,1111,1 (2009) -
 EZB,publisherOriginalLocation_mv,texts,,1332,99 %,1332,558,London
 EZB,publisherOriginalText_mv,texts,,1343,100 %,1343,586,via PAO
 EZB,schemaVersion,string,,1343,100 %,1343,1,0.16.0
 EZB,source,string,,1343,100 %,1343,1,AK
-EZB,textualHolding_mv,texts,,1343,100 %,1343,1111,1 (2012) -
-EZB,title,text,,1343,100 %,1343,1311,Poetica
+EZB,textualHolding_mv,texts,,1343,100 %,1343,1111,1 (2009) -
+EZB,title,text,,1343,100 %,1343,1311,Philosophical Studies: An International Journal for Philosophy in the Analytic Tradition
 EZB,usageRestriction,text,,1343,100 %,1343,1,benutzbar
 EZB,website_description_mv,texts,,1343,100 %,2675,2,"['Volltext (EZB)', 'Volltext (Verlag)']"
-EZB,website_url_mv,strings,,1343,100 %,2675,2051,"['http://ezb.uni-regensburg.de/?1476602&bibid=DLA', 'https://www.degruyterbrill.com/journal/key/COGL/html']"
+EZB,website_url_mv,strings,,1343,100 %,2675,2051,"['http://ezb.uni-regensburg.de/?2044265&bibid=DLA', 'https://www.degruyterbrill.com/journal/key/SEMI/html']"
 HS,accession_display,text,aus BE display,657592,57 %,657592,3059,BE00005721
 HS,accession_id,string,,657592,57 %,657592,3059,BE00005721
 HS,accessionNumber,string,,998229,87 %,998229,405911,SU.2010.0002
