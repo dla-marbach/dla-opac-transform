@@ -1,5 +1,5 @@
 DIR="${DIR:-example}"
-sets=(ak au be bf bi hs ks mm pe se sy th ezb)
+sets=(ak au be bf bi hs ks mm pe se sy th dbis ezb)
 
 ### Import ###
 
@@ -32,6 +32,10 @@ files=(
 for f in "${files[@]}"; do
     orcli import tsv "${url}${f}" --projectName "${f%.tsv}" --columnNames "key,value"
 done
+
+# DBIS
+url="https://github.com/dla-marbach/dla-opac-dbis/raw/refs/heads/main/output/dbis.tsv"
+orcli import tsv "${url}" --projectName "dbis"
 
 # EZB
 url="https://github.com/dla-marbach/dla-opac-ezb/raw/refs/heads/main/output/ezb.tsv"
