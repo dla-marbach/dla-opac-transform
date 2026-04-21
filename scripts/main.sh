@@ -41,6 +41,10 @@ orcli import tsv "${url}" --projectName "dbis"
 url="https://github.com/dla-marbach/dla-opac-ezb/raw/refs/heads/main/output/ezb.tsv"
 orcli import tsv "${url}" --projectName "ezb"
 
+# AK-EZB-Links
+url="https://github.com/dla-marbach/dla-opac-ezb/raw/refs/heads/main/output/links-ak-ezb.csv"
+orcli import csv "${url}" --projectName "links-ak-ezb"
+
 ### Transform ###
 
 # Konfigurationsdateien in-place von YAML nach JSON konvertieren

@@ -1,0 +1,108 @@
+# Reziproke Beziehungen zur EZB ergänzen
+# Das dafür genutzte Projekt "links-ak-ezb" enthält paarweise ak_id und ezb_id sowie ezb_display (vgl. scripts/main.sh)
+# Reihenfolge der folgenden Transformationen (id zuletzt) wichtig wegen integriertem Filter
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_comment_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        cells['id'].value.cross('links-ak-ezb','ak_id'),
+        r,
+        forNonBlank(
+          r.cells['ezb_id'].value,
+          x,
+          '␣',
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(value),
+        value + '␟' + x,
+        x
+      ),
+      value
+    )
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_text_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        cells['id'].value.cross('links-ak-ezb','ak_id'),
+        r,
+        forNonBlank(
+          r.cells['ezb_id'].value,
+          x,
+          forNonBlank(
+            r.cells['ezb_display'].value,
+            v,
+            v,
+            '␣'
+          ),
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(value),
+        value + '␟' + x,
+        x
+      ),
+      value
+    )
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_type_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        cells['id'].value.cross('links-ak-ezb','ak_id'),
+        r,
+        forNonBlank(
+          r.cells['ezb_id'].value,
+          x,
+          'Erscheint auch als Online-Ausgabe',
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(value),
+        value + '␟' + x,
+        x
+      ),
+      value
+    )
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: relation_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        cells['id'].value.cross('links-ak-ezb','ak_id'),
+        r,
+        forNonBlank(
+          r.cells['ezb_id'].value,
+          x,
+          x,
+          '␣'
+        )
+      ).join('␟'),
+      x,
+      if(
+        isNonBlank(value),
+        value + '␟' + x,
+        x
+      ),
+      value
+    )
