@@ -511,6 +511,35 @@ BI,usageRestriction,text,,31014,100 %,31014,4,eingeschränkt benutzbar
 BI,usageRestrictionNote,text,Benutzungshinweis,31012,100 %,31012,3,bedingt benutzbar\nDie Benutzung ist nach vorheriger Terminabsprache bedingt möglich. Bitte wenden Sie sich nach der Bestellung an das Referat Bilder und Objekte.\nE-Mail: bilder-und-objekte@dla-marbach.de
 BI,work_display_mv,texts,aus AK display,965,3 %,1172,841,"['Lessing, Gotthold Ephraim (1729-1781). Nathan der Weise (Drama : 1779)']"
 BI,work_id_mv,strings,,965,3 %,1172,841,['AK00000425']
+DBIS,category,text,,1358,100 %,1358,1,Digitale Nachschlagewerke
+DBIS,categoryMedium_mv,texts,,1358,100 %,1358,1,Online-Ressource
+DBIS,categoryPublication_mv,texts,,1358,100 %,1358,126,"Wörterbuch, Enzyklopädie, Nachschlagwerk"
+DBIS,country_mv,texts,,745,55 %,998,80,['Deutschland']
+DBIS,dateCataloged,daterange,,1358,100 %,1358,410,2020-08-18
+DBIS,dateModified,daterange,,1358,100 %,1358,152,2025-01-13
+DBIS,dateOrigin,text,,40,3 %,40,20,2003.0
+DBIS,dateOriginComment_mv,texts,,40,3 %,40,23,2003-01-01
+DBIS,display,text,,1358,100 %,1358,1357,Scriptorium
+DBIS,displayAddition1,text,,1358,100 %,1358,126,"Wörterbuch, Enzyklopädie, Nachschlagwerk"
+DBIS,displayAddition2,text,,298,22 %,298,244,1993-01-01
+DBIS,displayName,text,,725,53 %,725,554,"Directmedia Publishing GmbH, Berlin"
+DBIS,filterDigital,boolean,,1358,100 %,1358,1,True
+DBIS,filterMedium_mv,strings,,1358,100 %,1358,1,Datenbank
+DBIS,filterSource,string,,1358,100 %,1358,1,Digitale Nachschlagewerke
+DBIS,filterType_mv,strings,,1358,100 %,1358,1,Daten
+DBIS,id,string,,1358,100 %,1358,1358,DBIS100015
+DBIS,note,text,,111,8 %,111,108,"<a href=""https://www.gbv.de/benutzer/datenbanken/hilfe"">Hinweise zur Suche</a>"
+DBIS,noteContent_mv,texts,,1358,100 %,1358,1358,"Fiska ist eine von der Schwedischen Literaturgesellschaft in Finnland herausgegebene bibliografische Datenbank über die sprachwissenschaftliche Forschung zum Thema Schwedisch als Muttersprache in Finnland. Sie weist Monografien und Artikel zur schwedischen Sprache in Finnland nach, z. B. zu finnlandschwedischen Dialekten, Slang, Umgangssprache und Zweisprachigkeit."
+DBIS,publisherOriginalText_mv,texts,,725,53 %,766,577,"['Directmedia Publishing GmbH, Berlin']"
+DBIS,schemaVersion,string,,1358,100 %,1358,1,0.16.0
+DBIS,source,string,,1358,100 %,1358,1,AK
+DBIS,subjectOther_mv,texts,,1357,100 %,5117,1870,['Literatur']
+DBIS,textualHolding_mv,texts,,298,22 %,298,244,1993-01-01
+DBIS,title,text,,1358,100 %,1358,1357,Scriptorium
+DBIS,titleOther_text_mv,texts,,907,67 %,1599,1560,['Marburger Repertorien']
+DBIS,url,string,,1358,100 %,1358,1358,https://www.dla-marbach.de/find/opac/id/DBIS100015
+DBIS,website_description_mv,texts,,1357,100 %,1424,8,['Zugang']
+DBIS,website_url_mv,strings,,1357,100 %,1424,1420,['https://sls.finna.fi/Content/fiska_databasen']
 EZB,display,text,,1343,100 %,1343,1311,Philosophical Studies: An International Journal for Philosophy in the Analytic Tradition
 EZB,displayAddition1,text,,1343,100 %,1343,1297,"(via De Gruyter Brill), 1 (1919), 1 - 1 (1919), 1"
 EZB,displayAddition2,text,,1343,100 %,1343,1,Volltext (Elektronische Zeitschriftenbibliothek)
