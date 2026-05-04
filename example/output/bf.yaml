@@ -1,5 +1,5 @@
 id: BF00000001
-display: Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]
+display: Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]
 accessionNumber: Erwerbungsnummer
 accession_display: BE00000001
 accession_id: BE00000001
@@ -60,11 +60,12 @@ digitalObject_licenseNote_mv:
   - 'Creative Commons 10th Birthday Celebration San Francisco / Timothy Vollmer / CC BY 4.0. Quelle: http://www.flickr.com/photos/sixteenmilesofstring/8256206923/in/set-72157632200936657'
   - ␣
 displayAddition1: Umfang
+displayAddition2: Abteilung [Z:Öffentlicher Bestand 1]
 displayName: Person 3 (1982-2001); Person 4; PE99999999; Körperschaft 5; Körperschaft 6; KS99999999
 displayTree: Bestandssignatur ohne Kürzel
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
-    <dc:title>Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]</dc:title>
+    <dc:title>Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]</dc:title>
     <dc:creator>Person 3 (1982-2001)</dc:creator>
     <dc:creator>Person 4</dc:creator>
     <dc:creator>PE99999999</dc:creator>
@@ -96,7 +97,7 @@ exportDC: |-
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
     <titleInfo>
-      <title>Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]</title>
+      <title>Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]</title>
     </titleInfo>
     <name type="personal">
       <namePart>Person 3 (1982-2001)</namePart>
@@ -251,7 +252,7 @@ exportRIS: |-
   N1  - Literatur: Quellenangabe
   N2  - Zusammenfassung
   RN  - Bemerkung extern
-  TI  - Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]
+  TI  - Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]
   UR  - URL 1
   UR  - URL 2
   UR  - https://www.dla-marbach.de/find/opac/id/BF00000001/
@@ -339,7 +340,7 @@ order_status_mv:
 order_unit_mv:
   - Ordnungseinheit 1
   - Ordnungseinheit 2
-parent_display_mv: Z:Öffentlicher Bestand 2
+parent_display_mv: Öffentlicher Bestand 2
 parent_id_mv: BF00000002
 personAbout_display_mv:
   - Person 1 (1982-2001)
@@ -444,12 +445,13 @@ website_url_mv:
   - URL 2
 ---
 id: BF00000002
-display: Z:Öffentlicher Bestand 2
+display: Öffentlicher Bestand 2
 confidential: false
+displayAddition2: ' [Z:Öffentlicher Bestand 2]'
 displayTree: ' [Z:Öffentlicher Bestand 2]'
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
-    <dc:title>Z:Öffentlicher Bestand 2</dc:title>
+    <dc:title>Öffentlicher Bestand 2</dc:title>
     <dc:type>Bestand</dc:type>
     <dc:format></dc:format>
     <dc:identifier>Z:Öffentlicher Bestand 2</dc:identifier>
@@ -459,7 +461,7 @@ exportDC: |-
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
     <titleInfo>
-      <title>Z:Öffentlicher Bestand 2</title>
+      <title>Öffentlicher Bestand 2</title>
     </titleInfo>
     <typeOfResource collection="yes">Bestand</typeOfResource>
     <location>
@@ -476,7 +478,7 @@ exportRIS: |-
   TY  - GEN
   DB  - Z:Öffentlicher Bestand 2
   ID  - BF00000002
-  TI  - Z:Öffentlicher Bestand 2
+  TI  - Öffentlicher Bestand 2
   UR  - https://www.dla-marbach.de/find/opac/id/BF00000002/
   ER  -
 filterCollection_mv: Z:Öffentlicher Bestand 2
@@ -489,12 +491,13 @@ title: Z:Öffentlicher Bestand 2
 url: https://www.dla-marbach.de/find/opac/id/BF00000002
 ---
 id: BF00000003
-display: Z:Vertraulicher Bestand
+display: Vertraulicher Bestand
 confidential: true
+displayAddition2: ' [Z:Vertraulicher Bestand]'
 displayTree: ' [Z:Vertraulicher Bestand]'
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
-    <dc:title>Z:Vertraulicher Bestand</dc:title>
+    <dc:title>Vertraulicher Bestand</dc:title>
     <dc:type>Bestand</dc:type>
     <dc:format></dc:format>
     <dc:identifier>Z:Vertraulicher Bestand</dc:identifier>
@@ -504,7 +507,7 @@ exportDC: |-
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
     <titleInfo>
-      <title>Z:Vertraulicher Bestand</title>
+      <title>Vertraulicher Bestand</title>
     </titleInfo>
     <typeOfResource collection="yes">Bestand</typeOfResource>
     <location>
@@ -521,7 +524,7 @@ exportRIS: |-
   TY  - GEN
   DB  - Z:Vertraulicher Bestand
   ID  - BF00000003
-  TI  - Z:Vertraulicher Bestand
+  TI  - Vertraulicher Bestand
   UR  - https://www.dla-marbach.de/find/opac/id/BF00000003/
   ER  -
 filterCollection_mv: Z:Vertraulicher Bestand
@@ -545,6 +548,7 @@ corporationAt_display_mv:
   - Körperschaft 2
 corporationAt_id_mv:
   - KS00000002
+displayAddition2: ' [Facette Personen und Körperschaften]'
 displayName: Person 2 (1982-2001); Körperschaft 2
 displayTree: ' [Facette Personen und Körperschaften]'
 exportDC: |-
@@ -678,18 +682,19 @@ source: BF
 title: Facette Personen und Körperschaften
 ---
 id: BF99000001
-display: Z:Tektonik Testbestand Alpha - [Kryptobestand]
+display: Tektonik Testbestand Alpha - [Kryptobestand]
 category: Kryptobestand
 confidential: false
 corporationAt_display_mv:
   - Körperschaft Tektonik Alpha
 corporationAt_id_mv:
   - KS92000001
+displayAddition2: ' [Z:Tektonik Testbestand Alpha]'
 displayName: Person Tektonik Alpha; Körperschaft Tektonik Alpha
 displayTree: Kryptobestand [Z:Tektonik Testbestand Alpha]
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
-    <dc:title>Z:Tektonik Testbestand Alpha - [Kryptobestand]</dc:title>
+    <dc:title>Tektonik Testbestand Alpha - [Kryptobestand]</dc:title>
     <dc:creator>Person Tektonik Alpha</dc:creator>
     <dc:creator>Körperschaft Tektonik Alpha</dc:creator>
     <dc:type>Bestand</dc:type>
@@ -701,7 +706,7 @@ exportDC: |-
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
     <titleInfo>
-      <title>Z:Tektonik Testbestand Alpha - [Kryptobestand]</title>
+      <title>Tektonik Testbestand Alpha - [Kryptobestand]</title>
     </titleInfo>
     <name type="personal">
       <namePart>Person Tektonik Alpha</namePart>
@@ -732,7 +737,7 @@ exportRIS: |-
   AU  - Körperschaft Tektonik Alpha
   DB  - Z:Tektonik Testbestand Alpha
   ID  - BF99000001
-  TI  - Z:Tektonik Testbestand Alpha - [Kryptobestand]
+  TI  - Tektonik Testbestand Alpha - [Kryptobestand]
   UR  - https://www.dla-marbach.de/find/opac/id/BF99000001/
   ER  -
 filterAuthorityRelation_mv:
@@ -773,14 +778,15 @@ title: Z:Tektonik Testbestand Alpha
 url: https://www.dla-marbach.de/find/opac/id/BF99000001
 ---
 id: BF99000002
-display: Z:Tektonik Unterbestand Alpha - [Kryptobestand]
+display: Tektonik Unterbestand Alpha - [Kryptobestand]
 category: Kryptobestand
 confidential: false
+displayAddition2: ' [Z:Tektonik Unterbestand Alpha]'
 displayName: Person Tektonik Alpha
 displayTree: Kryptobestand [Z:Tektonik Unterbestand Alpha]
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
-    <dc:title>Z:Tektonik Unterbestand Alpha - [Kryptobestand]</dc:title>
+    <dc:title>Tektonik Unterbestand Alpha - [Kryptobestand]</dc:title>
     <dc:creator>Person Tektonik Alpha</dc:creator>
     <dc:type>Bestand</dc:type>
     <dc:format></dc:format>
@@ -792,7 +798,7 @@ exportDC: |-
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
     <titleInfo>
-      <title>Z:Tektonik Unterbestand Alpha - [Kryptobestand]</title>
+      <title>Tektonik Unterbestand Alpha - [Kryptobestand]</title>
     </titleInfo>
     <name type="personal">
       <namePart>Person Tektonik Alpha</namePart>
@@ -821,7 +827,7 @@ exportRIS: |-
   AU  - Person Tektonik Alpha
   DB  - Z:Tektonik Unterbestand Alpha
   ID  - BF99000002
-  TI  - Z:Tektonik Unterbestand Alpha - [Kryptobestand]
+  TI  - Tektonik Unterbestand Alpha - [Kryptobestand]
   UR  - https://www.dla-marbach.de/find/opac/id/BF99000002/
   ER  -
 filterAuthorityRelation_mv:
@@ -834,7 +840,7 @@ filterCollection_mv: Z:Tektonik Unterbestand Alpha
 filterMultipart: true
 filterSource: Nachlässe und Spezialsammlungen
 filterType_mv: Handschriften
-parent_display_mv: Z:Tektonik Testbestand Alpha - [Kryptobestand]
+parent_display_mv: Tektonik Testbestand Alpha - [Kryptobestand]
 parent_id_mv: BF99000001
 personAt_display_mv:
   - Person Tektonik Alpha
@@ -856,14 +862,15 @@ title: Z:Tektonik Unterbestand Alpha
 url: https://www.dla-marbach.de/find/opac/id/BF99000002
 ---
 id: BF99000003
-display: Z:Tektonik Bestand ohne Krypto-Parent - [Bestandstyp]
+display: Tektonik Bestand ohne Krypto-Parent - [Bestandstyp]
 category: Bestandstyp
 confidential: false
+displayAddition2: ' [Z:Tektonik Bestand ohne Krypto-Parent]'
 displayName: Person Tektonik Beta
 displayTree: Bestandstyp [Z:Tektonik Bestand ohne Krypto-Parent]
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
-    <dc:title>Z:Tektonik Bestand ohne Krypto-Parent - [Bestandstyp]</dc:title>
+    <dc:title>Tektonik Bestand ohne Krypto-Parent - [Bestandstyp]</dc:title>
     <dc:creator>Person Tektonik Beta</dc:creator>
     <dc:type>Bestand</dc:type>
     <dc:format></dc:format>
@@ -874,7 +881,7 @@ exportDC: |-
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
     <titleInfo>
-      <title>Z:Tektonik Bestand ohne Krypto-Parent - [Bestandstyp]</title>
+      <title>Tektonik Bestand ohne Krypto-Parent - [Bestandstyp]</title>
     </titleInfo>
     <name type="personal">
       <namePart>Person Tektonik Beta</namePart>
@@ -898,7 +905,7 @@ exportRIS: |-
   AU  - Person Tektonik Beta
   DB  - Z:Tektonik Bestand ohne Krypto-Parent
   ID  - BF99000003
-  TI  - Z:Tektonik Bestand ohne Krypto-Parent - [Bestandstyp]
+  TI  - Tektonik Bestand ohne Krypto-Parent - [Bestandstyp]
   UR  - https://www.dla-marbach.de/find/opac/id/BF99000003/
   ER  -
 filterAuthorityRelation_mv:
@@ -931,18 +938,19 @@ title: Z:Tektonik Bestand ohne Krypto-Parent
 url: https://www.dla-marbach.de/find/opac/id/BF99000003
 ---
 id: BF99000004
-display: Z:Tektonik Vertraulich (soll rausfallen) - [Bestandstyp]
+display: Tektonik Vertraulich (soll rausfallen) - [Bestandstyp]
 category: Bestandstyp
 confidential: true
 corporationAt_display_mv:
   - Körperschaft Tektonik Beta
 corporationAt_id_mv:
   - KS92000002
+displayAddition2: ' [Z:Tektonik Vertraulich (soll rausfallen)]'
 displayName: Person Tektonik Beta; Körperschaft Tektonik Beta
 displayTree: Bestandstyp [Z:Tektonik Vertraulich (soll rausfallen)]
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
-    <dc:title>Z:Tektonik Vertraulich (soll rausfallen) - [Bestandstyp]</dc:title>
+    <dc:title>Tektonik Vertraulich (soll rausfallen) - [Bestandstyp]</dc:title>
     <dc:creator>Person Tektonik Beta</dc:creator>
     <dc:creator>Körperschaft Tektonik Beta</dc:creator>
     <dc:type>Bestand</dc:type>
@@ -954,7 +962,7 @@ exportDC: |-
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
     <titleInfo>
-      <title>Z:Tektonik Vertraulich (soll rausfallen) - [Bestandstyp]</title>
+      <title>Tektonik Vertraulich (soll rausfallen) - [Bestandstyp]</title>
     </titleInfo>
     <name type="personal">
       <namePart>Person Tektonik Beta</namePart>
@@ -985,7 +993,7 @@ exportRIS: |-
   AU  - Körperschaft Tektonik Beta
   DB  - Z:Tektonik Vertraulich (soll rausfallen)
   ID  - BF99000004
-  TI  - Z:Tektonik Vertraulich (soll rausfallen) - [Bestandstyp]
+  TI  - Tektonik Vertraulich (soll rausfallen) - [Bestandstyp]
   UR  - https://www.dla-marbach.de/find/opac/id/BF99000004/
   ER  -
 filterAuthorityRelation_mv:
@@ -1026,13 +1034,14 @@ title: Z:Tektonik Vertraulich (soll rausfallen)
 url: https://www.dla-marbach.de/find/opac/id/BF99000004
 ---
 id: BF99000005
-display: Z:Tektonik Ohne Authority (soll rausfallen) - [Bestandstyp]
+display: Tektonik Ohne Authority (soll rausfallen) - [Bestandstyp]
 category: Bestandstyp
 confidential: false
+displayAddition2: ' [Z:Tektonik Ohne Authority (soll rausfallen)]'
 displayTree: Bestandstyp [Z:Tektonik Ohne Authority (soll rausfallen)]
 exportDC: |-
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
-    <dc:title>Z:Tektonik Ohne Authority (soll rausfallen) - [Bestandstyp]</dc:title>
+    <dc:title>Tektonik Ohne Authority (soll rausfallen) - [Bestandstyp]</dc:title>
     <dc:type>Bestand</dc:type>
     <dc:format></dc:format>
     <dc:identifier>Z:Tektonik Ohne Authority (soll rausfallen)</dc:identifier>
@@ -1042,7 +1051,7 @@ exportDC: |-
 exportMODS: |-
   <mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
     <titleInfo>
-      <title>Z:Tektonik Ohne Authority (soll rausfallen) - [Bestandstyp]</title>
+      <title>Tektonik Ohne Authority (soll rausfallen) - [Bestandstyp]</title>
     </titleInfo>
     <typeOfResource collection="yes">Bestand</typeOfResource>
     <location>
@@ -1059,7 +1068,7 @@ exportRIS: |-
   TY  - GEN
   DB  - Z:Tektonik Ohne Authority (soll rausfallen)
   ID  - BF99000005
-  TI  - Z:Tektonik Ohne Authority (soll rausfallen) - [Bestandstyp]
+  TI  - Tektonik Ohne Authority (soll rausfallen) - [Bestandstyp]
   UR  - https://www.dla-marbach.de/find/opac/id/BF99000005/
   ER  -
 filterCollection_mv: Z:Tektonik Ohne Authority (soll rausfallen)
