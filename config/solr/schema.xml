@@ -23,28 +23,6 @@
       <filter name="lowercase"/>
     </analyzer>
   </fieldType>
-  <fieldType name="text_normalized" class="solr.TextField" positionIncrementGap="100" multiValued="false">
-    <analyzer type="index">
-      <tokenizer name="standard"/>
-      <filter name="lowercase"/>
-      <filter name="patternReplace" pattern="ä" replacement="ae"/>
-      <filter name="patternReplace" pattern="ö" replacement="oe"/>
-      <filter name="patternReplace" pattern="ü" replacement="ue"/>
-      <filter name="patternReplace" pattern="ß" replacement="ss"/>
-      <filter name="patternReplace" pattern="ph" replacement="f" replace="all"/>
-      <filter name="asciifolding"/>
-    </analyzer>
-    <analyzer type="query">
-      <tokenizer name="standard"/>
-      <filter name="lowercase"/>
-      <filter name="patternReplace" pattern="ä" replacement="ae"/>
-      <filter name="patternReplace" pattern="ö" replacement="oe"/>
-      <filter name="patternReplace" pattern="ü" replacement="ue"/>
-      <filter name="patternReplace" pattern="ß" replacement="ss"/>
-      <filter name="patternReplace" pattern="ph" replacement="f" replace="all"/>
-      <filter name="asciifolding"/>
-    </analyzer>
-  </fieldType>
   <fieldType name="texts" class="solr.SortableTextField" positionIncrementGap="100" multiValued="true">
     <analyzer type="index">
       <tokenizer name="standard"/>
@@ -53,6 +31,28 @@
     <analyzer type="query">
       <tokenizer name="standard"/>
       <filter name="lowercase"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="normalized" class="solr.TextField" positionIncrementGap="100" multiValued="true">
+    <analyzer type="index">
+      <tokenizer name="standard"/>
+      <filter name="lowercase"/>
+      <filter name="patternReplace" pattern="ä" replacement="ae"/>
+      <filter name="patternReplace" pattern="ö" replacement="oe"/>
+      <filter name="patternReplace" pattern="ü" replacement="ue"/>
+      <filter name="patternReplace" pattern="ß" replacement="ss"/>
+      <filter name="patternReplace" pattern="ph" replacement="f" replace="all"/>
+      <filter name="asciifolding"/>
+    </analyzer>
+    <analyzer type="query">
+      <tokenizer name="standard"/>
+      <filter name="lowercase"/>
+      <filter name="patternReplace" pattern="ä" replacement="ae"/>
+      <filter name="patternReplace" pattern="ö" replacement="oe"/>
+      <filter name="patternReplace" pattern="ü" replacement="ue"/>
+      <filter name="patternReplace" pattern="ß" replacement="ss"/>
+      <filter name="patternReplace" pattern="ph" replacement="f" replace="all"/>
+      <filter name="asciifolding"/>
     </analyzer>
   </fieldType>
   <field name="accession_display" type="text"/>
@@ -144,7 +144,7 @@
   <field name="dateOther_mv" type="texts"/>
   <field name="dateOtherComment_mv" type="texts"/>
   <field name="dateRetention" type="text"/>
-  <field name="default" type="text_normalized"/>
+  <field name="default" type="normalized"/>
   <field name="department" type="string"/>
   <field name="description_text_mv" type="texts"/>
   <field name="description_type_mv" type="strings"/>
