@@ -86,6 +86,8 @@
   <requestHandler name="/select" class="solr.SearchHandler">
     <!-- Query Standardwerte (können vom Client überschrieben werden) -->
     <lst name="defaults">
+      <!-- eDisMax aktivieren, damit qf/boost wirkt -->
+      <str name="defType">edismax</str>
       <!-- Suchparameter mit UND verknüpfen statt ODER -->
       <str name="q.op">AND</str>
       <str name="echoParams">explicit</str>
@@ -99,6 +101,22 @@
     <lst name="appends">
       <!-- Vertrauliche Dokumente ausschließen -->
       <str name="fq">NOT confidential:true</str>
+      <!-- Relevanzranking -->
+      <str name="qf">default^1 display^10 displayName^5 displayAddition1^8 displayAddition2^5 searchName_mv^2</str>
+      <str name="boost">product(
+        if(eq(source,'BF'),1.4,
+          if(eq(source,'KS'),0.4,
+            if(eq(source,'PE'),0.4,
+              if(eq(source,'TH'),0.3,
+                if(eq(source,'SE'),0.2,
+                  if(eq(source,'SY'),0.1,1.0)
+                )
+              )
+            )
+          )
+        ),
+        if(eq(filterSource,'Werke'),0.5,1.0)
+      )</str>
     </lst>
   </requestHandler>
 
