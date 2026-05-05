@@ -33,25 +33,51 @@
       <filter name="lowercase"/>
     </analyzer>
   </fieldType>
-  <fieldType name="normalized" class="solr.TextField" positionIncrementGap="100" multiValued="true">
+  <fieldType name="text_normalized" class="solr.SortableTextField" positionIncrementGap="100" multiValued="false">
     <analyzer type="index">
+      <charFilter name="patternReplace" pattern=":" replacement=" "/>
       <tokenizer name="standard"/>
       <filter name="lowercase"/>
       <filter name="patternReplace" pattern="ä" replacement="ae"/>
       <filter name="patternReplace" pattern="ö" replacement="oe"/>
       <filter name="patternReplace" pattern="ü" replacement="ue"/>
       <filter name="patternReplace" pattern="ß" replacement="ss"/>
-      <filter name="patternReplace" pattern="ph" replacement="f" replace="all"/>
+      <filter name="patternReplace" pattern="ph" replacement="f"/>
       <filter name="asciifolding"/>
     </analyzer>
     <analyzer type="query">
+      <charFilter name="patternReplace" pattern=":" replacement=" "/>
       <tokenizer name="standard"/>
       <filter name="lowercase"/>
       <filter name="patternReplace" pattern="ä" replacement="ae"/>
       <filter name="patternReplace" pattern="ö" replacement="oe"/>
       <filter name="patternReplace" pattern="ü" replacement="ue"/>
       <filter name="patternReplace" pattern="ß" replacement="ss"/>
-      <filter name="patternReplace" pattern="ph" replacement="f" replace="all"/>
+      <filter name="patternReplace" pattern="ph" replacement="f"/>
+      <filter name="asciifolding"/>
+    </analyzer>
+  </fieldType>
+  <fieldType name="texts_normalized" class="solr.TextField" positionIncrementGap="100" multiValued="true">
+    <analyzer type="index">
+      <charFilter name="patternReplace" pattern=":" replacement=" "/>
+      <tokenizer name="standard"/>
+      <filter name="lowercase"/>
+      <filter name="patternReplace" pattern="ä" replacement="ae"/>
+      <filter name="patternReplace" pattern="ö" replacement="oe"/>
+      <filter name="patternReplace" pattern="ü" replacement="ue"/>
+      <filter name="patternReplace" pattern="ß" replacement="ss"/>
+      <filter name="patternReplace" pattern="ph" replacement="f"/>
+      <filter name="asciifolding"/>
+    </analyzer>
+    <analyzer type="query">
+      <charFilter name="patternReplace" pattern=":" replacement=" "/>
+      <tokenizer name="standard"/>
+      <filter name="lowercase"/>
+      <filter name="patternReplace" pattern="ä" replacement="ae"/>
+      <filter name="patternReplace" pattern="ö" replacement="oe"/>
+      <filter name="patternReplace" pattern="ü" replacement="ue"/>
+      <filter name="patternReplace" pattern="ß" replacement="ss"/>
+      <filter name="patternReplace" pattern="ph" replacement="f"/>
       <filter name="asciifolding"/>
     </analyzer>
   </fieldType>
@@ -144,7 +170,7 @@
   <field name="dateOther_mv" type="texts"/>
   <field name="dateOtherComment_mv" type="texts"/>
   <field name="dateRetention" type="text"/>
-  <field name="default" type="normalized"/>
+  <field name="default" type="texts_normalized"/>
   <field name="department" type="string"/>
   <field name="description_text_mv" type="texts"/>
   <field name="description_type_mv" type="strings"/>
@@ -161,7 +187,7 @@
   <field name="dimension_diameter_mv" type="strings"/>
   <field name="dimension_height_mv" type="strings"/>
   <field name="dimension_width_mv" type="strings"/>
-  <field name="display" type="text" required="true"/>
+  <field name="display" type="text_normalized" required="true"/>
   <field name="displayAddition1" type="text"/>
   <field name="displayAddition2" type="text"/>
   <field name="displayName" type="text"/>
@@ -208,7 +234,7 @@
   <field name="host_display_mv" type="texts"/>
   <field name="host_id_mv" type="strings"/>
   <field name="hyperlink" type="string"/>
-  <field name="id" type="string" indexed="true" stored="true" required="true" multiValued="false"/>
+  <field name="id" type="string" required="true"/>
   <field name="identifier_id_mv" type="strings"/>
   <field name="identifier_type_mv" type="strings"/>
   <field name="index" type="text"/>
