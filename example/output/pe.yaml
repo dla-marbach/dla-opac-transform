@@ -126,6 +126,15 @@ relation_type_mv:
   - Relation
 schemaVersion: 0.16.0
 searchBoost: 0.5
+searchDate_mv:
+  - 22.05.1982
+  - "1982-05-22"
+  - 02.01.2001
+  - "2001-01-02"
+  - 23.05.1982
+  - "1982-05-23"
+  - 01.01.2001
+  - "2001-01-01"
 seeAlso_display_mv:
   - Person 3 (1982-2001)
   - Person 4
@@ -161,6 +170,11 @@ filterSource: Personen
 filterType_mv: Normdaten
 schemaVersion: 0.16.0
 searchBoost: 0.5
+searchDate_mv:
+  - "05.1982"
+  - 1982-05
+  - "01.2001"
+  - 2001-01
 searchEntityScore: 19
 searchEntity_id_mv: PE00000002
 searchSuggestPayload: PE00000002␝Person 2 (1982-2001)
@@ -183,6 +197,9 @@ filterSource: Personen
 filterType_mv: Normdaten
 schemaVersion: 0.16.0
 searchBoost: 0.5
+searchDate_mv:
+  - "1982"
+  - "2001"
 searchEntityScore: 11
 searchEntity_id_mv: PE00000003
 searchSuggestPayload: PE00000003␝Person 3 (1982-2001)
@@ -284,6 +301,7 @@ filterSource: Personen
 filterType_mv: Normdaten
 schemaVersion: 0.16.0
 searchBoost: 0.5
+searchDate_mv: []
 searchEntityScore: 1
 searchEntity_id_mv: PE00000009
 searchSuggestPayload: PE00000009␝Pindar v. Chr. (-0518--0446)
@@ -407,6 +425,9 @@ relation_type_mv:
   - Geburtsort
 schemaVersion: 0.16.0
 searchBoost: 0.5
+searchDate_mv:
+  - "1864"
+  - "1947"
 source: PE
 title: Huch, Ricarda
 ---
@@ -457,6 +478,9 @@ relation_type_mv:
   - Beziehung familiär
 schemaVersion: 0.16.0
 searchBoost: 0.5
+searchDate_mv:
+  - "1850"
+  - "1914"
 source: PE
 title: Huch, Richard
 ---

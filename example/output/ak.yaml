@@ -923,6 +923,8 @@ searchCollectionCreator_id_mv:
   - KS00000005
   - KS00000006
   - KS99999999
+searchDate_mv:
+  - "2023"
 searchEntity_id_mv:
   - KS00000003
   - KS00000004
@@ -1182,6 +1184,8 @@ relation_type_mv:
   - GND-Relation 2 Typ
 schemaVersion: 0.16.0
 searchBoost: 0.6
+searchDate_mv:
+  - "2000"
 searchEntityScore: 4
 searchEntity_id_mv:
   - PE00000001
@@ -1258,6 +1262,9 @@ personBy_id_mv:
   - PE00000003
 schemaVersion: 0.16.0
 searchBoost: 0.6
+searchDate_mv:
+  - "01.2000"
+  - 2000-01
 searchEntityScore: 2
 searchEntity_id_mv:
   - PE00000003
@@ -2443,6 +2450,9 @@ noteContent_mv:
   - "1982-05-22"
 schemaVersion: 0.16.0
 searchBoost: 1
+searchDate_mv:
+  - 22.05.1982
+  - "1982-05-22"
 source: AK
 title: 'Facette Zeit: Sendedatum'
 ---
@@ -2500,6 +2510,8 @@ schemaVersion: 0.16.0
 searchBoost: 1
 searchClassification_id_mv:
   - SE00000021
+searchDate_mv:
+  - "1999"
 source: AK
 title: 'Facette Zeit: Provenienzketten'
 ---
@@ -2561,6 +2573,10 @@ noteContent_mv:
 parentIssueYear: 1982/2011
 schemaVersion: 0.16.0
 searchBoost: 1
+searchDate_mv:
+  - "1981"
+  - "1982"
+  - "2011"
 source: AK
 title: 'Facette Zeit: dateOrigin und parentIssueYear'
 ---
@@ -2610,6 +2626,9 @@ noteContent_mv:
   - 1900 kein Schaltjahr
 schemaVersion: 0.16.0
 searchBoost: 1
+searchDate_mv:
+  - 29.02.1900
+  - 1900-02-29
 source: AK
 title: 'Facette Zeit: invalide Datumsangabe'
 ---
@@ -2658,6 +2677,9 @@ noteContent_mv:
 parentIssueYear: 2011/2010
 schemaVersion: 0.16.0
 searchBoost: 1
+searchDate_mv:
+  - "2011"
+  - "2010"
 source: AK
 title: 'Facette Zeit: invalide Zeitspanne'
 ---
@@ -4007,6 +4029,9 @@ filterSource: Bibliotheksmaterialien
 filterType_mv: Sonstiges
 schemaVersion: 0.16.0
 searchBoost: 1
+searchDate_mv:
+  - 22.05.1968
+  - "1968-05-22"
 source: AK
 title: Konvertierung von 19680522 in 1968-05-22
 url: https://www.dla-marbach.de/find/opac/id/AK00003001
@@ -4054,6 +4079,9 @@ filterSource: Bibliotheksmaterialien
 filterType_mv: Sonstiges
 schemaVersion: 0.16.0
 searchBoost: 1
+searchDate_mv:
+  - "05.1968"
+  - 1968-05
 source: AK
 title: Konvertierung von 19680500 in 1968-05
 url: https://www.dla-marbach.de/find/opac/id/AK00003002
@@ -4101,6 +4129,8 @@ filterSource: Bibliotheksmaterialien
 filterType_mv: Sonstiges
 schemaVersion: 0.16.0
 searchBoost: 1
+searchDate_mv:
+  - "1968"
 source: AK
 title: Konvertierung von 19680000 in 1968
 url: https://www.dla-marbach.de/find/opac/id/AK00003003

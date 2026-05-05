@@ -185,6 +185,7 @@ AK,searchBoost,float,Gewichtung Relevanzranking,,,,,
 AK,searchClassification_id_mv,strings,Suche nach Systematik (Identnummer) in erweiterter Suche,788304,44 %,1237489,229382,"['SE00239168', 'SE00239169', 'SE00241087']"
 AK,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),127076,7 %,186411,362,"['Jünger, Ernst (1895-1998)']"
 AK,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),127076,7 %,186411,362,['PE00001233']
+AK,searchDate_mv,strings,Suche nach Datumsangaben in der Form TT.MM.JJJJ,,,,,
 AK,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,1561204,87 %,3550632,452548,['PE00003977']
 AK,searchEntityScore,int,Anzahl der Verweise auf den Normdatensatz,71339,4 %,71339,251,3
 AK,searchName_mv,texts,Personen/Körperschaften für erweiterte Suche,1522995,85 %,2703703,343827,"['Kracauer, Siegfried (1889-1966)']"
@@ -367,6 +368,7 @@ BF,schemaVersion,string,,49091,100 %,49091,1,0.16.0
 BF,searchBoost,float,Gewichtung Relevanzranking,,,,,
 BF,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“,45848,93 %,47881,28338,"['Suhrkamp-Verlag <Frankfurt, Main> (1950-)']"
 BF,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“,45848,93 %,47881,28342,['KS00001261']
+BF,searchDate_mv,strings,Suche nach Datumsangaben in der Form TT.MM.JJJJ,,,,,
 BF,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,45848,93 %,49643,29046,['PE00017920']
 BF,searchName_mv,texts,Personen/Körperschaften für erweiterte Suche,45848,93 %,49634,29036,"['Grimm, Hans (1875-1959)']"
 BF,searchNameAbout_mv,texts,"Personen/Körperschaften mit Relation ""Über"" für erweiterte Suche",1753,4 %,1925,1659,"['Schmidt, Arno (1914-1979)']"
@@ -492,6 +494,7 @@ BI,schemaVersion,string,,31144,100 %,31144,1,0.16.0
 BI,searchBoost,float,Gewichtung Relevanzranking,,,,,
 BI,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),16030,51 %,17972,596,"['Kunz-Hutterstrasser, Hermine (1873-1948)']"
 BI,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),16030,51 %,17972,596,['PE00324458']
+BI,searchDate_mv,strings,Suche nach Datumsangaben in der Form TT.MM.JJJJ,,,,,
 BI,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,30827,99 %,87872,18276,"['PE00030955', 'PE00250583']"
 BI,searchName_mv,texts,Personen/Körperschaften für erweiterte Suche,30826,99 %,86694,17414,"['Unbekannt', 'Pinthus, Kurt (1886-1975)']"
 BI,searchNameAbout_mv,texts,"Personen/Körperschaften mit Relation ""Über"" für erweiterte Suche",26835,86 %,43334,11559,"['Hesse, Hermann (1877-1962)']"
@@ -677,6 +680,7 @@ HS,schemaVersion,string,,1150802,100 %,1150802,1,0.16.0
 HS,searchBoost,float,Gewichtung Relevanzranking,,,,,
 HS,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),1142640,99 %,1348657,5852,"['Suhrkamp-Verlag <Frankfurt, Main> (1950-)']"
 HS,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),1142640,99 %,1348657,5853,['KS00001261']
+HS,searchDate_mv,strings,Suche nach Datumsangaben in der Form TT.MM.JJJJ,,,,,
 HS,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,1150799,100 %,2721633,402122,['PE00000144']
 HS,searchName_mv,texts,Personen/Körperschaften für erweiterte Suche,1150799,100 %,2669659,381856,"['Koselleck, Reinhart (1923-2006)']"
 HS,searchNameAbout_mv,texts,"Personen/Körperschaften mit Relation ""Über"" für erweiterte Suche",106927,9 %,147919,33898,"['Brecht, Bertolt (1898-1956)']"
@@ -769,6 +773,7 @@ KS,relation_text_mv,texts,,41468,32 %,160997,81657,['Berlin']
 KS,relation_type_mv,strings,,41483,32 %,161012,48,"['Sitz, Ort']"
 KS,schemaVersion,string,,130816,100 %,130816,1,0.16.0
 KS,searchBoost,float,Gewichtung Relevanzranking,,,,,
+KS,searchDate_mv,strings,Suche nach Datumsangaben in der Form TT.MM.JJJJ,,,,,
 KS,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,130816,100 %,130816,130816,KS00025407
 KS,searchEntityScore,int,Anzahl der Verweise auf den Normdatensatz,130816,100 %,130816,585,2
 KS,searchSuggestPayload,string,ID und Anzeigetitel für Suggester (Trennzeichen: ␝),130816,100 %,130816,130816,KS00024054␝Verband Schweizerischer Elektrizitätswerke
@@ -861,6 +866,7 @@ PE,relation_text_mv,texts,,183890,32 %,699018,100214,['Schriftsteller']
 PE,relation_type_mv,strings,,183900,32 %,699028,52,['Charakt. Beruf']
 PE,schemaVersion,string,,581879,100 %,581879,1,0.16.0
 PE,searchBoost,float,Gewichtung Relevanzranking,,,,,
+PE,searchDate_mv,strings,Suche nach Datumsangaben in der Form TT.MM.JJJJ,,,,,
 PE,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,216844,37 %,216844,216844,PE00334953
 PE,searchEntityScore,int,Anzahl der Verweise auf diesen Normdatensatz,216844,37 %,216844,1157,2
 PE,searchSuggestPayload,string,ID und Anzeigetitel für Suggester (Trennzeichen: ␝),216844,37 %,216844,216844,"PE00435512␝Richmond, Ilse"
@@ -961,6 +967,7 @@ TH,relation_text_mv,texts,,32272,45 %,491662,187009,['Fluss']
 TH,relation_type_mv,strings,,32272,45 %,491662,70,['Relation']
 TH,schemaVersion,string,,72370,100 %,72370,1,0.16.0
 TH,searchBoost,float,Gewichtung Relevanzranking,,,,,
+TH,searchDate_mv,strings,Suche nach Datumsangaben in der Form TT.MM.JJJJ,,,,,
 TH,seeAlso_display_mv,texts,aus TH display,61,0 %,86,59,['Nummer']
 TH,seeAlso_id_mv,strings,,61,0 %,86,61,['TH00039104']
 TH,source,string,,72370,100 %,72370,1,TH

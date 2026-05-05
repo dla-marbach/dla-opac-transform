@@ -1,0 +1,41 @@
+# Facette Zeit
+# Zeitspannen aus filterDateRange_mv umwandeln in ISO-8601 Zeitpunkte und validieren
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: id
+  expression: |
+    grel:
+    forNonBlank(
+      forEach(
+        cells['filterDateRange_mv'].value.split('␟'),
+        v,
+        with(
+          v.replace('[','').replace(']','').replace(' ','').replace('TO','␟'),
+          v,
+          forEach(
+            v.split('␟'),
+            y,
+            if(
+              y.length() == 4,
+              y,
+              if(
+                y.length() == 7,
+                y[5,7] + '.' + y[0,4] + '␟' + y,
+                if(
+                  y.length() == 10,
+                  y[8,10] + '.' + y[5,7] + '.' + y[0,4] + '␟' + y,
+                  null
+                )
+              )
+            )
+          ).join('␟')
+        )
+      ).join('␟'),
+      z,
+      z,
+      null
+    )
+  newColumnName: searchDate_mv
+  columnInsertIndex: 2
