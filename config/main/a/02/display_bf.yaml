@@ -9,12 +9,7 @@
     forNonBlank(
       cells['title'].value,
       x,
-      forNonBlank(
-        x.split(':')[1],
-        v,
-        v,
-        x
-      ),
+      x,
       'ohne Titel'
     )
     + forNonBlank(

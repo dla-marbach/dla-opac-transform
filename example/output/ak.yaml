@@ -553,7 +553,7 @@ exportRIS: |-
   AU  - Körperschaft 1
   CY  - Verlagsort 1; Verlagsort 2
   DA  - 2023
-  DB  - Öffentlicher Bestand 1; Öffentlicher Bestand 2; BF99999999
+  DB  - Z:Öffentlicher Bestand 1; Z:Öffentlicher Bestand 2; BF99999999
   ID  - AK00000001
   ET  - Ausgabebezeichnung Vorlageform
   IS  - Zeitschrift Heft
@@ -650,8 +650,8 @@ filterBibliography_mv:
   - Bibliographie 1
   - Bibliographie 2
 filterCollection_mv:
-  - Öffentlicher Bestand 1
-  - Öffentlicher Bestand 2
+  - Z:Öffentlicher Bestand 1
+  - Z:Öffentlicher Bestand 2
   - BF99999999
 filterDatePoint_mv:
   - "2023-01-01T00:00:00Z"
@@ -740,7 +740,7 @@ item_classification_display_mv:
   - Sacherschließungskette 1␝Sacherschließungskette 2␝SE99999999
 item_classification_id_mv:
   - SE00000001␝SE00000002␝SE99999999
-item_collection_display_mv: Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]␝Öffentlicher Bestand 2␝BF99999999
+item_collection_display_mv: Z:Öffentlicher Bestand 1 - [Bestandstyp, Bestandsart, Unterbestandsart]␝Z:Öffentlicher Bestand 2␝BF99999999
 item_collection_id_mv: BF00000001␝BF00000002␝BF99999999
 item_corporationAt_display_mv: Körperschaft 1 (1982-2001)␝Körperschaft 2␝KS99999999
 item_corporationAt_id_mv: KS00000001␝KS00000002␝KS99999999
