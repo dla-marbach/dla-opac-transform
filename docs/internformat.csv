@@ -181,11 +181,12 @@ AK,scholarlyPublication_date_mv,texts,,2752,0 %,2789,139,['2015']
 AK,scholarlyPublication_location_mv,texts,,21825,1 %,21886,822,['München']
 AK,scholarlyPublication_text_mv,texts,,2861,0 %,2900,647,['Univ.']
 AK,scholarlyPublication_type_mv,strings,,2878,0 %,2917,43,['Dissertation']
+AK,searchBoost,float,Gewichtung Relevanzranking,,,,,
 AK,searchClassification_id_mv,strings,Suche nach Systematik (Identnummer) in erweiterter Suche,788304,44 %,1237489,229382,"['SE00239168', 'SE00239169', 'SE00241087']"
 AK,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),127076,7 %,186411,362,"['Jünger, Ernst (1895-1998)']"
 AK,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),127076,7 %,186411,362,['PE00001233']
 AK,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,1561204,87 %,3550632,452548,['PE00003977']
-AK,searchEntityScore,pint,Anzahl der Verweise auf den Normdatensatz,71339,4 %,71339,251,3
+AK,searchEntityScore,int,Anzahl der Verweise auf den Normdatensatz,71339,4 %,71339,251,3
 AK,searchName_mv,texts,Personen/Körperschaften für erweiterte Suche,1522995,85 %,2703703,343827,"['Kracauer, Siegfried (1889-1966)']"
 AK,searchNameAbout_mv,texts,"Personen/Körperschaften mit Relation ""Über"" für erweiterte Suche",461549,26 %,547680,49711,"['Goethe, Johann Wolfgang von (1749-1832)']"
 AK,searchNameAt_mv,texts,"Personen/Körperschaften mit Relation ""Unter"" für erweiterte Suche",118020,7 %,206394,14209,"['Wolfskehl, Karl (1869-1948)', 'Schocken, Salman (1877-1959)', 'Schockenbibliothek']"
@@ -265,6 +266,7 @@ AU,personAt_display_mv,texts,aus PE display,118247,12 %,149150,3526,"['Jünger, 
 AU,personAt_id_mv,strings,,118247,12 %,149150,3527,['PE00001233']
 AU,provenance,boolean,,138197,14 %,138197,1,True
 AU,schemaVersion,string,,977776,100 %,977776,1,0.16.0
+AU,searchBoost,float,Gewichtung Relevanzranking,,,,,
 AU,source,string,,977776,100 %,977776,1,AU
 AU,statusItem,string,,977776,100 %,977776,4,Verfügbar
 AU,statusLoan,string,,977776,100 %,977776,7,Am Standort
@@ -281,6 +283,7 @@ BE,id,string,,6480,100 %,6480,6480,BE00001536
 BE,personAt_display_mv,texts,aus PE display,327,5 %,369,321,"['Meinke, Hanns (1884-1974)']"
 BE,personAt_id_mv,strings,,327,5 %,369,321,['PE00008533']
 BE,schemaVersion,string,,6480,100 %,6480,1,0.16.0
+BE,searchBoost,float,Gewichtung Relevanzranking,,,,,
 BE,source,string,,6480,100 %,6480,1,BE
 BE,statusLoan,string,,6430,99 %,6430,7,Am Standort
 BE,title,text,,6480,100 %,6480,6407,Unbekannt
@@ -361,6 +364,7 @@ BF,personAt_display_mv,texts,aus PE display,41708,85 %,42404,26303,"['Grimm, Han
 BF,personAt_id_mv,strings,,41708,85 %,42404,26305,['PE00017920']
 BF,reference_text_mv,texts,,950,2 %,950,719,Jb. XXXIII 465
 BF,schemaVersion,string,,49091,100 %,49091,1,0.16.0
+BF,searchBoost,float,Gewichtung Relevanzranking,,,,,
 BF,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“,45848,93 %,47881,28338,"['Suhrkamp-Verlag <Frankfurt, Main> (1950-)']"
 BF,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“,45848,93 %,47881,28342,['KS00001261']
 BF,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,45848,93 %,49643,29046,['PE00017920']
@@ -485,6 +489,7 @@ BI,personTo_id_mv,strings,,1100,4 %,1155,498,['PE00250583']
 BI,photoNegativeNumber_mv,strings,,22721,73 %,30862,30212,['M3109-0']
 BI,reference_text_mv,texts,,3341,11 %,3341,2685,"Nicolin, Günther: Kunst zu Kafka. Bonn: bücherstube am theater 1974. S. 29."
 BI,schemaVersion,string,,31144,100 %,31144,1,0.16.0
+BI,searchBoost,float,Gewichtung Relevanzranking,,,,,
 BI,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),16030,51 %,17972,596,"['Kunz-Hutterstrasser, Hermine (1873-1948)']"
 BI,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),16030,51 %,17972,596,['PE00324458']
 BI,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,30827,99 %,87872,18276,"['PE00030955', 'PE00250583']"
@@ -534,6 +539,7 @@ DBIS,noteRequirements_mv,texts,,111,8 %,113,110,"['<a href=""https://www.gbv.de/
 DBIS,publicationHistory,text,,298,22 %,298,241,1993-
 DBIS,publisherOriginalText_mv,texts,,725,53 %,766,577,"['Directmedia Publishing GmbH, Berlin']"
 DBIS,schemaVersion,string,,1358,100 %,1358,1,0.16.0
+DBIS,searchBoost,float,Gewichtung Relevanzranking,,,,,
 DBIS,source,string,,1358,100 %,1358,1,AK
 DBIS,subjectOther_mv,texts,,1357,100 %,5117,1870,['Literatur']
 DBIS,textualHolding_mv,texts,,298,22 %,298,241,1993-
@@ -564,6 +570,7 @@ EZB,relation_id_mv,strings,,288,21 %,312,259,['AK00022472']
 EZB,relation_text_mv,texts,,288,21 %,312,254,['Publications of the Modern Language Association of America : PMLA']
 EZB,relation_type_mv,strings,,288,21 %,312,1,['Erscheint auch als Druck-Ausgabe']
 EZB,schemaVersion,string,,1343,100 %,1343,1,0.16.0
+EZB,searchBoost,float,Gewichtung Relevanzranking,,,,,
 EZB,source,string,,1343,100 %,1343,1,AK
 EZB,textualHolding_mv,texts,,1343,100 %,1343,1111,1 (2009) -
 EZB,title,text,,1343,100 %,1343,1311,Philosophical Studies: An International Journal for Philosophy in the Analytic Tradition
@@ -667,6 +674,7 @@ HS,personTo_role_mv,strings,,715865,62 %,741453,6,['[Adressat/in]']
 HS,photoNegativeNumber_mv,strings,,1035,0 %,1349,1316,['Mikroform benutzen']
 HS,place_mv,texts,,768442,67 %,920371,29097,['Stuttgart']
 HS,schemaVersion,string,,1150802,100 %,1150802,1,0.16.0
+HS,searchBoost,float,Gewichtung Relevanzranking,,,,,
 HS,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),1142640,99 %,1348657,5852,"['Suhrkamp-Verlag <Frankfurt, Main> (1950-)']"
 HS,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),1142640,99 %,1348657,5853,['KS00001261']
 HS,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,1150799,100 %,2721633,402122,['PE00000144']
@@ -760,8 +768,9 @@ KS,relation_id_mv,strings,,40987,31 %,160444,77367,['KS00017343']
 KS,relation_text_mv,texts,,41468,32 %,160997,81657,['Berlin']
 KS,relation_type_mv,strings,,41483,32 %,161012,48,"['Sitz, Ort']"
 KS,schemaVersion,string,,130816,100 %,130816,1,0.16.0
+KS,searchBoost,float,Gewichtung Relevanzranking,,,,,
 KS,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,130816,100 %,130816,130816,KS00025407
-KS,searchEntityScore,pint,Anzahl der Verweise auf den Normdatensatz,130816,100 %,130816,585,2
+KS,searchEntityScore,int,Anzahl der Verweise auf den Normdatensatz,130816,100 %,130816,585,2
 KS,searchSuggestPayload,string,ID und Anzeigetitel für Suggester (Trennzeichen: ␝),130816,100 %,130816,130816,KS00024054␝Verband Schweizerischer Elektrizitätswerke
 KS,searchSuggestTerm_mv,strings,Suchbegriffe für Suggester,130816,100 %,351255,292255,"['Müller', 'Müller']"
 KS,seeAlso_display_mv,texts,aus KS display,89,0 %,119,90,['S. Fischer-Verlag']
@@ -787,6 +796,7 @@ MM,id,string,,139903,100 %,139903,139903,MM01540568
 MM,license,string,,2206,2 %,2206,3,CC0
 MM,licenseNote,text,,970,1 %,970,102,LiN - Rechte uneingeschränkt erteilt
 MM,schemaVersion,string,,139903,100 %,139903,1,0.16.0
+MM,searchBoost,float,Gewichtung Relevanzranking,,,,,
 MM,source,string,,139903,100 %,139903,1,MM
 MM,storageArea,string,,133664,96 %,133664,19,PHST01
 MM,thumbnail,string,Link zum Vorschaubild,3175,2 %,3175,3165,"https://digital.dla-marbach.de/viewer/api/v1/records/HS00499072/files/images/HS_00491666_0001.tif/full/!480,480/0/default.jpg"
@@ -850,8 +860,9 @@ PE,relation_id_mv,strings,,141871,24 %,598913,53752,['TH00001621']
 PE,relation_text_mv,texts,,183890,32 %,699018,100214,['Schriftsteller']
 PE,relation_type_mv,strings,,183900,32 %,699028,52,['Charakt. Beruf']
 PE,schemaVersion,string,,581879,100 %,581879,1,0.16.0
+PE,searchBoost,float,Gewichtung Relevanzranking,,,,,
 PE,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,216844,37 %,216844,216844,PE00334953
-PE,searchEntityScore,pint,Anzahl der Verweise auf diesen Normdatensatz,216844,37 %,216844,1157,2
+PE,searchEntityScore,int,Anzahl der Verweise auf diesen Normdatensatz,216844,37 %,216844,1157,2
 PE,searchSuggestPayload,string,ID und Anzeigetitel für Suggester (Trennzeichen: ␝),216844,37 %,216844,216844,"PE00435512␝Richmond, Ilse"
 PE,searchSuggestTerm_mv,strings,Suchbegriffe für Suggester,216844,37 %,518142,506096,"['Meyer, Wilhelm']"
 PE,seeAlso_display_mv,texts,aus PE display,165,0 %,165,165,"Georg, Manfred (1893-1965)"
@@ -886,6 +897,7 @@ SE,id,string,,230886,100 %,230886,230886,SE00162002
 SE,person_display_mv,texts,aus PE display,173094,75 %,181983,46358,"['Döblin, Alfred (1878-1957)']"
 SE,person_id_mv,strings,,173094,75 %,181983,46371,['PE00006675']
 SE,schemaVersion,string,,230886,100 %,230886,1,0.16.0
+SE,searchBoost,float,Gewichtung Relevanzranking,,,,,
 SE,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,192152,83 %,249040,97832,['PE00001233']
 SE,sequence_mv,strings,,230873,100 %,594740,8,"['Person', 'Autorenschema']"
 SE,source,string,,230886,100 %,230886,1,SE
@@ -909,6 +921,7 @@ SY,notation,string,,7587,100 %,7587,7559,S8.6.Vw
 SY,parent_display_mv,texts,aus SY display,7573,100 %,7573,1552,S8.6. Deutsche Literatur / Aspekte
 SY,parent_id_mv,strings,,7573,100 %,7573,1552,SY00004531
 SY,schemaVersion,string,,7587,100 %,7587,1,0.16.0
+SY,searchBoost,float,Gewichtung Relevanzranking,,,,,
 SY,seeAlso_display_mv,texts,aus SY display,76,1 %,82,74,['S8.6.6. Geistliche Literatur']
 SY,seeAlso_id_mv,strings,,76,1 %,82,76,['SY00005895']
 SY,source,string,,7587,100 %,7587,1,SY
@@ -947,6 +960,7 @@ TH,relation_id_mv,strings,,30739,42 %,489673,179117,['TH00122554']
 TH,relation_text_mv,texts,,32272,45 %,491662,187009,['Fluss']
 TH,relation_type_mv,strings,,32272,45 %,491662,70,['Relation']
 TH,schemaVersion,string,,72370,100 %,72370,1,0.16.0
+TH,searchBoost,float,Gewichtung Relevanzranking,,,,,
 TH,seeAlso_display_mv,texts,aus TH display,61,0 %,86,59,['Nummer']
 TH,seeAlso_id_mv,strings,,61,0 %,86,61,['TH00039104']
 TH,source,string,,72370,100 %,72370,1,TH

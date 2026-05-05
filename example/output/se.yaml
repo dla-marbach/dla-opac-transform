@@ -38,13 +38,6 @@ dateCataloged: "2023-06-01"
 dateModified: "2023-06-06"
 displayAddition1: Kettentyp
 filterSource: Systematikketten
-filterSubject_mv:
-  - Person 1 (1982-2001)
-  - Person 2 (1982-2001)
-  - Körperschaft 1
-  - Körperschaft 2
-  - Bibliotheksdokument 1
-  - Vertrauliches Bibliotheksdokument 2
 filterType_mv: Normdaten
 person_display_mv:
   - Person 1 (1982-2001)
@@ -55,6 +48,7 @@ person_id_mv:
   - PE00000002
   - PE99999999
 schemaVersion: 0.16.0
+searchBoost: 0.3
 searchEntity_id_mv:
   - KS00000001
   - KS00000002
@@ -93,6 +87,7 @@ display: Sacherschließungskette 2
 filterSource: Systematikketten
 filterType_mv: Normdaten
 schemaVersion: 0.16.0
+searchBoost: 0.3
 source: SE
 title: Sacherschließungskette 2
 url: https://www.dla-marbach.de/find/opac/id/SE00000002
@@ -112,6 +107,11 @@ corporation_id_mv:
   - KS00000002
 displayAddition1: Kette Bibliothek
 filterSource: Systematikketten
+filterSubject_mv:
+  - Person 1 (1982-2001)
+  - Person 2 (1982-2001)
+  - Körperschaft 1
+  - Körperschaft 2
 filterType_mv: Normdaten
 person_display_mv:
   - Person 1 (1982-2001)
@@ -120,6 +120,7 @@ person_id_mv:
   - PE00000001
   - PE00000002
 schemaVersion: 0.16.0
+searchBoost: 0.3
 searchEntity_id_mv:
   - KS00000001
   - KS00000002
@@ -139,6 +140,11 @@ corporation_id_mv:
   - KS00000004
 displayAddition1: Kette Bibliothek
 filterSource: Systematikketten
+filterSubject_mv:
+  - Person 3 (1982-2001)
+  - Person 4
+  - Körperschaft 3
+  - Körperschaft 4
 filterType_mv: Normdaten
 person_display_mv:
   - Person 3 (1982-2001)
@@ -147,6 +153,7 @@ person_id_mv:
   - PE00000003
   - PE00000004
 schemaVersion: 0.16.0
+searchBoost: 0.3
 searchEntity_id_mv:
   - KS00000003
   - KS00000004
@@ -166,11 +173,6 @@ corporation_id_mv:
   - KS00000002
 displayAddition1: Provenienz-Kette
 filterSource: Systematikketten
-filterSubject_mv:
-  - Person 1 (1982-2001)
-  - Person 2 (1982-2001)
-  - Körperschaft 1
-  - Körperschaft 2
 filterType_mv: Normdaten
 person_display_mv:
   - Person 1 (1982-2001)
@@ -179,6 +181,7 @@ person_id_mv:
   - PE00000001
   - PE00000002
 schemaVersion: 0.16.0
+searchBoost: 0.3
 searchEntity_id_mv:
   - KS00000001
   - KS00000002
@@ -202,11 +205,6 @@ corporation_id_mv:
   - KS00000004
 displayAddition1: Provenienz-Kette
 filterSource: Systematikketten
-filterSubject_mv:
-  - Person 3 (1982-2001)
-  - Person 4
-  - Körperschaft 3
-  - Körperschaft 4
 filterType_mv: Normdaten
 person_display_mv:
   - Person 3 (1982-2001)
@@ -215,6 +213,7 @@ person_id_mv:
   - PE00000003
   - PE00000004
 schemaVersion: 0.16.0
+searchBoost: 0.3
 searchEntity_id_mv:
   - KS00000003
   - KS00000004
@@ -238,11 +237,6 @@ corporation_id_mv:
   - KS00000006
 displayAddition1: Provenienz-Kette
 filterSource: Systematikketten
-filterSubject_mv:
-  - Person 5
-  - Person 6
-  - Körperschaft 5
-  - Körperschaft 6
 filterType_mv: Normdaten
 person_display_mv:
   - Person 5
@@ -251,6 +245,7 @@ person_id_mv:
   - PE00000005
   - PE00000006
 schemaVersion: 0.16.0
+searchBoost: 0.3
 searchEntity_id_mv:
   - KS00000005
   - KS00000006
@@ -268,6 +263,7 @@ display: 'Facette Zeit: Provenienzketten'
 filterSource: Systematikketten
 filterType_mv: Normdaten
 schemaVersion: 0.16.0
+searchBoost: 0.3
 source: SE
 subject_display_mv:
   - 'Facette Zeit: Provenienzketten 1999-05-22'
@@ -305,6 +301,12 @@ dateCataloged: "2026-04-13"
 dateModified: "2026-04-13"
 displayAddition1: Kette Bibliothek
 filterSource: Systematikketten
+filterSubject_mv:
+  - Person Systematik Alpha
+  - Person Systematik Beta
+  - Koerperschaft Systematik Alpha
+  - Koerperschaft Systematik Beta
+  - Systematik Testdokument Alpha
 filterType_mv: Normdaten
 person_display_mv:
   - Person Systematik Alpha
@@ -313,6 +315,7 @@ person_id_mv:
   - PE91000001
   - PE91000002
 schemaVersion: 0.16.0
+searchBoost: 0.3
 searchEntity_id_mv:
   - KS91000001
   - KS91000002
@@ -360,12 +363,17 @@ dateCataloged: "2026-04-13"
 dateModified: "2026-04-13"
 displayAddition1: Kette Bibliothek
 filterSource: Systematikketten
+filterSubject_mv:
+  - Person Systematik Alpha
+  - Koerperschaft Systematik Alpha
+  - Systematik Testdokument Beta
 filterType_mv: Normdaten
 person_display_mv:
   - Person Systematik Alpha
 person_id_mv:
   - PE91000001
 schemaVersion: 0.16.0
+searchBoost: 0.3
 searchEntity_id_mv:
   - KS91000001
   - PE91000001
@@ -408,12 +416,17 @@ dateCataloged: "2026-04-13"
 dateModified: "2026-04-13"
 displayAddition1: Bibliographie-Kette
 filterSource: Systematikketten
+filterSubject_mv:
+  - Person Systematik Beta
+  - Koerperschaft Systematik Beta
+  - Systematik Testdokument Alpha
 filterType_mv: Normdaten
 person_display_mv:
   - Person Systematik Beta
 person_id_mv:
   - PE91000002
 schemaVersion: 0.16.0
+searchBoost: 0.3
 searchEntity_id_mv:
   - KS91000002
   - PE91000002
@@ -458,12 +471,6 @@ dateCataloged: "2026-04-13"
 dateModified: "2026-04-13"
 displayAddition1: Provenienz-Kette
 filterSource: Systematikketten
-filterSubject_mv:
-  - Person Systematik Alpha
-  - Person Systematik Beta
-  - Koerperschaft Systematik Alpha
-  - Koerperschaft Systematik Beta
-  - Systematik Testdokument Beta
 filterType_mv: Normdaten
 person_display_mv:
   - Person Systematik Alpha
@@ -472,6 +479,7 @@ person_id_mv:
   - PE91000001
   - PE91000002
 schemaVersion: 0.16.0
+searchBoost: 0.3
 searchEntity_id_mv:
   - KS91000001
   - KS91000002

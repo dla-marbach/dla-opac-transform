@@ -550,6 +550,7 @@ place_mv:
   - Entstehungsort 1
   - Entstehungsort 2
 schemaVersion: 0.16.0
+searchBoost: 1
 searchCollectionCreator_display_mv:
   - Person 3 (1982-2001)
   - Person 4
@@ -726,6 +727,7 @@ filterType_mv: Handschriften
 genreOther_mv:
   - Kompositionen
 schemaVersion: 0.16.0
+searchBoost: 1
 source: HS
 title: Handschrift 2 Noten
 url: https://www.dla-marbach.de/find/opac/id/HS00000002
@@ -769,6 +771,7 @@ exportRIS: |-
 filterSource: Handschriften Einzelnachweise
 filterType_mv: Handschriften
 schemaVersion: 0.16.0
+searchBoost: 1
 source: HS
 title: Vertraulicher Datensatz
 url: https://www.dla-marbach.de/find/opac/id/HS00000003
@@ -819,6 +822,7 @@ filterSource: Handschriften Einzelnachweise
 filterType_mv: Handschriften
 genre: Hauptgattung
 schemaVersion: 0.16.0
+searchBoost: 1
 source: HS
 title: Brief
 url: https://www.dla-marbach.de/find/opac/id/HS00000004
@@ -1066,6 +1070,7 @@ personTo_role_mv:
   - '[Adressat/in]'
   - ␣
 schemaVersion: 0.16.0
+searchBoost: 1
 searchEntity_id_mv:
   - KS00000001
   - KS00000006
@@ -1166,6 +1171,7 @@ filterDigital: true
 filterSource: Handschriften Einzelnachweise
 filterType_mv: Handschriften
 schemaVersion: 0.16.0
+searchBoost: 1
 source: HS
 title: Verknüpfte Digitale Objekte
 usageRestrictionNote: |-
@@ -1214,6 +1220,7 @@ filterMedium_mv:
 filterSource: Handschriften Einzelnachweise
 filterType_mv: Handschriften
 schemaVersion: 0.16.0
+searchBoost: 1
 source: HS
 title: Filter Digital true
 usageRestrictionNote: |-

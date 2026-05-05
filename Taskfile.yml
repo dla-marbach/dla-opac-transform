@@ -110,8 +110,8 @@ tasks:
       - rm -r "solr/server/solr/internformat" 2> /dev/null || true; mkdir -p "solr/server/solr/internformat"
       - cp config/solr/* solr/server/solr/indexing/
       - cp config/solr/* solr/server/solr/internformat/
-      - touch solr/server/solr/indexing/core.properties solr/server/solr/indexing/stopwords.txt solr/server/solr/indexing/synonyms.txt
-      - touch solr/server/solr/internformat/core.properties solr/server/solr/internformat/stopwords.txt solr/server/solr/internformat/synonyms.txt
+      - touch solr/server/solr/indexing/core.properties
+      - touch solr/server/solr/internformat/core.properties
       - solr/bin/solr start --user-managed
       - solr/docker/scripts/wait-for-solr.sh
       - |

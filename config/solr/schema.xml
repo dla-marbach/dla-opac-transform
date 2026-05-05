@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <schema name="default-config" version="1.7">
-  <field name="_version_" type="plong" indexed="false" stored="false"/>
+  <field name="_version_" type="long" indexed="false" stored="false"/>
   <copyField source="*" dest="default"/>
   <uniqueKey>id</uniqueKey>
   <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true" multiValued="false"/>
@@ -9,8 +9,9 @@
   <fieldType name="datepoints" class="solr.DatePointField" multiValued="true"/>
   <fieldType name="daterange" class="solr.DateRangeField" sortMissingLast="true" multiValued="false"/>
   <fieldType name="dateranges" class="solr.DateRangeField" sortMissingLast="true" multiValued="true"/>
-  <fieldType name="pint" class="solr.IntPointField" docValues="true"/>
-  <fieldType name="plong" class="solr.LongPointField" docValues="true"/>
+  <fieldType name="float" class="solr.FloatPointField" docValues="true" multiValued="false"/>
+  <fieldType name="int" class="solr.IntPointField" docValues="true"/>
+  <fieldType name="long" class="solr.LongPointField" docValues="true"/>
   <fieldType name="string" class="solr.StrField" sortMissingLast="true" multiValued="false"/>
   <fieldType name="strings" class="solr.StrField" sortMissingLast="true" multiValued="true"/>
   <fieldType name="text" class="solr.SortableTextField" positionIncrementGap="100" multiValued="false">
@@ -400,11 +401,12 @@
   <field name="scholarlyPublication_location_mv" type="texts"/>
   <field name="scholarlyPublication_text_mv" type="texts"/>
   <field name="scholarlyPublication_type_mv" type="strings"/>
+  <field name="searchBoost" type="float" indexed="false"/>  
   <field name="searchClassification_id_mv" type="strings"/>
   <field name="searchCollectionCreator_display_mv" type="texts"/>
   <field name="searchCollectionCreator_id_mv" type="strings"/>
   <field name="searchEntity_id_mv" type="strings"/>
-  <field name="searchEntityScore" type="pint"/>
+  <field name="searchEntityScore" type="int"/>
   <field name="searchName_mv" type="texts"/>
   <field name="searchNameAbout_mv" type="texts"/>
   <field name="searchNameAt_mv" type="texts"/>

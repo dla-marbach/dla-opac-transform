@@ -70,6 +70,7 @@ personAt_id_mv:
   - PE99999999
 provenance: true
 schemaVersion: 0.16.0
+searchBoost: 0.1
 source: AU
 statusItem: Exemplarstatus
 statusLoan: Ausleihstatus
@@ -82,6 +83,7 @@ display: ohne Titel
 confidential: true
 note: Vertrauliches Exemplar
 schemaVersion: 0.16.0
+searchBoost: 0.1
 source: AU
 url: https://www.dla-marbach.de/find/opac/id/AU00000002
 ---
@@ -109,6 +111,7 @@ manifestation_display: Verknüpfte Digitale Objekte
 manifestation_id: AK00000071
 note: Verknüpfte Digitale Objekte
 schemaVersion: 0.16.0
+searchBoost: 0.1
 source: AU
 ---
 id: AU00000004
@@ -135,6 +138,7 @@ manifestation_display: Das erste verknüpfte digitale Objekt auf Exemplarebene w
 manifestation_id: AK00000072
 note: Verknüpfte Digitale Objekte
 schemaVersion: 0.16.0
+searchBoost: 0.1
 source: AU
 ---
 id: AU00000005
@@ -144,6 +148,7 @@ manifestation_display: 'Facette Medium : [Musikalia]'
 manifestation_id: AK00000062
 note: Buchumschlag
 schemaVersion: 0.16.0
+searchBoost: 0.1
 source: AU
 ---
 id: AU00000011
@@ -160,6 +165,7 @@ personAt_display_mv:
 personAt_id_mv:
   - PE00000007
 schemaVersion: 0.16.0
+searchBoost: 0.1
 source: AU
 ---
 id: AU00000012
@@ -172,6 +178,7 @@ manifestation_display: Facette Personen und Körperschaften Provenienzketten üb
 manifestation_id: AK00000066
 note: Facette Personen und Körperschaften / Provenienzketten / An
 schemaVersion: 0.16.0
+searchBoost: 0.1
 source: AU
 ---
 id: AU00000013
@@ -186,6 +193,7 @@ manifestation_display: Facette Personen und Körperschaften Provenienzketten üb
 manifestation_id: AK00000066
 note: Facette Personen und Körperschaften / Provenienzketten / Unter
 schemaVersion: 0.16.0
+searchBoost: 0.1
 source: AU
 ---
 id: AU00000021
@@ -195,6 +203,7 @@ manifestation_display: 'Facette Zeit: Sendedatum'
 manifestation_id: AK00000081
 note: 'Facette Zeit: Sendedatum'
 schemaVersion: 0.16.0
+searchBoost: 0.1
 source: AU
 ---
 id: AU00000022
@@ -207,4 +216,5 @@ manifestation_display: 'Facette Zeit: Provenienzketten'
 manifestation_id: AK00000082
 note: 'Facette Zeit: Provenienzketten'
 schemaVersion: 0.16.0
+searchBoost: 0.1
 source: AU

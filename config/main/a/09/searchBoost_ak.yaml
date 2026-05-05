@@ -1,0 +1,14 @@
+# Gewichtung Relevanzranking
+- op: core/column-addition
+  engineConfig:
+    facets: []
+  baseColumnName: id
+  expression: |
+    grel:
+    if(
+      cells['category'].value == 'Werktitel',
+      0.6,
+      1.0
+    )
+  newColumnName: searchBoost
+  columnInsertIndex: 2

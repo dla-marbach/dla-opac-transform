@@ -18,6 +18,7 @@ notation: Systematiknummer
 parent_display_mv: Basisnotation 7 übergeordnet
 parent_id_mv: SY00000007
 schemaVersion: 0.16.0
+searchBoost: 0.2
 seeAlso_display_mv:
   - Basisnotation 5 siehe auch
   - Basisnotation 6 siehe auch
@@ -39,6 +40,7 @@ displayAddition1: Basisnotation
 filterSource: Fachsystematik
 filterType_mv: Normdaten
 schemaVersion: 0.16.0
+searchBoost: 0.2
 source: SY
 title: Basisnotation 2
 url: https://www.dla-marbach.de/find/opac/id/SY00000002
@@ -52,6 +54,7 @@ filterType_mv: Normdaten
 parent_display_mv: Systematiknummer. Basisnotation 1
 parent_id_mv: SY00000001
 schemaVersion: 0.16.0
+searchBoost: 0.2
 source: SY
 title: Basisnotation 3 untergeordnet
 url: https://www.dla-marbach.de/find/opac/id/SY00000003
@@ -65,6 +68,7 @@ filterType_mv: Normdaten
 parent_display_mv: Systematiknummer. Basisnotation 1
 parent_id_mv: SY00000001
 schemaVersion: 0.16.0
+searchBoost: 0.2
 source: SY
 title: Basisnotation 4 untergeordnet
 url: https://www.dla-marbach.de/find/opac/id/SY00000004
@@ -76,6 +80,7 @@ displayAddition1: Basisnotation
 filterSource: Fachsystematik
 filterType_mv: Normdaten
 schemaVersion: 0.16.0
+searchBoost: 0.2
 source: SY
 title: Basisnotation 5 siehe auch
 url: https://www.dla-marbach.de/find/opac/id/SY00000005
@@ -87,6 +92,7 @@ displayAddition1: Basisnotation
 filterSource: Fachsystematik
 filterType_mv: Normdaten
 schemaVersion: 0.16.0
+searchBoost: 0.2
 source: SY
 title: Basisnotation 6 siehe auch
 url: https://www.dla-marbach.de/find/opac/id/SY00000006
@@ -102,6 +108,7 @@ displayAddition1: Basisnotation
 filterSource: Fachsystematik
 filterType_mv: Normdaten
 schemaVersion: 0.16.0
+searchBoost: 0.2
 source: SY
 title: Basisnotation 7 übergeordnet
 url: https://www.dla-marbach.de/find/opac/id/SY00000007
@@ -113,6 +120,7 @@ displayAddition1: Formschema
 filterSource: Fachsystematik
 filterType_mv: Normdaten
 schemaVersion: 0.16.0
+searchBoost: 0.2
 source: SY
 title: Formschema 1
 url: https://www.dla-marbach.de/find/opac/id/SY00000011
@@ -124,6 +132,7 @@ displayAddition1: Formschema
 filterSource: Fachsystematik
 filterType_mv: Normdaten
 schemaVersion: 0.16.0
+searchBoost: 0.2
 source: SY
 title: Formschema 2
 url: https://www.dla-marbach.de/find/opac/id/SY00000012
@@ -135,6 +144,7 @@ displayAddition1: Autorenschema
 filterSource: Fachsystematik
 filterType_mv: Normdaten
 schemaVersion: 0.16.0
+searchBoost: 0.2
 source: SY
 title: Autorenschema 1
 url: https://www.dla-marbach.de/find/opac/id/SY00000021
@@ -146,6 +156,7 @@ displayAddition1: Autorenschema
 filterSource: Fachsystematik
 filterType_mv: Normdaten
 schemaVersion: 0.16.0
+searchBoost: 0.2
 source: SY
 title: Autorenschema 2
 url: https://www.dla-marbach.de/find/opac/id/SY00000022
@@ -164,6 +175,7 @@ filterSource: Fachsystematik
 filterType_mv: Normdaten
 notation: AUT-0
 schemaVersion: 0.16.0
+searchBoost: 0.2
 source: SY
 subjectOther_mv: Register Test Autor
 title: Autorenschema Test Root
@@ -186,6 +198,7 @@ notation: AUT-1
 parent_display_mv: AUT-0. Autorenschema Test Root
 parent_id_mv: SY99000030
 schemaVersion: 0.16.0
+searchBoost: 0.2
 source: SY
 subjectOther_mv: Register Test Autor A
 title: Autorenschema Test A
@@ -204,6 +217,7 @@ notation: AUT-2
 parent_display_mv: AUT-1. Autorenschema Test A
 parent_id_mv: SY99000031
 schemaVersion: 0.16.0
+searchBoost: 0.2
 source: SY
 subjectOther_mv: Register Test Autor B
 title: Autorenschema Test B
@@ -222,6 +236,7 @@ notation: AUT-3
 parent_display_mv: AUT-1. Autorenschema Test A
 parent_id_mv: SY99000031
 schemaVersion: 0.16.0
+searchBoost: 0.2
 source: SY
 subjectOther_mv: Register Test Autor C
 title: Autorenschema Test C
@@ -238,6 +253,7 @@ filterSource: Fachsystematik
 filterType_mv: Normdaten
 notation: FORM-1
 schemaVersion: 0.16.0
+searchBoost: 0.2
 source: SY
 subjectOther_mv: Register Test Form
 title: Formschema Test
@@ -258,6 +274,7 @@ filterSource: Fachsystematik
 filterType_mv: Normdaten
 notation: BAS-0
 schemaVersion: 0.16.0
+searchBoost: 0.2
 source: SY
 subjectOther_mv: Register Test Basis
 title: Basisnotation Test Root
@@ -280,6 +297,7 @@ notation: BAS-1
 parent_display_mv: BAS-0. Basisnotation Test Root
 parent_id_mv: SY99000050
 schemaVersion: 0.16.0
+searchBoost: 0.2
 source: SY
 subjectOther_mv: Register Test Basis A
 title: Basisnotation Test A
@@ -298,6 +316,7 @@ notation: BAS-2
 parent_display_mv: BAS-1. Basisnotation Test A
 parent_id_mv: SY99000051
 schemaVersion: 0.16.0
+searchBoost: 0.2
 source: SY
 subjectOther_mv: Register Test Basis B
 title: Basisnotation Test B

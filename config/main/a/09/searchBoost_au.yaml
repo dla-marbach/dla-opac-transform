@@ -1,0 +1,10 @@
+# Gewichtung Relevanzranking
+- op: core/column-addition
+  engineConfig:
+    facets: []
+  baseColumnName: id
+  expression: |
+    grel:
+    0.1
+  newColumnName: searchBoost
+  columnInsertIndex: 2
