@@ -34,7 +34,7 @@
       <filter name="lowercase"/>
     </analyzer>
   </fieldType>
-  <fieldType name="text_normalized" class="solr.SortableTextField" positionIncrementGap="100" multiValued="false">
+  <fieldType name="text_normalized_tf0" class="solr.SortableTextField" positionIncrementGap="100" multiValued="false">
     <analyzer type="index">
       <charFilter name="patternReplace" pattern=":" replacement=" "/>
       <tokenizer name="standard"/>
@@ -57,6 +57,10 @@
       <filter name="patternReplace" pattern="ph" replacement="f"/>
       <filter name="asciifolding"/>
     </analyzer>
+    <similarity class="solr.BM25SimilarityFactory">
+      <float name="k1">0.0</float>
+      <float name="b">0.75</float>
+    </similarity>
   </fieldType>
   <fieldType name="texts_normalized" class="solr.TextField" positionIncrementGap="100" multiValued="true">
     <analyzer type="index">
@@ -188,7 +192,7 @@
   <field name="dimension_diameter_mv" type="strings"/>
   <field name="dimension_height_mv" type="strings"/>
   <field name="dimension_width_mv" type="strings"/>
-  <field name="display" type="text_normalized" required="true"/>
+  <field name="display" type="text_normalized_tf0" required="true"/>
   <field name="displayAddition1" type="text"/>
   <field name="displayAddition2" type="text"/>
   <field name="displayName" type="text"/>
