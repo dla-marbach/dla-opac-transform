@@ -37,7 +37,8 @@
 
     <maxBooleanClauses>${solr.max.booleanClauses:1024}</maxBooleanClauses>
 
-    <minPrefixQueryTermLength>${solr.query.minPrefixLength:-1}</minPrefixQueryTermLength>
+    <!-- Vermeidung des Performance-Risikos einer 1-Zeichen-Wildcard-Suche -->
+    <minPrefixQueryTermLength>${solr.query.minPrefixLength:3}</minPrefixQueryTermLength>
 
     <filterCache size="4096"
                  initialSize="1024"
@@ -70,6 +71,131 @@
     </listener>
     <listener event="firstSearcher" class="solr.QuerySenderListener">
       <arr name="queries">
+
+        <!-- Query 1: Stats-Abfrage (wärmt filterCache und documentCache) -->
+        <lst>
+          <str name="q">*:*</str>
+          <str name="defType">edismax</str>
+          <arr name="fq">
+            <str>NOT source:(AU OR BE OR MM)</str>
+            <str>NOT confidential:true</str>
+          </arr>
+          <str name="rows">0</str>
+          <str name="sort">score desc</str>
+          <str name="stats">true</str>
+          <str name="stats.field">filterDatePoint_mv</str>
+          <str name="fl">id,display,displayAddition1,displayAddition2,displayName,filterType_mv,filterMultipart,filterDigital,digitalObject_thumbnail_mv,filterMedium_mv,usageRestrictionNote,website_url_mv,website_description_mv,digitalObject_id_mv,digitalObject_display_mv,digitalObject_hyperlink_mv,digitalObject_accessLevel_mv,digitalObject_fileExtension_mv,item_provenance_mv</str>
+          <str name="omitHeader">true</str>
+          <str name="wt">json</str>
+        </lst>
+
+        <!-- Query 2: Haupt-Suchanfrage mit Facetten (wärmt filterCache, queryResultCache, documentCache) -->
+        <lst>
+          <str name="q">*:*</str>
+          <str name="defType">edismax</str>
+          <arr name="fq">
+            <str>NOT source:(AU OR BE OR MM)</str>
+            <str>NOT confidential:true</str>
+          </arr>
+          <str name="rows">25</str>
+          <str name="start">0</str>
+          <str name="sort">score desc</str>
+          <str name="fl">id,display,displayAddition1,displayAddition2,displayName,filterType_mv,filterMultipart,filterDigital,digitalObject_thumbnail_mv,filterMedium_mv,usageRestrictionNote,website_url_mv,website_description_mv,digitalObject_id_mv,digitalObject_display_mv,digitalObject_hyperlink_mv,digitalObject_accessLevel_mv,digitalObject_fileExtension_mv,item_provenance_mv</str>
+          <str name="omitHeader">true</str>
+          <str name="wt">json</str>
+
+          <!-- Facetten aktivieren -->
+          <str name="facet">true</str>
+          <arr name="facet.field">
+            <str>filterDigital</str>
+            <str>filterType_mv</str>
+            <str>filterFormContent_mv</str>
+            <str>filterMedium_mv</str>
+            <str>filterAuthority_mv</str>
+            <str>filterSubject_mv</str>
+            <str>filterLanguage_mv</str>
+            <str>filterLanguageType_mv</str>
+            <str>filterLocation_mv</str>
+            <str>filterLocationType_mv</str>
+            <str>filterCollection_mv</str>
+            <str>filterSource</str>
+            <str>filterBibliography_mv</str>
+            <str>filterAuthorityRole_mv</str>
+            <str>filterAuthorityRelation_mv</str>
+            <str>searchEntity_id_mv</str>
+          </arr>
+
+          <!-- Facetten-Queries (NeuImKatalog) -->
+          <arr name="facet.query">
+            <str>filterRecent:[NOW/DAY-7DAYS TO NOW/DAY+1DAY]</str>
+            <str>filterRecent:[NOW/DAY-1MONTH TO NOW/DAY+1DAY]</str>
+            <str>filterRecent:[NOW/DAY-3MONTHS TO NOW/DAY+1DAY]</str>
+            <str>filterRecent:[NOW/DAY-6MONTHS TO NOW/DAY+1DAY]</str>
+            <str>filterRecent:[NOW/DAY-1YEAR TO NOW/DAY+1DAY]</str>
+          </arr>
+
+          <!-- Datums-Bereichsfacette -->
+          <str name="facet.range">{!key=Zeit}filterDateRange_mv</str>
+          <str name="f.filterDateRange_mv.facet.range.start">NOW/YEAR-2050YEARS</str>
+          <str name="f.filterDateRange_mv.facet.range.end">NOW</str>
+          <str name="f.filterDateRange_mv.facet.range.gap">+41YEAR</str>
+
+          <!-- Facetten-Limits und Sortierung -->
+          <str name="f.filterDigital.facet.limit">50</str>
+          <str name="f.filterDigital.facet.mincount">1</str>
+          <str name="f.filterDigital.facet.sort">count</str>
+          <str name="f.filterType_mv.facet.limit">50</str>
+          <str name="f.filterType_mv.facet.mincount">1</str>
+          <str name="f.filterType_mv.facet.sort">count</str>
+          <str name="f.filterFormContent_mv.facet.limit">50</str>
+          <str name="f.filterFormContent_mv.facet.mincount">1</str>
+          <str name="f.filterFormContent_mv.facet.sort">count</str>
+          <str name="f.filterFormContent_mv.facet.missing">true</str>
+          <str name="f.filterMedium_mv.facet.limit">50</str>
+          <str name="f.filterMedium_mv.facet.mincount">1</str>
+          <str name="f.filterMedium_mv.facet.sort">count</str>
+          <str name="f.filterMedium_mv.facet.missing">true</str>
+          <str name="f.filterAuthority_mv.facet.limit">50</str>
+          <str name="f.filterAuthority_mv.facet.mincount">1</str>
+          <str name="f.filterAuthority_mv.facet.sort">count</str>
+          <str name="f.filterSubject_mv.facet.limit">50</str>
+          <str name="f.filterSubject_mv.facet.mincount">1</str>
+          <str name="f.filterSubject_mv.facet.sort">count</str>
+          <str name="f.filterSubject_mv.facet.missing">true</str>
+          <str name="f.filterLanguage_mv.facet.limit">50</str>
+          <str name="f.filterLanguage_mv.facet.mincount">1</str>
+          <str name="f.filterLanguage_mv.facet.sort">count</str>
+          <str name="f.filterLanguageType_mv.facet.limit">50</str>
+          <str name="f.filterLanguageType_mv.facet.mincount">1</str>
+          <str name="f.filterLanguageType_mv.facet.sort">count</str>
+          <str name="f.filterLocation_mv.facet.limit">50</str>
+          <str name="f.filterLocation_mv.facet.mincount">1</str>
+          <str name="f.filterLocation_mv.facet.sort">count</str>
+          <str name="f.filterLocationType_mv.facet.limit">50</str>
+          <str name="f.filterLocationType_mv.facet.mincount">1</str>
+          <str name="f.filterLocationType_mv.facet.sort">count</str>
+          <str name="f.filterCollection_mv.facet.limit">50</str>
+          <str name="f.filterCollection_mv.facet.mincount">1</str>
+          <str name="f.filterCollection_mv.facet.sort">count</str>
+          <str name="f.filterCollection_mv.facet.missing">true</str>
+          <str name="f.filterSource.facet.limit">50</str>
+          <str name="f.filterSource.facet.mincount">1</str>
+          <str name="f.filterSource.facet.sort">count</str>
+          <str name="f.filterSource.facet.missing">true</str>
+          <str name="f.filterBibliography_mv.facet.limit">50</str>
+          <str name="f.filterBibliography_mv.facet.mincount">1</str>
+          <str name="f.filterBibliography_mv.facet.sort">count</str>
+          <str name="f.filterBibliography_mv.facet.missing">true</str>
+          <str name="f.filterAuthorityRole_mv.facet.limit">50</str>
+          <str name="f.filterAuthorityRole_mv.facet.mincount">1</str>
+          <str name="f.filterAuthorityRole_mv.facet.sort">count</str>
+          <str name="f.filterAuthorityRelation_mv.facet.limit">50</str>
+          <str name="f.filterAuthorityRelation_mv.facet.mincount">1</str>
+          <str name="f.filterAuthorityRelation_mv.facet.sort">count</str>
+          <str name="f.searchEntity_id_mv.facet.limit">2</str>
+          <str name="f.searchEntity_id_mv.facet.mincount">1</str>
+          <str name="f.searchEntity_id_mv.facet.sort">count</str>
+        </lst>
       </arr>
     </listener>
 
@@ -96,6 +222,8 @@
       <str name="fl">accessLevel, accessionNumber, accession_display, accession_id, acronym_mv, broadcastDate, broadcastStation, callNumberBibliographic_mv, callNumberCollection_mv, callNumberItem, callNumberItemSuffix, callNumberReadingRoom, category, categoryContent_mv, categoryEntity_mv, categoryIndex_mv, categoryMedia_mv, categoryMedium_mv, categoryPublication_mv, categorySub, categorySubSub, child_display_mv, child_id_mv, classificationAuthor_display_mv, classificationAuthor_id_mv, classificationChain, classificationForm_display_mv, classificationForm_id_mv, classificationNewspaper_comment_mv, classificationNewspaper_text_mv, classificationOther_comment_mv, classificationOther_text_mv, classificationSubjectOther_mv, classificationSubject_display_mv, classificationSubject_id_mv, classification_category_mv, classification_display_mv, classification_id_mv, collection_display_mv, collection_id_mv, content, contributor_display_mv, contributor_id_mv, contributor_role_mv, corporationAbout_comment_mv, corporationAbout_display_mv, corporationAbout_id_mv, corporationAbout_role_mv, corporationAt_display_mv, corporationAt_id_mv, corporationByConference_creator_mv, corporationByConference_display_mv, corporationByConference_id_mv, corporationByConference_role_mv, corporationByTerritory_creator_mv, corporationByTerritory_display_mv, corporationByTerritory_id_mv, corporationByTerritory_role_mv, corporationBy_comment_mv, corporationBy_creator_mv, corporationBy_display_mv, corporationBy_id_mv, corporationBy_role_mv, corporationTo_comment_mv, corporationTo_display_mv, corporationTo_id_mv, corporationTo_role_mv, corporation_display_mv, corporation_id_mv, country_mv, creator_display_mv, creator_id_mv, creator_role_mv, dateActivityEnd, dateActivityStart, dateCataloged, dateLifespanComment_mv, dateLifespanEnd, dateLifespanStart, dateModified, dateNote_mv, dateOrigin, dateOriginComment_mv, dateOriginEnd, dateOriginStart, dateOtherComment_mv, dateOther_mv, dateRetention, department, description_text_mv, description_type_mv, digitalObject_accessLevel_mv, digitalObject_display_mv, digitalObject_fileExtension_mv, digitalObject_hyperlink_mv, digitalObject_id_mv, digitalObject_licenseNote_mv, digitalObject_license_mv, digitalObject_thumbnail_mv, dimension_comment_mv, dimension_depth_mv, dimension_diameter_mv, dimension_height_mv, dimension_width_mv, display, displayAddition1, displayAddition2, displayName, displayTree, edition, editionNormalized, enveloped, extent, extentFormat, extentIllustrations_mv, extentSupplements, fileExtension, filePath, filterAuthorityRelation_mv, filterAuthorityRole_mv, filterAuthority_mv, filterBibliography_mv, filterCollection_mv, filterDatePoint_mv, filterDateRange_mv, filterDigital, filterFormContent_mv, filterLanguageType_mv, filterLanguage_mv, filterLocationType_mv, filterLocation_mv, filterMedium_mv, filterMultipart, filterRecent, filterSource, filterSubject_mv, filterType_mv, gender, genre, genreOther_mv, genreSub, genreSubOther_mv, gnd_id_mv, gnd_type_mv, headword_mv, host_display_mv, host_id_mv, hyperlink, id, identifier_id_mv, identifier_type_mv, index, inscription, inventory, inventoryNumber, isbn_mv, ismn_mv, issn_mv, item_accessionNumber_mv, item_broadcastDate_mv, item_broadcastStation_mv, item_callNumberCollection_mv, item_callNumberItemSuffix_mv, item_callNumberItem_mv, item_callNumberReadingRoom_mv, item_classification_display_mv, item_classification_id_mv, item_collection_display_mv, item_collection_id_mv, item_corporationAt_display_mv, item_corporationAt_id_mv, item_digitalObject_accessLevel_mv, item_digitalObject_display_mv, item_digitalObject_fileExtension_mv, item_digitalObject_hyperlink_mv, item_digitalObject_id_mv, item_digitalObject_licenseNote_mv, item_digitalObject_license_mv, item_digitalObject_thumbnail_mv, item_display_mv, item_enveloped_mv, item_id_mv, item_location_mv, item_manifestation_display_mv, item_manifestation_id_mv, item_note_mv, item_noteOther_mv, item_noteProvenance_mv, item_personAt_display_mv, item_personAt_id_mv, item_provenance_mv, item_supplements_id_mv, item_usageRestriction_mv, item_usageRestrictionNote_mv, item_virtualRecording_mv, itemization_extent_mv, itemization_status_mv, itemization_unit_mv, journalIssue_display_mv, journalIssue_id_mv, languageOriginal_mv, language_mv, library_display_mv, library_id_mv, license, licenseNote, linkCommonsImage_file_mv, linkCommonsImage_rights_mv, linkCommonsSignature_file_mv, linkCommonsSignature_rights_mv, linkDeutscheBiographie_mv, linkFilmportal_mv, linkWikidata, linkWikidataWebsite_mv, linkWikipedia, locationBoxNumber, locationComment, locationFolderNumber, location_mv, manifestation_display, manifestation_id, manuscript_display_mv, manuscript_id_mv, material, mediaNumber, microform_mv, nameAlternative_comment_mv, nameAlternative_name_mv, nameAlternative_suffix_mv, nameAlternative_type_mv, nameFormerOrLater_display_mv, nameFormerOrLater_id_mv, nameOriginal_mv, nameTemporary_display_mv, nameTemporary_id_mv, notation, note, noteBibliography_mv, noteClassification, noteContent_mv, noteDimension, noteExplanatory_text_mv, noteExplanatory_type_mv, noteFootnote_text_mv, noteFootnote_type_mv, noteObjectType, noteOther_mv, noteProvenance_text_mv, noteProvenance_type_mv, noteRemark_text_mv, noteRemark_type_mv, noteRequirements_mv, object_display, object_id, occupation_mv, order_extent_mv, order_status_mv, order_unit_mv, parentIssueDate, parentIssueNumber, parentIssuePage, parentIssueVolume, parentIssueYear, parentIssueYearVolume, parentTitleOriginal_mv, parentVolumeNormalized_mv, parentVolumeTotal, parentVolume_mv, parent_displayAddition1_mv, parent_display_mv, parent_id_mv, parent_titleResponsability_mv, parent_type_mv, personAbout_comment_mv, personAbout_display_mv, personAbout_id_mv, personAbout_role_mv, personAt_display_mv, personAt_id_mv, personBy_comment_mv, personBy_creator_mv, personBy_display_mv, personBy_id_mv, personBy_role_mv, personTo_comment_mv, personTo_display_mv, personTo_id_mv, personTo_role_mv, person_display_mv, person_id_mv, photoNegativeNumber_mv, placeBirth, placeDeath, place_mv, predecessor_display_mv, predecessor_id_mv, provenance, publicationHistory, publisherOriginalLocation_mv, publisherOriginalText_mv, publisher_display_mv, publisher_id_mv, reference_text_mv, reference_type_mv, relation_comment_mv, relation_id_mv, relation_text_mv, relation_type_mv, schemaVersion, scholarlyPublication_date_mv, scholarlyPublication_location_mv, scholarlyPublication_text_mv, scholarlyPublication_type_mv, searchClassification_id_mv, searchCollectionCreator_display_mv, searchCollectionCreator_id_mv, searchEntity_id_mv, searchEntityScore, searchName_mv, searchNameAbout_mv, searchNameAt_mv, searchNameBy_mv, searchNameTo_mv, searchSuggestPayload, searchSuggestTerm_mv, seeAlso_display_mv, seeAlso_id_mv, sequence_mv, sortingKey, sortingKeySub, sortingTitleMain, sortingTitleOther, source, statusCataloging, statusEditing, statusItem, statusJournalReview, statusLoan, statusPreservation, storageArea, subjectLocation_comment_mv, subjectLocation_display_mv, subjectLocation_id_mv, subjectLocation_type_mv, subjectOther_mv, subject_display_mv, subject_id_mv, subject_type_mv, subject_useTerm_mv, subject_usedFor_mv, successor_display_mv, successor_id_mv, supplements_id_mv, textualHolding_mv, thumbnail, title, titleMain_category, titleMain_comment, titleMain_text, titleMain_type, titleOriginal, titleOther_category_mv, titleOther_comment_mv, titleOther_language_mv, titleOther_text_mv, titleOther_type_mv, titlePrefix, titleResponsability, titleResponsabilityFull, titleShort, titleSuffix, titleType, url, usageRestriction, usageRestrictionComment, usageRestrictionNote, useTerm_display_mv, useTerm_id_mv, usedFor_display_mv, usedFor_id_mv, vendor_id_mv, vendor_type_mv, virtualRecording, website_description_mv, website_url_mv, workAbout_display_mv, workAbout_id_mv, workAbout_titleOther_text_mv, workCompilation_display_mv, workCompilation_id_mv, work_display_mv, work_id_mv</str>
       <!-- Standardsuchfeld definieren -->
       <str name="df">default</str>
+      <!-- Facetten parallel berechnen -->
+      <str name="facet.threads">4</str>
     </lst>
     <!-- Query Ergänzungen (können vom Client NICHT verändert werden) -->
     <lst name="appends">
@@ -104,6 +232,12 @@
       <!-- Relevanzranking -->
       <str name="qf">default^1 display^10 displayName^5 displayAddition1^8 displayAddition2^5 searchName_mv^2</str>
       <str name="boost">field(searchBoost)</str>
+      <!-- facet.method enum für Felder mit niedriger Kardinalität -->
+      <str name="f.filterDigital.facet.method">enum</str>
+      <str name="f.filterType_mv.facet.method">enum</str>
+      <str name="f.filterSource.facet.method">enum</str>
+      <str name="f.filterBibliography_mv.facet.method">enum</str>
+      <str name="f.filterMedium_mv.facet.method">enum</str>
     </lst>
   </requestHandler>
 
@@ -146,6 +280,7 @@
     <!-- Normdaten-Autovervollständigung -->
     <lst name="suggester">
       <str name="name">mySuggester</str>
+      <str name="storeDir">suggester_mySuggester</str>
       <str name="lookupImpl">AnalyzingInfixLookupFactory</str>
       <str name="dictionaryImpl">DocumentDictionaryFactory</str>
       <str name="field">searchSuggestTerm_mv</str>
