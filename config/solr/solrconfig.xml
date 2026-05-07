@@ -229,7 +229,7 @@
       <!-- Vertrauliche Dokumente ausschließen -->
       <str name="fq">NOT confidential:true</str>
       <!-- Relevanzranking -->
-      <str name="qf">display^10 displayName^7 displayAddition1^5 displayAddition2^5 searchName_mv^5 default^1</str>
+      <str name="qf">display^10 displayName^7 displayAddition1^8 displayAddition2^5 searchName_mv^5 default^1</str>
       <str name="boost">field(searchBoost)</str>
       <!-- facet.method enum für Felder mit niedriger Kardinalität -->
       <str name="f.filterDigital.facet.method">enum</str>
