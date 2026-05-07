@@ -37,8 +37,7 @@
 
     <maxBooleanClauses>${solr.max.booleanClauses:1024}</maxBooleanClauses>
 
-    <!-- Vermeidung des Performance-Risikos einer 1-Zeichen-Wildcard-Suche -->
-    <minPrefixQueryTermLength>${solr.query.minPrefixLength:3}</minPrefixQueryTermLength>
+    <minPrefixQueryTermLength>${solr.query.minPrefixLength:-1}</minPrefixQueryTermLength>
 
     <filterCache size="4096"
                  initialSize="1024"
