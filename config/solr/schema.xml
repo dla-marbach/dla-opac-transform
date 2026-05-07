@@ -3,6 +3,11 @@
   <field name="_version_" type="long" indexed="false" stored="false"/>
   <copyField source="*" dest="default"/>
   <uniqueKey>id</uniqueKey>
+  <!-- Mehrfache Funde in einem Feld werden mit k1=0.1 nur geringfügig positiv gewichtet -->
+  <similarity class="solr.BM25SimilarityFactory">
+    <float name="k1">0.1</float>
+    <float name="b">0.75</float>
+  </similarity>
   <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true" multiValued="false"/>
   <fieldType name="booleans" class="solr.BoolField" sortMissingLast="true" multiValued="true"/>
   <fieldType name="datepoint" class="solr.DatePointField" multiValued="false"/>

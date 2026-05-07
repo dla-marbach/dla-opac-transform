@@ -14,12 +14,6 @@
     <lockType>${solr.lock.type:native}</lockType>
   </indexConfig>
 
-  <!-- Mehrfache Funde in einem Feld werden mit k1=0.1 nur geringfügig positiv gewichtet -->
-  <similarity class="solr.BM25SimilarityFactory">
-    <float name="k1">0.1</float>
-    <float name="b">0.75</float>
-  </similarity>
-
   <updateHandler class="solr.DirectUpdateHandler2">
 
     <!-- Transaktionslog deaktiviert
