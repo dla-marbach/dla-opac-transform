@@ -5,6 +5,20 @@
   baseColumnName: id
   expression: |
     grel:
-    1.2
+    with(
+      cells['id'].value.cross('au','collection_id_mv').length()
+        + cells['id'].value.cross('hs','collection_id_mv').length()
+        + cells['id'].value.cross('bi','collection_id_mv').length(),
+      x,
+      if(
+        x > 0,
+        with(
+          log(x) / 10 + 1.0,
+          x,
+          x.toString("%.2f")
+        ),
+        1.0
+      )
+    ).toNumber()
   newColumnName: searchBoost
   columnInsertIndex: 2
