@@ -1,0 +1,52 @@
+# Verweisungsformen verknüpfter Personen, Körperschaften und Werke
+- op: core/column-addition
+  engineConfig:
+    facets: []
+    mode: row-based
+  baseColumnName: searchEntity_id_mv
+  expression: |
+    grel:
+    forNonBlank(
+      forNonBlank(
+        value,
+        x,
+        forEach(
+          x.split('␟'),
+          v,
+          if(
+            v[0,2] == 'PE',
+            forNonBlank(
+              v.cross('pe','id')[0].cells['nameAlternative_name_mv'].value,
+              name,
+              name,
+              null
+            ),
+            if(
+              v[0,2] == 'KS',
+              forNonBlank(
+                v.cross('ks','id')[0].cells['nameAlternative_name_mv'].value,
+                name,
+                name,
+                null
+              ),
+              if(
+                v[0,2] == 'AK',
+                forNonBlank(
+                  v.cross('ak','id')[0].cells['titleOther_text_mv'].value,
+                  name,
+                  name,
+                  null
+                ),
+                null
+              )
+            )
+          )
+        ).join('␟'),
+        null
+      ),
+      z,
+      z,
+      null
+    )
+  newColumnName: searchVariant_mv
+  columnInsertIndex: 2
