@@ -26,10 +26,18 @@
       ),
       x,
       if(
-        x > 0,
+        x > 50,
         log(x) / 10 + 1.0,
         1.0
       )
     )
   newColumnName: searchBoost
   columnInsertIndex: 2
+# Rundung auf 2 Nachkommastellen
+- op: core/text-transform
+  engineConfig:
+    facets: []
+  columnName: searchBoost
+  expression: |
+    grel:
+    value.toString('%.2f').toNumber()
