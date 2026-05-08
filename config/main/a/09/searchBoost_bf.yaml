@@ -14,8 +14,8 @@
         x > 0,
         with(
           log(x) / 10 + 1.0,
-          x,
-          x.toString("%.2f")
+          v,
+          v.toString("%.2f")
         ),
         1.0
       )
