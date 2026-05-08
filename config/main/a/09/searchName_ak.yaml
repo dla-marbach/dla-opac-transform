@@ -1,5 +1,6 @@
 # Personen/Körperschaften für erweiterte Suche
 # basierend auf filterAuthority_mv und filterAuthorityRelation_mv
+# ohne Lebensdaten
 # searchName_mv: Alle Relationen
 # searchNameAbout_mv: mit Relation "Über"
 # searchNameAt_mv: mit Relation "Unter"
@@ -31,7 +32,7 @@
           v,
           if(
             v.split('␝')[1] == 'Über',
-            v.split('␝')[0],
+            v.split('␝')[0].split(' (')[0],
             null
           )
         ).join('␟'),
@@ -59,7 +60,7 @@
           v,
           if(
             v.split('␝')[1] == 'Unter',
-            v.split('␝')[0],
+            v.split('␝')[0].split(' (')[0],
             null
           )
         ).join('␟'),
@@ -87,7 +88,7 @@
           v,
           if(
             v.split('␝')[1] == 'Von',
-            v.split('␝')[0],
+            v.split('␝')[0].split(' (')[0],
             null
           )
         ).join('␟'),
@@ -115,7 +116,7 @@
           v,
           if(
             v.split('␝')[1] == 'An',
-            v.split('␝')[0],
+            v.split('␝')[0].split(' (')[0],
             null
           )
         ).join('␟'),

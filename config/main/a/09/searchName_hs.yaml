@@ -31,7 +31,7 @@
           v,
           if(
             v.split('␝')[1] == 'Über',
-            v.split('␝')[0],
+            v.split('␝')[0].split(' (')[0],
             null
           )
         ).join('␟'),
@@ -59,7 +59,7 @@
           v,
           if(
             v.split('␝')[1] == 'Unter',
-            v.split('␝')[0],
+            v.split('␝')[0].split(' (')[0],
             null
           )
         ).join('␟'),
@@ -87,7 +87,7 @@
           v,
           if(
             v.split('␝')[1] == 'Von',
-            v.split('␝')[0],
+            v.split('␝')[0].split(' (')[0],
             null
           )
         ).join('␟'),
@@ -115,7 +115,7 @@
           v,
           if(
             v.split('␝')[1] == 'An',
-            v.split('␝')[0],
+            v.split('␝')[0].split(' (')[0],
             null
           )
         ).join('␟'),
