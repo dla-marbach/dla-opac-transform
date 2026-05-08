@@ -6,19 +6,30 @@
   expression: |
     grel:
     with(
-      cells['id'].value.cross('au','collection_id_mv').length()
-        + cells['id'].value.cross('hs','collection_id_mv').length()
-        + cells['id'].value.cross('bi','collection_id_mv').length(),
+      forNonBlank(
+        cells['id'].value.cross('au','collection_id_mv').length(),
+        v,
+        v,
+        0
+      )
+      + forNonBlank(
+        cells['id'].value.cross('bi','collection_id_mv').length(),
+        v,
+        v,
+        0
+      )
+      + forNonBlank(
+        cells['id'].value.cross('hs','collection_id_mv').length(),
+        v,
+        v,
+        0
+      ),
       x,
       if(
         x > 0,
-        with(
-          log(x) / 10 + 1.0,
-          v,
-          v.toString("%.2f")
-        ),
+        log(x) / 10 + 1.0,
         1.0
       )
-    ).toNumber()
+    )
   newColumnName: searchBoost
   columnInsertIndex: 2
