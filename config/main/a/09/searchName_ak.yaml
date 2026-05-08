@@ -13,7 +13,21 @@
   baseColumnName: filterAuthority_mv
   expression: |
     grel:
-    value
+    forNonBlank(
+      forNonBlank(
+        cells['filterAuthority_mv'].value,
+        x,
+        forEach(
+          x.split('␟'),
+          v,
+          v.split(' (')[0]
+        ).join('␟'),
+        null
+      ),
+      x,
+      x,
+      null
+    )
   newColumnName: searchName_mv
   columnInsertIndex: 2
 - op: core/column-addition
