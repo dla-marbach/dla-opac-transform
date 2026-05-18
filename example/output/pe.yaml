@@ -124,7 +124,7 @@ relation_type_mv:
   - Relation
   - Relation
   - Relation
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 searchDate_mv:
   - 22.05.1982
@@ -168,7 +168,7 @@ filterDateRange_mv:
   - '[1982-05 TO 2001-01]'
 filterSource: Personen
 filterType_mv: Normdaten
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 searchDate_mv:
   - "05.1982"
@@ -195,7 +195,7 @@ filterDateRange_mv:
   - '[1982 TO 2001]'
 filterSource: Personen
 filterType_mv: Normdaten
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 searchDate_mv:
   - "1982"
@@ -216,7 +216,7 @@ country_mv:
   - Deutschland
 filterSource: Personen
 filterType_mv: Normdaten
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 searchEntityScore: 8
 searchEntity_id_mv: PE00000004
@@ -231,7 +231,7 @@ id: PE00000005
 display: Person 5
 filterSource: Personen
 filterType_mv: Normdaten
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 searchEntityScore: 5
 searchEntity_id_mv: PE00000005
@@ -246,7 +246,7 @@ id: PE00000006
 display: Person 6
 filterSource: Personen
 filterType_mv: Normdaten
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 searchEntityScore: 6
 searchEntity_id_mv: PE00000006
@@ -261,7 +261,7 @@ id: PE00000007
 display: Person 7
 filterSource: Personen
 filterType_mv: Normdaten
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 searchEntityScore: 3
 searchEntity_id_mv: PE00000007
@@ -276,7 +276,7 @@ id: PE00000008
 display: Person 8
 filterSource: Personen
 filterType_mv: Normdaten
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 searchEntityScore: 2
 searchEntity_id_mv: PE00000008
@@ -299,7 +299,7 @@ filterDateRange_mv:
   - '[-0500 TO -0446]'
 filterSource: Personen
 filterType_mv: Normdaten
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 searchDate_mv: []
 searchEntityScore: 1
@@ -321,7 +321,7 @@ relation_text_mv:
   - Berlin [u.a.]
 relation_type_mv:
   - Sterbeort
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 source: PE
 title: 'Facette Ort: Berlin␝Sterbeort'
@@ -337,7 +337,7 @@ linkDeutscheBiographie_mv:
   - pnd100838995.html#adbcontent
 linkWikidata: Q19370742
 linkWikipedia: Traugott_M%C3%A4rcker
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 source: PE
 title: Wikidata Q19370742
@@ -358,7 +358,7 @@ linkDeutscheBiographie_mv:
 linkFilmportal_mv: 76dc042c1c20404eb780b3ba8a3b1ba7
 linkWikidata: Q22670
 linkWikipedia: Friedrich_Schiller
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 source: PE
 title: Schiller, Friedrich von
@@ -377,7 +377,7 @@ linkFilmportal_mv: 1387aec205b0467592df48ccca26073d
 linkWikidata: Q55767
 linkWikidataWebsite_mv: https://www.astridlindgren.com
 linkWikipedia: Astrid_Lindgren
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 source: PE
 title: Lindgren, Astrid
@@ -423,7 +423,7 @@ relation_type_mv:
   - Beziehung familiär
   - Beziehung familiär
   - Geburtsort
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 searchDate_mv:
   - "1864"
@@ -449,7 +449,7 @@ relation_text_mv:
 relation_type_mv:
   - Beziehung familiär
   - Beziehung familiär
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 source: PE
 title: Huch, Ilona
@@ -476,7 +476,7 @@ relation_text_mv:
   - Huch, Ricarda (1864-1947)
 relation_type_mv:
   - Beziehung familiär
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 searchDate_mv:
   - "1850"
@@ -488,7 +488,7 @@ id: PE91000001
 display: Person Systematik Alpha
 filterSource: Personen
 filterType_mv: Normdaten
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 searchEntityScore: 4
 searchEntity_id_mv: PE91000001
@@ -502,7 +502,7 @@ id: PE91000002
 display: Person Systematik Beta
 filterSource: Personen
 filterType_mv: Normdaten
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 searchEntityScore: 4
 searchEntity_id_mv: PE91000002
@@ -516,7 +516,7 @@ id: PE92000001
 display: Person Tektonik Alpha
 filterSource: Personen
 filterType_mv: Normdaten
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 searchEntityScore: 5
 searchEntity_id_mv: PE92000001
@@ -530,7 +530,7 @@ id: PE92000002
 display: Person Tektonik Beta
 filterSource: Personen
 filterType_mv: Normdaten
-schemaVersion: 0.16.0
+schemaVersion: 1.0.0
 searchBoost: 0.5
 searchEntityScore: 4
 searchEntity_id_mv: PE92000002
