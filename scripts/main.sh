@@ -111,7 +111,7 @@ grel='[ {
 "expression": "grel:\"1.0.0\""
 } ]'
 for set in ${sets[@]}; do
-    echo "${grel}" | orcli transform "${set}" &
+    orcli transform "${set}" <<< "${grel}" &
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 
@@ -122,7 +122,7 @@ grel='[ {
 "sorting": { "criteria": [ { "valueType": "string", "column": "id" } ] }
 } ]'
 for set in ${sets[@]}; do
-    echo "${grel}" | orcli transform "${set}" &
+    orcli transform "${set}" <<< "${grel}" &
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 
@@ -167,7 +167,7 @@ grel='[
 { "op": "core/column-removal", "columnName": "exportRIS" }
 ]'
 for set in ak bf bi hs; do
-    echo "${grel}" | orcli transform "${set}" &
+    orcli transform "${set}" <<< "${grel}" &
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 
