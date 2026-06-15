@@ -23,7 +23,7 @@ tasks:
         cp -r "config" "{{.DIR}}/tmp/"
       - |
         # orcli das script main.sh ausführen lassen
-        DIR={{.DIR}} openrefine/orcli run "scripts/main.sh" --memory "{{.MEMORY}}" --port "{{.PORT}}"
+        DIR={{.DIR}} openrefine/orcli run "scripts/main.sh" --memory "{{.MEMORY}}" --port "{{.PORT}}" --quiet
       - |
         # Arbeitsverzeichnis aufräumen und dann in Ausgabeverzeichnis verschieben
         rm -r "{{.DIR}}"/tmp/config 2> /dev/null || true
@@ -56,7 +56,7 @@ tasks:
         cp -r "config" "{{.DIR}}/tmp/"
       - |
         # orcli das script systematik.sh ausführen lassen
-        DIR={{.DIR}} openrefine/orcli run "scripts/systematik.sh" --memory "{{.MEMORY}}" --port "{{.PORT}}"
+        DIR={{.DIR}} openrefine/orcli run "scripts/systematik.sh" --memory "{{.MEMORY}}" --port "{{.PORT}}" --quiet
       - |
         # Ergebnis in Ausgabeverzeichnis verschieben
         mv "{{.DIR}}/tmp/systematik.tsv" "{{.DIR}}/output/systematik.tsv"
@@ -70,7 +70,7 @@ tasks:
         cp -r "config" "{{.DIR}}/tmp/"
       - |
         # orcli das script tektonik.sh ausführen lassen
-        DIR={{.DIR}} openrefine/orcli run "scripts/tektonik.sh" --memory "{{.MEMORY}}" --port "{{.PORT}}"
+        DIR={{.DIR}} openrefine/orcli run "scripts/tektonik.sh" --memory "{{.MEMORY}}" --port "{{.PORT}}" --quiet
       - |
         # Ergebnis in Ausgabeverzeichnis verschieben
         mv "{{.DIR}}/tmp/tektonik.tsv" "{{.DIR}}/output/tektonik.tsv"
