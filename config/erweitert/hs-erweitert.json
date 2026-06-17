@@ -1,0 +1,50 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "personBy_gnd_id_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "personBy_id_mv",
+    "expression": "grel:forEach(value.split('␟'), v, forNonBlank(v.cross('pe', 'id'), r, forEach(r, x, forNonBlank(x.cells['gnd_id_mv'].value, y, y, null)).join('␟'), null)).join('␟')",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "personTo_gnd_id_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "personTo_id_mv",
+    "expression": "grel:forEach(value.split('␟'), v, forNonBlank(v.cross('pe', 'id'), r, forEach(r, x, forNonBlank(x.cells['gnd_id_mv'].value, y, y, null)).join('␟'), null)).join('␟')",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "corporationBy_gnd_id_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "corporationBy_id_mv",
+    "expression": "grel:forEach(value.split('␟'), v, forNonBlank(v.cross('ks', 'id'), r, forEach(r, x, forNonBlank(x.cells['gnd_id_mv'].value, y, y, null)).join('␟'), null)).join('␟')",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "corporationTo_gnd_id_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "corporationTo_id_mv",
+    "expression": "grel:forEach(value.split('␟'), v, forNonBlank(v.cross('ks', 'id'), r, forEach(r, x, forNonBlank(x.cells['gnd_id_mv'].value, y, y, null)).join('␟'), null)).join('␟')",
+    "onError": "set-to-blank"
+  }
+]

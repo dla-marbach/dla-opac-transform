@@ -75,6 +75,20 @@ tasks:
         # Ergebnis in Ausgabeverzeichnis verschieben
         mv "{{.DIR}}/tmp/tektonik.tsv" "{{.DIR}}/output/tektonik.tsv"
 
+  erweitert:
+    desc: Zusatzfelder für Digitalisierung und Bestandslisten in OpenRefine
+    cmds:
+      - |
+        # Arbeitsverzeichnis leeren und Konfigurationsdateien kopieren
+        rm -r "{{.DIR}}/tmp" 2> /dev/null || true; mkdir -p "{{.DIR}}/tmp"
+        cp -r "config" "{{.DIR}}/tmp/"
+      - |
+        # orcli das script erweitert.sh ausführen lassen
+        DIR={{.DIR}} openrefine/orcli run "scripts/erweitert.sh" --memory "{{.MEMORY}}" --port "{{.PORT}}" --quiet
+      - |
+        # Ergebnis in Ausgabeverzeichnis verschieben
+        mv "{{.DIR}}"/tmp/*-erweitert.csv "{{.DIR}}/output/"
+
   dev:
     desc: Entwicklungsmodus (interaktiv)
     cmds:

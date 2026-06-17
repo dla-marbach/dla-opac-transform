@@ -3,7 +3,7 @@ DIR="${DIR:-example}"
 
 # Daten in OpenRefine laden
 for set in bf bi ks pe; do
-    orcli import csv "${DIR}"/output/${set}*.csv --projectName "${set}" &
+    orcli import csv "${DIR}"/output/${set}.csv --projectName "${set}" &
     pids+=($!)
 done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
 

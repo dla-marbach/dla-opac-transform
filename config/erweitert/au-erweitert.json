@@ -1,0 +1,338 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_filterAuthorityRole_mv",
+    "columnInsertIndex": 21,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['filterAuthorityRole_mv'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_displayName",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['displayName'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_displayAddition1",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['displayAddition1'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_displayAddition2",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['displayAddition2'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_filterType_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['filterType_mv'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_titleResponsability",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['titleResponsability'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_publisherOriginalLocation_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['publisherOriginalLocation_mv'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_publisherOriginalText_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['publisherOriginalText_mv'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_dateOriginComment_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['dateOriginComment_mv'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_edition",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['edition'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_extent",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['extent'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_parent_title_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['parent_id_mv'].value, x, forEach(x.split('␟'), v, forNonBlank(v.cross('ak', 'id'), r, forEach(r, x, forNonBlank(x.cells['title'].value, y, y, null)).join('␟'), null)).join('␟'), null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_parent_id_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['parent_id_mv'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_parentVolume_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['parentVolume_mv'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_isbn_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['isbn_mv'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_categorySubSub",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['categorySubSub'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_category",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['category'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_categorySub",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['categorySub'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_language_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['language_mv'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_categoryPublication_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['categoryPublication_mv'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_personBy_display_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['personBy_display_mv'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_personBy_title_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['personBy_id_mv'].value, x, forEach(x.split('␟'), v, forNonBlank(v.cross('pe', 'id'), r, forEach(r, x, forNonBlank(x.cells['title'].value, y, y, null)).join('␟'), null)).join('␟'), null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_corporationBy_title_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['corporationBy_id_mv'].value, x, forEach(x.split('␟'), v, forNonBlank(v.cross('ks', 'id'), r, forEach(r, x, forNonBlank(x.cells['title'].value, y, y, null)).join('␟'), null)).join('␟'), null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_classification_display_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['classification_display_mv'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_personBy_id_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['personBy_id_mv'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_personBy_gnd_id_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['personBy_id_mv'].value, x, forEach(x.split('␟'), v, forNonBlank(v.cross('pe', 'id'), r, forEach(r, x, forNonBlank(x.cells['gnd_id_mv'].value, y, y, null)).join('␟'), null)).join('␟'), null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_corporationBy_id_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['corporationBy_id_mv'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "manifestation_corporationBy_gnd_id_mv",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['corporationBy_id_mv'].value, x, forEach(x.split('␟'), v, forNonBlank(v.cross('ks', 'id'), r, forEach(r, x, forNonBlank(x.cells['gnd_id_mv'].value, y, y, null)).join('␟'), null)).join('␟'), null)",
+    "onError": "set-to-blank"
+  }
+]
