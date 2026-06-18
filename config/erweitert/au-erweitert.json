@@ -101,6 +101,18 @@
       "mode": "row-based",
       "facets": []
     },
+    "newColumnName": "manifestation_dateOrigin",
+    "columnInsertIndex": 2,
+    "baseColumnName": "manifestation_id",
+    "expression": "grel:forNonBlank(value.cross('ak','id')[0].cells['dateOrigin'].value, x, x, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
     "newColumnName": "manifestation_dateOriginComment_mv",
     "columnInsertIndex": 2,
     "baseColumnName": "manifestation_id",
