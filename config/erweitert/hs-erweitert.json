@@ -46,5 +46,1454 @@
     "baseColumnName": "corporationTo_id_mv",
     "expression": "grel:forEach(value.split('␟'), v, forNonBlank(v.cross('ks', 'id'), r, forEach(r, x, forNonBlank(x.cells['gnd_id_mv'].value, y, y, null)).join('␟'), null)).join('␟')",
     "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        }
+      ]
+    },
+    "newColumnName": "parent_id_mv2",
+    "columnInsertIndex": 2,
+    "baseColumnName": "parent_id_mv",
+    "expression": "grel:value.cross('hs-erweitert','id')[0].cells['parent_id_mv'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv2",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv2"
+        }
+      ]
+    },
+    "newColumnName": "parent_id_mv3",
+    "columnInsertIndex": 2,
+    "baseColumnName": "parent_id_mv2",
+    "expression": "grel:value.cross('hs-erweitert','id')[0].cells['parent_id_mv'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "hierarchy_hs",
+    "columnInsertIndex": 2,
+    "baseColumnName": "parent_id_mv",
+    "expression": "grel:join(filter(forEach(['parent_id_mv3','parent_id_mv2','parent_id_mv','id'],cn,if(isNull(cells[cn]),'',cells[cn].value)),v,isNonBlank(v)),',')",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "hierarchy_hs_top",
+    "columnInsertIndex": 2,
+    "baseColumnName": "hierarchy_hs",
+    "expression": "grel:split(value,',')[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv3",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv3"
+        }
+      ]
+    },
+    "newColumnName": "bestandslisten_diagnose",
+    "columnInsertIndex": 2,
+    "baseColumnName": "parent_id_mv3",
+    "expression": "grel:forNonBlank(value.cross('hs-erweitert','id')[0].cells['parent_id_mv'].value,v,'Verschachtelung bei Unteraufnahmen überstrapaziert',null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "bestandslisten_1_signatur",
+    "columnInsertIndex": 2,
+    "baseColumnName": "filterCollection_mv",
+    "expression": "grel:forEach(value.replace('\"','').split('/'), v, if(isNumeric(v[0]), 'ZZZ'+v, if(v=='Kopien', 'ZZZZ'+v, v))).join('/')",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "bestandslisten_1_signatur",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "bestandslisten_1_signatur"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_diagnose",
+    "expression": "grel:'Ohne Bestand'",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        }
+      ]
+    },
+    "newColumnName": "bestandslisten_2_ordnungsgattung",
+    "columnInsertIndex": 2,
+    "baseColumnName": "category",
+    "expression": "grel:value.replace(/^Manuskripte$/,'1_Manuskripte').replace(/^Briefwechsel$/,'2_Briefwechsel').replace(/^Briefe von$/,'3_Briefe von').replace(/^Briefe an$/,'4_Briefe an').replace(/^Dokumente$/,'5_Dokumente').replace(/^Manuskripte anderer$/,'6_Manuskripte anderer').replace(/^Briefwechsel ohne Bestandsbildner$/,'7_Briefwechsel ohne Bestandsbildner').replace(/^Briefe anderer$/,'8_Briefe anderer').replace(/^Dokumente anderer$/,'9_Dokumente anderer')",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        }
+      ]
+    },
+    "newColumnName": "tmp",
+    "columnInsertIndex": 2,
+    "baseColumnName": "hierarchy_hs_top",
+    "expression": "grel:value.cross('hs-erweitert','id')[0].cells['bestandslisten_2_ordnungsgattung'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_2_ordnungsgattung",
+    "expression": "grel:cells['tmp'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "tmp"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        },
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "Manuskripte anderer",
+          "name": "category",
+          "type": "text",
+          "columnName": "category"
+        }
+      ]
+    },
+    "newColumnName": "bestandslisten_3_spezifisch",
+    "columnInsertIndex": 2,
+    "baseColumnName": "id",
+    "expression": "grel:forNonBlank( cells['sortingKey'].value, v, if( isNumeric(v[0]), 'ZZZ'+v, v.replace(/^Verschieden/i,'ZZZZVerschieden').replace(/^\\.{3},/,'ZZZZZ...,').replace(/^Unbekannt/i,'ZZZZZZUnbekannt') ), '')",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        },
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "Manuskripte",
+          "name": "category",
+          "type": "text",
+          "columnName": "category"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "genre",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "genre"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "grel:with( cells['genre'].value.replace(/^Werke$/,'01_Werke').replace(/^Gedichte$/,'02_Gedichte').replace(/^Versepen$/,'03_Versepen').replace(/^Dramatisches$/,'04_Dramatisches').replace(/^Prosa$/,'05_Prosa').replace(/^Kompositionen$/,'06_Kompositionen').replace(/^Zeichnungen$/,'07_Zeichnungen').replace(/^Bearbeitungen$/,'08_Bearbeitungen').replace(/^Übersetzungen$/,'09_Übersetzungen').replace(/^Herausgegebenes$/,'10_Herausgegebenes').replace(/^Verschiedenes$/,'11_Verschiedenes'), x, forNonBlank(value,v,v+'_'+x,x))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        },
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "Manuskripte",
+          "name": "category",
+          "type": "text",
+          "columnName": "category"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "genreSub",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "genreSub"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "grel:with( cells['genreSub'].value, x, forNonBlank(value,v,v+'_'+x,x))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        },
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "Manuskripte",
+          "name": "category",
+          "type": "text",
+          "columnName": "category"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "grel:with( forNonBlank( cells['titleMain_category'].value, v, if( v.contains('Sammlung'), '1_Sammlung', if( v.contains('Konvolut'), '3_Konvolut', '2_Normal' ) ), '2_Normal' ), x, forNonBlank(value,v,v+'_'+x,x))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        },
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "Manuskripte",
+          "name": "category",
+          "type": "text",
+          "columnName": "category"
+        },
+        {
+          "omitError": false,
+          "expression": "grel:value.contains('Konvolut')",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": true,
+          "name": "titleMain_category",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "titleMain_category"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "grel:with( forNonBlank( cells['titleMain_type'].value, v, if( v.contains('Titel von Bearbeiter/in'), '2_Bearbeitungstitel', '1_Normal' ), '1_Normal' ), x, forNonBlank(value,v,v+'_'+x,x))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        },
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "Manuskripte",
+          "name": "category",
+          "type": "text",
+          "columnName": "category"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "sortingTitleMain",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "sortingTitleMain"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "grel:with( cells['sortingTitleMain'].value, x, forNonBlank( value, v, v+'_'+x, x ))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        },
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "Manuskripte",
+          "name": "category",
+          "type": "text",
+          "columnName": "category"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "sortingTitleOther",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "sortingTitleOther"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "grel:with( cells['sortingTitleOther'].value, x, forNonBlank( value, v, v+'_'+x, x ))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        },
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "^Briefwechsel$|^Briefe von$",
+          "name": "category",
+          "type": "text",
+          "columnName": "category"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "grel:forNonBlank( cells['sortingKeySub'].value, v, if( isNumeric(v[0]), 'ZZZ'+v, v.replace(/^Verschieden/i,'ZZZZVerschieden').replace(/^\\.{3},/,'ZZZZZ...,').replace(/^Unbekannt/i,'ZZZZZZUnbekannt') ), '')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        },
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "^Briefe an$",
+          "name": "category",
+          "type": "text",
+          "columnName": "category"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "grel:forNonBlank( cells['sortingKey'].value, v, if( isNumeric(v[0]), 'ZZZ'+v, v.replace(/^Verschieden/i,'ZZZZVerschieden').replace(/^\\.{3},/,'ZZZZZ...,').replace(/^Unbekannt/i,'ZZZZZZUnbekannt') ), '')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        },
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "^Briefwechsel ohne Bestandsbildner$|^Briefe anderer$",
+          "name": "category",
+          "type": "text",
+          "columnName": "category"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "grel:forNonBlank( cells['sortingKey'].value, v, if( isNumeric(v[0]), 'ZZZ'+v, v.replace(/^Verschieden/i,'ZZZZVerschieden').replace(/^\\.{3},/,'ZZZZZ...,').replace(/^Unbekannt/i,'ZZZZZZUnbekannt') ), '') + '_' +forNonBlank( cells['sortingKeySub'].value, v, if( isNumeric(v[0]), 'ZZZ'+v, v.replace(/^Verschieden/i,'ZZZZVerschieden').replace(/^\\.{3},/,'ZZZZZ...,').replace(/^Unbekannt/i,'ZZZZZZUnbekannt') ), '')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        },
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "Brief",
+          "name": "category",
+          "type": "text",
+          "columnName": "category"
+        },
+        {
+          "omitError": false,
+          "expression": "grel:isNonBlank(value.match(/(\\d{8})/))",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "dateOriginStart",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "dateOriginStart"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "grel:with(cells['dateOriginStart'].value,x,forNonBlank(value,v,v+'_'+x,x))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        },
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "Brief",
+          "name": "category",
+          "type": "text",
+          "columnName": "category"
+        },
+        {
+          "omitError": false,
+          "expression": "grel:isNonBlank(value.match(/(\\d{8})/))",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "dateOriginStart",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "dateOriginStart"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "grel:with('99999999',x,forNonBlank(value,v,v+'_'+x,x))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        },
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "Brief",
+          "name": "category",
+          "type": "text",
+          "columnName": "category"
+        },
+        {
+          "omitError": false,
+          "expression": "grel:isNonBlank(value.match(/(\\d{8})/))",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "dateOriginStart",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "dateOriginStart"
+        },
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "\\d",
+          "name": "dateOriginStart",
+          "type": "text",
+          "columnName": "dateOriginStart"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_diagnose",
+    "expression": "grel:'Nicht-normierte Entstehungszeit'",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        },
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "Dokumente anderer",
+          "name": "category",
+          "type": "text",
+          "columnName": "category"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "grel:forNonBlank( cells['sortingKey'].value, v, if( isNumeric(v[0]), 'ZZZ'+v, v.replace(/^Verschieden/i,'ZZZZVerschieden').replace(/^\\.{3},/,'ZZZZZ...,').replace(/^Unbekannt/i,'ZZZZZZUnbekannt') ), '')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        },
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "Dokumente",
+          "name": "category",
+          "type": "text",
+          "columnName": "category"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "genreSub",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "genreSub"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "grel:with( cells['genreSub'].value, x, forNonBlank(value,v,v+'_'+x,x))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        },
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "Dokumente",
+          "name": "category",
+          "type": "text",
+          "columnName": "category"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "grel:with( forNonBlank( cells['titleMain_category'].value, v, if( v.contains('Konvolut'), '3_Konvolut', '2_Normal' ), '2_Normal' ), x, forNonBlank(value,v,v+'_'+x,x))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        },
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "Dokumente",
+          "name": "category",
+          "type": "text",
+          "columnName": "category"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "sortingTitleMain",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "sortingTitleMain"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "grel:with( cells['sortingTitleMain'].value, x, forNonBlank( value, v, v+'_'+x, x ))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        },
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "Dokumente",
+          "name": "category",
+          "type": "text",
+          "columnName": "category"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "sortingTitleOther",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "sortingTitleOther"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "grel:with( cells['sortingTitleOther'].value, x, forNonBlank( value, v, v+'_'+x, x ))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "grel:value + '_' + cells['id'].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        }
+      ]
+    },
+    "newColumnName": "tmp",
+    "columnInsertIndex": 2,
+    "baseColumnName": "hierarchy_hs_top",
+    "expression": "grel:value.cross('hs-erweitert','id')[0].cells['bestandslisten_3_spezifisch'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "parent_id_mv",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "parent_id_mv"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "grel:cells['tmp'].value + '_Unteraufnahme'",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "tmp"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "parent_id_mv2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "parent_id_mv3"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "bestandslisten_1_signatur",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "bestandslisten_1_signatur"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_2_ordnungsgattung",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "bestandslisten_1_signatur",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "bestandslisten_1_signatur"
+        }
+      ]
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "bestandslisten_1_signatur",
+    "expression": "grel:value.replace(' ','_').replace('ä','ae').replace('ö','oe').replace('ü','ue').replace('ß','ss')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "bestandslisten_2_ordnungsgattung",
+    "expression": "grel:value.replace(' ','_').replace('ä','ae').replace('ö','oe').replace('ü','ue').replace('ß','ss')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "bestandslisten_3_spezifisch",
+    "expression": "grel:value.replace(' ','_').replace('ä','ae').replace('ö','oe').replace('ü','ue').replace('ß','ss')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/row-reorder",
+    "mode": "record-based",
+    "sorting": {
+      "criteria": [
+        {
+          "errorPosition": 1,
+          "caseSensitive": false,
+          "valueType": "string",
+          "column": "bestandslisten_1_signatur",
+          "blankPosition": 2,
+          "reverse": false
+        },
+        {
+          "errorPosition": 1,
+          "caseSensitive": false,
+          "valueType": "string",
+          "column": "bestandslisten_2_ordnungsgattung",
+          "blankPosition": 2,
+          "reverse": false
+        },
+        {
+          "errorPosition": 1,
+          "caseSensitive": false,
+          "valueType": "string",
+          "column": "bestandslisten_3_spezifisch",
+          "blankPosition": 2,
+          "reverse": false
+        },
+        {
+          "errorPosition": 1,
+          "caseSensitive": false,
+          "valueType": "string",
+          "column": "id",
+          "blankPosition": 2,
+          "reverse": false
+        }
+      ]
+    }
   }
 ]
