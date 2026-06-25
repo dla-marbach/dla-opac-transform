@@ -197,13 +197,13 @@ tasks:
   install_openrefine:
     cmds:
       - mkdir -p openrefine
-      - wget --no-verbose -O openrefine.tar.gz https://github.com/OpenRefine/OpenRefine/releases/download/3.9.5/openrefine-linux-3.9.5.tar.gz
+      - wget --no-verbose -O openrefine.tar.gz https://github.com/OpenRefine/OpenRefine/releases/download/3.10.0/openrefine-linux-3.10.0.tar.gz
       - tar -xzf openrefine.tar.gz -C openrefine --strip 1 && rm openrefine.tar.gz
        
   install_orcli:
     cmds:
       - mkdir -p openrefine
-      - wget --no-verbose -O openrefine/orcli https://github.com/opencultureconsulting/orcli/releases/download/v0.4.1/orcli
+      - wget --no-verbose -O openrefine/orcli https://github.com/opencultureconsulting/orcli/releases/download/v0.4.3/orcli
       - chmod +x openrefine/orcli
 
   install_solr:
