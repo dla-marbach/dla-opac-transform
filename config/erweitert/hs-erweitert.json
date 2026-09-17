@@ -76,7 +76,7 @@
     "newColumnName": "parent_id_mv2",
     "columnInsertIndex": 2,
     "baseColumnName": "parent_id_mv",
-    "expression": "grel:value.cross('hs-erweitert','id')[0].cells['parent_id_mv'].value",
+    "expression": "grel:value.cross('hs','id')[0].cells['parent_id_mv'].value",
     "onError": "set-to-blank"
   },
   {
@@ -108,7 +108,7 @@
     "newColumnName": "parent_id_mv3",
     "columnInsertIndex": 2,
     "baseColumnName": "parent_id_mv2",
-    "expression": "grel:value.cross('hs-erweitert','id')[0].cells['parent_id_mv'].value",
+    "expression": "grel:value.cross('hs','id')[0].cells['parent_id_mv'].value",
     "onError": "set-to-blank"
   },
   {
@@ -164,7 +164,7 @@
     "newColumnName": "bestandslisten_diagnose",
     "columnInsertIndex": 2,
     "baseColumnName": "parent_id_mv3",
-    "expression": "grel:forNonBlank(value.cross('hs-erweitert','id')[0].cells['parent_id_mv'].value,v,'Verschachtelung bei Unteraufnahmen überstrapaziert',null)",
+    "expression": "grel:forNonBlank(value.cross('hs','id')[0].cells['parent_id_mv'].value,v,'Verschachtelung bei Unteraufnahmen überstrapaziert',null)",
     "onError": "set-to-blank"
   },
   {
@@ -272,7 +272,7 @@
     "newColumnName": "tmp",
     "columnInsertIndex": 2,
     "baseColumnName": "hierarchy_hs_top",
-    "expression": "grel:value.cross('hs-erweitert','id')[0].cells['bestandslisten_2_ordnungsgattung'].value",
+    "expression": "grel:value.cross('hs','id')[0].cells['bestandslisten_2_ordnungsgattung'].value",
     "onError": "set-to-blank"
   },
   {
@@ -840,7 +840,7 @@
         },
         {
           "omitError": false,
-          "expression": "grel:isNonBlank(value.match(/(\\d{8})/))",
+          "expression": "grel:isNonBlank(value)",
           "selectBlank": false,
           "selection": [
             {
@@ -899,7 +899,7 @@
         },
         {
           "omitError": false,
-          "expression": "grel:isNonBlank(value.match(/(\\d{8})/))",
+          "expression": "grel:isNonBlank(value)",
           "selectBlank": false,
           "selection": [
             {
@@ -958,7 +958,7 @@
         },
         {
           "omitError": false,
-          "expression": "grel:isNonBlank(value.match(/(\\d{8})/))",
+          "expression": "grel:isNonBlank(value)",
           "selectBlank": false,
           "selection": [
             {
@@ -1309,7 +1309,7 @@
     "newColumnName": "tmp",
     "columnInsertIndex": 2,
     "baseColumnName": "hierarchy_hs_top",
-    "expression": "grel:value.cross('hs-erweitert','id')[0].cells['bestandslisten_3_spezifisch'].value",
+    "expression": "grel:value.cross('hs','id')[0].cells['bestandslisten_3_spezifisch'].value",
     "onError": "set-to-blank"
   },
   {
