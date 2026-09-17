@@ -7,13 +7,26 @@
   # String vor dem ersten . enfernen (erster Teil der Domain und ggf. Protokoll)
   # String vor dem letzten / entfernen
   # String vor dem letzten . entfernen
-  # es verbleibt die Dateinamenserweiterung
+  # es verbleibt eine Kandidatin für die Dateinamenserweiterung
+  # nur bekannte/plausible Dateinamenserweiterungen übernehmen, damit keine
+  # zufälligen Textbestandteile (z. B. "action" aus proquest-URLs oder
+  # Ziffernfolgen aus doi.org-URLs) fälschlich als Dateityp erkannt werden
   expression: |
     grel:
     forNonBlank(
       value.partition('?')[0].partition('.')[2].rpartition('/')[2].rpartition('.')[2],
       x,
-      x.toLowercase(),
+      with(
+        x.toLowercase(),
+        candidate,
+        if(
+          'pdf,jpg,jpeg,png,gif,bmp,webp,svg,tif,tiff,mp3,mp4,wav,aiff,aif,m4a,m4v,mov,avi,wmv,mpg,mpeg,ogg,ogv,webm,wacz,warc,doc,docx,xls,xlsx,ppt,pptx,epub,html,htm,xml,txt,csv,rtf,odt,ods,odp,zip'
+            .split(',')
+            .contains(candidate),
+          candidate,
+          null
+        )
+      ),
       null
     )
   newColumnName: fileExtension
