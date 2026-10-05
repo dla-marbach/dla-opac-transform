@@ -1,20 +1,20 @@
 source,field,type,description,count,percent,items,unique,most_frequent_value
 AK,callNumberBibliographic_mv,strings,,596623,33 %,596623,6571,XHm
-AK,category,text,,1809663,100 %,1809663,7,Bibliotheksdokumente
-AK,categoryContent_mv,texts,,1516450,84 %,1523637,16,['Text']
-AK,categoryMedia_mv,texts,,1544729,85 %,1653074,32,['Druckschrift']
-AK,categoryMedium_mv,texts,,1586209,88 %,1586601,25,['Band']
+AK,category,text,,1809683,100 %,1809683,7,Bibliotheksdokumente
+AK,categoryContent_mv,texts,,1516452,84 %,1523639,16,['Text']
+AK,categoryMedia_mv,texts,,1544737,85 %,1653085,32,['Druckschrift']
+AK,categoryMedium_mv,texts,,1586211,88 %,1586603,25,['Band']
 AK,categoryPublication_mv,texts,,382071,21 %,424247,69,['Rezension']
-AK,categorySub,text,,1809643,100 %,1809643,9,Einzelbestandteil / unselbständiges Werk
-AK,categorySubSub,text,,1629384,90 %,1629384,29,Druckschrift
+AK,categorySub,text,,1809663,100 %,1809663,9,Einzelbestandteil / unselbständiges Werk
+AK,categorySubSub,text,,1629386,90 %,1629386,29,Druckschrift
 AK,classification_category_mv,texts,aus SE category,745288,41 %,1101006,4,['Kette Bibliothek']
 AK,classification_display_mv,texts,aus SE display,745345,41 %,1101069,197515,['S14.5 Kunst / Einzelne Künstler']
 AK,classification_id_mv,strings,,745345,41 %,1101069,197890,['SE00130035']
-AK,classificationSubjectOther_mv,texts,,115193,6 %,141920,887,['12.2p']
-AK,confidential,boolean,,1736131,96 %,1736131,1,False
-AK,contributor_display_mv,texts,Bündelung aller Beteiligten für die Anzeige,399786,22 %,762635,184050,"['Goethe, Johann Wolfgang von (1749-1832)']"
-AK,contributor_id_mv,strings,Bündelung aller Beteiligten für die Anzeige,399786,22 %,762635,184582,['PE00000863']
-AK,contributor_role_mv,strings,Bündelung aller Urheber für die Anzeige,387361,21 %,747222,56,['Herausgeber']
+AK,classificationSubjectOther_mv,texts,,115196,6 %,141923,887,['12.2p']
+AK,confidential,boolean,,1736133,96 %,1736133,1,False
+AK,contributor_display_mv,texts,Bündelung aller Beteiligten für die Anzeige,399790,22 %,762641,184051,"['Goethe, Johann Wolfgang von (1749-1832)']"
+AK,contributor_id_mv,strings,Bündelung aller Beteiligten für die Anzeige,399790,22 %,762641,184583,['PE00000863']
+AK,contributor_role_mv,strings,Bündelung aller Urheber für die Anzeige,387365,21 %,747228,56,['Herausgeber']
 AK,corporationAbout_display_mv,texts,aus KS display,27671,2 %,29694,13312,"['Schiller-Nationalmuseum und Deutsches Literaturarchiv <Marbach, Neckar> (1955-2005)']"
 AK,corporationAbout_id_mv,strings,,27671,2 %,29694,13313,['KS00000246']
 AK,corporationBy_creator_mv,strings,,52191,3 %,63758,3,['contributor']
@@ -26,17 +26,17 @@ AK,corporationByConference_display_mv,texts,aus KS display,2051,0 %,2110,1950,"[
 AK,corporationByConference_id_mv,strings,,2051,0 %,2110,1950,['KS00105731']
 AK,corporationByConference_role_mv,strings,,2051,0 %,2110,13,['Verfasser/Urheber']
 AK,corporationByTerritory_creator_mv,strings,,188,0 %,191,2,['contributor']
-AK,corporationByTerritory_display_mv,texts,aus TH display,188,0 %,191,101,['Deutsches Reich']
-AK,corporationByTerritory_id_mv,strings,,188,0 %,191,101,['TH00017657']
+AK,corporationByTerritory_display_mv,texts,aus TH display,188,0 %,191,101,['Baden-Württemberg']
+AK,corporationByTerritory_id_mv,strings,,188,0 %,191,101,['TH00017632']
 AK,corporationByTerritory_role_mv,strings,,169,0 %,172,6,"['Sonstige Person, Familie und Körperschaft']"
-AK,country_mv,texts,,568948,31 %,590736,203,['Deutschland']
-AK,creator_display_mv,texts,Bündelung aller Urheber für die Anzeige,1303209,72 %,1336245,205510,"['Goethe, Johann Wolfgang von (1749-1832)']"
-AK,creator_id_mv,strings,Bündelung aller Urheber für die Anzeige,1303209,72 %,1336245,206166,['PE00000863']
-AK,creator_role_mv,strings,Bündelung aller Urheber für die Anzeige,1294798,72 %,1327772,48,['Verfasser/Urheber']
-AK,dateCataloged,daterange,,1809592,100 %,1809592,10487,2010-07-04
-AK,dateModified,daterange,,1809409,100 %,1809409,8064,2010-07-04
-AK,dateOrigin,text,,1704947,94 %,1704947,579,1988
-AK,dateOriginComment_mv,texts,,1035082,57 %,1041476,13613,['2002']
+AK,country_mv,texts,,568950,31 %,590738,203,['Deutschland']
+AK,creator_display_mv,texts,Bündelung aller Urheber für die Anzeige,1303223,72 %,1336264,205510,"['Goethe, Johann Wolfgang von (1749-1832)']"
+AK,creator_id_mv,strings,Bündelung aller Urheber für die Anzeige,1303223,72 %,1336264,206166,['PE00000863']
+AK,creator_role_mv,strings,Bündelung aller Urheber für die Anzeige,1294812,72 %,1327791,48,['Verfasser/Urheber']
+AK,dateCataloged,daterange,,1809612,100 %,1809612,10487,2010-07-04
+AK,dateModified,daterange,,1809429,100 %,1809429,8064,2010-07-04
+AK,dateOrigin,text,,1704959,94 %,1704959,579,1988
+AK,dateOriginComment_mv,texts,,1035094,57 %,1041490,13613,['2002']
 AK,description_text_mv,texts,,30149,2 %,32065,431,['farb.']
 AK,description_type_mv,strings,,9628,1 %,11537,12,['Kodierungsformat']
 AK,digitalObject_accessLevel_mv,strings,aus MM accessLevel,3354,0 %,4185,9,['public']
@@ -47,53 +47,53 @@ AK,digitalObject_id_mv,strings,,18798,1 %,23265,20902,['MM01497634']
 AK,digitalObject_license_mv,strings,aus MM license,113,0 %,119,3,['CC0']
 AK,digitalObject_licenseNote_mv,texts,aus MM license,846,0 %,1227,90,['LiN - Rechte uneingeschränkt erteilt']
 AK,digitalObject_thumbnail_mv,strings,aus MM thumbnail,1791,0 %,2103,861,"['https://digital.dla-marbach.de/viewer/api/v1/records/BF00043384/files/images/BF000433845_0026.tif/full/!480,480/0/default.jpg']"
-AK,display,text_normalized,Hauptbezeichnung,1809663,100 %,1809663,1691926,[4 Gedichte]
-AK,displayAddition1,text,Dritte Zeile der Trefferliste,1776777,98 %,1776777,1336384,1999
+AK,display,text_normalized,Hauptbezeichnung,1809683,100 %,1809683,1691944,[4 Gedichte]
+AK,displayAddition1,text,Dritte Zeile der Trefferliste,1776789,98 %,1776789,1336384,1999
 AK,displayAddition2,text,Vierte Zeile der Trefferliste,62949,3 %,62949,12,Volltext Expressionismus Online (De Gruyter)
-AK,displayName,text,Zweite Zeile der Trefferliste gebildet aus Personen und Körperschaften,1497575,83 %,1497575,445581,"Kracauer, Siegfried (1889-1966)"
+AK,displayName,text,Zweite Zeile der Trefferliste gebildet aus Personen und Körperschaften,1497593,83 %,1497593,445588,"Kracauer, Siegfried (1889-1966)"
 AK,edition,string,,165867,9 %,165867,31772,1. Aufl.
 AK,editionNormalized,string,,172271,10 %,172271,5753,1
-AK,exportDC,string,Datensatz im DC-Format,1736184,96 %,1736184,1736184,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">\n  <dc:title>Kurt Tucholsky in Selbstzeugnissen und Bilddokumenten - 46. - 50. Tsd.</dc:title>\n  <dc:title>Rowohlts Monographien ; 31 : rororo Bildmonographien</dc:title>\n  <dc:creator>Schulz, Klaus-Peter</dc:creator> (...)"
-AK,exportMODS,string,Datensatz im MODS-Format,1736184,96 %,1736184,1736184,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">\n  <titleInfo>\n    <title>Cocksucker : Zeitung für Undergroundliteratur. - 5 (1996), 17</title>\n  </titleInfo>\n  <typeOfResource>Zeitschriftenheft</typeOfResource>\n  <originInfo eventType=""publication"">\n    <dateIssued encoding=""iso8601"" keyDat (...)"
-AK,exportRIS,string,Datensatz im RIS-Format,1736184,96 %,1736184,1736184,"TY  - GEN\nA2  - Druskowitz, Helene von\nAU  - Reichart, Elisabeth\nAV  - nur bibliographischer Nachweis, nicht im Bestand des DLA\nCY  - Salzburg ; Wien\nDA  - 1994\nID  - AK00196667\nKW  - Person und Werk als Thema\nKW  - Druskowitz, Helene von (1858-1918)\nLA  - Deutsch\nM2  - Buch\nM2  - Buchumschlag\nM3  - Dramatisches\nN1  - Umfang: 79 Seiten\nN1  - Erscheinungsort: Salzburg\nN1  - Erscheinungsort: Wien\nN1  - Pp. : DM 29.80\nPB  - Müller\nPY  - 1994\nSN  - 3-7013-0881-0\nTI  - Sakkorausch (...)"
+AK,exportDC,string,Datensatz im DC-Format,1736186,96 %,1736186,1736186,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">\n  <dc:title>Franz Overbeck und Friedrich Nietzsche : eine Freundschaft. - 1.</dc:title>\n  <dc:creator>Bernoulli, Karl Albrecht (1868-1937)</dc:creator>\n  <dc:contributor>Overbeck, Franz (1837-1905)</dc:contributor>\n (...)"
+AK,exportMODS,string,Datensatz im MODS-Format,1736186,96 %,1736186,1736186,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">\n  <titleInfo>\n    <title>Thorbecke Speläo</title>\n  </titleInfo>\n  <titleInfo type=""alternative"">\n    <title>Speläo</title>\n  </titleInfo>\n  <typeOfResource>Reihe</typeOfResource>\n  <originInfo eventType=""publication"">\n    <place>\n      <p (...)"
+AK,exportRIS,string,Datensatz im RIS-Format,1736186,96 %,1736186,1736186,"TY  - GEN\nAU  - Strauss, Emil\nAV  - nur bibliographischer Nachweis, nicht im Bestand des DLA\nCY  - [München]\nDA  - 1957\nID  - AK00039560\nET  - 350. - 371. Tsd.\nLA  - Deutsch\nM2  - Buch\nM3  - Prosa\nN1  - Umfang: 48 Seiten\nN1  - Erscheinungsort: München\nPB  - Hanser\nPY  - 1957\nTI  - Der Schleier : Novelle - 350. - 371. Tsd.\nUR  - https://www.dla-marbach.de/find/opac/id/AK00039560/\nER  -"
 AK,extent,text,,644273,36 %,644273,71007,3 Blatt
 AK,extentFormat,text,,15740,1 %,15740,1490,8
 AK,extentIllustrations_mv,texts,,183555,10 %,183573,3415,['Ill.']
 AK,extentSupplements,text,,13839,1 %,13839,3254,1 Faltblatt
-AK,filterAuthority_mv,strings,Facette Personen und Körperschaften,1533825,85 %,2732164,346845,"['Kracauer, Siegfried (1889-1966)']"
-AK,filterAuthorityRelation_mv,strings,Facette Personen und Körperschaften mit Relationen,1533825,85 %,2859278,398365,"['Kracauer, Siegfried (1889-1966)␝Von']"
-AK,filterAuthorityRole_mv,strings,Facette Personen und Körperschaften mit Funktionsbezeichnungen,1533825,85 %,2896676,530949,"['Kracauer, Siegfried (1889-1966)␝Verfasser/Urheber']"
+AK,filterAuthority_mv,strings,Facette Personen und Körperschaften,1533843,85 %,2732189,346845,"['Kracauer, Siegfried (1889-1966)']"
+AK,filterAuthorityRelation_mv,strings,Facette Personen und Körperschaften mit Relationen,1533843,85 %,2859303,398365,"['Kracauer, Siegfried (1889-1966)␝Von']"
+AK,filterAuthorityRole_mv,strings,Facette Personen und Körperschaften mit Funktionsbezeichnungen,1533843,85 %,2896701,530949,"['Kracauer, Siegfried (1889-1966)␝Verfasser/Urheber']"
 AK,filterBibliography_mv,strings,Facette Bibliographie,12057,1 %,12076,17,['Döblin-Bibliographie']
 AK,filterCollection_mv,strings,Facette Sammlung,128837,7 %,157006,425,['G:Tucholsky-Archiv (Marbacher Forschungsbibliothek)']
-AK,filterDatePoint_mv,datepoints,Facette Zeit (Zeitpunkte),1705124,94 %,1831396,19965,['1988-01-01T00:00:00Z']
-AK,filterDateRange_mv,dateranges,Facette Zeit (Zeiträume),1705124,94 %,1831593,20849,['1988']
+AK,filterDatePoint_mv,datepoints,Facette Zeit (Zeitpunkte),1705136,94 %,1831408,19965,['1988-01-01T00:00:00Z']
+AK,filterDateRange_mv,dateranges,Facette Zeit (Zeiträume),1705136,94 %,1831605,20849,['1988']
 AK,filterDigital,boolean,Filter Digital,55722,3 %,55722,1,True
-AK,filterFormContent_mv,strings,Facette Form und Inhalt,1208986,67 %,1700135,398,['Aufsatz']
-AK,filterLanguage_mv,strings,Facette Sprache,906852,50 %,966544,173,['Deutsch']
-AK,filterLanguageType_mv,strings,Facette Sprache mit Typ,906852,50 %,972451,282,['Deutsch␝Original']
+AK,filterFormContent_mv,strings,Facette Form und Inhalt,1209001,67 %,1700150,398,['Aufsatz']
+AK,filterLanguage_mv,strings,Facette Sprache,906867,50 %,966559,173,['Deutsch']
+AK,filterLanguageType_mv,strings,Facette Sprache mit Typ,906867,50 %,972466,282,['Deutsch␝Original']
 AK,filterLocation_mv,strings,Facette Ort,667775,37 %,840925,19991,['Berlin']
 AK,filterLocationType_mv,strings,Facette Ort mit Typ,667775,37 %,844573,21655,['Berlin␝Erscheinungsort']
-AK,filterMedium_mv,strings,Facette Sammlung,1681811,93 %,1820165,35,['Beitrag']
-AK,filterRecent,daterange,Facette Neu im Katalog,1809592,100 %,1809592,10487,2010-07-04
-AK,filterSource,string,Facette Datenbestand,1809663,100 %,1809663,2,Bibliotheksmaterialien
+AK,filterMedium_mv,strings,Facette Sammlung,1681813,93 %,1820167,35,['Beitrag']
+AK,filterRecent,daterange,Facette Neu im Katalog,1809612,100 %,1809612,10487,2010-07-04
+AK,filterSource,string,Facette Datenbestand,1809683,100 %,1809683,2,Bibliotheksmaterialien
 AK,filterSubject_mv,strings,Facette Thema,745345,41 %,1912445,105351,['Kunst / Einzelne Künstler']
-AK,filterType_mv,strings,Facette Medientyp,1809663,100 %,1809663,6,Gedrucktes
-AK,genreOther_mv,texts,,412277,23 %,440811,390,['Erzählende Prosa']
-AK,gnd_id_mv,strings,GND-Nummer für Werktitel extrahiert aus vendor_id_mv / vendor_type_mv,50578,3 %,50580,50562,['1135800529']
-AK,headword_mv,texts,,39318,2 %,45106,27597,['sämtliche']
-AK,id,string,,1809663,100 %,1809663,1809663,AK00635378
+AK,filterType_mv,strings,Facette Medientyp,1809683,100 %,1809683,6,Gedrucktes
+AK,genreOther_mv,texts,,412292,23 %,440826,390,['Erzählende Prosa']
+AK,gnd_id_mv,strings,GND-Nummer für Werktitel extrahiert aus vendor_id_mv / vendor_type_mv,50593,3 %,50595,50577,['1219759732']
+AK,headword_mv,texts,,39321,2 %,45111,27599,['sämtliche']
+AK,id,string,,1809683,100 %,1809683,1809683,AK01785078
 AK,identifier_id_mv,strings,,1032302,57 %,1745571,1642779,"['00,L01']"
 AK,identifier_type_mv,strings,,1029231,57 %,1742474,74,['572y']
 AK,index,text,,774,0 %,774,753,Index in: Répertoire international de la presse musicale
 AK,inventory,text,,6179,0 %,6179,5510,Bd 1.2. (1987)
 AK,isbn_mv,strings,,279942,15 %,353637,293498,"['3-598-50924-3', '3-598-50017-3', '3-598-50050-5', '3-598-50055-6']"
-AK,ismn_mv,strings,,216,0 %,228,227,['979-10-95244-32-5']
+AK,ismn_mv,strings,,216,0 %,228,227,['9798855804171']
 AK,issn_mv,strings,,7387,0 %,8033,7434,['0931-7961']
 AK,item_accessionNumber_mv,strings,aus AU accessionNumber,578891,32 %,650200,575304,['91.4636;0']
 AK,item_broadcastDate_mv,strings,aus AU broadcastDate,74757,4 %,74879,19519,['1977']
 AK,item_broadcastStation_mv,texts,aus AU broadcastStation,73752,4 %,73865,637,['SWR 2']
 AK,item_callNumberCollection_mv,texts,aus AU callNumberCollection_mv getrennt mit ␝ (U+241D),124539,7 %,183769,377,"['G:Wolfskehl, Karl (Virtuelle Bibliothek Kiechlinsbergen 1937)␝G:Wolfskehl, Karl (Virtuelle Rekonstruktion des Buchbesitzes)']"
-AK,item_callNumberItem_mv,strings,aus AU callNumberItem,873189,48 %,949007,129425,['Y']
+AK,item_callNumberItem_mv,strings,aus AU callNumberItem,873191,48 %,949009,129425,['Y']
 AK,item_callNumberItemSuffix_mv,strings,aus AU callNumberItemSuffix,166728,9 %,192136,52341,['Teils.']
 AK,item_callNumberReadingRoom_mv,strings,aus AU callNumberReadingRoom,19917,1 %,24485,2367,['MS:1A/004-006']
 AK,item_classification_display_mv,texts,aus AU classification_display_mv getrennt mit ␝ (U+241D),57268,3 %,85250,30182,"['1937 / Kiechlinsbergen / Wolfskehl, Karl␝1937 / 1938 / Berlin / Schocken, Salman␝1938 / Jerusalem / Schockenbibliothek']"
@@ -104,50 +104,50 @@ AK,item_corporationAt_display_mv,texts,aus AU corporationAt_display_mv getrennt 
 AK,item_corporationAt_id_mv,strings,aus AU corporationAt_id_mv getrennt mit ␝ (U+241D),25722,1 %,39033,378,['KS00134857']
 AK,item_digitalObject_accessLevel_mv,strings,aus AU digitalObject_accessLevel_mv getrennt mit ␝ (U+241D),110,0 %,184,4,['public']
 AK,item_digitalObject_display_mv,texts,aus AU digitalObject_display_mv getrennt mit ␝ (U+241D),110,0 %,184,5,['Digitalisat: Zugang']
-AK,item_digitalObject_fileExtension_mv,strings,aus AU digitalObject_fileExtension_mv getrennt mit ␝ (U+241D),3,0 %,14,3,"['␣', '␣', '␣', '␣', '␣␝jpg', '␣']"
+AK,item_digitalObject_fileExtension_mv,strings,aus AU digitalObject_fileExtension_mv getrennt mit ␝ (U+241D),3,0 %,14,3,"['␣', 'pdf']"
 AK,item_digitalObject_hyperlink_mv,strings,aus AU digitalObject_hyperlink_mv getrennt mit ␝ (U+241D),110,0 %,184,113,"['https://digital.dla-marbach.de/viewer/image/AU00380415/?media_access=public&media_license=CC0', '␣']"
 AK,item_digitalObject_id_mv,strings,aus AU digitalObject_id_mv getrennt mit ␝ (U+241D),110,0 %,184,113,"['MM01562698', '␣']"
 AK,item_digitalObject_license_mv,strings,aus AU digitalObject_license_mv getrennt mit ␝ (U+241D),107,0 %,170,2,['CC0']
 AK,item_digitalObject_licenseNote_mv,texts,aus AU digitalObject_licenseNote_mv getrennt mit ␝ (U+241D),???,???,???,???,???
 AK,item_digitalObject_thumbnail_mv,strings,aus AU digitalObject_thumbnail_mv getrennt mit ␝ (U+241D),108,0 %,176,111,"['https://digital.dla-marbach.de/viewer/api/v1/records/AU00380415/files/images/AU00380415_0001.tif/full/!480,480/0/default.jpg', '␣']"
-AK,item_display_mv,texts,aus AU display,880273,49 %,956324,951260,['I. Gedichte']
+AK,item_display_mv,texts,aus AU display,880275,49 %,956326,951262,['I. Gedichte']
 AK,item_enveloped_mv,booleans,aus AU enveloped,61926,3 %,70856,2,['true']
-AK,item_id_mv,strings,,880273,49 %,956324,956324,['AU00948151']
-AK,item_location_mv,texts,aus AU location_mv getrennt mit ␝ (U+241D),875301,48 %,951351,27,['Bibliotheksmagazin']
+AK,item_id_mv,strings,,880275,49 %,956326,956326,['AU00366699']
+AK,item_location_mv,texts,aus AU location_mv getrennt mit ␝ (U+241D),875303,48 %,951353,27,['Bibliotheksmagazin']
 AK,item_note_mv,texts,aus AU note,103256,6 %,143911,62496,['Kopie']
 AK,item_noteOther_mv,texts,aus AU noteOther_mv getrennt mit ␝ (U+241D),6251,0 %,11261,2718,['BKSigel:RL']
 AK,item_noteProvenance_mv,texts,aus AU noteProvenance_type_mv und noteProvenance_text_mv,18853,1 %,28249,9071,['Sammlungsbezogener Suchbegriff: Koselleck-Schlagwort-Notiz']
 AK,item_personAt_display_mv,texts,aus AU personAt_display_mv getrennt mit ␝ (U+241D),102852,6 %,153526,3643,"['Koselleck, Reinhart (1923-2006)']"
 AK,item_personAt_id_mv,strings,aus AU personAt_id_mv getrennt mit ␝ (U+241D),102852,6 %,153526,3644,['PE00000144']
 AK,item_provenance_mv,booleans,aus AU provenance,121411,7 %,177997,2,['true']
-AK,item_supplements_id_mv,strings,zugeordnete Materialien aus BI und HS über Exemplarsätze getrennt mit ␝ (U+241D),15660,1 %,25872,16389,['HS00820720']
-AK,item_usageRestriction_mv,texts,aus AU usageRestriction,880204,49 %,956255,5,['benutzbar']
+AK,item_supplements_id_mv,strings,zugeordnete Materialien aus BI und HS über Exemplarsätze getrennt mit ␝ (U+241D),15660,1 %,25872,16389,"['␣', 'HS00571928', 'HS00549085']"
+AK,item_usageRestriction_mv,texts,aus AU usageRestriction,880206,49 %,956257,5,['benutzbar']
 AK,item_usageRestrictionNote_mv,texts,aus AU usageRestrictionNote,88296,5 %,117184,14,['bedingt benutzbar\nBitte wenden Sie sich an die Auskunft der Bibliothek.\nE-Mail: bibliothek@dla-marbach.de\nTelefon: +49 7144 848 317']
 AK,item_virtualRecording_mv,texts,aus AU virtualRecording getrennt mit ␝ (U+241D),1295,0 %,1566,1180,['Auflage der Ausgabe nicht ermittelbar']
 AK,journalIssue_display_mv,texts,aus AK display,3235,0 %,3235,684,"Hesperus : encyclopädische Zeitschrift für gebildete Leser. - (1816), H.1-5 = Nr.1-30 [Jg.unvollst.]"
 AK,journalIssue_id_mv,strings,,3235,0 %,3235,684,AK00124565
-AK,language_mv,texts,,907035,50 %,930501,181,['Deutsch']
+AK,language_mv,texts,,907050,50 %,930516,181,['Deutsch']
 AK,languageOriginal_mv,texts,,41614,2 %,42484,168,['Deutsch']
-AK,linkCommonsImage_file_mv,strings,aus lobid-gnd depiction und Wikidata P18,1417,0 %,1536,1511,['Plato%20Silanion%20Musei%20Capitolini%20MC1377.jpg']
-AK,linkCommonsImage_rights_mv,strings,generiert aus Wikimedia Commons Artist/License,1417,0 %,1536,1013,['Wikimedia Commons | Public domain']
-AK,linkFilmportal_mv,strings,aus lobid-gnd sameAs:filmportal und Wikidata P2639,445,0 %,445,445,942f194c023c426ca5772a2ddcce7d4c
-AK,linkWikidata,string,aus lobid-gnd,7376,0 %,7376,7369,Q766086
-AK,linkWikidataWebsite_mv,strings,aus Wikidata P856,125,0 %,147,146,['https://qualityland.de/']
+AK,linkCommonsImage_file_mv,strings,aus lobid-gnd depiction und Wikidata P18,1421,0 %,1540,1515,['Plato%20Silanion%20Musei%20Capitolini%20MC1377.jpg']
+AK,linkCommonsImage_rights_mv,strings,generiert aus Wikimedia Commons Artist/License,1421,0 %,1540,1016,['Wikimedia Commons | Public domain']
+AK,linkFilmportal_mv,strings,aus lobid-gnd sameAs:filmportal und Wikidata P2639,445,0 %,445,445,e54983d701dd45f68ed17a29de461475
+AK,linkWikidata,string,aus lobid-gnd,7380,0 %,7380,7373,Q766086
+AK,linkWikidataWebsite_mv,strings,aus Wikidata P856,126,0 %,148,147,['https://qualityland.de/']
 AK,linkWikipedia,string,aus lobid-gnd sameAs:dewiki,???,???,???,???,???
 AK,note,text,,750,0 %,750,601,Gedicht
 AK,noteBibliography_mv,texts,,12057,1 %,12076,17,['Döblin-Bibliographie']
 AK,noteContent_mv,texts,,43950,2 %,43950,20772,Photo
-AK,noteExplanatory_text_mv,texts,,20769,1 %,33318,21010,['Werktitel als Wissensraum']
-AK,noteExplanatory_type_mv,strings,,20733,1 %,33282,21,['Geschichte des Werks']
-AK,noteFootnote_text_mv,texts,,250185,14 %,342979,183610,['In Fraktur']
-AK,noteFootnote_type_mv,strings,,250185,14 %,342979,123,['501']
+AK,noteExplanatory_text_mv,texts,,20777,1 %,33327,21016,['Werktitel als Wissensraum']
+AK,noteExplanatory_type_mv,strings,,20741,1 %,33291,21,['Geschichte des Werks']
+AK,noteFootnote_text_mv,texts,,250187,14 %,342982,183613,['In Fraktur']
+AK,noteFootnote_type_mv,strings,,250187,14 %,342982,123,['501']
 AK,noteRemark_text_mv,texts,,10287,1 %,22984,11516,['Bibl. Sander']
 AK,noteRemark_type_mv,strings,,10265,1 %,22962,11,"['Inhalt', 'Bibliografischer Nachweis']"
 AK,noteRequirements_mv,texts,,550,0 %,673,559,['Acrobat-Reader']
-AK,parent_display_mv,texts,aus AK display,1336525,74 %,1458499,98437,['[Jugend <München>] Jugend : Münchner illustrierte Wochenschrift für Kunst und Leben']
-AK,parent_displayAddition1_mv,texts,aus AK displayAddition1,1336015,74 %,1457987,70259,"['München : Verl. d. Jugend, 1.1896 - 45.1940,13; damit Ersch. eingest..']"
-AK,parent_id_mv,strings,,1336525,74 %,1458499,103032,['AK00006781']
-AK,parent_titleResponsability_mv,texts,aus AK titleResponsability,809969,45 %,908461,42968,['Hrsg.: Georg Hirth. Red.: Fritz von Ostini']
+AK,parent_display_mv,texts,aus AK display,1336527,74 %,1458501,98437,['[Jugend <München>] Jugend : Münchner illustrierte Wochenschrift für Kunst und Leben']
+AK,parent_displayAddition1_mv,texts,aus AK displayAddition1,1336017,74 %,1457989,70259,"['München : Verl. d. Jugend, 1.1896 - 45.1940,13; damit Ersch. eingest..']"
+AK,parent_id_mv,strings,,1336527,74 %,1458501,103032,['AK00006781']
+AK,parent_titleResponsability_mv,texts,aus AK titleResponsability,809970,45 %,908462,42968,['Hrsg.: Georg Hirth. Red.: Fritz von Ostini']
 AK,parent_type_mv,strings,,1097552,61 %,1219447,12,"['Teil einer fortlaufenden Zusammenstellung, Aufsatz (z.B. Zeitschrift)']"
 AK,parentIssueDate,daterange,,4584,0 %,4584,3236,1928-08-10
 AK,parentIssueNumber,string,,78939,4 %,78939,2830,1
@@ -158,70 +158,70 @@ AK,parentIssueYearVolume,string,,67722,4 %,67722,526,32
 AK,parentTitleOriginal_mv,texts,,179266,10 %,186376,151549,['Neue Bücher']
 AK,parentVolume_mv,strings,,267627,15 %,279790,78760,['1']
 AK,parentVolumeNormalized_mv,strings,,269627,15 %,282094,63417,['11']
-AK,parentVolumeTotal,string,,770891,43 %,770891,582510,(2006)
+AK,parentVolumeTotal,string,,770892,43 %,770892,582511,(2006)
 AK,personAbout_display_mv,texts,aus PE display,488885,27 %,584488,42174,"['Goethe, Johann Wolfgang von (1749-1832)']"
 AK,personAbout_id_mv,strings,,488885,27 %,584488,42183,['PE00000863']
-AK,personBy_creator_mv,strings,,1478913,82 %,2037975,3,['creator']
-AK,personBy_display_mv,texts,aus PE display,1478934,82 %,2038001,301701,"['Kracauer, Siegfried (1889-1966)']"
-AK,personBy_id_mv,strings,,1478934,82 %,2038001,303095,['PE00003459']
-AK,personBy_role_mv,strings,,1477919,82 %,2036870,57,['Verfasser/Urheber']
+AK,personBy_creator_mv,strings,,1478931,82 %,2038000,3,['creator']
+AK,personBy_display_mv,texts,aus PE display,1478952,82 %,2038026,301701,"['Kracauer, Siegfried (1889-1966)']"
+AK,personBy_id_mv,strings,,1478952,82 %,2038026,303095,['PE00003459']
+AK,personBy_role_mv,strings,,1477937,82 %,2036895,57,['Verfasser/Urheber']
 AK,publicationHistory,text,,24726,1 %,24726,19055,Band 1-
 AK,publisher_display_mv,texts,aus KS display,556141,31 %,570031,36776,['Suhrkamp']
 AK,publisher_id_mv,strings,,556141,31 %,570031,39817,['KS00000156']
 AK,publisherOriginalLocation_mv,texts,,636996,35 %,658994,23872,['Berlin']
 AK,publisherOriginalText_mv,texts,,593161,33 %,612985,89403,['Suhrkamp']
-AK,reference_text_mv,texts,,26619,1 %,39978,7063,['DNB']
-AK,reference_type_mv,strings,,26598,1 %,39951,9,['positiv']
+AK,reference_text_mv,texts,,26621,1 %,39980,7063,['DNB']
+AK,reference_type_mv,strings,,26600,1 %,39953,9,['positiv']
 AK,relation_comment_mv,texts,,218,0 %,833,43,['Enthält']
-AK,relation_id_mv,strings,,60044,3 %,89636,54146,['AK00121480']
-AK,relation_text_mv,texts,,60348,3 %,89983,54630,"['Kirsch, Sarah (1935-2013). Schwanenliebe (Zusammenstellung : 2001)']"
-AK,relation_type_mv,strings,,60377,3 %,90013,194,['Rezension von']
-AK,schemaVersion,string,,1809663,100 %,1809663,1,1.0.0
+AK,relation_id_mv,strings,,60057,3 %,89651,54157,['AK00121480']
+AK,relation_text_mv,texts,,60361,3 %,89998,54641,"['Kirsch, Sarah (1935-2013). Schwanenliebe (Zusammenstellung : 2001)']"
+AK,relation_type_mv,strings,,60390,3 %,90028,194,['Rezension von']
+AK,schemaVersion,string,,1809683,100 %,1809683,1,1.0.0
 AK,scholarlyPublication_date_mv,texts,,2804,0 %,2841,141,['2015']
 AK,scholarlyPublication_location_mv,texts,,21912,1 %,21973,824,['München']
 AK,scholarlyPublication_text_mv,texts,,2917,0 %,2956,656,['Univ.']
 AK,scholarlyPublication_type_mv,strings,,2933,0 %,2972,43,['Dissertation']
-AK,searchBoost,float,Gewichtung Relevanzranking,1809663,100 %,1809663,2,1
+AK,searchBoost,float,Gewichtung Relevanzranking,1809683,100 %,1809683,2,1
 AK,searchClassification_id_mv,strings,Suche nach Systematik (Identnummer) in erweiterter Suche,793924,44 %,1246163,231872,"['SE00239168', 'SE00239169', 'SE00241087']"
 AK,searchCollectionCreator_display_mv,texts,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),128834,7 %,188535,379,"['Jünger, Ernst (1895-1998)']"
 AK,searchCollectionCreator_id_mv,strings,Personen/Körperschaften mit Relation „Über“ aus verknüpften Bestandsdatensätzen (BF),128834,7 %,188535,379,['PE00001233']
-AK,searchDate_mv,strings,Suche nach Datumsangaben in der Form TT.MM.JJJJ,1705124,94 %,1911694,39476,['1988']
-AK,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,1572291,87 %,3592800,458054,['PE00003977']
-AK,searchEntityScore,int,Anzahl der Verweise auf den Normdatensatz,73479,4 %,73479,249,3
-AK,searchName_mv,texts,Personen/Körperschaften für erweiterte Suche,1533825,85 %,2732164,331195,"['Kracauer, Siegfried']"
+AK,searchDate_mv,strings,Suche nach Datumsangaben in der Form TT.MM.JJJJ,1705136,94 %,1911706,39476,['1988']
+AK,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,1572309,87 %,3592845,458055,['PE00003977']
+AK,searchEntityScore,int,Anzahl der Verweise auf den Normdatensatz,73497,4 %,73497,249,3
+AK,searchName_mv,texts,Personen/Körperschaften für erweiterte Suche,1533843,85 %,2732189,331195,"['Kracauer, Siegfried']"
 AK,searchNameAbout_mv,texts,"Personen/Körperschaften mit Relation ""Über"" für erweiterte Suche",465502,26 %,552111,49379,"['Goethe, Johann Wolfgang von']"
 AK,searchNameAt_mv,texts,"Personen/Körperschaften mit Relation ""Unter"" für erweiterte Suche",119580,7 %,208826,14246,"['Wolfskehl, Karl', 'Schocken, Salman', 'Schockenbibliothek']"
-AK,searchNameBy_mv,texts,"Personen/Körperschaften mit Relation ""Von"" für erweiterte Suche",1495787,83 %,2056530,303617,"['Kracauer, Siegfried']"
+AK,searchNameBy_mv,texts,"Personen/Körperschaften mit Relation ""Von"" für erweiterte Suche",1495805,83 %,2056555,303617,"['Kracauer, Siegfried']"
 AK,searchNameTo_mv,texts,"Personen/Körperschaften mit Relation ""An"" für erweiterte Suche",33298,2 %,40029,14238,"['Jünger, Ernst']"
-AK,searchSuggestPayload,string,ID und Anzeigetitel für Suggester (Trennzeichen: ␝),73479,4 %,73479,73479,"AK01824910␝Herrmann, Hugo (1896-1967). Hyperions Schicksalslied (Lied)"
-AK,searchSuggestTerm_mv,strings,Suchbegriffe für Suggester,73479,4 %,132573,131180,"['Kracauer, Siegfried (1889-1966). Ginster (1928)']"
-AK,searchVariant_mv,texts,"Verweisungsformen verknüpfter Personen, Körperschaften und Werke",1133823,63 %,14678569,324909,"['Goethe, Johann Wolfgang', 'Gete, Iogann W.', 'Goethe, Johann W.', 'Gëte, Iogann V.', 'Goethe, Wolfgang von', 'Goethius, ...', 'Goethe, Volfgango', 'Goethe, Johan Wolphgang', 'Gete, Johan Volfgang', 'Goethe, Johann Wolfgang', 'Göthe, J. W.', 'Goethe, Johann W. von']"
-AK,source,string,,1809663,100 %,1809663,1,AK
-AK,statusCataloging,string,,851991,47 %,851991,10,"f-fertig, i-fertig"
-AK,statusEditing,string,,1633078,90 %,1633078,13,Retrokonversion
+AK,searchSuggestPayload,string,ID und Anzeigetitel für Suggester (Trennzeichen: ␝),73497,4 %,73497,73497,"AK00134091␝Preußler, Otfried (1923-2013). Der Räuber Hotzenplotz (Kinderbuch : 1962)"
+AK,searchSuggestTerm_mv,strings,Suchbegriffe für Suggester,73497,4 %,132608,131215,"['Kracauer, Siegfried (1889-1966). Ginster (1928)']"
+AK,searchVariant_mv,texts,"Verweisungsformen verknüpfter Personen, Körperschaften und Werke",1133839,63 %,14678723,324910,"['Goethe, Johann Wolfgang', 'Gete, Iogann W.', 'Goethe, Johann W.', 'Gëte, Iogann V.', 'Goethe, Wolfgang von', 'Goethius, ...', 'Goethe, Volfgango', 'Goethe, Johan Wolphgang', 'Gete, Johan Volfgang', 'Goethe, Johann Wolfgang', 'Göthe, J. W.', 'Goethe, Johann W. von']"
+AK,source,string,,1809683,100 %,1809683,1,AK
+AK,statusCataloging,string,,851994,47 %,851994,10,"f-fertig, i-fertig"
+AK,statusEditing,string,,1633096,90 %,1633096,13,Retrokonversion
 AK,statusJournalReview,string,,8229,0 %,8229,12,Zeitschriftenheft ausgewertet
 AK,subject_display_mv,texts,aus TH display,142127,8 %,180404,12750,['Berlin']
 AK,subject_id_mv,strings,,142127,8 %,180404,12767,['TH00000233']
-AK,subject_useTerm_mv,texts,aus TH useTerm_display_mv,18,0 %,18,14,"Merten <Bornheim, Rhein-Sieg-Kreis>"
+AK,subject_useTerm_mv,texts,aus TH useTerm_display_mv,18,0 %,18,14,Drogobytsch
 AK,subject_usedFor_mv,texts,aus TH usedFor_display_mv,117617,6 %,882182,23422,"['Grossberlin', 'Groß-Berlin', 'Haupt- und Residenz-Stadt Berlin', 'Reichshauptstadt Berlin', 'Berlino', 'Berolino', 'Stadtgemeinde Berlin', 'Hauptstadt Berlin', 'Birlin', 'Barlin', 'Berolinon', 'Land Berlin', 'Coloniae Brandenburgicae', 'Berlinum', 'Verolino', 'Berolinum', 'Cölln an der Spree', 'Colonia Brandenburgica', 'Colonia Marchica', 'Cöln an der Spree', 'Berlin <1945-1948>', '""Besonderes Gebiet"" Berlin', 'Groß-Berlin']"
 AK,subjectOther_mv,texts,,157985,9 %,233723,161853,['Prosa ; Literatur ; Deutsch']
-AK,supplements_id_mv,strings,zugeordnete Materialien aus BI,99,0 %,109,109,['BI00003152']
+AK,supplements_id_mv,strings,zugeordnete Materialien aus BI,99,0 %,109,109,['BI00017502']
 AK,textualHolding_mv,texts,Bestandsangabe für Zeitschriften,14424,1 %,19883,19381,['Serie; Bestandsnachweis im AK']
-AK,title,text,,1809553,100 %,1809553,1641130,Gedichte
-AK,titleMain_text,text,,1536839,85 %,1536839,1120286,Gedichte
-AK,titleOther_language_mv,texts,,40517,2 %,71331,156,['Deutsch']
-AK,titleOther_text_mv,texts,,118229,7 %,174399,151227,['Werke']
-AK,titleOther_type_mv,strings,,118051,7 %,174205,32,['370n']
-AK,titleResponsability,text,,1367208,76 %,1367208,506638,Alfred Döblin
+AK,title,text,,1809573,100 %,1809573,1641148,Gedichte
+AK,titleMain_text,text,,1536857,85 %,1536857,1120290,Gedichte
+AK,titleOther_language_mv,texts,,40520,2 %,71337,156,['Deutsch']
+AK,titleOther_text_mv,texts,,118237,7 %,174416,151242,['Werke']
+AK,titleOther_type_mv,strings,,118059,7 %,174222,32,['370n']
+AK,titleResponsability,text,,1367211,76 %,1367211,506638,Alfred Döblin
 AK,titleResponsabilityFull,text,,3600,0 %,3600,3001,Oskar Pastior
 AK,titleShort,text,,174,0 %,174,170,MARC
 AK,titleSuffix,text,,770401,43 %,770401,472403,[Gedicht]
-AK,url,string,,1809663,100 %,1809663,1809663,https://www.dla-marbach.de/find/opac/id/AK01553869
-AK,usageRestrictionNote,text,Benutzungshinweis,167066,9 %,167066,5,"nicht benutzbar\nnur bibliographischer Nachweis, nicht im Bestand des DLA!"
-AK,vendor_id_mv,strings,,1121971,62 %,1200784,709823,['GEMEL. 20090818']
-AK,vendor_type_mv,strings,,1121960,62 %,1200773,21,['K10Plus-PPN']
-AK,website_description_mv,texts,,130465,7 %,151475,4817,['Inhaltsverzeichnis']
-AK,website_url_mv,strings,,137039,8 %,158707,142828,['http://www.munzinger.de/search/go/nr/inhalt.jsp?ausgabe=1890*']
+AK,url,string,,1809683,100 %,1809683,1809683,https://www.dla-marbach.de/find/opac/id/AK00791954
+AK,usageRestrictionNote,text,Benutzungshinweis,167084,9 %,167084,5,"nicht benutzbar\nnur bibliographischer Nachweis, nicht im Bestand des DLA!"
+AK,vendor_id_mv,strings,,1121986,62 %,1200799,709838,['GEMEL. 20090818']
+AK,vendor_type_mv,strings,,1121975,62 %,1200788,21,['K10Plus-PPN']
+AK,website_description_mv,texts,,130473,7 %,151483,4819,['Inhaltsverzeichnis']
+AK,website_url_mv,strings,,137047,8 %,158715,142836,['http://www.munzinger.de/search/go/nr/inhalt.jsp?ausgabe=1890*']
 AK,work_display_mv,texts,aus AK display,68290,4 %,68290,27915,"Schiller, Friedrich von (1759-1805). Wilhelm Tell (Drama : 1804)"
 AK,work_id_mv,strings,,68290,4 %,68290,28026,AK00000039
 AK,workAbout_display_mv,texts,aus AK display,117828,7 %,136557,36890,"['Goethe, Johann Wolfgang von (1749-1832). Faust (Drama)']"
@@ -243,8 +243,8 @@ AU,collection_id_mv,strings,,150461,15 %,163263,425,['BF00019580']
 AU,confidential,boolean,,???,???,???,???,???
 AU,corporationAt_display_mv,texts,aus KS display,27607,3 %,27843,377,['Schockenbibliothek']
 AU,corporationAt_id_mv,strings,,27607,3 %,27843,377,['KS00134857']
-AU,dateCataloged,daterange,,991957,100 %,991957,7712,2021-04-15
-AU,dateModified,daterange,,991957,100 %,991957,7584,2021-04-15
+AU,dateCataloged,daterange,,991968,100 %,991968,7713,2021-04-15
+AU,dateModified,daterange,,991968,100 %,991968,7585,2021-04-15
 AU,digitalObject_accessLevel_mv,strings,aus MM accessLevel,113,0 %,114,3,['public']
 AU,digitalObject_display_mv,texts,aus MM display,113,0 %,114,5,['Digitalisat: Zugang']
 AU,digitalObject_fileExtension_mv,strings,aus MM fileExtension,3,0 %,4,3,['pdf']
@@ -253,13 +253,13 @@ AU,digitalObject_id_mv,strings,,113,0 %,114,113,['MM01562698']
 AU,digitalObject_license_mv,strings,aus MM license,110,0 %,110,1,CC0
 AU,digitalObject_licenseNote_mv,texts,aus MM license,???,???,???,???,???
 AU,digitalObject_thumbnail_mv,strings,aus MM thumbnail,111,0 %,112,111,"['https://digital.dla-marbach.de/viewer/api/v1/records/AU00380415/files/images/AU00380415_0001.tif/full/!480,480/0/default.jpg']"
-AU,display,text_normalized,Hauptbezeichnung,991957,100 %,991957,951375,ohne Titel
+AU,display,text_normalized,Hauptbezeichnung,991968,100 %,991968,951375,ohne Titel
 AU,enveloped,boolean,,64681,7 %,64681,1,True
-AU,id,string,,991957,100 %,991957,991957,AU00249135
+AU,id,string,,991968,100 %,991968,991968,AU00988646
 AU,location_mv,texts,,951470,96 %,951470,26,Bibliotheksmagazin
 AU,manifestation_display,text,aus AK display,956335,96 %,956335,851303,Gedichte
 AU,manifestation_id,string,,956335,96 %,956335,880301,AK01600579
-AU,mediaNumber,string,,991945,100 %,991945,991944,AK004647723
+AU,mediaNumber,string,,991956,100 %,991956,991955,AK004647723
 AU,note,text,,112985,11 %,112985,62504,Kopie
 AU,noteOther_mv,texts,,6475,1 %,6475,2718,BKSigel:RL
 AU,noteProvenance_text_mv,texts,,19304,2 %,31957,9506,['Koselleck-Schlagwort-Notiz']
@@ -267,31 +267,31 @@ AU,noteProvenance_type_mv,strings,,21251,2 %,33904,7,"['Inventar-Nummer', 'Sachg
 AU,personAt_display_mv,texts,aus PE display,120049,12 %,151328,3643,"['Jünger, Ernst (1895-1998)']"
 AU,personAt_id_mv,strings,,120049,12 %,151328,3644,['PE00001233']
 AU,provenance,boolean,,139867,14 %,139867,1,True
-AU,schemaVersion,string,,991957,100 %,991957,1,1.0.0
-AU,searchBoost,float,Gewichtung Relevanzranking,991957,100 %,991957,1,0.1
-AU,source,string,,991957,100 %,991957,1,AU
-AU,statusItem,string,,991957,100 %,991957,4,Verfügbar
-AU,statusLoan,string,,991957,100 %,991957,7,Am Standort
-AU,url,string,,956335,96 %,956335,956335,https://www.dla-marbach.de/find/opac/id/AK00042386?tx_find_find[au]=AU00019690#tabaccess
-AU,usageRestriction,text,,991888,100 %,991888,5,benutzbar
+AU,schemaVersion,string,,991968,100 %,991968,1,1.0.0
+AU,searchBoost,float,Gewichtung Relevanzranking,991968,100 %,991968,1,0.1
+AU,source,string,,991968,100 %,991968,1,AU
+AU,statusItem,string,,991968,100 %,991968,4,Verfügbar
+AU,statusLoan,string,,991968,100 %,991968,7,Am Standort
+AU,url,string,,956335,96 %,956335,956335,https://www.dla-marbach.de/find/opac/id/AK00403990?tx_find_find[au]=AU00270609#tabaccess
+AU,usageRestriction,text,,991899,100 %,991899,5,benutzbar
 AU,usageRestrictionNote,text,Benutzungshinweis,95198,10 %,95198,13,bedingt benutzbar\nBitte wenden Sie sich an die Auskunft der Bibliothek.\nE-Mail: bibliothek@dla-marbach.de\nTelefon: +49 7144 848 317
 AU,virtualRecording,text,,1309,0 %,1309,1179,Tausenderzählung der Auflage nicht ermittelbar
-BE,accessionNumber,string,,6515,100 %,6515,6513,BI.2001.0051
+BE,accessionNumber,string,,6515,100 %,6515,6513,HS.1988.0005
 BE,corporationAt_display_mv,texts,aus KS display,30,0 %,30,28,Schwäbischer Schillerverein (1895-1947)
 BE,corporationAt_id_mv,strings,,30,0 %,30,28,KS00002907
 BE,department,string,,6544,100 %,6544,5,HS
 BE,display,text_normalized,Hauptbezeichnung,6544,100 %,6544,6471,Unbekannt
-BE,id,string,,6544,100 %,6544,6544,BE00004220
+BE,id,string,,6544,100 %,6544,6544,BE00005737
 BE,personAt_display_mv,texts,aus PE display,334,5 %,376,326,"['Meinke, Hanns (1884-1974)']"
-BE,personAt_id_mv,strings,,334,5 %,376,326,['PE00008533']
+BE,personAt_id_mv,strings,,334,5 %,376,326,['PE00004473']
 BE,schemaVersion,string,,6544,100 %,6544,1,1.0.0
 BE,searchBoost,float,Gewichtung Relevanzranking,6544,100 %,6544,1,0.1
 BE,source,string,,6544,100 %,6544,1,BE
 BE,statusLoan,string,,6494,99 %,6494,7,Am Standort
 BE,title,text,,6544,100 %,6544,6471,Unbekannt
-BE,url,string,,6544,100 %,6544,6544,https://www.dla-marbach.de/find/opac/id/BE00003985
+BE,url,string,,6544,100 %,6544,6544,https://www.dla-marbach.de/find/opac/id/BE00007210
 BE,usageRestriction,text,,6505,99 %,6505,4,benutzbar
-BE,usageRestrictionComment,text,,82,1 %,82,80,gesperrt
+BE,usageRestrictionComment,text,,82,1 %,82,80,Kopien nur nach Rücksprache
 BF,accession_display,text,aus BE display,2721,5 %,2721,669,BE00005721
 BF,accession_id,string,,2721,5 %,2721,669,BE00005721
 BF,accessionNumber,string,,2721,5 %,2721,669,SU.2010.0002
@@ -317,24 +317,24 @@ BF,department,string,,49893,100 %,49893,5,Mediendokumentation
 BF,digitalObject_accessLevel_mv,strings,aus MM accessLevel,137,0 %,169,2,['public']
 BF,digitalObject_display_mv,texts,aus MM display,140,0 %,175,173,['Hinweise zur Recherche']
 BF,digitalObject_fileExtension_mv,strings,aus MM fileExtension,93,0 %,125,2,['pdf']
-BF,digitalObject_hyperlink_mv,strings,aus MM hyperlink,137,0 %,169,168,['https://digital.dla-marbach.de/viewer/image/BF00043749/?media_access=campus&media_thumbnail=BF000437497_0001r.tif']
-BF,digitalObject_id_mv,strings,,140,0 %,175,174,['MM01436475']
+BF,digitalObject_hyperlink_mv,strings,aus MM hyperlink,137,0 %,169,168,['https://digital.dla-marbach.de/files/dbst02/public/2021/20211029/20211029-0013.pdf?media_access=public']
+BF,digitalObject_id_mv,strings,,140,0 %,175,174,['MM01447589']
 BF,digitalObject_license_mv,strings,aus MM license,???,???,???,???,???
 BF,digitalObject_licenseNote_mv,texts,aus MM license,???,???,???,???,???
-BF,digitalObject_thumbnail_mv,strings,aus MM thumbnail,44,0 %,44,44,"https://digital.dla-marbach.de/viewer/api/v1/records/BF00043383/files/images/BF000433836_0001.tif/full/!480,480/0/default.jpg"
-BF,display,text_normalized,Hauptbezeichnung,49893,100 %,49893,49883,"B:Mühsam, Kreszentia - [Einzelautograph, Einzelautographen]"
+BF,digitalObject_thumbnail_mv,strings,aus MM thumbnail,44,0 %,44,44,"https://digital.dla-marbach.de/viewer/api/v1/records/BF00043729/files/images/BF000437290_0001.tif/full/!480,480/0/default.jpg"
+BF,display,text_normalized,Hauptbezeichnung,49893,100 %,49893,49883,"H:Luchterhand Verlag/Struzyk, Brigitte - [Geschlossener Bestand der Mediendokumentation, Archiv]"
 BF,displayAddition1,text,Dritte Zeile der Trefferliste,43120,86 %,43120,1423,1 Mappe
 BF,displayAddition2,text,,???,???,???,???,???
 BF,displayName,text,Zweite Zeile der Trefferliste gebildet aus Personen und Körperschaften,46384,93 %,46384,28716,"Suhrkamp-Verlag <Frankfurt, Main> (1950-)"
 BF,displayTree,text,Anzeigetitel für Baumansicht,49893,100 %,49893,47990,Kopien
-BF,exportDC,string,Datensatz im DC-Format,49893,100 %,49893,49893,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">\n  <dc:title>TH:Dumas, Alexandre &lt;père&gt; - [Theaterprogramme der Mediendokumentation]</dc:title>\n  <dc:creator>Dumas, Alexandre &lt;père&gt; (1802-1870)</dc:creator>\n  <dc:type>Theaterprogramm</dc:type>\n  <dc:ty (...)"
-BF,exportMODS,string,Datensatz im MODS-Format,49893,100 %,49893,49893,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">\n  <titleInfo>\n    <title>Z:Loko, El - [Zeitungsausschnittsammlung der Mediendokumentation]</title>\n  </titleInfo>\n  <name type=""personal"">\n    <namePart>Loko, El (1950-)</namePart>\n    <nameIdentifier type=""gnd"">11136194X</nameIdentifier>\n    (...)"
-BF,exportRIS,string,Datensatz im RIS-Format,49893,100 %,49893,49893,"TY  - GEN\nAU  - Bruno, Giordano\nAV  - bedingt benutzbar. Die Benutzung ist nach vorheriger Terminabsprache bedingt möglich. Bitte wenden Sie sich nach der Bestellung an das Referat Mediendokumentation.. E-Mail: mediendokumentation@dla-marbach.de\nCN  - BF000418571\nID  - BF00041857\nM3  - Theaterprogramm\nN1  - Umfang: 1 Mappe\nN2  - Der Kerzenmacher - Komödie in 2 Teilen (""Il candelaio"" - Dt. von Lutz Kleinselbeck)\nTI  - TH:Bruno, Giordano - [Theaterprogramme der Mediendokumentation]\nUR  -  (...)"
+BF,exportDC,string,Datensatz im DC-Format,49893,100 %,49893,49893,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">\n  <dc:title>Z:Literaturrezeption, Rezeptionsgeschichte, Einzelne Themen (3m6b2) - [Zeitungsausschnittsammlung der Mediendokumentation]</dc:title>\n  <dc:type>Zeitungsausschnitt</dc:type>\n  <dc:type>Bestand</dc:type>\n (...)"
+BF,exportMODS,string,Datensatz im MODS-Format,49893,100 %,49893,49893,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">\n  <titleInfo>\n    <title>Z:Sachs, Hans - [Zeitungsausschnittsammlung der Mediendokumentation]</title>\n  </titleInfo>\n  <name type=""personal"">\n    <namePart>Sachs, Hans (1494-1576)</namePart>\n    <nameIdentifier type=""gnd"">118604597</nameIdenti (...)"
+BF,exportRIS,string,Datensatz im RIS-Format,49893,100 %,49893,49893,"TY  - GEN\nAU  - Utzinger, Rudolf\nAV  - bedingt benutzbar. Die Benutzung ist nach vorheriger Terminabsprache bedingt möglich. Bitte wenden Sie sich nach der Bestellung an das Referat Mediendokumentation.. E-Mail: mediendokumentation@dla-marbach.de\nCN  - BF00005593X\nID  - BF00005593\nM3  - Zeitungsausschnitt\nN1  - Umfang: 1 Mappe\nTI  - Z:Utzinger, Rudolf - [Zeitungsausschnittsammlung der Mediendokumentation]\nUR  - https://www.dla-marbach.de/find/opac/id/BF00005593/\nER  -"
 BF,extent,text,,43120,86 %,43120,1423,1 Mappe
 BF,filterAuthority_mv,strings,Facette Personen und Körperschaften,46384,93 %,50268,29398,"['Grimm, Hans (1875-1959)']"
 BF,filterAuthorityRelation_mv,strings,Facette Personen und Körperschaften mit Relationen,46384,93 %,50417,30364,"['Grimm, Hans (1875-1959)␝Unter']"
 BF,filterAuthorityRole_mv,strings,Facette Personen und Körperschaften mit Funktionsbezeichnungen,46384,93 %,50417,30367,"['Grimm, Hans (1875-1959)␝Bestandsbildner/Vorbesitzer']"
-BF,filterCollection_mv,strings,Facette Sammlung,17576,35 %,17576,17563,"B:Mühsam, Kreszentia"
+BF,filterCollection_mv,strings,Facette Sammlung,17576,35 %,17576,17563,"B:Leistner, Bernd"
 BF,filterDatePoint_mv,datepoints,Facette Zeit (Zeitpunkte),22265,45 %,27005,293,['1976-01-01T00:00:00Z']
 BF,filterDateRange_mv,dateranges,Facette Zeit (Zeiträume),22265,45 %,22265,1728,1976
 BF,filterDigital,boolean,Filter Digital,45,0 %,45,1,True
@@ -346,12 +346,12 @@ BF,filterRecent,daterange,Facette Neu im Katalog,49893,100 %,49893,4875,1999-03-
 BF,filterSource,string,Facette Datenbestand,49893,100 %,49893,1,Nachlässe und Spezialsammlungen
 BF,filterSubject_mv,strings,Facette Thema,3673,7 %,4046,3060,['Kunsthandel']
 BF,filterType_mv,strings,Facette Medientyp,49893,100 %,50248,5,['Gedrucktes']
-BF,id,string,,49893,100 %,49893,49893,BF00002885
+BF,id,string,,49893,100 %,49893,49893,BF00014059
 BF,itemization_extent_mv,strings,,3697,7 %,4467,385,['1']
 BF,itemization_status_mv,strings,,3945,8 %,4734,9,['katalogisiert']
 BF,itemization_unit_mv,strings,,3677,7 %,4446,17,['Kästen']
 BF,location_mv,texts,,6984,14 %,7058,485,['Regalachse D 26']
-BF,mediaNumber,string,,49893,100 %,49893,49893,BF000028404
+BF,mediaNumber,string,,49893,100 %,49893,49893,BF000463334
 BF,note,text,,3489,7 %,3489,2000,Geordnet nach der Autorensystematik der Zeitungsausschnittsammlung des Deutschen Literaturarchivs Marbach. Innerhalb der einzelnen Mappen chronologisch geordnet
 BF,noteOther_mv,texts,,2335,5 %,2335,1827,---- Photographien ----
 BF,order_extent_mv,strings,,4570,9 %,5520,396,['1']
@@ -383,9 +383,9 @@ BF,subject_display_mv,texts,aus TH display,1933,4 %,2120,1397,['Kunsthandel']
 BF,subject_id_mv,strings,,1933,4 %,2120,1397,['TH00021105']
 BF,subject_useTerm_mv,texts,aus TH useTerm_display_mv,???,???,???,???,???
 BF,subject_usedFor_mv,texts,aus TH usedFor_display_mv,1562,3 %,10692,4441,"['Deutsche Demokratische Republik', 'DDR', 'Deutschland <1949-1990, DDR>', 'German Democratic Republic', 'GDR', 'République Démocratique Allemande', 'RDA', 'Germanskaja Demokratičeskaja Respublika', 'Demokratičeskaja Respublika <Deutschland, DDR>', 'Democratic Republic <Deutschland, DDR>', 'Demokratische Republik <Deutschland, DDR>', 'Niemiecka Republika Demokratyczna', 'NRD', 'Gumhuriyat Almaniya ad-Dimuqratiya', 'República Democrática Alemana', 'Saksan Demokraattisen Tasavallan', 'Repubblica D (...)"
-BF,title,text,,49893,100 %,49893,49875,"TH:Lange, Friedrich"
+BF,title,text,,49893,100 %,49893,49875,"B:Mühsam, Kreszentia"
 BF,titleShort,text,,49691,100 %,49691,38379,Kopien
-BF,url,string,,49893,100 %,49893,49893,https://www.dla-marbach.de/find/opac/id/BF00027616
+BF,url,string,,49893,100 %,49893,49893,https://www.dla-marbach.de/find/opac/id/BF00016686
 BF,usageRestriction,text,,49893,100 %,49893,3,benutzbar
 BF,usageRestrictionComment,text,,483,1 %,483,135,Nur Digitalisat oder Mikroform benutzbar
 BF,usageRestrictionNote,text,Benutzungshinweis,49893,100 %,49893,4,bedingt benutzbar\nDie Benutzung ist nach vorheriger Terminabsprache bedingt möglich. Bitte wenden Sie sich nach der Bestellung an das Referat Mediendokumentation.\nE-Mail: mediendokumentation@dla-marbach.de
@@ -436,9 +436,9 @@ BI,display,text_normalized,Hauptbezeichnung,31769,100 %,31769,18858,Porträt Her
 BI,displayAddition1,text,Dritte Zeile der Trefferliste,26429,83 %,26429,6648,1887 oder etwas früher
 BI,displayAddition2,text,Vierte Zeile der Trefferliste,31767,100 %,31767,30037,Inventarnummer: CO.Altbestand (darin)
 BI,displayName,text,Zweite Zeile der Trefferliste gebildet aus Personen und Körperschaften,26522,83 %,26522,6773,Unbekannt
-BI,exportDC,string,Datensatz im DC-Format,31769,100 %,31769,31769,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">\n  <dc:title>Kurt Tucholsky / Illustrationen [Fotomappe DLA]</dc:title>\n  <dc:creator>Unbekannt</dc:creator>\n  <dc:creator>Tucholsky, Kurt (1890-1935)</dc:creator>\n  <dc:creator>Gerold-Tucholsky, Mary (1898-1987)</dc (...)"
-BI,exportMODS,string,Datensatz im MODS-Format,31769,100 %,31769,31769,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">\n  <titleInfo>\n    <title>Porträt Bernhard Kellermann [Photographie]</title>\n  </titleInfo>\n  <name type=""personal"">\n    <namePart>Unbekannt</namePart>\n    <role>\n      <roleTerm type=""text"">Urheber/in</roleTerm>\n    </role>\n  </name>\n  <na (...)"
-BI,exportRIS,string,Datensatz im RIS-Format,31769,100 %,31769,31769,"TY  - GEN\nA2  - Enzensberger, Hans Magnus\nA2  - Kaschnitz, Marie Luise\nAN  - BI.2003.0035\nAU  - Loos, Erica\nCA  - 2.v.l.\nCN  - BI000028431\nDA  - 1963\nID  - BI00002843\nKW  - Enzensberger, Hans Magnus (1929-2022)\nKW  - Kaschnitz, Marie Luise (1901-1974)\nLB  - Rückseite mit Stempel der Photographin, mit Beschriftung und Stempel des Rechteinhabers\nM1  - B 2003.0121\nM3  - Fotografie\nN1  - Maße:  23.3 x  16.9\nN1  - Erhaltungszustand: Knickstelle mittig in unterer Bildhälfte\nRN  - Datie (...)"
+BI,exportDC,string,Datensatz im DC-Format,31769,100 %,31769,31769,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">\n  <dc:title>Porträt Günter Grass [Photographie]</dc:title>\n  <dc:creator>Melis, Roger (1940-2009)</dc:creator>\n  <dc:type>Fotografie</dc:type>\n  <dc:date>1991-1991</dc:date>\n  <dc:format> 24.0 x  34.8</dc:format>\n (...)"
+BI,exportMODS,string,Datensatz im MODS-Format,31769,100 %,31769,31769,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">\n  <titleInfo>\n    <title>Unter hohen Bäumen Geige spielende Frau mit Zuhörerin [Gemälde]</title>\n  </titleInfo>\n  <name type=""personal"">\n    <namePart>Gleichen-Russwurm, Ludwig von (1836-1901)</namePart>\n    <nameIdentifier type=""gnd"">11869537 (...)"
+BI,exportRIS,string,Datensatz im RIS-Format,31769,100 %,31769,31769,"TY  - GEN\nA2  - Wiens, Paul\nA2  - Morgner, Irmtraud\nAN  - HS.2002.0012\nCN  - BI000025251\nDA  - 1970\nDA  - 1975\nID  - BI00002525\nKW  - Wiens, Paul (1922-1982)\nM1  - B 2002.0369\nM3  - Fotografie\nN1  - Maße:   8.9 x  14.2\nRN  - Italien oder Südfrankreich; Reiseaufnahme.\nRN  - Nachlass Irmtraud Morgner.\nTI  - Portrait Paul Wiens [Photographie]\nUR  - https://www.dla-marbach.de/find/opac/id/BI00002525/\nER  -"
 BI,extent,text,,2670,8 %,2670,408,1 Mappe
 BI,filterAuthority_mv,strings,Facette Personen und Körperschaften,31454,99 %,88750,17784,"['Unbekannt', 'Pinthus, Kurt (1886-1975)']"
 BI,filterAuthorityRelation_mv,strings,Facette Personen und Körperschaften mit Relationen,31454,99 %,100107,20496,"['Unbekannt␝Von', 'Pinthus, Kurt (1886-1975)␝Über', 'Pinthus, Kurt (1886-1975)␝Unter']"
@@ -456,7 +456,7 @@ BI,filterRecent,daterange,Facette Neu im Katalog,31769,100 %,31769,3688,2020-10-
 BI,filterSource,string,Facette Datenbestand,31769,100 %,31769,1,Bilder und Objekte
 BI,filterSubject_mv,strings,Facette Thema,28685,90 %,51878,14560,"['Hesse, Hermann (1877-1962)']"
 BI,filterType_mv,strings,Facette Medientyp,31769,100 %,31769,1,Bilder und Objekte
-BI,id,string,,31769,100 %,31769,31769,BI00024444
+BI,id,string,,31769,100 %,31769,31769,BI00009036
 BI,inscription,text,,19042,60 %,19042,13231,Rückseite mit Stempel und Beschriftung des Photographen
 BI,inventoryNumber,text,,31767,100 %,31767,30037,CO.Altbestand (darin)
 BI,item_display_mv,texts,aus AU display,46,0 %,46,29,"D5 (Seeger, Lud.). Deutsches Dichterbuch aus Schwaben : mit epischen, lyrischen und dramatischen Beiträgen : [Textsammlung (Anthologie u.a.m.)]"
@@ -464,13 +464,13 @@ BI,item_id_mv,strings,,46,0 %,46,29,AU00378808
 BI,item_manifestation_display_mv,texts,aus AK display,46,0 %,46,29,"Deutsches Dichterbuch aus Schwaben : mit epischen, lyrischen und dramatischen Beiträgen : [Textsammlung (Anthologie u.a.m.)]"
 BI,item_manifestation_id_mv,strings,,46,0 %,46,29,AK00972472
 BI,library_display_mv,texts,aus AK display,109,0 %,109,99,"Pantalon ouvert : dramatische Gespräche ; (anlässl. der gemeinsamen grossen Zeichnung ""Die (drei) Künstler"" berichten die berühmten Dargestellten über ihre wahren Erlebnisse im Reich der Kunst.) ; Karlsbad im April 1978 - 1. Aufl."
-BI,library_id_mv,strings,,109,0 %,109,99,AK01605780
+BI,library_id_mv,strings,,109,0 %,109,99,AK00253520
 BI,location_mv,texts,,30833,97 %,30833,73,Photokonvolute
 BI,locationComment,text,,8625,27 %,8625,2259,"(Kunz-Hutterstrasser, Hermine)"
-BI,manuscript_display_mv,texts,aus HS display,630,2 %,630,465,"Rilke, Rainer Maria an Rilke, Clara [Briefe]"
+BI,manuscript_display_mv,texts,aus HS display,630,2 %,630,465,"Grellet, Jean: Stammbuch mit Eintragungen aus den Jahren 1870-1878 [Dokumente]"
 BI,manuscript_id_mv,strings,,630,2 %,630,520,HS00690920
 BI,material,text,,15028,47 %,15028,6545,Auf Karton montiert
-BI,mediaNumber,string,,31769,100 %,31769,31769,BI000091417
+BI,mediaNumber,string,,31769,100 %,31769,31769,BI000339128
 BI,note,text,,9197,29 %,9197,6629,Fotoserie.
 BI,noteBibliography_mv,texts,,14320,45 %,14320,2214,Nachlass Kurt Pinthus
 BI,noteClassification,text,,10435,33 %,10435,7624,Aufnahme in Berlin.
@@ -517,8 +517,8 @@ BI,subjectLocation_display_mv,texts,aus TH display,2133,7 %,3027,1164,"['New Yor
 BI,subjectLocation_id_mv,strings,,2133,7 %,3027,1166,['TH00001309']
 BI,subjectLocation_type_mv,strings,,2131,7 %,3022,3,['Ort des Geschehens']
 BI,title,text,,31769,100 %,31769,17945,Porträt Hermann Hesse
-BI,titleOriginal,text,,378,1 %,378,371,Max Slevogt | Goethes Faust | Zweiter Teil
-BI,url,string,,31769,100 %,31769,31769,https://www.dla-marbach.de/find/opac/id/BI00031890
+BI,titleOriginal,text,,378,1 %,378,371,"""Weimars Goldene Tage"""
+BI,url,string,,31769,100 %,31769,31769,https://www.dla-marbach.de/find/opac/id/BI00025761
 BI,usageRestriction,text,,31769,100 %,31769,4,eingeschränkt benutzbar
 BI,usageRestrictionNote,text,Benutzungshinweis,31767,100 %,31767,3,bedingt benutzbar\nDie Benutzung ist nach vorheriger Terminabsprache bedingt möglich. Bitte wenden Sie sich nach der Bestellung an das Referat Bilder und Objekte.\nE-Mail: bilder-und-objekte@dla-marbach.de
 BI,work_display_mv,texts,aus AK display,1011,3 %,1219,861,"['Lessing, Gotthold Ephraim (1729-1781). Nathan der Weise (Drama : 1779)']"
@@ -539,8 +539,9 @@ DBIS,filterDigital,boolean,,1358,100 %,1358,1,True
 DBIS,filterMedium_mv,strings,,1358,100 %,1358,1,Datenbank
 DBIS,filterSource,string,,1358,100 %,1358,1,Digitale Nachschlagewerke
 DBIS,filterType_mv,strings,,1358,100 %,1358,1,Daten
-DBIS,id,string,,1358,100 %,1358,1358,DBIS104825
-DBIS,noteContent_mv,texts,,1358,100 %,1358,1358,"<b>Historische Presse der deutschen Sozialdemokratie online </b> ist ein Zeitungsdigitalisierungsprojekt, mit welchem die historischen Ausgaben der Zeitungen Vorwärts, „Freiheit“, „Der Sozialdemokrat“ und „Neuer Vorwärts“ in digitaler und im Volltext durchsuchbarer Form online zur Verfügung gestellt werden. \nEs handelt sich dabei um eine Weiterentwicklung des Zeitschriftenarchivs „Vorwärts bis 1933“, welches Ende 2017 vervollständigt wurde und somit alle „Vorwärts“-Ausgaben von 1876 bis 1933 di (...)"
+DBIS,id,string,,1358,100 %,1358,1358,DBIS106526
+DBIS,noteContent_mv,texts,,1358,100 %,1358,1358,"The European Library (TEL) ist ein Online-Portal der Nationalbibliotheken Europas mit Zugriff auf über 28 Mio. digitale Objekte und 175 Mio. bibliographische Nachweise.<br /><br />
+\n<b>Zum 31. Dezember 2016 wird das Portal eingefroren und nicht weiter aktualisiert. Zum Teil sind nicht alle Bestandsnachweise in die Europeana übernommen worden (Stand: 01/2017).</b>"
 DBIS,noteRequirements_mv,texts,,111,8 %,113,110,"['<a href=""https://www.gbv.de/benutzer/datenbanken/hilfe"">Hinweise zur Suche</a>']"
 DBIS,publicationHistory,text,,298,22 %,298,241,1993-
 DBIS,publisherOriginalText_mv,texts,,725,53 %,766,577,"['Directmedia Publishing GmbH, Berlin']"
@@ -552,20 +553,20 @@ DBIS,textualHolding_mv,texts,,298,22 %,298,241,1993-
 DBIS,title,text,,1358,100 %,1358,1357,Scriptorium
 DBIS,titleOther_text_mv,texts,,907,67 %,1599,1560,['Marburger Repertorien']
 DBIS,titleOther_type_mv,strings,,907,67 %,1599,1,['370n']
-DBIS,url,string,,1358,100 %,1358,1358,https://www.dla-marbach.de/find/opac/id/DBIS8882
+DBIS,url,string,,1358,100 %,1358,1358,https://www.dla-marbach.de/find/opac/id/DBIS104004
 DBIS,website_description_mv,texts,,1357,100 %,1424,8,['Zugang']
-DBIS,website_url_mv,strings,,1357,100 %,1424,1420,['http://www.bntl.nl/bntl/']
+DBIS,website_url_mv,strings,,1357,100 %,1424,1420,['http://wsc.uni-hd.de/']
 EZB,display,text_normalized,,1343,100 %,1343,1311,"Synthese: An International Journal for Epistemology, Methodology and Philosophy of Science"
-EZB,displayAddition1,text,,1343,100 %,1343,1297,"(via De Gruyter Brill), 1 (1919), 1 - 1 (1919), 1"
+EZB,displayAddition1,text,,1343,100 %,1343,1297,"De Gruyter, 1 (2014) -"
 EZB,displayAddition2,text,,1343,100 %,1343,1,Volltext (Elektronische Zeitschriftenbibliothek)
 EZB,filterDatePoint_mv,datepoints,,1342,100 %,1964,229,['2009-01-01T00:00:00Z']
-EZB,filterDateRange_mv,dateranges,,1342,100 %,1342,632,2009
+EZB,filterDateRange_mv,dateranges,,1342,100 %,1342,632,2012
 EZB,filterDigital,boolean,,1343,100 %,1343,1,True
 EZB,filterLanguage_mv,strings,,1280,95 %,1667,34,['Englisch']
 EZB,filterMedium_mv,strings,,1343,100 %,1343,1,Zeitschrift
 EZB,filterSource,string,,1343,100 %,1343,1,Elektronische Zeitschriftenbibliothek
 EZB,filterType_mv,strings,,1343,100 %,1343,1,Gedrucktes
-EZB,id,string,,1343,100 %,1343,1343,EZB7541
+EZB,id,string,,1343,100 %,1343,1343,EZB10078
 EZB,identifier_id_mv,strings,,1332,99 %,1332,1244,2565999-6
 EZB,identifier_type_mv,strings,,1332,99 %,1332,1,572z
 EZB,issn_mv,strings,,861,64 %,861,783,1572-8420
@@ -582,7 +583,7 @@ EZB,textualHolding_mv,texts,,1343,100 %,1343,1111,1 (2012) -
 EZB,title,text,,1343,100 %,1343,1311,"Synthese: An International Journal for Epistemology, Methodology and Philosophy of Science"
 EZB,usageRestriction,text,,1343,100 %,1343,1,benutzbar
 EZB,website_description_mv,texts,,1343,100 %,2675,2,"['Volltext (EZB)', 'Volltext (Verlag)']"
-EZB,website_url_mv,strings,,1343,100 %,2675,2051,"['http://ezb.uni-regensburg.de/?2710258&bibid=DLA', 'https://www.degruyterbrill.com/journal/key/pdtc/html']"
+EZB,website_url_mv,strings,,1343,100 %,2675,2051,"['http://ezb.uni-regensburg.de/?2598795&bibid=DLA', 'https://www.degruyterbrill.com/journal/key/ABITECH/html']"
 HS,accession_display,text,aus BE display,665891,57 %,665891,3084,BE00005721
 HS,accession_id,string,,665891,57 %,665891,3084,BE00005721
 HS,accessionNumber,string,,1006918,87 %,1006918,406766,SU.2010.0002
@@ -606,25 +607,25 @@ HS,corporationTo_display_mv,texts,aus KS display,269189,23 %,355250,34759,"['Suh
 HS,corporationTo_id_mv,strings,,269189,23 %,355250,34792,['KS00001261']
 HS,corporationTo_role_mv,strings,,152290,13 %,174472,4,['[Adressat]']
 HS,dateCataloged,daterange,,1158723,100 %,1158723,6960,2007-10-20
-HS,dateModified,daterange,,1158723,100 %,1158723,7230,2007-12-07
+HS,dateModified,daterange,,1158723,100 %,1158723,7231,2007-12-07
 HS,dateOriginEnd,daterange,,212604,18 %,212604,22511,1965
 HS,dateOriginStart,daterange,,918194,79 %,918194,75597,1960
 HS,dateOther_mv,texts,,47723,4 %,48328,7807,['und o.D.']
 HS,digitalObject_accessLevel_mv,strings,aus MM accessLevel,3625,0 %,3899,7,['campus']
-HS,digitalObject_display_mv,texts,aus MM display,3708,0 %,4065,4046,"['D20061030-4', 'D20060110-100']"
+HS,digitalObject_display_mv,texts,aus MM display,3708,0 %,4065,4046,['D20060104-24']
 HS,digitalObject_fileExtension_mv,strings,aus MM fileExtension,626,0 %,898,4,['jpg']
-HS,digitalObject_hyperlink_mv,strings,aus MM hyperlink,3624,0 %,3896,3874,['https://digital.dla-marbach.de/iiif/2/0%2f1%2fD20060104%2fD20060104-24.jpg/full/full/0/default.jpg?media_access=campus']
+HS,digitalObject_hyperlink_mv,strings,aus MM hyperlink,3624,0 %,3896,3874,['https://digital.dla-marbach.de/viewer/fullscreen/HS01345599/?media_access=campus&media_license=CC0']
 HS,digitalObject_id_mv,strings,,3708,0 %,4065,4046,['MM00036683']
 HS,digitalObject_license_mv,strings,aus MM license,2866,0 %,2886,3,['CC0']
 HS,digitalObject_licenseNote_mv,texts,aus MM license,9,0 %,9,2,"CC BY-NC-ND Hanke, Peter"
-HS,digitalObject_thumbnail_mv,strings,aus MM thumbnail,3617,0 %,3883,3861,"['https://digital.dla-marbach.de/iiif/2/0%2f1%2fD20120525%2fD20120525-4.jpg/full/!480,480/0/default.jpg?media_access=campus']"
+HS,digitalObject_thumbnail_mv,strings,aus MM thumbnail,3617,0 %,3883,3861,"['https://digital.dla-marbach.de/iiif/2/0%2f1%2fD20060118%2fD20060118-115.jpg/full/!480,480/0/default.jpg?media_access=campus']"
 HS,display,text_normalized,Hauptbezeichnung,1158723,100 %,1158723,878576,"Rilke, Rainer Maria an Rilke, Phia [Briefe]"
 HS,displayAddition1,text,Dritte Zeile der Trefferliste,918200,79 %,918200,110867,1961
 HS,displayAddition2,text,Vierte Zeile der Trefferliste,1150563,99 %,1150563,12205,"COTTA:Briefe - [Bestand des Cotta-Archivs, Archiv]"
 HS,displayName,text,Zweite Zeile der Trefferliste gebildet aus Personen und Körperschaften,1158718,100 %,1158718,752117,"Koselleck, Reinhart (1923-2006) [Verfasser/in]"
-HS,exportDC,string,Datensatz im DC-Format,1158723,100 %,1158723,1158723,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">\n  <dc:title>Middelhauve, Gertraud: Gutachten zu: Jacob, Hans: Der Zeuge [Verschiedenes. Gutachten]</dc:title>\n  <dc:title>Gutachten zu: Jacob, Hans: Der Zeuge</dc:title>\n  <dc:title>Der Zeuge / von Hans Jacob</dc:tit (...)"
-HS,exportMODS,string,Datensatz im MODS-Format,1158723,100 %,1158723,1158723,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">\n  <titleInfo>\n    <title>Jeurissen, Luc an Gadamer, Hans-Georg</title>\n  </titleInfo>\n  <name type=""personal"">\n    <namePart>Jeurissen, Luc</namePart>\n    <role>\n      <roleTerm type=""text"">[Verfasser/in]</roleTerm>\n    </role>\n  </name>\n  (...)"
-HS,exportRIS,string,Datensatz im RIS-Format,1158723,100 %,1158723,1158723,"TY  - GEN\nA2  - Frank, H. R.\nAN  - 92.51.659\nAU  - Seidel, Ina\nCN  - HS009049049\nDA  - 1973/07/09\nDB  - A:Wiedemann, Gisela und Hans-Rudolf°Seidel/Kopien\nID  - HS00904904\nLA  - Deutsch\nM3  - Brief\nN1  - Entstehungsort: Starnberg\nN1  - Umfang: 2 Bl. Kopie. Mit 1 Beil. 1 Bl. Kopie\nST  - Seidel, Ina an Frank, H. R.\nTI  - Seidel, Ina an Frank, H. R. [Briefe]\nUR  - https://www.dla-marbach.de/find/opac/id/HS00904904/\nER  -"
+HS,exportDC,string,Datensatz im DC-Format,1158723,100 %,1158723,1158723,"<oai_dc:dc xmlns:oai_dc=""http://www.openarchives.org/OAI/2.0/oai_dc/"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"">\n  <dc:title>Rowohlt Verlag an Albers, Heinz</dc:title>\n  <dc:creator>Weyrauch, Wolfgang (1904-1980)</dc:creator>\n  <dc:creator>Rowohlt Verlag</dc:creator>\n  <dc:contributor>Albers, Heinz</dc:contributor>\n  <dc:type (...)"
+HS,exportMODS,string,Datensatz im MODS-Format,1158723,100 %,1158723,1158723,"<mods xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://www.loc.gov/mods/v3"" version=""3.8"" xsi:schemaLocation=""http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd"">\n  <titleInfo>\n    <title>J.-G.-Cotta&apos;sche Buchhandlung Nachfolger &lt;Stuttgart; Berlin&gt; an Stach, Ernst</title>\n  </titleInfo>\n  <name type=""personal"">\n    <namePart>Stach, Ernst</namePart>\n    <role>\n      <roleTerm type=""text"">[Adr (...)"
+HS,exportRIS,string,Datensatz im RIS-Format,1158723,100 %,1158723,1158723,"TY  - GEN\nA2  - Farrar, Straus & Giroux, Inc.\nAN  - 75.8989\nAU  - Jaspers, Karl\nCN  - HS001925531\nDB  - A:Jaspers, Karl\nID  - HS00192553\nLA  - Deutsch\nM3  - Brief\nST  - Jaspers, Karl an Farrar, Straus & Giroux, Inc.\nTI  - Jaspers, Karl an Farrar, Straus & Giroux, Inc. [Briefe]\nUR  - https://www.dla-marbach.de/find/opac/id/HS00192553/\nER  -"
 HS,extent,text,,957413,83 %,957413,120383,1 Bl.
 HS,filterAuthority_mv,strings,Facette Personen und Körperschaften,1158719,100 %,2693965,384652,"['Koselleck, Reinhart (1923-2006)']"
 HS,filterAuthorityRelation_mv,strings,Facette Personen und Körperschaften mit Relationen,1158719,100 %,3120682,591958,"['Koselleck, Reinhart (1923-2006)␝Von']"
@@ -647,7 +648,7 @@ HS,genre,text,,1158723,100 %,1158723,14,Briefe
 HS,genreOther_mv,texts,,32952,3 %,42176,14,['Verschiedenes']
 HS,genreSub,text,,60640,5 %,60640,83,Widmungen
 HS,genreSubOther_mv,texts,,15179,1 %,15679,29,['Verlagsnotizen']
-HS,id,string,,1158723,100 %,1158723,1158723,HS01260208
+HS,id,string,,1158723,100 %,1158723,1158723,HS00608803
 HS,item_display_mv,texts,aus AU display,16856,1 %,16856,16360,L:Rara. 202202039. Dichterische Weisung
 HS,item_id_mv,strings,,16856,1 %,16856,16361,AU01030404
 HS,item_manifestation_display_mv,texts,aus AK display,16854,1 %,16854,15456,Gedichte
@@ -656,7 +657,7 @@ HS,language_mv,texts,,1155709,100 %,1167957,71,['Deutsch']
 HS,location_mv,texts,,116175,10 %,116355,27370,['Bibliothek']
 HS,locationBoxNumber,string,,6424,1 %,6424,327,19
 HS,locationFolderNumber,string,,45048,4 %,45048,8956,2
-HS,mediaNumber,string,,1158723,100 %,1158723,1158723,HS014085369
+HS,mediaNumber,string,,1158723,100 %,1158723,1158723,HS012968199
 HS,microform_mv,texts,,61705,5 %,61824,8665,['5+']
 HS,nameOriginal_mv,texts,,2084,0 %,2084,1423,Ingrid Greenburger
 HS,note,text,,124276,11 %,124276,43710,Honoraranweisung
@@ -711,7 +712,7 @@ HS,titleOther_category_mv,texts,,5339,0 %,7706,8,['Konvolut']
 HS,titleOther_comment_mv,texts,,4396,0 %,6309,1817,['Originaltitel']
 HS,titleOther_text_mv,texts,,38964,3 %,48983,40393,['Lyriden']
 HS,titleOther_type_mv,strings,,35465,3 %,45274,11,['Manuskripttitel']
-HS,url,string,,1158723,100 %,1158723,1158723,https://www.dla-marbach.de/find/opac/id/HS01124275
+HS,url,string,,1158723,100 %,1158723,1158723,https://www.dla-marbach.de/find/opac/id/HS01413364
 HS,usageRestriction,text,,1158723,100 %,1158723,3,benutzbar
 HS,usageRestrictionComment,text,,18212,2 %,18212,148,Nur Digitalisat oder Mikroform benutzbar
 HS,usageRestrictionNote,text,Benutzungshinweis,803413,69 %,803413,8,Nur mit Einverständnis der beteiligten Personen ausleihbar!\nFür nähere Angaben wenden Sie sich bitte an die Auskunft des Deutschen Literaturarchivs Marbach:\nTelefon: +49 7144 848 425\nE-Mail: auskunft-handschriften@dla-marbach.de
@@ -732,7 +733,7 @@ KS,dateActivityStart,daterange,,550,0 %,550,197,1878
 KS,dateCataloged,daterange,,131938,100 %,131938,7887,1997-06-11
 KS,dateLifespanEnd,daterange,,6912,5 %,6912,2414,1990
 KS,dateLifespanStart,daterange,,15613,12 %,15613,3894,2012
-KS,dateModified,daterange,,132030,100 %,132030,1,2026-10-02
+KS,dateModified,daterange,,132030,100 %,132030,1,2026-10-04
 KS,display,text_normalized,Hauptbezeichnung,132030,100 %,132030,127508,Müller
 KS,displayAddition1,text,Dritte Zeile der Trefferliste,64499,49 %,64499,9480,Berlin
 KS,displayAddition2,text,Vierte Zeile der Trefferliste,132030,100 %,132030,6,Körperschaft
@@ -742,26 +743,26 @@ KS,filterLocation_mv,strings,Facette Ort,33586,25 %,36231,4447,['Berlin']
 KS,filterLocationType_mv,strings,Facette Ort mit Typ,33586,25 %,36231,5165,['Berlin␝Sitz']
 KS,filterSource,string,Facette Datenbestand,132030,100 %,132030,1,Körperschaften
 KS,filterType_mv,strings,Facette Medientyp,132030,100 %,132030,1,Normdaten
-KS,gnd_id_mv,strings,,59737,45 %,59739,59570,['2099677-9']
+KS,gnd_id_mv,strings,,59737,45 %,59739,59570,['5266528-8']
 KS,gnd_type_mv,strings,,23794,18 %,23796,6,['GND-Nr.']
-KS,host_display_mv,texts,aus KS display,113,0 %,142,119,['Literaturwerkstatt Berlin (1991-2016)']
+KS,host_display_mv,texts,aus KS display,113,0 %,142,119,"['Hessisches Staatstheater <Wiesbaden>', 'Staatstheater Mainz']"
 KS,host_id_mv,strings,,113,0 %,142,119,['KS00018933']
-KS,id,string,,132030,100 %,132030,132030,KS00089927
-KS,linkCommonsImage_file_mv,strings,aus lobid-gnd depiction und Wikidata P18,5093,4 %,6671,6501,['Reichsadler%20Deutsches%20Reich%20%281935%E2%80%931945%29.svg']
-KS,linkCommonsImage_rights_mv,strings,generiert aus Wikimedia Commons Artist/License,5093,4 %,6671,4557,['Wikimedia Commons | Public domain']
+KS,id,string,,132030,100 %,132030,132030,KS00066931
+KS,linkCommonsImage_file_mv,strings,aus lobid-gnd depiction und Wikidata P18,5092,4 %,6671,6501,['Reichsadler%20Deutsches%20Reich%20%281935%E2%80%931945%29.svg']
+KS,linkCommonsImage_rights_mv,strings,generiert aus Wikimedia Commons Artist/License,5092,4 %,6671,4558,['Wikimedia Commons | Public domain']
 KS,linkFilmportal_mv,strings,aus lobid-gnd sameAs:filmportal und Wikidata P2639,16,0 %,17,16,['d3866fa5a63f4e5482ce72dc08e466ac']
 KS,linkWikidata,string,aus lobid-gnd,8964,7 %,8964,8819,Q2415675
-KS,linkWikidataWebsite_mv,strings,aus Wikidata P856,6005,5 %,6794,6693,['https://www.ullstein.de/']
-KS,linkWikipedia,string,aus lobid sameAs:dewiki,7063,5 %,7063,7030,Stiftung_Schleswig-Holsteinische_Landesmuseen
+KS,linkWikidataWebsite_mv,strings,aus Wikidata P856,6005,5 %,6794,6693,['https://erlangen.de/']
+KS,linkWikipedia,string,aus lobid sameAs:dewiki,7064,5 %,7064,7031,Busch-Reisinger_Museum
 KS,nameAlternative_comment_mv,texts,,1442,1 %,9809,692,"['␣', '␣', 'nswd', '␣', '␣']"
 KS,nameAlternative_name_mv,texts,,49462,37 %,129564,121993,['VHS']
 KS,nameAlternative_suffix_mv,texts,,5508,4 %,24236,6788,['$gFirma']
 KS,nameAlternative_type_mv,strings,,10352,8 %,44775,30,['Bisherige Vorzugsbenennung']
 KS,nameFormerOrLater_display_mv,texts,aus KS display,176,0 %,186,174,['PEN-Zentrum Deutschland']
 KS,nameFormerOrLater_id_mv,strings,,176,0 %,186,174,['KS00025892']
-KS,nameOriginal_mv,texts,,39186,30 %,94384,87042,['Müller']
-KS,nameTemporary_display_mv,texts,aus KS display,282,0 %,313,301,['Pädagogische Hochschule Karl Liebknecht <Potsdam>']
-KS,nameTemporary_id_mv,strings,,282,0 %,313,301,['KS00023017']
+KS,nameOriginal_mv,texts,,39186,30 %,94384,87042,['Stadtarchiv']
+KS,nameTemporary_display_mv,texts,aus KS display,282,0 %,313,301,['Hessen / Staatsministerium']
+KS,nameTemporary_id_mv,strings,,282,0 %,313,301,['KS00063561']
 KS,noteExplanatory_text_mv,texts,,16230,12 %,22172,12934,['gnd1']
 KS,noteExplanatory_type_mv,strings,,9512,7 %,15084,11,"['Biografische, historische und andere Angaben']"
 KS,parent_display_mv,texts,aus KS display,6697,5 %,6969,3171,['Deutsches Reich (1871-1945)']
@@ -778,19 +779,19 @@ KS,relation_type_mv,strings,,42481,32 %,166342,48,"['Sitz, Ort']"
 KS,schemaVersion,string,,132030,100 %,132030,1,1.0.0
 KS,searchBoost,float,Gewichtung Relevanzranking,132030,100 %,132030,1,0.5
 KS,searchDate_mv,strings,Suche nach Datumsangaben in der Form TT.MM.JJJJ,16740,13 %,30669,10671,['2012']
-KS,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,132030,100 %,132030,132030,KS00089927
+KS,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,132030,100 %,132030,132030,KS00066931
 KS,searchEntityScore,int,Anzahl der Verweise auf den Normdatensatz,132030,100 %,132030,585,2
-KS,searchSuggestPayload,string,ID und Anzeigetitel für Suggester (Trennzeichen: ␝),132030,100 %,132030,132030,KS00149160␝Intišarat-i Nawid
-KS,searchSuggestTerm_mv,strings,Suchbegriffe für Suggester,132030,100 %,355978,296026,"['Müller', 'Müller']"
+KS,searchSuggestPayload,string,ID und Anzeigetitel für Suggester (Trennzeichen: ␝),132030,100 %,132030,132030,"KS00140750␝DigiBaeck Launch Event  (2012 : New York, NY) (2012 : New York, NY) (2012-)"
+KS,searchSuggestTerm_mv,strings,Suchbegriffe für Suggester,132030,100 %,355978,296026,"['Stadtarchiv', 'Stadtarchiv']"
 KS,seeAlso_display_mv,texts,aus KS display,90,0 %,121,91,['S. Fischer-Verlag']
 KS,seeAlso_id_mv,strings,,90,0 %,121,91,['KS00131373']
 KS,source,string,,132030,100 %,132030,1,KS
 KS,statusCataloging,string,,11905,9 %,11905,6,Andere Ansetzung
-KS,successor_display_mv,texts,aus KS display,4730,4 %,4874,4658,"['Deutsches Rotes Kreuz <Deutschland, Deutsches Reich>']"
+KS,successor_display_mv,texts,aus KS display,4730,4 %,4874,4658,['Baden-Württemberg / Statistisches Landesamt']
 KS,successor_id_mv,strings,,4730,4 %,4874,4662,['KS00048067']
 KS,title,text,,132030,100 %,132030,127003,Müller
 KS,titleSuffix,text,,5251,4 %,5251,869,Veranstaltung
-KS,url,string,,132030,100 %,132030,132030,https://www.dla-marbach.de/find/opac/id/KS00129362
+KS,url,string,,132030,100 %,132030,132030,https://www.dla-marbach.de/find/opac/id/KS00145550
 KS,website_description_mv,texts,,8180,6 %,9459,5238,['Homepage']
 KS,website_url_mv,strings,,8742,7 %,10037,9761,['https://www.frauenrat.de/deutsch/verband/geschichte.html']
 MM,accessLevel,string,,120365,84 %,120365,12,campus
@@ -801,16 +802,16 @@ MM,display,text_normalized,Hauptbezeichnung,142846,100 %,142846,137832,Elektroni
 MM,fileExtension,string,Dateinamenserweiterung,114138,80 %,114138,11,jpg
 MM,filePath,string,,142846,100 %,142846,142811,https://digital.dla-marbach.de/files/dbst02/public/2020/20200930/20200930-0001.pdf?media_access=public
 MM,hyperlink,string,Link zum Objekt,120320,84 %,120320,120291,https://digital.dla-marbach.de/files/dbst02/public/2020/20200930/20200930-0001.pdf?media_access=public
-MM,id,string,,142846,100 %,142846,142846,MM00049350
+MM,id,string,,142846,100 %,142846,142846,MM00032535
 MM,license,string,,2997,2 %,2997,3,CC0
 MM,licenseNote,text,,1151,1 %,1151,109,LiN - Rechte uneingeschränkt erteilt
 MM,schemaVersion,string,,142846,100 %,142846,1,1.0.0
 MM,searchBoost,float,Gewichtung Relevanzranking,142846,100 %,142846,1,0.1
 MM,source,string,,142846,100 %,142846,1,MM
 MM,storageArea,string,,22520,16 %,22520,17,DBST03
-MM,thumbnail,string,Link zum Vorschaubild,117034,82 %,117034,117016,"https://digital.dla-marbach.de/viewer/api/v1/records/HS01372745/files/images/HS01372745_0001.tif/full/!480,480/0/default.jpg"
+MM,thumbnail,string,Link zum Vorschaubild,117034,82 %,117034,117016,"https://digital.dla-marbach.de/viewer/api/v1/records/HS01308382/files/images/HS01308382_0001.tif/full/!480,480/0/default.jpg"
 MM,title,text,,142846,100 %,142846,137832,Elektronische Ressource: Zugang beim Produzenten
-MM,url,string,,142846,100 %,142846,142846,https://www.dla-marbach.de/find/opac/id/MM01448406
+MM,url,string,,142846,100 %,142846,142846,https://www.dla-marbach.de/find/opac/id/MM01573379
 PE,categoryEntity_mv,texts,,158815,27 %,158869,17,['Person']
 PE,categoryIndex_mv,texts,,70401,12 %,82706,15,['Literarische/r Autor/in im Sinne der Bibliothek']
 PE,classificationNewspaper_comment_mv,texts,,15625,3 %,15625,35,"Autoren, Kritiker und Übersetzer"
@@ -826,9 +827,9 @@ PE,dateCataloged,daterange,,586288,100 %,586288,7806,1997-06-17
 PE,dateLifespanComment_mv,texts,,12509,2 %,12522,8969,['20./21. Jh.']
 PE,dateLifespanEnd,daterange,,87953,15 %,87953,35602,1945
 PE,dateLifespanStart,daterange,,177333,30 %,177333,44984,1964
-PE,dateModified,daterange,,586288,100 %,586288,1,2026-10-02
+PE,dateModified,daterange,,586288,100 %,586288,1,2026-10-04
 PE,dateRetention,text,,62876,11 %,62876,487,2015
-PE,display,text_normalized,Hauptbezeichnung,586288,100 %,586288,580556,"Meyer, Wilhelm"
+PE,display,text_normalized,Hauptbezeichnung,586288,100 %,586288,580556,"Schmidt, Walter"
 PE,displayAddition1,text,Dritte Zeile der Trefferliste,168389,29 %,168389,56728,Schriftsteller
 PE,displayAddition2,text,Vierte Zeile der Trefferliste,15075,3 %,15075,3980,Wirkungsdaten: 2009-
 PE,filterDatePoint_mv,datepoints,Facette Zeit (Zeitpunkte),191487,33 %,285786,64721,['1964-01-01T00:00:00Z']
@@ -838,21 +839,21 @@ PE,filterLocationType_mv,strings,Facette Ort mit Typ,137018,23 %,239827,42207,['
 PE,filterSource,string,Facette Datenbestand,586288,100 %,586288,1,Personen
 PE,filterType_mv,strings,Facette Medientyp,586288,100 %,586288,1,Normdaten
 PE,gender,string,,190362,32 %,190362,3,männlich
-PE,gnd_id_mv,strings,,200308,34 %,201363,201275,['118557211']
+PE,gnd_id_mv,strings,,200308,34 %,201363,201275,['118586076']
 PE,gnd_type_mv,strings,,200300,34 %,201355,4,['GND-Nr.']
-PE,id,string,,586288,100 %,586288,586288,PE00084781
-PE,linkCommonsImage_file_mv,strings,aus lobid-gnd depiction und Wikidata P18,43537,7 %,46991,45990,['Helmuth%20Gericke%2C%20Hermann%20Boerner.jpeg']
-PE,linkCommonsImage_rights_mv,strings,aus Wikimedia Commons Artist/License,43537,7 %,46991,20961,['Wikimedia Commons | Public domain']
-PE,linkCommonsSignature_file_mv,strings,aus Wikidata P109,4658,1 %,4687,4680,['C-p-cavafy-signature.svg']
-PE,linkCommonsSignature_rights_mv,strings,generiert aus Wikimedia Commons Artist/License,4658,1 %,4687,3917,['Wikimedia Commons | Public domain']
-PE,linkDeutscheBiographie_mv,strings,aus lobid-gnd,11992,2 %,14818,14788,"['pnd118557211.html#adbcontent', 'pnd118557211.html#ndbcontent']"
-PE,linkFilmportal_mv,strings,aus lobid-gnd sameAs:filmportal und Wikidata P2639,14570,2 %,14771,14676,['f16193be66a94f5c8bf116f559692b01']
-PE,linkWikidata,string,aus lobid-gnd,162581,28 %,162581,162493,Q1781932
-PE,linkWikidataWebsite_mv,strings,aus Wikidata P856,6395,1 %,6609,6597,['http://www.juenger-haus.de/']
-PE,linkWikipedia,string,aus lobid sameAs:dewiki,81273,14 %,81273,81211,Walter_Thomas
+PE,id,string,,586288,100 %,586288,586288,PE00490428
+PE,linkCommonsImage_file_mv,strings,aus lobid-gnd depiction und Wikidata P18,43609,7 %,47093,46091,['Jura%20Soyfer%20und%20Marika%20%28Maria%29%20Sz%C3%A9csi.jpg']
+PE,linkCommonsImage_rights_mv,strings,aus Wikimedia Commons Artist/License,43609,7 %,47093,20994,['Wikimedia Commons | Public domain']
+PE,linkCommonsSignature_file_mv,strings,aus Wikidata P109,4660,1 %,4689,4682,['Unterschrift%20Salomo%20Friedlaender%20deutscher%20Philosoph%2C%20Schriftsteller%2C%20Satiriker%20und%20Literaturkritiker.svg']
+PE,linkCommonsSignature_rights_mv,strings,generiert aus Wikimedia Commons Artist/License,4660,1 %,4689,3919,['Wikimedia Commons | Public domain']
+PE,linkDeutscheBiographie_mv,strings,aus lobid-gnd,11997,2 %,14825,14795,"['pnd118557211.html#adbcontent', 'pnd118557211.html#ndbcontent']"
+PE,linkFilmportal_mv,strings,aus lobid-gnd sameAs:filmportal und Wikidata P2639,14581,2 %,14786,14689,['f16193be66a94f5c8bf116f559692b01']
+PE,linkWikidata,string,aus lobid-gnd,162722,28 %,162722,162634,Q55674501
+PE,linkWikidataWebsite_mv,strings,aus Wikidata P856,6405,1 %,6621,6609,['https://rusf.ru/abs/']
+PE,linkWikipedia,string,aus lobid sameAs:dewiki,81319,14 %,81319,81257,Rudolf_Z%C3%B6beley
 PE,nameAlternative_comment_mv,texts,,7902,1 %,62843,3296,['Geburtsname']
 PE,nameAlternative_name_mv,texts,,114488,20 %,332190,320532,"['Meinsam, G.']"
-PE,nameAlternative_suffix_mv,texts,,3076,1 %,38367,5643,"['$cder Jüngere', '␣']"
+PE,nameAlternative_suffix_mv,texts,,3076,1 %,38367,5643,['$d1952-']
 PE,nameAlternative_type_mv,strings,,64152,11 %,218022,47,['Verweisung']
 PE,noteExplanatory_text_mv,texts,,94099,16 %,130409,108846,['gnd1']
 PE,noteExplanatory_type_mv,strings,,75556,13 %,109813,42,['Geschichte des Werks']
@@ -871,19 +872,19 @@ PE,relation_type_mv,strings,,188129,32 %,722069,53,['Charakt. Beruf']
 PE,schemaVersion,string,,586288,100 %,586288,1,1.0.0
 PE,searchBoost,float,Gewichtung Relevanzranking,586288,100 %,586288,1,0.5
 PE,searchDate_mv,strings,Suche nach Datumsangaben in der Form TT.MM.JJJJ,191487,33 %,406427,129382,['1964']
-PE,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,220832,38 %,220832,220832,PE00467363
+PE,searchEntity_id_mv,strings,IDs der Normdaten-Verweise,220832,38 %,220832,220832,PE00457436
 PE,searchEntityScore,int,Anzahl der Verweise auf diesen Normdatensatz,220832,38 %,220832,1168,2
-PE,searchSuggestPayload,string,ID und Anzeigetitel für Suggester (Trennzeichen: ␝),220832,38 %,220832,220832,"PE00703176␝Yaʿari, Yehudah (1900-1982)"
-PE,searchSuggestTerm_mv,strings,Suchbegriffe für Suggester,220832,38 %,532386,519744,"['Müller, Wilhelm']"
-PE,seeAlso_display_mv,texts,aus PE display,165,0 %,165,165,"Graves, Robert (1895-1985)"
-PE,seeAlso_id_mv,strings,,165,0 %,165,165,PE00048162
+PE,searchSuggestPayload,string,ID und Anzeigetitel für Suggester (Trennzeichen: ␝),220832,38 %,220832,220832,"PE00023111␝Kinkel, Gottfried <der Ältere> (1815-1882)"
+PE,searchSuggestTerm_mv,strings,Suchbegriffe für Suggester,220832,38 %,532386,519744,"['Meyer, Wilhelm']"
+PE,seeAlso_display_mv,texts,aus PE display,165,0 %,165,165,"Clauren, Heinrich"
+PE,seeAlso_id_mv,strings,,165,0 %,165,165,PE00022594
 PE,source,string,,586288,100 %,586288,1,PE
 PE,statusEditing,string,,586288,100 %,586288,2,nicht-individualisiert
-PE,title,text,,586288,100 %,586288,541674,"Müller, Ernst"
+PE,title,text,,586288,100 %,586288,541674,"Müller, Wilhelm"
 PE,titlePrefix,text,,8968,2 %,8968,984,Prof. Dr.
 PE,titleSuffix,text,,686,0 %,686,504,Familie
 PE,titleType,string,,3385,1 %,3385,15,pn
-PE,url,string,,586288,100 %,586288,586288,https://www.dla-marbach.de/find/opac/id/PE00679433
+PE,url,string,,586288,100 %,586288,586288,https://www.dla-marbach.de/find/opac/id/PE00123700
 PE,website_description_mv,texts,,40322,7 %,47689,17160,['Homepage']
 PE,website_url_mv,strings,,41114,7 %,48538,45902,['http://www.deutsche-biographie.de']
 SE,category,text,,233193,100 %,233193,3,Kette Bibliothek
@@ -903,7 +904,7 @@ SE,displayAddition1,text,Dritte Zeile der Trefferliste,233193,100 %,233193,3,Ket
 SE,filterSource,string,Facette Datenbestand,233400,100 %,233400,1,Systematikketten
 SE,filterSubject_mv,strings,Facette Thema,160025,69 %,216982,88145,"['Goethe, Johann Wolfgang von (1749-1832)']"
 SE,filterType_mv,strings,Facette Medientyp,233400,100 %,233400,1,Normdaten
-SE,id,string,,233400,100 %,233400,233400,SE00145081
+SE,id,string,,233400,100 %,233400,233400,SE00108489
 SE,person_display_mv,texts,aus PE display,175207,75 %,184153,46710,"['Döblin, Alfred (1878-1957)']"
 SE,person_id_mv,strings,,175207,75 %,184153,46724,['PE00006675']
 SE,schemaVersion,string,,233400,100 %,233400,1,1.0.0
@@ -914,19 +915,19 @@ SE,source,string,,233400,100 %,233400,1,SE
 SE,subject_display_mv,texts,aus TH display,87921,38 %,148463,23643,['Autogramm']
 SE,subject_id_mv,strings,,87921,38 %,148463,23677,['TH00039059']
 SE,title,text,,233387,100 %,233387,232836,"Kariger, Jean Jacques / Autogramm"
-SE,url,string,,233400,100 %,233400,233400,https://www.dla-marbach.de/find/opac/id/SE00285250
+SE,url,string,,233400,100 %,233400,233400,https://www.dla-marbach.de/find/opac/id/SE00066164
 SE,work_display_mv,texts,aus AK display,48177,21 %,48256,37016,"['Döblin, Alfred (1878-1957). Berlin Alexanderplatz (Roman : 1929)']"
 SE,work_id_mv,strings,,48177,21 %,48256,37142,['AK00041823']
 SY,category,text,,7585,100 %,7585,3,Basisnotation
-SY,child_display_mv,texts,aus SY display,1552,20 %,7573,7573,['S10.9.1.7.8.5.5.Vw. Deutsche Literatur 1945-1989 / Literatur im Fernsehen / Fernsehspiel']
-SY,child_id_mv,strings,,1552,20 %,7573,7573,"['SY00047912', 'SY00047913', 'SY00047914', 'SY00047915']"
+SY,child_display_mv,texts,aus SY display,1552,20 %,7573,7573,"['S5.1. Weltliteratur und Vergleichende Literaturwissenschaft / Hilfsmittel', 'S5.2. Allgemeine und vergleichende Literaturwissenschaft', 'S5.3. Weltliteratur', 'S5.4. Weltliteratur und deutsche Literatur']"
+SY,child_id_mv,strings,,1552,20 %,7573,7573,"['SY00189579', 'SY00189580']"
 SY,dateCataloged,daterange,,7586,100 %,7586,212,2000-04-20
 SY,dateModified,daterange,,7587,100 %,7587,113,2010-03-05
-SY,display,text_normalized,Hauptbezeichnung,7587,100 %,7587,7584,S8.6.13. Katholische Literatur
+SY,display,text_normalized,Hauptbezeichnung,7587,100 %,7587,7584,S8.6.22. Protestantische Literatur
 SY,displayAddition1,text,Dritte Zeile der Trefferliste,7585,100 %,7585,3,Basisnotation
 SY,filterSource,string,Facette Datenbestand,7587,100 %,7587,1,Fachsystematik
 SY,filterType_mv,strings,Facette Medientyp,7587,100 %,7587,1,Normdaten
-SY,id,string,,7587,100 %,7587,7587,SY00005127
+SY,id,string,,7587,100 %,7587,7587,SY00006361
 SY,notation,string,,7587,100 %,7587,7559,S8.6.Vw
 SY,parent_display_mv,texts,aus SY display,7573,100 %,7573,1552,S8.6. Deutsche Literatur / Aspekte
 SY,parent_id_mv,strings,,7573,100 %,7573,1552,SY00004531
@@ -936,16 +937,16 @@ SY,seeAlso_display_mv,texts,aus SY display,76,1 %,82,74,['S8.6.6. Geistliche Lit
 SY,seeAlso_id_mv,strings,,76,1 %,82,76,['SY00005895']
 SY,source,string,,7587,100 %,7587,1,SY
 SY,subjectOther_mv,texts,,2086,27 %,2086,955,"Textsammlung, Anthologie, Lesebuch, Lesebücher, Anthologien, Sammlung, Sammlungen"
-SY,title,text,,7587,100 %,7587,7531,"Deutsche Literaturwissenschaft / Einzelne Themen, Probleme"
+SY,title,text,,7587,100 %,7587,7531,Deutsche Literaturwissenschaft / Einzelne Themen bei einzelnen Autoren
 SY,titleShort,text,,7587,100 %,7587,1800,Allgemeines
-SY,url,string,,7587,100 %,7587,7587,https://www.dla-marbach.de/find/opac/id/SY00042895
+SY,url,string,,7587,100 %,7587,7587,https://www.dla-marbach.de/find/opac/id/SY00042904
 TH,category,text,,73163,100 %,73163,3,Deskriptor
 TH,categorySub,text,,73019,100 %,73019,6,geographisches/ethnisches Schlagwort
-TH,child_display_mv,texts,aus TH display,2566,4 %,7572,6970,['Modernisierung']
-TH,child_id_mv,strings,,2566,4 %,7572,6973,"['TH00056394', 'TH00055159']"
+TH,child_display_mv,texts,aus TH display,2566,4 %,7572,6970,"['Diakonie', 'Caritas']"
+TH,child_id_mv,strings,,2566,4 %,7572,6973,['TH00002721']
 TH,country_mv,texts,,23596,32 %,26464,290,['Deutschland Baden-Württemberg']
 TH,dateCataloged,daterange,,73163,100 %,73163,5438,2014-06-21
-TH,dateModified,daterange,,73163,100 %,73163,1,2026-10-02
+TH,dateModified,daterange,,73163,100 %,73163,1,2026-10-04
 TH,dateOriginEnd,daterange,,1436,2 %,1436,428,1945
 TH,dateOriginStart,daterange,,1763,2 %,1763,516,1945
 TH,display,text_normalized,Hauptbezeichnung,73163,100 %,73163,72700,Moçambique
@@ -958,8 +959,8 @@ TH,filterLocation_mv,strings,Facette Ort,1284,2 %,1448,723,['Deutschland']
 TH,filterLocationType_mv,strings,Facette Ort mit Typ,1284,2 %,1448,790,['Deutschland␝nicht bestimmt']
 TH,filterSource,string,Facette Datenbestand,73163,100 %,73163,1,Orte und Sachbegriffe
 TH,filterType_mv,strings,Facette Medientyp,73163,100 %,73163,1,Normdaten
-TH,gnd_id_mv,strings,,34638,47 %,34638,34631,4066347-4
-TH,id,string,,73163,100 %,73163,73163,TH00931604
+TH,gnd_id_mv,strings,,34638,47 %,34638,34631,4462399-9
+TH,id,string,,73163,100 %,73163,73163,TH00105164
 TH,language_mv,texts,,275,0 %,275,85,Deutsch
 TH,parent_display_mv,texts,aus TH display,7935,11 %,8723,2571,['Motiv']
 TH,parent_id_mv,strings,,7935,11 %,8723,2575,['TH00021502']
@@ -976,8 +977,8 @@ TH,seeAlso_display_mv,texts,aus TH display,57,0 %,82,57,['Nummer']
 TH,seeAlso_id_mv,strings,,57,0 %,82,57,['TH00039104']
 TH,source,string,,73163,100 %,73163,1,TH
 TH,title,text,,73163,100 %,73163,72700,Moçambique
-TH,url,string,,73163,100 %,73163,73163,https://www.dla-marbach.de/find/opac/id/TH00496113
+TH,url,string,,73163,100 %,73163,73163,https://www.dla-marbach.de/find/opac/id/TH00023561
 TH,useTerm_display_mv,texts,aus TH display,27172,37 %,27330,10036,['Sankt Petersburg']
 TH,useTerm_id_mv,strings,,27172,37 %,27330,10053,['TH00004292']
-TH,usedFor_display_mv,texts,aus TH display,10104,14 %,27089,26497,['NS']
-TH,usedFor_id_mv,strings,,10104,14 %,27089,26683,['TH00029678']
+TH,usedFor_display_mv,texts,aus TH display,10104,14 %,27089,26497,['Springen']
+TH,usedFor_id_mv,strings,,10104,14 %,27089,26683,['TH00069045']
