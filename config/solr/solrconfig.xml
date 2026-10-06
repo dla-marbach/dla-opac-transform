@@ -225,6 +225,11 @@
       <str name="df">default</str>
       <!-- Facetten parallel berechnen -->
       <str name="facet.threads">4</str>
+      <!-- Laufzeitlimit in ms als Sicherheitsnetz (2026-10-06): Crawler mit Deep Paging
+           (q=*:*, start ≈ 4.000.000) führten am 5./6.10.2026 zu Requests >300 s und Abstürzen.
+           Bei Überschreitung liefert Solr Teilergebnisse mit partialResults=true im responseHeader.
+           Bewusst als default (nicht invariant), damit interne Jobs per Parameter überschreiben können. -->
+      <int name="timeAllowed">10000</int>
     </lst>
     <!-- Query Ergänzungen (können vom Client NICHT verändert werden) -->
     <lst name="appends">
