@@ -203,7 +203,7 @@ tasks:
   install_orcli:
     cmds:
       - mkdir -p openrefine
-      - wget --no-verbose -O openrefine/orcli https://github.com/opencultureconsulting/orcli/releases/download/v0.4.3/orcli
+      - wget --no-verbose -O openrefine/orcli https://github.com/opencultureconsulting/orcli/releases/download/v0.6.2/orcli
       - chmod +x openrefine/orcli
 
   install_solr:
