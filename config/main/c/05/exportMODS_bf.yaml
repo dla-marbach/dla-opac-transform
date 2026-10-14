@@ -72,16 +72,6 @@
       '  <originInfo eventType="collection">' + '\n' + originInfo + '  </originInfo>' + '\n'
     , '') +
 
-    forNonBlank(cells['filterLanguageType_mv'].value, x,
-      forEach(x.split('␟'), z,
-        if(z.split('␝')[1] == 'Original',
-          '  <language>' + '\n' +
-          '    <languageTerm type="text">' + z.split('␝')[0].escape('xml') + '</languageTerm>' + '\n' +
-          '  </language>' + '\n'
-        , '')
-      ).join('')
-    , '') +
-
     forNonBlank(
       forNonBlank(cells['extent'].value, v,
           '    <extent>' + v.escape('xml') + '</extent>' + '\n'

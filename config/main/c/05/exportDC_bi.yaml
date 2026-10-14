@@ -57,20 +57,6 @@
 
     forEach(
       [
-        forNonBlank(cells['filterLanguageType_mv'].value, x,
-          forEach(x.split('␟'), v, if(
-              v.split('␝')[1] == 'Original',
-              v.split('␝')[0]
-            , '')
-          ).join('␟')
-        , '')
-      ].join('␟').replace('␣','').split('␟').uniques(),
-      v,
-      '  <dc:language>' + v.escape('xml') + '</dc:language>' + '\n'
-    ).join('') +
-
-    forEach(
-      [
         forNonBlank(cells['dimension_height_mv'].value.split('␟')[0], height,
           height + forNonBlank(cells['dimension_width_mv'].value.split('␟')[0], width, ' x ' + width, '')
         , ''),
