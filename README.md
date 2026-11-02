@@ -8,11 +8,15 @@ siehe [Dokumentation Internformat](docs/README.md)
 
 ## Voraussetzungen
 
+Am einfachsten im Devcontainer (Codespaces oder lokal mit VS Code + Podman), der alle Werkzeuge mitbringt und beim Anlegen `task install` ausführt. Sonst:
+
 * GNU/Linux mit Bash 4+
+* Java 11+
 * [go-task](https://taskfile.dev)
 * [curl](https://curl.se)
 * [jq](https://stedolan.github.io/jq)
 * [yq](https://github.com/mikefarah/yq)
+* Python 3 und xmllint (nur für `task docs` und `task validate`)
 
 ## Installation
 
@@ -83,12 +87,6 @@ task yaml
    ```sh
    tail -n +2 docs/internformat.csv | cut -d , -f 2 | sort | uniq | grep -v 'export' | grep -v 'confidential' | head -c -1 | tr '\n' , | sed 's/,/, /g'
    ```
-9. Git commit und push
-10. schemaVersion in [scripts/main.sh](scripts/main.sh) hochzählen
-11. Erneut Daten generieren
-    ```sh
-    task default yaml
-    ```
-12. Erneut Git commit und push
-13. GitHub [Release Notes](https://github.com/dla-marbach/dla-opac-transform/releases)
-14. Konfiguration des Solr auf Produktivsystem aktualisieren
+9. Pull Request nach [CONTRIBUTING.md](CONTRIBUTING.md#entwicklung), Ergebnisse in `example/output` mitcommitten
+
+Release, Deployment (inkl. Solr-Konfiguration auf dem Produktivsystem) und Rollback: siehe [CONTRIBUTING.md](CONTRIBUTING.md).
