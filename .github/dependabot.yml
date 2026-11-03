@@ -1,0 +1,36 @@
+# Dependabot: Version und Security Updates, gruppiert je Ecosystem.
+# Alerts und Security Updates zusätzlich unter Settings → Advanced Security aktivieren,
+# "Grouped security updates" dort aus lassen (Gruppierung steht hier).
+# cooldown: neue Versionen erst nach 7 Tagen vorschlagen (Schutz vor
+# kompromittierten Releases). Security Updates sind davon nicht betroffen.
+#
+# Nicht erfasst werden die Downloads im Taskfile (OpenRefine, orcli, Solr) und
+# im Devcontainer (go-task, yq). Die Python-Skripte nutzen nur die Standardbibliothek.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    groups:
+      github-actions:
+        patterns: ["*"]
+      github-actions-security:
+        applies-to: security-updates
+        patterns: ["*"]
+
+  # Kein Container-Betrieb, daher nur das Base Image des Devcontainers.
+  - package-ecosystem: docker
+    directory: /.devcontainer
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    groups:
+      docker:
+        patterns: ["*"]
+      docker-security:
+        applies-to: security-updates
+        patterns: ["*"]
