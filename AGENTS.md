@@ -7,7 +7,7 @@ Regeln für KI-Agenten in diesem Repository. Zweck, Aufbau und Befehle des Proje
 - Fehlt ein Werkzeug, benenne es im PR; die Ergänzung gehört in `.devcontainer/`.
 
 ## Checks vor Abschluss
-- Maßgeblich sind die Schritte in `.github/workflows/`. Führe die Pipeline mit den Beispieldaten lokal genauso aus wie die CI (`task default yaml validate solr`). Der Sicherheitsscan läuft nur in der CI; behebe seine Funde.
+- Maßgeblich sind die Schritte in `.github/workflows/`. Führe Linter und Pipeline mit den Beispieldaten lokal genauso aus wie die CI (`shellcheck scripts/*.sh`, dann `task default yaml validate solr`). Der Sicherheitsscan läuft nur in der CI; behebe seine Funde.
 - Alle Schritte müssen grün sein. Neue Felder und Fixes bekommen passende Beispieldaten in `example/input`, damit die Änderung in `example/output` sichtbar wird.
 
 ## Git und Pull Requests
@@ -20,6 +20,7 @@ Regeln für KI-Agenten in diesem Repository. Zweck, Aufbau und Befehle des Proje
 - Updates von GitHub Actions und dem Base Image des Devcontainers übernimmt Dependabot. Ändere Versionen nur, wenn die Aufgabe es erfordert.
 - Füge neue Abhängigkeiten nur hinzu, wenn die Aufgabe es erfordert, und begründe sie im PR. Versionen von OpenRefine, orcli und Solr stehen fest im `Taskfile.yml`, go-task und yq im `.devcontainer/Dockerfile` und in `.github/workflows/ci.yml`; nie `latest`.
 - Base Image in `.devcontainer/Dockerfile` immer mit festem Versionstag, nie `latest`.
+- Fremdbibliotheken nur über einen Paketmanager oder als Download mit fester Version im `Taskfile.yml` einbinden, nie als kopierte Datei ins Repo.
 
 ## Betrieb
 - Die Pipeline läuft nicht als Container, sondern per `task` auf dem Server. Die Abläufe für Release, Deployment und Rollback stehen in der `CONTRIBUTING.md`.

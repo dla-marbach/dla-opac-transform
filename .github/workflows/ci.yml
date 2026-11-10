@@ -26,12 +26,15 @@ env:
 
 jobs:
   test:
-    name: Pipeline mit Beispieldaten
+    name: Linter und Pipeline mit Beispieldaten
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+      # shellcheck bringt das Runner-Image mit.
+      - name: Shell-Skripte prüfen
+        run: shellcheck scripts/*.sh
       # Java, jq, curl, wget und python3 bringt das Runner-Image mit.
       - name: Werkzeuge installieren
         run: |
@@ -70,9 +73,28 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+      # Erst alle Schweregrade ausgeben (ohne Fehlschlag, auch in der Job-Zusammenfassung),
+      # dann wie bisher nur HIGH und CRITICAL prüfen. Der zweite Lauf nutzt
+      # Trivy und Datenbank aus dem ersten.
       # Ohne ignore-unfixed: Funde in Abhängigkeiten werden immer gemeldet.
       # Ohne version: Die Action bringt eine feste Trivy-Version mit, Dependabot aktualisiert beides.
-      - name: Repo scannen (Abhängigkeiten, Secrets, Konfiguration)
+      - name: Repo scannen, alle Schweregrade (Abhängigkeiten, Secrets, Konfiguration)
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
+        with:
+          scan-type: fs
+          scan-ref: .
+          scanners: vuln,secret,misconfig
+          output: ${{ runner.temp }}/trivy-repo.txt
+      - name: Ergebnis ausgeben
+        run: |
+          cat "$RUNNER_TEMP/trivy-repo.txt"
+          {
+            echo "### Trivy (Repo): alle Schweregrade"
+            echo '```'
+            cat "$RUNNER_TEMP/trivy-repo.txt"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Repo prüfen (HIGH, CRITICAL)
         uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
         with:
           scan-type: fs
@@ -80,3 +102,5 @@ jobs:
           scanners: vuln,secret,misconfig
           severity: HIGH,CRITICAL
           exit-code: "1"
+          skip-setup-trivy: true
+          cache: false

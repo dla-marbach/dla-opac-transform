@@ -2,10 +2,11 @@
 FROM mcr.microsoft.com/devcontainers/base:2.2.5-trixie
 
 # Java für OpenRefine und Solr, jq/curl/wget für die Pipeline,
-# Python und xmllint für Statistik und Validierung (task docs, task validate).
+# Python und xmllint für Statistik und Validierung (task docs, task validate),
+# shellcheck als Linter für scripts/*.sh.
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-       openjdk-21-jre-headless jq curl wget python3 libxml2-utils \
+       openjdk-21-jre-headless jq curl wget python3 libxml2-utils shellcheck \
     && rm -rf /var/lib/apt/lists/*
 
 # go-task und yq (mikefarah) mit fester Version und Prüfsumme. Dependabot erfasst

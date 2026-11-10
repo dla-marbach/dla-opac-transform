@@ -8,7 +8,7 @@ Die Pipeline läuft nicht als Container. Die Abschnitte „Release“, „Deploy
 
 1. **Ticket:** Redmine-Ticket anlegen oder übernehmen. Darin die geplante Änderung, wesentliche Schritte und den Abschluss dokumentieren.
 2. **Branch anlegen:** `git switch main && git pull && git switch -c feature/1234-kurzbeschreibung` (bzw. `fix/…`, mit Ticketnummer). Branches, die KI-Agenten selbst anlegen (z. B. `copilot/…`), behalten ihren Namen; die Ticketnummer steht dann im PR-Titel.
-3. **Im Devcontainer entwickeln:** Codespace auf dem Branch oder lokal „Reopen in Container“. Beispieldaten ergänzen, Daten generieren und prüfen wie in der CI: `task default yaml validate solr`. Ergebnisse mit `git diff example/output` prüfen und mitcommitten. Der Sicherheitsscan läuft in der CI.
+3. **Im Devcontainer entwickeln:** Codespace auf dem Branch oder lokal „Reopen in Container“. Beispieldaten ergänzen, Skripte und Daten prüfen wie in der CI: `shellcheck scripts/*.sh`, dann `task default yaml validate solr`. Ergebnisse mit `git diff example/output` prüfen und mitcommitten. Der Sicherheitsscan läuft in der CI.
 4. **Pushen und Pull Request nach `main` öffnen:**
    - Titel mit Ticketnummer ohne „#“, z. B. „Neues Feld searchVariant_mv (Ticket 1234)“. `#1234` würde auf GitHub verlinken statt auf Redmine.
    - Beschreibung: Link zum Ticket, was sich ändert und warum, Breaking Changes (z. B. umbenannte oder entfernte Felder) und manuelle Upgrade-Schritte (z. B. Solr-Konfiguration).
@@ -57,5 +57,6 @@ Auf den Servern läuft immer ein Release-Tag, nie `main`. Zuerst in der Testumge
 ## Projektspezifisch
 
 - **Regelmäßiger Lauf:** Auf dem Server erzeugt ein zeitgesteuerter Lauf die Daten aus den aktuellen Exporten und indexiert sie. Er verwendet den ausgecheckten Release-Tag und ändert ihn nicht.
+- **Supportende:** OpenRefine, orcli und Solr (Versionen im `Taskfile.yml`) sowie Java aktualisiert Dependabot nicht. Ein absehbares Supportende (siehe [endoflife.date](https://endoflife.date)) wird rechtzeitig per Ticket eingeplant.
 - **Anreicherungsdaten** (GND-Anreicherung, DBIS, EZB) lädt die Pipeline zur Laufzeit aus den `output`-Verzeichnissen der jeweiligen Repos. Das sind erzeugte Daten, kein Code; deshalb kann sich `example/output` auch ohne Änderung in diesem Repo ändern.
 - **Statistik:** Die Spalten zur Statistik in `docs/internformat.csv` werden aus den Produktivdaten erzeugt (`task docs`). Übergangsweise committet der Server sie noch direkt auf `main`. Das wird umgestellt, sodass sie wie andere erzeugte Daten per Pull Request oder in einem eigenen Daten-Repo landen.

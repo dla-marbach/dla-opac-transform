@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 # Zusatzfelder für Digitalisierung und Bestandslisten in OpenRefine
 DIR="${DIR:-example}"
 
@@ -5,7 +6,7 @@ DIR="${DIR:-example}"
 for set in au ak hs ks pe; do
     orcli import csv "${DIR}"/output/${set}.csv --projectName "${set}" &
     pids+=($!)
-done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+done; for i in "${!pids[@]}"; do wait "${pids[i]}"; unset "pids[$i]"; done
 
 # Transformation
 orcli transform "au" "${DIR}/tmp/config/erweitert/au-erweitert.json"

@@ -17,6 +17,7 @@ Am einfachsten im Devcontainer (Codespaces oder lokal mit VS Code + Podman), der
 * [jq](https://stedolan.github.io/jq)
 * [yq](https://github.com/mikefarah/yq)
 * Python 3 und xmllint (nur für `task docs` und `task validate`)
+* [ShellCheck](https://www.shellcheck.net) (nur für die Entwicklung)
 
 ## Installation
 
@@ -73,6 +74,7 @@ task yaml
     ```sh
     task default yaml solr
     ```
+    Bei Änderungen an `scripts/*.sh` zusätzlich `shellcheck scripts/*.sh`
 5. Ergebnisse prüfen mit git diff
     ```sh
     git diff example/output/*.yaml

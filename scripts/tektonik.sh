@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 # Bestandsübersicht (collection)
 DIR="${DIR:-example}"
 
@@ -5,7 +6,7 @@ DIR="${DIR:-example}"
 for set in bf bi ks pe; do
     orcli import csv "${DIR}"/output/${set}.csv --projectName "${set}" &
     pids+=($!)
-done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+done; for i in "${!pids[@]}"; do wait "${pids[i]}"; unset "pids[$i]"; done
 
 # Auszüge erstellen
 orcli export template "bf" "${DIR}/tmp/config/tektonik/00-tektonik-template.txt" --separator "" > "${DIR}/tmp/tmp-tektonik.csv"
