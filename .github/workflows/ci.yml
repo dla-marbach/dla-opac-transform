@@ -57,6 +57,17 @@ jobs:
         run: task DIR=example validate
       - name: Indexierung in Solr testen
         run: task DIR=example solr
+      # Der Vergleich im Task ist nur informativ (|| true), weil die Beispieldaten
+      # absichtlich ungültige Datensätze enthalten, die Solr abweisen muss.
+      # Hier schlägt jede andere Abweichung fehl: fehlende oder zusätzliche IDs.
+      - name: Indexierte Datensätze prüfen
+        env:
+          # Absichtlich ungültig: AK00000085 „Facette Zeit: invalide Zeitspanne“
+          EXPECTED_REJECTS: AK00000085
+        run: |
+          diff \
+            <(perl -lne 'print $1 if /"id":\s*"([^"]+)"/' example/output/*.jsonl | grep -vxF -f <(tr ' ' '\n' <<< "$EXPECTED_REJECTS") | sort) \
+            <(curl --fail --silent 'http://localhost:8983/solr/internformat/query?fl=id&q=*%3A*&rows=10000000&wt=csv&csv.header=false' | sort)
       # Nur zur Information: Die Pipeline lädt Anreicherungsdaten aus anderen
       # Repos, deshalb kann sich die Ausgabe ohne Änderung in diesem Repo ändern.
       - name: Abweichungen von example/output anzeigen
