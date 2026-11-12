@@ -1,0 +1,117 @@
+# Läuft bei jedem Pull Request nach main und nach jedem Merge auf main.
+# Im PR müssen alle Jobs vor dem Merge grün sein. Ein roter Lauf auf main
+# wird umgehend per Ticket und Fix-PR behoben, vor jedem Release muss er grün sein.
+# Actions sind per Commit-SHA gepinnt (Tags lassen sich verschieben, SHAs nicht),
+# Dependabot aktualisiert SHA und Kommentar.
+#
+# Kein Container-Betrieb: Image-Build, Image-Scan und Smoketest der Vorlage
+# entfallen. An ihre Stelle tritt der Lauf der Pipeline mit den Beispieldaten.
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+env:
+  # Gleiche Versionen wie in .devcontainer/Dockerfile, dort gemeinsam anheben.
+  TASK_VERSION: 3.45.4
+  TASK_SHA256: 4367eba04abcbcb407578d18d2439ee32604a872419601abec76a829c797fb82
+  YQ_VERSION: 4.48.1
+  YQ_SHA256: 99df6047f5b577a9d25f969f7c3823ada3488de2e2115b30a0abb10d9324fd9f
+
+jobs:
+  test:
+    name: Linter und Pipeline mit Beispieldaten
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      # shellcheck bringt das Runner-Image mit.
+      - name: Shell-Skripte prüfen
+        run: shellcheck scripts/*.sh
+      # Java, jq, curl, wget und python3 bringt das Runner-Image mit.
+      - name: Werkzeuge installieren
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libxml2-utils
+          mkdir -p "$HOME/.local/bin"
+          curl -fsSL -o /tmp/task.tar.gz "https://github.com/go-task/task/releases/download/v${TASK_VERSION}/task_linux_amd64.tar.gz"
+          echo "${TASK_SHA256}  /tmp/task.tar.gz" | sha256sum -c -
+          tar -xzf /tmp/task.tar.gz -C "$HOME/.local/bin" task
+          curl -fsSL -o "$HOME/.local/bin/yq" "https://github.com/mikefarah/yq/releases/download/v${YQ_VERSION}/yq_linux_amd64"
+          echo "${YQ_SHA256}  $HOME/.local/bin/yq" | sha256sum -c -
+          chmod +x "$HOME/.local/bin/yq"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+      - name: OpenRefine, orcli und Solr installieren
+        run: task install
+      # Wie lokal nach „Vorgehen bei Erweiterungen“ im README.
+      - name: Daten generieren
+        run: task DIR=example default yaml
+      - name: Export DC und MODS validieren
+        run: task DIR=example validate
+      - name: Indexierung in Solr testen
+        run: task DIR=example solr
+      # Der Vergleich im Task ist nur informativ (|| true), weil die Beispieldaten
+      # absichtlich ungültige Datensätze enthalten, die Solr abweisen muss.
+      # Hier schlägt jede andere Abweichung fehl: fehlende oder zusätzliche IDs.
+      - name: Indexierte Datensätze prüfen
+        env:
+          # Absichtlich ungültig: AK00000085 „Facette Zeit: invalide Zeitspanne“
+          EXPECTED_REJECTS: AK00000085
+        run: |
+          diff \
+            <(perl -lne 'print $1 if /"id":\s*"([^"]+)"/' example/output/*.jsonl | grep -vxF -f <(tr ' ' '\n' <<< "$EXPECTED_REJECTS") | sort) \
+            <(curl --fail --silent 'http://localhost:8983/solr/internformat/query?fl=id&q=*%3A*&rows=10000000&wt=csv&csv.header=false' | sort)
+      # Nur zur Information: Die Pipeline lädt Anreicherungsdaten aus anderen
+      # Repos, deshalb kann sich die Ausgabe ohne Änderung in diesem Repo ändern.
+      - name: Abweichungen von example/output anzeigen
+        if: always()
+        run: git diff --stat -- example/output
+      - name: Solr stoppen
+        if: always()
+        run: solr/bin/solr stop --all || true
+
+  trivy-repo:
+    name: Trivy (Repo)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      # Erst alle Schweregrade ausgeben (ohne Fehlschlag, auch in der Job-Zusammenfassung),
+      # dann wie bisher nur HIGH und CRITICAL prüfen. Der zweite Lauf nutzt
+      # Trivy und Datenbank aus dem ersten.
+      # Ohne ignore-unfixed: Funde in Abhängigkeiten werden immer gemeldet.
+      # Ohne version: Die Action bringt eine feste Trivy-Version mit, Dependabot aktualisiert beides.
+      - name: Repo scannen, alle Schweregrade (Abhängigkeiten, Secrets, Konfiguration)
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
+        with:
+          scan-type: fs
+          scan-ref: .
+          scanners: vuln,secret,misconfig
+          output: ${{ runner.temp }}/trivy-repo.txt
+      - name: Ergebnis ausgeben
+        run: |
+          cat "$RUNNER_TEMP/trivy-repo.txt"
+          {
+            echo "### Trivy (Repo): alle Schweregrade"
+            echo '```'
+            cat "$RUNNER_TEMP/trivy-repo.txt"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Repo prüfen (HIGH, CRITICAL)
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
+        with:
+          scan-type: fs
+          scan-ref: .
+          scanners: vuln,secret,misconfig
+          severity: HIGH,CRITICAL
+          exit-code: "1"
+          skip-setup-trivy: true
+          cache: false

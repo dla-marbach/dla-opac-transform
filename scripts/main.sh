@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 DIR="${DIR:-example}"
 sets=(ak au be bf bi hs ks mm pe se sy th dbis ezb)
 
@@ -7,12 +8,12 @@ sets=(ak au be bf bi hs ks mm pe se sy th dbis ezb)
 for set in ak au be bf bi hs ks mm pe se sy th; do
     orcli import tsv "${DIR}"/input/${set}*.tsv --projectName "${set}" &
     pids+=($!)
-done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+done; for i in "${!pids[@]}"; do wait "${pids[i]}"; unset "pids[$i]"; done
 
 # Mappings
 for f in "${DIR}"/tmp/config/mappings/* ; do
     p=${f##*/}
-    orcli import csv ${f} --projectName "${p%.csv}"
+    orcli import csv "${f}" --projectName "${p%.csv}"
 done
 
 # Enrichment Cache
@@ -52,10 +53,12 @@ find "${DIR}/tmp/config/main" -name '*.yaml' -exec yq -i -o json {} \;
 
 # Teil a Verzeichnisse nacheinander bearbeiten
 for d in "${DIR}"/tmp/config/main/a/*/ ; do
-    for set in ${sets[@]}; do
+    for set in "${sets[@]}"; do
+        # Alias von orcli run, Wortaufteilung gewollt
+        # shellcheck disable=SC2086
         find "${d}" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
         pids+=($!)
-    done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+    done; for i in "${!pids[@]}"; do wait "${pids[i]}"; unset "pids[$i]"; done
 done
 
 # Lookup-Tabelle mit Kallías-ID und GND-ID erstellen für Relationen
@@ -78,10 +81,12 @@ orcli import csv "${DIR}"/tmp/tmp-lookup_entity.csv --projectName "lookup_entity
 
 # Teil b Verzeichnisse nacheinander bearbeiten
 for d in "${DIR}"/tmp/config/main/b/*/ ; do
-    for set in ${sets[@]}; do
+    for set in "${sets[@]}"; do
+        # Alias von orcli run, Wortaufteilung gewollt
+        # shellcheck disable=SC2086
         find "${d}" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
         pids+=($!)
-    done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+    done; for i in "${!pids[@]}"; do wait "${pids[i]}"; unset "pids[$i]"; done
 done
 
 # Mappingtabelle erstellen für reziproke Beziehungen in relation
@@ -95,10 +100,12 @@ orcli import csv "${DIR}"/tmp/tmp-lookup_relation.csv --projectName "lookup_rela
 
 # Teil c Verzeichnisse nacheinander bearbeiten
 for d in "${DIR}"/tmp/config/main/c/*/ ; do
-    for set in ${sets[@]}; do
+    for set in "${sets[@]}"; do
+        # Alias von orcli run, Wortaufteilung gewollt
+        # shellcheck disable=SC2086
         find "${d}" -name "*_${set}.yaml" -exec ${BASH_ALIASES[orcli]} transform "${set}" '{}' \+ &
         pids+=($!)
-    done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+    done; for i in "${!pids[@]}"; do wait "${pids[i]}"; unset "pids[$i]"; done
 done
 
 # schemaVersion setzen
@@ -110,10 +117,10 @@ grel='[ {
 "columnInsertIndex": 2,
 "expression": "grel:\"1.0.0\""
 } ]'
-for set in ${sets[@]}; do
+for set in "${sets[@]}"; do
     orcli transform "${set}" <<< "${grel}" &
     pids+=($!)
-done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+done; for i in "${!pids[@]}"; do wait "${pids[i]}"; unset "pids[$i]"; done
 
 # Zeilen nach id sortieren
 grel='[ {
@@ -121,24 +128,24 @@ grel='[ {
 "mode": "row-based",
 "sorting": { "criteria": [ { "valueType": "string", "column": "id" } ] }
 } ]'
-for set in ${sets[@]}; do
+for set in "${sets[@]}"; do
     orcli transform "${set}" <<< "${grel}" &
     pids+=($!)
-done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+done; for i in "${!pids[@]}"; do wait "${pids[i]}"; unset "pids[$i]"; done
 
 ### Export ###
 
 # Spalten sortieren
-for set in ${sets[@]}; do
+for set in "${sets[@]}"; do
     orcli sort columns "${set}" --first id --first display &
     pids+=($!)
-done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+done; for i in "${!pids[@]}"; do wait "${pids[i]}"; unset "pids[$i]"; done
 
 # JSON-Lines
-for set in ${sets[@]}; do
+for set in "${sets[@]}"; do
     orcli export jsonl "${set}" --separator "␟" --output "${DIR}/tmp/${set}.jsonl" &
     pids+=($!)
-done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+done; for i in "${!pids[@]}"; do wait "${pids[i]}"; unset "pids[$i]"; done
 
 # DC für OAI
 for set in ak bf bi hs; do
@@ -147,7 +154,7 @@ for set in ak bf bi hs; do
     --facets '[ { "type": "text", "columnName": "confidential", "invert":true, "query":"true" }, { "type": "list", "expression": "grel:isNonBlank(value)", "columnName": "exportDC", "selection": [{"v": {"v": true}}] } ]' \
     --output "${DIR}/tmp/tmp-oai-dc_${set}.csv" &
     pids+=($!)
-done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+done; for i in "${!pids[@]}"; do wait "${pids[i]}"; unset "pids[$i]"; done
 head -n 1 "${DIR}"/tmp/tmp-oai-dc_ak.csv > "${DIR}"/tmp/oai-dc.csv && tail -n+2 -q "${DIR}"/tmp/tmp-oai-dc_*.csv >> "${DIR}"/tmp/oai-dc.csv
 
 # MODS für OAI
@@ -157,7 +164,7 @@ for set in ak bf bi hs; do
     --facets '[ { "type": "text", "columnName": "confidential", "invert":true, "query":"true" }, { "type": "list", "expression": "grel:isNonBlank(value)", "columnName": "exportMODS", "selection": [{"v": {"v": true}}] } ]' \
     --output "${DIR}/tmp/tmp-oai-mods_${set}.csv" &
     pids+=($!)
-done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+done; for i in "${!pids[@]}"; do wait "${pids[i]}"; unset "pids[$i]"; done
 head -n 1 "${DIR}"/tmp/tmp-oai-mods_ak.csv > "${DIR}"/tmp/oai-mods.csv && tail -n+2 -q "${DIR}"/tmp/tmp-oai-mods_*.csv >> "${DIR}"/tmp/oai-mods.csv
 
 # export-Spalten löschen
@@ -169,10 +176,10 @@ grel='[
 for set in ak bf bi hs; do
     orcli transform "${set}" <<< "${grel}" &
     pids+=($!)
-done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+done; for i in "${!pids[@]}"; do wait "${pids[i]}"; unset "pids[$i]"; done
 
 # CSV
-for set in ${sets[@]}; do
+for set in "${sets[@]}"; do
     orcli export csv "${set}" --output "${DIR}/tmp/${set}.csv" &
     pids+=($!)
-done; for i in ${!pids[@]}; do wait ${pids[i]}; unset pids[$i]; done
+done; for i in "${!pids[@]}"; do wait "${pids[i]}"; unset "pids[$i]"; done
