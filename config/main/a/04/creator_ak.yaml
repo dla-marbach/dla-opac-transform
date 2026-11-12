@@ -52,7 +52,7 @@
                 cells['corporationBy_id_mv'].value.split('␟')[i],
                 y,
                 y + forNonBlank(
-                  cells['personBy_role_mv'].value.split('␟')[i],
+                  cells['corporationBy_role_mv'].value.split('␟')[i],
                   y,
                   '␝' + y,
                   '␝' + '␣'
@@ -77,7 +77,7 @@
                 cells['corporationByConference_id_mv'].value.split('␟')[i],
                 y,
                 y + forNonBlank(
-                  cells['personBy_role_mv'].value.split('␟')[i],
+                  cells['corporationByConference_role_mv'].value.split('␟')[i],
                   y,
                   '␝' + y,
                   '␝' + '␣'
@@ -102,7 +102,7 @@
                 cells['corporationByTerritory_id_mv'].value.split('␟')[i],
                 y,
                 y + forNonBlank(
-                  cells['personBy_role_mv'].value.split('␟')[i],
+                  cells['corporationByTerritory_role_mv'].value.split('␟')[i],
                   y,
                   '␝' + y,
                   '␝' + '␣'
