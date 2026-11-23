@@ -123,7 +123,7 @@ tasks:
         # Gemeinsames Configset und zwei Cores anlegen (wie auf dem Server, siehe docs/solr.md)
         rm -r solr/server/solr/configsets/internformat 2> /dev/null || true
         mkdir -p solr/server/solr/configsets/internformat/conf
-        cp config/solr/schema.xml config/solr/solrconfig.xml solr/server/solr/configsets/internformat/conf/
+        cp config/solr/* solr/server/solr/configsets/internformat/conf/
         for core in indexing internformat; do
           rm -r "solr/server/solr/$core" 2> /dev/null || true
           mkdir -p "solr/server/solr/$core"

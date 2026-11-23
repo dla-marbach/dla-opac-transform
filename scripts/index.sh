@@ -22,9 +22,10 @@ echo "1. Core indexing neu laden (aktuelle Konfiguration des Servers)" >&2
 solr "$SOLR/admin/cores?action=RELOAD&core=indexing"
 
 echo "2. Konfiguration des Servers mit $CONFIG vergleichen" >&2
-for f in schema.xml solrconfig.xml; do
-  if ! curl --silent --show-error --fail "$SOLR/indexing/admin/file?file=$f&contentType=text/plain" | cmp --silent - "$CONFIG/$f"; then
-    echo "   Abbruch: $f auf dem Solr-Server weicht von $CONFIG/$f ab." >&2
+for path in "$CONFIG"/*; do
+  f=$(basename "$path")
+  if ! curl --silent --show-error --fail "$SOLR/indexing/admin/file?file=$f&contentType=text/plain" | cmp --silent - "$path"; then
+    echo "   Abbruch: $f auf dem Solr-Server weicht von $path ab." >&2
     echo "   Zuerst die Konfiguration aktualisieren (docs/solr.md, Abschnitt \"Konfiguration aktualisieren\")." >&2
     exit 1
   fi

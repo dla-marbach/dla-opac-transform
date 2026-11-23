@@ -4,7 +4,7 @@ Einrichtung und Betrieb des Solr-Servers für den Online-Katalog und Indexierung
 
 | Pfad | Inhalt |
 |---|---|
-| [config/solr](../config/solr) | `schema.xml` und `solrconfig.xml` (Configset des Katalogs) |
+| [config/solr](../config/solr) | `schema.xml`, `solrconfig.xml` und `synonyms.txt` (Configset des Katalogs) |
 | [config/solr-server/solr.in.sh](../config/solr-server/solr.in.sh) | DLA-Einstellungen, eingebunden in `/etc/default/solr.in.sh` |
 | [config/solr-server/log4j2.xml](../config/solr-server/log4j2.xml) | Logging (Solr-Vorlage, ohne Protokollierung einzelner Suchanfragen) |
 | [config/solr-server/solr.service.d/user-managed.conf](../config/solr-server/solr.service.d/user-managed.conf) | systemd-Drop-in: Start im Standalone-Modus |
@@ -19,7 +19,7 @@ Einrichtung und Betrieb des Solr-Servers für den Online-Katalog und Indexierung
 
 ## Cores und Konfiguration
 
-Zwei Cores mit gemeinsamem Configset `internformat` (`schema.xml` und `solrconfig.xml` aus `config/solr`):
+Zwei Cores mit gemeinsamem Configset `internformat` (alle Dateien aus `config/solr`):
 
 * `internformat`: live, wird von TYPO3 abgefragt
 * `indexing`: wird beim Import neu befüllt und danach per `SWAP` mit `internformat` getauscht
@@ -117,7 +117,7 @@ sudo systemctl daemon-reload
 ```sh
 sudo install -d /server/conf/solr/configsets/internformat/conf
 sudo install -m 0644 /server/src/dla-opac-transform/config/solr-server/solr.in.sh /server/src/dla-opac-transform/config/solr-server/log4j2.xml /server/conf/solr/
-sudo install -m 0644 /server/src/dla-opac-transform/config/solr/schema.xml /server/src/dla-opac-transform/config/solr/solrconfig.xml /server/conf/solr/configsets/internformat/conf/
+sudo install -m 0644 /server/src/dla-opac-transform/config/solr/* /server/conf/solr/configsets/internformat/conf/
 echo '. /server/conf/solr/solr.in.sh' | sudo tee -a /etc/default/solr.in.sh > /dev/null
 sudo install -d -o solr -g solr /server/logs/solr
 ```
@@ -190,11 +190,11 @@ die Daten bleiben erhalten. Vorher die Upgrade-Hinweise von Solr lesen und `luce
 
 ## Konfiguration aktualisieren
 
-Nach Änderungen an `config/solr` (Schema, `solrconfig.xml`) auf dem Solr-Server, manuell oder als eigener Rundeck-Job:
+Nach Änderungen an `config/solr` (Schema, `solrconfig.xml`, Synonyme) auf dem Solr-Server, manuell oder als eigener Rundeck-Job:
 
 ```sh
 sudo git -C /server/src/dla-opac-transform pull
-sudo install -m 0644 /server/src/dla-opac-transform/config/solr/schema.xml /server/src/dla-opac-transform/config/solr/solrconfig.xml /server/conf/solr/configsets/internformat/conf/
+sudo install -m 0644 /server/src/dla-opac-transform/config/solr/* /server/conf/solr/configsets/internformat/conf/
 ```
 
 Die neue Konfiguration wirkt mit der nächsten Indexierung (`RELOAD` von `indexing`, dann `SWAP`). Der Live-Core
@@ -218,7 +218,7 @@ export OUTPUT=<dla-opac-transform>/data/output
 dann unverändert. Die Schritte:
 
 1. **`RELOAD`** von `indexing`: lädt die aktuelle Konfiguration des Servers.
-2. **Konfiguration vergleichen**: `schema.xml` und `solrconfig.xml` des Servers müssen mit `config/solr` des
+2. **Konfiguration vergleichen**: Die Dateien des Configsets auf dem Server müssen mit `config/solr` des
    Checkouts auf der ETL-VM übereinstimmen, aus dem auch die Daten stammen. Sonst Abbruch, bevor etwas gelöscht wird.
 3. **Leeren**: Nach dem letzten `SWAP` enthält `indexing` den vorherigen Live-Index. `*:*` statt `id:*`: Solr erkennt
    die Abfrage auf alle Dokumente und verwirft die Segmente direkt.
@@ -248,6 +248,14 @@ Gegenüber der Konfiguration für Solr 9:
 * **Request-Handler `/instant`**: Relevanzranking (`qf`, `boost`) fest auf dem Server, Suchtext ohne Feldsyntax
   (`uf=-*`), leere Suche liefert alle Datensätze (`q.alt=*:*`). TYPO3 übergibt nur Suchtext, Filter, Facetten,
   Sortierung und Paging. `/select` bleibt unverändert für den bisherigen Katalog.
+* **Synonyme** (`config/solr/synonyms.txt`, nur bei der Suche): Schreibvarianten wie Porträt/Portrait, Teil/Theil,
+  Köln/Cöln, die die Normalisierung nicht abdeckt. Änderungen wirken nach dem Einspielen mit der nächsten Indexierung
+  (`RELOAD`), ohne dass sich der Index ändert. Hinweise zur Pflege im Kopf der Datei.
+* **Suchfeld `default` ohne Exportformate**: Statt `copyField source="*"` kopiert der Update-Prozessor
+  `CloneFieldUpdateProcessorFactory` alle Felder außer `exportDC`, `exportMODS`, `exportRIS` ins Suchfeld. Vorher
+  waren Wörter aus dem XML bzw. RIS (z.B. `mods`, `xmlns`, `manuscript` aus `typeOfResource manuscript="yes"`) in fast
+  3 Mio. Datensätzen auffindbar. Erfordert eine neue Indexierung; verändert die Gewichtung, weil das Suchfeld kürzer
+  wird.
 * **Vorwärmen nach jedem Commit** (`newSearcher`), nicht nur beim Start.
 * **`ClassicIndexSchemaFactory`**: `schema.xml` wird nicht in ein `managed-schema` umgewandelt und nicht per
   Schema-API verändert.
@@ -259,4 +267,5 @@ Gegenüber der Konfiguration für Solr 9:
   Zugangsdaten an Solr übergeben kann.
 * TYPO3 schickt lange Anfragen per POST (Solarium-Plugin `PostBigRequest`); danach entfällt die Header-Einstellung
   in `solr.in.sh`.
-* Wachstum des Index durch die Wortanfang-Felder und Antwortzeiten von `/instant` mit Volldaten messen.
+* Mit Volldaten messen: Indexgröße (Wortanfang-Felder kommen hinzu, Exportformate fallen aus dem Suchfeld), Antwortzeiten
+  von `/instant` und Reihenfolge der Treffer im bisherigen Katalog.

@@ -435,6 +435,20 @@
     <processor class="solr.TolerantUpdateProcessorFactory">
       <int name="maxErrors">100</int>
     </processor>
+    <!--
+      Suchfeld "default" mit dem Inhalt aller Felder befüllen, außer den Exportformaten (exportDC, exportMODS, exportRIS):
+      deren XML- bzw. RIS-Auszeichnung (z.B. typeOfResource manuscript="yes") machte sonst Wörter wie "mods" oder
+      "manuscript" in Millionen Datensätzen auffindbar.
+    -->
+    <processor class="solr.CloneFieldUpdateProcessorFactory">
+      <lst name="source">
+        <str name="fieldRegex">.*</str>
+        <lst name="exclude">
+          <str name="fieldRegex">export.*</str>
+        </lst>
+      </lst>
+      <str name="dest">default</str>
+    </processor>
     <!-- Solr standard processing -->
     <processor class="solr.LogUpdateProcessorFactory"/>
     <processor class="solr.DistributedUpdateProcessorFactory"/>
