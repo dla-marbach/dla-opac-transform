@@ -1,8 +1,9 @@
 # Synonyme für die Suche (SynonymGraphFilter im Analyzer "query" der Textfelder, siehe schema.xml).
 #
 # Eine Zeile pro Gruppe gleichwertiger Schreibweisen, durch Komma getrennt: Die Suche nach einer Schreibweise
-# findet alle. Groß-/Kleinschreibung spielt keine Rolle. Umlaute und ihre Umschreibung (ä/ae) werden danach
-# ohnehin gleich behandelt, die Umschreibung trotzdem mit aufnehmen, falls jemand "Portraet" eingibt.
+# findet alle. Groß-/Kleinschreibung spielt keine Rolle. Bei Umlauten und ß auch die Umschreibung aufnehmen
+# (z.B. "köln, koeln, cöln, coeln"): Die Synonyme werden vor der Normalisierung von ä zu ae angewendet, sonst würde
+# die Eingabe "Koeln" die Gruppe nicht erweitern.
 # Keine Stammformreduktion: Plural und andere Formen als eigene Zeile. Zusammensetzungen (z.B. Porträtsammlung)
 # werden nicht erfasst.
 #
@@ -26,21 +27,21 @@ verteidigung, vertheidigung
 altertum, alterthum
 altertums, alterthums
 herzogtum, herzogthum
-tür, thür
+tür, tuer, thür, thuer
 turm, thurm
 taten, thaten
 heimat, heimath
-gemüt, gemüth
+gemüt, gemuet, gemüth, gemueth
 hofrat, hofrath
 toten, todten
 demut, demuth
 hochmut, hochmuth
 abenteuer, abentheuer
 abenteuerliche, abentheuerliche
-rätsel, räthsel
-tränen, thränen
+rätsel, raetsel, räthsel, raethsel
+tränen, traenen, thränen, thraenen
 tiere, thiere
-blüten, blüthen
+blüten, blueten, blüthen, bluethen
 
 # Historische deutsche Rechtschreibung (ey/ei)
 drei, drey
@@ -56,9 +57,9 @@ freien, freyen
 freiheit, freyheit
 freiherrn, freyherrn
 beitrag, beytrag
-beiträge, beyträge
+beiträge, beitraege, beyträge, beytraege
 ostereier, ostereyer
-dreißigjährigen, dreyßigjährigen
+dreißigjährigen, dreissigjaehrigen, dreyßigjährigen, dreyssigjaehrigen
 bayern, baiern
 
 # Historische deutsche Rechtschreibung (-iren/-ieren)
@@ -80,10 +81,10 @@ manuskript, manuscript
 manuskripts, manuscripts
 porträt, portrait, portraet
 porträts, portraits, portraets
-selbstporträt, selbstportrait
-dichterporträts, dichterportraits
-porträtfoto, portraitfoto
-porträtfotografie, portraitfotografie
+selbstporträt, selbstportraet, selbstportrait
+dichterporträts, dichterportraets, dichterportraits
+porträtfoto, portraetfoto, portraitfoto
+porträtfotografie, portraetfotografie, portraitfotografie
 klassiker, classiker
 klassischen, classischen
 korrespondenz, correspondenz
@@ -92,11 +93,11 @@ akten, acten
 konversationslexikon, conversationslexikon
 kriminalgeschichten, criminalgeschichten
 aktiengesellschaft, actiengesellschaft
-komödie, comödie
+komödie, komoedie, comödie, comoedie
 kalender, calender
 kalendarium, calendarium
 zyklus, cyklus, cyclus
-enzyklopädie, encyklopädie, encyclopädie
+enzyklopädie, enzyklopaedie, encyklopädie, encyklopaedie, encyclopädie, encyclopaedie
 faksimile, facsimile
 lexikon, lexicon
 kolonie, colonie
@@ -135,15 +136,15 @@ soziologie, sociologie
 sozialist, socialist
 krise, crise
 kristall, krystall
-affäre, affaire
-militär, militair
+affäre, affaere, affaire
+militär, militaer, militair
 simplizissimus, simplicissimus
 konsistorium, consistorium
 mikrofiche, microfiche
 
 # Ortsnamen
-köln, cöln
-kölln, cölln
+köln, koeln, cöln, coeln
+kölln, koelln, cölln, coelln
 koblenz, coblenz
 kassel, cassel
 karlsruhe, carlsruhe
@@ -162,4 +163,4 @@ tirol, tyrol
 toskana, toscana
 luxemburg, luxembourg
 sizilien, sicilien
-straßburg, strasbourg
+straßburg, strassburg, strasbourg

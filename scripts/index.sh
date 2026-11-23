@@ -48,9 +48,17 @@ solr "$SOLR/indexing/suggest?suggest=true&suggest.build=true&suggest.dictionary=
 solr "$SOLR/indexing/suggest?suggest=true&suggest.build=true&suggest.dictionary=text"
 
 echo "7. Vollständigkeit prüfen (vor dem Live-Schalten)" >&2
-abweichungen=$(diff <(perl -lne 'print $1 if /"id":\s*"([^"]+)"/' "$OUTPUT"/*.jsonl | LC_ALL=C sort) \
-                    <(curl --silent --show-error "$SOLR/indexing/query?q=*:*&fl=id&rows=100000000&wt=csv&csv.header=false" | LC_ALL=C sort) \
-               | grep -E '^[<>]' || true)
+# Beide ID-Listen in Dateien, damit Fehler beim Lesen oder bei der Übertragung zum Abbruch führen (set -e, pipefail)
+ids_jsonl=$(mktemp); ids_solr=$(mktemp); ids_diff=$(mktemp); trap 'rm -f "$ids_jsonl" "$ids_solr" "$ids_diff"' EXIT
+perl -lne 'print $1 if /"id":\s*"([^"]+)"/' "$OUTPUT"/*.jsonl | LC_ALL=C sort > "$ids_jsonl"
+curl --silent --show-error --fail "$SOLR/indexing/query?q=*:*&fl=id&rows=100000000&wt=csv&csv.header=false" | LC_ALL=C sort > "$ids_solr"
+# diff: Status 0 = gleich, 1 = Unterschiede (tolerierbar bis MAX_ABWEICHUNGEN), größer 1 = Fehler
+status=0; diff "$ids_jsonl" "$ids_solr" > "$ids_diff" || status=$?
+if [ "$status" -gt 1 ]; then
+  echo "   Abbruch: Vergleich der ID-Listen fehlgeschlagen (diff-Status $status)" >&2
+  exit 1
+fi
+abweichungen=$(grep -E '^[<>]' "$ids_diff" || true)
 anzahl=$(printf '%s' "$abweichungen" | grep -c . || true)
 if [ "$anzahl" -gt 0 ]; then
   echo "   $anzahl Abweichungen (< nur in JSONL, > nur in Solr), die ersten 100:" >&2
