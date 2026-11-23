@@ -87,6 +87,44 @@
       <filter name="asciifolding"/>
     </analyzer>
   </fieldType>
+  <!--
+    Wortanfänge für die Instant Search: Beim Indexieren werden alle Wortanfänge ab 2 Zeichen gespeichert
+    ("hyperion" → "hy", "hyp", … "hyperion"), bei der Suche wird nicht zerlegt. So findet "Hyperio" bereits
+    "Hyperion", ohne Platzhalter-Abfragen. Normalisierung wie text_normalized, damit "Hölderl" und "Hoelderl"
+    gleich behandelt werden. Nur für Suche, daher weder stored noch docValues.
+  -->
+  <fieldType name="texts_prefix" class="solr.TextField" positionIncrementGap="100" multiValued="true">
+    <analyzer type="index">
+      <charFilter name="patternReplace" pattern=":" replacement=" "/>
+      <tokenizer name="standard"/>
+      <filter name="lowercase"/>
+      <filter name="patternReplace" pattern="ä" replacement="ae"/>
+      <filter name="patternReplace" pattern="ö" replacement="oe"/>
+      <filter name="patternReplace" pattern="ü" replacement="ue"/>
+      <filter name="patternReplace" pattern="ß" replacement="ss"/>
+      <filter name="patternReplace" pattern="ph" replacement="f"/>
+      <filter name="asciifolding"/>
+      <filter name="edgeNGram" minGramSize="2" maxGramSize="20" preserveOriginal="true"/>
+    </analyzer>
+    <analyzer type="query">
+      <charFilter name="patternReplace" pattern=":" replacement=" "/>
+      <tokenizer name="standard"/>
+      <filter name="lowercase"/>
+      <filter name="patternReplace" pattern="ä" replacement="ae"/>
+      <filter name="patternReplace" pattern="ö" replacement="oe"/>
+      <filter name="patternReplace" pattern="ü" replacement="ue"/>
+      <filter name="patternReplace" pattern="ß" replacement="ss"/>
+      <filter name="patternReplace" pattern="ph" replacement="f"/>
+      <filter name="asciifolding"/>
+    </analyzer>
+  </fieldType>
+  <!-- Wortanfang-Felder (Instant Search), befüllt per copyField; verwendet im qf des Handlers /instant -->
+  <field name="searchName_prefix_mv" type="texts_prefix" indexed="true" stored="false" docValues="false"/>
+  <field name="display_prefix_mv" type="texts_prefix" indexed="true" stored="false" docValues="false"/>
+  <copyField source="searchName_mv" dest="searchName_prefix_mv"/>
+  <copyField source="display" dest="display_prefix_mv"/>
+  <copyField source="displayAddition1" dest="display_prefix_mv"/>
+  <copyField source="displayAddition2" dest="display_prefix_mv"/>
   <field name="accession_display" type="text"/>
   <field name="accession_id" type="string"/>
   <field name="accessionNumber" type="string"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config>
 
-  <luceneMatchVersion>9.11</luceneMatchVersion>
+  <luceneMatchVersion>10.4</luceneMatchVersion>
 
   <dataDir>${solr.data.dir:}</dataDir>
 
@@ -9,6 +9,8 @@
                     class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
 
   <codecFactory class="solr.SchemaCodecFactory"/>
+  <!-- schema.xml aus dem Repository ist die einzige Quelle; keine Änderungen per Schema-API (managed-schema) -->
+  <schemaFactory class="ClassicIndexSchemaFactory"/>
 
   <indexConfig>
     <lockType>${solr.lock.type:native}</lockType>
@@ -66,8 +68,134 @@
 
     <slowQueryThresholdMillis>500</slowQueryThresholdMillis>
     
+    <!-- Vorwärmen nach jedem Commit (z.B. Import in Core "indexing" vor dem SWAP) und beim Start: dieselben Abfragen -->
     <listener event="newSearcher" class="solr.QuerySenderListener">
       <arr name="queries">
+
+        <!-- Query 1: Stats-Abfrage (wärmt filterCache und documentCache) -->
+        <lst>
+          <str name="q">*:*</str>
+          <str name="defType">edismax</str>
+          <arr name="fq">
+            <str>NOT source:(AU OR BE OR MM)</str>
+            <str>NOT confidential:true</str>
+          </arr>
+          <str name="rows">0</str>
+          <str name="sort">score desc</str>
+          <str name="stats">true</str>
+          <str name="stats.field">filterDatePoint_mv</str>
+          <str name="fl">id,display,displayAddition1,displayAddition2,displayName,filterType_mv,filterMultipart,filterDigital,digitalObject_thumbnail_mv,filterMedium_mv,usageRestrictionNote,website_url_mv,website_description_mv,digitalObject_id_mv,digitalObject_display_mv,digitalObject_hyperlink_mv,digitalObject_accessLevel_mv,digitalObject_fileExtension_mv,item_provenance_mv</str>
+          <str name="omitHeader">true</str>
+          <str name="wt">json</str>
+        </lst>
+
+        <!-- Query 2: Haupt-Suchanfrage mit Facetten (wärmt filterCache, queryResultCache, documentCache) -->
+        <lst>
+          <str name="q">*:*</str>
+          <str name="defType">edismax</str>
+          <arr name="fq">
+            <str>NOT source:(AU OR BE OR MM)</str>
+            <str>NOT confidential:true</str>
+          </arr>
+          <str name="rows">25</str>
+          <str name="start">0</str>
+          <str name="sort">score desc</str>
+          <str name="fl">id,display,displayAddition1,displayAddition2,displayName,filterType_mv,filterMultipart,filterDigital,digitalObject_thumbnail_mv,filterMedium_mv,usageRestrictionNote,website_url_mv,website_description_mv,digitalObject_id_mv,digitalObject_display_mv,digitalObject_hyperlink_mv,digitalObject_accessLevel_mv,digitalObject_fileExtension_mv,item_provenance_mv</str>
+          <str name="omitHeader">true</str>
+          <str name="wt">json</str>
+
+          <!-- Facetten aktivieren -->
+          <str name="facet">true</str>
+          <arr name="facet.field">
+            <str>filterDigital</str>
+            <str>filterType_mv</str>
+            <str>filterFormContent_mv</str>
+            <str>filterMedium_mv</str>
+            <str>filterAuthority_mv</str>
+            <str>filterSubject_mv</str>
+            <str>filterLanguage_mv</str>
+            <str>filterLanguageType_mv</str>
+            <str>filterLocation_mv</str>
+            <str>filterLocationType_mv</str>
+            <str>filterCollection_mv</str>
+            <str>filterSource</str>
+            <str>filterBibliography_mv</str>
+            <str>filterAuthorityRole_mv</str>
+            <str>filterAuthorityRelation_mv</str>
+            <str>searchEntity_id_mv</str>
+          </arr>
+
+          <!-- Facetten-Queries (NeuImKatalog) -->
+          <arr name="facet.query">
+            <str>filterRecent:[NOW/DAY-7DAYS TO NOW/DAY+1DAY]</str>
+            <str>filterRecent:[NOW/DAY-1MONTH TO NOW/DAY+1DAY]</str>
+            <str>filterRecent:[NOW/DAY-3MONTHS TO NOW/DAY+1DAY]</str>
+            <str>filterRecent:[NOW/DAY-6MONTHS TO NOW/DAY+1DAY]</str>
+            <str>filterRecent:[NOW/DAY-1YEAR TO NOW/DAY+1DAY]</str>
+          </arr>
+
+          <!-- Datums-Bereichsfacette -->
+          <str name="facet.range">{!key=Zeit}filterDateRange_mv</str>
+          <str name="f.filterDateRange_mv.facet.range.start">NOW/YEAR-2050YEARS</str>
+          <str name="f.filterDateRange_mv.facet.range.end">NOW</str>
+          <str name="f.filterDateRange_mv.facet.range.gap">+41YEAR</str>
+
+          <!-- Facetten-Limits und Sortierung -->
+          <str name="f.filterDigital.facet.limit">50</str>
+          <str name="f.filterDigital.facet.mincount">1</str>
+          <str name="f.filterDigital.facet.sort">count</str>
+          <str name="f.filterType_mv.facet.limit">50</str>
+          <str name="f.filterType_mv.facet.mincount">1</str>
+          <str name="f.filterType_mv.facet.sort">count</str>
+          <str name="f.filterFormContent_mv.facet.limit">50</str>
+          <str name="f.filterFormContent_mv.facet.mincount">1</str>
+          <str name="f.filterFormContent_mv.facet.sort">count</str>
+          <str name="f.filterFormContent_mv.facet.missing">true</str>
+          <str name="f.filterMedium_mv.facet.limit">50</str>
+          <str name="f.filterMedium_mv.facet.mincount">1</str>
+          <str name="f.filterMedium_mv.facet.sort">count</str>
+          <str name="f.filterMedium_mv.facet.missing">true</str>
+          <str name="f.filterAuthority_mv.facet.limit">50</str>
+          <str name="f.filterAuthority_mv.facet.mincount">1</str>
+          <str name="f.filterAuthority_mv.facet.sort">count</str>
+          <str name="f.filterSubject_mv.facet.limit">50</str>
+          <str name="f.filterSubject_mv.facet.mincount">1</str>
+          <str name="f.filterSubject_mv.facet.sort">count</str>
+          <str name="f.filterSubject_mv.facet.missing">true</str>
+          <str name="f.filterLanguage_mv.facet.limit">50</str>
+          <str name="f.filterLanguage_mv.facet.mincount">1</str>
+          <str name="f.filterLanguage_mv.facet.sort">count</str>
+          <str name="f.filterLanguageType_mv.facet.limit">50</str>
+          <str name="f.filterLanguageType_mv.facet.mincount">1</str>
+          <str name="f.filterLanguageType_mv.facet.sort">count</str>
+          <str name="f.filterLocation_mv.facet.limit">50</str>
+          <str name="f.filterLocation_mv.facet.mincount">1</str>
+          <str name="f.filterLocation_mv.facet.sort">count</str>
+          <str name="f.filterLocationType_mv.facet.limit">50</str>
+          <str name="f.filterLocationType_mv.facet.mincount">1</str>
+          <str name="f.filterLocationType_mv.facet.sort">count</str>
+          <str name="f.filterCollection_mv.facet.limit">50</str>
+          <str name="f.filterCollection_mv.facet.mincount">1</str>
+          <str name="f.filterCollection_mv.facet.sort">count</str>
+          <str name="f.filterCollection_mv.facet.missing">true</str>
+          <str name="f.filterSource.facet.limit">50</str>
+          <str name="f.filterSource.facet.mincount">1</str>
+          <str name="f.filterSource.facet.sort">count</str>
+          <str name="f.filterSource.facet.missing">true</str>
+          <str name="f.filterBibliography_mv.facet.limit">50</str>
+          <str name="f.filterBibliography_mv.facet.mincount">1</str>
+          <str name="f.filterBibliography_mv.facet.sort">count</str>
+          <str name="f.filterBibliography_mv.facet.missing">true</str>
+          <str name="f.filterAuthorityRole_mv.facet.limit">50</str>
+          <str name="f.filterAuthorityRole_mv.facet.mincount">1</str>
+          <str name="f.filterAuthorityRole_mv.facet.sort">count</str>
+          <str name="f.filterAuthorityRelation_mv.facet.limit">50</str>
+          <str name="f.filterAuthorityRelation_mv.facet.mincount">1</str>
+          <str name="f.filterAuthorityRelation_mv.facet.sort">count</str>
+          <str name="f.searchEntity_id_mv.facet.limit">2</str>
+          <str name="f.searchEntity_id_mv.facet.mincount">1</str>
+          <str name="f.searchEntity_id_mv.facet.sort">count</str>
+        </lst>
       </arr>
     </listener>
     <listener event="firstSearcher" class="solr.QuerySenderListener">
@@ -242,6 +370,43 @@
     </lst>
   </requestHandler>
 
+  <!--
+    Suche für die Instant Search im Katalog. Relevanzranking (qf, boost) ist hier fest vorgegeben und kann vom
+    Client nicht verändert werden; TYPO3 übergibt nur Suchtext (q), Filter (fq), Facetten, Sortierung und Paging.
+    - Suchtext ohne Feldsyntax (uf=-*): Eingaben wie "Titel: Untertitel" werden als Text gesucht,
+      Einschränkungen (z.B. auf Normdaten-IDs) kommen als fq.
+    - Leerer Suchtext: q.alt, also alle Datensätze.
+    - Wortanfänge (searchName_prefix_mv, display_prefix_mv) schwächer gewichtet als ganze Wörter.
+  -->
+  <requestHandler name="/instant" class="solr.SearchHandler">
+    <lst name="defaults">
+      <str name="echoParams">none</str>
+      <str name="wt">json</str>
+      <str name="json.nl">flat</str>
+      <int name="rows">25</int>
+      <str name="sort">score desc</str>
+      <str name="fl">id,display,displayAddition1,displayAddition2,displayName,filterType_mv,filterMultipart,filterDigital,digitalObject_thumbnail_mv,filterMedium_mv,usageRestrictionNote,website_url_mv,website_description_mv,digitalObject_id_mv,digitalObject_display_mv,digitalObject_hyperlink_mv,digitalObject_accessLevel_mv,digitalObject_fileExtension_mv,item_provenance_mv</str>
+      <str name="facet.threads">4</str>
+    </lst>
+    <lst name="appends">
+      <!-- Vertrauliche Dokumente ausschließen -->
+      <str name="fq">NOT confidential:true</str>
+      <str name="f.filterDigital.facet.method">enum</str>
+      <str name="f.filterType_mv.facet.method">enum</str>
+      <str name="f.filterSource.facet.method">enum</str>
+      <str name="f.filterBibliography_mv.facet.method">enum</str>
+      <str name="f.filterMedium_mv.facet.method">enum</str>
+    </lst>
+    <lst name="invariants">
+      <str name="defType">edismax</str>
+      <str name="q.op">AND</str>
+      <str name="q.alt">*:*</str>
+      <str name="uf">-*</str>
+      <str name="df">default</str>
+      <str name="qf">searchName_mv^15 display^10 displayAddition1^5 displayAddition2^5 searchName_prefix_mv^3 display_prefix_mv^2 default^1</str>
+      <str name="boost">field(searchBoost)</str>
+    </lst>
+  </requestHandler>
   <requestHandler name="/query" class="solr.SearchHandler">
     <lst name="defaults">
       <str name="echoParams">explicit</str>

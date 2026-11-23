@@ -116,38 +116,36 @@ tasks:
   solr:
     desc: Indexierung in Solr testen
     env:
-      SOLR_JETTY_HOST: 0.0.0.0
+      SOLR_HOST_BIND: 0.0.0.0
     cmds:
-      - solr/bin/solr delete -c indexing &> /dev/null || true
-      - solr/bin/solr delete -c internformat &> /dev/null || true
       - solr/bin/solr stop &> /dev/null || true
-      - rm -r "solr/server/solr/indexing" 2> /dev/null || true; mkdir -p "solr/server/solr/indexing"
-      - rm -r "solr/server/solr/internformat" 2> /dev/null || true; mkdir -p "solr/server/solr/internformat"
-      - cp config/solr/* solr/server/solr/indexing/
-      - cp config/solr/* solr/server/solr/internformat/
-      - touch solr/server/solr/indexing/core.properties
-      - touch solr/server/solr/internformat/core.properties
-      - solr/bin/solr start --user-managed
-      - solr/docker/scripts/wait-for-solr.sh
       - |
-        # JSON-Lines an Solr core indexing senden
-        for f in "{{.DIR}}/output/"*.jsonl; do
-          [ $(curl --silent --upload-file "$f" 'http://localhost:8983/solr/indexing/update/json/docs?overwrite=true' -X POST -H 'Content-Type: application/json' -o /dev/stderr -w "%{http_code}") -eq 200 ]
+        # Gemeinsames Configset und zwei Cores anlegen (wie auf dem Server, siehe docs/solr.md)
+        rm -r solr/server/solr/configsets/internformat 2> /dev/null || true
+        mkdir -p solr/server/solr/configsets/internformat/conf
+        cp config/solr/schema.xml config/solr/solrconfig.xml solr/server/solr/configsets/internformat/conf/
+        for core in indexing internformat; do
+          rm -r "solr/server/solr/$core" 2> /dev/null || true
+          mkdir -p "solr/server/solr/$core"
+          printf 'name=%s\nconfigSet=internformat\n' "$core" > "solr/server/solr/$core/core.properties"
         done
-        [ $(curl --silent 'http://localhost:8983/solr/indexing/update?commit=true&optimize=true' -o /dev/stderr -w "%{http_code}") -eq 200 ]
+      - solr/bin/solr start --user-managed
       - |
-        # Prüfen, ob Datensätze nicht indexiert werden konnten
-        diff <(perl -lne 'print $1 if /"id":\s*"([^"]+)"/' example/output/*.jsonl | sort) <(curl --silent 'http://localhost:8983/solr/indexing/query?fl=id&q=*%3A*&rows=10000000&wt=csv&csv.header=false' | sort) || true
-      - |
-        # Index für Autovervollständigung aufbauen
-        [ $(curl --silent 'http://localhost:8983/solr/indexing/suggest?suggest=true&suggest.build=true&suggest.dictionary=mySuggester' -o /dev/stderr -w "%{http_code}") -eq 200 ]
-        [ $(curl --silent 'http://localhost:8983/solr/indexing/suggest?suggest=true&suggest.build=true&suggest.dictionary=text' -o /dev/stderr -w "%{http_code}") -eq 200 ]
-      - |
-        # Neu befüllten Index live schalten durch Swap
-        [ $(curl --silent 'http://localhost:8983/solr/admin/cores?action=SWAP&core=indexing&other=internformat' -o /dev/stderr -w "%{http_code}") -eq 200 ]
+        # Warten, bis Solr antwortet (max. 60 Sekunden)
+        for i in $(seq 60); do
+          curl --silent --fail 'http://localhost:8983/solr/admin/cores?action=STATUS' > /dev/null && break
+          sleep 1
+        done
+      - SOLR=http://localhost:8983/solr OUTPUT="{{.DIR}}/output" scripts/index.sh
       - |
         # Test query auf Solr core internformat
         [ $(curl --silent 'http://localhost:8983/solr/internformat/query?q=*:*&rows=0' -o /dev/stderr -w "%{http_code}") -eq 200 ]
+    preconditions:
+      - sh: test -f solr/bin/solr
+        msg: "Solr not found; try task install_solr"
+      - command -v curl
+      - command -v perl
+      - test -d {{.DIR}}/output
 
   yaml:
     desc: JSONL zusätzlich in YAML konvertieren
@@ -209,5 +207,5 @@ tasks:
   install_solr:
     cmds:
       - mkdir -p solr
-      - wget -q --compression=auto --show-progress -O solr.tgz https://www.apache.org/dyn/closer.lua/solr/solr/9.10.1/solr-9.10.1-slim.tgz?action=download
+      - wget -q --compression=auto --show-progress -O solr.tgz https://www.apache.org/dyn/closer.lua/solr/solr/10.1.0/solr-10.1.0-slim.tgz?action=download
       - tar -xzf solr.tgz -C solr --strip 1 && rm solr.tgz
