@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <schema name="default-config" version="1.7">
   <field name="_version_" type="long" indexed="false" stored="false"/>
-  <copyField source="*" dest="default"/>
+  <!-- Das Suchfeld "default" befüllt der Update-Prozessor CloneFieldUpdateProcessorFactory in der solrconfig.xml
+       (alle Felder außer export*), nicht copyField source="*": copyField kann keine Felder ausschließen. -->
   <uniqueKey>id</uniqueKey>
   <!-- Mehrfache Funde in einem Feld werden mit k1=0.1 nur geringfügig positiv gewichtet -->
   <similarity class="solr.BM25SimilarityFactory">
@@ -19,6 +20,10 @@
   <fieldType name="long" class="solr.LongPointField" docValues="true"/>
   <fieldType name="string" class="solr.StrField" sortMissingLast="true" multiValued="false"/>
   <fieldType name="strings" class="solr.StrField" sortMissingLast="true" multiValued="true"/>
+  <!--
+    Synonyme (synonyms.txt), z.B. Schreibvarianten wie Portrait/Porträt, die die Normalisierung nicht abdeckt.
+    Nur bei der Suche (Analyzer "query"): Änderungen an synonyms.txt wirken nach einem RELOAD ohne neue Indexierung.
+  -->
   <fieldType name="text" class="solr.SortableTextField" positionIncrementGap="100" multiValued="false">
     <analyzer type="index">
       <tokenizer name="standard"/>
@@ -27,6 +32,7 @@
     <analyzer type="query">
       <tokenizer name="standard"/>
       <filter name="lowercase"/>
+      <filter name="synonymGraph" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
     </analyzer>
   </fieldType>
   <fieldType name="texts" class="solr.SortableTextField" positionIncrementGap="100" multiValued="true">
@@ -37,6 +43,7 @@
     <analyzer type="query">
       <tokenizer name="standard"/>
       <filter name="lowercase"/>
+      <filter name="synonymGraph" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
     </analyzer>
   </fieldType>
   <fieldType name="text_normalized" class="solr.SortableTextField" positionIncrementGap="100" multiValued="false">
@@ -55,6 +62,7 @@
       <charFilter name="patternReplace" pattern=":" replacement=" "/>
       <tokenizer name="standard"/>
       <filter name="lowercase"/>
+      <filter name="synonymGraph" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
       <filter name="patternReplace" pattern="ä" replacement="ae"/>
       <filter name="patternReplace" pattern="ö" replacement="oe"/>
       <filter name="patternReplace" pattern="ü" replacement="ue"/>
@@ -79,6 +87,7 @@
       <charFilter name="patternReplace" pattern=":" replacement=" "/>
       <tokenizer name="standard"/>
       <filter name="lowercase"/>
+      <filter name="synonymGraph" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
       <filter name="patternReplace" pattern="ä" replacement="ae"/>
       <filter name="patternReplace" pattern="ö" replacement="oe"/>
       <filter name="patternReplace" pattern="ü" replacement="ue"/>
@@ -87,6 +96,45 @@
       <filter name="asciifolding"/>
     </analyzer>
   </fieldType>
+  <!--
+    Wortanfänge für die Instant Search: Beim Indexieren werden alle Wortanfänge ab 2 Zeichen gespeichert
+    ("hyperion" → "hy", "hyp", … "hyperion"), bei der Suche wird nicht zerlegt. So findet "Hyperio" bereits
+    "Hyperion", ohne Platzhalter-Abfragen. Normalisierung wie text_normalized, damit "Hölderl" und "Hoelderl"
+    gleich behandelt werden. Nur für Suche, daher weder stored noch docValues.
+  -->
+  <fieldType name="texts_prefix" class="solr.TextField" positionIncrementGap="100" multiValued="true">
+    <analyzer type="index">
+      <charFilter name="patternReplace" pattern=":" replacement=" "/>
+      <tokenizer name="standard"/>
+      <filter name="lowercase"/>
+      <filter name="patternReplace" pattern="ä" replacement="ae"/>
+      <filter name="patternReplace" pattern="ö" replacement="oe"/>
+      <filter name="patternReplace" pattern="ü" replacement="ue"/>
+      <filter name="patternReplace" pattern="ß" replacement="ss"/>
+      <filter name="patternReplace" pattern="ph" replacement="f"/>
+      <filter name="asciifolding"/>
+      <filter name="edgeNGram" minGramSize="2" maxGramSize="20" preserveOriginal="true"/>
+    </analyzer>
+    <analyzer type="query">
+      <charFilter name="patternReplace" pattern=":" replacement=" "/>
+      <tokenizer name="standard"/>
+      <filter name="lowercase"/>
+      <filter name="synonymGraph" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
+      <filter name="patternReplace" pattern="ä" replacement="ae"/>
+      <filter name="patternReplace" pattern="ö" replacement="oe"/>
+      <filter name="patternReplace" pattern="ü" replacement="ue"/>
+      <filter name="patternReplace" pattern="ß" replacement="ss"/>
+      <filter name="patternReplace" pattern="ph" replacement="f"/>
+      <filter name="asciifolding"/>
+    </analyzer>
+  </fieldType>
+  <!-- Wortanfang-Felder (Instant Search), befüllt per copyField; verwendet im qf des Handlers /instant -->
+  <field name="searchName_prefix_mv" type="texts_prefix" indexed="true" stored="false" docValues="false"/>
+  <field name="display_prefix_mv" type="texts_prefix" indexed="true" stored="false" docValues="false"/>
+  <copyField source="searchName_mv" dest="searchName_prefix_mv"/>
+  <copyField source="display" dest="display_prefix_mv"/>
+  <copyField source="displayAddition1" dest="display_prefix_mv"/>
+  <copyField source="displayAddition2" dest="display_prefix_mv"/>
   <field name="accession_display" type="text"/>
   <field name="accession_id" type="string"/>
   <field name="accessionNumber" type="string"/>

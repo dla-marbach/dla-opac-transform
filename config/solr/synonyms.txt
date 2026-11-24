@@ -1,0 +1,166 @@
+# Synonyme für die Suche (SynonymGraphFilter im Analyzer "query" der Textfelder, siehe schema.xml).
+#
+# Eine Zeile pro Gruppe gleichwertiger Schreibweisen, durch Komma getrennt: Die Suche nach einer Schreibweise
+# findet alle. Groß-/Kleinschreibung spielt keine Rolle. Bei Umlauten und ß auch die Umschreibung aufnehmen
+# (z.B. "köln, koeln, cöln, coeln"): Die Synonyme werden vor der Normalisierung von ä zu ae angewendet, sonst würde
+# die Eingabe "Koeln" die Gruppe nicht erweitern.
+# Keine Stammformreduktion: Plural und andere Formen als eigene Zeile. Zusammensetzungen (z.B. Porträtsammlung)
+# werden nicht erfasst.
+#
+# Änderungen wirken nach dem Einspielen der Konfiguration mit der nächsten Indexierung (RELOAD), siehe docs/solr.md.
+#
+# Auswahl: Schreibvarianten, die im Bestand beide häufig vorkommen und meist in verschiedenen Datensätzen stehen
+# (Auswertung des Suchfelds auf dem Solr-Server, November 2026). Personennamen (z.B. Carl/Karl, Meier/Meyer) bewusst
+# nicht, weil hinter den Schreibweisen oft verschiedene Personen stehen; Personen findet die Autovervollständigung
+# "Relevante Namen und Werke" über Normdaten. Übersetzungen (z.B. production/Produktion) ebenfalls nicht.
+
+# Historische deutsche Rechtschreibung (th/t)
+teil, theil
+teile, theile
+teilen, theilen
+teils, theils
+abteilung, abtheilung
+abteilungen, abtheilungen
+mitteilungen, mittheilungen
+beurteilung, beurtheilung
+verteidigung, vertheidigung
+altertum, alterthum
+altertums, alterthums
+herzogtum, herzogthum
+tür, tuer, thür, thuer
+turm, thurm
+taten, thaten
+heimat, heimath
+gemüt, gemuet, gemüth, gemueth
+hofrat, hofrath
+toten, todten
+demut, demuth
+hochmut, hochmuth
+abenteuer, abentheuer
+abenteuerliche, abentheuerliche
+rätsel, raetsel, räthsel, raethsel
+tränen, traenen, thränen, thraenen
+tiere, thiere
+blüten, blueten, blüthen, bluethen
+
+# Historische deutsche Rechtschreibung (ey/ei)
+drei, drey
+zwei, zwey
+zweite, zweyte
+zweiter, zweyter
+zweiten, zweyten
+kein, keyn
+mein, meyn
+sein, seyn
+freie, freye
+freien, freyen
+freiheit, freyheit
+freiherrn, freyherrn
+beitrag, beytrag
+beiträge, beitraege, beyträge, beytraege
+ostereier, ostereyer
+dreißigjährigen, dreissigjaehrigen, dreyßigjährigen, dreyssigjaehrigen
+bayern, baiern
+
+# Historische deutsche Rechtschreibung (-iren/-ieren)
+illustrierte, illustrirte
+illustriertes, illustrirtes
+illustrierter, illustrirter
+illustrierten, illustrirten
+illustriert, illustrirt
+revidierte, revidirte
+studierende, studirende
+studierenden, studirenden
+studiert, studirt
+komponiert, componirt, componiert
+privilegierte, privilegirte
+dramatisiert, dramatisirt
+
+# Fremdwörter, ältere und neuere Schreibung (c/k/z, ai/ä)
+manuskript, manuscript
+manuskripts, manuscripts
+porträt, portrait, portraet
+porträts, portraits, portraets
+selbstporträt, selbstportraet, selbstportrait
+dichterporträts, dichterportraets, dichterportraits
+porträtfoto, portraetfoto, portraitfoto
+porträtfotografie, portraetfotografie, portraitfotografie
+klassiker, classiker
+klassischen, classischen
+korrespondenz, correspondenz
+kopierbuch, copierbuch
+akten, acten
+konversationslexikon, conversationslexikon
+kriminalgeschichten, criminalgeschichten
+aktiengesellschaft, actiengesellschaft
+komödie, komoedie, comödie, comoedie
+kalender, calender
+kalendarium, calendarium
+zyklus, cyklus, cyclus
+enzyklopädie, enzyklopaedie, encyklopädie, encyklopaedie, encyclopädie, encyclopaedie
+faksimile, facsimile
+lexikon, lexicon
+kolonie, colonie
+kollegium, collegium
+kolloquium, colloquium
+kolloquiums, colloquiums
+miszellen, miscellen
+insekten, insecten
+lyzeum, lyceum
+zentrum, centrum
+zentralstelle, centralstelle
+akademie, academie
+akademische, academische
+akademischen, academischen
+sankt, sanct
+katalog, catalog
+kassette, cassette
+karriere, carriere
+szene, scene
+szenen, scenen
+sezession, secession
+konzert, concert
+kantate, cantate
+kapelle, capelle
+kardinal, cardinal
+periodikum, periodicum
+skriptum, scriptum
+kultur, cultur
+klub, club
+klubs, clubs
+buchklub, buchclub
+zirkus, circus
+zivilisation, civilisation
+konfession, confession
+soziologie, sociologie
+sozialist, socialist
+krise, crise
+kristall, krystall
+affäre, affaere, affaire
+militär, militaer, militair
+simplizissimus, simplicissimus
+konsistorium, consistorium
+mikrofiche, microfiche
+
+# Ortsnamen
+köln, koeln, cöln, coeln
+kölln, koelln, cölln, coelln
+koblenz, coblenz
+kassel, cassel
+karlsruhe, carlsruhe
+frankfurt, franckfurt
+kolberg, colberg
+konstanz, constanz
+kopenhagen, copenhagen
+kalkutta, calcutta
+kanada, canada
+mexiko, mexico
+kuba, cuba
+afrika, africa
+amerika, america
+tokio, tokyo
+tirol, tyrol
+toskana, toscana
+luxemburg, luxembourg
+sizilien, sicilien
+straßburg, strassburg, strasbourg

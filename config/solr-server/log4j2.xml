@@ -16,16 +16,26 @@
   limitations under the License.
   -->
 
+<!-- Default production configuration is asynchronous logging -->
+<!-- DLA: basiert auf server/resources/log4j2.xml aus Solr 10.1.0, Abweichung mit "DLA:" markiert -->
 <Configuration>
   <Appenders>
 
-    <RollingRandomAccessFile
-        name="MainLogFile"
-        fileName="${sys:solr.log.dir}/solr.log"
-        filePattern="${sys:solr.log.dir}/solr.log.%i" >
+    <Console name="STDOUT" target="SYSTEM_OUT">
       <PatternLayout>
         <Pattern>
-          %maxLen{%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p (%t) [%notEmpty{c:%X{collection}}%notEmpty{ s:%X{shard}}%notEmpty{ r:%X{replica}}%notEmpty{ x:%X{core}}%notEmpty{ t:%X{trace_id}}] %c{1.} %m%notEmpty{ =>%ex{short}}}{10240}%n
+          %maxLen{%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p (%t) [%notEmpty{c:%X{collection}}%notEmpty{ s:%X{shard}}%notEmpty{ r:%X{replica}}%notEmpty{ x:%X{core}}%notEmpty{ t:%X{trace_id}}] %c{1.} %m}{10240}%n
+        </Pattern>
+      </PatternLayout>
+    </Console>
+
+    <RollingRandomAccessFile
+        name="MainLogFile"
+        fileName="${sys:solr.logs.dir}/solr.log"
+        filePattern="${sys:solr.logs.dir}/solr.log.%i" >
+      <PatternLayout>
+        <Pattern>
+          %maxLen{%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p (%t) [%notEmpty{c:%X{collection}}%notEmpty{ s:%X{shard}}%notEmpty{ r:%X{replica}}%notEmpty{ x:%X{core}}%notEmpty{ t:%X{trace_id}}] %c{1.} %m}{10240}%n
         </Pattern>
       </PatternLayout>
       <Policies>
@@ -37,11 +47,11 @@
 
     <RollingRandomAccessFile
         name="SlowLogFile"
-        fileName="${sys:solr.log.dir}/solr_slow_requests.log"
-        filePattern="${sys:solr.log.dir}/solr_slow_requests.log.%i" >
+        fileName="${sys:solr.logs.dir}/solr_slow_requests.log"
+        filePattern="${sys:solr.logs.dir}/solr_slow_requests.log.%i" >
       <PatternLayout>
         <Pattern>
-          %maxLen{%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p (%t) [%notEmpty{c:%X{collection}}%notEmpty{ s:%X{shard}}%notEmpty{ r:%X{replica}}%notEmpty{ x:%X{core}}%notEmpty{ t:%X{trace_id}}] %c{1.} %m%notEmpty{ =>%ex{short}}}{10240}%n
+          %maxLen{%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p (%t) [%notEmpty{c:%X{collection}}%notEmpty{ s:%X{shard}}%notEmpty{ r:%X{replica}}%notEmpty{ x:%X{core}}%notEmpty{ t:%X{trace_id}}] %c{1.} %m}{10240}%n
         </Pattern>
       </PatternLayout>
       <Policies>
@@ -54,20 +64,22 @@
   </Appenders>
   <Loggers>
     <!-- Use <AsyncLogger/<AsyncRoot and <Logger/<Root for asynchronous logging or synchronous logging respectively -->
-    <AsyncLogger name="org.apache.hadoop" level="warn"/>
-    <AsyncLogger name="org.apache.solr.update.LoggingInfoStream" level="off"/>
+    <AsyncLogger name="org.apache.solr.update.LoggingInfoStream" level="info"/>
     <AsyncLogger name="org.apache.zookeeper" level="warn"/>
-    <!-- Normal requests are suppressed entirely; only slow requests are logged via SlowLogFile -->
-    <AsyncLogger name="org.apache.solr.servlet.HttpSolrCall" level="off"/>
+    <!-- DLA: einzelne Anfragen nicht protokollieren (bei Instant Search mehrere pro Tastendruck);
+         langsame Anfragen (slowQueryThresholdMillis in solrconfig.xml) stehen weiterhin in solr_slow_requests.log -->
+    <AsyncLogger name="org.apache.solr.core.SolrCore.Request" level="warn"/>
+    <AsyncLogger name="org.apache.solr.servlet.HttpSolrCall" level="warn"/>
     <AsyncLogger name="org.apache.solr.core.SolrCore.SlowRequest" level="info" additivity="false">
       <AppenderRef ref="SlowLogFile"/>
     </AsyncLogger>
     <AsyncLogger name="org.eclipse.jetty.deploy" level="warn"/>
-    <AsyncLogger name="org.eclipse.jetty.webapp" level="warn"/>
-    <AsyncLogger name="org.eclipse.jetty.server.session" level="warn"/>
+    <AsyncLogger name="org.eclipse.jetty.ee" level="warn"/>
+    <AsyncLogger name="org.eclipse.jetty.session" level="warn"/>
 
-    <AsyncRoot level="warn">
+    <AsyncRoot level="info">
       <AppenderRef ref="MainLogFile"/>
+      <AppenderRef ref="STDOUT"/>
     </AsyncRoot>
   </Loggers>
 </Configuration>

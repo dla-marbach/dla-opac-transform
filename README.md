@@ -46,11 +46,13 @@ orcli im interaktiven Modus starten (vgl. http://localhost:3333):
 task dev
 ```
 
-Indexierung in Solr testen (vgl. http://localhost:8983):
+Indexierung in Solr testen (vgl. http://localhost:8983, benötigt Java 21):
 
 ```sh
 task solr
 ```
+
+Einrichtung des Solr-Servers und Indexierung im Produktivbetrieb: siehe [docs/solr.md](docs/solr.md).
 
 Konvertierung der JSONL-Daten in YAML:
 
@@ -91,4 +93,4 @@ task yaml
     ```
 12. Erneut Git commit und push
 13. GitHub [Release Notes](https://github.com/dla-marbach/dla-opac-transform/releases)
-14. Konfiguration des Solr auf Produktivsystem aktualisieren
+14. Solr-Konfiguration auf dem Server aktualisieren, wirkt mit der nächsten Indexierung (siehe [docs/solr.md](docs/solr.md#konfiguration-aktualisieren))
